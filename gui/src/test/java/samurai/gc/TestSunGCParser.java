@@ -47,6 +47,14 @@ public class TestSunGCParser extends TestCase implements ScattergramRenderer {
         parser.parse("", this);
         assertEquals(5, count);
     }
+    public void testUseParNewGC() throws Exception {
+        SunGCParser parser = new SunGCParser();
+        expected = new double[]{.1106169d, 214067d, 16986d};
+        assertTrue(parser.parse("25.002: [ParNew 214067K->16986K(1022400K), 0.1106169 secs]", this));
+        expected = new double[]{.3251635d, 226778d, 33381d};
+        assertTrue(parser.parse("42.062: [ParNew 226778K->33381K(1022400K), 0.3251635 secs]", this));
+        assertEquals(2, count);
+    }
 
     public void addValues(double[] values) {
         assertEquals(expected.length, values.length);

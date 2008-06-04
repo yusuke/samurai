@@ -26,7 +26,7 @@ public class SunGCParser implements ScattergramDataSourceParser {
 
     public boolean parse(String line, ScattergramRenderer renderer) {
         try {
-            if (-1 != line.indexOf("[GC ") || -1 != line.indexOf("[Full GC ") || unloadingClasses || -1 != line.indexOf("[Unloading class")) {
+            if (-1 != line.indexOf("[GC ") || -1 != line.indexOf("[Full GC ") ||-1 != line.indexOf("[ParNew ") ||  unloadingClasses || -1 != line.indexOf("[Unloading class")) {
                 if (!labelSet) {
                     renderer.setLabels(new String[]{resources.getMessage("GraphPanel.time") + "(secs)",
                             resources.getMessage("GraphPanel.memoryBeforeGC"),
@@ -46,10 +46,14 @@ public class SunGCParser implements ScattergramDataSourceParser {
                             renderer.setMaxAt(1, memoryMax);
                             renderer.setMaxAt(2, memoryMax);
                         }
+
                         double time = Double.parseDouble(line.substring(line.indexOf(", ") + 2, line.lastIndexOf(" secs")));
                         int memoryBeforeBegin = line.indexOf("GC ");
                         if (-1 == memoryBeforeBegin) {
-                            memoryBeforeBegin = 1;
+                            memoryBeforeBegin = line.indexOf("ParNew ")+7;
+                            if (-1 == memoryBeforeBegin) {
+                                memoryBeforeBegin = 1;
+                            }
                         } else {
                             memoryBeforeBegin += 3;
                         }
