@@ -1,0 +1,53 @@
+<!--meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/-->
+<style type="text/css">
+    a.visited {
+        color: blue;
+    }
+
+    a {
+        color: blue; /* text-decoration:none;*/
+        text-decoration: underline;
+    }
+
+    a.hover {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    body {
+        font-size: ${fontSize} pt;
+        font-family: ${fontFamily};
+    }
+
+    td {
+        width: 16px;
+    }
+
+    .stacked {
+        color: #FF0000;
+    }
+
+    .normal {
+        color: black;
+    }
+
+    .idle {
+        color: #777777;
+    }
+
+    .back-stacked {
+        background-color: #FF0000;
+    }
+
+    .back-normal {
+        background-color: #33FF33;
+    }
+
+    .back-idle {
+        background-color: #777777;
+    }
+
+    .back-notexist {
+        background-color: #000000;
+    }
+</style>

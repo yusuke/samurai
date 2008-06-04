@@ -1,0 +1,116 @@
+ftd.0.deadLockSize=0
+ftd.0.threadCount=6
+#"Finalizer"  id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+#   thread: 0x01F75898  lastj: 0x7FF30E9C
+#   pt_thr: 0x000001D8
+#   at java.lang.Thread.doYield(Native Method)@32520A68
+#   at java.lang.Object.wait0(Unknown Source)@32522103
+#   at java.lang.Object.wait0(Unknown Source)@32524775
+#   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:111)@32527145
+#   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:127)@325270BC
+#   at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)@32527051
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@32523645
+#   --- End of stack trace
+td.0.0.blockedObjectId=null
+td.0.0.blockerId=null
+td.0.0.condition=id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+td.0.0.header="Finalizer"  id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+td.0.0.id=0x0x00000180
+td.0.0.name=Finalizer
+td.0.0.isBlocked=false
+td.0.0.isDaemon=true
+td.0.0.isDeadLocked=false
+td.0.0.isIdle=true
+
+#"SignalHandler"  id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x01FAB058  lastj: 0x7FF10EF0
+#   pt_thr: 0x000002F4
+#   at COM.jrockit.vm.SignalHandler.waitForSignals(Native Method)@33FB73F0
+#   at COM.jrockit.vm.SignalHandler$1.run(Unknown Source)@33FB7475
+#   at java.lang.Thread.run(Unknown Source)@325237A1
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@32523645
+#   --- End of stack trace
+td.0.1.blockedObjectId=null
+td.0.1.blockerId=null
+td.0.1.condition=id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.1.header="SignalHandler"  id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.1.id=0x0x00000200
+td.0.1.name=SignalHandler
+td.0.1.isBlocked=false
+td.0.1.isDaemon=true
+td.0.1.isDeadLocked=false
+td.0.1.isIdle=false
+
+#"Hotspot Detector"  id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x01FAB140  lastj: 0x7FEF0EF0
+#   pt_thr: 0x000004A4
+#   at COM.jrockit.vm.HotspotDetector.findHotSpotCandidate(Native Method)@33FB74B0
+#   at COM.jrockit.vm.HotspotDetector.run(Unknown Source)@33FB74E5
+#   at java.lang.Thread.run(Unknown Source)@325237A1
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@32523645
+#   --- End of stack trace
+td.0.2.blockedObjectId=null
+td.0.2.blockerId=null
+td.0.2.condition=id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.2.header="Hotspot Detector"  id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.2.id=0x0x00000280
+td.0.2.name=Hotspot Detector
+td.0.2.isBlocked=false
+td.0.2.isDaemon=true
+td.0.2.isDeadLocked=false
+td.0.2.isIdle=false
+
+#"Reference Handler"  id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+#   thread: 0x01FAB3A0  lastj: 0x7FED0EE4
+#   pt_thr: 0x00000574
+#   at java.lang.ref.Reference.getPending(Native Method)@33FB528E
+#   at java.lang.ref.Reference.access$000(Unknown Source)@33FB52C5
+#   at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)@33FB51FF
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@32523645
+#   --- End of stack trace
+td.0.3.blockedObjectId=null
+td.0.3.blockerId=null
+td.0.3.condition=id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+td.0.3.header="Reference Handler"  id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+td.0.3.id=0x0x00000300
+td.0.3.name=Reference Handler
+td.0.3.isBlocked=false
+td.0.3.isDaemon=true
+td.0.3.isDeadLocked=false
+td.0.3.isIdle=true
+
+#"Thread-1"  id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+#   thread: 0x01FAB4F8  lastj: 0x0006FB48
+#   pt_thr: 0x00000120
+#   at java.lang.Thread.doYield(Native Method)@325218E8
+#   at java.lang.Object.wait0(Unknown Source)@32524882
+#   at java.lang.Thread.sleep(Unknown Source)@341DB0F5
+#   at net.homeip.yusuke.samurai.test.IdleSample.main(IdleSample.java:5)@3464001C
+#   --- End of stack trace
+td.0.4.blockedObjectId=null
+td.0.4.blockerId=null
+td.0.4.condition=id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+td.0.4.header="Thread-1"  id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+td.0.4.id=0x0x00000380
+td.0.4.name=Thread-1
+td.0.4.isBlocked=false
+td.0.4.isDaemon=false
+td.0.4.isDeadLocked=false
+td.0.4.isIdle=true
+
+#"Noname"  id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x01FAB6F8  lastj: 0x7FEB0F08
+#   pt_thr: 0x00000570
+#   at COM.jrockit.vm.MemSystem.mcGenConEP(Native Method)@33FB5B38
+#   --- End of stack trace
+td.0.5.blockedObjectId=null
+td.0.5.blockerId=null
+td.0.5.condition=id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.5.header="Noname"  id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.5.id=0x0x00000400
+td.0.5.name=Noname
+td.0.5.isBlocked=false
+td.0.5.isDaemon=true
+td.0.5.isDeadLocked=false
+td.0.5.isIdle=false
+

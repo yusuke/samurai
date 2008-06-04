@@ -1,0 +1,210 @@
+
+===== FULL THREAD DUMP ===============
+Fri Mar 05 15:52:32 2004
+
+"Main Thread"  id: 0x00000080  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x40D41C78  lastj: 0xFFFFFFFC  pt_thr: 0x00000278
+    No Java stack trace available
+
+"(Signal Handler)"  id: 0x00000100  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x40C7C750  lastj: 0xFFFFFFFC  pt_thr: 0x00000790
+    No Java stack trace available
+
+"(Code Generation Thread 1)"  id: 0x00000180  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+    thread: 0x40BE2C80  lastj: 0xFFFFFFFC  pt_thr: 0x000007C4
+    No Java stack trace available
+
+"(Code Optimization Thread 1)"  id: 0x00000200  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+    thread: 0x40BE2D78  lastj: 0xFFFFFFFC  pt_thr: 0x000007CC
+    No Java stack trace available
+
+"(GC Main Thread)"  id: 0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x40BBCDC0  lastj: 0xFFFFFFFC  pt_thr: 0x000005DC
+    No Java stack trace available
+
+"(GC Worker Thread 1)"  id: 0x00000300  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+    thread: 0x40C84990  lastj: 0xFFFFFFFC  pt_thr: 0x00000698
+    No Java stack trace available
+
+"Finalizer"  id: 0x00000380  prio: 8  WAITING, DAEMON, GCABLE
+    thread: 0x40C906A8  lastj: 0x4125FD8C  pt_thr: 0x0000065C
+    at jrockit/vm/Threads.waitForSignal(Native Method)@40C421C0
+    at jrockit/vm/Locks.wait(Unknown Source)@40C493FC
+    at jrockit/vm/Locks.wait(Unknown Source)@40C44811
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@40C49257
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@40C491DC
+    at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@40C4918E
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@40C490C3
+    --- End of stack trace
+
+"Reference Handler"  id: 0x00000400  prio: 10  WAITING, DAEMON, GCABLE
+    thread: 0x40CB2550  lastj: 0x4135FDD8  pt_thr: 0x000005D4
+    at java/lang/ref/Reference.getPending(Native Method)@412D8820
+    at java/lang/ref/Reference.access$000(Unknown Source)@412D8875
+    at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@412D8790
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@40C490C3
+    --- End of stack trace
+
+"(Hotspot Detector)"  id: 0x00000480  prio: 10  ACTIVE, DAEMON, GCABLE
+    thread: 0x40C87030  lastj: 0xFFFFFFFC  pt_thr: 0x000005B4
+    No Java stack trace available
+
+"Thread-1"  id: 0x00000500  prio: 5  ACTIVE, NONDAEMON, GCABLE
+    thread: 0x40D1D0B8  lastj: 0x4153FDCC  pt_thr: 0x000007A0
+    at jrockit/vm/Threads.progressiveNap(Native Method)@40C40D70
+    at jrockit/vm/Locks.stage2Lock(Native Method)@40C40FF7
+    at jrockit/vm/Locks.monitorEnter(Native Method)@40C41096
+    at net/homeip/yusuke/samurai/test/AThread.run(StackSample.java:25)@414F0109
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@40C490C3
+    --- End of stack trace
+
+"Thread-2"  id: 0x00000580  prio: 5  ACTIVE, NONDAEMON, GCABLE
+    thread: 0x40D550B0  lastj: 0x4157FDCC  pt_thr: 0x0000060C
+    at jrockit/vm/Threads.progressiveNap(Native Method)@40C40D70
+    at jrockit/vm/Locks.stage2Lock(Native Method)@40C40FF7
+    at jrockit/vm/Locks.monitorEnter(Native Method)@40C41096
+    at net/homeip/yusuke/samurai/test/AThread.run(StackSample.java:25)@414F0109
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@40C490C3
+    --- End of stack trace
+
+=====================
+
+===== FULL THREAD DUMP ===============
+Fri Mar 05 15:52:32 2004
+
+"Main Thread"  id: 0x00000080  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x40D41C78  lastj: 0xFFFFFFFC  pt_thr: 0x00000278
+    No Java stack trace available
+
+"(Signal Handler)"  id: 0x00000100  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x40C7C750  lastj: 0xFFFFFFFC  pt_thr: 0x00000790
+    No Java stack trace available
+
+"(Code Generation Thread 1)"  id: 0x00000180  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+    thread: 0x40BE2C80  lastj: 0xFFFFFFFC  pt_thr: 0x000007C4
+    No Java stack trace available
+
+"(Code Optimization Thread 1)"  id: 0x00000200  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+    thread: 0x40BE2D78  lastj: 0xFFFFFFFC  pt_thr: 0x000007CC
+    No Java stack trace available
+
+"(GC Main Thread)"  id: 0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x40BBCDC0  lastj: 0xFFFFFFFC  pt_thr: 0x000005DC
+    No Java stack trace available
+
+"(GC Worker Thread 1)"  id: 0x00000300  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+    thread: 0x40C84990  lastj: 0xFFFFFFFC  pt_thr: 0x00000698
+    No Java stack trace available
+
+"Finalizer"  id: 0x00000380  prio: 8  WAITING, DAEMON, GCABLE
+    thread: 0x40C906A8  lastj: 0x4125FD8C  pt_thr: 0x0000065C
+    at jrockit/vm/Threads.waitForSignal(Native Method)@40C421C0
+    at jrockit/vm/Locks.wait(Unknown Source)@40C493FC
+    at jrockit/vm/Locks.wait(Unknown Source)@40C44811
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@40C49257
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@40C491DC
+    at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@40C4918E
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@40C490C3
+    --- End of stack trace
+
+"Reference Handler"  id: 0x00000400  prio: 10  WAITING, DAEMON, GCABLE
+    thread: 0x40CB2550  lastj: 0x4135FDD8  pt_thr: 0x000005D4
+    at java/lang/ref/Reference.getPending(Native Method)@412D8820
+    at java/lang/ref/Reference.access$000(Unknown Source)@412D8875
+    at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@412D8790
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@40C490C3
+    --- End of stack trace
+
+"(Hotspot Detector)"  id: 0x00000480  prio: 10  ACTIVE, DAEMON, GCABLE
+    thread: 0x40C87030  lastj: 0xFFFFFFFC  pt_thr: 0x000005B4
+    No Java stack trace available
+
+"Thread-1"  id: 0x00000500  prio: 5  ACTIVE, NONDAEMON, GCABLE
+    thread: 0x40D1D0B8  lastj: 0x4153FDCC  pt_thr: 0x000007A0
+    at jrockit/vm/Threads.progressiveNap(Native Method)@40C40D70
+    at jrockit/vm/Locks.stage2Lock(Native Method)@40C40FF7
+    at jrockit/vm/Locks.monitorEnter(Native Method)@40C41096
+    at net/homeip/yusuke/samurai/test/AThread.run(StackSample.java:25)@414F0109
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@40C490C3
+    --- End of stack trace
+
+"Thread-2"  id: 0x00000580  prio: 5  ACTIVE, NONDAEMON, GCABLE
+    thread: 0x40D550B0  lastj: 0x4157FDCC  pt_thr: 0x0000060C
+    at jrockit/vm/Threads.progressiveNap(Native Method)@40C40D70
+    at jrockit/vm/Locks.stage2Lock(Native Method)@40C40FF7
+    at jrockit/vm/Locks.monitorEnter(Native Method)@40C41096
+    at net/homeip/yusuke/samurai/test/AThread.run(StackSample.java:25)@414F0109
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@40C490C3
+    --- End of stack trace
+
+=====================
+
+===== FULL THREAD DUMP ===============
+Fri Mar 05 15:52:32 2004
+
+"Main Thread"  id: 0x00000080  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x40D41C78  lastj: 0xFFFFFFFC  pt_thr: 0x00000278
+    No Java stack trace available
+
+"(Signal Handler)"  id: 0x00000100  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x40C7C750  lastj: 0xFFFFFFFC  pt_thr: 0x00000790
+    No Java stack trace available
+
+"(Code Generation Thread 1)"  id: 0x00000180  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+    thread: 0x40BE2C80  lastj: 0xFFFFFFFC  pt_thr: 0x000007C4
+    No Java stack trace available
+
+"(Code Optimization Thread 1)"  id: 0x00000200  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+    thread: 0x40BE2D78  lastj: 0xFFFFFFFC  pt_thr: 0x000007CC
+    No Java stack trace available
+
+"(GC Main Thread)"  id: 0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x40BBCDC0  lastj: 0xFFFFFFFC  pt_thr: 0x000005DC
+    No Java stack trace available
+
+"(GC Worker Thread 1)"  id: 0x00000300  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+    thread: 0x40C84990  lastj: 0xFFFFFFFC  pt_thr: 0x00000698
+    No Java stack trace available
+
+"Finalizer"  id: 0x00000380  prio: 8  WAITING, DAEMON, GCABLE
+    thread: 0x40C906A8  lastj: 0x4125FD8C  pt_thr: 0x0000065C
+    at jrockit/vm/Threads.waitForSignal(Native Method)@40C421C0
+    at jrockit/vm/Locks.wait(Unknown Source)@40C493FC
+    at jrockit/vm/Locks.wait(Unknown Source)@40C44811
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@40C49257
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@40C491DC
+    at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@40C4918E
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@40C490C3
+    --- End of stack trace
+
+"Reference Handler"  id: 0x00000400  prio: 10  WAITING, DAEMON, GCABLE
+    thread: 0x40CB2550  lastj: 0x4135FDD8  pt_thr: 0x000005D4
+    at java/lang/ref/Reference.getPending(Native Method)@412D8820
+    at java/lang/ref/Reference.access$000(Unknown Source)@412D8875
+    at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@412D8790
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@40C490C3
+    --- End of stack trace
+
+"(Hotspot Detector)"  id: 0x00000480  prio: 10  ACTIVE, DAEMON, GCABLE
+    thread: 0x40C87030  lastj: 0xFFFFFFFC  pt_thr: 0x000005B4
+    No Java stack trace available
+
+"Thread-1"  id: 0x00000500  prio: 5  ACTIVE, NONDAEMON, GCABLE
+    thread: 0x40D1D0B8  lastj: 0x4153FDCC  pt_thr: 0x000007A0
+    at jrockit/vm/Threads.progressiveNap(Native Method)@40C40D70
+    at jrockit/vm/Locks.stage2Lock(Native Method)@40C40FF7
+    at jrockit/vm/Locks.monitorEnter(Native Method)@40C41096
+    at net/homeip/yusuke/samurai/test/AThread.run(StackSample.java:25)@414F0109
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@40C490C3
+    --- End of stack trace
+
+"Thread-2"  id: 0x00000580  prio: 5  ACTIVE, NONDAEMON, GCABLE
+    thread: 0x40D550B0  lastj: 0x4157FDCC  pt_thr: 0x0000060C
+    at jrockit/vm/Threads.progressiveNap(Native Method)@40C40D70
+    at jrockit/vm/Locks.stage2Lock(Native Method)@40C40FF7
+    at jrockit/vm/Locks.monitorEnter(Native Method)@40C41096
+    at net/homeip/yusuke/samurai/test/AThread.run(StackSample.java:25)@414F0109
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@40C490C3
+    --- End of stack trace
+
+=====================

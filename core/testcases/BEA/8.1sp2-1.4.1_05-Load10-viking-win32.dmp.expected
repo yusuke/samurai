@@ -1,0 +1,3195 @@
+ftd.0.deadLockSize=0
+ftd.0.threadCount=53
+#"ExecuteThread: '0' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000080  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03372670  lastj: 0x7FF70EC0
+#   pt_thr: 0x000003D0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.0.blockedObjectId=null
+td.0.0.blockerId=null
+td.0.0.condition=id: 0x0x00000080  prio: 5  WAITING, DAEMON, GCABLE
+td.0.0.header="ExecuteThread: '0' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000080  prio: 5  WAITING, DAEMON, GCABLE
+td.0.0.id=0x0x00000080
+td.0.0.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
+td.0.0.isBlocked=false
+td.0.0.isDaemon=true
+td.0.0.isDeadLocked=false
+td.0.0.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000100  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373028  lastj: 0x7FF50EC0
+#   pt_thr: 0x00000704
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.1.blockedObjectId=null
+td.0.1.blockerId=null
+td.0.1.condition=id: 0x0x00000100  prio: 5  WAITING, DAEMON, GCABLE
+td.0.1.header="ExecuteThread: '1' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000100  prio: 5  WAITING, DAEMON, GCABLE
+td.0.1.id=0x0x00000100
+td.0.1.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
+td.0.1.isBlocked=false
+td.0.1.isDaemon=true
+td.0.1.isDeadLocked=false
+td.0.1.isIdle=true
+
+#"Finalizer"  id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+#   thread: 0x01F75898  lastj: 0x7FF30E9C
+#   pt_thr: 0x00000710
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at java.lang.Object.wait0(Unknown Source)@116C4775
+#   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:111)@116C7D25
+#   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:127)@116C7C9C
+#   at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)@116C7C31
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.2.blockedObjectId=null
+td.0.2.blockerId=null
+td.0.2.condition=id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+td.0.2.header="Finalizer"  id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+td.0.2.id=0x0x00000180
+td.0.2.name=Finalizer
+td.0.2.isBlocked=false
+td.0.2.isDaemon=true
+td.0.2.isDeadLocked=false
+td.0.2.isIdle=true
+
+#"SignalHandler"  id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x01FAB020  lastj: 0x7FEE0EF0
+#   pt_thr: 0x000006F0
+#   at COM.jrockit.vm.SignalHandler.waitForSignals(Native Method)@12FA7490
+#   at COM.jrockit.vm.SignalHandler$1.run(Unknown Source)@12FA7515
+#   at java.lang.Thread.run(Unknown Source)@116C37A1
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.3.blockedObjectId=null
+td.0.3.blockerId=null
+td.0.3.condition=id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.3.header="SignalHandler"  id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.3.id=0x0x00000200
+td.0.3.name=SignalHandler
+td.0.3.isBlocked=false
+td.0.3.isDaemon=true
+td.0.3.isDeadLocked=false
+td.0.3.isIdle=false
+
+#"Hotspot Detector"  id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x01FAB108  lastj: 0x7FEC0EF0
+#   pt_thr: 0x000006C8
+#   at COM.jrockit.vm.HotspotDetector.findHotSpotCandidate(Native Method)@12FA7550
+#   at COM.jrockit.vm.HotspotDetector.run(Unknown Source)@12FA7585
+#   at java.lang.Thread.run(Unknown Source)@116C37A1
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.4.blockedObjectId=null
+td.0.4.blockerId=null
+td.0.4.condition=id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.4.header="Hotspot Detector"  id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.4.id=0x0x00000280
+td.0.4.name=Hotspot Detector
+td.0.4.isBlocked=false
+td.0.4.isDaemon=true
+td.0.4.isDeadLocked=false
+td.0.4.isIdle=false
+
+#"Reference Handler"  id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+#   thread: 0x01FAB368  lastj: 0x7FEA0EE4
+#   pt_thr: 0x00000660
+#   at java.lang.ref.Reference.getPending(Native Method)@12FA532E
+#   at java.lang.ref.Reference.access$000(Unknown Source)@12FA5365
+#   at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)@12FA529F
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.5.blockedObjectId=null
+td.0.5.blockerId=null
+td.0.5.condition=id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+td.0.5.header="Reference Handler"  id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+td.0.5.id=0x0x00000300
+td.0.5.name=Reference Handler
+td.0.5.isBlocked=false
+td.0.5.isDaemon=true
+td.0.5.isDeadLocked=false
+td.0.5.isIdle=true
+
+#"Thread-1"  id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+#   thread: 0x01FAB4C0  lastj: 0x0006FB3C
+#   pt_thr: 0x000005AC
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:1170)@1D862851
+#   at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:384)@136305A7
+#   at weblogic.Server.main(Server.java:32)@136300A7
+#   --- End of stack trace
+td.0.6.blockedObjectId=null
+td.0.6.blockerId=null
+td.0.6.condition=id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+td.0.6.header="Thread-1"  id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+td.0.6.id=0x0x00000380
+td.0.6.name=Thread-1
+td.0.6.isBlocked=false
+td.0.6.isDaemon=false
+td.0.6.isDeadLocked=false
+td.0.6.isIdle=true
+
+#"Noname"  id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x01FAB6C0  lastj: 0x7FE80F08
+#   pt_thr: 0x000004E4
+#   at COM.jrockit.vm.MemSystem.mcGenConEP(Native Method)@12FA5BD8
+#   --- End of stack trace
+td.0.7.blockedObjectId=null
+td.0.7.blockerId=null
+td.0.7.condition=id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.7.header="Noname"  id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.7.id=0x0x00000400
+td.0.7.name=Noname
+td.0.7.isBlocked=false
+td.0.7.isDaemon=true
+td.0.7.isDeadLocked=false
+td.0.7.isIdle=false
+
+#"ExecuteThread: '2' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000480  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373140  lastj: 0x7FE30EC0
+#   pt_thr: 0x0000062C
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.8.blockedObjectId=null
+td.0.8.blockerId=null
+td.0.8.condition=id: 0x0x00000480  prio: 5  WAITING, DAEMON, GCABLE
+td.0.8.header="ExecuteThread: '2' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000480  prio: 5  WAITING, DAEMON, GCABLE
+td.0.8.id=0x0x00000480
+td.0.8.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
+td.0.8.isBlocked=false
+td.0.8.isDaemon=true
+td.0.8.isDeadLocked=false
+td.0.8.isIdle=true
+
+#"ExecuteThread: '3' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000500  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373258  lastj: 0x7FE10EC0
+#   pt_thr: 0x00000674
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.9.blockedObjectId=null
+td.0.9.blockerId=null
+td.0.9.condition=id: 0x0x00000500  prio: 5  WAITING, DAEMON, GCABLE
+td.0.9.header="ExecuteThread: '3' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000500  prio: 5  WAITING, DAEMON, GCABLE
+td.0.9.id=0x0x00000500
+td.0.9.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
+td.0.9.isBlocked=false
+td.0.9.isDaemon=true
+td.0.9.isDeadLocked=false
+td.0.9.isIdle=true
+
+#"ExecuteThread: '4' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000580  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373370  lastj: 0x7FDF0EC0
+#   pt_thr: 0x000006B4
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.10.blockedObjectId=null
+td.0.10.blockerId=null
+td.0.10.condition=id: 0x0x00000580  prio: 5  WAITING, DAEMON, GCABLE
+td.0.10.header="ExecuteThread: '4' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000580  prio: 5  WAITING, DAEMON, GCABLE
+td.0.10.id=0x0x00000580
+td.0.10.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
+td.0.10.isBlocked=false
+td.0.10.isDaemon=true
+td.0.10.isDeadLocked=false
+td.0.10.isIdle=true
+
+#"ExecuteThread: '5' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000600  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373488  lastj: 0x7FDD0EC0
+#   pt_thr: 0x00000560
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.11.blockedObjectId=null
+td.0.11.blockerId=null
+td.0.11.condition=id: 0x0x00000600  prio: 5  WAITING, DAEMON, GCABLE
+td.0.11.header="ExecuteThread: '5' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000600  prio: 5  WAITING, DAEMON, GCABLE
+td.0.11.id=0x0x00000600
+td.0.11.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
+td.0.11.isBlocked=false
+td.0.11.isDaemon=true
+td.0.11.isDeadLocked=false
+td.0.11.isIdle=true
+
+#"ExecuteThread: '6' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000680  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033735A0  lastj: 0x7FDB0EC0
+#   pt_thr: 0x000006E8
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.12.blockedObjectId=null
+td.0.12.blockerId=null
+td.0.12.condition=id: 0x0x00000680  prio: 5  WAITING, DAEMON, GCABLE
+td.0.12.header="ExecuteThread: '6' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000680  prio: 5  WAITING, DAEMON, GCABLE
+td.0.12.id=0x0x00000680
+td.0.12.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
+td.0.12.isBlocked=false
+td.0.12.isDaemon=true
+td.0.12.isDeadLocked=false
+td.0.12.isIdle=true
+
+#"ExecuteThread: '7' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000700  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033736B8  lastj: 0x7FD90EC0
+#   pt_thr: 0x000006E0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.13.blockedObjectId=null
+td.0.13.blockerId=null
+td.0.13.condition=id: 0x0x00000700  prio: 5  WAITING, DAEMON, GCABLE
+td.0.13.header="ExecuteThread: '7' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000700  prio: 5  WAITING, DAEMON, GCABLE
+td.0.13.id=0x0x00000700
+td.0.13.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
+td.0.13.isBlocked=false
+td.0.13.isDaemon=true
+td.0.13.isDeadLocked=false
+td.0.13.isIdle=true
+
+#"ExecuteThread: '8' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000780  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033737D0  lastj: 0x7FD70EC0
+#   pt_thr: 0x000006B0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.14.blockedObjectId=null
+td.0.14.blockerId=null
+td.0.14.condition=id: 0x0x00000780  prio: 5  WAITING, DAEMON, GCABLE
+td.0.14.header="ExecuteThread: '8' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000780  prio: 5  WAITING, DAEMON, GCABLE
+td.0.14.id=0x0x00000780
+td.0.14.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
+td.0.14.isBlocked=false
+td.0.14.isDaemon=true
+td.0.14.isDeadLocked=false
+td.0.14.isIdle=true
+
+#"ExecuteThread: '9' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000800  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033738E8  lastj: 0x7FD50EC0
+#   pt_thr: 0x00000418
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.15.blockedObjectId=null
+td.0.15.blockerId=null
+td.0.15.condition=id: 0x0x00000800  prio: 5  WAITING, DAEMON, GCABLE
+td.0.15.header="ExecuteThread: '9' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000800  prio: 5  WAITING, DAEMON, GCABLE
+td.0.15.id=0x0x00000800
+td.0.15.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
+td.0.15.isBlocked=false
+td.0.15.isDaemon=true
+td.0.15.isDeadLocked=false
+td.0.15.isIdle=true
+
+#"ExecuteThread: '10' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000880  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373A00  lastj: 0x7FD30EC0
+#   pt_thr: 0x00000610
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.16.blockedObjectId=null
+td.0.16.blockerId=null
+td.0.16.condition=id: 0x0x00000880  prio: 5  WAITING, DAEMON, GCABLE
+td.0.16.header="ExecuteThread: '10' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000880  prio: 5  WAITING, DAEMON, GCABLE
+td.0.16.id=0x0x00000880
+td.0.16.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
+td.0.16.isBlocked=false
+td.0.16.isDaemon=true
+td.0.16.isDeadLocked=false
+td.0.16.isIdle=true
+
+#"ExecuteThread: '11' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000900  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373B18  lastj: 0x7FD10EC0
+#   pt_thr: 0x0000054C
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.17.blockedObjectId=null
+td.0.17.blockerId=null
+td.0.17.condition=id: 0x0x00000900  prio: 5  WAITING, DAEMON, GCABLE
+td.0.17.header="ExecuteThread: '11' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000900  prio: 5  WAITING, DAEMON, GCABLE
+td.0.17.id=0x0x00000900
+td.0.17.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
+td.0.17.isBlocked=false
+td.0.17.isDaemon=true
+td.0.17.isDeadLocked=false
+td.0.17.isIdle=true
+
+#"ExecuteThread: '12' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000980  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373C30  lastj: 0x7FCF0EC0
+#   pt_thr: 0x000004DC
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.18.blockedObjectId=null
+td.0.18.blockerId=null
+td.0.18.condition=id: 0x0x00000980  prio: 5  WAITING, DAEMON, GCABLE
+td.0.18.header="ExecuteThread: '12' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000980  prio: 5  WAITING, DAEMON, GCABLE
+td.0.18.id=0x0x00000980
+td.0.18.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
+td.0.18.isBlocked=false
+td.0.18.isDaemon=true
+td.0.18.isDeadLocked=false
+td.0.18.isIdle=true
+
+#"ExecuteThread: '13' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373D48  lastj: 0x7FCD0EC0
+#   pt_thr: 0x000005E0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.19.blockedObjectId=null
+td.0.19.blockerId=null
+td.0.19.condition=id: 0x0x00000a00  prio: 5  WAITING, DAEMON, GCABLE
+td.0.19.header="ExecuteThread: '13' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a00  prio: 5  WAITING, DAEMON, GCABLE
+td.0.19.id=0x0x00000a00
+td.0.19.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
+td.0.19.isBlocked=false
+td.0.19.isDaemon=true
+td.0.19.isDeadLocked=false
+td.0.19.isIdle=true
+
+#"ExecuteThread: '14' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373E60  lastj: 0x7FCB0EC0
+#   pt_thr: 0x00000420
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.20.blockedObjectId=null
+td.0.20.blockerId=null
+td.0.20.condition=id: 0x0x00000a80  prio: 5  WAITING, DAEMON, GCABLE
+td.0.20.header="ExecuteThread: '14' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a80  prio: 5  WAITING, DAEMON, GCABLE
+td.0.20.id=0x0x00000a80
+td.0.20.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
+td.0.20.isBlocked=false
+td.0.20.isDaemon=true
+td.0.20.isDeadLocked=false
+td.0.20.isIdle=true
+
+#"ExecuteThread: '15' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373F78  lastj: 0x7FC90EC0
+#   pt_thr: 0x000003D8
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.21.blockedObjectId=null
+td.0.21.blockerId=null
+td.0.21.condition=id: 0x0x00000b00  prio: 5  WAITING, DAEMON, GCABLE
+td.0.21.header="ExecuteThread: '15' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b00  prio: 5  WAITING, DAEMON, GCABLE
+td.0.21.id=0x0x00000b00
+td.0.21.name=ExecuteThread: '15' for queue: 'weblogic.kernel.Default'
+td.0.21.isBlocked=false
+td.0.21.isDaemon=true
+td.0.21.isDeadLocked=false
+td.0.21.isIdle=true
+
+#"ExecuteThread: '16' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374090  lastj: 0x7FC70EC0
+#   pt_thr: 0x000005E4
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.22.blockedObjectId=null
+td.0.22.blockerId=null
+td.0.22.condition=id: 0x0x00000b80  prio: 5  WAITING, DAEMON, GCABLE
+td.0.22.header="ExecuteThread: '16' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b80  prio: 5  WAITING, DAEMON, GCABLE
+td.0.22.id=0x0x00000b80
+td.0.22.name=ExecuteThread: '16' for queue: 'weblogic.kernel.Default'
+td.0.22.isBlocked=false
+td.0.22.isDaemon=true
+td.0.22.isDeadLocked=false
+td.0.22.isIdle=true
+
+#"ExecuteThread: '17' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033741A8  lastj: 0x7FC50EC0
+#   pt_thr: 0x000005C4
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.23.blockedObjectId=null
+td.0.23.blockerId=null
+td.0.23.condition=id: 0x0x00000c00  prio: 5  WAITING, DAEMON, GCABLE
+td.0.23.header="ExecuteThread: '17' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c00  prio: 5  WAITING, DAEMON, GCABLE
+td.0.23.id=0x0x00000c00
+td.0.23.name=ExecuteThread: '17' for queue: 'weblogic.kernel.Default'
+td.0.23.isBlocked=false
+td.0.23.isDaemon=true
+td.0.23.isDeadLocked=false
+td.0.23.isIdle=true
+
+#"ExecuteThread: '18' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033742C0  lastj: 0x7FC30EC0
+#   pt_thr: 0x00000230
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.24.blockedObjectId=null
+td.0.24.blockerId=null
+td.0.24.condition=id: 0x0x00000c80  prio: 5  WAITING, DAEMON, GCABLE
+td.0.24.header="ExecuteThread: '18' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c80  prio: 5  WAITING, DAEMON, GCABLE
+td.0.24.id=0x0x00000c80
+td.0.24.name=ExecuteThread: '18' for queue: 'weblogic.kernel.Default'
+td.0.24.isBlocked=false
+td.0.24.isDaemon=true
+td.0.24.isDeadLocked=false
+td.0.24.isIdle=true
+
+#"ExecuteThread: '19' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033743D8  lastj: 0x7FC10EC0
+#   pt_thr: 0x0000065C
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.25.blockedObjectId=null
+td.0.25.blockerId=null
+td.0.25.condition=id: 0x0x00000d00  prio: 5  WAITING, DAEMON, GCABLE
+td.0.25.header="ExecuteThread: '19' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d00  prio: 5  WAITING, DAEMON, GCABLE
+td.0.25.id=0x0x00000d00
+td.0.25.name=ExecuteThread: '19' for queue: 'weblogic.kernel.Default'
+td.0.25.isBlocked=false
+td.0.25.isDaemon=true
+td.0.25.isDeadLocked=false
+td.0.25.isIdle=true
+
+#"ExecuteThread: '20' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033744F0  lastj: 0x7FBF0EC0
+#   pt_thr: 0x00000640
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.26.blockedObjectId=null
+td.0.26.blockerId=null
+td.0.26.condition=id: 0x0x00000d80  prio: 5  WAITING, DAEMON, GCABLE
+td.0.26.header="ExecuteThread: '20' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d80  prio: 5  WAITING, DAEMON, GCABLE
+td.0.26.id=0x0x00000d80
+td.0.26.name=ExecuteThread: '20' for queue: 'weblogic.kernel.Default'
+td.0.26.isBlocked=false
+td.0.26.isDaemon=true
+td.0.26.isDeadLocked=false
+td.0.26.isIdle=true
+
+#"ExecuteThread: '21' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374608  lastj: 0x7FBD0EC0
+#   pt_thr: 0x000001DC
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.27.blockedObjectId=null
+td.0.27.blockerId=null
+td.0.27.condition=id: 0x0x00000e00  prio: 5  WAITING, DAEMON, GCABLE
+td.0.27.header="ExecuteThread: '21' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e00  prio: 5  WAITING, DAEMON, GCABLE
+td.0.27.id=0x0x00000e00
+td.0.27.name=ExecuteThread: '21' for queue: 'weblogic.kernel.Default'
+td.0.27.isBlocked=false
+td.0.27.isDaemon=true
+td.0.27.isDeadLocked=false
+td.0.27.isIdle=true
+
+#"ExecuteThread: '22' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374720  lastj: 0x7FBB0EC0
+#   pt_thr: 0x000004B8
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.28.blockedObjectId=null
+td.0.28.blockerId=null
+td.0.28.condition=id: 0x0x00000e80  prio: 5  WAITING, DAEMON, GCABLE
+td.0.28.header="ExecuteThread: '22' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e80  prio: 5  WAITING, DAEMON, GCABLE
+td.0.28.id=0x0x00000e80
+td.0.28.name=ExecuteThread: '22' for queue: 'weblogic.kernel.Default'
+td.0.28.isBlocked=false
+td.0.28.isDaemon=true
+td.0.28.isDeadLocked=false
+td.0.28.isIdle=true
+
+#"ExecuteThread: '23' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374838  lastj: 0x7FB90EC0
+#   pt_thr: 0x00000630
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.29.blockedObjectId=null
+td.0.29.blockerId=null
+td.0.29.condition=id: 0x0x00000f00  prio: 5  WAITING, DAEMON, GCABLE
+td.0.29.header="ExecuteThread: '23' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f00  prio: 5  WAITING, DAEMON, GCABLE
+td.0.29.id=0x0x00000f00
+td.0.29.name=ExecuteThread: '23' for queue: 'weblogic.kernel.Default'
+td.0.29.isBlocked=false
+td.0.29.isDaemon=true
+td.0.29.isDeadLocked=false
+td.0.29.isIdle=true
+
+#"ExecuteThread: '24' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374950  lastj: 0x7FB70EC0
+#   pt_thr: 0x00000524
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.30.blockedObjectId=null
+td.0.30.blockerId=null
+td.0.30.condition=id: 0x0x00000f80  prio: 5  WAITING, DAEMON, GCABLE
+td.0.30.header="ExecuteThread: '24' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f80  prio: 5  WAITING, DAEMON, GCABLE
+td.0.30.id=0x0x00000f80
+td.0.30.name=ExecuteThread: '24' for queue: 'weblogic.kernel.Default'
+td.0.30.isBlocked=false
+td.0.30.isDaemon=true
+td.0.30.isDeadLocked=false
+td.0.30.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.kernel.System'"  id: 0x0x00001000  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374B80  lastj: 0x7FB50EC0
+#   pt_thr: 0x00000600
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.31.blockedObjectId=null
+td.0.31.blockerId=null
+td.0.31.condition=id: 0x0x00001000  prio: 5  WAITING, DAEMON, GCABLE
+td.0.31.header="ExecuteThread: '0' for queue: 'weblogic.kernel.System'"  id: 0x0x00001000  prio: 5  WAITING, DAEMON, GCABLE
+td.0.31.id=0x0x00001000
+td.0.31.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
+td.0.31.isBlocked=false
+td.0.31.isDaemon=true
+td.0.31.isDeadLocked=false
+td.0.31.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.kernel.System'"  id: 0x0x00001080  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374C98  lastj: 0x7FB30EC0
+#   pt_thr: 0x000002A8
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.32.blockedObjectId=null
+td.0.32.blockerId=null
+td.0.32.condition=id: 0x0x00001080  prio: 5  WAITING, DAEMON, GCABLE
+td.0.32.header="ExecuteThread: '1' for queue: 'weblogic.kernel.System'"  id: 0x0x00001080  prio: 5  WAITING, DAEMON, GCABLE
+td.0.32.id=0x0x00001080
+td.0.32.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
+td.0.32.isBlocked=false
+td.0.32.isDaemon=true
+td.0.32.isDeadLocked=false
+td.0.32.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.kernel.System'"  id: 0x0x00001100  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374DB0  lastj: 0x7FB10EC0
+#   pt_thr: 0x00000510
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.33.blockedObjectId=null
+td.0.33.blockerId=null
+td.0.33.condition=id: 0x0x00001100  prio: 5  WAITING, DAEMON, GCABLE
+td.0.33.header="ExecuteThread: '2' for queue: 'weblogic.kernel.System'"  id: 0x0x00001100  prio: 5  WAITING, DAEMON, GCABLE
+td.0.33.id=0x0x00001100
+td.0.33.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
+td.0.33.isBlocked=false
+td.0.33.isDaemon=true
+td.0.33.isDeadLocked=false
+td.0.33.isIdle=true
+
+#"ExecuteThread: '3' for queue: 'weblogic.kernel.System'"  id: 0x0x00001180  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374EC8  lastj: 0x7FAF0EC0
+#   pt_thr: 0x00000664
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.34.blockedObjectId=null
+td.0.34.blockerId=null
+td.0.34.condition=id: 0x0x00001180  prio: 5  WAITING, DAEMON, GCABLE
+td.0.34.header="ExecuteThread: '3' for queue: 'weblogic.kernel.System'"  id: 0x0x00001180  prio: 5  WAITING, DAEMON, GCABLE
+td.0.34.id=0x0x00001180
+td.0.34.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
+td.0.34.isBlocked=false
+td.0.34.isDaemon=true
+td.0.34.isDeadLocked=false
+td.0.34.isIdle=true
+
+#"ExecuteThread: '4' for queue: 'weblogic.kernel.System'"  id: 0x0x00001200  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374FE0  lastj: 0x7FAD0EC0
+#   pt_thr: 0x00000408
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.35.blockedObjectId=null
+td.0.35.blockerId=null
+td.0.35.condition=id: 0x0x00001200  prio: 5  WAITING, DAEMON, GCABLE
+td.0.35.header="ExecuteThread: '4' for queue: 'weblogic.kernel.System'"  id: 0x0x00001200  prio: 5  WAITING, DAEMON, GCABLE
+td.0.35.id=0x0x00001200
+td.0.35.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
+td.0.35.isBlocked=false
+td.0.35.isDaemon=true
+td.0.35.isDeadLocked=false
+td.0.35.isIdle=true
+
+#"weblogic.time.TimeEventGenerator"  id: 0x0x00001280  prio: 9  WAITING, DAEMON, GCABLE
+#   thread: 0x033766C0  lastj: 0x7FAB0EA4
+#   pt_thr: 0x0000066C
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:271)@1916475C
+#   at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:118)@191642A9
+#   at java.lang.Thread.run(Unknown Source)@116C37A1
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.36.blockedObjectId=null
+td.0.36.blockerId=null
+td.0.36.condition=id: 0x0x00001280  prio: 9  WAITING, DAEMON, GCABLE
+td.0.36.header="weblogic.time.TimeEventGenerator"  id: 0x0x00001280  prio: 9  WAITING, DAEMON, GCABLE
+td.0.36.id=0x0x00001280
+td.0.36.name=weblogic.time.TimeEventGenerator
+td.0.36.isBlocked=false
+td.0.36.isDaemon=true
+td.0.36.isDeadLocked=false
+td.0.36.isIdle=true
+
+#"weblogic.security.SpinnerRandomSource"  id: 0x0x00001300  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03394D28  lastj: 0x7FA90ECC
+#   pt_thr: 0x00000100
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.security.SpinnerRandomBitsSource.run(Optimized Method)@1916A2F7
+#   at java.lang.Thread.run(Unknown Source)@116C37A1
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.37.blockedObjectId=null
+td.0.37.blockerId=null
+td.0.37.condition=id: 0x0x00001300  prio: 5  WAITING, DAEMON, GCABLE
+td.0.37.header="weblogic.security.SpinnerRandomSource"  id: 0x0x00001300  prio: 5  WAITING, DAEMON, GCABLE
+td.0.37.id=0x0x00001300
+td.0.37.name=weblogic.security.SpinnerRandomSource
+td.0.37.isBlocked=false
+td.0.37.isDaemon=true
+td.0.37.isDeadLocked=false
+td.0.37.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001380  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CBFD0  lastj: 0x7FA70EC0
+#   pt_thr: 0x000005D0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.38.blockedObjectId=null
+td.0.38.blockerId=null
+td.0.38.condition=id: 0x0x00001380  prio: 5  WAITING, DAEMON, GCABLE
+td.0.38.header="ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001380  prio: 5  WAITING, DAEMON, GCABLE
+td.0.38.id=0x0x00001380
+td.0.38.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
+td.0.38.isBlocked=false
+td.0.38.isDaemon=true
+td.0.38.isDeadLocked=false
+td.0.38.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001400  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CC0E8  lastj: 0x7FA50EC0
+#   pt_thr: 0x000005FC
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.39.blockedObjectId=null
+td.0.39.blockerId=null
+td.0.39.condition=id: 0x0x00001400  prio: 5  WAITING, DAEMON, GCABLE
+td.0.39.header="ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001400  prio: 5  WAITING, DAEMON, GCABLE
+td.0.39.id=0x0x00001400
+td.0.39.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
+td.0.39.isBlocked=false
+td.0.39.isDaemon=true
+td.0.39.isDeadLocked=false
+td.0.39.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001480  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CC200  lastj: 0x7FA30EC0
+#   pt_thr: 0x000005D4
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.40.blockedObjectId=null
+td.0.40.blockerId=null
+td.0.40.condition=id: 0x0x00001480  prio: 5  WAITING, DAEMON, GCABLE
+td.0.40.header="ExecuteThread: '0' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001480  prio: 5  WAITING, DAEMON, GCABLE
+td.0.40.id=0x0x00001480
+td.0.40.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
+td.0.40.isBlocked=false
+td.0.40.isDaemon=true
+td.0.40.isDeadLocked=false
+td.0.40.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001500  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CC318  lastj: 0x7FA10EC0
+#   pt_thr: 0x0000068C
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.41.blockedObjectId=null
+td.0.41.blockerId=null
+td.0.41.condition=id: 0x0x00001500  prio: 5  WAITING, DAEMON, GCABLE
+td.0.41.header="ExecuteThread: '1' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001500  prio: 5  WAITING, DAEMON, GCABLE
+td.0.41.id=0x0x00001500
+td.0.41.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
+td.0.41.isBlocked=false
+td.0.41.isDaemon=true
+td.0.41.isDeadLocked=false
+td.0.41.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001580  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CC430  lastj: 0x7F9F0EC0
+#   pt_thr: 0x00000690
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.42.blockedObjectId=null
+td.0.42.blockerId=null
+td.0.42.condition=id: 0x0x00001580  prio: 5  WAITING, DAEMON, GCABLE
+td.0.42.header="ExecuteThread: '2' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001580  prio: 5  WAITING, DAEMON, GCABLE
+td.0.42.id=0x0x00001580
+td.0.42.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
+td.0.42.isBlocked=false
+td.0.42.isDaemon=true
+td.0.42.isDeadLocked=false
+td.0.42.isIdle=true
+
+#"VDE Transaction Processor Thread"  id: 0x0x00001600  prio: 2  WAITING, NONDAEMON, GCABLE
+#   thread: 0x0355D6C8  lastj: 0x7F9D0EA4
+#   pt_thr: 0x00000694
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:356)@19C524A2
+#   at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)@19C51447
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.43.blockedObjectId=null
+td.0.43.blockerId=null
+td.0.43.condition=id: 0x0x00001600  prio: 2  WAITING, NONDAEMON, GCABLE
+td.0.43.header="VDE Transaction Processor Thread"  id: 0x0x00001600  prio: 2  WAITING, NONDAEMON, GCABLE
+td.0.43.id=0x0x00001600
+td.0.43.name=VDE Transaction Processor Thread
+td.0.43.isBlocked=false
+td.0.43.isDaemon=false
+td.0.43.isDeadLocked=false
+td.0.43.isIdle=true
+
+#"VDE Replication Thread"  id: 0x0x00001680  prio: 5  WAITING, NONDAEMON, GCABLE
+#   thread: 0x0366F3B0  lastj: 0x7F9B0EA8
+#   pt_thr: 0x0000069C
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at com.octetstring.vde.replication.Replication.wait30sec(Replication.java:395)@1D86A96A
+#   at com.octetstring.vde.replication.Replication.run(Replication.java:365)@19C5E051
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.44.blockedObjectId=null
+td.0.44.blockerId=null
+td.0.44.condition=id: 0x0x00001680  prio: 5  WAITING, NONDAEMON, GCABLE
+td.0.44.header="VDE Replication Thread"  id: 0x0x00001680  prio: 5  WAITING, NONDAEMON, GCABLE
+td.0.44.id=0x0x00001680
+td.0.44.name=VDE Replication Thread
+td.0.44.isBlocked=false
+td.0.44.isDaemon=false
+td.0.44.isDeadLocked=false
+td.0.44.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'JMS.TimerTreePool'"  id: 0x0x00001700  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x04D84068  lastj: 0x7F990EA4
+#   pt_thr: 0x000006AC
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at weblogic.jms.backend.BETimerTree.execute(BETimerTree.java:146)@1D1720E5
+#   at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.45.blockedObjectId=null
+td.0.45.blockerId=null
+td.0.45.condition=id: 0x0x00001700  prio: 5  WAITING, DAEMON, GCABLE
+td.0.45.header="ExecuteThread: '0' for queue: 'JMS.TimerTreePool'"  id: 0x0x00001700  prio: 5  WAITING, DAEMON, GCABLE
+td.0.45.id=0x0x00001700
+td.0.45.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
+td.0.45.isBlocked=false
+td.0.45.isDaemon=true
+td.0.45.isDeadLocked=false
+td.0.45.isIdle=true
+
+#"Thread-4"  id: 0x0x00001780  prio: 5  WAITING, NONDAEMON, GCABLE
+#   thread: 0x03BFC028  lastj: 0x7F970EA0
+#   pt_thr: 0x0000059C
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at java.util.TimerThread.mainLoop(Timer.java:429)@1A56DB88
+#   at java.util.TimerThread.run(Timer.java:382)@1A56D912
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.46.blockedObjectId=null
+td.0.46.blockerId=null
+td.0.46.condition=id: 0x0x00001780  prio: 5  WAITING, NONDAEMON, GCABLE
+td.0.46.header="Thread-4"  id: 0x0x00001780  prio: 5  WAITING, NONDAEMON, GCABLE
+td.0.46.id=0x0x00001780
+td.0.46.name=Thread-4
+td.0.46.isBlocked=false
+td.0.46.isDaemon=false
+td.0.46.isDeadLocked=false
+td.0.46.isIdle=true
+
+#"[JRockit] GCEventThread"  id: 0x0x00001800  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03EC8858  lastj: 0x7F950EB8
+#   pt_thr: 0x0000032C
+#   at COM.jrockit.management.jvm.GarbageCollectorImpl.waitForEvent(Native Method)@1ACB690E
+#   at COM.jrockit.management.jvm.GarbageCollectorImpl.access$000(Unknown Source)@1ACB6935
+#   at COM.jrockit.management.jvm.GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)@1ACB6845
+#   at COM.jrockit.management.jvm.AsyncEventProvider$EventThread.run(Unknown Source)@1ACB6762
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.47.blockedObjectId=null
+td.0.47.blockerId=null
+td.0.47.condition=id: 0x0x00001800  prio: 5  WAITING, DAEMON, GCABLE
+td.0.47.header="[JRockit] GCEventThread"  id: 0x0x00001800  prio: 5  WAITING, DAEMON, GCABLE
+td.0.47.id=0x0x00001800
+td.0.47.name=[JRockit] GCEventThread
+td.0.47.isBlocked=false
+td.0.47.isDaemon=true
+td.0.47.isDeadLocked=false
+td.0.47.isIdle=true
+
+#"weblogic.health.CoreHealthMonitor"  id: 0x0x00001880  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03EC7FD8  lastj: 0x7F930EB0
+#   pt_thr: 0x00000668
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at java.lang.Thread.sleep(Unknown Source)@18A6E2A5
+#   at weblogic.t3.srvr.CoreHealthMonitorThread.run(CoreHealthMonitorThread.java:127)@1B326986
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.48.blockedObjectId=null
+td.0.48.blockerId=null
+td.0.48.condition=id: 0x0x00001880  prio: 5  WAITING, DAEMON, GCABLE
+td.0.48.header="weblogic.health.CoreHealthMonitor"  id: 0x0x00001880  prio: 5  WAITING, DAEMON, GCABLE
+td.0.48.id=0x0x00001880
+td.0.48.name=weblogic.health.CoreHealthMonitor
+td.0.48.isBlocked=false
+td.0.48.isDaemon=true
+td.0.48.isDeadLocked=false
+td.0.48.isIdle=true
+
+#"ListenThread.Default"  id: 0x0x00001900  prio: 5  ACTIVE, NONDAEMON, GCABLE
+#   thread: 0x05075D70  lastj: 0x7F8E0E6C
+#   pt_thr: 0x0000058C
+#   at COM.jrockit.net.SocketNativeIO.accept(Native Method)@1D1A139C
+#   at COM.jrockit.net.SocketNativeIO.accept(Unknown Source)@1D1A1421
+#   at java.net.AbstractSocketImpl.accept(Unknown Source)@1D1A12FA
+#   at java.net.ServerSocket.implAccept(ServerSocket.java:448)@1D1A11C7
+#   at java.net.ServerSocket.accept(ServerSocket.java:419)@1D1A1024
+#   at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:24)@1D863E89
+#   at weblogic.t3.srvr.ListenThread.accept(ListenThread.java:739)@1D863DA9
+#   at weblogic.t3.srvr.ListenThread.run(ListenThread.java:292)@1D27A4AD
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.49.blockedObjectId=null
+td.0.49.blockerId=null
+td.0.49.condition=id: 0x0x00001900  prio: 5  ACTIVE, NONDAEMON, GCABLE
+td.0.49.header="ListenThread.Default"  id: 0x0x00001900  prio: 5  ACTIVE, NONDAEMON, GCABLE
+td.0.49.id=0x0x00001900
+td.0.49.name=ListenThread.Default
+td.0.49.isBlocked=false
+td.0.49.isDaemon=false
+td.0.49.isDeadLocked=false
+td.0.49.isIdle=false
+
+#"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001980  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x050A9370  lastj: 0x7F8C0EBC
+#   pt_thr: 0x00000684
+#   at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)@1D27E978
+#   at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:85)@1D27E7A6
+#   at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:32)@1D27E5CE
+#   at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.50.blockedObjectId=null
+td.0.50.blockerId=null
+td.0.50.condition=id: 0x0x00001980  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.50.header="ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001980  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.50.id=0x0x00001980
+td.0.50.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
+td.0.50.isBlocked=false
+td.0.50.isDaemon=true
+td.0.50.isDeadLocked=false
+td.0.50.isIdle=false
+
+#"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001a00  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x050A9488  lastj: 0x7F8A0EBC
+#   pt_thr: 0x0000070C
+#   at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)@1D27E978
+#   at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:85)@1D27E7A6
+#   at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:32)@1D27E5CE
+#   at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.51.blockedObjectId=null
+td.0.51.blockerId=null
+td.0.51.condition=id: 0x0x00001a00  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.51.header="ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001a00  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.51.id=0x0x00001a00
+td.0.51.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
+td.0.51.isBlocked=false
+td.0.51.isDaemon=true
+td.0.51.isDeadLocked=false
+td.0.51.isIdle=false
+
+#"Thread-6"  id: 0x0x00001a80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x050B2448  lastj: 0x7F880EA0
+#   pt_thr: 0x00000708
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at java.util.TimerThread.mainLoop(Timer.java:429)@1A56DB88
+#   at java.util.TimerThread.run(Timer.java:382)@1A56D912
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.0.52.blockedObjectId=null
+td.0.52.blockerId=null
+td.0.52.condition=id: 0x0x00001a80  prio: 5  WAITING, DAEMON, GCABLE
+td.0.52.header="Thread-6"  id: 0x0x00001a80  prio: 5  WAITING, DAEMON, GCABLE
+td.0.52.id=0x0x00001a80
+td.0.52.name=Thread-6
+td.0.52.isBlocked=false
+td.0.52.isDaemon=true
+td.0.52.isDeadLocked=false
+td.0.52.isIdle=true
+
+ftd.1.deadLockSize=0
+ftd.1.threadCount=53
+#"ExecuteThread: '0' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000080  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03372670  lastj: 0x7FF70EC0
+#   pt_thr: 0x000003D0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.0.blockedObjectId=null
+td.1.0.blockerId=null
+td.1.0.condition=id: 0x0x00000080  prio: 5  WAITING, DAEMON, GCABLE
+td.1.0.header="ExecuteThread: '0' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000080  prio: 5  WAITING, DAEMON, GCABLE
+td.1.0.id=0x0x00000080
+td.1.0.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
+td.1.0.isBlocked=false
+td.1.0.isDaemon=true
+td.1.0.isDeadLocked=false
+td.1.0.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000100  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373028  lastj: 0x7FF50EC0
+#   pt_thr: 0x00000704
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.1.blockedObjectId=null
+td.1.1.blockerId=null
+td.1.1.condition=id: 0x0x00000100  prio: 5  WAITING, DAEMON, GCABLE
+td.1.1.header="ExecuteThread: '1' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000100  prio: 5  WAITING, DAEMON, GCABLE
+td.1.1.id=0x0x00000100
+td.1.1.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
+td.1.1.isBlocked=false
+td.1.1.isDaemon=true
+td.1.1.isDeadLocked=false
+td.1.1.isIdle=true
+
+#"Finalizer"  id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+#   thread: 0x01F75898  lastj: 0x7FF30E9C
+#   pt_thr: 0x00000710
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at java.lang.Object.wait0(Unknown Source)@116C4775
+#   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:111)@116C7D25
+#   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:127)@116C7C9C
+#   at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)@116C7C31
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.2.blockedObjectId=null
+td.1.2.blockerId=null
+td.1.2.condition=id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+td.1.2.header="Finalizer"  id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+td.1.2.id=0x0x00000180
+td.1.2.name=Finalizer
+td.1.2.isBlocked=false
+td.1.2.isDaemon=true
+td.1.2.isDeadLocked=false
+td.1.2.isIdle=true
+
+#"SignalHandler"  id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x01FAB020  lastj: 0x7FEE0EF0
+#   pt_thr: 0x000006F0
+#   at COM.jrockit.vm.SignalHandler.waitForSignals(Native Method)@12FA7490
+#   at COM.jrockit.vm.SignalHandler$1.run(Unknown Source)@12FA7515
+#   at java.lang.Thread.run(Unknown Source)@116C37A1
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.3.blockedObjectId=null
+td.1.3.blockerId=null
+td.1.3.condition=id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+td.1.3.header="SignalHandler"  id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+td.1.3.id=0x0x00000200
+td.1.3.name=SignalHandler
+td.1.3.isBlocked=false
+td.1.3.isDaemon=true
+td.1.3.isDeadLocked=false
+td.1.3.isIdle=false
+
+#"Hotspot Detector"  id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x01FAB108  lastj: 0x7FEC0EF0
+#   pt_thr: 0x000006C8
+#   at COM.jrockit.vm.HotspotDetector.findHotSpotCandidate(Native Method)@12FA7550
+#   at COM.jrockit.vm.HotspotDetector.run(Unknown Source)@12FA7585
+#   at java.lang.Thread.run(Unknown Source)@116C37A1
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.4.blockedObjectId=null
+td.1.4.blockerId=null
+td.1.4.condition=id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+td.1.4.header="Hotspot Detector"  id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+td.1.4.id=0x0x00000280
+td.1.4.name=Hotspot Detector
+td.1.4.isBlocked=false
+td.1.4.isDaemon=true
+td.1.4.isDeadLocked=false
+td.1.4.isIdle=false
+
+#"Reference Handler"  id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+#   thread: 0x01FAB368  lastj: 0x7FEA0EE4
+#   pt_thr: 0x00000660
+#   at java.lang.ref.Reference.getPending(Native Method)@12FA532E
+#   at java.lang.ref.Reference.access$000(Unknown Source)@12FA5365
+#   at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)@12FA529F
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.5.blockedObjectId=null
+td.1.5.blockerId=null
+td.1.5.condition=id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+td.1.5.header="Reference Handler"  id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+td.1.5.id=0x0x00000300
+td.1.5.name=Reference Handler
+td.1.5.isBlocked=false
+td.1.5.isDaemon=true
+td.1.5.isDeadLocked=false
+td.1.5.isIdle=true
+
+#"Thread-1"  id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+#   thread: 0x01FAB4C0  lastj: 0x0006FB3C
+#   pt_thr: 0x000005AC
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:1170)@1D862851
+#   at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:384)@136305A7
+#   at weblogic.Server.main(Server.java:32)@136300A7
+#   --- End of stack trace
+td.1.6.blockedObjectId=null
+td.1.6.blockerId=null
+td.1.6.condition=id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+td.1.6.header="Thread-1"  id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+td.1.6.id=0x0x00000380
+td.1.6.name=Thread-1
+td.1.6.isBlocked=false
+td.1.6.isDaemon=false
+td.1.6.isDeadLocked=false
+td.1.6.isIdle=true
+
+#"Noname"  id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x01FAB6C0  lastj: 0x7FE80F08
+#   pt_thr: 0x000004E4
+#   at COM.jrockit.vm.MemSystem.mcGenConEP(Native Method)@12FA5BD8
+#   --- End of stack trace
+td.1.7.blockedObjectId=null
+td.1.7.blockerId=null
+td.1.7.condition=id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+td.1.7.header="Noname"  id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+td.1.7.id=0x0x00000400
+td.1.7.name=Noname
+td.1.7.isBlocked=false
+td.1.7.isDaemon=true
+td.1.7.isDeadLocked=false
+td.1.7.isIdle=false
+
+#"ExecuteThread: '2' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000480  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373140  lastj: 0x7FE30EC0
+#   pt_thr: 0x0000062C
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.8.blockedObjectId=null
+td.1.8.blockerId=null
+td.1.8.condition=id: 0x0x00000480  prio: 5  WAITING, DAEMON, GCABLE
+td.1.8.header="ExecuteThread: '2' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000480  prio: 5  WAITING, DAEMON, GCABLE
+td.1.8.id=0x0x00000480
+td.1.8.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
+td.1.8.isBlocked=false
+td.1.8.isDaemon=true
+td.1.8.isDeadLocked=false
+td.1.8.isIdle=true
+
+#"ExecuteThread: '3' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000500  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373258  lastj: 0x7FE10EC0
+#   pt_thr: 0x00000674
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.9.blockedObjectId=null
+td.1.9.blockerId=null
+td.1.9.condition=id: 0x0x00000500  prio: 5  WAITING, DAEMON, GCABLE
+td.1.9.header="ExecuteThread: '3' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000500  prio: 5  WAITING, DAEMON, GCABLE
+td.1.9.id=0x0x00000500
+td.1.9.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
+td.1.9.isBlocked=false
+td.1.9.isDaemon=true
+td.1.9.isDeadLocked=false
+td.1.9.isIdle=true
+
+#"ExecuteThread: '4' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000580  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373370  lastj: 0x7FDF0EC0
+#   pt_thr: 0x000006B4
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.10.blockedObjectId=null
+td.1.10.blockerId=null
+td.1.10.condition=id: 0x0x00000580  prio: 5  WAITING, DAEMON, GCABLE
+td.1.10.header="ExecuteThread: '4' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000580  prio: 5  WAITING, DAEMON, GCABLE
+td.1.10.id=0x0x00000580
+td.1.10.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
+td.1.10.isBlocked=false
+td.1.10.isDaemon=true
+td.1.10.isDeadLocked=false
+td.1.10.isIdle=true
+
+#"ExecuteThread: '5' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000600  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373488  lastj: 0x7FDD0EC0
+#   pt_thr: 0x00000560
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.11.blockedObjectId=null
+td.1.11.blockerId=null
+td.1.11.condition=id: 0x0x00000600  prio: 5  WAITING, DAEMON, GCABLE
+td.1.11.header="ExecuteThread: '5' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000600  prio: 5  WAITING, DAEMON, GCABLE
+td.1.11.id=0x0x00000600
+td.1.11.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
+td.1.11.isBlocked=false
+td.1.11.isDaemon=true
+td.1.11.isDeadLocked=false
+td.1.11.isIdle=true
+
+#"ExecuteThread: '6' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000680  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033735A0  lastj: 0x7FDB0EC0
+#   pt_thr: 0x000006E8
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.12.blockedObjectId=null
+td.1.12.blockerId=null
+td.1.12.condition=id: 0x0x00000680  prio: 5  WAITING, DAEMON, GCABLE
+td.1.12.header="ExecuteThread: '6' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000680  prio: 5  WAITING, DAEMON, GCABLE
+td.1.12.id=0x0x00000680
+td.1.12.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
+td.1.12.isBlocked=false
+td.1.12.isDaemon=true
+td.1.12.isDeadLocked=false
+td.1.12.isIdle=true
+
+#"ExecuteThread: '7' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000700  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033736B8  lastj: 0x7FD90EC0
+#   pt_thr: 0x000006E0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.13.blockedObjectId=null
+td.1.13.blockerId=null
+td.1.13.condition=id: 0x0x00000700  prio: 5  WAITING, DAEMON, GCABLE
+td.1.13.header="ExecuteThread: '7' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000700  prio: 5  WAITING, DAEMON, GCABLE
+td.1.13.id=0x0x00000700
+td.1.13.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
+td.1.13.isBlocked=false
+td.1.13.isDaemon=true
+td.1.13.isDeadLocked=false
+td.1.13.isIdle=true
+
+#"ExecuteThread: '8' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000780  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033737D0  lastj: 0x7FD70EC0
+#   pt_thr: 0x000006B0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.14.blockedObjectId=null
+td.1.14.blockerId=null
+td.1.14.condition=id: 0x0x00000780  prio: 5  WAITING, DAEMON, GCABLE
+td.1.14.header="ExecuteThread: '8' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000780  prio: 5  WAITING, DAEMON, GCABLE
+td.1.14.id=0x0x00000780
+td.1.14.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
+td.1.14.isBlocked=false
+td.1.14.isDaemon=true
+td.1.14.isDeadLocked=false
+td.1.14.isIdle=true
+
+#"ExecuteThread: '9' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000800  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033738E8  lastj: 0x7FD50EC0
+#   pt_thr: 0x00000418
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.15.blockedObjectId=null
+td.1.15.blockerId=null
+td.1.15.condition=id: 0x0x00000800  prio: 5  WAITING, DAEMON, GCABLE
+td.1.15.header="ExecuteThread: '9' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000800  prio: 5  WAITING, DAEMON, GCABLE
+td.1.15.id=0x0x00000800
+td.1.15.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
+td.1.15.isBlocked=false
+td.1.15.isDaemon=true
+td.1.15.isDeadLocked=false
+td.1.15.isIdle=true
+
+#"ExecuteThread: '10' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000880  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373A00  lastj: 0x7FD30EC0
+#   pt_thr: 0x00000610
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.16.blockedObjectId=null
+td.1.16.blockerId=null
+td.1.16.condition=id: 0x0x00000880  prio: 5  WAITING, DAEMON, GCABLE
+td.1.16.header="ExecuteThread: '10' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000880  prio: 5  WAITING, DAEMON, GCABLE
+td.1.16.id=0x0x00000880
+td.1.16.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
+td.1.16.isBlocked=false
+td.1.16.isDaemon=true
+td.1.16.isDeadLocked=false
+td.1.16.isIdle=true
+
+#"ExecuteThread: '11' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000900  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373B18  lastj: 0x7FD10EC0
+#   pt_thr: 0x0000054C
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.17.blockedObjectId=null
+td.1.17.blockerId=null
+td.1.17.condition=id: 0x0x00000900  prio: 5  WAITING, DAEMON, GCABLE
+td.1.17.header="ExecuteThread: '11' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000900  prio: 5  WAITING, DAEMON, GCABLE
+td.1.17.id=0x0x00000900
+td.1.17.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
+td.1.17.isBlocked=false
+td.1.17.isDaemon=true
+td.1.17.isDeadLocked=false
+td.1.17.isIdle=true
+
+#"ExecuteThread: '12' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000980  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373C30  lastj: 0x7FCF0EC0
+#   pt_thr: 0x000004DC
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.18.blockedObjectId=null
+td.1.18.blockerId=null
+td.1.18.condition=id: 0x0x00000980  prio: 5  WAITING, DAEMON, GCABLE
+td.1.18.header="ExecuteThread: '12' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000980  prio: 5  WAITING, DAEMON, GCABLE
+td.1.18.id=0x0x00000980
+td.1.18.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
+td.1.18.isBlocked=false
+td.1.18.isDaemon=true
+td.1.18.isDeadLocked=false
+td.1.18.isIdle=true
+
+#"ExecuteThread: '13' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373D48  lastj: 0x7FCD0EC0
+#   pt_thr: 0x000005E0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.19.blockedObjectId=null
+td.1.19.blockerId=null
+td.1.19.condition=id: 0x0x00000a00  prio: 5  WAITING, DAEMON, GCABLE
+td.1.19.header="ExecuteThread: '13' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a00  prio: 5  WAITING, DAEMON, GCABLE
+td.1.19.id=0x0x00000a00
+td.1.19.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
+td.1.19.isBlocked=false
+td.1.19.isDaemon=true
+td.1.19.isDeadLocked=false
+td.1.19.isIdle=true
+
+#"ExecuteThread: '14' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373E60  lastj: 0x7FCB0EC0
+#   pt_thr: 0x00000420
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.20.blockedObjectId=null
+td.1.20.blockerId=null
+td.1.20.condition=id: 0x0x00000a80  prio: 5  WAITING, DAEMON, GCABLE
+td.1.20.header="ExecuteThread: '14' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a80  prio: 5  WAITING, DAEMON, GCABLE
+td.1.20.id=0x0x00000a80
+td.1.20.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
+td.1.20.isBlocked=false
+td.1.20.isDaemon=true
+td.1.20.isDeadLocked=false
+td.1.20.isIdle=true
+
+#"ExecuteThread: '15' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373F78  lastj: 0x7FC90EC0
+#   pt_thr: 0x000003D8
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.21.blockedObjectId=null
+td.1.21.blockerId=null
+td.1.21.condition=id: 0x0x00000b00  prio: 5  WAITING, DAEMON, GCABLE
+td.1.21.header="ExecuteThread: '15' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b00  prio: 5  WAITING, DAEMON, GCABLE
+td.1.21.id=0x0x00000b00
+td.1.21.name=ExecuteThread: '15' for queue: 'weblogic.kernel.Default'
+td.1.21.isBlocked=false
+td.1.21.isDaemon=true
+td.1.21.isDeadLocked=false
+td.1.21.isIdle=true
+
+#"ExecuteThread: '16' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374090  lastj: 0x7FC70EC0
+#   pt_thr: 0x000005E4
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.22.blockedObjectId=null
+td.1.22.blockerId=null
+td.1.22.condition=id: 0x0x00000b80  prio: 5  WAITING, DAEMON, GCABLE
+td.1.22.header="ExecuteThread: '16' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b80  prio: 5  WAITING, DAEMON, GCABLE
+td.1.22.id=0x0x00000b80
+td.1.22.name=ExecuteThread: '16' for queue: 'weblogic.kernel.Default'
+td.1.22.isBlocked=false
+td.1.22.isDaemon=true
+td.1.22.isDeadLocked=false
+td.1.22.isIdle=true
+
+#"ExecuteThread: '17' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033741A8  lastj: 0x7FC50EC0
+#   pt_thr: 0x000005C4
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.23.blockedObjectId=null
+td.1.23.blockerId=null
+td.1.23.condition=id: 0x0x00000c00  prio: 5  WAITING, DAEMON, GCABLE
+td.1.23.header="ExecuteThread: '17' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c00  prio: 5  WAITING, DAEMON, GCABLE
+td.1.23.id=0x0x00000c00
+td.1.23.name=ExecuteThread: '17' for queue: 'weblogic.kernel.Default'
+td.1.23.isBlocked=false
+td.1.23.isDaemon=true
+td.1.23.isDeadLocked=false
+td.1.23.isIdle=true
+
+#"ExecuteThread: '18' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033742C0  lastj: 0x7FC30EC0
+#   pt_thr: 0x00000230
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.24.blockedObjectId=null
+td.1.24.blockerId=null
+td.1.24.condition=id: 0x0x00000c80  prio: 5  WAITING, DAEMON, GCABLE
+td.1.24.header="ExecuteThread: '18' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c80  prio: 5  WAITING, DAEMON, GCABLE
+td.1.24.id=0x0x00000c80
+td.1.24.name=ExecuteThread: '18' for queue: 'weblogic.kernel.Default'
+td.1.24.isBlocked=false
+td.1.24.isDaemon=true
+td.1.24.isDeadLocked=false
+td.1.24.isIdle=true
+
+#"ExecuteThread: '19' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033743D8  lastj: 0x7FC10EC0
+#   pt_thr: 0x0000065C
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.25.blockedObjectId=null
+td.1.25.blockerId=null
+td.1.25.condition=id: 0x0x00000d00  prio: 5  WAITING, DAEMON, GCABLE
+td.1.25.header="ExecuteThread: '19' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d00  prio: 5  WAITING, DAEMON, GCABLE
+td.1.25.id=0x0x00000d00
+td.1.25.name=ExecuteThread: '19' for queue: 'weblogic.kernel.Default'
+td.1.25.isBlocked=false
+td.1.25.isDaemon=true
+td.1.25.isDeadLocked=false
+td.1.25.isIdle=true
+
+#"ExecuteThread: '20' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033744F0  lastj: 0x7FBF0EC0
+#   pt_thr: 0x00000640
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.26.blockedObjectId=null
+td.1.26.blockerId=null
+td.1.26.condition=id: 0x0x00000d80  prio: 5  WAITING, DAEMON, GCABLE
+td.1.26.header="ExecuteThread: '20' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d80  prio: 5  WAITING, DAEMON, GCABLE
+td.1.26.id=0x0x00000d80
+td.1.26.name=ExecuteThread: '20' for queue: 'weblogic.kernel.Default'
+td.1.26.isBlocked=false
+td.1.26.isDaemon=true
+td.1.26.isDeadLocked=false
+td.1.26.isIdle=true
+
+#"ExecuteThread: '21' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374608  lastj: 0x7FBD0EC0
+#   pt_thr: 0x000001DC
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.27.blockedObjectId=null
+td.1.27.blockerId=null
+td.1.27.condition=id: 0x0x00000e00  prio: 5  WAITING, DAEMON, GCABLE
+td.1.27.header="ExecuteThread: '21' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e00  prio: 5  WAITING, DAEMON, GCABLE
+td.1.27.id=0x0x00000e00
+td.1.27.name=ExecuteThread: '21' for queue: 'weblogic.kernel.Default'
+td.1.27.isBlocked=false
+td.1.27.isDaemon=true
+td.1.27.isDeadLocked=false
+td.1.27.isIdle=true
+
+#"ExecuteThread: '22' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374720  lastj: 0x7FBB0EC0
+#   pt_thr: 0x000004B8
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.28.blockedObjectId=null
+td.1.28.blockerId=null
+td.1.28.condition=id: 0x0x00000e80  prio: 5  WAITING, DAEMON, GCABLE
+td.1.28.header="ExecuteThread: '22' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e80  prio: 5  WAITING, DAEMON, GCABLE
+td.1.28.id=0x0x00000e80
+td.1.28.name=ExecuteThread: '22' for queue: 'weblogic.kernel.Default'
+td.1.28.isBlocked=false
+td.1.28.isDaemon=true
+td.1.28.isDeadLocked=false
+td.1.28.isIdle=true
+
+#"ExecuteThread: '23' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374838  lastj: 0x7FB90EC0
+#   pt_thr: 0x00000630
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.29.blockedObjectId=null
+td.1.29.blockerId=null
+td.1.29.condition=id: 0x0x00000f00  prio: 5  WAITING, DAEMON, GCABLE
+td.1.29.header="ExecuteThread: '23' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f00  prio: 5  WAITING, DAEMON, GCABLE
+td.1.29.id=0x0x00000f00
+td.1.29.name=ExecuteThread: '23' for queue: 'weblogic.kernel.Default'
+td.1.29.isBlocked=false
+td.1.29.isDaemon=true
+td.1.29.isDeadLocked=false
+td.1.29.isIdle=true
+
+#"ExecuteThread: '24' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374950  lastj: 0x7FB70EC0
+#   pt_thr: 0x00000524
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.30.blockedObjectId=null
+td.1.30.blockerId=null
+td.1.30.condition=id: 0x0x00000f80  prio: 5  WAITING, DAEMON, GCABLE
+td.1.30.header="ExecuteThread: '24' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f80  prio: 5  WAITING, DAEMON, GCABLE
+td.1.30.id=0x0x00000f80
+td.1.30.name=ExecuteThread: '24' for queue: 'weblogic.kernel.Default'
+td.1.30.isBlocked=false
+td.1.30.isDaemon=true
+td.1.30.isDeadLocked=false
+td.1.30.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.kernel.System'"  id: 0x0x00001000  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374B80  lastj: 0x7FB50EC0
+#   pt_thr: 0x00000600
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.31.blockedObjectId=null
+td.1.31.blockerId=null
+td.1.31.condition=id: 0x0x00001000  prio: 5  WAITING, DAEMON, GCABLE
+td.1.31.header="ExecuteThread: '0' for queue: 'weblogic.kernel.System'"  id: 0x0x00001000  prio: 5  WAITING, DAEMON, GCABLE
+td.1.31.id=0x0x00001000
+td.1.31.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
+td.1.31.isBlocked=false
+td.1.31.isDaemon=true
+td.1.31.isDeadLocked=false
+td.1.31.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.kernel.System'"  id: 0x0x00001080  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374C98  lastj: 0x7FB30EC0
+#   pt_thr: 0x000002A8
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.32.blockedObjectId=null
+td.1.32.blockerId=null
+td.1.32.condition=id: 0x0x00001080  prio: 5  WAITING, DAEMON, GCABLE
+td.1.32.header="ExecuteThread: '1' for queue: 'weblogic.kernel.System'"  id: 0x0x00001080  prio: 5  WAITING, DAEMON, GCABLE
+td.1.32.id=0x0x00001080
+td.1.32.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
+td.1.32.isBlocked=false
+td.1.32.isDaemon=true
+td.1.32.isDeadLocked=false
+td.1.32.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.kernel.System'"  id: 0x0x00001100  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374DB0  lastj: 0x7FB10EC0
+#   pt_thr: 0x00000510
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.33.blockedObjectId=null
+td.1.33.blockerId=null
+td.1.33.condition=id: 0x0x00001100  prio: 5  WAITING, DAEMON, GCABLE
+td.1.33.header="ExecuteThread: '2' for queue: 'weblogic.kernel.System'"  id: 0x0x00001100  prio: 5  WAITING, DAEMON, GCABLE
+td.1.33.id=0x0x00001100
+td.1.33.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
+td.1.33.isBlocked=false
+td.1.33.isDaemon=true
+td.1.33.isDeadLocked=false
+td.1.33.isIdle=true
+
+#"ExecuteThread: '3' for queue: 'weblogic.kernel.System'"  id: 0x0x00001180  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374EC8  lastj: 0x7FAF0EC0
+#   pt_thr: 0x00000664
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.34.blockedObjectId=null
+td.1.34.blockerId=null
+td.1.34.condition=id: 0x0x00001180  prio: 5  WAITING, DAEMON, GCABLE
+td.1.34.header="ExecuteThread: '3' for queue: 'weblogic.kernel.System'"  id: 0x0x00001180  prio: 5  WAITING, DAEMON, GCABLE
+td.1.34.id=0x0x00001180
+td.1.34.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
+td.1.34.isBlocked=false
+td.1.34.isDaemon=true
+td.1.34.isDeadLocked=false
+td.1.34.isIdle=true
+
+#"ExecuteThread: '4' for queue: 'weblogic.kernel.System'"  id: 0x0x00001200  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374FE0  lastj: 0x7FAD0EC0
+#   pt_thr: 0x00000408
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.35.blockedObjectId=null
+td.1.35.blockerId=null
+td.1.35.condition=id: 0x0x00001200  prio: 5  WAITING, DAEMON, GCABLE
+td.1.35.header="ExecuteThread: '4' for queue: 'weblogic.kernel.System'"  id: 0x0x00001200  prio: 5  WAITING, DAEMON, GCABLE
+td.1.35.id=0x0x00001200
+td.1.35.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
+td.1.35.isBlocked=false
+td.1.35.isDaemon=true
+td.1.35.isDeadLocked=false
+td.1.35.isIdle=true
+
+#"weblogic.time.TimeEventGenerator"  id: 0x0x00001280  prio: 9  WAITING, DAEMON, GCABLE
+#   thread: 0x033766C0  lastj: 0x7FAB0EA4
+#   pt_thr: 0x0000066C
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:271)@1916475C
+#   at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:118)@191642A9
+#   at java.lang.Thread.run(Unknown Source)@116C37A1
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.36.blockedObjectId=null
+td.1.36.blockerId=null
+td.1.36.condition=id: 0x0x00001280  prio: 9  WAITING, DAEMON, GCABLE
+td.1.36.header="weblogic.time.TimeEventGenerator"  id: 0x0x00001280  prio: 9  WAITING, DAEMON, GCABLE
+td.1.36.id=0x0x00001280
+td.1.36.name=weblogic.time.TimeEventGenerator
+td.1.36.isBlocked=false
+td.1.36.isDaemon=true
+td.1.36.isDeadLocked=false
+td.1.36.isIdle=true
+
+#"weblogic.security.SpinnerRandomSource"  id: 0x0x00001300  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03394D28  lastj: 0x7FA90ECC
+#   pt_thr: 0x00000100
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.security.SpinnerRandomBitsSource.run(Optimized Method)@1916A2F7
+#   at java.lang.Thread.run(Unknown Source)@116C37A1
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.37.blockedObjectId=null
+td.1.37.blockerId=null
+td.1.37.condition=id: 0x0x00001300  prio: 5  WAITING, DAEMON, GCABLE
+td.1.37.header="weblogic.security.SpinnerRandomSource"  id: 0x0x00001300  prio: 5  WAITING, DAEMON, GCABLE
+td.1.37.id=0x0x00001300
+td.1.37.name=weblogic.security.SpinnerRandomSource
+td.1.37.isBlocked=false
+td.1.37.isDaemon=true
+td.1.37.isDeadLocked=false
+td.1.37.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001380  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CBFD0  lastj: 0x7FA70EC0
+#   pt_thr: 0x000005D0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.38.blockedObjectId=null
+td.1.38.blockerId=null
+td.1.38.condition=id: 0x0x00001380  prio: 5  WAITING, DAEMON, GCABLE
+td.1.38.header="ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001380  prio: 5  WAITING, DAEMON, GCABLE
+td.1.38.id=0x0x00001380
+td.1.38.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
+td.1.38.isBlocked=false
+td.1.38.isDaemon=true
+td.1.38.isDeadLocked=false
+td.1.38.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001400  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CC0E8  lastj: 0x7FA50EC0
+#   pt_thr: 0x000005FC
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.39.blockedObjectId=null
+td.1.39.blockerId=null
+td.1.39.condition=id: 0x0x00001400  prio: 5  WAITING, DAEMON, GCABLE
+td.1.39.header="ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001400  prio: 5  WAITING, DAEMON, GCABLE
+td.1.39.id=0x0x00001400
+td.1.39.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
+td.1.39.isBlocked=false
+td.1.39.isDaemon=true
+td.1.39.isDeadLocked=false
+td.1.39.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001480  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CC200  lastj: 0x7FA30EC0
+#   pt_thr: 0x000005D4
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.40.blockedObjectId=null
+td.1.40.blockerId=null
+td.1.40.condition=id: 0x0x00001480  prio: 5  WAITING, DAEMON, GCABLE
+td.1.40.header="ExecuteThread: '0' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001480  prio: 5  WAITING, DAEMON, GCABLE
+td.1.40.id=0x0x00001480
+td.1.40.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
+td.1.40.isBlocked=false
+td.1.40.isDaemon=true
+td.1.40.isDeadLocked=false
+td.1.40.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001500  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CC318  lastj: 0x7FA10EC0
+#   pt_thr: 0x0000068C
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.41.blockedObjectId=null
+td.1.41.blockerId=null
+td.1.41.condition=id: 0x0x00001500  prio: 5  WAITING, DAEMON, GCABLE
+td.1.41.header="ExecuteThread: '1' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001500  prio: 5  WAITING, DAEMON, GCABLE
+td.1.41.id=0x0x00001500
+td.1.41.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
+td.1.41.isBlocked=false
+td.1.41.isDaemon=true
+td.1.41.isDeadLocked=false
+td.1.41.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001580  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CC430  lastj: 0x7F9F0EC0
+#   pt_thr: 0x00000690
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.42.blockedObjectId=null
+td.1.42.blockerId=null
+td.1.42.condition=id: 0x0x00001580  prio: 5  WAITING, DAEMON, GCABLE
+td.1.42.header="ExecuteThread: '2' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001580  prio: 5  WAITING, DAEMON, GCABLE
+td.1.42.id=0x0x00001580
+td.1.42.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
+td.1.42.isBlocked=false
+td.1.42.isDaemon=true
+td.1.42.isDeadLocked=false
+td.1.42.isIdle=true
+
+#"VDE Transaction Processor Thread"  id: 0x0x00001600  prio: 2  WAITING, NONDAEMON, GCABLE
+#   thread: 0x0355D6C8  lastj: 0x7F9D0EA4
+#   pt_thr: 0x00000694
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:356)@19C524A2
+#   at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)@19C51447
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.43.blockedObjectId=null
+td.1.43.blockerId=null
+td.1.43.condition=id: 0x0x00001600  prio: 2  WAITING, NONDAEMON, GCABLE
+td.1.43.header="VDE Transaction Processor Thread"  id: 0x0x00001600  prio: 2  WAITING, NONDAEMON, GCABLE
+td.1.43.id=0x0x00001600
+td.1.43.name=VDE Transaction Processor Thread
+td.1.43.isBlocked=false
+td.1.43.isDaemon=false
+td.1.43.isDeadLocked=false
+td.1.43.isIdle=true
+
+#"VDE Replication Thread"  id: 0x0x00001680  prio: 5  WAITING, NONDAEMON, GCABLE
+#   thread: 0x0366F3B0  lastj: 0x7F9B0EA8
+#   pt_thr: 0x0000069C
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at com.octetstring.vde.replication.Replication.wait30sec(Replication.java:395)@1D86A96A
+#   at com.octetstring.vde.replication.Replication.run(Replication.java:365)@19C5E051
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.44.blockedObjectId=null
+td.1.44.blockerId=null
+td.1.44.condition=id: 0x0x00001680  prio: 5  WAITING, NONDAEMON, GCABLE
+td.1.44.header="VDE Replication Thread"  id: 0x0x00001680  prio: 5  WAITING, NONDAEMON, GCABLE
+td.1.44.id=0x0x00001680
+td.1.44.name=VDE Replication Thread
+td.1.44.isBlocked=false
+td.1.44.isDaemon=false
+td.1.44.isDeadLocked=false
+td.1.44.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'JMS.TimerTreePool'"  id: 0x0x00001700  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x04D84068  lastj: 0x7F990EA4
+#   pt_thr: 0x000006AC
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at weblogic.jms.backend.BETimerTree.execute(BETimerTree.java:146)@1D1720E5
+#   at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.45.blockedObjectId=null
+td.1.45.blockerId=null
+td.1.45.condition=id: 0x0x00001700  prio: 5  WAITING, DAEMON, GCABLE
+td.1.45.header="ExecuteThread: '0' for queue: 'JMS.TimerTreePool'"  id: 0x0x00001700  prio: 5  WAITING, DAEMON, GCABLE
+td.1.45.id=0x0x00001700
+td.1.45.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
+td.1.45.isBlocked=false
+td.1.45.isDaemon=true
+td.1.45.isDeadLocked=false
+td.1.45.isIdle=true
+
+#"Thread-4"  id: 0x0x00001780  prio: 5  WAITING, NONDAEMON, GCABLE
+#   thread: 0x03BFC028  lastj: 0x7F970EA0
+#   pt_thr: 0x0000059C
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at java.util.TimerThread.mainLoop(Timer.java:429)@1A56DB88
+#   at java.util.TimerThread.run(Timer.java:382)@1A56D912
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.46.blockedObjectId=null
+td.1.46.blockerId=null
+td.1.46.condition=id: 0x0x00001780  prio: 5  WAITING, NONDAEMON, GCABLE
+td.1.46.header="Thread-4"  id: 0x0x00001780  prio: 5  WAITING, NONDAEMON, GCABLE
+td.1.46.id=0x0x00001780
+td.1.46.name=Thread-4
+td.1.46.isBlocked=false
+td.1.46.isDaemon=false
+td.1.46.isDeadLocked=false
+td.1.46.isIdle=true
+
+#"[JRockit] GCEventThread"  id: 0x0x00001800  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03EC8858  lastj: 0x7F950EB8
+#   pt_thr: 0x0000032C
+#   at COM.jrockit.management.jvm.GarbageCollectorImpl.waitForEvent(Native Method)@1ACB690E
+#   at COM.jrockit.management.jvm.GarbageCollectorImpl.access$000(Unknown Source)@1ACB6935
+#   at COM.jrockit.management.jvm.GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)@1ACB6845
+#   at COM.jrockit.management.jvm.AsyncEventProvider$EventThread.run(Unknown Source)@1ACB6762
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.47.blockedObjectId=null
+td.1.47.blockerId=null
+td.1.47.condition=id: 0x0x00001800  prio: 5  WAITING, DAEMON, GCABLE
+td.1.47.header="[JRockit] GCEventThread"  id: 0x0x00001800  prio: 5  WAITING, DAEMON, GCABLE
+td.1.47.id=0x0x00001800
+td.1.47.name=[JRockit] GCEventThread
+td.1.47.isBlocked=false
+td.1.47.isDaemon=true
+td.1.47.isDeadLocked=false
+td.1.47.isIdle=true
+
+#"weblogic.health.CoreHealthMonitor"  id: 0x0x00001880  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03EC7FD8  lastj: 0x7F930EB0
+#   pt_thr: 0x00000668
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at java.lang.Thread.sleep(Unknown Source)@18A6E2A5
+#   at weblogic.t3.srvr.CoreHealthMonitorThread.run(CoreHealthMonitorThread.java:127)@1B326986
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.48.blockedObjectId=null
+td.1.48.blockerId=null
+td.1.48.condition=id: 0x0x00001880  prio: 5  WAITING, DAEMON, GCABLE
+td.1.48.header="weblogic.health.CoreHealthMonitor"  id: 0x0x00001880  prio: 5  WAITING, DAEMON, GCABLE
+td.1.48.id=0x0x00001880
+td.1.48.name=weblogic.health.CoreHealthMonitor
+td.1.48.isBlocked=false
+td.1.48.isDaemon=true
+td.1.48.isDeadLocked=false
+td.1.48.isIdle=true
+
+#"ListenThread.Default"  id: 0x0x00001900  prio: 5  ACTIVE, NONDAEMON, GCABLE
+#   thread: 0x05075D70  lastj: 0x7F8E0E6C
+#   pt_thr: 0x0000058C
+#   at COM.jrockit.net.SocketNativeIO.accept(Native Method)@1D1A139C
+#   at COM.jrockit.net.SocketNativeIO.accept(Unknown Source)@1D1A1421
+#   at java.net.AbstractSocketImpl.accept(Unknown Source)@1D1A12FA
+#   at java.net.ServerSocket.implAccept(ServerSocket.java:448)@1D1A11C7
+#   at java.net.ServerSocket.accept(ServerSocket.java:419)@1D1A1024
+#   at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:24)@1D863E89
+#   at weblogic.t3.srvr.ListenThread.accept(ListenThread.java:739)@1D863DA9
+#   at weblogic.t3.srvr.ListenThread.run(ListenThread.java:292)@1D27A4AD
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.49.blockedObjectId=null
+td.1.49.blockerId=null
+td.1.49.condition=id: 0x0x00001900  prio: 5  ACTIVE, NONDAEMON, GCABLE
+td.1.49.header="ListenThread.Default"  id: 0x0x00001900  prio: 5  ACTIVE, NONDAEMON, GCABLE
+td.1.49.id=0x0x00001900
+td.1.49.name=ListenThread.Default
+td.1.49.isBlocked=false
+td.1.49.isDaemon=false
+td.1.49.isDeadLocked=false
+td.1.49.isIdle=false
+
+#"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001980  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x050A9370  lastj: 0x7F8C0EBC
+#   pt_thr: 0x00000684
+#   at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)@1D27E978
+#   at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:85)@1D27E7A6
+#   at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:32)@1D27E5CE
+#   at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.50.blockedObjectId=null
+td.1.50.blockerId=null
+td.1.50.condition=id: 0x0x00001980  prio: 5  ACTIVE, DAEMON, GCABLE
+td.1.50.header="ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001980  prio: 5  ACTIVE, DAEMON, GCABLE
+td.1.50.id=0x0x00001980
+td.1.50.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
+td.1.50.isBlocked=false
+td.1.50.isDaemon=true
+td.1.50.isDeadLocked=false
+td.1.50.isIdle=false
+
+#"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001a00  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x050A9488  lastj: 0x7F8A0EBC
+#   pt_thr: 0x0000070C
+#   at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)@1D27E978
+#   at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:85)@1D27E7A6
+#   at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:32)@1D27E5CE
+#   at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.51.blockedObjectId=null
+td.1.51.blockerId=null
+td.1.51.condition=id: 0x0x00001a00  prio: 5  ACTIVE, DAEMON, GCABLE
+td.1.51.header="ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001a00  prio: 5  ACTIVE, DAEMON, GCABLE
+td.1.51.id=0x0x00001a00
+td.1.51.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
+td.1.51.isBlocked=false
+td.1.51.isDaemon=true
+td.1.51.isDeadLocked=false
+td.1.51.isIdle=false
+
+#"Thread-6"  id: 0x0x00001a80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x050B2448  lastj: 0x7F880EA0
+#   pt_thr: 0x00000708
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at java.util.TimerThread.mainLoop(Timer.java:429)@1A56DB88
+#   at java.util.TimerThread.run(Timer.java:382)@1A56D912
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.1.52.blockedObjectId=null
+td.1.52.blockerId=null
+td.1.52.condition=id: 0x0x00001a80  prio: 5  WAITING, DAEMON, GCABLE
+td.1.52.header="Thread-6"  id: 0x0x00001a80  prio: 5  WAITING, DAEMON, GCABLE
+td.1.52.id=0x0x00001a80
+td.1.52.name=Thread-6
+td.1.52.isBlocked=false
+td.1.52.isDaemon=true
+td.1.52.isDeadLocked=false
+td.1.52.isIdle=true
+
+ftd.2.deadLockSize=0
+ftd.2.threadCount=53
+#"ExecuteThread: '0' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000080  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03372670  lastj: 0x7FF70EC0
+#   pt_thr: 0x000003D0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.0.blockedObjectId=null
+td.2.0.blockerId=null
+td.2.0.condition=id: 0x0x00000080  prio: 5  WAITING, DAEMON, GCABLE
+td.2.0.header="ExecuteThread: '0' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000080  prio: 5  WAITING, DAEMON, GCABLE
+td.2.0.id=0x0x00000080
+td.2.0.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
+td.2.0.isBlocked=false
+td.2.0.isDaemon=true
+td.2.0.isDeadLocked=false
+td.2.0.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000100  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373028  lastj: 0x7FF50EC0
+#   pt_thr: 0x00000704
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.1.blockedObjectId=null
+td.2.1.blockerId=null
+td.2.1.condition=id: 0x0x00000100  prio: 5  WAITING, DAEMON, GCABLE
+td.2.1.header="ExecuteThread: '1' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000100  prio: 5  WAITING, DAEMON, GCABLE
+td.2.1.id=0x0x00000100
+td.2.1.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
+td.2.1.isBlocked=false
+td.2.1.isDaemon=true
+td.2.1.isDeadLocked=false
+td.2.1.isIdle=true
+
+#"Finalizer"  id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+#   thread: 0x01F75898  lastj: 0x7FF30E9C
+#   pt_thr: 0x00000710
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at java.lang.Object.wait0(Unknown Source)@116C4775
+#   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:111)@116C7D25
+#   at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:127)@116C7C9C
+#   at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)@116C7C31
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.2.blockedObjectId=null
+td.2.2.blockerId=null
+td.2.2.condition=id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+td.2.2.header="Finalizer"  id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+td.2.2.id=0x0x00000180
+td.2.2.name=Finalizer
+td.2.2.isBlocked=false
+td.2.2.isDaemon=true
+td.2.2.isDeadLocked=false
+td.2.2.isIdle=true
+
+#"SignalHandler"  id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x01FAB020  lastj: 0x7FEE0EF0
+#   pt_thr: 0x000006F0
+#   at COM.jrockit.vm.SignalHandler.waitForSignals(Native Method)@12FA7490
+#   at COM.jrockit.vm.SignalHandler$1.run(Unknown Source)@12FA7515
+#   at java.lang.Thread.run(Unknown Source)@116C37A1
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.3.blockedObjectId=null
+td.2.3.blockerId=null
+td.2.3.condition=id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+td.2.3.header="SignalHandler"  id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+td.2.3.id=0x0x00000200
+td.2.3.name=SignalHandler
+td.2.3.isBlocked=false
+td.2.3.isDaemon=true
+td.2.3.isDeadLocked=false
+td.2.3.isIdle=false
+
+#"Hotspot Detector"  id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x01FAB108  lastj: 0x7FEC0EF0
+#   pt_thr: 0x000006C8
+#   at COM.jrockit.vm.HotspotDetector.findHotSpotCandidate(Native Method)@12FA7550
+#   at COM.jrockit.vm.HotspotDetector.run(Unknown Source)@12FA7585
+#   at java.lang.Thread.run(Unknown Source)@116C37A1
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.4.blockedObjectId=null
+td.2.4.blockerId=null
+td.2.4.condition=id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+td.2.4.header="Hotspot Detector"  id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+td.2.4.id=0x0x00000280
+td.2.4.name=Hotspot Detector
+td.2.4.isBlocked=false
+td.2.4.isDaemon=true
+td.2.4.isDeadLocked=false
+td.2.4.isIdle=false
+
+#"Reference Handler"  id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+#   thread: 0x01FAB368  lastj: 0x7FEA0EE4
+#   pt_thr: 0x00000660
+#   at java.lang.ref.Reference.getPending(Native Method)@12FA532E
+#   at java.lang.ref.Reference.access$000(Unknown Source)@12FA5365
+#   at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)@12FA529F
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.5.blockedObjectId=null
+td.2.5.blockerId=null
+td.2.5.condition=id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+td.2.5.header="Reference Handler"  id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+td.2.5.id=0x0x00000300
+td.2.5.name=Reference Handler
+td.2.5.isBlocked=false
+td.2.5.isDaemon=true
+td.2.5.isDeadLocked=false
+td.2.5.isIdle=true
+
+#"Thread-1"  id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+#   thread: 0x01FAB4C0  lastj: 0x0006FB3C
+#   pt_thr: 0x000005AC
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:1170)@1D862851
+#   at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:384)@136305A7
+#   at weblogic.Server.main(Server.java:32)@136300A7
+#   --- End of stack trace
+td.2.6.blockedObjectId=null
+td.2.6.blockerId=null
+td.2.6.condition=id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+td.2.6.header="Thread-1"  id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+td.2.6.id=0x0x00000380
+td.2.6.name=Thread-1
+td.2.6.isBlocked=false
+td.2.6.isDaemon=false
+td.2.6.isDeadLocked=false
+td.2.6.isIdle=true
+
+#"Noname"  id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x01FAB6C0  lastj: 0x7FE80F08
+#   pt_thr: 0x000004E4
+#   at COM.jrockit.vm.MemSystem.mcGenConEP(Native Method)@12FA5BD8
+#   --- End of stack trace
+td.2.7.blockedObjectId=null
+td.2.7.blockerId=null
+td.2.7.condition=id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+td.2.7.header="Noname"  id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+td.2.7.id=0x0x00000400
+td.2.7.name=Noname
+td.2.7.isBlocked=false
+td.2.7.isDaemon=true
+td.2.7.isDeadLocked=false
+td.2.7.isIdle=false
+
+#"ExecuteThread: '2' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000480  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373140  lastj: 0x7FE30EC0
+#   pt_thr: 0x0000062C
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.8.blockedObjectId=null
+td.2.8.blockerId=null
+td.2.8.condition=id: 0x0x00000480  prio: 5  WAITING, DAEMON, GCABLE
+td.2.8.header="ExecuteThread: '2' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000480  prio: 5  WAITING, DAEMON, GCABLE
+td.2.8.id=0x0x00000480
+td.2.8.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
+td.2.8.isBlocked=false
+td.2.8.isDaemon=true
+td.2.8.isDeadLocked=false
+td.2.8.isIdle=true
+
+#"ExecuteThread: '3' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000500  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373258  lastj: 0x7FE10EC0
+#   pt_thr: 0x00000674
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.9.blockedObjectId=null
+td.2.9.blockerId=null
+td.2.9.condition=id: 0x0x00000500  prio: 5  WAITING, DAEMON, GCABLE
+td.2.9.header="ExecuteThread: '3' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000500  prio: 5  WAITING, DAEMON, GCABLE
+td.2.9.id=0x0x00000500
+td.2.9.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
+td.2.9.isBlocked=false
+td.2.9.isDaemon=true
+td.2.9.isDeadLocked=false
+td.2.9.isIdle=true
+
+#"ExecuteThread: '4' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000580  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373370  lastj: 0x7FDF0EC0
+#   pt_thr: 0x000006B4
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.10.blockedObjectId=null
+td.2.10.blockerId=null
+td.2.10.condition=id: 0x0x00000580  prio: 5  WAITING, DAEMON, GCABLE
+td.2.10.header="ExecuteThread: '4' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000580  prio: 5  WAITING, DAEMON, GCABLE
+td.2.10.id=0x0x00000580
+td.2.10.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
+td.2.10.isBlocked=false
+td.2.10.isDaemon=true
+td.2.10.isDeadLocked=false
+td.2.10.isIdle=true
+
+#"ExecuteThread: '5' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000600  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373488  lastj: 0x7FDD0EC0
+#   pt_thr: 0x00000560
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.11.blockedObjectId=null
+td.2.11.blockerId=null
+td.2.11.condition=id: 0x0x00000600  prio: 5  WAITING, DAEMON, GCABLE
+td.2.11.header="ExecuteThread: '5' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000600  prio: 5  WAITING, DAEMON, GCABLE
+td.2.11.id=0x0x00000600
+td.2.11.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
+td.2.11.isBlocked=false
+td.2.11.isDaemon=true
+td.2.11.isDeadLocked=false
+td.2.11.isIdle=true
+
+#"ExecuteThread: '6' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000680  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033735A0  lastj: 0x7FDB0EC0
+#   pt_thr: 0x000006E8
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.12.blockedObjectId=null
+td.2.12.blockerId=null
+td.2.12.condition=id: 0x0x00000680  prio: 5  WAITING, DAEMON, GCABLE
+td.2.12.header="ExecuteThread: '6' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000680  prio: 5  WAITING, DAEMON, GCABLE
+td.2.12.id=0x0x00000680
+td.2.12.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
+td.2.12.isBlocked=false
+td.2.12.isDaemon=true
+td.2.12.isDeadLocked=false
+td.2.12.isIdle=true
+
+#"ExecuteThread: '7' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000700  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033736B8  lastj: 0x7FD90EC0
+#   pt_thr: 0x000006E0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.13.blockedObjectId=null
+td.2.13.blockerId=null
+td.2.13.condition=id: 0x0x00000700  prio: 5  WAITING, DAEMON, GCABLE
+td.2.13.header="ExecuteThread: '7' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000700  prio: 5  WAITING, DAEMON, GCABLE
+td.2.13.id=0x0x00000700
+td.2.13.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
+td.2.13.isBlocked=false
+td.2.13.isDaemon=true
+td.2.13.isDeadLocked=false
+td.2.13.isIdle=true
+
+#"ExecuteThread: '8' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000780  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033737D0  lastj: 0x7FD70EC0
+#   pt_thr: 0x000006B0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.14.blockedObjectId=null
+td.2.14.blockerId=null
+td.2.14.condition=id: 0x0x00000780  prio: 5  WAITING, DAEMON, GCABLE
+td.2.14.header="ExecuteThread: '8' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000780  prio: 5  WAITING, DAEMON, GCABLE
+td.2.14.id=0x0x00000780
+td.2.14.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
+td.2.14.isBlocked=false
+td.2.14.isDaemon=true
+td.2.14.isDeadLocked=false
+td.2.14.isIdle=true
+
+#"ExecuteThread: '9' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000800  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033738E8  lastj: 0x7FD50EC0
+#   pt_thr: 0x00000418
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.15.blockedObjectId=null
+td.2.15.blockerId=null
+td.2.15.condition=id: 0x0x00000800  prio: 5  WAITING, DAEMON, GCABLE
+td.2.15.header="ExecuteThread: '9' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000800  prio: 5  WAITING, DAEMON, GCABLE
+td.2.15.id=0x0x00000800
+td.2.15.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
+td.2.15.isBlocked=false
+td.2.15.isDaemon=true
+td.2.15.isDeadLocked=false
+td.2.15.isIdle=true
+
+#"ExecuteThread: '10' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000880  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373A00  lastj: 0x7FD30EC0
+#   pt_thr: 0x00000610
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.16.blockedObjectId=null
+td.2.16.blockerId=null
+td.2.16.condition=id: 0x0x00000880  prio: 5  WAITING, DAEMON, GCABLE
+td.2.16.header="ExecuteThread: '10' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000880  prio: 5  WAITING, DAEMON, GCABLE
+td.2.16.id=0x0x00000880
+td.2.16.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
+td.2.16.isBlocked=false
+td.2.16.isDaemon=true
+td.2.16.isDeadLocked=false
+td.2.16.isIdle=true
+
+#"ExecuteThread: '11' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000900  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373B18  lastj: 0x7FD10EC0
+#   pt_thr: 0x0000054C
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.17.blockedObjectId=null
+td.2.17.blockerId=null
+td.2.17.condition=id: 0x0x00000900  prio: 5  WAITING, DAEMON, GCABLE
+td.2.17.header="ExecuteThread: '11' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000900  prio: 5  WAITING, DAEMON, GCABLE
+td.2.17.id=0x0x00000900
+td.2.17.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
+td.2.17.isBlocked=false
+td.2.17.isDaemon=true
+td.2.17.isDeadLocked=false
+td.2.17.isIdle=true
+
+#"ExecuteThread: '12' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000980  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373C30  lastj: 0x7FCF0EC0
+#   pt_thr: 0x000004DC
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.18.blockedObjectId=null
+td.2.18.blockerId=null
+td.2.18.condition=id: 0x0x00000980  prio: 5  WAITING, DAEMON, GCABLE
+td.2.18.header="ExecuteThread: '12' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000980  prio: 5  WAITING, DAEMON, GCABLE
+td.2.18.id=0x0x00000980
+td.2.18.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
+td.2.18.isBlocked=false
+td.2.18.isDaemon=true
+td.2.18.isDeadLocked=false
+td.2.18.isIdle=true
+
+#"ExecuteThread: '13' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373D48  lastj: 0x7FCD0EC0
+#   pt_thr: 0x000005E0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.19.blockedObjectId=null
+td.2.19.blockerId=null
+td.2.19.condition=id: 0x0x00000a00  prio: 5  WAITING, DAEMON, GCABLE
+td.2.19.header="ExecuteThread: '13' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a00  prio: 5  WAITING, DAEMON, GCABLE
+td.2.19.id=0x0x00000a00
+td.2.19.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
+td.2.19.isBlocked=false
+td.2.19.isDaemon=true
+td.2.19.isDeadLocked=false
+td.2.19.isIdle=true
+
+#"ExecuteThread: '14' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373E60  lastj: 0x7FCB0EC0
+#   pt_thr: 0x00000420
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.20.blockedObjectId=null
+td.2.20.blockerId=null
+td.2.20.condition=id: 0x0x00000a80  prio: 5  WAITING, DAEMON, GCABLE
+td.2.20.header="ExecuteThread: '14' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a80  prio: 5  WAITING, DAEMON, GCABLE
+td.2.20.id=0x0x00000a80
+td.2.20.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
+td.2.20.isBlocked=false
+td.2.20.isDaemon=true
+td.2.20.isDeadLocked=false
+td.2.20.isIdle=true
+
+#"ExecuteThread: '15' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03373F78  lastj: 0x7FC90EC0
+#   pt_thr: 0x000003D8
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.21.blockedObjectId=null
+td.2.21.blockerId=null
+td.2.21.condition=id: 0x0x00000b00  prio: 5  WAITING, DAEMON, GCABLE
+td.2.21.header="ExecuteThread: '15' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b00  prio: 5  WAITING, DAEMON, GCABLE
+td.2.21.id=0x0x00000b00
+td.2.21.name=ExecuteThread: '15' for queue: 'weblogic.kernel.Default'
+td.2.21.isBlocked=false
+td.2.21.isDaemon=true
+td.2.21.isDeadLocked=false
+td.2.21.isIdle=true
+
+#"ExecuteThread: '16' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374090  lastj: 0x7FC70EC0
+#   pt_thr: 0x000005E4
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.22.blockedObjectId=null
+td.2.22.blockerId=null
+td.2.22.condition=id: 0x0x00000b80  prio: 5  WAITING, DAEMON, GCABLE
+td.2.22.header="ExecuteThread: '16' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b80  prio: 5  WAITING, DAEMON, GCABLE
+td.2.22.id=0x0x00000b80
+td.2.22.name=ExecuteThread: '16' for queue: 'weblogic.kernel.Default'
+td.2.22.isBlocked=false
+td.2.22.isDaemon=true
+td.2.22.isDeadLocked=false
+td.2.22.isIdle=true
+
+#"ExecuteThread: '17' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033741A8  lastj: 0x7FC50EC0
+#   pt_thr: 0x000005C4
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.23.blockedObjectId=null
+td.2.23.blockerId=null
+td.2.23.condition=id: 0x0x00000c00  prio: 5  WAITING, DAEMON, GCABLE
+td.2.23.header="ExecuteThread: '17' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c00  prio: 5  WAITING, DAEMON, GCABLE
+td.2.23.id=0x0x00000c00
+td.2.23.name=ExecuteThread: '17' for queue: 'weblogic.kernel.Default'
+td.2.23.isBlocked=false
+td.2.23.isDaemon=true
+td.2.23.isDeadLocked=false
+td.2.23.isIdle=true
+
+#"ExecuteThread: '18' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033742C0  lastj: 0x7FC30EC0
+#   pt_thr: 0x00000230
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.24.blockedObjectId=null
+td.2.24.blockerId=null
+td.2.24.condition=id: 0x0x00000c80  prio: 5  WAITING, DAEMON, GCABLE
+td.2.24.header="ExecuteThread: '18' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c80  prio: 5  WAITING, DAEMON, GCABLE
+td.2.24.id=0x0x00000c80
+td.2.24.name=ExecuteThread: '18' for queue: 'weblogic.kernel.Default'
+td.2.24.isBlocked=false
+td.2.24.isDaemon=true
+td.2.24.isDeadLocked=false
+td.2.24.isIdle=true
+
+#"ExecuteThread: '19' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033743D8  lastj: 0x7FC10EC0
+#   pt_thr: 0x0000065C
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.25.blockedObjectId=null
+td.2.25.blockerId=null
+td.2.25.condition=id: 0x0x00000d00  prio: 5  WAITING, DAEMON, GCABLE
+td.2.25.header="ExecuteThread: '19' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d00  prio: 5  WAITING, DAEMON, GCABLE
+td.2.25.id=0x0x00000d00
+td.2.25.name=ExecuteThread: '19' for queue: 'weblogic.kernel.Default'
+td.2.25.isBlocked=false
+td.2.25.isDaemon=true
+td.2.25.isDeadLocked=false
+td.2.25.isIdle=true
+
+#"ExecuteThread: '20' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033744F0  lastj: 0x7FBF0EC0
+#   pt_thr: 0x00000640
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.26.blockedObjectId=null
+td.2.26.blockerId=null
+td.2.26.condition=id: 0x0x00000d80  prio: 5  WAITING, DAEMON, GCABLE
+td.2.26.header="ExecuteThread: '20' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d80  prio: 5  WAITING, DAEMON, GCABLE
+td.2.26.id=0x0x00000d80
+td.2.26.name=ExecuteThread: '20' for queue: 'weblogic.kernel.Default'
+td.2.26.isBlocked=false
+td.2.26.isDaemon=true
+td.2.26.isDeadLocked=false
+td.2.26.isIdle=true
+
+#"ExecuteThread: '21' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374608  lastj: 0x7FBD0EC0
+#   pt_thr: 0x000001DC
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.27.blockedObjectId=null
+td.2.27.blockerId=null
+td.2.27.condition=id: 0x0x00000e00  prio: 5  WAITING, DAEMON, GCABLE
+td.2.27.header="ExecuteThread: '21' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e00  prio: 5  WAITING, DAEMON, GCABLE
+td.2.27.id=0x0x00000e00
+td.2.27.name=ExecuteThread: '21' for queue: 'weblogic.kernel.Default'
+td.2.27.isBlocked=false
+td.2.27.isDaemon=true
+td.2.27.isDeadLocked=false
+td.2.27.isIdle=true
+
+#"ExecuteThread: '22' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374720  lastj: 0x7FBB0EC0
+#   pt_thr: 0x000004B8
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.28.blockedObjectId=null
+td.2.28.blockerId=null
+td.2.28.condition=id: 0x0x00000e80  prio: 5  WAITING, DAEMON, GCABLE
+td.2.28.header="ExecuteThread: '22' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e80  prio: 5  WAITING, DAEMON, GCABLE
+td.2.28.id=0x0x00000e80
+td.2.28.name=ExecuteThread: '22' for queue: 'weblogic.kernel.Default'
+td.2.28.isBlocked=false
+td.2.28.isDaemon=true
+td.2.28.isDeadLocked=false
+td.2.28.isIdle=true
+
+#"ExecuteThread: '23' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f00  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374838  lastj: 0x7FB90EC0
+#   pt_thr: 0x00000630
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.29.blockedObjectId=null
+td.2.29.blockerId=null
+td.2.29.condition=id: 0x0x00000f00  prio: 5  WAITING, DAEMON, GCABLE
+td.2.29.header="ExecuteThread: '23' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f00  prio: 5  WAITING, DAEMON, GCABLE
+td.2.29.id=0x0x00000f00
+td.2.29.name=ExecuteThread: '23' for queue: 'weblogic.kernel.Default'
+td.2.29.isBlocked=false
+td.2.29.isDaemon=true
+td.2.29.isDeadLocked=false
+td.2.29.isIdle=true
+
+#"ExecuteThread: '24' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374950  lastj: 0x7FB70EC0
+#   pt_thr: 0x00000524
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.30.blockedObjectId=null
+td.2.30.blockerId=null
+td.2.30.condition=id: 0x0x00000f80  prio: 5  WAITING, DAEMON, GCABLE
+td.2.30.header="ExecuteThread: '24' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f80  prio: 5  WAITING, DAEMON, GCABLE
+td.2.30.id=0x0x00000f80
+td.2.30.name=ExecuteThread: '24' for queue: 'weblogic.kernel.Default'
+td.2.30.isBlocked=false
+td.2.30.isDaemon=true
+td.2.30.isDeadLocked=false
+td.2.30.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.kernel.System'"  id: 0x0x00001000  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374B80  lastj: 0x7FB50EC0
+#   pt_thr: 0x00000600
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.31.blockedObjectId=null
+td.2.31.blockerId=null
+td.2.31.condition=id: 0x0x00001000  prio: 5  WAITING, DAEMON, GCABLE
+td.2.31.header="ExecuteThread: '0' for queue: 'weblogic.kernel.System'"  id: 0x0x00001000  prio: 5  WAITING, DAEMON, GCABLE
+td.2.31.id=0x0x00001000
+td.2.31.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
+td.2.31.isBlocked=false
+td.2.31.isDaemon=true
+td.2.31.isDeadLocked=false
+td.2.31.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.kernel.System'"  id: 0x0x00001080  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374C98  lastj: 0x7FB30EC0
+#   pt_thr: 0x000002A8
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.32.blockedObjectId=null
+td.2.32.blockerId=null
+td.2.32.condition=id: 0x0x00001080  prio: 5  WAITING, DAEMON, GCABLE
+td.2.32.header="ExecuteThread: '1' for queue: 'weblogic.kernel.System'"  id: 0x0x00001080  prio: 5  WAITING, DAEMON, GCABLE
+td.2.32.id=0x0x00001080
+td.2.32.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
+td.2.32.isBlocked=false
+td.2.32.isDaemon=true
+td.2.32.isDeadLocked=false
+td.2.32.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.kernel.System'"  id: 0x0x00001100  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374DB0  lastj: 0x7FB10EC0
+#   pt_thr: 0x00000510
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.33.blockedObjectId=null
+td.2.33.blockerId=null
+td.2.33.condition=id: 0x0x00001100  prio: 5  WAITING, DAEMON, GCABLE
+td.2.33.header="ExecuteThread: '2' for queue: 'weblogic.kernel.System'"  id: 0x0x00001100  prio: 5  WAITING, DAEMON, GCABLE
+td.2.33.id=0x0x00001100
+td.2.33.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
+td.2.33.isBlocked=false
+td.2.33.isDaemon=true
+td.2.33.isDeadLocked=false
+td.2.33.isIdle=true
+
+#"ExecuteThread: '3' for queue: 'weblogic.kernel.System'"  id: 0x0x00001180  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374EC8  lastj: 0x7FAF0EC0
+#   pt_thr: 0x00000664
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.34.blockedObjectId=null
+td.2.34.blockerId=null
+td.2.34.condition=id: 0x0x00001180  prio: 5  WAITING, DAEMON, GCABLE
+td.2.34.header="ExecuteThread: '3' for queue: 'weblogic.kernel.System'"  id: 0x0x00001180  prio: 5  WAITING, DAEMON, GCABLE
+td.2.34.id=0x0x00001180
+td.2.34.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
+td.2.34.isBlocked=false
+td.2.34.isDaemon=true
+td.2.34.isDeadLocked=false
+td.2.34.isIdle=true
+
+#"ExecuteThread: '4' for queue: 'weblogic.kernel.System'"  id: 0x0x00001200  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03374FE0  lastj: 0x7FAD0EC0
+#   pt_thr: 0x00000408
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.35.blockedObjectId=null
+td.2.35.blockerId=null
+td.2.35.condition=id: 0x0x00001200  prio: 5  WAITING, DAEMON, GCABLE
+td.2.35.header="ExecuteThread: '4' for queue: 'weblogic.kernel.System'"  id: 0x0x00001200  prio: 5  WAITING, DAEMON, GCABLE
+td.2.35.id=0x0x00001200
+td.2.35.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
+td.2.35.isBlocked=false
+td.2.35.isDaemon=true
+td.2.35.isDeadLocked=false
+td.2.35.isIdle=true
+
+#"weblogic.time.TimeEventGenerator"  id: 0x0x00001280  prio: 9  WAITING, DAEMON, GCABLE
+#   thread: 0x033766C0  lastj: 0x7FAB0EA4
+#   pt_thr: 0x0000066C
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:271)@1916475C
+#   at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:118)@191642A9
+#   at java.lang.Thread.run(Unknown Source)@116C37A1
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.36.blockedObjectId=null
+td.2.36.blockerId=null
+td.2.36.condition=id: 0x0x00001280  prio: 9  WAITING, DAEMON, GCABLE
+td.2.36.header="weblogic.time.TimeEventGenerator"  id: 0x0x00001280  prio: 9  WAITING, DAEMON, GCABLE
+td.2.36.id=0x0x00001280
+td.2.36.name=weblogic.time.TimeEventGenerator
+td.2.36.isBlocked=false
+td.2.36.isDaemon=true
+td.2.36.isDeadLocked=false
+td.2.36.isIdle=true
+
+#"weblogic.security.SpinnerRandomSource"  id: 0x0x00001300  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03394D28  lastj: 0x7FA90ECC
+#   pt_thr: 0x00000100
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.security.SpinnerRandomBitsSource.run(Optimized Method)@1916A2F7
+#   at java.lang.Thread.run(Unknown Source)@116C37A1
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.37.blockedObjectId=null
+td.2.37.blockerId=null
+td.2.37.condition=id: 0x0x00001300  prio: 5  WAITING, DAEMON, GCABLE
+td.2.37.header="weblogic.security.SpinnerRandomSource"  id: 0x0x00001300  prio: 5  WAITING, DAEMON, GCABLE
+td.2.37.id=0x0x00001300
+td.2.37.name=weblogic.security.SpinnerRandomSource
+td.2.37.isBlocked=false
+td.2.37.isDaemon=true
+td.2.37.isDeadLocked=false
+td.2.37.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001380  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CBFD0  lastj: 0x7FA70EC0
+#   pt_thr: 0x000005D0
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.38.blockedObjectId=null
+td.2.38.blockerId=null
+td.2.38.condition=id: 0x0x00001380  prio: 5  WAITING, DAEMON, GCABLE
+td.2.38.header="ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001380  prio: 5  WAITING, DAEMON, GCABLE
+td.2.38.id=0x0x00001380
+td.2.38.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
+td.2.38.isBlocked=false
+td.2.38.isDaemon=true
+td.2.38.isDeadLocked=false
+td.2.38.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001400  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CC0E8  lastj: 0x7FA50EC0
+#   pt_thr: 0x000005FC
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.39.blockedObjectId=null
+td.2.39.blockerId=null
+td.2.39.condition=id: 0x0x00001400  prio: 5  WAITING, DAEMON, GCABLE
+td.2.39.header="ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001400  prio: 5  WAITING, DAEMON, GCABLE
+td.2.39.id=0x0x00001400
+td.2.39.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
+td.2.39.isBlocked=false
+td.2.39.isDaemon=true
+td.2.39.isDeadLocked=false
+td.2.39.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001480  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CC200  lastj: 0x7FA30EC0
+#   pt_thr: 0x000005D4
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.40.blockedObjectId=null
+td.2.40.blockerId=null
+td.2.40.condition=id: 0x0x00001480  prio: 5  WAITING, DAEMON, GCABLE
+td.2.40.header="ExecuteThread: '0' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001480  prio: 5  WAITING, DAEMON, GCABLE
+td.2.40.id=0x0x00001480
+td.2.40.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
+td.2.40.isBlocked=false
+td.2.40.isDaemon=true
+td.2.40.isDeadLocked=false
+td.2.40.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001500  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CC318  lastj: 0x7FA10EC0
+#   pt_thr: 0x0000068C
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.41.blockedObjectId=null
+td.2.41.blockerId=null
+td.2.41.condition=id: 0x0x00001500  prio: 5  WAITING, DAEMON, GCABLE
+td.2.41.header="ExecuteThread: '1' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001500  prio: 5  WAITING, DAEMON, GCABLE
+td.2.41.id=0x0x00001500
+td.2.41.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
+td.2.41.isBlocked=false
+td.2.41.isDaemon=true
+td.2.41.isDeadLocked=false
+td.2.41.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001580  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x033CC430  lastj: 0x7F9F0EC0
+#   pt_thr: 0x00000690
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.42.blockedObjectId=null
+td.2.42.blockerId=null
+td.2.42.condition=id: 0x0x00001580  prio: 5  WAITING, DAEMON, GCABLE
+td.2.42.header="ExecuteThread: '2' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001580  prio: 5  WAITING, DAEMON, GCABLE
+td.2.42.id=0x0x00001580
+td.2.42.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
+td.2.42.isBlocked=false
+td.2.42.isDaemon=true
+td.2.42.isDeadLocked=false
+td.2.42.isIdle=true
+
+#"VDE Transaction Processor Thread"  id: 0x0x00001600  prio: 2  WAITING, NONDAEMON, GCABLE
+#   thread: 0x0355D6C8  lastj: 0x7F9D0EA4
+#   pt_thr: 0x00000694
+#   at java.lang.Thread.doYield(Native Method)@116C0A68
+#   at java.lang.Object.wait0(Unknown Source)@116C2103
+#   at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:356)@19C524A2
+#   at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)@19C51447
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.43.blockedObjectId=null
+td.2.43.blockerId=null
+td.2.43.condition=id: 0x0x00001600  prio: 2  WAITING, NONDAEMON, GCABLE
+td.2.43.header="VDE Transaction Processor Thread"  id: 0x0x00001600  prio: 2  WAITING, NONDAEMON, GCABLE
+td.2.43.id=0x0x00001600
+td.2.43.name=VDE Transaction Processor Thread
+td.2.43.isBlocked=false
+td.2.43.isDaemon=false
+td.2.43.isDeadLocked=false
+td.2.43.isIdle=true
+
+#"VDE Replication Thread"  id: 0x0x00001680  prio: 5  WAITING, NONDAEMON, GCABLE
+#   thread: 0x0366F3B0  lastj: 0x7F9B0EA8
+#   pt_thr: 0x0000069C
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at com.octetstring.vde.replication.Replication.wait30sec(Replication.java:395)@1D86A96A
+#   at com.octetstring.vde.replication.Replication.run(Replication.java:365)@19C5E051
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.44.blockedObjectId=null
+td.2.44.blockerId=null
+td.2.44.condition=id: 0x0x00001680  prio: 5  WAITING, NONDAEMON, GCABLE
+td.2.44.header="VDE Replication Thread"  id: 0x0x00001680  prio: 5  WAITING, NONDAEMON, GCABLE
+td.2.44.id=0x0x00001680
+td.2.44.name=VDE Replication Thread
+td.2.44.isBlocked=false
+td.2.44.isDaemon=false
+td.2.44.isDeadLocked=false
+td.2.44.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'JMS.TimerTreePool'"  id: 0x0x00001700  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x04D84068  lastj: 0x7F990EA4
+#   pt_thr: 0x000006AC
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at weblogic.jms.backend.BETimerTree.execute(BETimerTree.java:146)@1D1720E5
+#   at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.45.blockedObjectId=null
+td.2.45.blockerId=null
+td.2.45.condition=id: 0x0x00001700  prio: 5  WAITING, DAEMON, GCABLE
+td.2.45.header="ExecuteThread: '0' for queue: 'JMS.TimerTreePool'"  id: 0x0x00001700  prio: 5  WAITING, DAEMON, GCABLE
+td.2.45.id=0x0x00001700
+td.2.45.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
+td.2.45.isBlocked=false
+td.2.45.isDaemon=true
+td.2.45.isDeadLocked=false
+td.2.45.isIdle=true
+
+#"Thread-4"  id: 0x0x00001780  prio: 5  WAITING, NONDAEMON, GCABLE
+#   thread: 0x03BFC028  lastj: 0x7F970EA0
+#   pt_thr: 0x0000059C
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at java.util.TimerThread.mainLoop(Timer.java:429)@1A56DB88
+#   at java.util.TimerThread.run(Timer.java:382)@1A56D912
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.46.blockedObjectId=null
+td.2.46.blockerId=null
+td.2.46.condition=id: 0x0x00001780  prio: 5  WAITING, NONDAEMON, GCABLE
+td.2.46.header="Thread-4"  id: 0x0x00001780  prio: 5  WAITING, NONDAEMON, GCABLE
+td.2.46.id=0x0x00001780
+td.2.46.name=Thread-4
+td.2.46.isBlocked=false
+td.2.46.isDaemon=false
+td.2.46.isDeadLocked=false
+td.2.46.isIdle=true
+
+#"[JRockit] GCEventThread"  id: 0x0x00001800  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03EC8858  lastj: 0x7F950EB8
+#   pt_thr: 0x0000032C
+#   at COM.jrockit.management.jvm.GarbageCollectorImpl.waitForEvent(Native Method)@1ACB690E
+#   at COM.jrockit.management.jvm.GarbageCollectorImpl.access$000(Unknown Source)@1ACB6935
+#   at COM.jrockit.management.jvm.GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)@1ACB6845
+#   at COM.jrockit.management.jvm.AsyncEventProvider$EventThread.run(Unknown Source)@1ACB6762
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.47.blockedObjectId=null
+td.2.47.blockerId=null
+td.2.47.condition=id: 0x0x00001800  prio: 5  WAITING, DAEMON, GCABLE
+td.2.47.header="[JRockit] GCEventThread"  id: 0x0x00001800  prio: 5  WAITING, DAEMON, GCABLE
+td.2.47.id=0x0x00001800
+td.2.47.name=[JRockit] GCEventThread
+td.2.47.isBlocked=false
+td.2.47.isDaemon=true
+td.2.47.isDeadLocked=false
+td.2.47.isIdle=true
+
+#"weblogic.health.CoreHealthMonitor"  id: 0x0x00001880  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x03EC7FD8  lastj: 0x7F930EB0
+#   pt_thr: 0x00000668
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at java.lang.Thread.sleep(Unknown Source)@18A6E2A5
+#   at weblogic.t3.srvr.CoreHealthMonitorThread.run(CoreHealthMonitorThread.java:127)@1B326986
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.48.blockedObjectId=null
+td.2.48.blockerId=null
+td.2.48.condition=id: 0x0x00001880  prio: 5  WAITING, DAEMON, GCABLE
+td.2.48.header="weblogic.health.CoreHealthMonitor"  id: 0x0x00001880  prio: 5  WAITING, DAEMON, GCABLE
+td.2.48.id=0x0x00001880
+td.2.48.name=weblogic.health.CoreHealthMonitor
+td.2.48.isBlocked=false
+td.2.48.isDaemon=true
+td.2.48.isDeadLocked=false
+td.2.48.isIdle=true
+
+#"ListenThread.Default"  id: 0x0x00001900  prio: 5  ACTIVE, NONDAEMON, GCABLE
+#   thread: 0x05075D70  lastj: 0x7F8E0E6C
+#   pt_thr: 0x0000058C
+#   at COM.jrockit.net.SocketNativeIO.accept(Native Method)@1D1A139C
+#   at COM.jrockit.net.SocketNativeIO.accept(Unknown Source)@1D1A1421
+#   at java.net.AbstractSocketImpl.accept(Unknown Source)@1D1A12FA
+#   at java.net.ServerSocket.implAccept(ServerSocket.java:448)@1D1A11C7
+#   at java.net.ServerSocket.accept(ServerSocket.java:419)@1D1A1024
+#   at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:24)@1D863E89
+#   at weblogic.t3.srvr.ListenThread.accept(ListenThread.java:739)@1D863DA9
+#   at weblogic.t3.srvr.ListenThread.run(ListenThread.java:292)@1D27A4AD
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.49.blockedObjectId=null
+td.2.49.blockerId=null
+td.2.49.condition=id: 0x0x00001900  prio: 5  ACTIVE, NONDAEMON, GCABLE
+td.2.49.header="ListenThread.Default"  id: 0x0x00001900  prio: 5  ACTIVE, NONDAEMON, GCABLE
+td.2.49.id=0x0x00001900
+td.2.49.name=ListenThread.Default
+td.2.49.isBlocked=false
+td.2.49.isDaemon=false
+td.2.49.isDeadLocked=false
+td.2.49.isIdle=false
+
+#"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001980  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x050A9370  lastj: 0x7F8C0EBC
+#   pt_thr: 0x00000684
+#   at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)@1D27E978
+#   at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:85)@1D27E7A6
+#   at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:32)@1D27E5CE
+#   at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.50.blockedObjectId=null
+td.2.50.blockerId=null
+td.2.50.condition=id: 0x0x00001980  prio: 5  ACTIVE, DAEMON, GCABLE
+td.2.50.header="ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001980  prio: 5  ACTIVE, DAEMON, GCABLE
+td.2.50.id=0x0x00001980
+td.2.50.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
+td.2.50.isBlocked=false
+td.2.50.isDaemon=true
+td.2.50.isDeadLocked=false
+td.2.50.isIdle=false
+
+#"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001a00  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x050A9488  lastj: 0x7F8A0EBC
+#   pt_thr: 0x0000070C
+#   at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)@1D27E978
+#   at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:85)@1D27E7A6
+#   at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:32)@1D27E5CE
+#   at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+#   at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.51.blockedObjectId=null
+td.2.51.blockerId=null
+td.2.51.condition=id: 0x0x00001a00  prio: 5  ACTIVE, DAEMON, GCABLE
+td.2.51.header="ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001a00  prio: 5  ACTIVE, DAEMON, GCABLE
+td.2.51.id=0x0x00001a00
+td.2.51.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
+td.2.51.isBlocked=false
+td.2.51.isDaemon=true
+td.2.51.isDeadLocked=false
+td.2.51.isIdle=false
+
+#"Thread-6"  id: 0x0x00001a80  prio: 5  WAITING, DAEMON, GCABLE
+#   thread: 0x050B2448  lastj: 0x7F880EA0
+#   pt_thr: 0x00000708
+#   at java.lang.Thread.doYield(Native Method)@116C18E8
+#   at java.lang.Object.wait0(Unknown Source)@116C4882
+#   at java.util.TimerThread.mainLoop(Timer.java:429)@1A56DB88
+#   at java.util.TimerThread.run(Timer.java:382)@1A56D912
+#   at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+#   --- End of stack trace
+td.2.52.blockedObjectId=null
+td.2.52.blockerId=null
+td.2.52.condition=id: 0x0x00001a80  prio: 5  WAITING, DAEMON, GCABLE
+td.2.52.header="Thread-6"  id: 0x0x00001a80  prio: 5  WAITING, DAEMON, GCABLE
+td.2.52.id=0x0x00001a80
+td.2.52.name=Thread-6
+td.2.52.isBlocked=false
+td.2.52.isDaemon=true
+td.2.52.isDeadLocked=false
+td.2.52.isIdle=true
+

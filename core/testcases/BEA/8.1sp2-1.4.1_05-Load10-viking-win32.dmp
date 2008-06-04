@@ -1,0 +1,1615 @@
+
+===== FULL THREAD DUMP ===============
+Thu Mar 04 01:46:12 2004
+
+"ExecuteThread: '0' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000080  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03372670  lastj: 0x7FF70EC0
+    pt_thr: 0x000003D0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000100  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373028  lastj: 0x7FF50EC0
+    pt_thr: 0x00000704
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Finalizer"  id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+    thread: 0x01F75898  lastj: 0x7FF30E9C
+    pt_thr: 0x00000710
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at java.lang.Object.wait0(Unknown Source)@116C4775
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:111)@116C7D25
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:127)@116C7C9C
+    at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)@116C7C31
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"SignalHandler"  id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x01FAB020  lastj: 0x7FEE0EF0
+    pt_thr: 0x000006F0
+    at COM.jrockit.vm.SignalHandler.waitForSignals(Native Method)@12FA7490
+    at COM.jrockit.vm.SignalHandler$1.run(Unknown Source)@12FA7515
+    at java.lang.Thread.run(Unknown Source)@116C37A1
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Hotspot Detector"  id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x01FAB108  lastj: 0x7FEC0EF0
+    pt_thr: 0x000006C8
+    at COM.jrockit.vm.HotspotDetector.findHotSpotCandidate(Native Method)@12FA7550
+    at COM.jrockit.vm.HotspotDetector.run(Unknown Source)@12FA7585
+    at java.lang.Thread.run(Unknown Source)@116C37A1
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Reference Handler"  id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+    thread: 0x01FAB368  lastj: 0x7FEA0EE4
+    pt_thr: 0x00000660
+    at java.lang.ref.Reference.getPending(Native Method)@12FA532E
+    at java.lang.ref.Reference.access$000(Unknown Source)@12FA5365
+    at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)@12FA529F
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Thread-1"  id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+    thread: 0x01FAB4C0  lastj: 0x0006FB3C
+    pt_thr: 0x000005AC
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:1170)@1D862851
+    at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:384)@136305A7
+    at weblogic.Server.main(Server.java:32)@136300A7
+    --- End of stack trace
+
+"Noname"  id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x01FAB6C0  lastj: 0x7FE80F08
+    pt_thr: 0x000004E4
+    at COM.jrockit.vm.MemSystem.mcGenConEP(Native Method)@12FA5BD8
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000480  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373140  lastj: 0x7FE30EC0
+    pt_thr: 0x0000062C
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000500  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373258  lastj: 0x7FE10EC0
+    pt_thr: 0x00000674
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '4' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000580  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373370  lastj: 0x7FDF0EC0
+    pt_thr: 0x000006B4
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '5' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000600  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373488  lastj: 0x7FDD0EC0
+    pt_thr: 0x00000560
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '6' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000680  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033735A0  lastj: 0x7FDB0EC0
+    pt_thr: 0x000006E8
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '7' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000700  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033736B8  lastj: 0x7FD90EC0
+    pt_thr: 0x000006E0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '8' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000780  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033737D0  lastj: 0x7FD70EC0
+    pt_thr: 0x000006B0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '9' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000800  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033738E8  lastj: 0x7FD50EC0
+    pt_thr: 0x00000418
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '10' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000880  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373A00  lastj: 0x7FD30EC0
+    pt_thr: 0x00000610
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '11' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000900  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373B18  lastj: 0x7FD10EC0
+    pt_thr: 0x0000054C
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '12' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000980  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373C30  lastj: 0x7FCF0EC0
+    pt_thr: 0x000004DC
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '13' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373D48  lastj: 0x7FCD0EC0
+    pt_thr: 0x000005E0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '14' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373E60  lastj: 0x7FCB0EC0
+    pt_thr: 0x00000420
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '15' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373F78  lastj: 0x7FC90EC0
+    pt_thr: 0x000003D8
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '16' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374090  lastj: 0x7FC70EC0
+    pt_thr: 0x000005E4
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '17' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033741A8  lastj: 0x7FC50EC0
+    pt_thr: 0x000005C4
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '18' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033742C0  lastj: 0x7FC30EC0
+    pt_thr: 0x00000230
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '19' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033743D8  lastj: 0x7FC10EC0
+    pt_thr: 0x0000065C
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '20' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033744F0  lastj: 0x7FBF0EC0
+    pt_thr: 0x00000640
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '21' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374608  lastj: 0x7FBD0EC0
+    pt_thr: 0x000001DC
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '22' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374720  lastj: 0x7FBB0EC0
+    pt_thr: 0x000004B8
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '23' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374838  lastj: 0x7FB90EC0
+    pt_thr: 0x00000630
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '24' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374950  lastj: 0x7FB70EC0
+    pt_thr: 0x00000524
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.kernel.System'"  id: 0x0x00001000  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374B80  lastj: 0x7FB50EC0
+    pt_thr: 0x00000600
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.kernel.System'"  id: 0x0x00001080  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374C98  lastj: 0x7FB30EC0
+    pt_thr: 0x000002A8
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.kernel.System'"  id: 0x0x00001100  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374DB0  lastj: 0x7FB10EC0
+    pt_thr: 0x00000510
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'weblogic.kernel.System'"  id: 0x0x00001180  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374EC8  lastj: 0x7FAF0EC0
+    pt_thr: 0x00000664
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '4' for queue: 'weblogic.kernel.System'"  id: 0x0x00001200  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374FE0  lastj: 0x7FAD0EC0
+    pt_thr: 0x00000408
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"weblogic.time.TimeEventGenerator"  id: 0x0x00001280  prio: 9  WAITING, DAEMON, GCABLE
+    thread: 0x033766C0  lastj: 0x7FAB0EA4
+    pt_thr: 0x0000066C
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:271)@1916475C
+    at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:118)@191642A9
+    at java.lang.Thread.run(Unknown Source)@116C37A1
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"weblogic.security.SpinnerRandomSource"  id: 0x0x00001300  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03394D28  lastj: 0x7FA90ECC
+    pt_thr: 0x00000100
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.security.SpinnerRandomBitsSource.run(Optimized Method)@1916A2F7
+    at java.lang.Thread.run(Unknown Source)@116C37A1
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001380  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CBFD0  lastj: 0x7FA70EC0
+    pt_thr: 0x000005D0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001400  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CC0E8  lastj: 0x7FA50EC0
+    pt_thr: 0x000005FC
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001480  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CC200  lastj: 0x7FA30EC0
+    pt_thr: 0x000005D4
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001500  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CC318  lastj: 0x7FA10EC0
+    pt_thr: 0x0000068C
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001580  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CC430  lastj: 0x7F9F0EC0
+    pt_thr: 0x00000690
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"VDE Transaction Processor Thread"  id: 0x0x00001600  prio: 2  WAITING, NONDAEMON, GCABLE
+    thread: 0x0355D6C8  lastj: 0x7F9D0EA4
+    pt_thr: 0x00000694
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:356)@19C524A2
+    at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)@19C51447
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"VDE Replication Thread"  id: 0x0x00001680  prio: 5  WAITING, NONDAEMON, GCABLE
+    thread: 0x0366F3B0  lastj: 0x7F9B0EA8
+    pt_thr: 0x0000069C
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at com.octetstring.vde.replication.Replication.wait30sec(Replication.java:395)@1D86A96A
+    at com.octetstring.vde.replication.Replication.run(Replication.java:365)@19C5E051
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'JMS.TimerTreePool'"  id: 0x0x00001700  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x04D84068  lastj: 0x7F990EA4
+    pt_thr: 0x000006AC
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at weblogic.jms.backend.BETimerTree.execute(BETimerTree.java:146)@1D1720E5
+    at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Thread-4"  id: 0x0x00001780  prio: 5  WAITING, NONDAEMON, GCABLE
+    thread: 0x03BFC028  lastj: 0x7F970EA0
+    pt_thr: 0x0000059C
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at java.util.TimerThread.mainLoop(Timer.java:429)@1A56DB88
+    at java.util.TimerThread.run(Timer.java:382)@1A56D912
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"[JRockit] GCEventThread"  id: 0x0x00001800  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03EC8858  lastj: 0x7F950EB8
+    pt_thr: 0x0000032C
+    at COM.jrockit.management.jvm.GarbageCollectorImpl.waitForEvent(Native Method)@1ACB690E
+    at COM.jrockit.management.jvm.GarbageCollectorImpl.access$000(Unknown Source)@1ACB6935
+    at COM.jrockit.management.jvm.GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)@1ACB6845
+    at COM.jrockit.management.jvm.AsyncEventProvider$EventThread.run(Unknown Source)@1ACB6762
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"weblogic.health.CoreHealthMonitor"  id: 0x0x00001880  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03EC7FD8  lastj: 0x7F930EB0
+    pt_thr: 0x00000668
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at java.lang.Thread.sleep(Unknown Source)@18A6E2A5
+    at weblogic.t3.srvr.CoreHealthMonitorThread.run(CoreHealthMonitorThread.java:127)@1B326986
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ListenThread.Default"  id: 0x0x00001900  prio: 5  ACTIVE, NONDAEMON, GCABLE
+    thread: 0x05075D70  lastj: 0x7F8E0E6C
+    pt_thr: 0x0000058C
+    at COM.jrockit.net.SocketNativeIO.accept(Native Method)@1D1A139C
+    at COM.jrockit.net.SocketNativeIO.accept(Unknown Source)@1D1A1421
+    at java.net.AbstractSocketImpl.accept(Unknown Source)@1D1A12FA
+    at java.net.ServerSocket.implAccept(ServerSocket.java:448)@1D1A11C7
+    at java.net.ServerSocket.accept(ServerSocket.java:419)@1D1A1024
+    at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:24)@1D863E89
+    at weblogic.t3.srvr.ListenThread.accept(ListenThread.java:739)@1D863DA9
+    at weblogic.t3.srvr.ListenThread.run(ListenThread.java:292)@1D27A4AD
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001980  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x050A9370  lastj: 0x7F8C0EBC
+    pt_thr: 0x00000684
+    at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)@1D27E978
+    at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:85)@1D27E7A6
+    at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:32)@1D27E5CE
+    at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001a00  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x050A9488  lastj: 0x7F8A0EBC
+    pt_thr: 0x0000070C
+    at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)@1D27E978
+    at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:85)@1D27E7A6
+    at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:32)@1D27E5CE
+    at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Thread-6"  id: 0x0x00001a80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x050B2448  lastj: 0x7F880EA0
+    pt_thr: 0x00000708
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at java.util.TimerThread.mainLoop(Timer.java:429)@1A56DB88
+    at java.util.TimerThread.run(Timer.java:382)@1A56D912
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+=====================
+
+===== FULL THREAD DUMP ===============
+Thu Mar 04 01:46:14 2004
+
+"ExecuteThread: '0' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000080  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03372670  lastj: 0x7FF70EC0
+    pt_thr: 0x000003D0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000100  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373028  lastj: 0x7FF50EC0
+    pt_thr: 0x00000704
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Finalizer"  id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+    thread: 0x01F75898  lastj: 0x7FF30E9C
+    pt_thr: 0x00000710
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at java.lang.Object.wait0(Unknown Source)@116C4775
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:111)@116C7D25
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:127)@116C7C9C
+    at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)@116C7C31
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"SignalHandler"  id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x01FAB020  lastj: 0x7FEE0EF0
+    pt_thr: 0x000006F0
+    at COM.jrockit.vm.SignalHandler.waitForSignals(Native Method)@12FA7490
+    at COM.jrockit.vm.SignalHandler$1.run(Unknown Source)@12FA7515
+    at java.lang.Thread.run(Unknown Source)@116C37A1
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Hotspot Detector"  id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x01FAB108  lastj: 0x7FEC0EF0
+    pt_thr: 0x000006C8
+    at COM.jrockit.vm.HotspotDetector.findHotSpotCandidate(Native Method)@12FA7550
+    at COM.jrockit.vm.HotspotDetector.run(Unknown Source)@12FA7585
+    at java.lang.Thread.run(Unknown Source)@116C37A1
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Reference Handler"  id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+    thread: 0x01FAB368  lastj: 0x7FEA0EE4
+    pt_thr: 0x00000660
+    at java.lang.ref.Reference.getPending(Native Method)@12FA532E
+    at java.lang.ref.Reference.access$000(Unknown Source)@12FA5365
+    at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)@12FA529F
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Thread-1"  id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+    thread: 0x01FAB4C0  lastj: 0x0006FB3C
+    pt_thr: 0x000005AC
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:1170)@1D862851
+    at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:384)@136305A7
+    at weblogic.Server.main(Server.java:32)@136300A7
+    --- End of stack trace
+
+"Noname"  id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x01FAB6C0  lastj: 0x7FE80F08
+    pt_thr: 0x000004E4
+    at COM.jrockit.vm.MemSystem.mcGenConEP(Native Method)@12FA5BD8
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000480  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373140  lastj: 0x7FE30EC0
+    pt_thr: 0x0000062C
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000500  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373258  lastj: 0x7FE10EC0
+    pt_thr: 0x00000674
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '4' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000580  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373370  lastj: 0x7FDF0EC0
+    pt_thr: 0x000006B4
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '5' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000600  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373488  lastj: 0x7FDD0EC0
+    pt_thr: 0x00000560
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '6' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000680  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033735A0  lastj: 0x7FDB0EC0
+    pt_thr: 0x000006E8
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '7' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000700  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033736B8  lastj: 0x7FD90EC0
+    pt_thr: 0x000006E0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '8' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000780  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033737D0  lastj: 0x7FD70EC0
+    pt_thr: 0x000006B0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '9' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000800  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033738E8  lastj: 0x7FD50EC0
+    pt_thr: 0x00000418
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '10' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000880  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373A00  lastj: 0x7FD30EC0
+    pt_thr: 0x00000610
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '11' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000900  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373B18  lastj: 0x7FD10EC0
+    pt_thr: 0x0000054C
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '12' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000980  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373C30  lastj: 0x7FCF0EC0
+    pt_thr: 0x000004DC
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '13' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373D48  lastj: 0x7FCD0EC0
+    pt_thr: 0x000005E0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '14' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373E60  lastj: 0x7FCB0EC0
+    pt_thr: 0x00000420
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '15' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373F78  lastj: 0x7FC90EC0
+    pt_thr: 0x000003D8
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '16' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374090  lastj: 0x7FC70EC0
+    pt_thr: 0x000005E4
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '17' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033741A8  lastj: 0x7FC50EC0
+    pt_thr: 0x000005C4
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '18' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033742C0  lastj: 0x7FC30EC0
+    pt_thr: 0x00000230
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '19' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033743D8  lastj: 0x7FC10EC0
+    pt_thr: 0x0000065C
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '20' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033744F0  lastj: 0x7FBF0EC0
+    pt_thr: 0x00000640
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '21' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374608  lastj: 0x7FBD0EC0
+    pt_thr: 0x000001DC
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '22' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374720  lastj: 0x7FBB0EC0
+    pt_thr: 0x000004B8
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '23' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374838  lastj: 0x7FB90EC0
+    pt_thr: 0x00000630
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '24' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374950  lastj: 0x7FB70EC0
+    pt_thr: 0x00000524
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.kernel.System'"  id: 0x0x00001000  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374B80  lastj: 0x7FB50EC0
+    pt_thr: 0x00000600
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.kernel.System'"  id: 0x0x00001080  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374C98  lastj: 0x7FB30EC0
+    pt_thr: 0x000002A8
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.kernel.System'"  id: 0x0x00001100  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374DB0  lastj: 0x7FB10EC0
+    pt_thr: 0x00000510
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'weblogic.kernel.System'"  id: 0x0x00001180  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374EC8  lastj: 0x7FAF0EC0
+    pt_thr: 0x00000664
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '4' for queue: 'weblogic.kernel.System'"  id: 0x0x00001200  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374FE0  lastj: 0x7FAD0EC0
+    pt_thr: 0x00000408
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"weblogic.time.TimeEventGenerator"  id: 0x0x00001280  prio: 9  WAITING, DAEMON, GCABLE
+    thread: 0x033766C0  lastj: 0x7FAB0EA4
+    pt_thr: 0x0000066C
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:271)@1916475C
+    at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:118)@191642A9
+    at java.lang.Thread.run(Unknown Source)@116C37A1
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"weblogic.security.SpinnerRandomSource"  id: 0x0x00001300  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03394D28  lastj: 0x7FA90ECC
+    pt_thr: 0x00000100
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.security.SpinnerRandomBitsSource.run(Optimized Method)@1916A2F7
+    at java.lang.Thread.run(Unknown Source)@116C37A1
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001380  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CBFD0  lastj: 0x7FA70EC0
+    pt_thr: 0x000005D0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001400  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CC0E8  lastj: 0x7FA50EC0
+    pt_thr: 0x000005FC
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001480  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CC200  lastj: 0x7FA30EC0
+    pt_thr: 0x000005D4
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001500  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CC318  lastj: 0x7FA10EC0
+    pt_thr: 0x0000068C
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001580  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CC430  lastj: 0x7F9F0EC0
+    pt_thr: 0x00000690
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"VDE Transaction Processor Thread"  id: 0x0x00001600  prio: 2  WAITING, NONDAEMON, GCABLE
+    thread: 0x0355D6C8  lastj: 0x7F9D0EA4
+    pt_thr: 0x00000694
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:356)@19C524A2
+    at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)@19C51447
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"VDE Replication Thread"  id: 0x0x00001680  prio: 5  WAITING, NONDAEMON, GCABLE
+    thread: 0x0366F3B0  lastj: 0x7F9B0EA8
+    pt_thr: 0x0000069C
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at com.octetstring.vde.replication.Replication.wait30sec(Replication.java:395)@1D86A96A
+    at com.octetstring.vde.replication.Replication.run(Replication.java:365)@19C5E051
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'JMS.TimerTreePool'"  id: 0x0x00001700  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x04D84068  lastj: 0x7F990EA4
+    pt_thr: 0x000006AC
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at weblogic.jms.backend.BETimerTree.execute(BETimerTree.java:146)@1D1720E5
+    at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Thread-4"  id: 0x0x00001780  prio: 5  WAITING, NONDAEMON, GCABLE
+    thread: 0x03BFC028  lastj: 0x7F970EA0
+    pt_thr: 0x0000059C
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at java.util.TimerThread.mainLoop(Timer.java:429)@1A56DB88
+    at java.util.TimerThread.run(Timer.java:382)@1A56D912
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"[JRockit] GCEventThread"  id: 0x0x00001800  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03EC8858  lastj: 0x7F950EB8
+    pt_thr: 0x0000032C
+    at COM.jrockit.management.jvm.GarbageCollectorImpl.waitForEvent(Native Method)@1ACB690E
+    at COM.jrockit.management.jvm.GarbageCollectorImpl.access$000(Unknown Source)@1ACB6935
+    at COM.jrockit.management.jvm.GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)@1ACB6845
+    at COM.jrockit.management.jvm.AsyncEventProvider$EventThread.run(Unknown Source)@1ACB6762
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"weblogic.health.CoreHealthMonitor"  id: 0x0x00001880  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03EC7FD8  lastj: 0x7F930EB0
+    pt_thr: 0x00000668
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at java.lang.Thread.sleep(Unknown Source)@18A6E2A5
+    at weblogic.t3.srvr.CoreHealthMonitorThread.run(CoreHealthMonitorThread.java:127)@1B326986
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ListenThread.Default"  id: 0x0x00001900  prio: 5  ACTIVE, NONDAEMON, GCABLE
+    thread: 0x05075D70  lastj: 0x7F8E0E6C
+    pt_thr: 0x0000058C
+    at COM.jrockit.net.SocketNativeIO.accept(Native Method)@1D1A139C
+    at COM.jrockit.net.SocketNativeIO.accept(Unknown Source)@1D1A1421
+    at java.net.AbstractSocketImpl.accept(Unknown Source)@1D1A12FA
+    at java.net.ServerSocket.implAccept(ServerSocket.java:448)@1D1A11C7
+    at java.net.ServerSocket.accept(ServerSocket.java:419)@1D1A1024
+    at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:24)@1D863E89
+    at weblogic.t3.srvr.ListenThread.accept(ListenThread.java:739)@1D863DA9
+    at weblogic.t3.srvr.ListenThread.run(ListenThread.java:292)@1D27A4AD
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001980  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x050A9370  lastj: 0x7F8C0EBC
+    pt_thr: 0x00000684
+    at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)@1D27E978
+    at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:85)@1D27E7A6
+    at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:32)@1D27E5CE
+    at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001a00  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x050A9488  lastj: 0x7F8A0EBC
+    pt_thr: 0x0000070C
+    at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)@1D27E978
+    at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:85)@1D27E7A6
+    at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:32)@1D27E5CE
+    at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Thread-6"  id: 0x0x00001a80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x050B2448  lastj: 0x7F880EA0
+    pt_thr: 0x00000708
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at java.util.TimerThread.mainLoop(Timer.java:429)@1A56DB88
+    at java.util.TimerThread.run(Timer.java:382)@1A56D912
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+=====================
+
+===== FULL THREAD DUMP ===============
+Thu Mar 04 01:46:16 2004
+
+"ExecuteThread: '0' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000080  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03372670  lastj: 0x7FF70EC0
+    pt_thr: 0x000003D0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000100  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373028  lastj: 0x7FF50EC0
+    pt_thr: 0x00000704
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Finalizer"  id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+    thread: 0x01F75898  lastj: 0x7FF30E9C
+    pt_thr: 0x00000710
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at java.lang.Object.wait0(Unknown Source)@116C4775
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:111)@116C7D25
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:127)@116C7C9C
+    at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)@116C7C31
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"SignalHandler"  id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x01FAB020  lastj: 0x7FEE0EF0
+    pt_thr: 0x000006F0
+    at COM.jrockit.vm.SignalHandler.waitForSignals(Native Method)@12FA7490
+    at COM.jrockit.vm.SignalHandler$1.run(Unknown Source)@12FA7515
+    at java.lang.Thread.run(Unknown Source)@116C37A1
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Hotspot Detector"  id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x01FAB108  lastj: 0x7FEC0EF0
+    pt_thr: 0x000006C8
+    at COM.jrockit.vm.HotspotDetector.findHotSpotCandidate(Native Method)@12FA7550
+    at COM.jrockit.vm.HotspotDetector.run(Unknown Source)@12FA7585
+    at java.lang.Thread.run(Unknown Source)@116C37A1
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Reference Handler"  id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+    thread: 0x01FAB368  lastj: 0x7FEA0EE4
+    pt_thr: 0x00000660
+    at java.lang.ref.Reference.getPending(Native Method)@12FA532E
+    at java.lang.ref.Reference.access$000(Unknown Source)@12FA5365
+    at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)@12FA529F
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Thread-1"  id: 0x0x00000380  prio: 5  WAITING, NONDAEMON, GCABLE
+    thread: 0x01FAB4C0  lastj: 0x0006FB3C
+    pt_thr: 0x000005AC
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:1170)@1D862851
+    at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:384)@136305A7
+    at weblogic.Server.main(Server.java:32)@136300A7
+    --- End of stack trace
+
+"Noname"  id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x01FAB6C0  lastj: 0x7FE80F08
+    pt_thr: 0x000004E4
+    at COM.jrockit.vm.MemSystem.mcGenConEP(Native Method)@12FA5BD8
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000480  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373140  lastj: 0x7FE30EC0
+    pt_thr: 0x0000062C
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000500  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373258  lastj: 0x7FE10EC0
+    pt_thr: 0x00000674
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '4' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000580  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373370  lastj: 0x7FDF0EC0
+    pt_thr: 0x000006B4
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '5' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000600  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373488  lastj: 0x7FDD0EC0
+    pt_thr: 0x00000560
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '6' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000680  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033735A0  lastj: 0x7FDB0EC0
+    pt_thr: 0x000006E8
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '7' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000700  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033736B8  lastj: 0x7FD90EC0
+    pt_thr: 0x000006E0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '8' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000780  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033737D0  lastj: 0x7FD70EC0
+    pt_thr: 0x000006B0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '9' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000800  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033738E8  lastj: 0x7FD50EC0
+    pt_thr: 0x00000418
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '10' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000880  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373A00  lastj: 0x7FD30EC0
+    pt_thr: 0x00000610
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '11' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000900  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373B18  lastj: 0x7FD10EC0
+    pt_thr: 0x0000054C
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '12' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000980  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373C30  lastj: 0x7FCF0EC0
+    pt_thr: 0x000004DC
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '13' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373D48  lastj: 0x7FCD0EC0
+    pt_thr: 0x000005E0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '14' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000a80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373E60  lastj: 0x7FCB0EC0
+    pt_thr: 0x00000420
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '15' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03373F78  lastj: 0x7FC90EC0
+    pt_thr: 0x000003D8
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '16' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000b80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374090  lastj: 0x7FC70EC0
+    pt_thr: 0x000005E4
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '17' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033741A8  lastj: 0x7FC50EC0
+    pt_thr: 0x000005C4
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '18' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000c80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033742C0  lastj: 0x7FC30EC0
+    pt_thr: 0x00000230
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '19' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033743D8  lastj: 0x7FC10EC0
+    pt_thr: 0x0000065C
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '20' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000d80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033744F0  lastj: 0x7FBF0EC0
+    pt_thr: 0x00000640
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '21' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374608  lastj: 0x7FBD0EC0
+    pt_thr: 0x000001DC
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '22' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000e80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374720  lastj: 0x7FBB0EC0
+    pt_thr: 0x000004B8
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '23' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f00  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374838  lastj: 0x7FB90EC0
+    pt_thr: 0x00000630
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '24' for queue: 'weblogic.kernel.Default'"  id: 0x0x00000f80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374950  lastj: 0x7FB70EC0
+    pt_thr: 0x00000524
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.kernel.System'"  id: 0x0x00001000  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374B80  lastj: 0x7FB50EC0
+    pt_thr: 0x00000600
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.kernel.System'"  id: 0x0x00001080  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374C98  lastj: 0x7FB30EC0
+    pt_thr: 0x000002A8
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.kernel.System'"  id: 0x0x00001100  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374DB0  lastj: 0x7FB10EC0
+    pt_thr: 0x00000510
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'weblogic.kernel.System'"  id: 0x0x00001180  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374EC8  lastj: 0x7FAF0EC0
+    pt_thr: 0x00000664
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '4' for queue: 'weblogic.kernel.System'"  id: 0x0x00001200  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03374FE0  lastj: 0x7FAD0EC0
+    pt_thr: 0x00000408
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"weblogic.time.TimeEventGenerator"  id: 0x0x00001280  prio: 9  WAITING, DAEMON, GCABLE
+    thread: 0x033766C0  lastj: 0x7FAB0EA4
+    pt_thr: 0x0000066C
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:271)@1916475C
+    at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:118)@191642A9
+    at java.lang.Thread.run(Unknown Source)@116C37A1
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"weblogic.security.SpinnerRandomSource"  id: 0x0x00001300  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03394D28  lastj: 0x7FA90ECC
+    pt_thr: 0x00000100
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.security.SpinnerRandomBitsSource.run(Optimized Method)@1916A2F7
+    at java.lang.Thread.run(Unknown Source)@116C37A1
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001380  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CBFD0  lastj: 0x7FA70EC0
+    pt_thr: 0x000005D0
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'"  id: 0x0x00001400  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CC0E8  lastj: 0x7FA50EC0
+    pt_thr: 0x000005FC
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001480  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CC200  lastj: 0x7FA30EC0
+    pt_thr: 0x000005D4
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001500  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CC318  lastj: 0x7FA10EC0
+    pt_thr: 0x0000068C
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.admin.RMI'"  id: 0x0x00001580  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x033CC430  lastj: 0x7F9F0EC0
+    pt_thr: 0x00000690
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at weblogic.kernel.ExecuteThread.waitForRequest(ExecuteThread.java:145)@19163A91
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:164)@191637B6
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"VDE Transaction Processor Thread"  id: 0x0x00001600  prio: 2  WAITING, NONDAEMON, GCABLE
+    thread: 0x0355D6C8  lastj: 0x7F9D0EA4
+    pt_thr: 0x00000694
+    at java.lang.Thread.doYield(Native Method)@116C0A68
+    at java.lang.Object.wait0(Unknown Source)@116C2103
+    at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:356)@19C524A2
+    at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)@19C51447
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"VDE Replication Thread"  id: 0x0x00001680  prio: 5  WAITING, NONDAEMON, GCABLE
+    thread: 0x0366F3B0  lastj: 0x7F9B0EA8
+    pt_thr: 0x0000069C
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at com.octetstring.vde.replication.Replication.wait30sec(Replication.java:395)@1D86A96A
+    at com.octetstring.vde.replication.Replication.run(Replication.java:365)@19C5E051
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'JMS.TimerTreePool'"  id: 0x0x00001700  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x04D84068  lastj: 0x7F990EA4
+    pt_thr: 0x000006AC
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at weblogic.jms.backend.BETimerTree.execute(BETimerTree.java:146)@1D1720E5
+    at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Thread-4"  id: 0x0x00001780  prio: 5  WAITING, NONDAEMON, GCABLE
+    thread: 0x03BFC028  lastj: 0x7F970EA0
+    pt_thr: 0x0000059C
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at java.util.TimerThread.mainLoop(Timer.java:429)@1A56DB88
+    at java.util.TimerThread.run(Timer.java:382)@1A56D912
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"[JRockit] GCEventThread"  id: 0x0x00001800  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03EC8858  lastj: 0x7F950EB8
+    pt_thr: 0x0000032C
+    at COM.jrockit.management.jvm.GarbageCollectorImpl.waitForEvent(Native Method)@1ACB690E
+    at COM.jrockit.management.jvm.GarbageCollectorImpl.access$000(Unknown Source)@1ACB6935
+    at COM.jrockit.management.jvm.GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)@1ACB6845
+    at COM.jrockit.management.jvm.AsyncEventProvider$EventThread.run(Unknown Source)@1ACB6762
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"weblogic.health.CoreHealthMonitor"  id: 0x0x00001880  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x03EC7FD8  lastj: 0x7F930EB0
+    pt_thr: 0x00000668
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at java.lang.Thread.sleep(Unknown Source)@18A6E2A5
+    at weblogic.t3.srvr.CoreHealthMonitorThread.run(CoreHealthMonitorThread.java:127)@1B326986
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ListenThread.Default"  id: 0x0x00001900  prio: 5  ACTIVE, NONDAEMON, GCABLE
+    thread: 0x05075D70  lastj: 0x7F8E0E6C
+    pt_thr: 0x0000058C
+    at COM.jrockit.net.SocketNativeIO.accept(Native Method)@1D1A139C
+    at COM.jrockit.net.SocketNativeIO.accept(Unknown Source)@1D1A1421
+    at java.net.AbstractSocketImpl.accept(Unknown Source)@1D1A12FA
+    at java.net.ServerSocket.implAccept(ServerSocket.java:448)@1D1A11C7
+    at java.net.ServerSocket.accept(ServerSocket.java:419)@1D1A1024
+    at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:24)@1D863E89
+    at weblogic.t3.srvr.ListenThread.accept(ListenThread.java:739)@1D863DA9
+    at weblogic.t3.srvr.ListenThread.run(ListenThread.java:292)@1D27A4AD
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001980  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x050A9370  lastj: 0x7F8C0EBC
+    pt_thr: 0x00000684
+    at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)@1D27E978
+    at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:85)@1D27E7A6
+    at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:32)@1D27E5CE
+    at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'"  id: 0x0x00001a00  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x050A9488  lastj: 0x7F8A0EBC
+    pt_thr: 0x0000070C
+    at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)@1D27E978
+    at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:85)@1D27E7A6
+    at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:32)@1D27E5CE
+    at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:197)@1AB2E632
+    at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:170)@191637E2
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+"Thread-6"  id: 0x0x00001a80  prio: 5  WAITING, DAEMON, GCABLE
+    thread: 0x050B2448  lastj: 0x7F880EA0
+    pt_thr: 0x00000708
+    at java.lang.Thread.doYield(Native Method)@116C18E8
+    at java.lang.Object.wait0(Unknown Source)@116C4882
+    at java.util.TimerThread.mainLoop(Timer.java:429)@1A56DB88
+    at java.util.TimerThread.run(Timer.java:382)@1A56D912
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@116C3645
+    --- End of stack trace
+
+=====================
+^C

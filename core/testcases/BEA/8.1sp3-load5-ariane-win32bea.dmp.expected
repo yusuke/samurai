@@ -1,0 +1,3550 @@
+ftd.0.deadLockSize=0
+ftd.0.threadCount=57
+#"Main Thread" prio=5 id=0x80 pid=13184 waiting
+#   -- Waiting for notification on: weblogic/t3/srvr/T3Srvr@0x4286c608[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/t3/srvr/T3Srvr.waitForDeath(T3Srvr.java:1170)@0x55a1c074
+#   ^-- Lock released while waiting: weblogic/t3/srvr/T3Srvr@0x4286c608[fat lock]
+#   at weblogic/t3/srvr/T3Srvr.run(T3Srvr.java:384)@0x40dc2066
+#   at weblogic/Server.main(Server.java:32)@0x40dc1dd2
+#   --- End of stack trace
+td.0.0.blockedObjectId=null
+td.0.0.blockerId=null
+td.0.0.condition=prio=5 id=0x80 pid=13184 waiting
+td.0.0.header="Main Thread" prio=5 id=0x80 pid=13184 waiting
+td.0.0.id=0x80
+td.0.0.name=Main Thread
+td.0.0.isBlocked=false
+td.0.0.isDaemon=false
+td.0.0.isDeadLocked=false
+td.0.0.isIdle=true
+
+#"(Signal Handler)" prio=5 id=0x100 pid=13186 active, daemon
+td.0.1.blockedObjectId=null
+td.0.1.blockerId=null
+td.0.1.condition=prio=5 id=0x100 pid=13186 active, daemon
+td.0.1.header="(Signal Handler)" prio=5 id=0x100 pid=13186 active, daemon
+td.0.1.id=0x100
+td.0.1.name=(Signal Handler)
+td.0.1.isBlocked=false
+td.0.1.isDaemon=true
+td.0.1.isDeadLocked=false
+td.0.1.isIdle=false
+
+#"(Code Generation Thread 1)" prio=5 id=0x180 pid=13187 active, native_waiting, daemon
+td.0.2.blockedObjectId=null
+td.0.2.blockerId=null
+td.0.2.condition=prio=5 id=0x180 pid=13187 active, native_waiting, daemon
+td.0.2.header="(Code Generation Thread 1)" prio=5 id=0x180 pid=13187 active, native_waiting, daemon
+td.0.2.id=0x180
+td.0.2.name=(Code Generation Thread 1)
+td.0.2.isBlocked=false
+td.0.2.isDaemon=true
+td.0.2.isDeadLocked=false
+td.0.2.isIdle=true
+
+#"(Code Optimization Thread 1)" prio=5 id=0x200 pid=13188 active, native_waiting, daemon
+td.0.3.blockedObjectId=null
+td.0.3.blockerId=null
+td.0.3.condition=prio=5 id=0x200 pid=13188 active, native_waiting, daemon
+td.0.3.header="(Code Optimization Thread 1)" prio=5 id=0x200 pid=13188 active, native_waiting, daemon
+td.0.3.id=0x200
+td.0.3.name=(Code Optimization Thread 1)
+td.0.3.isBlocked=false
+td.0.3.isDaemon=true
+td.0.3.isDeadLocked=false
+td.0.3.isIdle=true
+
+#"(GC Main Thread)" prio=5 id=0x280 pid=13189 active, daemon
+td.0.4.blockedObjectId=null
+td.0.4.blockerId=null
+td.0.4.condition=prio=5 id=0x280 pid=13189 active, daemon
+td.0.4.header="(GC Main Thread)" prio=5 id=0x280 pid=13189 active, daemon
+td.0.4.id=0x280
+td.0.4.name=(GC Main Thread)
+td.0.4.isBlocked=false
+td.0.4.isDaemon=true
+td.0.4.isDeadLocked=false
+td.0.4.isIdle=false
+
+#"(GC Worker Thread 1)" prio=5 id=0x300 pid=13190 active, native_waiting, daemon
+td.0.5.blockedObjectId=null
+td.0.5.blockerId=null
+td.0.5.condition=prio=5 id=0x300 pid=13190 active, native_waiting, daemon
+td.0.5.header="(GC Worker Thread 1)" prio=5 id=0x300 pid=13190 active, native_waiting, daemon
+td.0.5.id=0x300
+td.0.5.name=(GC Worker Thread 1)
+td.0.5.isBlocked=false
+td.0.5.isDaemon=true
+td.0.5.isDeadLocked=false
+td.0.5.isIdle=true
+
+#"Finalizer" prio=8 id=0x380 pid=13191 waiting, daemon
+#   -- Waiting for notification on: java/lang/ref/ReferenceQueue$Lock@0x42447800[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03ce1
+#   at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@0x40d09661
+#   ^-- Lock released while waiting: java/lang/ref/ReferenceQueue$Lock@0x42447800[fat lock]
+#   at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@0x40d0949c
+#   at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@0x40d05b43
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.6.blockedObjectId=null
+td.0.6.blockerId=null
+td.0.6.condition=prio=8 id=0x380 pid=13191 waiting, daemon
+td.0.6.header="Finalizer" prio=8 id=0x380 pid=13191 waiting, daemon
+td.0.6.id=0x380
+td.0.6.name=Finalizer
+td.0.6.isBlocked=false
+td.0.6.isDaemon=true
+td.0.6.isDeadLocked=false
+td.0.6.isIdle=true
+
+#"Reference Handler" prio=10 id=0x400 pid=13192 waiting for pending references, daemon
+#   at java/lang/ref/Reference.getPending(Native Method)@0x40d60e80
+#   at java/lang/ref/Reference.access$000(Unknown Source)@0x40d60ef5
+#   at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@0x40d60df0
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.7.blockedObjectId=null
+td.0.7.blockerId=null
+td.0.7.condition=prio=10 id=0x400 pid=13192 waiting for pending references, daemon
+td.0.7.header="Reference Handler" prio=10 id=0x400 pid=13192 waiting for pending references, daemon
+td.0.7.id=0x400
+td.0.7.name=Reference Handler
+td.0.7.isBlocked=false
+td.0.7.isDaemon=true
+td.0.7.isDeadLocked=false
+td.0.7.isIdle=false
+
+#"[JRockit] Connection Listener" prio=5 id=0x480 pid=13194 active, daemon
+#   at jrockit/net/SocketNativeIO.accept(Native Method)@0x40de0310
+#   at jrockit/net/SocketNativeIO.accept(Unknown Source)@0x40de03db
+#   at java/net/AbstractSocketImpl.accept(Unknown Source)@0x40de0213
+#   ^-- Holding lock: java/net/PlainSocketImpl@0x42496d08[thin lock]
+#   at java/net/ServerSocket.implAccept(ServerSocket.java:448)@0x40de00fc
+#   at java/net/ServerSocket.accept(ServerSocket.java:419)@0x40d8ff4c
+#   at com/jrockit/management/rmp/RmpSocketListener.run(RmpSocketListener.java:170)@0x40dc1a7a
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.8.blockedObjectId=null
+td.0.8.blockerId=null
+td.0.8.condition=prio=5 id=0x480 pid=13194 active, daemon
+td.0.8.header="[JRockit] Connection Listener" prio=5 id=0x480 pid=13194 active, daemon
+td.0.8.id=0x480
+td.0.8.name=[JRockit] Connection Listener
+td.0.8.isBlocked=false
+td.0.8.isDaemon=true
+td.0.8.isDeadLocked=false
+td.0.8.isIdle=false
+
+#"(Hotspot Detector)" prio=10 id=0x500 pid=13195 active, daemon
+td.0.9.blockedObjectId=null
+td.0.9.blockerId=null
+td.0.9.condition=prio=10 id=0x500 pid=13195 active, daemon
+td.0.9.header="(Hotspot Detector)" prio=10 id=0x500 pid=13195 active, daemon
+td.0.9.id=0x500
+td.0.9.name=(Hotspot Detector)
+td.0.9.isBlocked=false
+td.0.9.isDaemon=true
+td.0.9.isDeadLocked=false
+td.0.9.isIdle=false
+
+#"ExecuteThread: '0' for queue: 'JMS.TimerClientPool'" prio=5 id=0x580 pid=13270 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb9db0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb9db0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.10.blockedObjectId=null
+td.0.10.blockerId=null
+td.0.10.condition=prio=5 id=0x580 pid=13270 waiting, daemon
+td.0.10.header="ExecuteThread: '0' for queue: 'JMS.TimerClientPool'" prio=5 id=0x580 pid=13270 waiting, daemon
+td.0.10.id=0x580
+td.0.10.name=ExecuteThread: '0' for queue: 'JMS.TimerClientPool'
+td.0.10.isBlocked=false
+td.0.10.isDaemon=true
+td.0.10.isDeadLocked=false
+td.0.10.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'JMS.TimerClientPool'" prio=5 id=0x600 pid=13271 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb2990[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb2990[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.11.blockedObjectId=null
+td.0.11.blockerId=null
+td.0.11.condition=prio=5 id=0x600 pid=13271 waiting, daemon
+td.0.11.header="ExecuteThread: '1' for queue: 'JMS.TimerClientPool'" prio=5 id=0x600 pid=13271 waiting, daemon
+td.0.11.id=0x600
+td.0.11.name=ExecuteThread: '1' for queue: 'JMS.TimerClientPool'
+td.0.11.isBlocked=false
+td.0.11.isDaemon=true
+td.0.11.isDeadLocked=false
+td.0.11.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'JMS.TimerClientPool'" prio=5 id=0x680 pid=13272 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb31c0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb31c0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.12.blockedObjectId=null
+td.0.12.blockerId=null
+td.0.12.condition=prio=5 id=0x680 pid=13272 waiting, daemon
+td.0.12.header="ExecuteThread: '2' for queue: 'JMS.TimerClientPool'" prio=5 id=0x680 pid=13272 waiting, daemon
+td.0.12.id=0x680
+td.0.12.name=ExecuteThread: '2' for queue: 'JMS.TimerClientPool'
+td.0.12.isBlocked=false
+td.0.12.isDaemon=true
+td.0.12.isDeadLocked=false
+td.0.12.isIdle=true
+
+#"[JRockit] GCChangeEventThread" prio=5 id=0x700 pid=13201 active, native_waiting, daemon
+#   at jrockit/management/jvm/GCChangeEventProvider.waitForEvent(Native Method)@0x523796b0
+#   at jrockit/management/jvm/GCChangeEventProvider.access$000(Unknown Source)@0x52379725
+#   at jrockit/management/jvm/GCChangeEventProvider$GCChangeEventThread.getNextEvent(Unknown Source)@0x523795de
+#   at jrockit/management/jvm/AsyncEventProvider$EventThread.run(Unknown Source)@0x52379542
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.13.blockedObjectId=null
+td.0.13.blockerId=null
+td.0.13.condition=prio=5 id=0x700 pid=13201 active, native_waiting, daemon
+td.0.13.header="[JRockit] GCChangeEventThread" prio=5 id=0x700 pid=13201 active, native_waiting, daemon
+td.0.13.id=0x700
+td.0.13.name=[JRockit] GCChangeEventThread
+td.0.13.isBlocked=false
+td.0.13.isDaemon=true
+td.0.13.isDeadLocked=false
+td.0.13.isIdle=true
+
+#"[JRockit] GCEventThread" prio=5 id=0x780 pid=13202 active, native_waiting, daemon
+#   at jrockit/management/jvm/GarbageCollectorImpl.waitForEvent(Native Method)@0x523797f0
+#   at jrockit/management/jvm/GarbageCollectorImpl.access$000(Unknown Source)@0x52379865
+#   at jrockit/management/jvm/GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)@0x5237973e
+#   at jrockit/management/jvm/AsyncEventProvider$EventThread.run(Unknown Source)@0x52379542
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.14.blockedObjectId=null
+td.0.14.blockerId=null
+td.0.14.condition=prio=5 id=0x780 pid=13202 active, native_waiting, daemon
+td.0.14.header="[JRockit] GCEventThread" prio=5 id=0x780 pid=13202 active, native_waiting, daemon
+td.0.14.id=0x780
+td.0.14.name=[JRockit] GCEventThread
+td.0.14.isBlocked=false
+td.0.14.isDaemon=true
+td.0.14.isDeadLocked=false
+td.0.14.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" prio=5 id=0x800 pid=13203 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44972910[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44972910[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.15.blockedObjectId=null
+td.0.15.blockerId=null
+td.0.15.condition=prio=5 id=0x800 pid=13203 waiting, daemon
+td.0.15.header="ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" prio=5 id=0x800 pid=13203 waiting, daemon
+td.0.15.id=0x800
+td.0.15.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
+td.0.15.isBlocked=false
+td.0.15.isDaemon=true
+td.0.15.isDeadLocked=false
+td.0.15.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" prio=5 id=0x880 pid=13204 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44972ff0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44972ff0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.16.blockedObjectId=null
+td.0.16.blockerId=null
+td.0.16.condition=prio=5 id=0x880 pid=13204 waiting, daemon
+td.0.16.header="ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" prio=5 id=0x880 pid=13204 waiting, daemon
+td.0.16.id=0x880
+td.0.16.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
+td.0.16.isBlocked=false
+td.0.16.isDaemon=true
+td.0.16.isDeadLocked=false
+td.0.16.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" prio=5 id=0x900 pid=13205 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449734e8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449734e8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.17.blockedObjectId=null
+td.0.17.blockerId=null
+td.0.17.condition=prio=5 id=0x900 pid=13205 waiting, daemon
+td.0.17.header="ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" prio=5 id=0x900 pid=13205 waiting, daemon
+td.0.17.id=0x900
+td.0.17.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
+td.0.17.isBlocked=false
+td.0.17.isDaemon=true
+td.0.17.isDeadLocked=false
+td.0.17.isIdle=true
+
+#"ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" prio=5 id=0x980 pid=13206 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449739e0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449739e0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.18.blockedObjectId=null
+td.0.18.blockerId=null
+td.0.18.condition=prio=5 id=0x980 pid=13206 waiting, daemon
+td.0.18.header="ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" prio=5 id=0x980 pid=13206 waiting, daemon
+td.0.18.id=0x980
+td.0.18.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
+td.0.18.isBlocked=false
+td.0.18.isDaemon=true
+td.0.18.isDeadLocked=false
+td.0.18.isIdle=true
+
+#"ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa00 pid=13207 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44973ed8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44973ed8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.19.blockedObjectId=null
+td.0.19.blockerId=null
+td.0.19.condition=prio=5 id=0xa00 pid=13207 waiting, daemon
+td.0.19.header="ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa00 pid=13207 waiting, daemon
+td.0.19.id=0xa00
+td.0.19.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
+td.0.19.isBlocked=false
+td.0.19.isDaemon=true
+td.0.19.isDeadLocked=false
+td.0.19.isIdle=true
+
+#"ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa80 pid=13208 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449743d0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449743d0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.20.blockedObjectId=null
+td.0.20.blockerId=null
+td.0.20.condition=prio=5 id=0xa80 pid=13208 waiting, daemon
+td.0.20.header="ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa80 pid=13208 waiting, daemon
+td.0.20.id=0xa80
+td.0.20.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
+td.0.20.isBlocked=false
+td.0.20.isDaemon=true
+td.0.20.isDeadLocked=false
+td.0.20.isIdle=true
+
+#"ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb00 pid=13209 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449748c8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449748c8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.21.blockedObjectId=null
+td.0.21.blockerId=null
+td.0.21.condition=prio=5 id=0xb00 pid=13209 waiting, daemon
+td.0.21.header="ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb00 pid=13209 waiting, daemon
+td.0.21.id=0xb00
+td.0.21.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
+td.0.21.isBlocked=false
+td.0.21.isDaemon=true
+td.0.21.isDeadLocked=false
+td.0.21.isIdle=true
+
+#"ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb80 pid=13210 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44974dc0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44974dc0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.22.blockedObjectId=null
+td.0.22.blockerId=null
+td.0.22.condition=prio=5 id=0xb80 pid=13210 waiting, daemon
+td.0.22.header="ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb80 pid=13210 waiting, daemon
+td.0.22.id=0xb80
+td.0.22.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
+td.0.22.isBlocked=false
+td.0.22.isDaemon=true
+td.0.22.isDeadLocked=false
+td.0.22.isIdle=true
+
+#"ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc00 pid=13211 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449752b8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449752b8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.23.blockedObjectId=null
+td.0.23.blockerId=null
+td.0.23.condition=prio=5 id=0xc00 pid=13211 waiting, daemon
+td.0.23.header="ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc00 pid=13211 waiting, daemon
+td.0.23.id=0xc00
+td.0.23.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
+td.0.23.isBlocked=false
+td.0.23.isDaemon=true
+td.0.23.isDeadLocked=false
+td.0.23.isIdle=true
+
+#"ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc80 pid=13212 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44975800[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44975800[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.24.blockedObjectId=null
+td.0.24.blockerId=null
+td.0.24.condition=prio=5 id=0xc80 pid=13212 waiting, daemon
+td.0.24.header="ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc80 pid=13212 waiting, daemon
+td.0.24.id=0xc80
+td.0.24.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
+td.0.24.isBlocked=false
+td.0.24.isDaemon=true
+td.0.24.isDeadLocked=false
+td.0.24.isIdle=true
+
+#"ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd00 pid=13213 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44975cf8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44975cf8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.25.blockedObjectId=null
+td.0.25.blockerId=null
+td.0.25.condition=prio=5 id=0xd00 pid=13213 waiting, daemon
+td.0.25.header="ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd00 pid=13213 waiting, daemon
+td.0.25.id=0xd00
+td.0.25.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
+td.0.25.isBlocked=false
+td.0.25.isDaemon=true
+td.0.25.isDeadLocked=false
+td.0.25.isIdle=true
+
+#"ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd80 pid=13214 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449761f0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449761f0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.26.blockedObjectId=null
+td.0.26.blockerId=null
+td.0.26.condition=prio=5 id=0xd80 pid=13214 waiting, daemon
+td.0.26.header="ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd80 pid=13214 waiting, daemon
+td.0.26.id=0xd80
+td.0.26.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
+td.0.26.isBlocked=false
+td.0.26.isDaemon=true
+td.0.26.isDeadLocked=false
+td.0.26.isIdle=true
+
+#"ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe00 pid=13215 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449766e8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449766e8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.27.blockedObjectId=null
+td.0.27.blockerId=null
+td.0.27.condition=prio=5 id=0xe00 pid=13215 waiting, daemon
+td.0.27.header="ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe00 pid=13215 waiting, daemon
+td.0.27.id=0xe00
+td.0.27.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
+td.0.27.isBlocked=false
+td.0.27.isDaemon=true
+td.0.27.isDeadLocked=false
+td.0.27.isIdle=true
+
+#"ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe80 pid=13216 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44976be0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44976be0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.28.blockedObjectId=null
+td.0.28.blockerId=null
+td.0.28.condition=prio=5 id=0xe80 pid=13216 waiting, daemon
+td.0.28.header="ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe80 pid=13216 waiting, daemon
+td.0.28.id=0xe80
+td.0.28.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
+td.0.28.isBlocked=false
+td.0.28.isDaemon=true
+td.0.28.isDeadLocked=false
+td.0.28.isIdle=true
+
+#"ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" prio=5 id=0xf00 pid=13217 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449770d8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449770d8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.29.blockedObjectId=null
+td.0.29.blockerId=null
+td.0.29.condition=prio=5 id=0xf00 pid=13217 waiting, daemon
+td.0.29.header="ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" prio=5 id=0xf00 pid=13217 waiting, daemon
+td.0.29.id=0xf00
+td.0.29.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
+td.0.29.isBlocked=false
+td.0.29.isDaemon=true
+td.0.29.isDeadLocked=false
+td.0.29.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.kernel.System'" prio=5 id=0xf80 pid=13218 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449783c0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449783c0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.30.blockedObjectId=null
+td.0.30.blockerId=null
+td.0.30.condition=prio=5 id=0xf80 pid=13218 waiting, daemon
+td.0.30.header="ExecuteThread: '0' for queue: 'weblogic.kernel.System'" prio=5 id=0xf80 pid=13218 waiting, daemon
+td.0.30.id=0xf80
+td.0.30.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
+td.0.30.isBlocked=false
+td.0.30.isDaemon=true
+td.0.30.isDeadLocked=false
+td.0.30.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.kernel.System'" prio=5 id=0x1000 pid=13219 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44978900[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44978900[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.31.blockedObjectId=null
+td.0.31.blockerId=null
+td.0.31.condition=prio=5 id=0x1000 pid=13219 waiting, daemon
+td.0.31.header="ExecuteThread: '1' for queue: 'weblogic.kernel.System'" prio=5 id=0x1000 pid=13219 waiting, daemon
+td.0.31.id=0x1000
+td.0.31.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
+td.0.31.isBlocked=false
+td.0.31.isDaemon=true
+td.0.31.isDeadLocked=false
+td.0.31.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.kernel.System'" prio=5 id=0x1080 pid=13220 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44978e40[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44978e40[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.32.blockedObjectId=null
+td.0.32.blockerId=null
+td.0.32.condition=prio=5 id=0x1080 pid=13220 waiting, daemon
+td.0.32.header="ExecuteThread: '2' for queue: 'weblogic.kernel.System'" prio=5 id=0x1080 pid=13220 waiting, daemon
+td.0.32.id=0x1080
+td.0.32.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
+td.0.32.isBlocked=false
+td.0.32.isDaemon=true
+td.0.32.isDeadLocked=false
+td.0.32.isIdle=true
+
+#"ExecuteThread: '3' for queue: 'weblogic.kernel.System'" prio=5 id=0x1100 pid=13221 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44979380[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44979380[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.33.blockedObjectId=null
+td.0.33.blockerId=null
+td.0.33.condition=prio=5 id=0x1100 pid=13221 waiting, daemon
+td.0.33.header="ExecuteThread: '3' for queue: 'weblogic.kernel.System'" prio=5 id=0x1100 pid=13221 waiting, daemon
+td.0.33.id=0x1100
+td.0.33.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
+td.0.33.isBlocked=false
+td.0.33.isDaemon=true
+td.0.33.isDeadLocked=false
+td.0.33.isIdle=true
+
+#"ExecuteThread: '4' for queue: 'weblogic.kernel.System'" prio=5 id=0x1180 pid=13222 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449798c0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449798c0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.34.blockedObjectId=null
+td.0.34.blockerId=null
+td.0.34.condition=prio=5 id=0x1180 pid=13222 waiting, daemon
+td.0.34.header="ExecuteThread: '4' for queue: 'weblogic.kernel.System'" prio=5 id=0x1180 pid=13222 waiting, daemon
+td.0.34.id=0x1180
+td.0.34.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
+td.0.34.isBlocked=false
+td.0.34.isDaemon=true
+td.0.34.isDeadLocked=false
+td.0.34.isIdle=true
+
+#"weblogic.time.TimeEventGenerator" prio=9 id=0x1200 pid=13223 waiting, daemon
+#   -- Waiting for notification on: weblogic/time/common/internal/TimeTable@0x4497a408[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at weblogic/time/common/internal/TimeTable.snooze(TimeTable.java:271)@0x52cf258d
+#   ^-- Lock released while waiting: weblogic/time/common/internal/TimeTable@0x4497a408[fat lock]
+#   at weblogic/time/common/internal/TimeEventGenerator.run(TimeEventGenerator.java:118)@0x52cf2174
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.35.blockedObjectId=null
+td.0.35.blockerId=null
+td.0.35.condition=prio=9 id=0x1200 pid=13223 waiting, daemon
+td.0.35.header="weblogic.time.TimeEventGenerator" prio=9 id=0x1200 pid=13223 waiting, daemon
+td.0.35.id=0x1200
+td.0.35.name=weblogic.time.TimeEventGenerator
+td.0.35.isBlocked=false
+td.0.35.isDaemon=true
+td.0.35.isDeadLocked=false
+td.0.35.isIdle=true
+
+#"weblogic.security.SpinnerRandomSource" prio=5 id=0x1280 pid=13224 waiting, daemon
+#   -- Waiting for notification on: java/lang/Object@0x4497dc00[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/security/SpinnerRandomBitsSource.run(SpinnerRandomBitsSource.java:60)@0x52cf7575
+#   ^-- Lock released while waiting: java/lang/Object@0x4497dc00[fat lock]
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.36.blockedObjectId=null
+td.0.36.blockerId=null
+td.0.36.condition=prio=5 id=0x1280 pid=13224 waiting, daemon
+td.0.36.header="weblogic.security.SpinnerRandomSource" prio=5 id=0x1280 pid=13224 waiting, daemon
+td.0.36.id=0x1280
+td.0.36.name=weblogic.security.SpinnerRandomSource
+td.0.36.isBlocked=false
+td.0.36.isDaemon=true
+td.0.36.isDeadLocked=false
+td.0.36.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1300 pid=13225 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44a87ac0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44a87ac0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.37.blockedObjectId=null
+td.0.37.blockerId=null
+td.0.37.condition=prio=5 id=0x1300 pid=13225 waiting, daemon
+td.0.37.header="ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1300 pid=13225 waiting, daemon
+td.0.37.id=0x1300
+td.0.37.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
+td.0.37.isBlocked=false
+td.0.37.isDaemon=true
+td.0.37.isDeadLocked=false
+td.0.37.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1380 pid=13226 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44a88018[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44a88018[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.38.blockedObjectId=null
+td.0.38.blockerId=null
+td.0.38.condition=prio=5 id=0x1380 pid=13226 waiting, daemon
+td.0.38.header="ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1380 pid=13226 waiting, daemon
+td.0.38.id=0x1380
+td.0.38.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
+td.0.38.isBlocked=false
+td.0.38.isDaemon=true
+td.0.38.isDeadLocked=false
+td.0.38.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1400 pid=13227 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x453400d8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x453400d8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.39.blockedObjectId=null
+td.0.39.blockerId=null
+td.0.39.condition=prio=5 id=0x1400 pid=13227 waiting, daemon
+td.0.39.header="ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1400 pid=13227 waiting, daemon
+td.0.39.id=0x1400
+td.0.39.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
+td.0.39.isBlocked=false
+td.0.39.isDaemon=true
+td.0.39.isDeadLocked=false
+td.0.39.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1480 pid=13228 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x45340630[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x45340630[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.40.blockedObjectId=null
+td.0.40.blockerId=null
+td.0.40.condition=prio=5 id=0x1480 pid=13228 waiting, daemon
+td.0.40.header="ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1480 pid=13228 waiting, daemon
+td.0.40.id=0x1480
+td.0.40.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
+td.0.40.isBlocked=false
+td.0.40.isDaemon=true
+td.0.40.isDeadLocked=false
+td.0.40.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1500 pid=13229 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x45340b68[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x45340b68[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.41.blockedObjectId=null
+td.0.41.blockerId=null
+td.0.41.condition=prio=5 id=0x1500 pid=13229 waiting, daemon
+td.0.41.header="ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1500 pid=13229 waiting, daemon
+td.0.41.id=0x1500
+td.0.41.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
+td.0.41.isBlocked=false
+td.0.41.isDaemon=true
+td.0.41.isDeadLocked=false
+td.0.41.isIdle=true
+
+#"VDE Transaction Processor Thread" prio=2 id=0x1580 pid=13230 waiting
+#   -- Waiting for notification on: com/octetstring/vde/backend/standard/TransactionProcessor@0x44a006f0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at com/octetstring/vde/backend/standard/TransactionProcessor.waitChange(TransactionProcessor.java:356)@0x5320c1a5
+#   ^-- Lock released while waiting: com/octetstring/vde/backend/standard/TransactionProcessor@0x44a006f0[fat lock]
+#   at com/octetstring/vde/backend/standard/TransactionProcessor.run(TransactionProcessor.java:212)@0x5320b83d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.42.blockedObjectId=null
+td.0.42.blockerId=null
+td.0.42.condition=prio=2 id=0x1580 pid=13230 waiting
+td.0.42.header="VDE Transaction Processor Thread" prio=2 id=0x1580 pid=13230 waiting
+td.0.42.id=0x1580
+td.0.42.name=VDE Transaction Processor Thread
+td.0.42.isBlocked=false
+td.0.42.isDaemon=false
+td.0.42.isDeadLocked=false
+td.0.42.isIdle=true
+
+#"VDE Replication Thread" prio=5 id=0x1600 pid=13231 waiting
+#   -- Waiting for notification on: com/octetstring/vde/replication/Replication@0x453c6750[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at com/octetstring/vde/replication/Replication.wait30sec(Replication.java:395)@0x5333445e
+#   ^-- Lock released while waiting: com/octetstring/vde/replication/Replication@0x453c6750[fat lock]
+#   at com/octetstring/vde/replication/Replication.run(Replication.java:365)@0x5333275a
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.43.blockedObjectId=null
+td.0.43.blockerId=null
+td.0.43.condition=prio=5 id=0x1600 pid=13231 waiting
+td.0.43.header="VDE Replication Thread" prio=5 id=0x1600 pid=13231 waiting
+td.0.43.id=0x1600
+td.0.43.name=VDE Replication Thread
+td.0.43.isBlocked=false
+td.0.43.isDaemon=false
+td.0.43.isDeadLocked=false
+td.0.43.isIdle=true
+
+#"Thread-4" prio=5 id=0x1680 pid=13233 waiting
+#   -- Waiting for notification on: java/util/TaskQueue@0x467e93e0[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/util/TimerThread.mainLoop(Timer.java:429)@0x5337eae3
+#   ^-- Lock released while waiting: java/util/TaskQueue@0x467e93e0[fat lock]
+#   at java/util/TimerThread.run(Timer.java:382)@0x5337e8e2
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.44.blockedObjectId=null
+td.0.44.blockerId=null
+td.0.44.condition=prio=5 id=0x1680 pid=13233 waiting
+td.0.44.header="Thread-4" prio=5 id=0x1680 pid=13233 waiting
+td.0.44.id=0x1680
+td.0.44.name=Thread-4
+td.0.44.isBlocked=false
+td.0.44.isDaemon=false
+td.0.44.isDeadLocked=false
+td.0.44.isIdle=true
+
+#"weblogic.health.CoreHealthMonitor" prio=5 id=0x1700 pid=13234 waiting, daemon
+#   -- Waiting for notification on: java/lang/Object@0x468703b8[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+#   ^-- Lock released while waiting: java/lang/Object@0x468703b8[fat lock]
+#   at weblogic/t3/srvr/CoreHealthMonitorThread.run(CoreHealthMonitorThread.java:127)@0x5416a964
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.45.blockedObjectId=null
+td.0.45.blockerId=null
+td.0.45.condition=prio=5 id=0x1700 pid=13234 waiting, daemon
+td.0.45.header="weblogic.health.CoreHealthMonitor" prio=5 id=0x1700 pid=13234 waiting, daemon
+td.0.45.id=0x1700
+td.0.45.name=weblogic.health.CoreHealthMonitor
+td.0.45.isBlocked=false
+td.0.45.isDaemon=true
+td.0.45.isDeadLocked=false
+td.0.45.isIdle=true
+
+#"SNMP Service Thread" prio=5 id=0x1780 pid=13235 waiting
+#   -- Waiting for notification on: java/lang/Object@0x436f5188[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+#   ^-- Lock released while waiting: java/lang/Object@0x436f5188[fat lock]
+#   at weblogic/management/snmp/agent/WlsSnmpAgent.mainLoopHandler(WlsSnmpAgent.java:649)@0x54fd1057
+#   at weblogic/management/snmp/agent/WlsSnmpAgent.startAgent(WlsSnmpAgent.java:357)@0x54cd8538
+#   at weblogic/management/snmp/SNMPService$SNMPMain.run(SNMPService.java:16)@0x54cd8105
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.46.blockedObjectId=null
+td.0.46.blockerId=null
+td.0.46.condition=prio=5 id=0x1780 pid=13235 waiting
+td.0.46.header="SNMP Service Thread" prio=5 id=0x1780 pid=13235 waiting
+td.0.46.id=0x1780
+td.0.46.name=SNMP Service Thread
+td.0.46.isBlocked=false
+td.0.46.isDaemon=false
+td.0.46.isDeadLocked=false
+td.0.46.isIdle=true
+
+#"Thread-5" prio=5 id=0x1800 pid=13236 waiting
+#   -- Waiting for notification on: java/lang/Object@0x428a1b88[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+#   ^-- Lock released while waiting: java/lang/Object@0x428a1b88[fat lock]
+#   at com/adventnet/snmp/snmp2/SnmpAPI.run(SnmpAPI.java:134)@0x54cdc659
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.47.blockedObjectId=null
+td.0.47.blockerId=null
+td.0.47.condition=prio=5 id=0x1800 pid=13236 waiting
+td.0.47.header="Thread-5" prio=5 id=0x1800 pid=13236 waiting
+td.0.47.id=0x1800
+td.0.47.name=Thread-5
+td.0.47.isBlocked=false
+td.0.47.isDaemon=false
+td.0.47.isDeadLocked=false
+td.0.47.isIdle=true
+
+#"Thread-10" prio=5 id=0x1880 pid=13243 active
+#   at jrockit/net/SocketNativeIO.receive(Native Method)@0x53e9bec0
+#   at jrockit/net/SocketNativeIO.receive(Unknown Source)@0x53e9bff0
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9beb0
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bdcd
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bd97
+#   at java/net/DatagramSocket.receive(Unknown Source)@0x53e9bcf2
+#   ^-- Holding lock: java/net/DatagramPacket@0x4218e9c0[thin lock]
+#   ^-- Holding lock: java/net/DatagramSocket@0x422c6b68[thin lock]
+#   at com/adventnet/snmp/snmp2/IpTSocket.receive(IpTSocket.java:30)@0x54cde28f
+#   ^-- Holding lock: com/adventnet/snmp/snmp2/IpTSocket@0x422c6b58[thin lock]
+#   at com/adventnet/snmp/snmp2/SnmpSession.receiver(SnmpSession.java:1530)@0x54cdd817
+#   at com/adventnet/snmp/snmp2/SnmpSession.run(SnmpSession.java:653)@0x54cdd72e
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.48.blockedObjectId=null
+td.0.48.blockerId=null
+td.0.48.condition=prio=5 id=0x1880 pid=13243 active
+td.0.48.header="Thread-10" prio=5 id=0x1880 pid=13243 active
+td.0.48.id=0x1880
+td.0.48.name=Thread-10
+td.0.48.isBlocked=false
+td.0.48.isDaemon=false
+td.0.48.isDeadLocked=false
+td.0.48.isIdle=false
+
+#"Thread-7" prio=5 id=0x1900 pid=13238 active
+#   at jrockit/net/SocketNativeIO.receive(Native Method)@0x53e9bec0
+#   at jrockit/net/SocketNativeIO.receive(Unknown Source)@0x53e9bff0
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9beb0
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bdcd
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bd97
+#   at java/net/DatagramSocket.receive(Unknown Source)@0x53e9bcf2
+#   ^-- Holding lock: java/net/DatagramSocket@0x4276d038[thin lock]
+#   ^-- Holding lock: java/net/DatagramPacket@0x428a2398[thin lock]
+#   at com/adventnet/snmp/snmp2/IpTSocket.receive(IpTSocket.java:30)@0x54cde28f
+#   ^-- Holding lock: com/adventnet/snmp/snmp2/IpTSocket@0x4276d028[thin lock]
+#   at com/adventnet/snmp/snmp2/SnmpSession.receiver(SnmpSession.java:1530)@0x54cdd817
+#   at com/adventnet/snmp/snmp2/SnmpSession.run(SnmpSession.java:653)@0x54cdd72e
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.49.blockedObjectId=null
+td.0.49.blockerId=null
+td.0.49.condition=prio=5 id=0x1900 pid=13238 active
+td.0.49.header="Thread-7" prio=5 id=0x1900 pid=13238 active
+td.0.49.id=0x1900
+td.0.49.name=Thread-7
+td.0.49.isBlocked=false
+td.0.49.isDaemon=false
+td.0.49.isDeadLocked=false
+td.0.49.isIdle=false
+
+#"ListenThread.Default" prio=5 id=0x1980 pid=13245 active
+#   at jrockit/net/SocketNativeIO.accept(Native Method)@0x40de0310
+#   at jrockit/net/SocketNativeIO.accept(Unknown Source)@0x40de03db
+#   at java/net/AbstractSocketImpl.accept(Unknown Source)@0x40de0213
+#   ^-- Holding lock: java/net/PlainSocketImpl@0x435a5450[thin lock]
+#   at java/net/ServerSocket.implAccept(ServerSocket.java:448)@0x40de00fc
+#   at java/net/ServerSocket.accept(ServerSocket.java:419)@0x40d8ff4c
+#   at weblogic/socket/WeblogicServerSocket.accept(WeblogicServerSocket.java:24)@0x55655737
+#   at weblogic/t3/srvr/ListenThread.accept(ListenThread.java:739)@0x55655717
+#   at weblogic/t3/srvr/ListenThread.run(ListenThread.java:292)@0x55653430
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.50.blockedObjectId=null
+td.0.50.blockerId=null
+td.0.50.condition=prio=5 id=0x1980 pid=13245 active
+td.0.50.header="ListenThread.Default" prio=5 id=0x1980 pid=13245 active
+td.0.50.id=0x1980
+td.0.50.name=ListenThread.Default
+td.0.50.isBlocked=false
+td.0.50.isDaemon=false
+td.0.50.isDeadLocked=false
+td.0.50.isIdle=false
+
+#"ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" prio=5 id=0x1a00 pid=13242 waiting, daemon
+#   -- Waiting for notification on: weblogic/jms/backend/BETimerTree@0x4260e298[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at weblogic/jms/backend/BETimerTree.execute(BETimerTree.java:146)@0x550daa6a
+#   ^-- Lock released while waiting: weblogic/jms/backend/BETimerTree@0x4260e298[fat lock]
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.51.blockedObjectId=null
+td.0.51.blockerId=null
+td.0.51.condition=prio=5 id=0x1a00 pid=13242 waiting, daemon
+td.0.51.header="ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" prio=5 id=0x1a00 pid=13242 waiting, daemon
+td.0.51.id=0x1a00
+td.0.51.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
+td.0.51.isBlocked=false
+td.0.51.isDaemon=true
+td.0.51.isDeadLocked=false
+td.0.51.isIdle=true
+
+#"Thread-11" prio=5 id=0x1a80 pid=13244 waiting, daemon
+#   -- Waiting for notification on: java/util/TaskQueue@0x43630928[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/util/TimerThread.mainLoop(Timer.java:429)@0x5337eae3
+#   ^-- Lock released while waiting: java/util/TaskQueue@0x43630928[fat lock]
+#   at java/util/TimerThread.run(Timer.java:382)@0x5337e8e2
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.52.blockedObjectId=null
+td.0.52.blockerId=null
+td.0.52.condition=prio=5 id=0x1a80 pid=13244 waiting, daemon
+td.0.52.header="Thread-11" prio=5 id=0x1a80 pid=13244 waiting, daemon
+td.0.52.id=0x1a80
+td.0.52.name=Thread-11
+td.0.52.isBlocked=false
+td.0.52.isDaemon=true
+td.0.52.isDeadLocked=false
+td.0.52.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b00 pid=13246 waiting, daemon
+#   -- Waiting for notification on: [Lweblogic/socket/PosixSocketInfo$FdStruct;@0x43fe3438[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:95)@0x55654f27
+#   ^-- Holding lock: java/lang/String@0x435f6908[fat lock]
+#   ^-- Lock released while waiting: [Lweblogic/socket/PosixSocketInfo$FdStruct;@0x43fe3438[fat lock]
+#   at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.53.blockedObjectId=null
+td.0.53.blockerId=null
+td.0.53.condition=prio=5 id=0x1b00 pid=13246 waiting, daemon
+td.0.53.header="ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b00 pid=13246 waiting, daemon
+td.0.53.id=0x1b00
+td.0.53.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
+td.0.53.isBlocked=false
+td.0.53.isDaemon=true
+td.0.53.isDeadLocked=false
+td.0.53.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b80 pid=13247 blocked, daemon
+#   -- Blocked trying to get lock: java/lang/String@0x435f6908[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.lockFat(Unknown Source)@0x40d02376
+#   at jrockit/vm/Locks.monitorEnterSlowCase(Unknown Source)@0x52377257
+#   at jrockit/vm/Locks.monitorEnter(Native Method)@0x40d00fc3
+#   at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:91)@0x55654efc
+#   at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.54.blockedObjectId=0x435f6908
+td.0.54.blockerId=0x1b00
+td.0.54.condition=prio=5 id=0x1b80 pid=13247 blocked, daemon
+td.0.54.header="ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b80 pid=13247 blocked, daemon
+td.0.54.id=0x1b80
+td.0.54.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
+td.0.54.isBlocked=true
+td.0.54.isDaemon=true
+td.0.54.isDeadLocked=false
+td.0.54.isIdle=false
+
+#"ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1c00 pid=13248 blocked, daemon
+#   -- Blocked trying to get lock: java/lang/String@0x435f6908[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.raceForTheFatLock(Unknown Source)@0x40d0228c
+#   at jrockit/vm/Locks.lockFat(Unknown Source)@0x40d02385
+#   at jrockit/vm/Locks.monitorEnterSlowCase(Unknown Source)@0x52377257
+#   at jrockit/vm/Locks.monitorEnter(Native Method)@0x40d00fc3
+#   at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:91)@0x55654efc
+#   at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.55.blockedObjectId=0x435f6908
+td.0.55.blockerId=0x1b00
+td.0.55.condition=prio=5 id=0x1c00 pid=13248 blocked, daemon
+td.0.55.header="ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1c00 pid=13248 blocked, daemon
+td.0.55.id=0x1c00
+td.0.55.name=ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'
+td.0.55.isBlocked=true
+td.0.55.isDaemon=true
+td.0.55.isDeadLocked=false
+td.0.55.isIdle=false
+
+#"ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" prio=5 id=0x1c80 pid=13273 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb3a18[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb3a18[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.0.56.blockedObjectId=null
+td.0.56.blockerId=null
+td.0.56.condition=prio=5 id=0x1c80 pid=13273 waiting, daemon
+td.0.56.header="ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" prio=5 id=0x1c80 pid=13273 waiting, daemon
+td.0.56.id=0x1c80
+td.0.56.name=ExecuteThread: '3' for queue: 'JMS.TimerClientPool'
+td.0.56.isBlocked=false
+td.0.56.isDaemon=true
+td.0.56.isDeadLocked=false
+td.0.56.isIdle=true
+
+ftd.1.deadLockSize=0
+ftd.1.threadCount=60
+#"Main Thread" prio=5 id=0x80 pid=13184 waiting
+#   -- Waiting for notification on: weblogic/t3/srvr/T3Srvr@0x4286c608[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/t3/srvr/T3Srvr.waitForDeath(T3Srvr.java:1170)@0x55a1c074
+#   ^-- Lock released while waiting: weblogic/t3/srvr/T3Srvr@0x4286c608[fat lock]
+#   at weblogic/t3/srvr/T3Srvr.run(T3Srvr.java:384)@0x40dc2066
+#   at weblogic/Server.main(Server.java:32)@0x40dc1dd2
+#   --- End of stack trace
+td.1.0.blockedObjectId=null
+td.1.0.blockerId=null
+td.1.0.condition=prio=5 id=0x80 pid=13184 waiting
+td.1.0.header="Main Thread" prio=5 id=0x80 pid=13184 waiting
+td.1.0.id=0x80
+td.1.0.name=Main Thread
+td.1.0.isBlocked=false
+td.1.0.isDaemon=false
+td.1.0.isDeadLocked=false
+td.1.0.isIdle=true
+
+#"(Signal Handler)" prio=5 id=0x100 pid=13186 active, daemon
+td.1.1.blockedObjectId=null
+td.1.1.blockerId=null
+td.1.1.condition=prio=5 id=0x100 pid=13186 active, daemon
+td.1.1.header="(Signal Handler)" prio=5 id=0x100 pid=13186 active, daemon
+td.1.1.id=0x100
+td.1.1.name=(Signal Handler)
+td.1.1.isBlocked=false
+td.1.1.isDaemon=true
+td.1.1.isDeadLocked=false
+td.1.1.isIdle=false
+
+#"(Code Generation Thread 1)" prio=5 id=0x180 pid=13187 active, native_waiting, daemon
+td.1.2.blockedObjectId=null
+td.1.2.blockerId=null
+td.1.2.condition=prio=5 id=0x180 pid=13187 active, native_waiting, daemon
+td.1.2.header="(Code Generation Thread 1)" prio=5 id=0x180 pid=13187 active, native_waiting, daemon
+td.1.2.id=0x180
+td.1.2.name=(Code Generation Thread 1)
+td.1.2.isBlocked=false
+td.1.2.isDaemon=true
+td.1.2.isDeadLocked=false
+td.1.2.isIdle=true
+
+#"(Code Optimization Thread 1)" prio=5 id=0x200 pid=13188 active, native_waiting, daemon
+td.1.3.blockedObjectId=null
+td.1.3.blockerId=null
+td.1.3.condition=prio=5 id=0x200 pid=13188 active, native_waiting, daemon
+td.1.3.header="(Code Optimization Thread 1)" prio=5 id=0x200 pid=13188 active, native_waiting, daemon
+td.1.3.id=0x200
+td.1.3.name=(Code Optimization Thread 1)
+td.1.3.isBlocked=false
+td.1.3.isDaemon=true
+td.1.3.isDeadLocked=false
+td.1.3.isIdle=true
+
+#"(GC Main Thread)" prio=5 id=0x280 pid=13189 active, daemon
+td.1.4.blockedObjectId=null
+td.1.4.blockerId=null
+td.1.4.condition=prio=5 id=0x280 pid=13189 active, daemon
+td.1.4.header="(GC Main Thread)" prio=5 id=0x280 pid=13189 active, daemon
+td.1.4.id=0x280
+td.1.4.name=(GC Main Thread)
+td.1.4.isBlocked=false
+td.1.4.isDaemon=true
+td.1.4.isDeadLocked=false
+td.1.4.isIdle=false
+
+#"(GC Worker Thread 1)" prio=5 id=0x300 pid=13190 active, native_waiting, daemon
+td.1.5.blockedObjectId=null
+td.1.5.blockerId=null
+td.1.5.condition=prio=5 id=0x300 pid=13190 active, native_waiting, daemon
+td.1.5.header="(GC Worker Thread 1)" prio=5 id=0x300 pid=13190 active, native_waiting, daemon
+td.1.5.id=0x300
+td.1.5.name=(GC Worker Thread 1)
+td.1.5.isBlocked=false
+td.1.5.isDaemon=true
+td.1.5.isDeadLocked=false
+td.1.5.isIdle=true
+
+#"Finalizer" prio=8 id=0x380 pid=13191 waiting, daemon
+#   -- Waiting for notification on: java/lang/ref/ReferenceQueue$Lock@0x42447800[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03ce1
+#   at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@0x40d09661
+#   ^-- Lock released while waiting: java/lang/ref/ReferenceQueue$Lock@0x42447800[fat lock]
+#   at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@0x40d0949c
+#   at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@0x40d05b43
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.6.blockedObjectId=null
+td.1.6.blockerId=null
+td.1.6.condition=prio=8 id=0x380 pid=13191 waiting, daemon
+td.1.6.header="Finalizer" prio=8 id=0x380 pid=13191 waiting, daemon
+td.1.6.id=0x380
+td.1.6.name=Finalizer
+td.1.6.isBlocked=false
+td.1.6.isDaemon=true
+td.1.6.isDeadLocked=false
+td.1.6.isIdle=true
+
+#"Reference Handler" prio=10 id=0x400 pid=13192 waiting for pending references, daemon
+#   at java/lang/ref/Reference.getPending(Native Method)@0x40d60e80
+#   at java/lang/ref/Reference.access$000(Unknown Source)@0x40d60ef5
+#   at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@0x40d60df0
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.7.blockedObjectId=null
+td.1.7.blockerId=null
+td.1.7.condition=prio=10 id=0x400 pid=13192 waiting for pending references, daemon
+td.1.7.header="Reference Handler" prio=10 id=0x400 pid=13192 waiting for pending references, daemon
+td.1.7.id=0x400
+td.1.7.name=Reference Handler
+td.1.7.isBlocked=false
+td.1.7.isDaemon=true
+td.1.7.isDeadLocked=false
+td.1.7.isIdle=false
+
+#"[JRockit] Connection Listener" prio=5 id=0x480 pid=13194 active, daemon
+#   at jrockit/net/SocketNativeIO.accept(Native Method)@0x40de0310
+#   at jrockit/net/SocketNativeIO.accept(Unknown Source)@0x40de03db
+#   at java/net/AbstractSocketImpl.accept(Unknown Source)@0x40de0213
+#   ^-- Holding lock: java/net/PlainSocketImpl@0x42496d08[thin lock]
+#   at java/net/ServerSocket.implAccept(ServerSocket.java:448)@0x40de00fc
+#   at java/net/ServerSocket.accept(ServerSocket.java:419)@0x40d8ff4c
+#   at com/jrockit/management/rmp/RmpSocketListener.run(RmpSocketListener.java:170)@0x40dc1a7a
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.8.blockedObjectId=null
+td.1.8.blockerId=null
+td.1.8.condition=prio=5 id=0x480 pid=13194 active, daemon
+td.1.8.header="[JRockit] Connection Listener" prio=5 id=0x480 pid=13194 active, daemon
+td.1.8.id=0x480
+td.1.8.name=[JRockit] Connection Listener
+td.1.8.isBlocked=false
+td.1.8.isDaemon=true
+td.1.8.isDeadLocked=false
+td.1.8.isIdle=false
+
+#"(Hotspot Detector)" prio=10 id=0x500 pid=13195 active, daemon
+td.1.9.blockedObjectId=null
+td.1.9.blockerId=null
+td.1.9.condition=prio=10 id=0x500 pid=13195 active, daemon
+td.1.9.header="(Hotspot Detector)" prio=10 id=0x500 pid=13195 active, daemon
+td.1.9.id=0x500
+td.1.9.name=(Hotspot Detector)
+td.1.9.isBlocked=false
+td.1.9.isDaemon=true
+td.1.9.isDeadLocked=false
+td.1.9.isIdle=false
+
+#"ExecuteThread: '0' for queue: 'JMS.TimerClientPool'" prio=5 id=0x580 pid=13270 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb9db0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb9db0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.10.blockedObjectId=null
+td.1.10.blockerId=null
+td.1.10.condition=prio=5 id=0x580 pid=13270 waiting, daemon
+td.1.10.header="ExecuteThread: '0' for queue: 'JMS.TimerClientPool'" prio=5 id=0x580 pid=13270 waiting, daemon
+td.1.10.id=0x580
+td.1.10.name=ExecuteThread: '0' for queue: 'JMS.TimerClientPool'
+td.1.10.isBlocked=false
+td.1.10.isDaemon=true
+td.1.10.isDeadLocked=false
+td.1.10.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'JMS.TimerClientPool'" prio=5 id=0x600 pid=13271 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb2990[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb2990[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.11.blockedObjectId=null
+td.1.11.blockerId=null
+td.1.11.condition=prio=5 id=0x600 pid=13271 waiting, daemon
+td.1.11.header="ExecuteThread: '1' for queue: 'JMS.TimerClientPool'" prio=5 id=0x600 pid=13271 waiting, daemon
+td.1.11.id=0x600
+td.1.11.name=ExecuteThread: '1' for queue: 'JMS.TimerClientPool'
+td.1.11.isBlocked=false
+td.1.11.isDaemon=true
+td.1.11.isDeadLocked=false
+td.1.11.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'JMS.TimerClientPool'" prio=5 id=0x680 pid=13272 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb31c0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb31c0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.12.blockedObjectId=null
+td.1.12.blockerId=null
+td.1.12.condition=prio=5 id=0x680 pid=13272 waiting, daemon
+td.1.12.header="ExecuteThread: '2' for queue: 'JMS.TimerClientPool'" prio=5 id=0x680 pid=13272 waiting, daemon
+td.1.12.id=0x680
+td.1.12.name=ExecuteThread: '2' for queue: 'JMS.TimerClientPool'
+td.1.12.isBlocked=false
+td.1.12.isDaemon=true
+td.1.12.isDeadLocked=false
+td.1.12.isIdle=true
+
+#"[JRockit] GCChangeEventThread" prio=5 id=0x700 pid=13201 active, native_waiting, daemon
+#   at jrockit/management/jvm/GCChangeEventProvider.waitForEvent(Native Method)@0x523796b0
+#   at jrockit/management/jvm/GCChangeEventProvider.access$000(Unknown Source)@0x52379725
+#   at jrockit/management/jvm/GCChangeEventProvider$GCChangeEventThread.getNextEvent(Unknown Source)@0x523795de
+#   at jrockit/management/jvm/AsyncEventProvider$EventThread.run(Unknown Source)@0x52379542
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.13.blockedObjectId=null
+td.1.13.blockerId=null
+td.1.13.condition=prio=5 id=0x700 pid=13201 active, native_waiting, daemon
+td.1.13.header="[JRockit] GCChangeEventThread" prio=5 id=0x700 pid=13201 active, native_waiting, daemon
+td.1.13.id=0x700
+td.1.13.name=[JRockit] GCChangeEventThread
+td.1.13.isBlocked=false
+td.1.13.isDaemon=true
+td.1.13.isDeadLocked=false
+td.1.13.isIdle=true
+
+#"[JRockit] GCEventThread" prio=5 id=0x780 pid=13202 active, native_waiting, daemon
+#   at jrockit/management/jvm/GarbageCollectorImpl.waitForEvent(Native Method)@0x523797f0
+#   at jrockit/management/jvm/GarbageCollectorImpl.access$000(Unknown Source)@0x52379865
+#   at jrockit/management/jvm/GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)@0x5237973e
+#   at jrockit/management/jvm/AsyncEventProvider$EventThread.run(Unknown Source)@0x52379542
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.14.blockedObjectId=null
+td.1.14.blockerId=null
+td.1.14.condition=prio=5 id=0x780 pid=13202 active, native_waiting, daemon
+td.1.14.header="[JRockit] GCEventThread" prio=5 id=0x780 pid=13202 active, native_waiting, daemon
+td.1.14.id=0x780
+td.1.14.name=[JRockit] GCEventThread
+td.1.14.isBlocked=false
+td.1.14.isDaemon=true
+td.1.14.isDeadLocked=false
+td.1.14.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" prio=5 id=0x800 pid=13203 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44972910[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44972910[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.15.blockedObjectId=null
+td.1.15.blockerId=null
+td.1.15.condition=prio=5 id=0x800 pid=13203 waiting, daemon
+td.1.15.header="ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" prio=5 id=0x800 pid=13203 waiting, daemon
+td.1.15.id=0x800
+td.1.15.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
+td.1.15.isBlocked=false
+td.1.15.isDaemon=true
+td.1.15.isDeadLocked=false
+td.1.15.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" prio=5 id=0x880 pid=13204 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44972ff0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44972ff0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.16.blockedObjectId=null
+td.1.16.blockerId=null
+td.1.16.condition=prio=5 id=0x880 pid=13204 waiting, daemon
+td.1.16.header="ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" prio=5 id=0x880 pid=13204 waiting, daemon
+td.1.16.id=0x880
+td.1.16.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
+td.1.16.isBlocked=false
+td.1.16.isDaemon=true
+td.1.16.isDeadLocked=false
+td.1.16.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" prio=5 id=0x900 pid=13205 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449734e8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449734e8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.17.blockedObjectId=null
+td.1.17.blockerId=null
+td.1.17.condition=prio=5 id=0x900 pid=13205 waiting, daemon
+td.1.17.header="ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" prio=5 id=0x900 pid=13205 waiting, daemon
+td.1.17.id=0x900
+td.1.17.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
+td.1.17.isBlocked=false
+td.1.17.isDaemon=true
+td.1.17.isDeadLocked=false
+td.1.17.isIdle=true
+
+#"ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" prio=5 id=0x980 pid=13206 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449739e0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449739e0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.18.blockedObjectId=null
+td.1.18.blockerId=null
+td.1.18.condition=prio=5 id=0x980 pid=13206 waiting, daemon
+td.1.18.header="ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" prio=5 id=0x980 pid=13206 waiting, daemon
+td.1.18.id=0x980
+td.1.18.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
+td.1.18.isBlocked=false
+td.1.18.isDaemon=true
+td.1.18.isDeadLocked=false
+td.1.18.isIdle=true
+
+#"ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa00 pid=13207 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44973ed8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44973ed8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.19.blockedObjectId=null
+td.1.19.blockerId=null
+td.1.19.condition=prio=5 id=0xa00 pid=13207 waiting, daemon
+td.1.19.header="ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa00 pid=13207 waiting, daemon
+td.1.19.id=0xa00
+td.1.19.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
+td.1.19.isBlocked=false
+td.1.19.isDaemon=true
+td.1.19.isDeadLocked=false
+td.1.19.isIdle=true
+
+#"ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa80 pid=13208 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449743d0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449743d0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.20.blockedObjectId=null
+td.1.20.blockerId=null
+td.1.20.condition=prio=5 id=0xa80 pid=13208 waiting, daemon
+td.1.20.header="ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa80 pid=13208 waiting, daemon
+td.1.20.id=0xa80
+td.1.20.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
+td.1.20.isBlocked=false
+td.1.20.isDaemon=true
+td.1.20.isDeadLocked=false
+td.1.20.isIdle=true
+
+#"ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb00 pid=13209 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449748c8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449748c8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.21.blockedObjectId=null
+td.1.21.blockerId=null
+td.1.21.condition=prio=5 id=0xb00 pid=13209 waiting, daemon
+td.1.21.header="ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb00 pid=13209 waiting, daemon
+td.1.21.id=0xb00
+td.1.21.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
+td.1.21.isBlocked=false
+td.1.21.isDaemon=true
+td.1.21.isDeadLocked=false
+td.1.21.isIdle=true
+
+#"ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb80 pid=13210 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44974dc0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44974dc0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.22.blockedObjectId=null
+td.1.22.blockerId=null
+td.1.22.condition=prio=5 id=0xb80 pid=13210 waiting, daemon
+td.1.22.header="ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb80 pid=13210 waiting, daemon
+td.1.22.id=0xb80
+td.1.22.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
+td.1.22.isBlocked=false
+td.1.22.isDaemon=true
+td.1.22.isDeadLocked=false
+td.1.22.isIdle=true
+
+#"ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc00 pid=13211 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449752b8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449752b8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.23.blockedObjectId=null
+td.1.23.blockerId=null
+td.1.23.condition=prio=5 id=0xc00 pid=13211 waiting, daemon
+td.1.23.header="ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc00 pid=13211 waiting, daemon
+td.1.23.id=0xc00
+td.1.23.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
+td.1.23.isBlocked=false
+td.1.23.isDaemon=true
+td.1.23.isDeadLocked=false
+td.1.23.isIdle=true
+
+#"ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc80 pid=13212 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44975800[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44975800[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.24.blockedObjectId=null
+td.1.24.blockerId=null
+td.1.24.condition=prio=5 id=0xc80 pid=13212 waiting, daemon
+td.1.24.header="ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc80 pid=13212 waiting, daemon
+td.1.24.id=0xc80
+td.1.24.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
+td.1.24.isBlocked=false
+td.1.24.isDaemon=true
+td.1.24.isDeadLocked=false
+td.1.24.isIdle=true
+
+#"ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd00 pid=13213 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44975cf8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44975cf8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.25.blockedObjectId=null
+td.1.25.blockerId=null
+td.1.25.condition=prio=5 id=0xd00 pid=13213 waiting, daemon
+td.1.25.header="ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd00 pid=13213 waiting, daemon
+td.1.25.id=0xd00
+td.1.25.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
+td.1.25.isBlocked=false
+td.1.25.isDaemon=true
+td.1.25.isDeadLocked=false
+td.1.25.isIdle=true
+
+#"ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd80 pid=13214 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449761f0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449761f0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.26.blockedObjectId=null
+td.1.26.blockerId=null
+td.1.26.condition=prio=5 id=0xd80 pid=13214 waiting, daemon
+td.1.26.header="ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd80 pid=13214 waiting, daemon
+td.1.26.id=0xd80
+td.1.26.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
+td.1.26.isBlocked=false
+td.1.26.isDaemon=true
+td.1.26.isDeadLocked=false
+td.1.26.isIdle=true
+
+#"ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe00 pid=13215 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449766e8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449766e8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.27.blockedObjectId=null
+td.1.27.blockerId=null
+td.1.27.condition=prio=5 id=0xe00 pid=13215 waiting, daemon
+td.1.27.header="ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe00 pid=13215 waiting, daemon
+td.1.27.id=0xe00
+td.1.27.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
+td.1.27.isBlocked=false
+td.1.27.isDaemon=true
+td.1.27.isDeadLocked=false
+td.1.27.isIdle=true
+
+#"ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe80 pid=13216 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44976be0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44976be0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.28.blockedObjectId=null
+td.1.28.blockerId=null
+td.1.28.condition=prio=5 id=0xe80 pid=13216 waiting, daemon
+td.1.28.header="ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe80 pid=13216 waiting, daemon
+td.1.28.id=0xe80
+td.1.28.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
+td.1.28.isBlocked=false
+td.1.28.isDaemon=true
+td.1.28.isDeadLocked=false
+td.1.28.isIdle=true
+
+#"ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" prio=5 id=0xf00 pid=13217 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449770d8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449770d8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.29.blockedObjectId=null
+td.1.29.blockerId=null
+td.1.29.condition=prio=5 id=0xf00 pid=13217 waiting, daemon
+td.1.29.header="ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" prio=5 id=0xf00 pid=13217 waiting, daemon
+td.1.29.id=0xf00
+td.1.29.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
+td.1.29.isBlocked=false
+td.1.29.isDaemon=true
+td.1.29.isDeadLocked=false
+td.1.29.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.kernel.System'" prio=5 id=0xf80 pid=13218 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449783c0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449783c0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.30.blockedObjectId=null
+td.1.30.blockerId=null
+td.1.30.condition=prio=5 id=0xf80 pid=13218 waiting, daemon
+td.1.30.header="ExecuteThread: '0' for queue: 'weblogic.kernel.System'" prio=5 id=0xf80 pid=13218 waiting, daemon
+td.1.30.id=0xf80
+td.1.30.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
+td.1.30.isBlocked=false
+td.1.30.isDaemon=true
+td.1.30.isDeadLocked=false
+td.1.30.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.kernel.System'" prio=5 id=0x1000 pid=13219 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44978900[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44978900[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.31.blockedObjectId=null
+td.1.31.blockerId=null
+td.1.31.condition=prio=5 id=0x1000 pid=13219 waiting, daemon
+td.1.31.header="ExecuteThread: '1' for queue: 'weblogic.kernel.System'" prio=5 id=0x1000 pid=13219 waiting, daemon
+td.1.31.id=0x1000
+td.1.31.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
+td.1.31.isBlocked=false
+td.1.31.isDaemon=true
+td.1.31.isDeadLocked=false
+td.1.31.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.kernel.System'" prio=5 id=0x1080 pid=13220 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44978e40[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44978e40[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.32.blockedObjectId=null
+td.1.32.blockerId=null
+td.1.32.condition=prio=5 id=0x1080 pid=13220 waiting, daemon
+td.1.32.header="ExecuteThread: '2' for queue: 'weblogic.kernel.System'" prio=5 id=0x1080 pid=13220 waiting, daemon
+td.1.32.id=0x1080
+td.1.32.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
+td.1.32.isBlocked=false
+td.1.32.isDaemon=true
+td.1.32.isDeadLocked=false
+td.1.32.isIdle=true
+
+#"ExecuteThread: '3' for queue: 'weblogic.kernel.System'" prio=5 id=0x1100 pid=13221 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44979380[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44979380[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.33.blockedObjectId=null
+td.1.33.blockerId=null
+td.1.33.condition=prio=5 id=0x1100 pid=13221 waiting, daemon
+td.1.33.header="ExecuteThread: '3' for queue: 'weblogic.kernel.System'" prio=5 id=0x1100 pid=13221 waiting, daemon
+td.1.33.id=0x1100
+td.1.33.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
+td.1.33.isBlocked=false
+td.1.33.isDaemon=true
+td.1.33.isDeadLocked=false
+td.1.33.isIdle=true
+
+#"ExecuteThread: '4' for queue: 'weblogic.kernel.System'" prio=5 id=0x1180 pid=13222 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449798c0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449798c0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.34.blockedObjectId=null
+td.1.34.blockerId=null
+td.1.34.condition=prio=5 id=0x1180 pid=13222 waiting, daemon
+td.1.34.header="ExecuteThread: '4' for queue: 'weblogic.kernel.System'" prio=5 id=0x1180 pid=13222 waiting, daemon
+td.1.34.id=0x1180
+td.1.34.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
+td.1.34.isBlocked=false
+td.1.34.isDaemon=true
+td.1.34.isDeadLocked=false
+td.1.34.isIdle=true
+
+#"weblogic.time.TimeEventGenerator" prio=9 id=0x1200 pid=13223 waiting, daemon
+#   -- Waiting for notification on: weblogic/time/common/internal/TimeTable@0x4497a408[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at weblogic/time/common/internal/TimeTable.snooze(TimeTable.java:271)@0x52cf258d
+#   ^-- Lock released while waiting: weblogic/time/common/internal/TimeTable@0x4497a408[fat lock]
+#   at weblogic/time/common/internal/TimeEventGenerator.run(TimeEventGenerator.java:118)@0x52cf2174
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.35.blockedObjectId=null
+td.1.35.blockerId=null
+td.1.35.condition=prio=9 id=0x1200 pid=13223 waiting, daemon
+td.1.35.header="weblogic.time.TimeEventGenerator" prio=9 id=0x1200 pid=13223 waiting, daemon
+td.1.35.id=0x1200
+td.1.35.name=weblogic.time.TimeEventGenerator
+td.1.35.isBlocked=false
+td.1.35.isDaemon=true
+td.1.35.isDeadLocked=false
+td.1.35.isIdle=true
+
+#"weblogic.security.SpinnerRandomSource" prio=5 id=0x1280 pid=13224 waiting, daemon
+#   -- Waiting for notification on: java/lang/Object@0x4497dc00[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/security/SpinnerRandomBitsSource.run(SpinnerRandomBitsSource.java:60)@0x52cf7575
+#   ^-- Lock released while waiting: java/lang/Object@0x4497dc00[fat lock]
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.36.blockedObjectId=null
+td.1.36.blockerId=null
+td.1.36.condition=prio=5 id=0x1280 pid=13224 waiting, daemon
+td.1.36.header="weblogic.security.SpinnerRandomSource" prio=5 id=0x1280 pid=13224 waiting, daemon
+td.1.36.id=0x1280
+td.1.36.name=weblogic.security.SpinnerRandomSource
+td.1.36.isBlocked=false
+td.1.36.isDaemon=true
+td.1.36.isDeadLocked=false
+td.1.36.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1300 pid=13225 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44a87ac0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44a87ac0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.37.blockedObjectId=null
+td.1.37.blockerId=null
+td.1.37.condition=prio=5 id=0x1300 pid=13225 waiting, daemon
+td.1.37.header="ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1300 pid=13225 waiting, daemon
+td.1.37.id=0x1300
+td.1.37.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
+td.1.37.isBlocked=false
+td.1.37.isDaemon=true
+td.1.37.isDeadLocked=false
+td.1.37.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1380 pid=13226 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44a88018[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44a88018[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.38.blockedObjectId=null
+td.1.38.blockerId=null
+td.1.38.condition=prio=5 id=0x1380 pid=13226 waiting, daemon
+td.1.38.header="ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1380 pid=13226 waiting, daemon
+td.1.38.id=0x1380
+td.1.38.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
+td.1.38.isBlocked=false
+td.1.38.isDaemon=true
+td.1.38.isDeadLocked=false
+td.1.38.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1400 pid=13227 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x453400d8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x453400d8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.39.blockedObjectId=null
+td.1.39.blockerId=null
+td.1.39.condition=prio=5 id=0x1400 pid=13227 waiting, daemon
+td.1.39.header="ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1400 pid=13227 waiting, daemon
+td.1.39.id=0x1400
+td.1.39.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
+td.1.39.isBlocked=false
+td.1.39.isDaemon=true
+td.1.39.isDeadLocked=false
+td.1.39.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1480 pid=13228 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x45340630[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x45340630[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.40.blockedObjectId=null
+td.1.40.blockerId=null
+td.1.40.condition=prio=5 id=0x1480 pid=13228 waiting, daemon
+td.1.40.header="ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1480 pid=13228 waiting, daemon
+td.1.40.id=0x1480
+td.1.40.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
+td.1.40.isBlocked=false
+td.1.40.isDaemon=true
+td.1.40.isDeadLocked=false
+td.1.40.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1500 pid=13229 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x45340b68[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x45340b68[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.41.blockedObjectId=null
+td.1.41.blockerId=null
+td.1.41.condition=prio=5 id=0x1500 pid=13229 waiting, daemon
+td.1.41.header="ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1500 pid=13229 waiting, daemon
+td.1.41.id=0x1500
+td.1.41.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
+td.1.41.isBlocked=false
+td.1.41.isDaemon=true
+td.1.41.isDeadLocked=false
+td.1.41.isIdle=true
+
+#"VDE Transaction Processor Thread" prio=2 id=0x1580 pid=13230 waiting
+#   -- Waiting for notification on: com/octetstring/vde/backend/standard/TransactionProcessor@0x44a006f0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at com/octetstring/vde/backend/standard/TransactionProcessor.waitChange(TransactionProcessor.java:356)@0x5320c1a5
+#   ^-- Lock released while waiting: com/octetstring/vde/backend/standard/TransactionProcessor@0x44a006f0[fat lock]
+#   at com/octetstring/vde/backend/standard/TransactionProcessor.run(TransactionProcessor.java:212)@0x5320b83d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.42.blockedObjectId=null
+td.1.42.blockerId=null
+td.1.42.condition=prio=2 id=0x1580 pid=13230 waiting
+td.1.42.header="VDE Transaction Processor Thread" prio=2 id=0x1580 pid=13230 waiting
+td.1.42.id=0x1580
+td.1.42.name=VDE Transaction Processor Thread
+td.1.42.isBlocked=false
+td.1.42.isDaemon=false
+td.1.42.isDeadLocked=false
+td.1.42.isIdle=true
+
+#"VDE Replication Thread" prio=5 id=0x1600 pid=13231 waiting
+#   -- Waiting for notification on: com/octetstring/vde/replication/Replication@0x453c6750[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at com/octetstring/vde/replication/Replication.wait30sec(Replication.java:395)@0x5333445e
+#   ^-- Lock released while waiting: com/octetstring/vde/replication/Replication@0x453c6750[fat lock]
+#   at com/octetstring/vde/replication/Replication.run(Replication.java:365)@0x5333275a
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.43.blockedObjectId=null
+td.1.43.blockerId=null
+td.1.43.condition=prio=5 id=0x1600 pid=13231 waiting
+td.1.43.header="VDE Replication Thread" prio=5 id=0x1600 pid=13231 waiting
+td.1.43.id=0x1600
+td.1.43.name=VDE Replication Thread
+td.1.43.isBlocked=false
+td.1.43.isDaemon=false
+td.1.43.isDeadLocked=false
+td.1.43.isIdle=true
+
+#"Thread-4" prio=5 id=0x1680 pid=13233 waiting
+#   -- Waiting for notification on: java/util/TaskQueue@0x467e93e0[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/util/TimerThread.mainLoop(Timer.java:429)@0x5337eae3
+#   ^-- Lock released while waiting: java/util/TaskQueue@0x467e93e0[fat lock]
+#   at java/util/TimerThread.run(Timer.java:382)@0x5337e8e2
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.44.blockedObjectId=null
+td.1.44.blockerId=null
+td.1.44.condition=prio=5 id=0x1680 pid=13233 waiting
+td.1.44.header="Thread-4" prio=5 id=0x1680 pid=13233 waiting
+td.1.44.id=0x1680
+td.1.44.name=Thread-4
+td.1.44.isBlocked=false
+td.1.44.isDaemon=false
+td.1.44.isDeadLocked=false
+td.1.44.isIdle=true
+
+#"weblogic.health.CoreHealthMonitor" prio=5 id=0x1700 pid=13234 waiting, daemon
+#   -- Waiting for notification on: java/lang/Object@0x468703b8[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+#   ^-- Lock released while waiting: java/lang/Object@0x468703b8[fat lock]
+#   at weblogic/t3/srvr/CoreHealthMonitorThread.run(CoreHealthMonitorThread.java:127)@0x5416a964
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.45.blockedObjectId=null
+td.1.45.blockerId=null
+td.1.45.condition=prio=5 id=0x1700 pid=13234 waiting, daemon
+td.1.45.header="weblogic.health.CoreHealthMonitor" prio=5 id=0x1700 pid=13234 waiting, daemon
+td.1.45.id=0x1700
+td.1.45.name=weblogic.health.CoreHealthMonitor
+td.1.45.isBlocked=false
+td.1.45.isDaemon=true
+td.1.45.isDeadLocked=false
+td.1.45.isIdle=true
+
+#"SNMP Service Thread" prio=5 id=0x1780 pid=13235 waiting
+#   -- Waiting for notification on: java/lang/Object@0x436f5188[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+#   ^-- Lock released while waiting: java/lang/Object@0x436f5188[fat lock]
+#   at weblogic/management/snmp/agent/WlsSnmpAgent.mainLoopHandler(WlsSnmpAgent.java:649)@0x54fd1057
+#   at weblogic/management/snmp/agent/WlsSnmpAgent.startAgent(WlsSnmpAgent.java:357)@0x54cd8538
+#   at weblogic/management/snmp/SNMPService$SNMPMain.run(SNMPService.java:16)@0x54cd8105
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.46.blockedObjectId=null
+td.1.46.blockerId=null
+td.1.46.condition=prio=5 id=0x1780 pid=13235 waiting
+td.1.46.header="SNMP Service Thread" prio=5 id=0x1780 pid=13235 waiting
+td.1.46.id=0x1780
+td.1.46.name=SNMP Service Thread
+td.1.46.isBlocked=false
+td.1.46.isDaemon=false
+td.1.46.isDeadLocked=false
+td.1.46.isIdle=true
+
+#"Thread-5" prio=5 id=0x1800 pid=13236 waiting
+#   -- Waiting for notification on: java/lang/Object@0x428a1b88[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+#   ^-- Lock released while waiting: java/lang/Object@0x428a1b88[fat lock]
+#   at com/adventnet/snmp/snmp2/SnmpAPI.run(SnmpAPI.java:134)@0x54cdc659
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.47.blockedObjectId=null
+td.1.47.blockerId=null
+td.1.47.condition=prio=5 id=0x1800 pid=13236 waiting
+td.1.47.header="Thread-5" prio=5 id=0x1800 pid=13236 waiting
+td.1.47.id=0x1800
+td.1.47.name=Thread-5
+td.1.47.isBlocked=false
+td.1.47.isDaemon=false
+td.1.47.isDeadLocked=false
+td.1.47.isIdle=true
+
+#"Thread-10" prio=5 id=0x1880 pid=13243 active
+#   at jrockit/net/SocketNativeIO.receive(Native Method)@0x53e9bec0
+#   at jrockit/net/SocketNativeIO.receive(Unknown Source)@0x53e9bff0
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9beb0
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bdcd
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bd97
+#   at java/net/DatagramSocket.receive(Unknown Source)@0x53e9bcf2
+#   ^-- Holding lock: java/net/DatagramPacket@0x4218e9c0[thin lock]
+#   ^-- Holding lock: java/net/DatagramSocket@0x422c6b68[thin lock]
+#   at com/adventnet/snmp/snmp2/IpTSocket.receive(IpTSocket.java:30)@0x54cde28f
+#   ^-- Holding lock: com/adventnet/snmp/snmp2/IpTSocket@0x422c6b58[thin lock]
+#   at com/adventnet/snmp/snmp2/SnmpSession.receiver(SnmpSession.java:1530)@0x54cdd817
+#   at com/adventnet/snmp/snmp2/SnmpSession.run(SnmpSession.java:653)@0x54cdd72e
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.48.blockedObjectId=null
+td.1.48.blockerId=null
+td.1.48.condition=prio=5 id=0x1880 pid=13243 active
+td.1.48.header="Thread-10" prio=5 id=0x1880 pid=13243 active
+td.1.48.id=0x1880
+td.1.48.name=Thread-10
+td.1.48.isBlocked=false
+td.1.48.isDaemon=false
+td.1.48.isDeadLocked=false
+td.1.48.isIdle=false
+
+#"Thread-7" prio=5 id=0x1900 pid=13238 active
+#   at jrockit/net/SocketNativeIO.receive(Native Method)@0x53e9bec0
+#   at jrockit/net/SocketNativeIO.receive(Unknown Source)@0x53e9bff0
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9beb0
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bdcd
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bd97
+#   at java/net/DatagramSocket.receive(Unknown Source)@0x53e9bcf2
+#   ^-- Holding lock: java/net/DatagramSocket@0x4276d038[thin lock]
+#   ^-- Holding lock: java/net/DatagramPacket@0x428a2398[thin lock]
+#   at com/adventnet/snmp/snmp2/IpTSocket.receive(IpTSocket.java:30)@0x54cde28f
+#   ^-- Holding lock: com/adventnet/snmp/snmp2/IpTSocket@0x4276d028[thin lock]
+#   at com/adventnet/snmp/snmp2/SnmpSession.receiver(SnmpSession.java:1530)@0x54cdd817
+#   at com/adventnet/snmp/snmp2/SnmpSession.run(SnmpSession.java:653)@0x54cdd72e
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.49.blockedObjectId=null
+td.1.49.blockerId=null
+td.1.49.condition=prio=5 id=0x1900 pid=13238 active
+td.1.49.header="Thread-7" prio=5 id=0x1900 pid=13238 active
+td.1.49.id=0x1900
+td.1.49.name=Thread-7
+td.1.49.isBlocked=false
+td.1.49.isDaemon=false
+td.1.49.isDeadLocked=false
+td.1.49.isIdle=false
+
+#"ListenThread.Default" prio=5 id=0x1980 pid=13245 active
+#   at jrockit/net/SocketNativeIO.accept(Native Method)@0x40de0310
+#   at jrockit/net/SocketNativeIO.accept(Unknown Source)@0x40de03db
+#   at java/net/AbstractSocketImpl.accept(Unknown Source)@0x40de0213
+#   ^-- Holding lock: java/net/PlainSocketImpl@0x435a5450[thin lock]
+#   at java/net/ServerSocket.implAccept(ServerSocket.java:448)@0x40de00fc
+#   at java/net/ServerSocket.accept(ServerSocket.java:419)@0x40d8ff4c
+#   at weblogic/socket/WeblogicServerSocket.accept(WeblogicServerSocket.java:24)@0x55655737
+#   at weblogic/t3/srvr/ListenThread.accept(ListenThread.java:739)@0x55655717
+#   at weblogic/t3/srvr/ListenThread.run(ListenThread.java:292)@0x55653430
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.50.blockedObjectId=null
+td.1.50.blockerId=null
+td.1.50.condition=prio=5 id=0x1980 pid=13245 active
+td.1.50.header="ListenThread.Default" prio=5 id=0x1980 pid=13245 active
+td.1.50.id=0x1980
+td.1.50.name=ListenThread.Default
+td.1.50.isBlocked=false
+td.1.50.isDaemon=false
+td.1.50.isDeadLocked=false
+td.1.50.isIdle=false
+
+#"ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" prio=5 id=0x1a00 pid=13242 waiting, daemon
+#   -- Waiting for notification on: weblogic/jms/backend/BETimerTree@0x4260e298[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at weblogic/jms/backend/BETimerTree.execute(BETimerTree.java:146)@0x550daa6a
+#   ^-- Lock released while waiting: weblogic/jms/backend/BETimerTree@0x4260e298[fat lock]
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.51.blockedObjectId=null
+td.1.51.blockerId=null
+td.1.51.condition=prio=5 id=0x1a00 pid=13242 waiting, daemon
+td.1.51.header="ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" prio=5 id=0x1a00 pid=13242 waiting, daemon
+td.1.51.id=0x1a00
+td.1.51.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
+td.1.51.isBlocked=false
+td.1.51.isDaemon=true
+td.1.51.isDeadLocked=false
+td.1.51.isIdle=true
+
+#"Thread-11" prio=5 id=0x1a80 pid=13244 waiting, daemon
+#   -- Waiting for notification on: java/util/TaskQueue@0x43630928[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/util/TimerThread.mainLoop(Timer.java:429)@0x5337eae3
+#   ^-- Lock released while waiting: java/util/TaskQueue@0x43630928[fat lock]
+#   at java/util/TimerThread.run(Timer.java:382)@0x5337e8e2
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.52.blockedObjectId=null
+td.1.52.blockerId=null
+td.1.52.condition=prio=5 id=0x1a80 pid=13244 waiting, daemon
+td.1.52.header="Thread-11" prio=5 id=0x1a80 pid=13244 waiting, daemon
+td.1.52.id=0x1a80
+td.1.52.name=Thread-11
+td.1.52.isBlocked=false
+td.1.52.isDaemon=true
+td.1.52.isDeadLocked=false
+td.1.52.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b00 pid=13246 blocked, daemon
+#   -- Blocked trying to get lock: java/lang/String@0x435f6908[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.raceForTheFatLock(Unknown Source)@0x40d0228c
+#   at jrockit/vm/Locks.lockFat(Unknown Source)@0x40d02385
+#   at jrockit/vm/Locks.monitorEnterSlowCase(Unknown Source)@0x52377257
+#   at jrockit/vm/Locks.monitorEnter(Native Method)@0x40d00fc3
+#   at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:91)@0x55654efc
+#   at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.53.blockedObjectId=0x435f6908
+td.1.53.blockerId=0x1b80
+td.1.53.condition=prio=5 id=0x1b00 pid=13246 blocked, daemon
+td.1.53.header="ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b00 pid=13246 blocked, daemon
+td.1.53.id=0x1b00
+td.1.53.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
+td.1.53.isBlocked=true
+td.1.53.isDaemon=true
+td.1.53.isDeadLocked=false
+td.1.53.isIdle=false
+
+#"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b80 pid=13247 waiting, daemon
+#   -- Waiting for notification on: [Lweblogic/socket/PosixSocketInfo$FdStruct;@0x43fe3438[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:95)@0x55654f27
+#   ^-- Holding lock: java/lang/String@0x435f6908[fat lock]
+#   ^-- Lock released while waiting: [Lweblogic/socket/PosixSocketInfo$FdStruct;@0x43fe3438[fat lock]
+#   at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.54.blockedObjectId=null
+td.1.54.blockerId=null
+td.1.54.condition=prio=5 id=0x1b80 pid=13247 waiting, daemon
+td.1.54.header="ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b80 pid=13247 waiting, daemon
+td.1.54.id=0x1b80
+td.1.54.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
+td.1.54.isBlocked=false
+td.1.54.isDaemon=true
+td.1.54.isDeadLocked=false
+td.1.54.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1c00 pid=13248 blocked, daemon
+#   -- Blocked trying to get lock: java/lang/String@0x435f6908[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.lockFat(Unknown Source)@0x40d02376
+#   at jrockit/vm/Locks.monitorEnterSlowCase(Unknown Source)@0x52377257
+#   at jrockit/vm/Locks.monitorEnter(Native Method)@0x40d00fc3
+#   at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:91)@0x55654efc
+#   at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.55.blockedObjectId=0x435f6908
+td.1.55.blockerId=0x1b80
+td.1.55.condition=prio=5 id=0x1c00 pid=13248 blocked, daemon
+td.1.55.header="ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1c00 pid=13248 blocked, daemon
+td.1.55.id=0x1c00
+td.1.55.name=ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'
+td.1.55.isBlocked=true
+td.1.55.isDaemon=true
+td.1.55.isDeadLocked=false
+td.1.55.isIdle=false
+
+#"ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" prio=5 id=0x1c80 pid=13273 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb3a18[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb3a18[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.56.blockedObjectId=null
+td.1.56.blockerId=null
+td.1.56.condition=prio=5 id=0x1c80 pid=13273 waiting, daemon
+td.1.56.header="ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" prio=5 id=0x1c80 pid=13273 waiting, daemon
+td.1.56.id=0x1c80
+td.1.56.name=ExecuteThread: '3' for queue: 'JMS.TimerClientPool'
+td.1.56.isBlocked=false
+td.1.56.isDaemon=true
+td.1.56.isDeadLocked=false
+td.1.56.isIdle=true
+
+#"[JRockit] Write Queue" prio=5 id=0x1d00 pid=13319 waiting, daemon
+#   -- Waiting for notification on: com/jrockit/management/rmp/RmpWriterThread@0x42e76f28[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at com/jrockit/management/rmp/RmpWriterThread.run(RmpWriterThread.java:128)@0x52a0d25f
+#   ^-- Lock released while waiting: com/jrockit/management/rmp/RmpWriterThread@0x42e76f28[fat lock]
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.57.blockedObjectId=null
+td.1.57.blockerId=null
+td.1.57.condition=prio=5 id=0x1d00 pid=13319 waiting, daemon
+td.1.57.header="[JRockit] Write Queue" prio=5 id=0x1d00 pid=13319 waiting, daemon
+td.1.57.id=0x1d00
+td.1.57.name=[JRockit] Write Queue
+td.1.57.isBlocked=false
+td.1.57.isDaemon=true
+td.1.57.isDeadLocked=false
+td.1.57.isIdle=true
+
+#"[JRockit] Management Server" prio=5 id=0x1d80 pid=13321 active, daemon
+#   at jrockit/net/SocketNativeIO.read(Native Method)@0x52377100
+#   at jrockit/net/SocketNativeIO.read(Unknown Source)@0x523771a7
+#   at java/net/AbstractSocketImpl$1.read(Unknown Source)@0x52377070
+#   at jrockit/io/NativeIOInputStream.read(Unknown Source)@0x40d4e34c
+#   at jrockit/io/NativeIOInputStream.read(Unknown Source)@0x40d4e2f1
+#   at com/jrockit/common/rmp/RmpPacket.readBytesFromInputStream(RmpPacket.java:465)@0x52a0d795
+#   at com/jrockit/common/rmp/RmpPacket.readPacketLengthFromInputStream(RmpPacket.java:587)@0x52a0d698
+#   at com/jrockit/common/rmp/RmpPacket.readFromStream(RmpPacket.java:495)@0x52a0d476
+#   at com/jrockit/common/rmp/RmpPacket.readFromStream(RmpPacket.java:569)@0x52a0dffa
+#   at com/jrockit/management/rmp/RmpServer.runConnectionLoop(RmpServer.java:348)@0x52a0dc1a
+#   at com/jrockit/management/rmp/RmpServer.run(RmpServer.java:163)@0x52a0d335
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.58.blockedObjectId=null
+td.1.58.blockerId=null
+td.1.58.condition=prio=5 id=0x1d80 pid=13321 active, daemon
+td.1.58.header="[JRockit] Management Server" prio=5 id=0x1d80 pid=13321 active, daemon
+td.1.58.id=0x1d80
+td.1.58.name=[JRockit] Management Server
+td.1.58.isBlocked=false
+td.1.58.isDaemon=true
+td.1.58.isDeadLocked=false
+td.1.58.isIdle=false
+
+#"[JRockit] Subscription Update" prio=5 id=0x1e00 pid=13322 waiting, daemon
+#   -- Waiting for notification on: java/lang/Object@0x42acfc40[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+#   ^-- Lock released while waiting: java/lang/Object@0x42acfc40[fat lock]
+#   at com/jrockit/management/rmp/RmpSubscriptionThread.run(RmpSubscriptionThread.java:92)@0x52a0e030
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.1.59.blockedObjectId=null
+td.1.59.blockerId=null
+td.1.59.condition=prio=5 id=0x1e00 pid=13322 waiting, daemon
+td.1.59.header="[JRockit] Subscription Update" prio=5 id=0x1e00 pid=13322 waiting, daemon
+td.1.59.id=0x1e00
+td.1.59.name=[JRockit] Subscription Update
+td.1.59.isBlocked=false
+td.1.59.isDaemon=true
+td.1.59.isDeadLocked=false
+td.1.59.isIdle=true
+
+ftd.2.deadLockSize=0
+ftd.2.threadCount=60
+#"Main Thread" prio=5 id=0x80 pid=13184 waiting
+#   -- Waiting for notification on: weblogic/t3/srvr/T3Srvr@0x4286c608[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/t3/srvr/T3Srvr.waitForDeath(T3Srvr.java:1170)@0x55a1c074
+#   ^-- Lock released while waiting: weblogic/t3/srvr/T3Srvr@0x4286c608[fat lock]
+#   at weblogic/t3/srvr/T3Srvr.run(T3Srvr.java:384)@0x40dc2066
+#   at weblogic/Server.main(Server.java:32)@0x40dc1dd2
+#   --- End of stack trace
+td.2.0.blockedObjectId=null
+td.2.0.blockerId=null
+td.2.0.condition=prio=5 id=0x80 pid=13184 waiting
+td.2.0.header="Main Thread" prio=5 id=0x80 pid=13184 waiting
+td.2.0.id=0x80
+td.2.0.name=Main Thread
+td.2.0.isBlocked=false
+td.2.0.isDaemon=false
+td.2.0.isDeadLocked=false
+td.2.0.isIdle=true
+
+#"(Signal Handler)" prio=5 id=0x100 pid=13186 active, daemon
+td.2.1.blockedObjectId=null
+td.2.1.blockerId=null
+td.2.1.condition=prio=5 id=0x100 pid=13186 active, daemon
+td.2.1.header="(Signal Handler)" prio=5 id=0x100 pid=13186 active, daemon
+td.2.1.id=0x100
+td.2.1.name=(Signal Handler)
+td.2.1.isBlocked=false
+td.2.1.isDaemon=true
+td.2.1.isDeadLocked=false
+td.2.1.isIdle=false
+
+#"(Code Generation Thread 1)" prio=5 id=0x180 pid=13187 active, native_waiting, daemon
+td.2.2.blockedObjectId=null
+td.2.2.blockerId=null
+td.2.2.condition=prio=5 id=0x180 pid=13187 active, native_waiting, daemon
+td.2.2.header="(Code Generation Thread 1)" prio=5 id=0x180 pid=13187 active, native_waiting, daemon
+td.2.2.id=0x180
+td.2.2.name=(Code Generation Thread 1)
+td.2.2.isBlocked=false
+td.2.2.isDaemon=true
+td.2.2.isDeadLocked=false
+td.2.2.isIdle=true
+
+#"(Code Optimization Thread 1)" prio=5 id=0x200 pid=13188 active, native_waiting, daemon
+td.2.3.blockedObjectId=null
+td.2.3.blockerId=null
+td.2.3.condition=prio=5 id=0x200 pid=13188 active, native_waiting, daemon
+td.2.3.header="(Code Optimization Thread 1)" prio=5 id=0x200 pid=13188 active, native_waiting, daemon
+td.2.3.id=0x200
+td.2.3.name=(Code Optimization Thread 1)
+td.2.3.isBlocked=false
+td.2.3.isDaemon=true
+td.2.3.isDeadLocked=false
+td.2.3.isIdle=true
+
+#"(GC Main Thread)" prio=5 id=0x280 pid=13189 active, daemon
+td.2.4.blockedObjectId=null
+td.2.4.blockerId=null
+td.2.4.condition=prio=5 id=0x280 pid=13189 active, daemon
+td.2.4.header="(GC Main Thread)" prio=5 id=0x280 pid=13189 active, daemon
+td.2.4.id=0x280
+td.2.4.name=(GC Main Thread)
+td.2.4.isBlocked=false
+td.2.4.isDaemon=true
+td.2.4.isDeadLocked=false
+td.2.4.isIdle=false
+
+#"(GC Worker Thread 1)" prio=5 id=0x300 pid=13190 active, native_waiting, daemon
+td.2.5.blockedObjectId=null
+td.2.5.blockerId=null
+td.2.5.condition=prio=5 id=0x300 pid=13190 active, native_waiting, daemon
+td.2.5.header="(GC Worker Thread 1)" prio=5 id=0x300 pid=13190 active, native_waiting, daemon
+td.2.5.id=0x300
+td.2.5.name=(GC Worker Thread 1)
+td.2.5.isBlocked=false
+td.2.5.isDaemon=true
+td.2.5.isDeadLocked=false
+td.2.5.isIdle=true
+
+#"Finalizer" prio=8 id=0x380 pid=13191 waiting, daemon
+#   -- Waiting for notification on: java/lang/ref/ReferenceQueue$Lock@0x42447800[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03ce1
+#   at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@0x40d09661
+#   ^-- Lock released while waiting: java/lang/ref/ReferenceQueue$Lock@0x42447800[fat lock]
+#   at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@0x40d0949c
+#   at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@0x40d05b43
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.6.blockedObjectId=null
+td.2.6.blockerId=null
+td.2.6.condition=prio=8 id=0x380 pid=13191 waiting, daemon
+td.2.6.header="Finalizer" prio=8 id=0x380 pid=13191 waiting, daemon
+td.2.6.id=0x380
+td.2.6.name=Finalizer
+td.2.6.isBlocked=false
+td.2.6.isDaemon=true
+td.2.6.isDeadLocked=false
+td.2.6.isIdle=true
+
+#"Reference Handler" prio=10 id=0x400 pid=13192 waiting for pending references, daemon
+#   at java/lang/ref/Reference.getPending(Native Method)@0x40d60e80
+#   at java/lang/ref/Reference.access$000(Unknown Source)@0x40d60ef5
+#   at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@0x40d60df0
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.7.blockedObjectId=null
+td.2.7.blockerId=null
+td.2.7.condition=prio=10 id=0x400 pid=13192 waiting for pending references, daemon
+td.2.7.header="Reference Handler" prio=10 id=0x400 pid=13192 waiting for pending references, daemon
+td.2.7.id=0x400
+td.2.7.name=Reference Handler
+td.2.7.isBlocked=false
+td.2.7.isDaemon=true
+td.2.7.isDeadLocked=false
+td.2.7.isIdle=false
+
+#"[JRockit] Connection Listener" prio=5 id=0x480 pid=13194 active, daemon
+#   at jrockit/net/SocketNativeIO.accept(Native Method)@0x40de0310
+#   at jrockit/net/SocketNativeIO.accept(Unknown Source)@0x40de03db
+#   at java/net/AbstractSocketImpl.accept(Unknown Source)@0x40de0213
+#   ^-- Holding lock: java/net/PlainSocketImpl@0x42496d08[thin lock]
+#   at java/net/ServerSocket.implAccept(ServerSocket.java:448)@0x40de00fc
+#   at java/net/ServerSocket.accept(ServerSocket.java:419)@0x40d8ff4c
+#   at com/jrockit/management/rmp/RmpSocketListener.run(RmpSocketListener.java:170)@0x40dc1a7a
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.8.blockedObjectId=null
+td.2.8.blockerId=null
+td.2.8.condition=prio=5 id=0x480 pid=13194 active, daemon
+td.2.8.header="[JRockit] Connection Listener" prio=5 id=0x480 pid=13194 active, daemon
+td.2.8.id=0x480
+td.2.8.name=[JRockit] Connection Listener
+td.2.8.isBlocked=false
+td.2.8.isDaemon=true
+td.2.8.isDeadLocked=false
+td.2.8.isIdle=false
+
+#"(Hotspot Detector)" prio=10 id=0x500 pid=13195 active, daemon
+td.2.9.blockedObjectId=null
+td.2.9.blockerId=null
+td.2.9.condition=prio=10 id=0x500 pid=13195 active, daemon
+td.2.9.header="(Hotspot Detector)" prio=10 id=0x500 pid=13195 active, daemon
+td.2.9.id=0x500
+td.2.9.name=(Hotspot Detector)
+td.2.9.isBlocked=false
+td.2.9.isDaemon=true
+td.2.9.isDeadLocked=false
+td.2.9.isIdle=false
+
+#"ExecuteThread: '0' for queue: 'JMS.TimerClientPool'" prio=5 id=0x580 pid=13270 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb9db0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb9db0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.10.blockedObjectId=null
+td.2.10.blockerId=null
+td.2.10.condition=prio=5 id=0x580 pid=13270 waiting, daemon
+td.2.10.header="ExecuteThread: '0' for queue: 'JMS.TimerClientPool'" prio=5 id=0x580 pid=13270 waiting, daemon
+td.2.10.id=0x580
+td.2.10.name=ExecuteThread: '0' for queue: 'JMS.TimerClientPool'
+td.2.10.isBlocked=false
+td.2.10.isDaemon=true
+td.2.10.isDeadLocked=false
+td.2.10.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'JMS.TimerClientPool'" prio=5 id=0x600 pid=13271 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb2990[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb2990[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.11.blockedObjectId=null
+td.2.11.blockerId=null
+td.2.11.condition=prio=5 id=0x600 pid=13271 waiting, daemon
+td.2.11.header="ExecuteThread: '1' for queue: 'JMS.TimerClientPool'" prio=5 id=0x600 pid=13271 waiting, daemon
+td.2.11.id=0x600
+td.2.11.name=ExecuteThread: '1' for queue: 'JMS.TimerClientPool'
+td.2.11.isBlocked=false
+td.2.11.isDaemon=true
+td.2.11.isDeadLocked=false
+td.2.11.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'JMS.TimerClientPool'" prio=5 id=0x680 pid=13272 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb31c0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb31c0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.12.blockedObjectId=null
+td.2.12.blockerId=null
+td.2.12.condition=prio=5 id=0x680 pid=13272 waiting, daemon
+td.2.12.header="ExecuteThread: '2' for queue: 'JMS.TimerClientPool'" prio=5 id=0x680 pid=13272 waiting, daemon
+td.2.12.id=0x680
+td.2.12.name=ExecuteThread: '2' for queue: 'JMS.TimerClientPool'
+td.2.12.isBlocked=false
+td.2.12.isDaemon=true
+td.2.12.isDeadLocked=false
+td.2.12.isIdle=true
+
+#"[JRockit] GCChangeEventThread" prio=5 id=0x700 pid=13201 active, native_waiting, daemon
+#   at jrockit/management/jvm/GCChangeEventProvider.waitForEvent(Native Method)@0x523796b0
+#   at jrockit/management/jvm/GCChangeEventProvider.access$000(Unknown Source)@0x52379725
+#   at jrockit/management/jvm/GCChangeEventProvider$GCChangeEventThread.getNextEvent(Unknown Source)@0x523795de
+#   at jrockit/management/jvm/AsyncEventProvider$EventThread.run(Unknown Source)@0x52379542
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.13.blockedObjectId=null
+td.2.13.blockerId=null
+td.2.13.condition=prio=5 id=0x700 pid=13201 active, native_waiting, daemon
+td.2.13.header="[JRockit] GCChangeEventThread" prio=5 id=0x700 pid=13201 active, native_waiting, daemon
+td.2.13.id=0x700
+td.2.13.name=[JRockit] GCChangeEventThread
+td.2.13.isBlocked=false
+td.2.13.isDaemon=true
+td.2.13.isDeadLocked=false
+td.2.13.isIdle=true
+
+#"[JRockit] GCEventThread" prio=5 id=0x780 pid=13202 active, native_waiting, daemon
+#   at jrockit/management/jvm/GarbageCollectorImpl.waitForEvent(Native Method)@0x523797f0
+#   at jrockit/management/jvm/GarbageCollectorImpl.access$000(Unknown Source)@0x52379865
+#   at jrockit/management/jvm/GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)@0x5237973e
+#   at jrockit/management/jvm/AsyncEventProvider$EventThread.run(Unknown Source)@0x52379542
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.14.blockedObjectId=null
+td.2.14.blockerId=null
+td.2.14.condition=prio=5 id=0x780 pid=13202 active, native_waiting, daemon
+td.2.14.header="[JRockit] GCEventThread" prio=5 id=0x780 pid=13202 active, native_waiting, daemon
+td.2.14.id=0x780
+td.2.14.name=[JRockit] GCEventThread
+td.2.14.isBlocked=false
+td.2.14.isDaemon=true
+td.2.14.isDeadLocked=false
+td.2.14.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" prio=5 id=0x800 pid=13203 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44972910[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44972910[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.15.blockedObjectId=null
+td.2.15.blockerId=null
+td.2.15.condition=prio=5 id=0x800 pid=13203 waiting, daemon
+td.2.15.header="ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" prio=5 id=0x800 pid=13203 waiting, daemon
+td.2.15.id=0x800
+td.2.15.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
+td.2.15.isBlocked=false
+td.2.15.isDaemon=true
+td.2.15.isDeadLocked=false
+td.2.15.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" prio=5 id=0x880 pid=13204 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44972ff0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44972ff0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.16.blockedObjectId=null
+td.2.16.blockerId=null
+td.2.16.condition=prio=5 id=0x880 pid=13204 waiting, daemon
+td.2.16.header="ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" prio=5 id=0x880 pid=13204 waiting, daemon
+td.2.16.id=0x880
+td.2.16.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
+td.2.16.isBlocked=false
+td.2.16.isDaemon=true
+td.2.16.isDeadLocked=false
+td.2.16.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" prio=5 id=0x900 pid=13205 active, daemon
+#   at jrockit/vm/MemSystem.getMoreTLAMemory(Native Method)@0x40d00750
+#   at jrockit/vm/MemSystem.getMoreTLAMemoryWrapper(Native Method)@0x40d007e8
+#   at jrockit/vm/MemSystem.allocArray2(Native Method)@0x40d00b90
+#   at weblogic/utils/UnsyncStringBuffer.ensureCapacity(UnsyncStringBuffer.java:61)@0x52cf9e08
+#   at weblogic/utils/UnsyncStringBuffer.append(UnsyncStringBuffer.java:120)@0x52cf9dab
+#   at weblogic/servlet/internal/session/SessionData.getInternalId(SessionData.java:335)@0x5587e3c5
+#   at weblogic/servlet/security/internal/ServletSecurityManager.checkAccess(ServletSecurityManager.java:151)@0x558742fd
+#   at weblogic/servlet/internal/WebAppServletContext.invokeServlet(Optimized Method)@0x558f3a52
+#   at weblogic/servlet/internal/ServletRequestImpl.execute(Optimized Method)@0x558f1477
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.17.blockedObjectId=null
+td.2.17.blockerId=null
+td.2.17.condition=prio=5 id=0x900 pid=13205 active, daemon
+td.2.17.header="ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" prio=5 id=0x900 pid=13205 active, daemon
+td.2.17.id=0x900
+td.2.17.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
+td.2.17.isBlocked=false
+td.2.17.isDaemon=true
+td.2.17.isDeadLocked=false
+td.2.17.isIdle=false
+
+#"ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" prio=5 id=0x980 pid=13206 active, daemon
+#   at jrockit/vm/MemSystem.getMoreTLAMemory(Native Method)@0x40d00750
+#   at jrockit/vm/MemSystem.getMoreTLAMemoryWrapper(Native Method)@0x40d007e8
+#   at jrockit/vm/MemSystem.allocArray2(Native Method)@0x40d00b90
+#   at weblogic/utils/UnsyncStringBuffer.<init>(UnsyncStringBuffer.java:26)@0x52cf9d5f
+#   at weblogic/servlet/internal/session/SessionData.getInternalId(SessionData.java:326)@0x5587e375
+#   at weblogic/servlet/security/internal/SecurityModule.getCurrentUser(SecurityModule.java:245)@0x55876102
+#   at weblogic/servlet/security/internal/SecurityModule.beginCheck(SecurityModule.java:156)@0x55874f0e
+#   at weblogic/servlet/security/internal/BasicSecurityModule.checkA(BasicSecurityModule.java:46)@0x55874e27
+#   at weblogic/servlet/security/internal/ServletSecurityManager.checkAccess(ServletSecurityManager.java:145)@0x55874263
+#   at weblogic/servlet/internal/WebAppServletContext.invokeServlet(Optimized Method)@0x558f3a52
+#   at weblogic/servlet/internal/ServletRequestImpl.execute(Optimized Method)@0x558f1477
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.18.blockedObjectId=null
+td.2.18.blockerId=null
+td.2.18.condition=prio=5 id=0x980 pid=13206 active, daemon
+td.2.18.header="ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" prio=5 id=0x980 pid=13206 active, daemon
+td.2.18.id=0x980
+td.2.18.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
+td.2.18.isBlocked=false
+td.2.18.isDaemon=true
+td.2.18.isDeadLocked=false
+td.2.18.isIdle=false
+
+#"ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa00 pid=13207 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44973ed8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44973ed8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.19.blockedObjectId=null
+td.2.19.blockerId=null
+td.2.19.condition=prio=5 id=0xa00 pid=13207 waiting, daemon
+td.2.19.header="ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa00 pid=13207 waiting, daemon
+td.2.19.id=0xa00
+td.2.19.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
+td.2.19.isBlocked=false
+td.2.19.isDaemon=true
+td.2.19.isDeadLocked=false
+td.2.19.isIdle=true
+
+#"ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa80 pid=13208 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449743d0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449743d0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.20.blockedObjectId=null
+td.2.20.blockerId=null
+td.2.20.condition=prio=5 id=0xa80 pid=13208 waiting, daemon
+td.2.20.header="ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa80 pid=13208 waiting, daemon
+td.2.20.id=0xa80
+td.2.20.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
+td.2.20.isBlocked=false
+td.2.20.isDaemon=true
+td.2.20.isDeadLocked=false
+td.2.20.isIdle=true
+
+#"ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb00 pid=13209 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449748c8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449748c8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.21.blockedObjectId=null
+td.2.21.blockerId=null
+td.2.21.condition=prio=5 id=0xb00 pid=13209 waiting, daemon
+td.2.21.header="ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb00 pid=13209 waiting, daemon
+td.2.21.id=0xb00
+td.2.21.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
+td.2.21.isBlocked=false
+td.2.21.isDaemon=true
+td.2.21.isDeadLocked=false
+td.2.21.isIdle=true
+
+#"ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb80 pid=13210 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44974dc0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44974dc0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.22.blockedObjectId=null
+td.2.22.blockerId=null
+td.2.22.condition=prio=5 id=0xb80 pid=13210 waiting, daemon
+td.2.22.header="ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb80 pid=13210 waiting, daemon
+td.2.22.id=0xb80
+td.2.22.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
+td.2.22.isBlocked=false
+td.2.22.isDaemon=true
+td.2.22.isDeadLocked=false
+td.2.22.isIdle=true
+
+#"ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc00 pid=13211 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449752b8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449752b8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.23.blockedObjectId=null
+td.2.23.blockerId=null
+td.2.23.condition=prio=5 id=0xc00 pid=13211 waiting, daemon
+td.2.23.header="ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc00 pid=13211 waiting, daemon
+td.2.23.id=0xc00
+td.2.23.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
+td.2.23.isBlocked=false
+td.2.23.isDaemon=true
+td.2.23.isDeadLocked=false
+td.2.23.isIdle=true
+
+#"ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc80 pid=13212 active, daemon
+#   at jrockit/vm/MemSystem.getMoreTLAMemory(Native Method)@0x40d00750
+#   at jrockit/vm/MemSystem.getMoreTLAMemoryWrapper(Native Method)@0x40d007e8
+#   at jrockit/vm/MemSystem.allocArray2(Native Method)@0x40d00b90
+#   at weblogic/utils/UnsyncStringBuffer.ensureCapacity(UnsyncStringBuffer.java:61)@0x52cf9e08
+#   at weblogic/utils/UnsyncStringBuffer.append(UnsyncStringBuffer.java:120)@0x52cf9dab
+#   at weblogic/servlet/internal/session/SessionData.getInternalId(SessionData.java:335)@0x5587e3c5
+#   at weblogic/servlet/security/internal/ServletSecurityManager.checkAccess(ServletSecurityManager.java:151)@0x558742fd
+#   at weblogic/servlet/internal/WebAppServletContext.invokeServlet(Optimized Method)@0x558f3a52
+#   at weblogic/servlet/internal/ServletRequestImpl.execute(Optimized Method)@0x558f1477
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.24.blockedObjectId=null
+td.2.24.blockerId=null
+td.2.24.condition=prio=5 id=0xc80 pid=13212 active, daemon
+td.2.24.header="ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc80 pid=13212 active, daemon
+td.2.24.id=0xc80
+td.2.24.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
+td.2.24.isBlocked=false
+td.2.24.isDaemon=true
+td.2.24.isDeadLocked=false
+td.2.24.isIdle=false
+
+#"ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd00 pid=13213 active, daemon
+#   at jrockit/vm/MemSystem.allocLargeArray(Native Method)@0x40d00970
+#   at jrockit/vm/MemSystem.allocArray2(Native Method)@0x40d00b81
+#   at weblogic/servlet/internal/MultibyteOutput.<init>(ChunkOutput.java:405)@0x5587d45f
+#   at weblogic/servlet/internal/ChunkOutput.create(ChunkOutput.java:128)@0x5587d29b
+#   at weblogic/servlet/internal/ChunkOutputWrapper.changeToCharset(ChunkOutputWrapper.java:39)@0x5587d202
+#   at weblogic/servlet/internal/ServletResponseImpl.setEncoding(ServletResponseImpl.java:857)@0x5587d0b3
+#   at weblogic/servlet/internal/ServletResponseImpl.setHeader(ServletResponseImpl.java:674)@0x558716e1
+#   at jsp_servlet/__jsp1._jspService(Optimized Method)@0x559b1128
+#   at weblogic/servlet/jsp/JspBase.service(JspBase.java:33)@0x5587c0d9
+#   at weblogic/servlet/internal/ServletStubImpl$ServletInvocationAction.run(ServletStubImpl.java:971)@0x55879275
+#   at weblogic/servlet/internal/ServletStubImpl.invokeServlet(ServletStubImpl.java:402)@0x5587752b
+#   at weblogic/servlet/internal/ServletStubImpl.invokeServlet(ServletStubImpl.java:305)@0x55877288
+#   at weblogic/servlet/internal/WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:6350)@0x55877202
+#   at weblogic/security/acl/internal/AuthenticatedSubject.doAs(AuthenticatedSubject.java:317)@0x528ee686
+#   at weblogic/security/service/SecurityManager.runAs(SecurityManager.java:114)@0x528ee601
+#   at weblogic/servlet/internal/WebAppServletContext.invokeServlet(Optimized Method)@0x558f3721
+#   at weblogic/servlet/internal/ServletRequestImpl.execute(Optimized Method)@0x558f1477
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.25.blockedObjectId=null
+td.2.25.blockerId=null
+td.2.25.condition=prio=5 id=0xd00 pid=13213 active, daemon
+td.2.25.header="ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd00 pid=13213 active, daemon
+td.2.25.id=0xd00
+td.2.25.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
+td.2.25.isBlocked=false
+td.2.25.isDaemon=true
+td.2.25.isDeadLocked=false
+td.2.25.isIdle=false
+
+#"ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd80 pid=13214 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449761f0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449761f0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.26.blockedObjectId=null
+td.2.26.blockerId=null
+td.2.26.condition=prio=5 id=0xd80 pid=13214 waiting, daemon
+td.2.26.header="ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd80 pid=13214 waiting, daemon
+td.2.26.id=0xd80
+td.2.26.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
+td.2.26.isBlocked=false
+td.2.26.isDaemon=true
+td.2.26.isDeadLocked=false
+td.2.26.isIdle=true
+
+#"ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe00 pid=13215 active, daemon
+#   at jrockit/vm/MemSystem.getMoreTLAMemory(Native Method)@0x40d00750
+#   at jrockit/vm/MemSystem.getMoreTLAMemoryWrapper(Native Method)@0x40d007e8
+#   at jrockit/vm/MemSystem.allocArray2(Native Method)@0x40d00b90
+#   at java/lang/StringCoding$CharsetSD.decode(Unknown Source)@0x40d82bd4
+#   at java/lang/StringCoding.decode(Unknown Source)@0x40d8293b
+#   at java/lang/StringCoding$DefaultDecoder.decode(Unknown Source)@0x40de11cd
+#   at java/lang/StringCoding.decode(Unknown Source)@0x40de11ae
+#   at java/lang/String.<init>(Unknown Source)@0x40de1176
+#   at weblogic/servlet/internal/ServletRequestImpl.getSessionIdFromCookieHeaders(ServletRequestImpl.java:2294)@0x55875ce5
+#   at weblogic/servlet/internal/ServletRequestImpl.initSessionInfo(ServletRequestImpl.java:2350)@0x5587547e
+#   at weblogic/servlet/internal/ServletRequestImpl.getSession(ServletRequestImpl.java:2124)@0x5587524d
+#   at weblogic/servlet/security/internal/SecurityModule$SessionRetrievalAction.run(SecurityModule.java:637)@0x558751ed
+#   at weblogic/security/acl/internal/AuthenticatedSubject.doAs(AuthenticatedSubject.java:317)@0x528ee686
+#   at weblogic/security/service/SecurityManager.runAs(SecurityManager.java:118)@0x528ee61a
+#   at weblogic/servlet/security/internal/SecurityModule.getUserSession(SecurityModule.java:612)@0x558750af
+#   at weblogic/servlet/security/internal/SecurityModule.beginCheck(SecurityModule.java:153)@0x55874ef3
+#   at weblogic/servlet/security/internal/BasicSecurityModule.checkA(BasicSecurityModule.java:46)@0x55874e27
+#   at weblogic/servlet/security/internal/ServletSecurityManager.checkAccess(ServletSecurityManager.java:145)@0x55874263
+#   at weblogic/servlet/internal/WebAppServletContext.invokeServlet(Optimized Method)@0x558f3a52
+#   at weblogic/servlet/internal/ServletRequestImpl.execute(Optimized Method)@0x558f1477
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.27.blockedObjectId=null
+td.2.27.blockerId=null
+td.2.27.condition=prio=5 id=0xe00 pid=13215 active, daemon
+td.2.27.header="ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe00 pid=13215 active, daemon
+td.2.27.id=0xe00
+td.2.27.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
+td.2.27.isBlocked=false
+td.2.27.isDaemon=true
+td.2.27.isDeadLocked=false
+td.2.27.isIdle=false
+
+#"ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe80 pid=13216 active, daemon
+#   at jrockit/vm/MemSystem.getMoreTLAMemory(Native Method)@0x40d00750
+#   at jrockit/vm/MemSystem.getMoreTLAMemoryWrapper(Native Method)@0x40d007e8
+#   at jrockit/vm/MemSystem.allocArray2(Native Method)@0x40d00b90
+#   at weblogic/utils/UnsyncStringBuffer.<init>(UnsyncStringBuffer.java:26)@0x52cf9d5f
+#   at weblogic/servlet/internal/session/SessionData.getInternalId(SessionData.java:326)@0x5587e375
+#   at weblogic/servlet/security/internal/SecurityModule.getCurrentUser(SecurityModule.java:245)@0x55876102
+#   at weblogic/servlet/security/internal/SecurityModule.beginCheck(SecurityModule.java:156)@0x55874f0e
+#   at weblogic/servlet/security/internal/BasicSecurityModule.checkA(BasicSecurityModule.java:46)@0x55874e27
+#   at weblogic/servlet/security/internal/ServletSecurityManager.checkAccess(ServletSecurityManager.java:145)@0x55874263
+#   at weblogic/servlet/internal/WebAppServletContext.invokeServlet(Optimized Method)@0x558f3a52
+#   at weblogic/servlet/internal/ServletRequestImpl.execute(Optimized Method)@0x558f1477
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.28.blockedObjectId=null
+td.2.28.blockerId=null
+td.2.28.condition=prio=5 id=0xe80 pid=13216 active, daemon
+td.2.28.header="ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe80 pid=13216 active, daemon
+td.2.28.id=0xe80
+td.2.28.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
+td.2.28.isBlocked=false
+td.2.28.isDaemon=true
+td.2.28.isDeadLocked=false
+td.2.28.isIdle=false
+
+#"ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" prio=5 id=0xf00 pid=13217 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449770d8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449770d8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.29.blockedObjectId=null
+td.2.29.blockerId=null
+td.2.29.condition=prio=5 id=0xf00 pid=13217 waiting, daemon
+td.2.29.header="ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" prio=5 id=0xf00 pid=13217 waiting, daemon
+td.2.29.id=0xf00
+td.2.29.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
+td.2.29.isBlocked=false
+td.2.29.isDaemon=true
+td.2.29.isDeadLocked=false
+td.2.29.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.kernel.System'" prio=5 id=0xf80 pid=13218 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449783c0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449783c0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.30.blockedObjectId=null
+td.2.30.blockerId=null
+td.2.30.condition=prio=5 id=0xf80 pid=13218 waiting, daemon
+td.2.30.header="ExecuteThread: '0' for queue: 'weblogic.kernel.System'" prio=5 id=0xf80 pid=13218 waiting, daemon
+td.2.30.id=0xf80
+td.2.30.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
+td.2.30.isBlocked=false
+td.2.30.isDaemon=true
+td.2.30.isDeadLocked=false
+td.2.30.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.kernel.System'" prio=5 id=0x1000 pid=13219 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44978900[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44978900[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.31.blockedObjectId=null
+td.2.31.blockerId=null
+td.2.31.condition=prio=5 id=0x1000 pid=13219 waiting, daemon
+td.2.31.header="ExecuteThread: '1' for queue: 'weblogic.kernel.System'" prio=5 id=0x1000 pid=13219 waiting, daemon
+td.2.31.id=0x1000
+td.2.31.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
+td.2.31.isBlocked=false
+td.2.31.isDaemon=true
+td.2.31.isDeadLocked=false
+td.2.31.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.kernel.System'" prio=5 id=0x1080 pid=13220 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44978e40[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44978e40[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.32.blockedObjectId=null
+td.2.32.blockerId=null
+td.2.32.condition=prio=5 id=0x1080 pid=13220 waiting, daemon
+td.2.32.header="ExecuteThread: '2' for queue: 'weblogic.kernel.System'" prio=5 id=0x1080 pid=13220 waiting, daemon
+td.2.32.id=0x1080
+td.2.32.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
+td.2.32.isBlocked=false
+td.2.32.isDaemon=true
+td.2.32.isDeadLocked=false
+td.2.32.isIdle=true
+
+#"ExecuteThread: '3' for queue: 'weblogic.kernel.System'" prio=5 id=0x1100 pid=13221 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44979380[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44979380[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.33.blockedObjectId=null
+td.2.33.blockerId=null
+td.2.33.condition=prio=5 id=0x1100 pid=13221 waiting, daemon
+td.2.33.header="ExecuteThread: '3' for queue: 'weblogic.kernel.System'" prio=5 id=0x1100 pid=13221 waiting, daemon
+td.2.33.id=0x1100
+td.2.33.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
+td.2.33.isBlocked=false
+td.2.33.isDaemon=true
+td.2.33.isDeadLocked=false
+td.2.33.isIdle=true
+
+#"ExecuteThread: '4' for queue: 'weblogic.kernel.System'" prio=5 id=0x1180 pid=13222 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449798c0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449798c0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.34.blockedObjectId=null
+td.2.34.blockerId=null
+td.2.34.condition=prio=5 id=0x1180 pid=13222 waiting, daemon
+td.2.34.header="ExecuteThread: '4' for queue: 'weblogic.kernel.System'" prio=5 id=0x1180 pid=13222 waiting, daemon
+td.2.34.id=0x1180
+td.2.34.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
+td.2.34.isBlocked=false
+td.2.34.isDaemon=true
+td.2.34.isDeadLocked=false
+td.2.34.isIdle=true
+
+#"weblogic.time.TimeEventGenerator" prio=9 id=0x1200 pid=13223 waiting, daemon
+#   -- Waiting for notification on: weblogic/time/common/internal/TimeTable@0x4497a408[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at weblogic/time/common/internal/TimeTable.snooze(TimeTable.java:271)@0x52cf258d
+#   ^-- Lock released while waiting: weblogic/time/common/internal/TimeTable@0x4497a408[fat lock]
+#   at weblogic/time/common/internal/TimeEventGenerator.run(TimeEventGenerator.java:118)@0x52cf2174
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.35.blockedObjectId=null
+td.2.35.blockerId=null
+td.2.35.condition=prio=9 id=0x1200 pid=13223 waiting, daemon
+td.2.35.header="weblogic.time.TimeEventGenerator" prio=9 id=0x1200 pid=13223 waiting, daemon
+td.2.35.id=0x1200
+td.2.35.name=weblogic.time.TimeEventGenerator
+td.2.35.isBlocked=false
+td.2.35.isDaemon=true
+td.2.35.isDeadLocked=false
+td.2.35.isIdle=true
+
+#"weblogic.security.SpinnerRandomSource" prio=5 id=0x1280 pid=13224 waiting, daemon
+#   -- Waiting for notification on: java/lang/Object@0x4497dc00[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/security/SpinnerRandomBitsSource.run(SpinnerRandomBitsSource.java:60)@0x52cf7575
+#   ^-- Lock released while waiting: java/lang/Object@0x4497dc00[fat lock]
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.36.blockedObjectId=null
+td.2.36.blockerId=null
+td.2.36.condition=prio=5 id=0x1280 pid=13224 waiting, daemon
+td.2.36.header="weblogic.security.SpinnerRandomSource" prio=5 id=0x1280 pid=13224 waiting, daemon
+td.2.36.id=0x1280
+td.2.36.name=weblogic.security.SpinnerRandomSource
+td.2.36.isBlocked=false
+td.2.36.isDaemon=true
+td.2.36.isDeadLocked=false
+td.2.36.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1300 pid=13225 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44a87ac0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44a87ac0[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.37.blockedObjectId=null
+td.2.37.blockerId=null
+td.2.37.condition=prio=5 id=0x1300 pid=13225 waiting, daemon
+td.2.37.header="ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1300 pid=13225 waiting, daemon
+td.2.37.id=0x1300
+td.2.37.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
+td.2.37.isBlocked=false
+td.2.37.isDaemon=true
+td.2.37.isDeadLocked=false
+td.2.37.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1380 pid=13226 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44a88018[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44a88018[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.38.blockedObjectId=null
+td.2.38.blockerId=null
+td.2.38.condition=prio=5 id=0x1380 pid=13226 waiting, daemon
+td.2.38.header="ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1380 pid=13226 waiting, daemon
+td.2.38.id=0x1380
+td.2.38.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
+td.2.38.isBlocked=false
+td.2.38.isDaemon=true
+td.2.38.isDeadLocked=false
+td.2.38.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1400 pid=13227 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x453400d8[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x453400d8[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.39.blockedObjectId=null
+td.2.39.blockerId=null
+td.2.39.condition=prio=5 id=0x1400 pid=13227 waiting, daemon
+td.2.39.header="ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1400 pid=13227 waiting, daemon
+td.2.39.id=0x1400
+td.2.39.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
+td.2.39.isBlocked=false
+td.2.39.isDaemon=true
+td.2.39.isDeadLocked=false
+td.2.39.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1480 pid=13228 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x45340630[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x45340630[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.40.blockedObjectId=null
+td.2.40.blockerId=null
+td.2.40.condition=prio=5 id=0x1480 pid=13228 waiting, daemon
+td.2.40.header="ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1480 pid=13228 waiting, daemon
+td.2.40.id=0x1480
+td.2.40.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
+td.2.40.isBlocked=false
+td.2.40.isDaemon=true
+td.2.40.isDeadLocked=false
+td.2.40.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1500 pid=13229 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x45340b68[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x45340b68[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.41.blockedObjectId=null
+td.2.41.blockerId=null
+td.2.41.condition=prio=5 id=0x1500 pid=13229 waiting, daemon
+td.2.41.header="ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1500 pid=13229 waiting, daemon
+td.2.41.id=0x1500
+td.2.41.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
+td.2.41.isBlocked=false
+td.2.41.isDaemon=true
+td.2.41.isDeadLocked=false
+td.2.41.isIdle=true
+
+#"VDE Transaction Processor Thread" prio=2 id=0x1580 pid=13230 waiting
+#   -- Waiting for notification on: com/octetstring/vde/backend/standard/TransactionProcessor@0x44a006f0[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at com/octetstring/vde/backend/standard/TransactionProcessor.waitChange(TransactionProcessor.java:356)@0x5320c1a5
+#   ^-- Lock released while waiting: com/octetstring/vde/backend/standard/TransactionProcessor@0x44a006f0[fat lock]
+#   at com/octetstring/vde/backend/standard/TransactionProcessor.run(TransactionProcessor.java:212)@0x5320b83d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.42.blockedObjectId=null
+td.2.42.blockerId=null
+td.2.42.condition=prio=2 id=0x1580 pid=13230 waiting
+td.2.42.header="VDE Transaction Processor Thread" prio=2 id=0x1580 pid=13230 waiting
+td.2.42.id=0x1580
+td.2.42.name=VDE Transaction Processor Thread
+td.2.42.isBlocked=false
+td.2.42.isDaemon=false
+td.2.42.isDeadLocked=false
+td.2.42.isIdle=true
+
+#"VDE Replication Thread" prio=5 id=0x1600 pid=13231 waiting
+#   -- Waiting for notification on: com/octetstring/vde/replication/Replication@0x453c6750[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at com/octetstring/vde/replication/Replication.wait30sec(Replication.java:395)@0x5333445e
+#   ^-- Lock released while waiting: com/octetstring/vde/replication/Replication@0x453c6750[fat lock]
+#   at com/octetstring/vde/replication/Replication.run(Replication.java:365)@0x5333275a
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.43.blockedObjectId=null
+td.2.43.blockerId=null
+td.2.43.condition=prio=5 id=0x1600 pid=13231 waiting
+td.2.43.header="VDE Replication Thread" prio=5 id=0x1600 pid=13231 waiting
+td.2.43.id=0x1600
+td.2.43.name=VDE Replication Thread
+td.2.43.isBlocked=false
+td.2.43.isDaemon=false
+td.2.43.isDeadLocked=false
+td.2.43.isIdle=true
+
+#"Thread-4" prio=5 id=0x1680 pid=13233 waiting
+#   -- Waiting for notification on: java/util/TaskQueue@0x467e93e0[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/util/TimerThread.mainLoop(Timer.java:429)@0x5337eae3
+#   ^-- Lock released while waiting: java/util/TaskQueue@0x467e93e0[fat lock]
+#   at java/util/TimerThread.run(Timer.java:382)@0x5337e8e2
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.44.blockedObjectId=null
+td.2.44.blockerId=null
+td.2.44.condition=prio=5 id=0x1680 pid=13233 waiting
+td.2.44.header="Thread-4" prio=5 id=0x1680 pid=13233 waiting
+td.2.44.id=0x1680
+td.2.44.name=Thread-4
+td.2.44.isBlocked=false
+td.2.44.isDaemon=false
+td.2.44.isDeadLocked=false
+td.2.44.isIdle=true
+
+#"weblogic.health.CoreHealthMonitor" prio=5 id=0x1700 pid=13234 waiting, daemon
+#   -- Waiting for notification on: java/lang/Object@0x468703b8[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+#   ^-- Lock released while waiting: java/lang/Object@0x468703b8[fat lock]
+#   at weblogic/t3/srvr/CoreHealthMonitorThread.run(CoreHealthMonitorThread.java:127)@0x5416a964
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.45.blockedObjectId=null
+td.2.45.blockerId=null
+td.2.45.condition=prio=5 id=0x1700 pid=13234 waiting, daemon
+td.2.45.header="weblogic.health.CoreHealthMonitor" prio=5 id=0x1700 pid=13234 waiting, daemon
+td.2.45.id=0x1700
+td.2.45.name=weblogic.health.CoreHealthMonitor
+td.2.45.isBlocked=false
+td.2.45.isDaemon=true
+td.2.45.isDeadLocked=false
+td.2.45.isIdle=true
+
+#"SNMP Service Thread" prio=5 id=0x1780 pid=13235 waiting
+#   -- Waiting for notification on: java/lang/Object@0x436f5188[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+#   ^-- Lock released while waiting: java/lang/Object@0x436f5188[fat lock]
+#   at weblogic/management/snmp/agent/WlsSnmpAgent.mainLoopHandler(WlsSnmpAgent.java:649)@0x54fd1057
+#   at weblogic/management/snmp/agent/WlsSnmpAgent.startAgent(WlsSnmpAgent.java:357)@0x54cd8538
+#   at weblogic/management/snmp/SNMPService$SNMPMain.run(SNMPService.java:16)@0x54cd8105
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.46.blockedObjectId=null
+td.2.46.blockerId=null
+td.2.46.condition=prio=5 id=0x1780 pid=13235 waiting
+td.2.46.header="SNMP Service Thread" prio=5 id=0x1780 pid=13235 waiting
+td.2.46.id=0x1780
+td.2.46.name=SNMP Service Thread
+td.2.46.isBlocked=false
+td.2.46.isDaemon=false
+td.2.46.isDeadLocked=false
+td.2.46.isIdle=true
+
+#"Thread-5" prio=5 id=0x1800 pid=13236 waiting
+#   -- Waiting for notification on: java/lang/Object@0x428a1b88[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+#   ^-- Lock released while waiting: java/lang/Object@0x428a1b88[fat lock]
+#   at com/adventnet/snmp/snmp2/SnmpAPI.run(SnmpAPI.java:134)@0x54cdc659
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.47.blockedObjectId=null
+td.2.47.blockerId=null
+td.2.47.condition=prio=5 id=0x1800 pid=13236 waiting
+td.2.47.header="Thread-5" prio=5 id=0x1800 pid=13236 waiting
+td.2.47.id=0x1800
+td.2.47.name=Thread-5
+td.2.47.isBlocked=false
+td.2.47.isDaemon=false
+td.2.47.isDeadLocked=false
+td.2.47.isIdle=true
+
+#"Thread-10" prio=5 id=0x1880 pid=13243 active
+#   at jrockit/net/SocketNativeIO.receive(Native Method)@0x53e9bec0
+#   at jrockit/net/SocketNativeIO.receive(Unknown Source)@0x53e9bff0
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9beb0
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bdcd
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bd97
+#   at java/net/DatagramSocket.receive(Unknown Source)@0x53e9bcf2
+#   ^-- Holding lock: java/net/DatagramPacket@0x4218e9c0[thin lock]
+#   ^-- Holding lock: java/net/DatagramSocket@0x422c6b68[thin lock]
+#   at com/adventnet/snmp/snmp2/IpTSocket.receive(IpTSocket.java:30)@0x54cde28f
+#   ^-- Holding lock: com/adventnet/snmp/snmp2/IpTSocket@0x422c6b58[thin lock]
+#   at com/adventnet/snmp/snmp2/SnmpSession.receiver(SnmpSession.java:1530)@0x54cdd817
+#   at com/adventnet/snmp/snmp2/SnmpSession.run(SnmpSession.java:653)@0x54cdd72e
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.48.blockedObjectId=null
+td.2.48.blockerId=null
+td.2.48.condition=prio=5 id=0x1880 pid=13243 active
+td.2.48.header="Thread-10" prio=5 id=0x1880 pid=13243 active
+td.2.48.id=0x1880
+td.2.48.name=Thread-10
+td.2.48.isBlocked=false
+td.2.48.isDaemon=false
+td.2.48.isDeadLocked=false
+td.2.48.isIdle=false
+
+#"Thread-7" prio=5 id=0x1900 pid=13238 active
+#   at jrockit/net/SocketNativeIO.receive(Native Method)@0x53e9bec0
+#   at jrockit/net/SocketNativeIO.receive(Unknown Source)@0x53e9bff0
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9beb0
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bdcd
+#   at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bd97
+#   at java/net/DatagramSocket.receive(Unknown Source)@0x53e9bcf2
+#   ^-- Holding lock: java/net/DatagramSocket@0x4276d038[thin lock]
+#   ^-- Holding lock: java/net/DatagramPacket@0x428a2398[thin lock]
+#   at com/adventnet/snmp/snmp2/IpTSocket.receive(IpTSocket.java:30)@0x54cde28f
+#   ^-- Holding lock: com/adventnet/snmp/snmp2/IpTSocket@0x4276d028[thin lock]
+#   at com/adventnet/snmp/snmp2/SnmpSession.receiver(SnmpSession.java:1530)@0x54cdd817
+#   at com/adventnet/snmp/snmp2/SnmpSession.run(SnmpSession.java:653)@0x54cdd72e
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.49.blockedObjectId=null
+td.2.49.blockerId=null
+td.2.49.condition=prio=5 id=0x1900 pid=13238 active
+td.2.49.header="Thread-7" prio=5 id=0x1900 pid=13238 active
+td.2.49.id=0x1900
+td.2.49.name=Thread-7
+td.2.49.isBlocked=false
+td.2.49.isDaemon=false
+td.2.49.isDeadLocked=false
+td.2.49.isIdle=false
+
+#"ListenThread.Default" prio=5 id=0x1980 pid=13245 active
+#   at jrockit/net/SocketNativeIO.accept(Native Method)@0x40de0310
+#   at jrockit/net/SocketNativeIO.accept(Unknown Source)@0x40de03db
+#   at java/net/AbstractSocketImpl.accept(Unknown Source)@0x40de0213
+#   ^-- Holding lock: java/net/PlainSocketImpl@0x435a5450[thin lock]
+#   at java/net/ServerSocket.implAccept(ServerSocket.java:448)@0x40de00fc
+#   at java/net/ServerSocket.accept(ServerSocket.java:419)@0x40d8ff4c
+#   at weblogic/socket/WeblogicServerSocket.accept(WeblogicServerSocket.java:24)@0x55655737
+#   at weblogic/t3/srvr/ListenThread.accept(ListenThread.java:739)@0x55655717
+#   at weblogic/t3/srvr/ListenThread.run(ListenThread.java:292)@0x55653430
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.50.blockedObjectId=null
+td.2.50.blockerId=null
+td.2.50.condition=prio=5 id=0x1980 pid=13245 active
+td.2.50.header="ListenThread.Default" prio=5 id=0x1980 pid=13245 active
+td.2.50.id=0x1980
+td.2.50.name=ListenThread.Default
+td.2.50.isBlocked=false
+td.2.50.isDaemon=false
+td.2.50.isDeadLocked=false
+td.2.50.isIdle=false
+
+#"ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" prio=5 id=0x1a00 pid=13242 waiting, daemon
+#   -- Waiting for notification on: weblogic/jms/backend/BETimerTree@0x4260e298[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at weblogic/jms/backend/BETimerTree.execute(BETimerTree.java:146)@0x550daa6a
+#   ^-- Lock released while waiting: weblogic/jms/backend/BETimerTree@0x4260e298[fat lock]
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.51.blockedObjectId=null
+td.2.51.blockerId=null
+td.2.51.condition=prio=5 id=0x1a00 pid=13242 waiting, daemon
+td.2.51.header="ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" prio=5 id=0x1a00 pid=13242 waiting, daemon
+td.2.51.id=0x1a00
+td.2.51.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
+td.2.51.isBlocked=false
+td.2.51.isDaemon=true
+td.2.51.isDeadLocked=false
+td.2.51.isIdle=true
+
+#"Thread-11" prio=5 id=0x1a80 pid=13244 waiting, daemon
+#   -- Waiting for notification on: java/util/TaskQueue@0x43630928[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/util/TimerThread.mainLoop(Timer.java:429)@0x5337eae3
+#   ^-- Lock released while waiting: java/util/TaskQueue@0x43630928[fat lock]
+#   at java/util/TimerThread.run(Timer.java:382)@0x5337e8e2
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.52.blockedObjectId=null
+td.2.52.blockerId=null
+td.2.52.condition=prio=5 id=0x1a80 pid=13244 waiting, daemon
+td.2.52.header="Thread-11" prio=5 id=0x1a80 pid=13244 waiting, daemon
+td.2.52.id=0x1a80
+td.2.52.name=Thread-11
+td.2.52.isBlocked=false
+td.2.52.isDaemon=true
+td.2.52.isDeadLocked=false
+td.2.52.isIdle=true
+
+#"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b00 pid=13246 blocked, daemon
+#   -- Blocked trying to get lock: java/lang/String@0x435f6908[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.lockFat(Unknown Source)@0x40d02376
+#   at jrockit/vm/Locks.monitorEnterSlowCase(Unknown Source)@0x52377257
+#   at jrockit/vm/Locks.monitorEnter(Native Method)@0x40d00fc3
+#   at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:91)@0x55654efc
+#   at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.53.blockedObjectId=0x435f6908
+td.2.53.blockerId=0x1b80
+td.2.53.condition=prio=5 id=0x1b00 pid=13246 blocked, daemon
+td.2.53.header="ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b00 pid=13246 blocked, daemon
+td.2.53.id=0x1b00
+td.2.53.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
+td.2.53.isBlocked=true
+td.2.53.isDaemon=true
+td.2.53.isDeadLocked=false
+td.2.53.isIdle=false
+
+#"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b80 pid=13247 waiting, daemon
+#   -- Waiting for notification on: [Lweblogic/socket/PosixSocketInfo$FdStruct;@0x43fe3438[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:95)@0x55654f27
+#   ^-- Holding lock: java/lang/String@0x435f6908[fat lock]
+#   ^-- Lock released while waiting: [Lweblogic/socket/PosixSocketInfo$FdStruct;@0x43fe3438[fat lock]
+#   at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.54.blockedObjectId=null
+td.2.54.blockerId=null
+td.2.54.condition=prio=5 id=0x1b80 pid=13247 waiting, daemon
+td.2.54.header="ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b80 pid=13247 waiting, daemon
+td.2.54.id=0x1b80
+td.2.54.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
+td.2.54.isBlocked=false
+td.2.54.isDaemon=true
+td.2.54.isDeadLocked=false
+td.2.54.isIdle=true
+
+#"ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1c00 pid=13248 blocked, daemon
+#   -- Blocked trying to get lock: java/lang/String@0x435f6908[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.raceForTheFatLock(Unknown Source)@0x40d0228c
+#   at jrockit/vm/Locks.lockFat(Unknown Source)@0x40d02385
+#   at jrockit/vm/Locks.monitorEnterSlowCase(Unknown Source)@0x52377257
+#   at jrockit/vm/Locks.monitorEnter(Native Method)@0x40d00fc3
+#   at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:91)@0x55654efc
+#   at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+#   at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.55.blockedObjectId=0x435f6908
+td.2.55.blockerId=0x1b80
+td.2.55.condition=prio=5 id=0x1c00 pid=13248 blocked, daemon
+td.2.55.header="ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1c00 pid=13248 blocked, daemon
+td.2.55.id=0x1c00
+td.2.55.name=ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'
+td.2.55.isBlocked=true
+td.2.55.isDaemon=true
+td.2.55.isDeadLocked=false
+td.2.55.isIdle=false
+
+#"ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" prio=5 id=0x1c80 pid=13273 waiting, daemon
+#   -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb3a18[fat lock]
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+#   at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+#   ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb3a18[fat lock]
+#   at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.56.blockedObjectId=null
+td.2.56.blockerId=null
+td.2.56.condition=prio=5 id=0x1c80 pid=13273 waiting, daemon
+td.2.56.header="ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" prio=5 id=0x1c80 pid=13273 waiting, daemon
+td.2.56.id=0x1c80
+td.2.56.name=ExecuteThread: '3' for queue: 'JMS.TimerClientPool'
+td.2.56.isBlocked=false
+td.2.56.isDaemon=true
+td.2.56.isDeadLocked=false
+td.2.56.isIdle=true
+
+#"[JRockit] Write Queue" prio=5 id=0x1d00 pid=13319 waiting, daemon
+#   -- Waiting for notification on: com/jrockit/management/rmp/RmpWriterThread@0x42e76f28[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at com/jrockit/management/rmp/RmpWriterThread.run(RmpWriterThread.java:128)@0x52a0d25f
+#   ^-- Lock released while waiting: com/jrockit/management/rmp/RmpWriterThread@0x42e76f28[fat lock]
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.57.blockedObjectId=null
+td.2.57.blockerId=null
+td.2.57.condition=prio=5 id=0x1d00 pid=13319 waiting, daemon
+td.2.57.header="[JRockit] Write Queue" prio=5 id=0x1d00 pid=13319 waiting, daemon
+td.2.57.id=0x1d00
+td.2.57.name=[JRockit] Write Queue
+td.2.57.isBlocked=false
+td.2.57.isDaemon=true
+td.2.57.isDeadLocked=false
+td.2.57.isIdle=true
+
+#"[JRockit] Management Server" prio=5 id=0x1d80 pid=13321 active, daemon
+#   at jrockit/net/SocketNativeIO.read(Native Method)@0x52377100
+#   at jrockit/net/SocketNativeIO.read(Unknown Source)@0x523771a7
+#   at java/net/AbstractSocketImpl$1.read(Unknown Source)@0x52377070
+#   at jrockit/io/NativeIOInputStream.read(Unknown Source)@0x40d4e34c
+#   at jrockit/io/NativeIOInputStream.read(Unknown Source)@0x40d4e2f1
+#   at com/jrockit/common/rmp/RmpPacket.readBytesFromInputStream(RmpPacket.java:465)@0x52a0d795
+#   at com/jrockit/common/rmp/RmpPacket.readPacketLengthFromInputStream(RmpPacket.java:587)@0x52a0d698
+#   at com/jrockit/common/rmp/RmpPacket.readFromStream(RmpPacket.java:495)@0x52a0d476
+#   at com/jrockit/common/rmp/RmpPacket.readFromStream(RmpPacket.java:569)@0x52a0dffa
+#   at com/jrockit/management/rmp/RmpServer.runConnectionLoop(RmpServer.java:348)@0x52a0dc1a
+#   at com/jrockit/management/rmp/RmpServer.run(RmpServer.java:163)@0x52a0d335
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.58.blockedObjectId=null
+td.2.58.blockerId=null
+td.2.58.condition=prio=5 id=0x1d80 pid=13321 active, daemon
+td.2.58.header="[JRockit] Management Server" prio=5 id=0x1d80 pid=13321 active, daemon
+td.2.58.id=0x1d80
+td.2.58.name=[JRockit] Management Server
+td.2.58.isBlocked=false
+td.2.58.isDaemon=true
+td.2.58.isDeadLocked=false
+td.2.58.isIdle=false
+
+#"[JRockit] Subscription Update" prio=5 id=0x1e00 pid=13322 waiting, daemon
+#   -- Waiting for notification on: java/lang/Object@0x42acfc40[fat lock]
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+#   at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+#   at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+#   ^-- Lock released while waiting: java/lang/Object@0x42acfc40[fat lock]
+#   at com/jrockit/management/rmp/RmpSubscriptionThread.run(RmpSubscriptionThread.java:92)@0x52a0e030
+#   at java/lang/Thread.run(Unknown Source)@0x40d8feff
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+#   --- End of stack trace
+td.2.59.blockedObjectId=null
+td.2.59.blockerId=null
+td.2.59.condition=prio=5 id=0x1e00 pid=13322 waiting, daemon
+td.2.59.header="[JRockit] Subscription Update" prio=5 id=0x1e00 pid=13322 waiting, daemon
+td.2.59.id=0x1e00
+td.2.59.name=[JRockit] Subscription Update
+td.2.59.isBlocked=false
+td.2.59.isDaemon=true
+td.2.59.isDeadLocked=false
+td.2.59.isIdle=true
+

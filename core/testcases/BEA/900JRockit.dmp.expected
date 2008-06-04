@@ -1,0 +1,1356 @@
+ftd.0.deadLockSize=1
+ftd.0.threadCount=25
+#"FSCacheRefQueueThread" daemon prio=2 tid=0x2b74b1e8 nid=0x1414 in Object.wait() [0x2d47f000..0x2d47fd68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x03ad0060> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+#	- locked <0x03ad0060> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+#	at workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+td.0.0.blockedObjectId=null
+td.0.0.blockerId=null
+td.0.0.condition=daemon prio=2 tid=0x2b74b1e8 nid=0x1414 in Object.wait() [0x2d47f000..0x2d47fd68]
+td.0.0.header="FSCacheRefQueueThread" daemon prio=2 tid=0x2b74b1e8 nid=0x1414 in Object.wait() [0x2d47f000..0x2d47fd68]
+td.0.0.id=0x2b74b1e8
+td.0.0.name=FSCacheRefQueueThread
+td.0.0.isBlocked=false
+td.0.0.isDaemon=true
+td.0.0.isDeadLocked=false
+td.0.0.isIdle=true
+
+#"DynamicListenThread[Default]" daemon prio=9 tid=0x2b68d7a0 nid=0x3e4 runnable [0x2d43f000..0x2d43f9e8]
+#	at java.net.PlainSocketImpl.socketAccept(Native Method)
+#	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+#	- locked <0x06970270> (a java.net.SocksSocketImpl)
+#	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+#	at java.net.ServerSocket.accept(ServerSocket.java:421)
+#	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+#	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+#	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+#	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+#	at java.lang.Thread.run(Thread.java:595)
+td.0.1.blockedObjectId=null
+td.0.1.blockerId=null
+td.0.1.condition=daemon prio=9 tid=0x2b68d7a0 nid=0x3e4 runnable [0x2d43f000..0x2d43f9e8]
+td.0.1.header="DynamicListenThread[Default]" daemon prio=9 tid=0x2b68d7a0 nid=0x3e4 runnable [0x2d43f000..0x2d43f9e8]
+td.0.1.id=0x2b68d7a0
+td.0.1.name=DynamicListenThread[Default]
+td.0.1.isBlocked=false
+td.0.1.isDaemon=true
+td.0.1.isDeadLocked=false
+td.0.1.isIdle=false
+
+#"DynamicListenThread[Default[1]]" daemon prio=9 tid=0x2c4ffd70 nid=0xbdc runnable [0x2d3ff000..0x2d3ffa68]
+#	at java.net.PlainSocketImpl.socketAccept(Native Method)
+#	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+#	- locked <0x069704b0> (a java.net.SocksSocketImpl)
+#	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+#	at java.net.ServerSocket.accept(ServerSocket.java:421)
+#	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+#	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+#	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+#	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+#	at java.lang.Thread.run(Thread.java:595)
+td.0.2.blockedObjectId=null
+td.0.2.blockerId=null
+td.0.2.condition=daemon prio=9 tid=0x2c4ffd70 nid=0xbdc runnable [0x2d3ff000..0x2d3ffa68]
+td.0.2.header="DynamicListenThread[Default[1]]" daemon prio=9 tid=0x2c4ffd70 nid=0xbdc runnable [0x2d3ff000..0x2d3ffa68]
+td.0.2.id=0x2c4ffd70
+td.0.2.name=DynamicListenThread[Default[1]]
+td.0.2.isBlocked=false
+td.0.2.isDaemon=true
+td.0.2.isDeadLocked=false
+td.0.2.isIdle=false
+
+#"[STANDBY] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bebe008 nid=0x130c in Object.wait() [0x2b5bf000..0x2b5bfae8]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x06970640> (a weblogic.work.ExecuteThread)
+#	at java.lang.Object.wait(Object.java:474)
+#	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+#	- locked <0x06970640> (a weblogic.work.ExecuteThread)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+td.0.3.blockedObjectId=null
+td.0.3.blockerId=null
+td.0.3.condition=daemon prio=5 tid=0x2bebe008 nid=0x130c in Object.wait() [0x2b5bf000..0x2b5bfae8]
+td.0.3.header="[STANDBY] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bebe008 nid=0x130c in Object.wait() [0x2b5bf000..0x2b5bfae8]
+td.0.3.id=0x2bebe008
+td.0.3.name=[STANDBY] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.0.3.isBlocked=false
+td.0.3.isDaemon=true
+td.0.3.isDeadLocked=false
+td.0.3.isIdle=true
+
+#"weblogic.GCMonitor" daemon prio=5 tid=0x2b092008 nid=0x126c in Object.wait() [0x2b57f000..0x2b57fb68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x06970760> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+#	- locked <0x06970760> (a java.lang.ref.ReferenceQueue$Lock)
+#	at weblogic.platform.GCMonitorThread.waitForNotification(GCMonitorThread.java:88)
+#	at weblogic.platform.GCMonitorThread.run(GCMonitorThread.java:64)
+td.0.4.blockedObjectId=null
+td.0.4.blockerId=null
+td.0.4.condition=daemon prio=5 tid=0x2b092008 nid=0x126c in Object.wait() [0x2b57f000..0x2b57fb68]
+td.0.4.header="weblogic.GCMonitor" daemon prio=5 tid=0x2b092008 nid=0x126c in Object.wait() [0x2b57f000..0x2b57fb68]
+td.0.4.id=0x2b092008
+td.0.4.name=weblogic.GCMonitor
+td.0.4.isBlocked=false
+td.0.4.isDaemon=true
+td.0.4.isDeadLocked=false
+td.0.4.isIdle=true
+
+#"weblogic.store._WLS_AdminServer" daemon prio=10 tid=0x2c427a30 nid=0x14f8 waiting on condition [0x2b4ff000..0x2b4ffbe8]
+#	at sun.misc.Unsafe.park(Native Method)
+#	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+#	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+#	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+#	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+#	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:520)
+#	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:556)
+#	at java.lang.Thread.run(Thread.java:595)
+td.0.5.blockedObjectId=null
+td.0.5.blockerId=null
+td.0.5.condition=daemon prio=10 tid=0x2c427a30 nid=0x14f8 waiting on condition [0x2b4ff000..0x2b4ffbe8]
+td.0.5.header="weblogic.store._WLS_AdminServer" daemon prio=10 tid=0x2c427a30 nid=0x14f8 waiting on condition [0x2b4ff000..0x2b4ffbe8]
+td.0.5.id=0x2c427a30
+td.0.5.name=weblogic.store._WLS_AdminServer
+td.0.5.isBlocked=false
+td.0.5.isDaemon=true
+td.0.5.isDeadLocked=false
+td.0.5.isIdle=false
+
+#"[STANDBY] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c451470 nid=0x168c in Object.wait() [0x2b53f000..0x2b53fce8]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05fc2cb0> (a weblogic.work.ExecuteThread)
+#	at java.lang.Object.wait(Object.java:474)
+#	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+#	- locked <0x05fc2cb0> (a weblogic.work.ExecuteThread)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+td.0.6.blockedObjectId=null
+td.0.6.blockerId=null
+td.0.6.condition=daemon prio=5 tid=0x2c451470 nid=0x168c in Object.wait() [0x2b53f000..0x2b53fce8]
+td.0.6.header="[STANDBY] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c451470 nid=0x168c in Object.wait() [0x2b53f000..0x2b53fce8]
+td.0.6.id=0x2c451470
+td.0.6.name=[STANDBY] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.0.6.isBlocked=false
+td.0.6.isDaemon=true
+td.0.6.isDeadLocked=false
+td.0.6.isIdle=true
+
+#"VDE Transaction Processor Thread" daemon prio=2 tid=0x2c429600 nid=0x11e8 in Object.wait() [0x2b38f000..0x2b38fd68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05fc2d58> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+#	at java.lang.Object.wait(Object.java:474)
+#	at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+#	- locked <0x05fc2d58> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+#	at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+td.0.7.blockedObjectId=null
+td.0.7.blockerId=null
+td.0.7.condition=daemon prio=2 tid=0x2c429600 nid=0x11e8 in Object.wait() [0x2b38f000..0x2b38fd68]
+td.0.7.header="VDE Transaction Processor Thread" daemon prio=2 tid=0x2c429600 nid=0x11e8 in Object.wait() [0x2b38f000..0x2b38fd68]
+td.0.7.id=0x2c429600
+td.0.7.name=VDE Transaction Processor Thread
+td.0.7.isBlocked=false
+td.0.7.isDaemon=true
+td.0.7.isDeadLocked=false
+td.0.7.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2bffed78 nid=0xc10 runnable [0x2b34f000..0x2b34f9e8]
+#	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+#	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+#	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+#	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+#	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+#	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+td.0.8.blockedObjectId=null
+td.0.8.blockerId=null
+td.0.8.condition=daemon prio=5 tid=0x2bffed78 nid=0xc10 runnable [0x2b34f000..0x2b34f9e8]
+td.0.8.header="ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2bffed78 nid=0xc10 runnable [0x2b34f000..0x2b34f9e8]
+td.0.8.id=0x2bffed78
+td.0.8.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
+td.0.8.isBlocked=false
+td.0.8.isDaemon=true
+td.0.8.isDeadLocked=false
+td.0.8.isIdle=false
+
+#"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2bffea10 nid=0x1294 runnable [0x2b30f000..0x2b30fa68]
+#	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+#	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+#	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+#	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+#	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+#	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+td.0.9.blockedObjectId=null
+td.0.9.blockerId=null
+td.0.9.condition=daemon prio=5 tid=0x2bffea10 nid=0x1294 runnable [0x2b30f000..0x2b30fa68]
+td.0.9.header="ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2bffea10 nid=0x1294 runnable [0x2b30f000..0x2b30fa68]
+td.0.9.id=0x2bffea10
+td.0.9.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
+td.0.9.isBlocked=false
+td.0.9.isDaemon=true
+td.0.9.isDeadLocked=false
+td.0.9.isIdle=false
+
+#"[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bffca60 nid=0x1678 waiting for monitor entry [0x2b2bf000..0x2b2bfae8]
+#	at jsp_servlet.__index._jspService(__index.java:122)
+#	- waiting to lock <0x03ad0140> (a java.lang.Object)
+#	- locked <0x03ad5c38> (a java.lang.Object)
+#	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+#	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+#	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+#	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+#	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+#	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+#	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+#	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+#	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+#	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+#	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+#	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+td.0.10.blockedObjectId=0x03ad0140
+td.0.10.blockerId=0x2bfc94d0
+td.0.10.condition=daemon prio=5 tid=0x2bffca60 nid=0x1678 waiting for monitor entry [0x2b2bf000..0x2b2bfae8]
+td.0.10.header="[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bffca60 nid=0x1678 waiting for monitor entry [0x2b2bf000..0x2b2bfae8]
+td.0.10.id=0x2bffca60
+td.0.10.name=[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.0.10.isBlocked=true
+td.0.10.isDaemon=true
+td.0.10.isDeadLocked=true
+td.0.10.isIdle=false
+
+#"[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bfdb4c0 nid=0x1774 in Object.wait() [0x2b27f000..0x2b27fb68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05ec3270> (a weblogic.work.ExecuteThread)
+#	at java.lang.Object.wait(Object.java:474)
+#	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+#	- locked <0x05ec3270> (a weblogic.work.ExecuteThread)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+td.0.11.blockedObjectId=null
+td.0.11.blockerId=null
+td.0.11.condition=daemon prio=5 tid=0x2bfdb4c0 nid=0x1774 in Object.wait() [0x2b27f000..0x2b27fb68]
+td.0.11.header="[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bfdb4c0 nid=0x1774 in Object.wait() [0x2b27f000..0x2b27fb68]
+td.0.11.id=0x2bfdb4c0
+td.0.11.name=[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.0.11.isBlocked=false
+td.0.11.isDaemon=true
+td.0.11.isDeadLocked=false
+td.0.11.isIdle=true
+
+#"weblogic.timers.TimerThread" daemon prio=9 tid=0x2bfd8408 nid=0x7b0 in Object.wait() [0x2b22f000..0x2b22fbe8]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05ec3380> (a weblogic.timers.internal.TimerThread)
+#	at weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:255)
+#	- locked <0x05ec3380> (a weblogic.timers.internal.TimerThread)
+td.0.12.blockedObjectId=null
+td.0.12.blockerId=null
+td.0.12.condition=daemon prio=9 tid=0x2bfd8408 nid=0x7b0 in Object.wait() [0x2b22f000..0x2b22fbe8]
+td.0.12.header="weblogic.timers.TimerThread" daemon prio=9 tid=0x2bfd8408 nid=0x7b0 in Object.wait() [0x2b22f000..0x2b22fbe8]
+td.0.12.id=0x2bfd8408
+td.0.12.name=weblogic.timers.TimerThread
+td.0.12.isBlocked=false
+td.0.12.isDaemon=true
+td.0.12.isDeadLocked=false
+td.0.12.isIdle=true
+
+#"weblogic.time.TimeEventGenerator" daemon prio=9 tid=0x2bfd5ef8 nid=0xbe4 in Object.wait() [0x2b1df000..0x2b1dfc68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05ec3438> (a weblogic.time.common.internal.TimeTable)
+#	at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+#	- locked <0x05ec3438> (a weblogic.time.common.internal.TimeTable)
+#	at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+#	at java.lang.Thread.run(Thread.java:595)
+td.0.13.blockedObjectId=null
+td.0.13.blockerId=null
+td.0.13.condition=daemon prio=9 tid=0x2bfd5ef8 nid=0xbe4 in Object.wait() [0x2b1df000..0x2b1dfc68]
+td.0.13.header="weblogic.time.TimeEventGenerator" daemon prio=9 tid=0x2bfd5ef8 nid=0xbe4 in Object.wait() [0x2b1df000..0x2b1dfc68]
+td.0.13.id=0x2bfd5ef8
+td.0.13.name=weblogic.time.TimeEventGenerator
+td.0.13.isBlocked=false
+td.0.13.isDaemon=true
+td.0.13.isDeadLocked=false
+td.0.13.isIdle=true
+
+#"[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bfc94d0 nid=0x17d8 waiting for monitor entry [0x2b19f000..0x2b19fce8]
+#	at jsp_servlet.__index._jspService(__index.java:104)
+#	- waiting to lock <0x03ad5c38> (a java.lang.Object)
+#	- locked <0x03ad0140> (a java.lang.Object)
+#	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+#	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+#	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+#	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+#	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+#	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+#	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+#	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+#	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+#	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+#	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+#	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+td.0.14.blockedObjectId=0x03ad5c38
+td.0.14.blockerId=0x2bffca60
+td.0.14.condition=daemon prio=5 tid=0x2bfc94d0 nid=0x17d8 waiting for monitor entry [0x2b19f000..0x2b19fce8]
+td.0.14.header="[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bfc94d0 nid=0x17d8 waiting for monitor entry [0x2b19f000..0x2b19fce8]
+td.0.14.id=0x2bfc94d0
+td.0.14.name=[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.0.14.isBlocked=true
+td.0.14.isDaemon=true
+td.0.14.isDeadLocked=true
+td.0.14.isIdle=false
+
+#"Timer-1" daemon prio=5 tid=0x2af1b780 nid=0x13ac in Object.wait() [0x2b15f000..0x2b15fd68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05ec35c0> (a java.util.TaskQueue)
+#	at java.util.TimerThread.mainLoop(Timer.java:509)
+#	- locked <0x05ec35c0> (a java.util.TaskQueue)
+#	at java.util.TimerThread.run(Timer.java:462)
+td.0.15.blockedObjectId=null
+td.0.15.blockerId=null
+td.0.15.condition=daemon prio=5 tid=0x2af1b780 nid=0x13ac in Object.wait() [0x2b15f000..0x2b15fd68]
+td.0.15.header="Timer-1" daemon prio=5 tid=0x2af1b780 nid=0x13ac in Object.wait() [0x2b15f000..0x2b15fd68]
+td.0.15.id=0x2af1b780
+td.0.15.name=Timer-1
+td.0.15.isBlocked=false
+td.0.15.isDaemon=true
+td.0.15.isDeadLocked=false
+td.0.15.isIdle=true
+
+#"Timer-0" daemon prio=5 tid=0x2be77a00 nid=0x14dc in Object.wait() [0x2b0ef000..0x2b0ef9e8]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x052d01a0> (a java.util.TaskQueue)
+#	at java.lang.Object.wait(Object.java:474)
+#	at java.util.TimerThread.mainLoop(Timer.java:483)
+#	- locked <0x052d01a0> (a java.util.TaskQueue)
+#	at java.util.TimerThread.run(Timer.java:462)
+td.0.16.blockedObjectId=null
+td.0.16.blockerId=null
+td.0.16.condition=daemon prio=5 tid=0x2be77a00 nid=0x14dc in Object.wait() [0x2b0ef000..0x2b0ef9e8]
+td.0.16.header="Timer-0" daemon prio=5 tid=0x2be77a00 nid=0x14dc in Object.wait() [0x2b0ef000..0x2b0ef9e8]
+td.0.16.id=0x2be77a00
+td.0.16.name=Timer-0
+td.0.16.isBlocked=false
+td.0.16.isDaemon=true
+td.0.16.isDeadLocked=false
+td.0.16.isIdle=true
+
+#"Low Memory Detector" daemon prio=5 tid=0x00ab8ed0 nid=0x7a4 runnable [0x00000000..0x00000000]
+td.0.17.blockedObjectId=null
+td.0.17.blockerId=null
+td.0.17.condition=daemon prio=5 tid=0x00ab8ed0 nid=0x7a4 runnable [0x00000000..0x00000000]
+td.0.17.header="Low Memory Detector" daemon prio=5 tid=0x00ab8ed0 nid=0x7a4 runnable [0x00000000..0x00000000]
+td.0.17.id=0x00ab8ed0
+td.0.17.name=Low Memory Detector
+td.0.17.isBlocked=false
+td.0.17.isDaemon=true
+td.0.17.isDeadLocked=false
+td.0.17.isIdle=false
+
+#"CompilerThread0" daemon prio=10 tid=0x00ab7ac0 nid=0x133c waiting on condition [0x00000000..0x2ae2f8cc]
+td.0.18.blockedObjectId=null
+td.0.18.blockerId=null
+td.0.18.condition=daemon prio=10 tid=0x00ab7ac0 nid=0x133c waiting on condition [0x00000000..0x2ae2f8cc]
+td.0.18.header="CompilerThread0" daemon prio=10 tid=0x00ab7ac0 nid=0x133c waiting on condition [0x00000000..0x2ae2f8cc]
+td.0.18.id=0x00ab7ac0
+td.0.18.name=CompilerThread0
+td.0.18.isBlocked=false
+td.0.18.isDaemon=true
+td.0.18.isDeadLocked=false
+td.0.18.isIdle=false
+
+#"Signal Dispatcher" daemon prio=10 tid=0x00ac4c50 nid=0x1608 waiting on condition [0x00000000..0x00000000]
+td.0.19.blockedObjectId=null
+td.0.19.blockerId=null
+td.0.19.condition=daemon prio=10 tid=0x00ac4c50 nid=0x1608 waiting on condition [0x00000000..0x00000000]
+td.0.19.header="Signal Dispatcher" daemon prio=10 tid=0x00ac4c50 nid=0x1608 waiting on condition [0x00000000..0x00000000]
+td.0.19.id=0x00ac4c50
+td.0.19.name=Signal Dispatcher
+td.0.19.isBlocked=false
+td.0.19.isDaemon=true
+td.0.19.isDeadLocked=false
+td.0.19.isIdle=false
+
+#"Finalizer" daemon prio=9 tid=0x00aaa380 nid=0x16d4 in Object.wait() [0x2adaf000..0x2adafc68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x052d0330> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+#	- locked <0x052d0330> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+#	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+td.0.20.blockedObjectId=null
+td.0.20.blockerId=null
+td.0.20.condition=daemon prio=9 tid=0x00aaa380 nid=0x16d4 in Object.wait() [0x2adaf000..0x2adafc68]
+td.0.20.header="Finalizer" daemon prio=9 tid=0x00aaa380 nid=0x16d4 in Object.wait() [0x2adaf000..0x2adafc68]
+td.0.20.id=0x00aaa380
+td.0.20.name=Finalizer
+td.0.20.isBlocked=false
+td.0.20.isDaemon=true
+td.0.20.isDeadLocked=false
+td.0.20.isIdle=true
+
+#"Reference Handler" daemon prio=10 tid=0x00aa8ef0 nid=0x1744 in Object.wait() [0x2ad6f000..0x2ad6fce8]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x052d03b0> (a java.lang.ref.Reference$Lock)
+#	at java.lang.Object.wait(Object.java:474)
+#	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+#	- locked <0x052d03b0> (a java.lang.ref.Reference$Lock)
+td.0.21.blockedObjectId=null
+td.0.21.blockerId=null
+td.0.21.condition=daemon prio=10 tid=0x00aa8ef0 nid=0x1744 in Object.wait() [0x2ad6f000..0x2ad6fce8]
+td.0.21.header="Reference Handler" daemon prio=10 tid=0x00aa8ef0 nid=0x1744 in Object.wait() [0x2ad6f000..0x2ad6fce8]
+td.0.21.id=0x00aa8ef0
+td.0.21.name=Reference Handler
+td.0.21.isBlocked=false
+td.0.21.isDaemon=true
+td.0.21.isDeadLocked=false
+td.0.21.isIdle=true
+
+#"main" prio=5 tid=0x000399e8 nid=0x498 in Object.wait() [0x0007f000..0x0007fc3c]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x052d04a8> (a weblogic.t3.srvr.T3Srvr)
+#	at java.lang.Object.wait(Object.java:474)
+#	at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:727)
+#	- locked <0x052d04a8> (a weblogic.t3.srvr.T3Srvr)
+#	at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:379)
+#	at weblogic.Server.main(Server.java:66)
+td.0.22.blockedObjectId=null
+td.0.22.blockerId=null
+td.0.22.condition=prio=5 tid=0x000399e8 nid=0x498 in Object.wait() [0x0007f000..0x0007fc3c]
+td.0.22.header="main" prio=5 tid=0x000399e8 nid=0x498 in Object.wait() [0x0007f000..0x0007fc3c]
+td.0.22.id=0x000399e8
+td.0.22.name=main
+td.0.22.isBlocked=false
+td.0.22.isDaemon=false
+td.0.22.isDeadLocked=false
+td.0.22.isIdle=true
+
+#"VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+td.0.23.blockedObjectId=null
+td.0.23.blockerId=null
+td.0.23.condition=prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+td.0.23.header="VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+td.0.23.id=0x00aa65c8
+td.0.23.name=VM Thread
+td.0.23.isBlocked=false
+td.0.23.isDaemon=false
+td.0.23.isDeadLocked=false
+td.0.23.isIdle=false
+
+#"VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+td.0.24.blockedObjectId=null
+td.0.24.blockerId=null
+td.0.24.condition=prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+td.0.24.header="VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+td.0.24.id=0x00aba0a8
+td.0.24.name=VM Periodic Task Thread
+td.0.24.isBlocked=false
+td.0.24.isDaemon=false
+td.0.24.isDeadLocked=false
+td.0.24.isIdle=false
+
+ftd.1.deadLockSize=1
+ftd.1.threadCount=25
+#"FSCacheRefQueueThread" daemon prio=2 tid=0x2b74b1e8 nid=0x1414 in Object.wait() [0x2d47f000..0x2d47fd68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x03ad0060> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+#	- locked <0x03ad0060> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+#	at workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+td.1.0.blockedObjectId=null
+td.1.0.blockerId=null
+td.1.0.condition=daemon prio=2 tid=0x2b74b1e8 nid=0x1414 in Object.wait() [0x2d47f000..0x2d47fd68]
+td.1.0.header="FSCacheRefQueueThread" daemon prio=2 tid=0x2b74b1e8 nid=0x1414 in Object.wait() [0x2d47f000..0x2d47fd68]
+td.1.0.id=0x2b74b1e8
+td.1.0.name=FSCacheRefQueueThread
+td.1.0.isBlocked=false
+td.1.0.isDaemon=true
+td.1.0.isDeadLocked=false
+td.1.0.isIdle=true
+
+#"DynamicListenThread[Default]" daemon prio=9 tid=0x2b68d7a0 nid=0x3e4 runnable [0x2d43f000..0x2d43f9e8]
+#	at java.net.PlainSocketImpl.socketAccept(Native Method)
+#	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+#	- locked <0x06970270> (a java.net.SocksSocketImpl)
+#	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+#	at java.net.ServerSocket.accept(ServerSocket.java:421)
+#	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+#	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+#	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+#	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+#	at java.lang.Thread.run(Thread.java:595)
+td.1.1.blockedObjectId=null
+td.1.1.blockerId=null
+td.1.1.condition=daemon prio=9 tid=0x2b68d7a0 nid=0x3e4 runnable [0x2d43f000..0x2d43f9e8]
+td.1.1.header="DynamicListenThread[Default]" daemon prio=9 tid=0x2b68d7a0 nid=0x3e4 runnable [0x2d43f000..0x2d43f9e8]
+td.1.1.id=0x2b68d7a0
+td.1.1.name=DynamicListenThread[Default]
+td.1.1.isBlocked=false
+td.1.1.isDaemon=true
+td.1.1.isDeadLocked=false
+td.1.1.isIdle=false
+
+#"DynamicListenThread[Default[1]]" daemon prio=9 tid=0x2c4ffd70 nid=0xbdc runnable [0x2d3ff000..0x2d3ffa68]
+#	at java.net.PlainSocketImpl.socketAccept(Native Method)
+#	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+#	- locked <0x069704b0> (a java.net.SocksSocketImpl)
+#	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+#	at java.net.ServerSocket.accept(ServerSocket.java:421)
+#	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+#	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+#	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+#	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+#	at java.lang.Thread.run(Thread.java:595)
+td.1.2.blockedObjectId=null
+td.1.2.blockerId=null
+td.1.2.condition=daemon prio=9 tid=0x2c4ffd70 nid=0xbdc runnable [0x2d3ff000..0x2d3ffa68]
+td.1.2.header="DynamicListenThread[Default[1]]" daemon prio=9 tid=0x2c4ffd70 nid=0xbdc runnable [0x2d3ff000..0x2d3ffa68]
+td.1.2.id=0x2c4ffd70
+td.1.2.name=DynamicListenThread[Default[1]]
+td.1.2.isBlocked=false
+td.1.2.isDaemon=true
+td.1.2.isDeadLocked=false
+td.1.2.isIdle=false
+
+#"[STANDBY] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bebe008 nid=0x130c in Object.wait() [0x2b5bf000..0x2b5bfae8]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x06970640> (a weblogic.work.ExecuteThread)
+#	at java.lang.Object.wait(Object.java:474)
+#	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+#	- locked <0x06970640> (a weblogic.work.ExecuteThread)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+td.1.3.blockedObjectId=null
+td.1.3.blockerId=null
+td.1.3.condition=daemon prio=5 tid=0x2bebe008 nid=0x130c in Object.wait() [0x2b5bf000..0x2b5bfae8]
+td.1.3.header="[STANDBY] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bebe008 nid=0x130c in Object.wait() [0x2b5bf000..0x2b5bfae8]
+td.1.3.id=0x2bebe008
+td.1.3.name=[STANDBY] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.1.3.isBlocked=false
+td.1.3.isDaemon=true
+td.1.3.isDeadLocked=false
+td.1.3.isIdle=true
+
+#"weblogic.GCMonitor" daemon prio=5 tid=0x2b092008 nid=0x126c in Object.wait() [0x2b57f000..0x2b57fb68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x06970760> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+#	- locked <0x06970760> (a java.lang.ref.ReferenceQueue$Lock)
+#	at weblogic.platform.GCMonitorThread.waitForNotification(GCMonitorThread.java:88)
+#	at weblogic.platform.GCMonitorThread.run(GCMonitorThread.java:64)
+td.1.4.blockedObjectId=null
+td.1.4.blockerId=null
+td.1.4.condition=daemon prio=5 tid=0x2b092008 nid=0x126c in Object.wait() [0x2b57f000..0x2b57fb68]
+td.1.4.header="weblogic.GCMonitor" daemon prio=5 tid=0x2b092008 nid=0x126c in Object.wait() [0x2b57f000..0x2b57fb68]
+td.1.4.id=0x2b092008
+td.1.4.name=weblogic.GCMonitor
+td.1.4.isBlocked=false
+td.1.4.isDaemon=true
+td.1.4.isDeadLocked=false
+td.1.4.isIdle=true
+
+#"weblogic.store._WLS_AdminServer" daemon prio=10 tid=0x2c427a30 nid=0x14f8 waiting on condition [0x2b4ff000..0x2b4ffbe8]
+#	at sun.misc.Unsafe.park(Native Method)
+#	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+#	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+#	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+#	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+#	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:520)
+#	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:556)
+#	at java.lang.Thread.run(Thread.java:595)
+td.1.5.blockedObjectId=null
+td.1.5.blockerId=null
+td.1.5.condition=daemon prio=10 tid=0x2c427a30 nid=0x14f8 waiting on condition [0x2b4ff000..0x2b4ffbe8]
+td.1.5.header="weblogic.store._WLS_AdminServer" daemon prio=10 tid=0x2c427a30 nid=0x14f8 waiting on condition [0x2b4ff000..0x2b4ffbe8]
+td.1.5.id=0x2c427a30
+td.1.5.name=weblogic.store._WLS_AdminServer
+td.1.5.isBlocked=false
+td.1.5.isDaemon=true
+td.1.5.isDeadLocked=false
+td.1.5.isIdle=false
+
+#"[STANDBY] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c451470 nid=0x168c in Object.wait() [0x2b53f000..0x2b53fce8]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05fc2cb0> (a weblogic.work.ExecuteThread)
+#	at java.lang.Object.wait(Object.java:474)
+#	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+#	- locked <0x05fc2cb0> (a weblogic.work.ExecuteThread)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+td.1.6.blockedObjectId=null
+td.1.6.blockerId=null
+td.1.6.condition=daemon prio=5 tid=0x2c451470 nid=0x168c in Object.wait() [0x2b53f000..0x2b53fce8]
+td.1.6.header="[STANDBY] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c451470 nid=0x168c in Object.wait() [0x2b53f000..0x2b53fce8]
+td.1.6.id=0x2c451470
+td.1.6.name=[STANDBY] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.1.6.isBlocked=false
+td.1.6.isDaemon=true
+td.1.6.isDeadLocked=false
+td.1.6.isIdle=true
+
+#"VDE Transaction Processor Thread" daemon prio=2 tid=0x2c429600 nid=0x11e8 in Object.wait() [0x2b38f000..0x2b38fd68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05fc2d58> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+#	at java.lang.Object.wait(Object.java:474)
+#	at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+#	- locked <0x05fc2d58> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+#	at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+td.1.7.blockedObjectId=null
+td.1.7.blockerId=null
+td.1.7.condition=daemon prio=2 tid=0x2c429600 nid=0x11e8 in Object.wait() [0x2b38f000..0x2b38fd68]
+td.1.7.header="VDE Transaction Processor Thread" daemon prio=2 tid=0x2c429600 nid=0x11e8 in Object.wait() [0x2b38f000..0x2b38fd68]
+td.1.7.id=0x2c429600
+td.1.7.name=VDE Transaction Processor Thread
+td.1.7.isBlocked=false
+td.1.7.isDaemon=true
+td.1.7.isDeadLocked=false
+td.1.7.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2bffed78 nid=0xc10 runnable [0x2b34f000..0x2b34f9e8]
+#	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+#	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+#	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+#	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+#	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+#	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+td.1.8.blockedObjectId=null
+td.1.8.blockerId=null
+td.1.8.condition=daemon prio=5 tid=0x2bffed78 nid=0xc10 runnable [0x2b34f000..0x2b34f9e8]
+td.1.8.header="ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2bffed78 nid=0xc10 runnable [0x2b34f000..0x2b34f9e8]
+td.1.8.id=0x2bffed78
+td.1.8.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
+td.1.8.isBlocked=false
+td.1.8.isDaemon=true
+td.1.8.isDeadLocked=false
+td.1.8.isIdle=false
+
+#"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2bffea10 nid=0x1294 runnable [0x2b30f000..0x2b30fa68]
+#	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+#	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+#	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+#	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+#	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+#	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+td.1.9.blockedObjectId=null
+td.1.9.blockerId=null
+td.1.9.condition=daemon prio=5 tid=0x2bffea10 nid=0x1294 runnable [0x2b30f000..0x2b30fa68]
+td.1.9.header="ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2bffea10 nid=0x1294 runnable [0x2b30f000..0x2b30fa68]
+td.1.9.id=0x2bffea10
+td.1.9.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
+td.1.9.isBlocked=false
+td.1.9.isDaemon=true
+td.1.9.isDeadLocked=false
+td.1.9.isIdle=false
+
+#"[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bffca60 nid=0x1678 waiting for monitor entry [0x2b2bf000..0x2b2bfae8]
+#	at jsp_servlet.__index._jspService(__index.java:122)
+#	- waiting to lock <0x03ad0140> (a java.lang.Object)
+#	- locked <0x03ad5c38> (a java.lang.Object)
+#	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+#	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+#	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+#	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+#	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+#	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+#	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+#	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+#	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+#	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+#	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+#	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+td.1.10.blockedObjectId=0x03ad0140
+td.1.10.blockerId=0x2bfc94d0
+td.1.10.condition=daemon prio=5 tid=0x2bffca60 nid=0x1678 waiting for monitor entry [0x2b2bf000..0x2b2bfae8]
+td.1.10.header="[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bffca60 nid=0x1678 waiting for monitor entry [0x2b2bf000..0x2b2bfae8]
+td.1.10.id=0x2bffca60
+td.1.10.name=[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.1.10.isBlocked=true
+td.1.10.isDaemon=true
+td.1.10.isDeadLocked=true
+td.1.10.isIdle=false
+
+#"[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bfdb4c0 nid=0x1774 in Object.wait() [0x2b27f000..0x2b27fb68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05ec3270> (a weblogic.work.ExecuteThread)
+#	at java.lang.Object.wait(Object.java:474)
+#	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+#	- locked <0x05ec3270> (a weblogic.work.ExecuteThread)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+td.1.11.blockedObjectId=null
+td.1.11.blockerId=null
+td.1.11.condition=daemon prio=5 tid=0x2bfdb4c0 nid=0x1774 in Object.wait() [0x2b27f000..0x2b27fb68]
+td.1.11.header="[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bfdb4c0 nid=0x1774 in Object.wait() [0x2b27f000..0x2b27fb68]
+td.1.11.id=0x2bfdb4c0
+td.1.11.name=[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.1.11.isBlocked=false
+td.1.11.isDaemon=true
+td.1.11.isDeadLocked=false
+td.1.11.isIdle=true
+
+#"weblogic.timers.TimerThread" daemon prio=9 tid=0x2bfd8408 nid=0x7b0 in Object.wait() [0x2b22f000..0x2b22fbe8]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05ec3380> (a weblogic.timers.internal.TimerThread)
+#	at weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:255)
+#	- locked <0x05ec3380> (a weblogic.timers.internal.TimerThread)
+td.1.12.blockedObjectId=null
+td.1.12.blockerId=null
+td.1.12.condition=daemon prio=9 tid=0x2bfd8408 nid=0x7b0 in Object.wait() [0x2b22f000..0x2b22fbe8]
+td.1.12.header="weblogic.timers.TimerThread" daemon prio=9 tid=0x2bfd8408 nid=0x7b0 in Object.wait() [0x2b22f000..0x2b22fbe8]
+td.1.12.id=0x2bfd8408
+td.1.12.name=weblogic.timers.TimerThread
+td.1.12.isBlocked=false
+td.1.12.isDaemon=true
+td.1.12.isDeadLocked=false
+td.1.12.isIdle=true
+
+#"weblogic.time.TimeEventGenerator" daemon prio=9 tid=0x2bfd5ef8 nid=0xbe4 in Object.wait() [0x2b1df000..0x2b1dfc68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05ec3438> (a weblogic.time.common.internal.TimeTable)
+#	at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+#	- locked <0x05ec3438> (a weblogic.time.common.internal.TimeTable)
+#	at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+#	at java.lang.Thread.run(Thread.java:595)
+td.1.13.blockedObjectId=null
+td.1.13.blockerId=null
+td.1.13.condition=daemon prio=9 tid=0x2bfd5ef8 nid=0xbe4 in Object.wait() [0x2b1df000..0x2b1dfc68]
+td.1.13.header="weblogic.time.TimeEventGenerator" daemon prio=9 tid=0x2bfd5ef8 nid=0xbe4 in Object.wait() [0x2b1df000..0x2b1dfc68]
+td.1.13.id=0x2bfd5ef8
+td.1.13.name=weblogic.time.TimeEventGenerator
+td.1.13.isBlocked=false
+td.1.13.isDaemon=true
+td.1.13.isDeadLocked=false
+td.1.13.isIdle=true
+
+#"[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bfc94d0 nid=0x17d8 waiting for monitor entry [0x2b19f000..0x2b19fce8]
+#	at jsp_servlet.__index._jspService(__index.java:104)
+#	- waiting to lock <0x03ad5c38> (a java.lang.Object)
+#	- locked <0x03ad0140> (a java.lang.Object)
+#	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+#	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+#	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+#	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+#	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+#	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+#	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+#	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+#	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+#	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+#	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+#	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+td.1.14.blockedObjectId=0x03ad5c38
+td.1.14.blockerId=0x2bffca60
+td.1.14.condition=daemon prio=5 tid=0x2bfc94d0 nid=0x17d8 waiting for monitor entry [0x2b19f000..0x2b19fce8]
+td.1.14.header="[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bfc94d0 nid=0x17d8 waiting for monitor entry [0x2b19f000..0x2b19fce8]
+td.1.14.id=0x2bfc94d0
+td.1.14.name=[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.1.14.isBlocked=true
+td.1.14.isDaemon=true
+td.1.14.isDeadLocked=true
+td.1.14.isIdle=false
+
+#"Timer-1" daemon prio=5 tid=0x2af1b780 nid=0x13ac in Object.wait() [0x2b15f000..0x2b15fd68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05ec35c0> (a java.util.TaskQueue)
+#	at java.util.TimerThread.mainLoop(Timer.java:509)
+#	- locked <0x05ec35c0> (a java.util.TaskQueue)
+#	at java.util.TimerThread.run(Timer.java:462)
+td.1.15.blockedObjectId=null
+td.1.15.blockerId=null
+td.1.15.condition=daemon prio=5 tid=0x2af1b780 nid=0x13ac in Object.wait() [0x2b15f000..0x2b15fd68]
+td.1.15.header="Timer-1" daemon prio=5 tid=0x2af1b780 nid=0x13ac in Object.wait() [0x2b15f000..0x2b15fd68]
+td.1.15.id=0x2af1b780
+td.1.15.name=Timer-1
+td.1.15.isBlocked=false
+td.1.15.isDaemon=true
+td.1.15.isDeadLocked=false
+td.1.15.isIdle=true
+
+#"Timer-0" daemon prio=5 tid=0x2be77a00 nid=0x14dc in Object.wait() [0x2b0ef000..0x2b0ef9e8]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x052d01a0> (a java.util.TaskQueue)
+#	at java.lang.Object.wait(Object.java:474)
+#	at java.util.TimerThread.mainLoop(Timer.java:483)
+#	- locked <0x052d01a0> (a java.util.TaskQueue)
+#	at java.util.TimerThread.run(Timer.java:462)
+td.1.16.blockedObjectId=null
+td.1.16.blockerId=null
+td.1.16.condition=daemon prio=5 tid=0x2be77a00 nid=0x14dc in Object.wait() [0x2b0ef000..0x2b0ef9e8]
+td.1.16.header="Timer-0" daemon prio=5 tid=0x2be77a00 nid=0x14dc in Object.wait() [0x2b0ef000..0x2b0ef9e8]
+td.1.16.id=0x2be77a00
+td.1.16.name=Timer-0
+td.1.16.isBlocked=false
+td.1.16.isDaemon=true
+td.1.16.isDeadLocked=false
+td.1.16.isIdle=true
+
+#"Low Memory Detector" daemon prio=5 tid=0x00ab8ed0 nid=0x7a4 runnable [0x00000000..0x00000000]
+td.1.17.blockedObjectId=null
+td.1.17.blockerId=null
+td.1.17.condition=daemon prio=5 tid=0x00ab8ed0 nid=0x7a4 runnable [0x00000000..0x00000000]
+td.1.17.header="Low Memory Detector" daemon prio=5 tid=0x00ab8ed0 nid=0x7a4 runnable [0x00000000..0x00000000]
+td.1.17.id=0x00ab8ed0
+td.1.17.name=Low Memory Detector
+td.1.17.isBlocked=false
+td.1.17.isDaemon=true
+td.1.17.isDeadLocked=false
+td.1.17.isIdle=false
+
+#"CompilerThread0" daemon prio=10 tid=0x00ab7ac0 nid=0x133c waiting on condition [0x00000000..0x2ae2f8cc]
+td.1.18.blockedObjectId=null
+td.1.18.blockerId=null
+td.1.18.condition=daemon prio=10 tid=0x00ab7ac0 nid=0x133c waiting on condition [0x00000000..0x2ae2f8cc]
+td.1.18.header="CompilerThread0" daemon prio=10 tid=0x00ab7ac0 nid=0x133c waiting on condition [0x00000000..0x2ae2f8cc]
+td.1.18.id=0x00ab7ac0
+td.1.18.name=CompilerThread0
+td.1.18.isBlocked=false
+td.1.18.isDaemon=true
+td.1.18.isDeadLocked=false
+td.1.18.isIdle=false
+
+#"Signal Dispatcher" daemon prio=10 tid=0x00ac4c50 nid=0x1608 waiting on condition [0x00000000..0x00000000]
+td.1.19.blockedObjectId=null
+td.1.19.blockerId=null
+td.1.19.condition=daemon prio=10 tid=0x00ac4c50 nid=0x1608 waiting on condition [0x00000000..0x00000000]
+td.1.19.header="Signal Dispatcher" daemon prio=10 tid=0x00ac4c50 nid=0x1608 waiting on condition [0x00000000..0x00000000]
+td.1.19.id=0x00ac4c50
+td.1.19.name=Signal Dispatcher
+td.1.19.isBlocked=false
+td.1.19.isDaemon=true
+td.1.19.isDeadLocked=false
+td.1.19.isIdle=false
+
+#"Finalizer" daemon prio=9 tid=0x00aaa380 nid=0x16d4 in Object.wait() [0x2adaf000..0x2adafc68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x052d0330> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+#	- locked <0x052d0330> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+#	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+td.1.20.blockedObjectId=null
+td.1.20.blockerId=null
+td.1.20.condition=daemon prio=9 tid=0x00aaa380 nid=0x16d4 in Object.wait() [0x2adaf000..0x2adafc68]
+td.1.20.header="Finalizer" daemon prio=9 tid=0x00aaa380 nid=0x16d4 in Object.wait() [0x2adaf000..0x2adafc68]
+td.1.20.id=0x00aaa380
+td.1.20.name=Finalizer
+td.1.20.isBlocked=false
+td.1.20.isDaemon=true
+td.1.20.isDeadLocked=false
+td.1.20.isIdle=true
+
+#"Reference Handler" daemon prio=10 tid=0x00aa8ef0 nid=0x1744 in Object.wait() [0x2ad6f000..0x2ad6fce8]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x052d03b0> (a java.lang.ref.Reference$Lock)
+#	at java.lang.Object.wait(Object.java:474)
+#	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+#	- locked <0x052d03b0> (a java.lang.ref.Reference$Lock)
+td.1.21.blockedObjectId=null
+td.1.21.blockerId=null
+td.1.21.condition=daemon prio=10 tid=0x00aa8ef0 nid=0x1744 in Object.wait() [0x2ad6f000..0x2ad6fce8]
+td.1.21.header="Reference Handler" daemon prio=10 tid=0x00aa8ef0 nid=0x1744 in Object.wait() [0x2ad6f000..0x2ad6fce8]
+td.1.21.id=0x00aa8ef0
+td.1.21.name=Reference Handler
+td.1.21.isBlocked=false
+td.1.21.isDaemon=true
+td.1.21.isDeadLocked=false
+td.1.21.isIdle=true
+
+#"main" prio=5 tid=0x000399e8 nid=0x498 in Object.wait() [0x0007f000..0x0007fc3c]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x052d04a8> (a weblogic.t3.srvr.T3Srvr)
+#	at java.lang.Object.wait(Object.java:474)
+#	at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:727)
+#	- locked <0x052d04a8> (a weblogic.t3.srvr.T3Srvr)
+#	at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:379)
+#	at weblogic.Server.main(Server.java:66)
+td.1.22.blockedObjectId=null
+td.1.22.blockerId=null
+td.1.22.condition=prio=5 tid=0x000399e8 nid=0x498 in Object.wait() [0x0007f000..0x0007fc3c]
+td.1.22.header="main" prio=5 tid=0x000399e8 nid=0x498 in Object.wait() [0x0007f000..0x0007fc3c]
+td.1.22.id=0x000399e8
+td.1.22.name=main
+td.1.22.isBlocked=false
+td.1.22.isDaemon=false
+td.1.22.isDeadLocked=false
+td.1.22.isIdle=true
+
+#"VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+td.1.23.blockedObjectId=null
+td.1.23.blockerId=null
+td.1.23.condition=prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+td.1.23.header="VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+td.1.23.id=0x00aa65c8
+td.1.23.name=VM Thread
+td.1.23.isBlocked=false
+td.1.23.isDaemon=false
+td.1.23.isDeadLocked=false
+td.1.23.isIdle=false
+
+#"VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+td.1.24.blockedObjectId=null
+td.1.24.blockerId=null
+td.1.24.condition=prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+td.1.24.header="VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+td.1.24.id=0x00aba0a8
+td.1.24.name=VM Periodic Task Thread
+td.1.24.isBlocked=false
+td.1.24.isDaemon=false
+td.1.24.isDeadLocked=false
+td.1.24.isIdle=false
+
+ftd.2.deadLockSize=1
+ftd.2.threadCount=25
+#"FSCacheRefQueueThread" daemon prio=2 tid=0x2b74b1e8 nid=0x1414 in Object.wait() [0x2d47f000..0x2d47fd68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x03ad0060> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+#	- locked <0x03ad0060> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+#	at workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+td.2.0.blockedObjectId=null
+td.2.0.blockerId=null
+td.2.0.condition=daemon prio=2 tid=0x2b74b1e8 nid=0x1414 in Object.wait() [0x2d47f000..0x2d47fd68]
+td.2.0.header="FSCacheRefQueueThread" daemon prio=2 tid=0x2b74b1e8 nid=0x1414 in Object.wait() [0x2d47f000..0x2d47fd68]
+td.2.0.id=0x2b74b1e8
+td.2.0.name=FSCacheRefQueueThread
+td.2.0.isBlocked=false
+td.2.0.isDaemon=true
+td.2.0.isDeadLocked=false
+td.2.0.isIdle=true
+
+#"DynamicListenThread[Default]" daemon prio=9 tid=0x2b68d7a0 nid=0x3e4 runnable [0x2d43f000..0x2d43f9e8]
+#	at java.net.PlainSocketImpl.socketAccept(Native Method)
+#	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+#	- locked <0x06970270> (a java.net.SocksSocketImpl)
+#	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+#	at java.net.ServerSocket.accept(ServerSocket.java:421)
+#	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+#	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+#	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+#	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+#	at java.lang.Thread.run(Thread.java:595)
+td.2.1.blockedObjectId=null
+td.2.1.blockerId=null
+td.2.1.condition=daemon prio=9 tid=0x2b68d7a0 nid=0x3e4 runnable [0x2d43f000..0x2d43f9e8]
+td.2.1.header="DynamicListenThread[Default]" daemon prio=9 tid=0x2b68d7a0 nid=0x3e4 runnable [0x2d43f000..0x2d43f9e8]
+td.2.1.id=0x2b68d7a0
+td.2.1.name=DynamicListenThread[Default]
+td.2.1.isBlocked=false
+td.2.1.isDaemon=true
+td.2.1.isDeadLocked=false
+td.2.1.isIdle=false
+
+#"DynamicListenThread[Default[1]]" daemon prio=9 tid=0x2c4ffd70 nid=0xbdc runnable [0x2d3ff000..0x2d3ffa68]
+#	at java.net.PlainSocketImpl.socketAccept(Native Method)
+#	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+#	- locked <0x069704b0> (a java.net.SocksSocketImpl)
+#	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+#	at java.net.ServerSocket.accept(ServerSocket.java:421)
+#	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+#	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+#	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+#	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+#	at java.lang.Thread.run(Thread.java:595)
+td.2.2.blockedObjectId=null
+td.2.2.blockerId=null
+td.2.2.condition=daemon prio=9 tid=0x2c4ffd70 nid=0xbdc runnable [0x2d3ff000..0x2d3ffa68]
+td.2.2.header="DynamicListenThread[Default[1]]" daemon prio=9 tid=0x2c4ffd70 nid=0xbdc runnable [0x2d3ff000..0x2d3ffa68]
+td.2.2.id=0x2c4ffd70
+td.2.2.name=DynamicListenThread[Default[1]]
+td.2.2.isBlocked=false
+td.2.2.isDaemon=true
+td.2.2.isDeadLocked=false
+td.2.2.isIdle=false
+
+#"[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bebe008 nid=0x130c waiting for monitor entry [0x2b5bf000..0x2b5bfae8]
+#	at jsp_servlet.__index._jspService(__index.java:111)
+#	- waiting to lock <0x03ad5c38> (a java.lang.Object)
+#	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+#	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+#	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+#	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+#	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+#	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+#	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+#	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+#	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+#	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+#	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+#	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+td.2.3.blockedObjectId=0x03ad5c38
+td.2.3.blockerId=0x2bffca60
+td.2.3.condition=daemon prio=5 tid=0x2bebe008 nid=0x130c waiting for monitor entry [0x2b5bf000..0x2b5bfae8]
+td.2.3.header="[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bebe008 nid=0x130c waiting for monitor entry [0x2b5bf000..0x2b5bfae8]
+td.2.3.id=0x2bebe008
+td.2.3.name=[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.2.3.isBlocked=true
+td.2.3.isDaemon=true
+td.2.3.isDeadLocked=false
+td.2.3.isIdle=false
+
+#"weblogic.GCMonitor" daemon prio=5 tid=0x2b092008 nid=0x126c in Object.wait() [0x2b57f000..0x2b57fb68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x06970760> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+#	- locked <0x06970760> (a java.lang.ref.ReferenceQueue$Lock)
+#	at weblogic.platform.GCMonitorThread.waitForNotification(GCMonitorThread.java:88)
+#	at weblogic.platform.GCMonitorThread.run(GCMonitorThread.java:64)
+td.2.4.blockedObjectId=null
+td.2.4.blockerId=null
+td.2.4.condition=daemon prio=5 tid=0x2b092008 nid=0x126c in Object.wait() [0x2b57f000..0x2b57fb68]
+td.2.4.header="weblogic.GCMonitor" daemon prio=5 tid=0x2b092008 nid=0x126c in Object.wait() [0x2b57f000..0x2b57fb68]
+td.2.4.id=0x2b092008
+td.2.4.name=weblogic.GCMonitor
+td.2.4.isBlocked=false
+td.2.4.isDaemon=true
+td.2.4.isDeadLocked=false
+td.2.4.isIdle=true
+
+#"weblogic.store._WLS_AdminServer" daemon prio=10 tid=0x2c427a30 nid=0x14f8 waiting on condition [0x2b4ff000..0x2b4ffbe8]
+#	at sun.misc.Unsafe.park(Native Method)
+#	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+#	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+#	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+#	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+#	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:520)
+#	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:556)
+#	at java.lang.Thread.run(Thread.java:595)
+td.2.5.blockedObjectId=null
+td.2.5.blockerId=null
+td.2.5.condition=daemon prio=10 tid=0x2c427a30 nid=0x14f8 waiting on condition [0x2b4ff000..0x2b4ffbe8]
+td.2.5.header="weblogic.store._WLS_AdminServer" daemon prio=10 tid=0x2c427a30 nid=0x14f8 waiting on condition [0x2b4ff000..0x2b4ffbe8]
+td.2.5.id=0x2c427a30
+td.2.5.name=weblogic.store._WLS_AdminServer
+td.2.5.isBlocked=false
+td.2.5.isDaemon=true
+td.2.5.isDeadLocked=false
+td.2.5.isIdle=false
+
+#"[STANDBY] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c451470 nid=0x168c in Object.wait() [0x2b53f000..0x2b53fce8]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05fc2cb0> (a weblogic.work.ExecuteThread)
+#	at java.lang.Object.wait(Object.java:474)
+#	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+#	- locked <0x05fc2cb0> (a weblogic.work.ExecuteThread)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+td.2.6.blockedObjectId=null
+td.2.6.blockerId=null
+td.2.6.condition=daemon prio=5 tid=0x2c451470 nid=0x168c in Object.wait() [0x2b53f000..0x2b53fce8]
+td.2.6.header="[STANDBY] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c451470 nid=0x168c in Object.wait() [0x2b53f000..0x2b53fce8]
+td.2.6.id=0x2c451470
+td.2.6.name=[STANDBY] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.2.6.isBlocked=false
+td.2.6.isDaemon=true
+td.2.6.isDeadLocked=false
+td.2.6.isIdle=true
+
+#"VDE Transaction Processor Thread" daemon prio=2 tid=0x2c429600 nid=0x11e8 in Object.wait() [0x2b38f000..0x2b38fd68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05fc2d58> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+#	at java.lang.Object.wait(Object.java:474)
+#	at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+#	- locked <0x05fc2d58> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+#	at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+td.2.7.blockedObjectId=null
+td.2.7.blockerId=null
+td.2.7.condition=daemon prio=2 tid=0x2c429600 nid=0x11e8 in Object.wait() [0x2b38f000..0x2b38fd68]
+td.2.7.header="VDE Transaction Processor Thread" daemon prio=2 tid=0x2c429600 nid=0x11e8 in Object.wait() [0x2b38f000..0x2b38fd68]
+td.2.7.id=0x2c429600
+td.2.7.name=VDE Transaction Processor Thread
+td.2.7.isBlocked=false
+td.2.7.isDaemon=true
+td.2.7.isDeadLocked=false
+td.2.7.isIdle=true
+
+#"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2bffed78 nid=0xc10 runnable [0x2b34f000..0x2b34f9e8]
+#	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+#	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+#	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+#	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+#	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+#	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+td.2.8.blockedObjectId=null
+td.2.8.blockerId=null
+td.2.8.condition=daemon prio=5 tid=0x2bffed78 nid=0xc10 runnable [0x2b34f000..0x2b34f9e8]
+td.2.8.header="ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2bffed78 nid=0xc10 runnable [0x2b34f000..0x2b34f9e8]
+td.2.8.id=0x2bffed78
+td.2.8.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
+td.2.8.isBlocked=false
+td.2.8.isDaemon=true
+td.2.8.isDeadLocked=false
+td.2.8.isIdle=false
+
+#"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2bffea10 nid=0x1294 runnable [0x2b30f000..0x2b30fa68]
+#	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+#	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+#	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+#	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+#	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+#	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+td.2.9.blockedObjectId=null
+td.2.9.blockerId=null
+td.2.9.condition=daemon prio=5 tid=0x2bffea10 nid=0x1294 runnable [0x2b30f000..0x2b30fa68]
+td.2.9.header="ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2bffea10 nid=0x1294 runnable [0x2b30f000..0x2b30fa68]
+td.2.9.id=0x2bffea10
+td.2.9.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
+td.2.9.isBlocked=false
+td.2.9.isDaemon=true
+td.2.9.isDeadLocked=false
+td.2.9.isIdle=false
+
+#"[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bffca60 nid=0x1678 waiting for monitor entry [0x2b2bf000..0x2b2bfae8]
+#	at jsp_servlet.__index._jspService(__index.java:122)
+#	- waiting to lock <0x03ad0140> (a java.lang.Object)
+#	- locked <0x03ad5c38> (a java.lang.Object)
+#	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+#	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+#	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+#	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+#	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+#	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+#	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+#	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+#	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+#	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+#	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+#	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+td.2.10.blockedObjectId=0x03ad0140
+td.2.10.blockerId=0x2bfc94d0
+td.2.10.condition=daemon prio=5 tid=0x2bffca60 nid=0x1678 waiting for monitor entry [0x2b2bf000..0x2b2bfae8]
+td.2.10.header="[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bffca60 nid=0x1678 waiting for monitor entry [0x2b2bf000..0x2b2bfae8]
+td.2.10.id=0x2bffca60
+td.2.10.name=[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.2.10.isBlocked=true
+td.2.10.isDaemon=true
+td.2.10.isDeadLocked=true
+td.2.10.isIdle=false
+
+#"[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bfdb4c0 nid=0x1774 in Object.wait() [0x2b27f000..0x2b27fb68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05ec3270> (a weblogic.work.ExecuteThread)
+#	at java.lang.Object.wait(Object.java:474)
+#	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+#	- locked <0x05ec3270> (a weblogic.work.ExecuteThread)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+td.2.11.blockedObjectId=null
+td.2.11.blockerId=null
+td.2.11.condition=daemon prio=5 tid=0x2bfdb4c0 nid=0x1774 in Object.wait() [0x2b27f000..0x2b27fb68]
+td.2.11.header="[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bfdb4c0 nid=0x1774 in Object.wait() [0x2b27f000..0x2b27fb68]
+td.2.11.id=0x2bfdb4c0
+td.2.11.name=[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.2.11.isBlocked=false
+td.2.11.isDaemon=true
+td.2.11.isDeadLocked=false
+td.2.11.isIdle=true
+
+#"weblogic.timers.TimerThread" daemon prio=9 tid=0x2bfd8408 nid=0x7b0 in Object.wait() [0x2b22f000..0x2b22fbe8]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05ec3380> (a weblogic.timers.internal.TimerThread)
+#	at weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:255)
+#	- locked <0x05ec3380> (a weblogic.timers.internal.TimerThread)
+td.2.12.blockedObjectId=null
+td.2.12.blockerId=null
+td.2.12.condition=daemon prio=9 tid=0x2bfd8408 nid=0x7b0 in Object.wait() [0x2b22f000..0x2b22fbe8]
+td.2.12.header="weblogic.timers.TimerThread" daemon prio=9 tid=0x2bfd8408 nid=0x7b0 in Object.wait() [0x2b22f000..0x2b22fbe8]
+td.2.12.id=0x2bfd8408
+td.2.12.name=weblogic.timers.TimerThread
+td.2.12.isBlocked=false
+td.2.12.isDaemon=true
+td.2.12.isDeadLocked=false
+td.2.12.isIdle=true
+
+#"weblogic.time.TimeEventGenerator" daemon prio=9 tid=0x2bfd5ef8 nid=0xbe4 in Object.wait() [0x2b1df000..0x2b1dfc68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05ec3438> (a weblogic.time.common.internal.TimeTable)
+#	at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+#	- locked <0x05ec3438> (a weblogic.time.common.internal.TimeTable)
+#	at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+#	at java.lang.Thread.run(Thread.java:595)
+td.2.13.blockedObjectId=null
+td.2.13.blockerId=null
+td.2.13.condition=daemon prio=9 tid=0x2bfd5ef8 nid=0xbe4 in Object.wait() [0x2b1df000..0x2b1dfc68]
+td.2.13.header="weblogic.time.TimeEventGenerator" daemon prio=9 tid=0x2bfd5ef8 nid=0xbe4 in Object.wait() [0x2b1df000..0x2b1dfc68]
+td.2.13.id=0x2bfd5ef8
+td.2.13.name=weblogic.time.TimeEventGenerator
+td.2.13.isBlocked=false
+td.2.13.isDaemon=true
+td.2.13.isDeadLocked=false
+td.2.13.isIdle=true
+
+#"[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bfc94d0 nid=0x17d8 waiting for monitor entry [0x2b19f000..0x2b19fce8]
+#	at jsp_servlet.__index._jspService(__index.java:104)
+#	- waiting to lock <0x03ad5c38> (a java.lang.Object)
+#	- locked <0x03ad0140> (a java.lang.Object)
+#	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+#	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+#	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+#	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+#	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+#	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+#	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+#	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+#	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+#	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+#	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+#	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+#	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+td.2.14.blockedObjectId=0x03ad5c38
+td.2.14.blockerId=0x2bffca60
+td.2.14.condition=daemon prio=5 tid=0x2bfc94d0 nid=0x17d8 waiting for monitor entry [0x2b19f000..0x2b19fce8]
+td.2.14.header="[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2bfc94d0 nid=0x17d8 waiting for monitor entry [0x2b19f000..0x2b19fce8]
+td.2.14.id=0x2bfc94d0
+td.2.14.name=[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'
+td.2.14.isBlocked=true
+td.2.14.isDaemon=true
+td.2.14.isDeadLocked=true
+td.2.14.isIdle=false
+
+#"Timer-1" daemon prio=5 tid=0x2af1b780 nid=0x13ac in Object.wait() [0x2b15f000..0x2b15fd68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x05ec35c0> (a java.util.TaskQueue)
+#	at java.util.TimerThread.mainLoop(Timer.java:509)
+#	- locked <0x05ec35c0> (a java.util.TaskQueue)
+#	at java.util.TimerThread.run(Timer.java:462)
+td.2.15.blockedObjectId=null
+td.2.15.blockerId=null
+td.2.15.condition=daemon prio=5 tid=0x2af1b780 nid=0x13ac in Object.wait() [0x2b15f000..0x2b15fd68]
+td.2.15.header="Timer-1" daemon prio=5 tid=0x2af1b780 nid=0x13ac in Object.wait() [0x2b15f000..0x2b15fd68]
+td.2.15.id=0x2af1b780
+td.2.15.name=Timer-1
+td.2.15.isBlocked=false
+td.2.15.isDaemon=true
+td.2.15.isDeadLocked=false
+td.2.15.isIdle=true
+
+#"Timer-0" daemon prio=5 tid=0x2be77a00 nid=0x14dc in Object.wait() [0x2b0ef000..0x2b0ef9e8]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x052d01a0> (a java.util.TaskQueue)
+#	at java.lang.Object.wait(Object.java:474)
+#	at java.util.TimerThread.mainLoop(Timer.java:483)
+#	- locked <0x052d01a0> (a java.util.TaskQueue)
+#	at java.util.TimerThread.run(Timer.java:462)
+td.2.16.blockedObjectId=null
+td.2.16.blockerId=null
+td.2.16.condition=daemon prio=5 tid=0x2be77a00 nid=0x14dc in Object.wait() [0x2b0ef000..0x2b0ef9e8]
+td.2.16.header="Timer-0" daemon prio=5 tid=0x2be77a00 nid=0x14dc in Object.wait() [0x2b0ef000..0x2b0ef9e8]
+td.2.16.id=0x2be77a00
+td.2.16.name=Timer-0
+td.2.16.isBlocked=false
+td.2.16.isDaemon=true
+td.2.16.isDeadLocked=false
+td.2.16.isIdle=true
+
+#"Low Memory Detector" daemon prio=5 tid=0x00ab8ed0 nid=0x7a4 runnable [0x00000000..0x00000000]
+td.2.17.blockedObjectId=null
+td.2.17.blockerId=null
+td.2.17.condition=daemon prio=5 tid=0x00ab8ed0 nid=0x7a4 runnable [0x00000000..0x00000000]
+td.2.17.header="Low Memory Detector" daemon prio=5 tid=0x00ab8ed0 nid=0x7a4 runnable [0x00000000..0x00000000]
+td.2.17.id=0x00ab8ed0
+td.2.17.name=Low Memory Detector
+td.2.17.isBlocked=false
+td.2.17.isDaemon=true
+td.2.17.isDeadLocked=false
+td.2.17.isIdle=false
+
+#"CompilerThread0" daemon prio=10 tid=0x00ab7ac0 nid=0x133c waiting on condition [0x00000000..0x2ae2f8cc]
+td.2.18.blockedObjectId=null
+td.2.18.blockerId=null
+td.2.18.condition=daemon prio=10 tid=0x00ab7ac0 nid=0x133c waiting on condition [0x00000000..0x2ae2f8cc]
+td.2.18.header="CompilerThread0" daemon prio=10 tid=0x00ab7ac0 nid=0x133c waiting on condition [0x00000000..0x2ae2f8cc]
+td.2.18.id=0x00ab7ac0
+td.2.18.name=CompilerThread0
+td.2.18.isBlocked=false
+td.2.18.isDaemon=true
+td.2.18.isDeadLocked=false
+td.2.18.isIdle=false
+
+#"Signal Dispatcher" daemon prio=10 tid=0x00ac4c50 nid=0x1608 waiting on condition [0x00000000..0x00000000]
+td.2.19.blockedObjectId=null
+td.2.19.blockerId=null
+td.2.19.condition=daemon prio=10 tid=0x00ac4c50 nid=0x1608 waiting on condition [0x00000000..0x00000000]
+td.2.19.header="Signal Dispatcher" daemon prio=10 tid=0x00ac4c50 nid=0x1608 waiting on condition [0x00000000..0x00000000]
+td.2.19.id=0x00ac4c50
+td.2.19.name=Signal Dispatcher
+td.2.19.isBlocked=false
+td.2.19.isDaemon=true
+td.2.19.isDeadLocked=false
+td.2.19.isIdle=false
+
+#"Finalizer" daemon prio=9 tid=0x00aaa380 nid=0x16d4 in Object.wait() [0x2adaf000..0x2adafc68]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x052d0330> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+#	- locked <0x052d0330> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+#	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+td.2.20.blockedObjectId=null
+td.2.20.blockerId=null
+td.2.20.condition=daemon prio=9 tid=0x00aaa380 nid=0x16d4 in Object.wait() [0x2adaf000..0x2adafc68]
+td.2.20.header="Finalizer" daemon prio=9 tid=0x00aaa380 nid=0x16d4 in Object.wait() [0x2adaf000..0x2adafc68]
+td.2.20.id=0x00aaa380
+td.2.20.name=Finalizer
+td.2.20.isBlocked=false
+td.2.20.isDaemon=true
+td.2.20.isDeadLocked=false
+td.2.20.isIdle=true
+
+#"Reference Handler" daemon prio=10 tid=0x00aa8ef0 nid=0x1744 in Object.wait() [0x2ad6f000..0x2ad6fce8]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x052d03b0> (a java.lang.ref.Reference$Lock)
+#	at java.lang.Object.wait(Object.java:474)
+#	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+#	- locked <0x052d03b0> (a java.lang.ref.Reference$Lock)
+td.2.21.blockedObjectId=null
+td.2.21.blockerId=null
+td.2.21.condition=daemon prio=10 tid=0x00aa8ef0 nid=0x1744 in Object.wait() [0x2ad6f000..0x2ad6fce8]
+td.2.21.header="Reference Handler" daemon prio=10 tid=0x00aa8ef0 nid=0x1744 in Object.wait() [0x2ad6f000..0x2ad6fce8]
+td.2.21.id=0x00aa8ef0
+td.2.21.name=Reference Handler
+td.2.21.isBlocked=false
+td.2.21.isDaemon=true
+td.2.21.isDeadLocked=false
+td.2.21.isIdle=true
+
+#"main" prio=5 tid=0x000399e8 nid=0x498 in Object.wait() [0x0007f000..0x0007fc3c]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x052d04a8> (a weblogic.t3.srvr.T3Srvr)
+#	at java.lang.Object.wait(Object.java:474)
+#	at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:727)
+#	- locked <0x052d04a8> (a weblogic.t3.srvr.T3Srvr)
+#	at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:379)
+#	at weblogic.Server.main(Server.java:66)
+td.2.22.blockedObjectId=null
+td.2.22.blockerId=null
+td.2.22.condition=prio=5 tid=0x000399e8 nid=0x498 in Object.wait() [0x0007f000..0x0007fc3c]
+td.2.22.header="main" prio=5 tid=0x000399e8 nid=0x498 in Object.wait() [0x0007f000..0x0007fc3c]
+td.2.22.id=0x000399e8
+td.2.22.name=main
+td.2.22.isBlocked=false
+td.2.22.isDaemon=false
+td.2.22.isDeadLocked=false
+td.2.22.isIdle=true
+
+#"VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+td.2.23.blockedObjectId=null
+td.2.23.blockerId=null
+td.2.23.condition=prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+td.2.23.header="VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+td.2.23.id=0x00aa65c8
+td.2.23.name=VM Thread
+td.2.23.isBlocked=false
+td.2.23.isDaemon=false
+td.2.23.isDeadLocked=false
+td.2.23.isIdle=false
+
+#"VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+td.2.24.blockedObjectId=null
+td.2.24.blockerId=null
+td.2.24.condition=prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+td.2.24.header="VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+td.2.24.id=0x00aba0a8
+td.2.24.name=VM Periodic Task Thread
+td.2.24.isBlocked=false
+td.2.24.isDaemon=false
+td.2.24.isDeadLocked=false
+td.2.24.isIdle=false
+

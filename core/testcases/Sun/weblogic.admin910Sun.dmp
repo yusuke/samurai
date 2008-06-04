@@ -1,0 +1,1629 @@
+.
+.
+JAVA Memory arguments: -Xms256m -Xmx512m -XX:CompileThreshold=8000 -XX:PermSize=48m  -XX:MaxPermSize=128m
+.
+WLS Start Mode=Development
+.
+CLASSPATH=;C:\bea91j\patch_weblogic910\profiles\default\sys_manifest_classpath\weblogic_patch.jar;C:\bea91j\JDK150~1\lib\tools.jar;C:\bea91j\WEBLOG~1\server\lib\weblogic_sp.jar;C:\bea91j\WEBLOG~1\server\lib\weblogic.jar;C:\bea91j\WEBLOG~1\server\lib\webservices.jar;;C:\bea91j\WEBLOG~1\common\eval\pointbase\lib\pbclient51.jar;C:\bea91j\WEBLOG~1\server\lib\xqrl.jar;;C:\bea91j\WEBLOG~1\integration\lib\util.jar;
+.
+PATH=C:\bea91j\patch_weblogic910\profiles\default\native;C:\bea91j\WEBLOG~1\server\native\win\32;C:\bea91j\WEBLOG~1\server\bin;C:\bea91j\JDK150~1\jre\bin;C:\bea91j\JDK150~1\bin;C:\oracle\product\9.2\jre\1.4.2\bin\client;C:\oracle\product\9.2\jre\1.4.2\bin;C:\oracle\product\9.2\bin;C:\Program Files\Oracle\jre\1.3.1\bin;C:\Program Files\Oracle\jre\1.1.8\bin;C:\oracle\product\10.1.0\Db_2\bin;C:\oracle\product\10.1.0\Db_2\jre\1.4.2\bin\client;C:\oracle\product\10.1.0\Db_2\jre\1.4.2\bin;C:\ClarifyCRM12.5SR1.07\ClarifyClient;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\Perforce;C:\bea91j\WEBLOG~1\server\native\win\32\oci920_8
+.
+***************************************************
+*  To start WebLogic Server, use a username and   *
+*  password assigned to an admin-level user.  For *
+*  server administration, use the WebLogic Server *
+*  console at http:\\hostname:port\console        *
+***************************************************
+starting weblogic with Java version:
+java version "1.5.0_04"
+Java(TM) 2 Runtime Environment, Standard Edition (build 1.5.0_04-b05)
+Java HotSpot(TM) Client VM (build 1.5.0_04-b05, mixed mode)
+Starting WLS with line:
+C:\bea91j\JDK150~1\bin\java -client   -Xms256m -Xmx512m -XX:CompileThreshold=8000 -XX:PermSize=48m  -XX:MaxPermSize=128m  -Xverify:none  -da -Dplatform.home=C:\bea91j\WEBLOG~1 -Dwls.home=C:\bea91j\WEBLOG~1\server -Dwli.home=C:\bea91j\WEBLOG~1\integration  -Dweblogic.management.discover=true -Dweblogic.ProductionModeEnabled=  -Dwlw.iterativeDev= -Dwlw.testConsole= -Dwlw.logErrorsToConsole= -Dweblogic.ext.dirs=C:\bea91j\patch_weblogic910\profiles\default\sysext_manifest_classpath -Dweblogic.Name=AdminServer -Djava.security.policy=C:\bea91j\WEBLOG~1\server\lib\weblogic.policy   weblogic.Server
+<2006/05/04 22時35分38秒 JST> <Info> <WebLogicServer> <BEA-000377> <WebLogic Server を Sun Microsystems Inc. から Java HotSpot(TM) Client VM バージョン 1.5.0_04-b05 で起動しています。> 
+<2006/05/04 22時35分38秒 JST> <Info> <Management> <BEA-141107> <バージョン: AquaLogic Service Bus 2.1 Patch for CR259218
+WebLogic Server 9.1  Tue Dec 27 00:48:40 EST 2005 694350 > 
+<2006/05/04 22時35分41秒 JST> <Info> <WebLogicServer> <BEA-000215> <ロードされたライセンス : C:\bea91j\license.bea> 
+<2006/05/04 22時35分41秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が STARTING に変化しました。> 
+<2006/05/04 22時35分41秒 JST> <Info> <WorkManager> <BEA-002900> <自動チューニング スレッド プールを初期化しています。> 
+<2006/05/04 22時35分41秒 JST> <Notice> <Log Management> <BEA-170019> <サーバ ログ ファイル C:\bea91j\user_projects\domains\tts\servers\AdminServer\logs\AdminServer.log を開きました。すべてのサーバサイド ログ イベントはこのファイルに書き込まれます。> 
+<2006/05/04 22時35分42秒 JST> <Notice> <Security> <BEA-090082> <セキュリティはセキュリティ レルム myrealm を使用して初期化しています。> 
+<2006/05/04 22時35分44秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が STANDBY に変化しました。> 
+<2006/05/04 22時35分44秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が STARTING に変化しました。> 
+<2006/05/04 22時35分46秒 JST> <Notice> <Log Management> <BEA-170027> <サーバはドメイン ログ ブロードキャスタを正常に初期化しました。ログ メッセージがドメイン ログにブロードキャストされます。> 
+<2006/05/04 22時35分47秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が ADMIN に変化しました。> 
+<2006/05/04 22時35分47秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が RESUMING に変化しました。> 
+<2006/05/04 22時35分47秒 JST> <Notice> <Server> <BEA-002613> <チャネル "Default" は、現在 192.168.1.3:7001 でプロトコル iiop, t3, ldap, http をリスンしています。> 
+<2006/05/04 22時35分47秒 JST> <Notice> <Server> <BEA-002613> <チャネル "Default[1]" は、現在 127.0.0.1:7001 でプロトコル iiop, t3, ldap, http をリスンしています。> 
+<2006/05/04 22時35分47秒 JST> <Notice> <WebLogicServer> <BEA-000331> <ドメイン "tts" で WebLogic 管理サーバ "AdminServer" を開発モードで起動しました。> 
+<2006/05/04 22時35分47秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が RUNNING に変化しました。> 
+<2006/05/04 22時35分47秒 JST> <Notice> <WebLogicServer> <BEA-000360> <サーバが RUNNING モードで起動しました。> 
+THREAD DUMP from JVM taken at 'Thu May 04 22:36:29 2006'
+
+
+Full thread dump Java HotSpot(TM) Client VM (1.5.0_04-b05 mixed mode):
+
+"FSCacheRefQueueThread" daemon prio=2 tid=0x2c9009c8 nid=0x165c in Object.wait() [0x2d61f000..0x2d61f9e8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x06db0e00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x06db0e00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+
+"DynamicListenThread[Default]" daemon prio=9 tid=0x2ccd6960 nid=0x570 runnable [0x2d5df000..0x2d5dfae8]
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+	- locked <0x069a37b8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+	at java.net.ServerSocket.accept(ServerSocket.java:421)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+	at java.lang.Thread.run(Thread.java:595)
+
+"DynamicListenThread[Default[1]]" daemon prio=9 tid=0x2cb63e70 nid=0x10cc runnable [0x2d59f000..0x2d59fb68]
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+	- locked <0x069a39f8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+	at java.net.ServerSocket.accept(ServerSocket.java:421)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[STANDBY] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2cad9d70 nid=0x624 runnable [0x2d55f000..0x2d55fbe8]
+	at weblogic.platform.SunVM.threadDump0(Native Method)
+	- waiting to lock <0x05f5f1b8> (a weblogic.platform.SunVM)
+	at weblogic.platform.SunVM.threadDump(SunVM.java:94)
+	at weblogic.common.internal.AdminProxy.execute(AdminProxy.java:204)
+	at weblogic.t3.srvr.ClientRequest$1.run(ClientContext.java:711)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+	at weblogic.t3.srvr.ClientRequest.run(ClientContext.java:708)
+	at weblogic.work.ServerWorkManagerImpl$WorkAdapterImpl.run(ServerWorkManagerImpl.java:518)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c9f53e8 nid=0x16cc waiting for monitor entry [0x2d51f000..0x2d51fc68]
+	at jsp_servlet.__index._jspService(__index.java:120)
+	- waiting to lock <0x03ac00c0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"weblogic.GCMonitor" daemon prio=5 tid=0x2cda2920 nid=0x14c0 in Object.wait() [0x2d4df000..0x2d4dfce8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x068307e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x068307e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at weblogic.platform.GCMonitorThread.waitForNotification(GCMonitorThread.java:88)
+	at weblogic.platform.GCMonitorThread.run(GCMonitorThread.java:64)
+
+"weblogic.store.WLS_DIAGNOSTICS" daemon prio=10 tid=0x2b7ede68 nid=0x1444 waiting on condition [0x2d49f000..0x2d49fd68]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:539)
+	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:575)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2b688488 nid=0x11ec waiting for monitor entry [0x2d24f000..0x2d24f9e8]
+	at jsp_servlet.__index._jspService(__index.java:113)
+	- waiting to lock <0x03ac02b0> (a java.lang.Object)
+	- locked <0x03ac00c0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"weblogic.store._WLS_AdminServer" daemon prio=10 tid=0x2c85fc98 nid=0x17ac waiting on condition [0x2b38f000..0x2b38fa68]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:539)
+	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:575)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c869448 nid=0x15c4 waiting for monitor entry [0x2b3cf000..0x2b3cfae8]
+	at jsp_servlet.__index._jspService(__index.java:102)
+	- waiting to lock <0x03ac02b0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"VDE Transaction Processor Thread" daemon prio=2 tid=0x2c41d288 nid=0x1564 in Object.wait() [0x2b34f000..0x2b34fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x060c03f8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+	at java.lang.Object.wait(Object.java:474)
+	at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+	- locked <0x060c03f8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+	at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2c430c70 nid=0xa58 runnable [0x2b30f000..0x2b30fc68]
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2c435a28 nid=0x143c runnable [0x2b2cf000..0x2b2cfce8]
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+"[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c401ea0 nid=0xc70 in Object.wait() [0x2b27f000..0x2b27fd68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49900> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x05f49900> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"weblogic.timers.TimerThread" daemon prio=9 tid=0x2c408420 nid=0x10bc in Object.wait() [0x2b22f000..0x2b22f9e8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49b80> (a weblogic.timers.internal.TimerThread)
+	at weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:253)
+	- locked <0x05f49b80> (a weblogic.timers.internal.TimerThread)
+
+"weblogic.time.TimeEventGenerator" daemon prio=9 tid=0x2c403ad8 nid=0x14dc in Object.wait() [0x2b1df000..0x2b1dfa68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49c38> (a weblogic.time.common.internal.TimeTable)
+	at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+	- locked <0x05f49c38> (a weblogic.time.common.internal.TimeTable)
+	at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c3ff490 nid=0xce8 waiting for monitor entry [0x2b19f000..0x2b19fae8]
+	at jsp_servlet.__index._jspService(__index.java:104)
+	- waiting to lock <0x03ac00c0> (a java.lang.Object)
+	- locked <0x03ac02b0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"Timer-1" daemon prio=5 tid=0x2af3d578 nid=0x1774 in Object.wait() [0x2b15f000..0x2b15fb68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49dc0> (a java.util.TaskQueue)
+	at java.util.TimerThread.mainLoop(Timer.java:509)
+	- locked <0x05f49dc0> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+"Timer-0" daemon prio=5 tid=0x2ba32ee8 nid=0x50c in Object.wait() [0x2b0ef000..0x2b0efbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3be8> (a java.util.TaskQueue)
+	at java.lang.Object.wait(Object.java:474)
+	at java.util.TimerThread.mainLoop(Timer.java:483)
+	- locked <0x052d3be8> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+"Low Memory Detector" daemon prio=5 tid=0x00ab9a48 nid=0x130 runnable [0x00000000..0x00000000]
+
+"CompilerThread0" daemon prio=10 tid=0x00ab8620 nid=0x17f4 waiting on condition [0x00000000..0x2ae2f6cc]
+
+"Signal Dispatcher" daemon prio=10 tid=0x00ab7988 nid=0x1778 runnable [0x00000000..0x00000000]
+
+"Finalizer" daemon prio=9 tid=0x00aaa8a0 nid=0x1354 in Object.wait() [0x2adaf000..0x2adafa68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3d78> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x052d3d78> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x00aa9410 nid=0x133c in Object.wait() [0x2ad6f000..0x2ad6fae8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3df8> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:474)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+	- locked <0x052d3df8> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x00039e48 nid=0x11e4 in Object.wait() [0x0007f000..0x0007fc3c]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3ee0> (a weblogic.t3.srvr.T3Srvr)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:729)
+	- locked <0x052d3ee0> (a weblogic.t3.srvr.T3Srvr)
+	at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:380)
+	at weblogic.Server.main(Server.java:67)
+
+"VM Thread" prio=10 tid=0x00aa6ad0 nid=0x7a4 runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x00abac20 nid=0x1010 waiting on condition 
+
+THREAD DUMP from JVM taken at 'Thu May 04 22:36:35 2006'
+
+
+Full thread dump Java HotSpot(TM) Client VM (1.5.0_04-b05 mixed mode):
+
+"[ACTIVE] ExecuteThread: '6' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2cb04e68 nid=0xefc runnable [0x2d65f000..0x2d65fc68]
+	at weblogic.platform.SunVM.threadDump0(Native Method)
+	- waiting to lock <0x05f5f1b8> (a weblogic.platform.SunVM)
+	at weblogic.platform.SunVM.threadDump(SunVM.java:94)
+	at weblogic.common.internal.AdminProxy.execute(AdminProxy.java:204)
+	at weblogic.t3.srvr.ClientRequest$1.run(ClientContext.java:711)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+	at weblogic.t3.srvr.ClientRequest.run(ClientContext.java:708)
+	at weblogic.work.ServerWorkManagerImpl$WorkAdapterImpl.run(ServerWorkManagerImpl.java:518)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"FSCacheRefQueueThread" daemon prio=2 tid=0x2c9009c8 nid=0x165c in Object.wait() [0x2d61f000..0x2d61f9e8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x06db0e00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x06db0e00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+
+"DynamicListenThread[Default]" daemon prio=9 tid=0x2ccd6960 nid=0x570 runnable [0x2d5df000..0x2d5dfae8]
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+	- locked <0x069a37b8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+	at java.net.ServerSocket.accept(ServerSocket.java:421)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+	at java.lang.Thread.run(Thread.java:595)
+
+"DynamicListenThread[Default[1]]" daemon prio=9 tid=0x2cb63e70 nid=0x10cc runnable [0x2d59f000..0x2d59fb68]
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+	- locked <0x069a39f8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+	at java.net.ServerSocket.accept(ServerSocket.java:421)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[STANDBY] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2cad9d70 nid=0x624 in Object.wait() [0x2d55f000..0x2d55fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x068e2540> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x068e2540> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c9f53e8 nid=0x16cc waiting for monitor entry [0x2d51f000..0x2d51fc68]
+	at jsp_servlet.__index._jspService(__index.java:120)
+	- waiting to lock <0x03ac00c0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"weblogic.GCMonitor" daemon prio=5 tid=0x2cda2920 nid=0x14c0 in Object.wait() [0x2d4df000..0x2d4dfce8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x068307e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x068307e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at weblogic.platform.GCMonitorThread.waitForNotification(GCMonitorThread.java:88)
+	at weblogic.platform.GCMonitorThread.run(GCMonitorThread.java:64)
+
+"weblogic.store.WLS_DIAGNOSTICS" daemon prio=10 tid=0x2b7ede68 nid=0x1444 waiting on condition [0x2d49f000..0x2d49fd68]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:539)
+	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:575)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2b688488 nid=0x11ec waiting for monitor entry [0x2d24f000..0x2d24f9e8]
+	at jsp_servlet.__index._jspService(__index.java:113)
+	- waiting to lock <0x03ac02b0> (a java.lang.Object)
+	- locked <0x03ac00c0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"weblogic.store._WLS_AdminServer" daemon prio=10 tid=0x2c85fc98 nid=0x17ac waiting on condition [0x2b38f000..0x2b38fa68]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:539)
+	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:575)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c869448 nid=0x15c4 waiting for monitor entry [0x2b3cf000..0x2b3cfae8]
+	at jsp_servlet.__index._jspService(__index.java:102)
+	- waiting to lock <0x03ac02b0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"VDE Transaction Processor Thread" daemon prio=2 tid=0x2c41d288 nid=0x1564 in Object.wait() [0x2b34f000..0x2b34fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x060c03f8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+	at java.lang.Object.wait(Object.java:474)
+	at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+	- locked <0x060c03f8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+	at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2c430c70 nid=0xa58 runnable [0x2b30f000..0x2b30fc68]
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2c435a28 nid=0x143c runnable [0x2b2cf000..0x2b2cfce8]
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+"[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c401ea0 nid=0xc70 in Object.wait() [0x2b27f000..0x2b27fd68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49900> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x05f49900> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"weblogic.timers.TimerThread" daemon prio=9 tid=0x2c408420 nid=0x10bc in Object.wait() [0x2b22f000..0x2b22f9e8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49b80> (a weblogic.timers.internal.TimerThread)
+	at weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:253)
+	- locked <0x05f49b80> (a weblogic.timers.internal.TimerThread)
+
+"weblogic.time.TimeEventGenerator" daemon prio=9 tid=0x2c403ad8 nid=0x14dc in Object.wait() [0x2b1df000..0x2b1dfa68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49c38> (a weblogic.time.common.internal.TimeTable)
+	at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+	- locked <0x05f49c38> (a weblogic.time.common.internal.TimeTable)
+	at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c3ff490 nid=0xce8 waiting for monitor entry [0x2b19f000..0x2b19fae8]
+	at jsp_servlet.__index._jspService(__index.java:104)
+	- waiting to lock <0x03ac00c0> (a java.lang.Object)
+	- locked <0x03ac02b0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"Timer-1" daemon prio=5 tid=0x2af3d578 nid=0x1774 in Object.wait() [0x2b15f000..0x2b15fb68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49dc0> (a java.util.TaskQueue)
+	at java.util.TimerThread.mainLoop(Timer.java:509)
+	- locked <0x05f49dc0> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+"Timer-0" daemon prio=5 tid=0x2ba32ee8 nid=0x50c in Object.wait() [0x2b0ef000..0x2b0efbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3be8> (a java.util.TaskQueue)
+	at java.lang.Object.wait(Object.java:474)
+	at java.util.TimerThread.mainLoop(Timer.java:483)
+	- locked <0x052d3be8> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+"Low Memory Detector" daemon prio=5 tid=0x00ab9a48 nid=0x130 runnable [0x00000000..0x00000000]
+
+"CompilerThread0" daemon prio=10 tid=0x00ab8620 nid=0x17f4 waiting on condition [0x00000000..0x2ae2f6cc]
+
+"Signal Dispatcher" daemon prio=10 tid=0x00ab7988 nid=0x1778 runnable [0x00000000..0x00000000]
+
+"Finalizer" daemon prio=9 tid=0x00aaa8a0 nid=0x1354 in Object.wait() [0x2adaf000..0x2adafa68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3d78> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x052d3d78> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x00aa9410 nid=0x133c in Object.wait() [0x2ad6f000..0x2ad6fae8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3df8> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:474)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+	- locked <0x052d3df8> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x00039e48 nid=0x11e4 in Object.wait() [0x0007f000..0x0007fc3c]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3ee0> (a weblogic.t3.srvr.T3Srvr)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:729)
+	- locked <0x052d3ee0> (a weblogic.t3.srvr.T3Srvr)
+	at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:380)
+	at weblogic.Server.main(Server.java:67)
+
+"VM Thread" prio=10 tid=0x00aa6ad0 nid=0x7a4 runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x00abac20 nid=0x1010 waiting on condition 
+
+THREAD DUMP from JVM taken at 'Thu May 04 22:36:39 2006'
+
+
+Full thread dump Java HotSpot(TM) Client VM (1.5.0_04-b05 mixed mode):
+
+"[STANDBY] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2b024c98 nid=0x1710 in Object.wait() [0x2d69f000..0x2d69fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x02c62068> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x02c62068> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"[ACTIVE] ExecuteThread: '6' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2cb04e68 nid=0xefc runnable [0x2d65f000..0x2d65fc68]
+	at weblogic.platform.SunVM.threadDump0(Native Method)
+	- waiting to lock <0x05f5f1b8> (a weblogic.platform.SunVM)
+	at weblogic.platform.SunVM.threadDump(SunVM.java:94)
+	at weblogic.common.internal.AdminProxy.execute(AdminProxy.java:204)
+	at weblogic.t3.srvr.ClientRequest$1.run(ClientContext.java:711)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+	at weblogic.t3.srvr.ClientRequest.run(ClientContext.java:708)
+	at weblogic.work.ServerWorkManagerImpl$WorkAdapterImpl.run(ServerWorkManagerImpl.java:518)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"FSCacheRefQueueThread" daemon prio=2 tid=0x2c9009c8 nid=0x165c in Object.wait() [0x2d61f000..0x2d61f9e8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x06db0e00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x06db0e00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+
+"DynamicListenThread[Default]" daemon prio=9 tid=0x2ccd6960 nid=0x570 runnable [0x2d5df000..0x2d5dfae8]
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+	- locked <0x069a37b8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+	at java.net.ServerSocket.accept(ServerSocket.java:421)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+	at java.lang.Thread.run(Thread.java:595)
+
+"DynamicListenThread[Default[1]]" daemon prio=9 tid=0x2cb63e70 nid=0x10cc runnable [0x2d59f000..0x2d59fb68]
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+	- locked <0x069a39f8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+	at java.net.ServerSocket.accept(ServerSocket.java:421)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[STANDBY] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2cad9d70 nid=0x624 in Object.wait() [0x2d55f000..0x2d55fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x068e2540> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x068e2540> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c9f53e8 nid=0x16cc waiting for monitor entry [0x2d51f000..0x2d51fc68]
+	at jsp_servlet.__index._jspService(__index.java:120)
+	- waiting to lock <0x03ac00c0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"weblogic.GCMonitor" daemon prio=5 tid=0x2cda2920 nid=0x14c0 in Object.wait() [0x2d4df000..0x2d4dfce8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x068307e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x068307e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at weblogic.platform.GCMonitorThread.waitForNotification(GCMonitorThread.java:88)
+	at weblogic.platform.GCMonitorThread.run(GCMonitorThread.java:64)
+
+"weblogic.store.WLS_DIAGNOSTICS" daemon prio=10 tid=0x2b7ede68 nid=0x1444 waiting on condition [0x2d49f000..0x2d49fd68]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:539)
+	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:575)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2b688488 nid=0x11ec waiting for monitor entry [0x2d24f000..0x2d24f9e8]
+	at jsp_servlet.__index._jspService(__index.java:113)
+	- waiting to lock <0x03ac02b0> (a java.lang.Object)
+	- locked <0x03ac00c0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"weblogic.store._WLS_AdminServer" daemon prio=10 tid=0x2c85fc98 nid=0x17ac waiting on condition [0x2b38f000..0x2b38fa68]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:539)
+	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:575)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c869448 nid=0x15c4 waiting for monitor entry [0x2b3cf000..0x2b3cfae8]
+	at jsp_servlet.__index._jspService(__index.java:102)
+	- waiting to lock <0x03ac02b0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"VDE Transaction Processor Thread" daemon prio=2 tid=0x2c41d288 nid=0x1564 in Object.wait() [0x2b34f000..0x2b34fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x060c03f8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+	at java.lang.Object.wait(Object.java:474)
+	at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+	- locked <0x060c03f8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+	at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2c430c70 nid=0xa58 runnable [0x2b30f000..0x2b30fc68]
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2c435a28 nid=0x143c runnable [0x2b2cf000..0x2b2cfce8]
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+"[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c401ea0 nid=0xc70 in Object.wait() [0x2b27f000..0x2b27fd68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49900> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x05f49900> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"weblogic.timers.TimerThread" daemon prio=9 tid=0x2c408420 nid=0x10bc in Object.wait() [0x2b22f000..0x2b22f9e8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49b80> (a weblogic.timers.internal.TimerThread)
+	at weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:253)
+	- locked <0x05f49b80> (a weblogic.timers.internal.TimerThread)
+
+"weblogic.time.TimeEventGenerator" daemon prio=9 tid=0x2c403ad8 nid=0x14dc in Object.wait() [0x2b1df000..0x2b1dfa68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49c38> (a weblogic.time.common.internal.TimeTable)
+	at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+	- locked <0x05f49c38> (a weblogic.time.common.internal.TimeTable)
+	at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c3ff490 nid=0xce8 waiting for monitor entry [0x2b19f000..0x2b19fae8]
+	at jsp_servlet.__index._jspService(__index.java:104)
+	- waiting to lock <0x03ac00c0> (a java.lang.Object)
+	- locked <0x03ac02b0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"Timer-1" daemon prio=5 tid=0x2af3d578 nid=0x1774 in Object.wait() [0x2b15f000..0x2b15fb68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49dc0> (a java.util.TaskQueue)
+	at java.util.TimerThread.mainLoop(Timer.java:509)
+	- locked <0x05f49dc0> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+"Timer-0" daemon prio=5 tid=0x2ba32ee8 nid=0x50c in Object.wait() [0x2b0ef000..0x2b0efbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3be8> (a java.util.TaskQueue)
+	at java.lang.Object.wait(Object.java:474)
+	at java.util.TimerThread.mainLoop(Timer.java:483)
+	- locked <0x052d3be8> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+"Low Memory Detector" daemon prio=5 tid=0x00ab9a48 nid=0x130 runnable [0x00000000..0x00000000]
+
+"CompilerThread0" daemon prio=10 tid=0x00ab8620 nid=0x17f4 waiting on condition [0x00000000..0x2ae2f6cc]
+
+"Signal Dispatcher" daemon prio=10 tid=0x00ab7988 nid=0x1778 runnable [0x00000000..0x00000000]
+
+"Finalizer" daemon prio=9 tid=0x00aaa8a0 nid=0x1354 in Object.wait() [0x2adaf000..0x2adafa68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3d78> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x052d3d78> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x00aa9410 nid=0x133c in Object.wait() [0x2ad6f000..0x2ad6fae8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3df8> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:474)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+	- locked <0x052d3df8> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x00039e48 nid=0x11e4 in Object.wait() [0x0007f000..0x0007fc3c]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3ee0> (a weblogic.t3.srvr.T3Srvr)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:729)
+	- locked <0x052d3ee0> (a weblogic.t3.srvr.T3Srvr)
+	at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:380)
+	at weblogic.Server.main(Server.java:67)
+
+"VM Thread" prio=10 tid=0x00aa6ad0 nid=0x7a4 runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x00abac20 nid=0x1010 waiting on condition 
+
+THREAD DUMP from JVM taken at 'Thu May 04 22:36:42 2006'
+
+
+Full thread dump Java HotSpot(TM) Client VM (1.5.0_04-b05 mixed mode):
+
+"[STANDBY] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2b024c98 nid=0x1710 in Object.wait() [0x2d69f000..0x2d69fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x02c62068> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x02c62068> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"[ACTIVE] ExecuteThread: '6' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2cb04e68 nid=0xefc runnable [0x2d65f000..0x2d65fc68]
+	at weblogic.platform.SunVM.threadDump0(Native Method)
+	- waiting to lock <0x05f5f1b8> (a weblogic.platform.SunVM)
+	at weblogic.platform.SunVM.threadDump(SunVM.java:94)
+	at weblogic.common.internal.AdminProxy.execute(AdminProxy.java:204)
+	at weblogic.t3.srvr.ClientRequest$1.run(ClientContext.java:711)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+	at weblogic.t3.srvr.ClientRequest.run(ClientContext.java:708)
+	at weblogic.work.ServerWorkManagerImpl$WorkAdapterImpl.run(ServerWorkManagerImpl.java:518)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"FSCacheRefQueueThread" daemon prio=2 tid=0x2c9009c8 nid=0x165c in Object.wait() [0x2d61f000..0x2d61f9e8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x06db0e00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x06db0e00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+
+"DynamicListenThread[Default]" daemon prio=9 tid=0x2ccd6960 nid=0x570 runnable [0x2d5df000..0x2d5dfae8]
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+	- locked <0x069a37b8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+	at java.net.ServerSocket.accept(ServerSocket.java:421)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+	at java.lang.Thread.run(Thread.java:595)
+
+"DynamicListenThread[Default[1]]" daemon prio=9 tid=0x2cb63e70 nid=0x10cc runnable [0x2d59f000..0x2d59fb68]
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+	- locked <0x069a39f8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+	at java.net.ServerSocket.accept(ServerSocket.java:421)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[STANDBY] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2cad9d70 nid=0x624 in Object.wait() [0x2d55f000..0x2d55fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x068e2540> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x068e2540> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c9f53e8 nid=0x16cc waiting for monitor entry [0x2d51f000..0x2d51fc68]
+	at jsp_servlet.__index._jspService(__index.java:120)
+	- waiting to lock <0x03ac00c0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"weblogic.GCMonitor" daemon prio=5 tid=0x2cda2920 nid=0x14c0 in Object.wait() [0x2d4df000..0x2d4dfce8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x068307e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x068307e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at weblogic.platform.GCMonitorThread.waitForNotification(GCMonitorThread.java:88)
+	at weblogic.platform.GCMonitorThread.run(GCMonitorThread.java:64)
+
+"weblogic.store.WLS_DIAGNOSTICS" daemon prio=10 tid=0x2b7ede68 nid=0x1444 waiting on condition [0x2d49f000..0x2d49fd68]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:539)
+	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:575)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2b688488 nid=0x11ec waiting for monitor entry [0x2d24f000..0x2d24f9e8]
+	at jsp_servlet.__index._jspService(__index.java:113)
+	- waiting to lock <0x03ac02b0> (a java.lang.Object)
+	- locked <0x03ac00c0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"weblogic.store._WLS_AdminServer" daemon prio=10 tid=0x2c85fc98 nid=0x17ac waiting on condition [0x2b38f000..0x2b38fa68]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:539)
+	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:575)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c869448 nid=0x15c4 waiting for monitor entry [0x2b3cf000..0x2b3cfae8]
+	at jsp_servlet.__index._jspService(__index.java:102)
+	- waiting to lock <0x03ac02b0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"VDE Transaction Processor Thread" daemon prio=2 tid=0x2c41d288 nid=0x1564 in Object.wait() [0x2b34f000..0x2b34fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x060c03f8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+	at java.lang.Object.wait(Object.java:474)
+	at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+	- locked <0x060c03f8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+	at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2c430c70 nid=0xa58 runnable [0x2b30f000..0x2b30fc68]
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2c435a28 nid=0x143c runnable [0x2b2cf000..0x2b2cfce8]
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+"[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c401ea0 nid=0xc70 in Object.wait() [0x2b27f000..0x2b27fd68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49900> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x05f49900> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"weblogic.timers.TimerThread" daemon prio=9 tid=0x2c408420 nid=0x10bc in Object.wait() [0x2b22f000..0x2b22f9e8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49b80> (a weblogic.timers.internal.TimerThread)
+	at weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:253)
+	- locked <0x05f49b80> (a weblogic.timers.internal.TimerThread)
+
+"weblogic.time.TimeEventGenerator" daemon prio=9 tid=0x2c403ad8 nid=0x14dc in Object.wait() [0x2b1df000..0x2b1dfa68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49c38> (a weblogic.time.common.internal.TimeTable)
+	at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+	- locked <0x05f49c38> (a weblogic.time.common.internal.TimeTable)
+	at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c3ff490 nid=0xce8 waiting for monitor entry [0x2b19f000..0x2b19fae8]
+	at jsp_servlet.__index._jspService(__index.java:104)
+	- waiting to lock <0x03ac00c0> (a java.lang.Object)
+	- locked <0x03ac02b0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"Timer-1" daemon prio=5 tid=0x2af3d578 nid=0x1774 in Object.wait() [0x2b15f000..0x2b15fb68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49dc0> (a java.util.TaskQueue)
+	at java.util.TimerThread.mainLoop(Timer.java:509)
+	- locked <0x05f49dc0> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+"Timer-0" daemon prio=5 tid=0x2ba32ee8 nid=0x50c in Object.wait() [0x2b0ef000..0x2b0efbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3be8> (a java.util.TaskQueue)
+	at java.lang.Object.wait(Object.java:474)
+	at java.util.TimerThread.mainLoop(Timer.java:483)
+	- locked <0x052d3be8> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+"Low Memory Detector" daemon prio=5 tid=0x00ab9a48 nid=0x130 runnable [0x00000000..0x00000000]
+
+"CompilerThread0" daemon prio=10 tid=0x00ab8620 nid=0x17f4 waiting on condition [0x00000000..0x2ae2f6cc]
+
+"Signal Dispatcher" daemon prio=10 tid=0x00ab7988 nid=0x1778 runnable [0x00000000..0x00000000]
+
+"Finalizer" daemon prio=9 tid=0x00aaa8a0 nid=0x1354 in Object.wait() [0x2adaf000..0x2adafa68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3d78> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x052d3d78> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x00aa9410 nid=0x133c in Object.wait() [0x2ad6f000..0x2ad6fae8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3df8> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:474)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+	- locked <0x052d3df8> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x00039e48 nid=0x11e4 in Object.wait() [0x0007f000..0x0007fc3c]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3ee0> (a weblogic.t3.srvr.T3Srvr)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:729)
+	- locked <0x052d3ee0> (a weblogic.t3.srvr.T3Srvr)
+	at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:380)
+	at weblogic.Server.main(Server.java:67)
+
+"VM Thread" prio=10 tid=0x00aa6ad0 nid=0x7a4 runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x00abac20 nid=0x1010 waiting on condition 
+
+THREAD DUMP from JVM taken at 'Thu May 04 22:36:46 2006'
+
+
+Full thread dump Java HotSpot(TM) Client VM (1.5.0_04-b05 mixed mode):
+
+"[STANDBY] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2b024c98 nid=0x1710 in Object.wait() [0x2d69f000..0x2d69fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x02c62068> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x02c62068> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"[ACTIVE] ExecuteThread: '6' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2cb04e68 nid=0xefc runnable [0x2d65f000..0x2d65fc68]
+	at weblogic.platform.SunVM.threadDump0(Native Method)
+	- waiting to lock <0x05f5f1b8> (a weblogic.platform.SunVM)
+	at weblogic.platform.SunVM.threadDump(SunVM.java:94)
+	at weblogic.common.internal.AdminProxy.execute(AdminProxy.java:204)
+	at weblogic.t3.srvr.ClientRequest$1.run(ClientContext.java:711)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+	at weblogic.t3.srvr.ClientRequest.run(ClientContext.java:708)
+	at weblogic.work.ServerWorkManagerImpl$WorkAdapterImpl.run(ServerWorkManagerImpl.java:518)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"FSCacheRefQueueThread" daemon prio=2 tid=0x2c9009c8 nid=0x165c in Object.wait() [0x2d61f000..0x2d61f9e8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x06db0e00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x06db0e00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+
+"DynamicListenThread[Default]" daemon prio=9 tid=0x2ccd6960 nid=0x570 runnable [0x2d5df000..0x2d5dfae8]
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+	- locked <0x069a37b8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+	at java.net.ServerSocket.accept(ServerSocket.java:421)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+	at java.lang.Thread.run(Thread.java:595)
+
+"DynamicListenThread[Default[1]]" daemon prio=9 tid=0x2cb63e70 nid=0x10cc runnable [0x2d59f000..0x2d59fb68]
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+	- locked <0x069a39f8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+	at java.net.ServerSocket.accept(ServerSocket.java:421)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[STANDBY] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2cad9d70 nid=0x624 in Object.wait() [0x2d55f000..0x2d55fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x068e2540> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x068e2540> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c9f53e8 nid=0x16cc waiting for monitor entry [0x2d51f000..0x2d51fc68]
+	at jsp_servlet.__index._jspService(__index.java:120)
+	- waiting to lock <0x03ac00c0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"weblogic.GCMonitor" daemon prio=5 tid=0x2cda2920 nid=0x14c0 in Object.wait() [0x2d4df000..0x2d4dfce8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x068307e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x068307e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at weblogic.platform.GCMonitorThread.waitForNotification(GCMonitorThread.java:88)
+	at weblogic.platform.GCMonitorThread.run(GCMonitorThread.java:64)
+
+"weblogic.store.WLS_DIAGNOSTICS" daemon prio=10 tid=0x2b7ede68 nid=0x1444 waiting on condition [0x2d49f000..0x2d49fd68]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:539)
+	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:575)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2b688488 nid=0x11ec waiting for monitor entry [0x2d24f000..0x2d24f9e8]
+	at jsp_servlet.__index._jspService(__index.java:113)
+	- waiting to lock <0x03ac02b0> (a java.lang.Object)
+	- locked <0x03ac00c0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"weblogic.store._WLS_AdminServer" daemon prio=10 tid=0x2c85fc98 nid=0x17ac waiting on condition [0x2b38f000..0x2b38fa68]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:539)
+	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:575)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c869448 nid=0x15c4 waiting for monitor entry [0x2b3cf000..0x2b3cfae8]
+	at jsp_servlet.__index._jspService(__index.java:102)
+	- waiting to lock <0x03ac02b0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"VDE Transaction Processor Thread" daemon prio=2 tid=0x2c41d288 nid=0x1564 in Object.wait() [0x2b34f000..0x2b34fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x060c03f8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+	at java.lang.Object.wait(Object.java:474)
+	at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+	- locked <0x060c03f8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+	at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2c430c70 nid=0xa58 runnable [0x2b30f000..0x2b30fc68]
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2c435a28 nid=0x143c runnable [0x2b2cf000..0x2b2cfce8]
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+"[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c401ea0 nid=0xc70 in Object.wait() [0x2b27f000..0x2b27fd68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49900> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x05f49900> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"weblogic.timers.TimerThread" daemon prio=9 tid=0x2c408420 nid=0x10bc in Object.wait() [0x2b22f000..0x2b22f9e8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49b80> (a weblogic.timers.internal.TimerThread)
+	at weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:253)
+	- locked <0x05f49b80> (a weblogic.timers.internal.TimerThread)
+
+"weblogic.time.TimeEventGenerator" daemon prio=9 tid=0x2c403ad8 nid=0x14dc in Object.wait() [0x2b1df000..0x2b1dfa68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49c38> (a weblogic.time.common.internal.TimeTable)
+	at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+	- locked <0x05f49c38> (a weblogic.time.common.internal.TimeTable)
+	at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c3ff490 nid=0xce8 waiting for monitor entry [0x2b19f000..0x2b19fae8]
+	at jsp_servlet.__index._jspService(__index.java:104)
+	- waiting to lock <0x03ac00c0> (a java.lang.Object)
+	- locked <0x03ac02b0> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"Timer-1" daemon prio=5 tid=0x2af3d578 nid=0x1774 in Object.wait() [0x2b15f000..0x2b15fb68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49dc0> (a java.util.TaskQueue)
+	at java.util.TimerThread.mainLoop(Timer.java:509)
+	- locked <0x05f49dc0> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+"Timer-0" daemon prio=5 tid=0x2ba32ee8 nid=0x50c in Object.wait() [0x2b0ef000..0x2b0efbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3be8> (a java.util.TaskQueue)
+	at java.lang.Object.wait(Object.java:474)
+	at java.util.TimerThread.mainLoop(Timer.java:483)
+	- locked <0x052d3be8> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+"Low Memory Detector" daemon prio=5 tid=0x00ab9a48 nid=0x130 runnable [0x00000000..0x00000000]
+
+"CompilerThread0" daemon prio=10 tid=0x00ab8620 nid=0x17f4 waiting on condition [0x00000000..0x2ae2f6cc]
+
+"Signal Dispatcher" daemon prio=10 tid=0x00ab7988 nid=0x1778 runnable [0x00000000..0x00000000]
+
+"Finalizer" daemon prio=9 tid=0x00aaa8a0 nid=0x1354 in Object.wait() [0x2adaf000..0x2adafa68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3d78> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x052d3d78> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x00aa9410 nid=0x133c in Object.wait() [0x2ad6f000..0x2ad6fae8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3df8> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:474)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+	- locked <0x052d3df8> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x00039e48 nid=0x11e4 in Object.wait() [0x0007f000..0x0007fc3c]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3ee0> (a weblogic.t3.srvr.T3Srvr)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:729)
+	- locked <0x052d3ee0> (a weblogic.t3.srvr.T3Srvr)
+	at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:380)
+	at weblogic.Server.main(Server.java:67)
+
+"VM Thread" prio=10 tid=0x00aa6ad0 nid=0x7a4 runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x00abac20 nid=0x1010 waiting on condition 
+
+<2006/05/04 22時36分47秒 JST> <Critical> <WebLogicServer> <BEA-000394> <
+
+デッドロックが検出されました :
+==================
+
+[deadlocked thread] [ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)':
+--------------------------------------------------------------------------------------------------
+Thread '[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'' is waiting to acquire lock 'java.lang.Object@1b0e76a' that is held by thread '[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)''
+
+Stack trace:
+------------
+	jsp_servlet.__index._jspService(__index.java:113)
+	weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+[deadlocked thread] [ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)':
+--------------------------------------------------------------------------------------------------
+Thread '[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'' is waiting to acquire lock 'java.lang.Object@128ea3f' that is held by thread '[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)''
+
+Stack trace:
+------------
+	jsp_servlet.__index._jspService(__index.java:104)
+	weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+> 
+<2006/05/04 22時36分47秒 JST> <Critical> <Health> <BEA-310006> <重要なサブシステム core で障害が発生しました。サーバの状態を FAILED に設定しています。
+理由 : Thread deadlock detected> 
+<2006/05/04 22時36分47秒 JST> <Critical> <WebLogicServer> <BEA-000385> <サーバ ヘルスが障害状態です。理由 : health of critical service 'core' failed> 
+<2006/05/04 22時36分47秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が FAILED に変化しました。> 
+<2006/05/04 22時36分47秒 JST> <Error> <com.bea.weblogic.kernel> <000000> <THREAD DUMP from JVM taken at 'Thu May 04 22:36:47 2006'
+
+
+Full thread dump Java HotSpot(TM) Client VM (1.5.0_04-b05 mixed mode):
+
+"[STANDBY] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2b024c98 nid=0x1710 in Object.wait() [0x2d69f000..0x2d69fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x03cb0000> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x03cb0000> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"[ACTIVE] ExecuteThread: '6' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2cb04e68 nid=0xefc in Object.wait() [0x2d65f000..0x2d65fc68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x03cb00a8> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x03cb00a8> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"FSCacheRefQueueThread" daemon prio=2 tid=0x2c9009c8 nid=0x165c in Object.wait() [0x2d61f000..0x2d61f9e8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x06db0e00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x06db0e00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+
+"DynamicListenThread[Default]" daemon prio=9 tid=0x2ccd6960 nid=0x570 runnable [0x2d5df000..0x2d5dfae8]
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+	- locked <0x069a37b8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+	at java.net.ServerSocket.accept(ServerSocket.java:421)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+	at java.lang.Thread.run(Thread.java:595)
+
+"DynamicListenThread[Default[1]]" daemon prio=9 tid=0x2cb63e70 nid=0x10cc runnable [0x2d59f000..0x2d59fb68]
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:384)
+	- locked <0x069a39f8> (a java.net.SocksSocketImpl)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:450)
+	at java.net.ServerSocket.accept(ServerSocket.java:421)
+	at weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+	at weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+	at weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[STANDBY] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2cad9d70 nid=0x624 in Object.wait() [0x2d55f000..0x2d55fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x068e2540> (a weblogic.work.ExecuteThread)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+	- locked <0x068e2540> (a weblogic.work.ExecuteThread)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+
+"[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c9f53e8 nid=0x16cc waiting for monitor entry [0x2d51f000..0x2d51fc68]
+	at jsp_servlet.__index._jspService(__index.java:120)
+	- waiting to lock <0x03cb0210> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"weblogic.GCMonitor" daemon prio=5 tid=0x2cda2920 nid=0x14c0 in Object.wait() [0x2d4df000..0x2d4dfce8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x068307e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x068307e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at weblogic.platform.GCMonitorThread.waitForNotification(GCMonitorThread.java:88)
+	at weblogic.platform.GCMonitorThread.run(GCMonitorThread.java:64)
+
+"weblogic.store.WLS_DIAGNOSTICS" daemon prio=10 tid=0x2b7ede68 nid=0x1444 waiting on condition [0x2d49f000..0x2d49fd68]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:539)
+	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:575)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2b688488 nid=0x11ec waiting for monitor entry [0x2d24f000..0x2d24f9e8]
+	at jsp_servlet.__index._jspService(__index.java:113)
+	- waiting to lock <0x03cb0400> (a java.lang.Object)
+	- locked <0x03cb0210> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"weblogic.store._WLS_AdminServer" daemon prio=10 tid=0x2c85fc98 nid=0x17ac waiting on condition [0x2b38f000..0x2b38fa68]
+	at sun.misc.Unsafe.park(Native Method)
+	at java.util.concurrent.locks.LockSupport.park(LockSupport.java:118)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+	at java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+	at weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+	at weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:539)
+	at weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:575)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c869448 nid=0x15c4 waiting for monitor entry [0x2b3cf000..0x2b3cfae8]
+	at jsp_servlet.__index._jspService(__index.java:102)
+	- waiting to lock <0x03cb0400> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"VDE Transaction Processor Thread" daemon prio=2 tid=0x2c41d288 nid=0x1564 in Object.wait() [0x2b34f000..0x2b34fbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x060c03f8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+	at java.lang.Object.wait(Object.java:474)
+	at com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+	- locked <0x060c03f8> (a com.octetstring.vde.backend.standard.TransactionProcessor)
+	at com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2c430c70 nid=0xa58 runnable [0x2b30f000..0x2b30fc68]
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" daemon prio=5 tid=0x2c435a28 nid=0x143c runnable [0x2b2cf000..0x2b2cfce8]
+	at weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+	at weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+	at weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+	at weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+	at weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+	at weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+
+"[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c401ea0 nid=0xc70 waiting on condition [0x2b27f000..0x2b27fd68]
+	at weblogic.platform.SunVM.fileThreadDump0(Native Method)
+	- waiting to lock <0x05f5f1b8> (a weblogic.platform.SunVM)
+	at weblogic.platform.SunVM.threadDump(SunVM.java:100)
+	at weblogic.platform.SunVM.threadDump(SunVM.java:133)
+	at weblogic.t3.srvr.T3Srvr.logThreadDump(T3Srvr.java:242)
+	at weblogic.t3.srvr.T3Srvr.failed(T3Srvr.java:192)
+	- locked <0x052d3ee0> (a weblogic.t3.srvr.T3Srvr)
+	at weblogic.health.HealthMonitorService$1.run(HealthMonitorService.java:124)
+	at weblogic.work.ServerWorkManagerImpl$WorkAdapterImpl.run(ServerWorkManagerImpl.java:518)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"weblogic.timers.TimerThread" daemon prio=9 tid=0x2c408420 nid=0x10bc in Object.wait() [0x2b22f000..0x2b22f9e8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49b80> (a weblogic.timers.internal.TimerThread)
+	at weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:253)
+	- locked <0x05f49b80> (a weblogic.timers.internal.TimerThread)
+
+"weblogic.time.TimeEventGenerator" daemon prio=9 tid=0x2c403ad8 nid=0x14dc in Object.wait() [0x2b1df000..0x2b1dfa68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49c38> (a weblogic.time.common.internal.TimeTable)
+	at weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+	- locked <0x05f49c38> (a weblogic.time.common.internal.TimeTable)
+	at weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+	at java.lang.Thread.run(Thread.java:595)
+
+"[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" daemon prio=5 tid=0x2c3ff490 nid=0xce8 waiting for monitor entry [0x2b19f000..0x2b19fae8]
+	at jsp_servlet.__index._jspService(__index.java:104)
+	- waiting to lock <0x03cb0210> (a java.lang.Object)
+	- locked <0x03cb0400> (a java.lang.Object)
+	at weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:225)
+	at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:127)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3153)
+	at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	at weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1973)
+	at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1880)
+	at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1310)
+	at weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	at weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+
+"Timer-1" daemon prio=5 tid=0x2af3d578 nid=0x1774 in Object.wait() [0x2b15f000..0x2b15fb68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x05f49dc0> (a java.util.TaskQueue)
+	at java.util.TimerThread.mainLoop(Timer.java:509)
+	- locked <0x05f49dc0> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+"Timer-0" daemon prio=5 tid=0x2ba32ee8 nid=0x50c in Object.wait() [0x2b0ef000..0x2b0efbe8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3be8> (a java.util.TaskQueue)
+	at java.lang.Object.wait(Object.java:474)
+	at java.util.TimerThread.mainLoop(Timer.java:483)
+	- locked <0x052d3be8> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:462)
+
+"Low Memory Detector" daemon prio=5 tid=0x00ab9a48 nid=0x130 runnable [0x00000000..0x00000000]
+
+"CompilerThread0" daemon prio=10 tid=0x00ab8620 nid=0x17f4 waiting on condition [0x00000000..0x2ae2f6cc]
+
+"Signal Dispatcher" daemon prio=10 tid=0x00ab7988 nid=0x1778 runnable [0x00000000..0x00000000]
+
+"Finalizer" daemon prio=9 tid=0x00aaa8a0 nid=0x1354 in Object.wait() [0x2adaf000..0x2adafa68]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3d78> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x052d3d78> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x00aa9410 nid=0x133c in Object.wait() [0x2ad6f000..0x2ad6fae8]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3df8> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:474)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+	- locked <0x052d3df8> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x00039e48 nid=0x11e4 in Object.wait() [0x0007f000..0x0007fc3c]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x052d3ee0> (a weblogic.t3.srvr.T3Srvr)
+	at java.lang.Object.wait(Object.java:474)
+	at weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:729)
+	- locked <0x052d3ee0> (a weblogic.t3.srvr.T3Srvr)
+	at weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:380)
+	at weblogic.Server.main(Server.java:67)
+
+"VM Thread" prio=10 tid=0x00aa6ad0 nid=0x7a4 runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x00abac20 nid=0x1010 waiting on condition 
+
+> 
+<2006/05/04 22時36分47秒 JST> <Notice> <WebLogicServer> <BEA-000388> <JVM により WLS の停止フックが呼び出されました。サーバは強制停止されます。> 
+<2006/05/04 22時36分47秒 JST> <Alert> <WebLogicServer> <BEA-000396> <<WLS Kernel> からサーバを shutdown するよう要求されました。> 
+<2006/05/04 22時36分47秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が FORCE_SHUTTING_DOWN に変化しました。> 
+<2006/05/04 22時36分47秒 JST> <Notice> <Server> <BEA-002607> <192.168.1.3:7001 でリスン中のチャネル "Default" が停止されました。> 
+<2006/05/04 22時36分47秒 JST> <Notice> <Server> <BEA-002607> <127.0.0.1:7001 でリスン中のチャネル "Default[1]" が停止されました。> 
+バッチ ジョブを終了しますか (Y/N)? ^C

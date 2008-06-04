@@ -1,0 +1,60 @@
+ftd.0.deadLockSize=0
+ftd.0.threadCount=4
+#"Finalizer" (TID:0x101B4100, sys_thread_t:0x998610,state:CW, native ID:0x94) prio=8
+#at java.lang.Object.wait(Native Method)
+#at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:133)
+#at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:148)
+#at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:213)
+td.0.0.blockedObjectId=null
+td.0.0.blockerId=null
+td.0.0.condition=(TID:0x101B4100, sys_thread_t:0x998610,state:CW, native ID:0x94) prio=8
+td.0.0.header="Finalizer" (TID:0x101B4100, sys_thread_t:0x998610,state:CW, native ID:0x94) prio=8
+td.0.0.id=0x998610
+td.0.0.name=Finalizer
+td.0.0.isBlocked=false
+td.0.0.isDaemon=false
+td.0.0.isDeadLocked=false
+td.0.0.isIdle=true
+
+#"Reference Handler" (TID:0x101B4148,sys_thread_t:0x97FD48, state:CW, native ID:0x1E0) prio=10
+#at java.lang.Object.wait(Native Method)
+#at java.lang.Object.wait(Object.java:429)
+#at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:131)
+td.0.1.blockedObjectId=null
+td.0.1.blockerId=null
+td.0.1.condition=(TID:0x101B4148,sys_thread_t:0x97FD48, state:CW, native ID:0x1E0) prio=10
+td.0.1.header="Reference Handler" (TID:0x101B4148,sys_thread_t:0x97FD48, state:CW, native ID:0x1E0) prio=10
+td.0.1.id=0x97FD48
+td.0.1.name=Reference Handler
+td.0.1.isBlocked=false
+td.0.1.isDaemon=false
+td.0.1.isDeadLocked=false
+td.0.1.isIdle=true
+
+#"Signal dispatcher" (TID:0x101B4190,sys_thread_t:0x97D230, state:R, native ID:0x608) prio=5
+td.0.2.blockedObjectId=null
+td.0.2.blockerId=null
+td.0.2.condition=(TID:0x101B4190,sys_thread_t:0x97D230, state:R, native ID:0x608) prio=5
+td.0.2.header="Signal dispatcher" (TID:0x101B4190,sys_thread_t:0x97D230, state:R, native ID:0x608) prio=5
+td.0.2.id=0x97D230
+td.0.2.name=Signal dispatcher
+td.0.2.isBlocked=false
+td.0.2.isDaemon=false
+td.0.2.isDeadLocked=false
+td.0.2.isIdle=false
+
+#"main" (TID:0x101B41D8, sys_thread_t:0x3E510, state:R,native ID:0xA0) prio=5
+#at InfiniteLoop.hang2(InfiniteLoop.java:14)
+#at InfiniteLoop.hang1(InfiniteLoop.java:10)
+#at InfiniteLoop.main(InfiniteLoop.java:6)
+td.0.3.blockedObjectId=null
+td.0.3.blockerId=null
+td.0.3.condition=(TID:0x101B41D8, sys_thread_t:0x3E510, state:R,native ID:0xA0) prio=5
+td.0.3.header="main" (TID:0x101B41D8, sys_thread_t:0x3E510, state:R,native ID:0xA0) prio=5
+td.0.3.id=0x3E510
+td.0.3.name=main
+td.0.3.isBlocked=false
+td.0.3.isDaemon=false
+td.0.3.isDeadLocked=false
+td.0.3.isIdle=false
+

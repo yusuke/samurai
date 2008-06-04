@@ -1,0 +1,381 @@
+ftd.0.deadLockSize=1
+ftd.0.threadCount=9
+#"DestroyJavaVM" prio=5 tid=0x00285c40 nid=0x2f4 waiting on condition [0..6fad8]
+td.0.0.blockedObjectId=null
+td.0.0.blockerId=null
+td.0.0.condition=prio=5 tid=0x00285c40 nid=0x2f4 waiting on condition [0..6fad8]
+td.0.0.header="DestroyJavaVM" prio=5 tid=0x00285c40 nid=0x2f4 waiting on condition [0..6fad8]
+td.0.0.id=0x00285c40
+td.0.0.name=DestroyJavaVM
+td.0.0.isBlocked=false
+td.0.0.isDaemon=false
+td.0.0.isDeadLocked=false
+td.0.0.isIdle=false
+
+#"Thread-1" prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor entry [182ef000..182efd88]
+#	at net.homeip.yusuke.samurai.test.AThread.run(StackSample.java:26)
+#	- waiting to lock <0x100309e0> (a java.lang.Object)
+#	- locked <0x100309e8> (a java.lang.Object)
+td.0.1.blockedObjectId=0x100309e0
+td.0.1.blockerId=0x0028e8b0
+td.0.1.condition=prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor entry [182ef000..182efd88]
+td.0.1.header="Thread-1" prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor entry [182ef000..182efd88]
+td.0.1.id=0x0028ea18
+td.0.1.name=Thread-1
+td.0.1.isBlocked=true
+td.0.1.isDaemon=false
+td.0.1.isDeadLocked=true
+td.0.1.isIdle=false
+
+#"Thread-0" prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor entry [182af000..182afd88]
+#	at net.homeip.yusuke.samurai.test.AThread.run(StackSample.java:26)
+#	- waiting to lock <0x100309e8> (a java.lang.Object)
+#	- locked <0x100309e0> (a java.lang.Object)
+td.0.2.blockedObjectId=0x100309e8
+td.0.2.blockerId=0x0028ea18
+td.0.2.condition=prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor entry [182af000..182afd88]
+td.0.2.header="Thread-0" prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor entry [182af000..182afd88]
+td.0.2.id=0x0028e8b0
+td.0.2.name=Thread-0
+td.0.2.isBlocked=true
+td.0.2.isDaemon=false
+td.0.2.isDeadLocked=true
+td.0.2.isIdle=false
+
+#"Signal Dispatcher" daemon prio=10 tid=0x0097a740 nid=0x238 waiting on condition [0..0]
+td.0.3.blockedObjectId=null
+td.0.3.blockerId=null
+td.0.3.condition=daemon prio=10 tid=0x0097a740 nid=0x238 waiting on condition [0..0]
+td.0.3.header="Signal Dispatcher" daemon prio=10 tid=0x0097a740 nid=0x238 waiting on condition [0..0]
+td.0.3.id=0x0097a740
+td.0.3.name=Signal Dispatcher
+td.0.3.isBlocked=false
+td.0.3.isDaemon=true
+td.0.3.isDeadLocked=false
+td.0.3.isIdle=false
+
+#"Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait() [1816f000..1816fd88]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x10010498> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+#	- locked <0x10010498> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+#	at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+td.0.4.blockedObjectId=null
+td.0.4.blockerId=null
+td.0.4.condition=daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait() [1816f000..1816fd88]
+td.0.4.header="Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait() [1816f000..1816fd88]
+td.0.4.id=0x0091a500
+td.0.4.name=Finalizer
+td.0.4.isBlocked=false
+td.0.4.isDaemon=true
+td.0.4.isDeadLocked=false
+td.0.4.isIdle=true
+
+#"Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Object.wait() [1812f000..1812fd88]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x10010388> (a java.lang.ref.Reference$Lock)
+#	at java.lang.Object.wait(Unknown Source)
+#	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+#	- locked <0x10010388> (a java.lang.ref.Reference$Lock)
+td.0.5.blockedObjectId=null
+td.0.5.blockerId=null
+td.0.5.condition=daemon prio=10 tid=0x00919078 nid=0x490 in Object.wait() [1812f000..1812fd88]
+td.0.5.header="Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Object.wait() [1812f000..1812fd88]
+td.0.5.id=0x00919078
+td.0.5.name=Reference Handler
+td.0.5.isBlocked=false
+td.0.5.isDaemon=true
+td.0.5.isDeadLocked=false
+td.0.5.isIdle=true
+
+#"VM Thread" prio=5 tid=0x00959360 nid=0x4d0 runnable 
+td.0.6.blockedObjectId=null
+td.0.6.blockerId=null
+td.0.6.condition=prio=5 tid=0x00959360 nid=0x4d0 runnable 
+td.0.6.header="VM Thread" prio=5 tid=0x00959360 nid=0x4d0 runnable 
+td.0.6.id=0x00959360
+td.0.6.name=VM Thread
+td.0.6.isBlocked=false
+td.0.6.isDaemon=false
+td.0.6.isDeadLocked=false
+td.0.6.isIdle=false
+
+#"VM Periodic Task Thread" prio=10 tid=0x00973000 nid=0x570 waiting on condition 
+td.0.7.blockedObjectId=null
+td.0.7.blockerId=null
+td.0.7.condition=prio=10 tid=0x00973000 nid=0x570 waiting on condition 
+td.0.7.header="VM Periodic Task Thread" prio=10 tid=0x00973000 nid=0x570 waiting on condition 
+td.0.7.id=0x00973000
+td.0.7.name=VM Periodic Task Thread
+td.0.7.isBlocked=false
+td.0.7.isDaemon=false
+td.0.7.isDeadLocked=false
+td.0.7.isIdle=false
+
+#"Suspend Checker Thread" prio=10 tid=0x0097a008 nid=0x1d8 runnable 
+td.0.8.blockedObjectId=null
+td.0.8.blockerId=null
+td.0.8.condition=prio=10 tid=0x0097a008 nid=0x1d8 runnable 
+td.0.8.header="Suspend Checker Thread" prio=10 tid=0x0097a008 nid=0x1d8 runnable 
+td.0.8.id=0x0097a008
+td.0.8.name=Suspend Checker Thread
+td.0.8.isBlocked=false
+td.0.8.isDaemon=false
+td.0.8.isDeadLocked=false
+td.0.8.isIdle=false
+
+ftd.1.deadLockSize=1
+ftd.1.threadCount=9
+#"DestroyJavaVM" prio=5 tid=0x00285c40 nid=0x2f4 waiting on condition [0..6fad8]
+td.1.0.blockedObjectId=null
+td.1.0.blockerId=null
+td.1.0.condition=prio=5 tid=0x00285c40 nid=0x2f4 waiting on condition [0..6fad8]
+td.1.0.header="DestroyJavaVM" prio=5 tid=0x00285c40 nid=0x2f4 waiting on condition [0..6fad8]
+td.1.0.id=0x00285c40
+td.1.0.name=DestroyJavaVM
+td.1.0.isBlocked=false
+td.1.0.isDaemon=false
+td.1.0.isDeadLocked=false
+td.1.0.isIdle=false
+
+#"Thread-1" prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor entry [182ef000..182efd88]
+#	at net.homeip.yusuke.samurai.test.AThread.run(StackSample.java:26)
+#	- waiting to lock <0x100309e0> (a java.lang.Object)
+#	- locked <0x100309e8> (a java.lang.Object)
+td.1.1.blockedObjectId=0x100309e0
+td.1.1.blockerId=0x0028e8b0
+td.1.1.condition=prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor entry [182ef000..182efd88]
+td.1.1.header="Thread-1" prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor entry [182ef000..182efd88]
+td.1.1.id=0x0028ea18
+td.1.1.name=Thread-1
+td.1.1.isBlocked=true
+td.1.1.isDaemon=false
+td.1.1.isDeadLocked=true
+td.1.1.isIdle=false
+
+#"Thread-0" prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor entry [182af000..182afd88]
+#	at net.homeip.yusuke.samurai.test.AThread.run(StackSample.java:26)
+#	- waiting to lock <0x100309e8> (a java.lang.Object)
+#	- locked <0x100309e0> (a java.lang.Object)
+td.1.2.blockedObjectId=0x100309e8
+td.1.2.blockerId=0x0028ea18
+td.1.2.condition=prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor entry [182af000..182afd88]
+td.1.2.header="Thread-0" prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor entry [182af000..182afd88]
+td.1.2.id=0x0028e8b0
+td.1.2.name=Thread-0
+td.1.2.isBlocked=true
+td.1.2.isDaemon=false
+td.1.2.isDeadLocked=true
+td.1.2.isIdle=false
+
+#"Signal Dispatcher" daemon prio=10 tid=0x0097a740 nid=0x238 waiting on condition [0..0]
+td.1.3.blockedObjectId=null
+td.1.3.blockerId=null
+td.1.3.condition=daemon prio=10 tid=0x0097a740 nid=0x238 waiting on condition [0..0]
+td.1.3.header="Signal Dispatcher" daemon prio=10 tid=0x0097a740 nid=0x238 waiting on condition [0..0]
+td.1.3.id=0x0097a740
+td.1.3.name=Signal Dispatcher
+td.1.3.isBlocked=false
+td.1.3.isDaemon=true
+td.1.3.isDeadLocked=false
+td.1.3.isIdle=false
+
+#"Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait() [1816f000..1816fd88]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x10010498> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+#	- locked <0x10010498> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+#	at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+td.1.4.blockedObjectId=null
+td.1.4.blockerId=null
+td.1.4.condition=daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait() [1816f000..1816fd88]
+td.1.4.header="Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait() [1816f000..1816fd88]
+td.1.4.id=0x0091a500
+td.1.4.name=Finalizer
+td.1.4.isBlocked=false
+td.1.4.isDaemon=true
+td.1.4.isDeadLocked=false
+td.1.4.isIdle=true
+
+#"Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Object.wait() [1812f000..1812fd88]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x10010388> (a java.lang.ref.Reference$Lock)
+#	at java.lang.Object.wait(Unknown Source)
+#	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+#	- locked <0x10010388> (a java.lang.ref.Reference$Lock)
+td.1.5.blockedObjectId=null
+td.1.5.blockerId=null
+td.1.5.condition=daemon prio=10 tid=0x00919078 nid=0x490 in Object.wait() [1812f000..1812fd88]
+td.1.5.header="Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Object.wait() [1812f000..1812fd88]
+td.1.5.id=0x00919078
+td.1.5.name=Reference Handler
+td.1.5.isBlocked=false
+td.1.5.isDaemon=true
+td.1.5.isDeadLocked=false
+td.1.5.isIdle=true
+
+#"VM Thread" prio=5 tid=0x00959360 nid=0x4d0 runnable 
+td.1.6.blockedObjectId=null
+td.1.6.blockerId=null
+td.1.6.condition=prio=5 tid=0x00959360 nid=0x4d0 runnable 
+td.1.6.header="VM Thread" prio=5 tid=0x00959360 nid=0x4d0 runnable 
+td.1.6.id=0x00959360
+td.1.6.name=VM Thread
+td.1.6.isBlocked=false
+td.1.6.isDaemon=false
+td.1.6.isDeadLocked=false
+td.1.6.isIdle=false
+
+#"VM Periodic Task Thread" prio=10 tid=0x00973000 nid=0x570 waiting on condition 
+td.1.7.blockedObjectId=null
+td.1.7.blockerId=null
+td.1.7.condition=prio=10 tid=0x00973000 nid=0x570 waiting on condition 
+td.1.7.header="VM Periodic Task Thread" prio=10 tid=0x00973000 nid=0x570 waiting on condition 
+td.1.7.id=0x00973000
+td.1.7.name=VM Periodic Task Thread
+td.1.7.isBlocked=false
+td.1.7.isDaemon=false
+td.1.7.isDeadLocked=false
+td.1.7.isIdle=false
+
+#"Suspend Checker Thread" prio=10 tid=0x0097a008 nid=0x1d8 runnable 
+td.1.8.blockedObjectId=null
+td.1.8.blockerId=null
+td.1.8.condition=prio=10 tid=0x0097a008 nid=0x1d8 runnable 
+td.1.8.header="Suspend Checker Thread" prio=10 tid=0x0097a008 nid=0x1d8 runnable 
+td.1.8.id=0x0097a008
+td.1.8.name=Suspend Checker Thread
+td.1.8.isBlocked=false
+td.1.8.isDaemon=false
+td.1.8.isDeadLocked=false
+td.1.8.isIdle=false
+
+ftd.2.deadLockSize=1
+ftd.2.threadCount=9
+#"DestroyJavaVM" prio=5 tid=0x00285c40 nid=0x2f4 waiting on condition [0..6fad8]
+td.2.0.blockedObjectId=null
+td.2.0.blockerId=null
+td.2.0.condition=prio=5 tid=0x00285c40 nid=0x2f4 waiting on condition [0..6fad8]
+td.2.0.header="DestroyJavaVM" prio=5 tid=0x00285c40 nid=0x2f4 waiting on condition [0..6fad8]
+td.2.0.id=0x00285c40
+td.2.0.name=DestroyJavaVM
+td.2.0.isBlocked=false
+td.2.0.isDaemon=false
+td.2.0.isDeadLocked=false
+td.2.0.isIdle=false
+
+#"Thread-1" prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor entry [182ef000..182efd88]
+#	at net.homeip.yusuke.samurai.test.AThread.run(StackSample.java:26)
+#	- waiting to lock <0x100309e0> (a java.lang.Object)
+#	- locked <0x100309e8> (a java.lang.Object)
+td.2.1.blockedObjectId=0x100309e0
+td.2.1.blockerId=0x0028e8b0
+td.2.1.condition=prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor entry [182ef000..182efd88]
+td.2.1.header="Thread-1" prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor entry [182ef000..182efd88]
+td.2.1.id=0x0028ea18
+td.2.1.name=Thread-1
+td.2.1.isBlocked=true
+td.2.1.isDaemon=false
+td.2.1.isDeadLocked=true
+td.2.1.isIdle=false
+
+#"Thread-0" prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor entry [182af000..182afd88]
+#	at net.homeip.yusuke.samurai.test.AThread.run(StackSample.java:26)
+#	- waiting to lock <0x100309e8> (a java.lang.Object)
+#	- locked <0x100309e0> (a java.lang.Object)
+td.2.2.blockedObjectId=0x100309e8
+td.2.2.blockerId=0x0028ea18
+td.2.2.condition=prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor entry [182af000..182afd88]
+td.2.2.header="Thread-0" prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor entry [182af000..182afd88]
+td.2.2.id=0x0028e8b0
+td.2.2.name=Thread-0
+td.2.2.isBlocked=true
+td.2.2.isDaemon=false
+td.2.2.isDeadLocked=true
+td.2.2.isIdle=false
+
+#"Signal Dispatcher" daemon prio=10 tid=0x0097a740 nid=0x238 waiting on condition [0..0]
+td.2.3.blockedObjectId=null
+td.2.3.blockerId=null
+td.2.3.condition=daemon prio=10 tid=0x0097a740 nid=0x238 waiting on condition [0..0]
+td.2.3.header="Signal Dispatcher" daemon prio=10 tid=0x0097a740 nid=0x238 waiting on condition [0..0]
+td.2.3.id=0x0097a740
+td.2.3.name=Signal Dispatcher
+td.2.3.isBlocked=false
+td.2.3.isDaemon=true
+td.2.3.isDeadLocked=false
+td.2.3.isIdle=false
+
+#"Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait() [1816f000..1816fd88]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x10010498> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+#	- locked <0x10010498> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+#	at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+td.2.4.blockedObjectId=null
+td.2.4.blockerId=null
+td.2.4.condition=daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait() [1816f000..1816fd88]
+td.2.4.header="Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait() [1816f000..1816fd88]
+td.2.4.id=0x0091a500
+td.2.4.name=Finalizer
+td.2.4.isBlocked=false
+td.2.4.isDaemon=true
+td.2.4.isDeadLocked=false
+td.2.4.isIdle=true
+
+#"Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Object.wait() [1812f000..1812fd88]
+#	at java.lang.Object.wait(Native Method)
+#	- waiting on <0x10010388> (a java.lang.ref.Reference$Lock)
+#	at java.lang.Object.wait(Unknown Source)
+#	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+#	- locked <0x10010388> (a java.lang.ref.Reference$Lock)
+td.2.5.blockedObjectId=null
+td.2.5.blockerId=null
+td.2.5.condition=daemon prio=10 tid=0x00919078 nid=0x490 in Object.wait() [1812f000..1812fd88]
+td.2.5.header="Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Object.wait() [1812f000..1812fd88]
+td.2.5.id=0x00919078
+td.2.5.name=Reference Handler
+td.2.5.isBlocked=false
+td.2.5.isDaemon=true
+td.2.5.isDeadLocked=false
+td.2.5.isIdle=true
+
+#"VM Thread" prio=5 tid=0x00959360 nid=0x4d0 runnable 
+td.2.6.blockedObjectId=null
+td.2.6.blockerId=null
+td.2.6.condition=prio=5 tid=0x00959360 nid=0x4d0 runnable 
+td.2.6.header="VM Thread" prio=5 tid=0x00959360 nid=0x4d0 runnable 
+td.2.6.id=0x00959360
+td.2.6.name=VM Thread
+td.2.6.isBlocked=false
+td.2.6.isDaemon=false
+td.2.6.isDeadLocked=false
+td.2.6.isIdle=false
+
+#"VM Periodic Task Thread" prio=10 tid=0x00973000 nid=0x570 waiting on condition 
+td.2.7.blockedObjectId=null
+td.2.7.blockerId=null
+td.2.7.condition=prio=10 tid=0x00973000 nid=0x570 waiting on condition 
+td.2.7.header="VM Periodic Task Thread" prio=10 tid=0x00973000 nid=0x570 waiting on condition 
+td.2.7.id=0x00973000
+td.2.7.name=VM Periodic Task Thread
+td.2.7.isBlocked=false
+td.2.7.isDaemon=false
+td.2.7.isDeadLocked=false
+td.2.7.isIdle=false
+
+#"Suspend Checker Thread" prio=10 tid=0x0097a008 nid=0x1d8 runnable 
+td.2.8.blockedObjectId=null
+td.2.8.blockerId=null
+td.2.8.condition=prio=10 tid=0x0097a008 nid=0x1d8 runnable 
+td.2.8.header="Suspend Checker Thread" prio=10 tid=0x0097a008 nid=0x1d8 runnable 
+td.2.8.id=0x0097a008
+td.2.8.name=Suspend Checker Thread
+td.2.8.isBlocked=false
+td.2.8.isDaemon=false
+td.2.8.isDeadLocked=false
+td.2.8.isIdle=false
+

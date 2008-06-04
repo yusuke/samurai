@@ -1,0 +1,429 @@
+ftd.0.deadLockSize=0
+ftd.0.threadCount=9
+#"Main Thread"  id: 0x00000080  prio: 5  WAITING, NONDAEMON, GCABLE
+#   thread: 0x00AD3D40  lastj: 0x0006FB70  pt_thr: 0x000005E8
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@40C44720
+#   at jrockit/vm/Locks.wait(Unknown Source)@40C448DA
+#   at java/lang/Thread.sleep(Unknown Source)@414D30E2
+#   at net/homeip/yusuke/samurai/test/IdleSample.main(IdleSample.java:5)@414F000C
+#   --- End of stack trace
+td.0.0.blockedObjectId=null
+td.0.0.blockerId=null
+td.0.0.condition=id: 0x00000080  prio: 5  WAITING, NONDAEMON, GCABLE
+td.0.0.header="Main Thread"  id: 0x00000080  prio: 5  WAITING, NONDAEMON, GCABLE
+td.0.0.id=0x00000080
+td.0.0.name=Main Thread
+td.0.0.isBlocked=false
+td.0.0.isDaemon=false
+td.0.0.isDeadLocked=false
+td.0.0.isIdle=true
+
+#"(Signal Handler)"  id: 0x00000100  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x40C7C750  lastj: 0xFFFFFFFC  pt_thr: 0x00000430
+#   No Java stack trace available
+td.0.1.blockedObjectId=null
+td.0.1.blockerId=null
+td.0.1.condition=id: 0x00000100  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.1.header="(Signal Handler)"  id: 0x00000100  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.1.id=0x00000100
+td.0.1.name=(Signal Handler)
+td.0.1.isBlocked=false
+td.0.1.isDaemon=true
+td.0.1.isDeadLocked=false
+td.0.1.isIdle=false
+
+#"(Code Generation Thread 1)"  id: 0x00000180  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+#   thread: 0x40BE2C80  lastj: 0xFFFFFFFC  pt_thr: 0x000007C4
+#   No Java stack trace available
+td.0.2.blockedObjectId=null
+td.0.2.blockerId=null
+td.0.2.condition=id: 0x00000180  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.0.2.header="(Code Generation Thread 1)"  id: 0x00000180  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.0.2.id=0x00000180
+td.0.2.name=(Code Generation Thread 1)
+td.0.2.isBlocked=false
+td.0.2.isDaemon=true
+td.0.2.isDeadLocked=false
+td.0.2.isIdle=false
+
+#"(Code Optimization Thread 1)"  id: 0x00000200  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+#   thread: 0x40BE2D78  lastj: 0xFFFFFFFC  pt_thr: 0x000006FC
+#   No Java stack trace available
+td.0.3.blockedObjectId=null
+td.0.3.blockerId=null
+td.0.3.condition=id: 0x00000200  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.0.3.header="(Code Optimization Thread 1)"  id: 0x00000200  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.0.3.id=0x00000200
+td.0.3.name=(Code Optimization Thread 1)
+td.0.3.isBlocked=false
+td.0.3.isDaemon=true
+td.0.3.isDeadLocked=false
+td.0.3.isIdle=false
+
+#"(GC Main Thread)"  id: 0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x40BBCDC0  lastj: 0xFFFFFFFC  pt_thr: 0x0000070C
+#   No Java stack trace available
+td.0.4.blockedObjectId=null
+td.0.4.blockerId=null
+td.0.4.condition=id: 0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.4.header="(GC Main Thread)"  id: 0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+td.0.4.id=0x00000280
+td.0.4.name=(GC Main Thread)
+td.0.4.isBlocked=false
+td.0.4.isDaemon=true
+td.0.4.isDeadLocked=false
+td.0.4.isIdle=false
+
+#"(GC Worker Thread 1)"  id: 0x00000300  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+#   thread: 0x40C84990  lastj: 0xFFFFFFFC  pt_thr: 0x00000730
+#   No Java stack trace available
+td.0.5.blockedObjectId=null
+td.0.5.blockerId=null
+td.0.5.condition=id: 0x00000300  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.0.5.header="(GC Worker Thread 1)"  id: 0x00000300  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.0.5.id=0x00000300
+td.0.5.name=(GC Worker Thread 1)
+td.0.5.isBlocked=false
+td.0.5.isDaemon=true
+td.0.5.isDeadLocked=false
+td.0.5.isIdle=false
+
+#"Finalizer"  id: 0x00000380  prio: 8  WAITING, DAEMON, GCABLE
+#   thread: 0x40C906A8  lastj: 0x4125FD8C  pt_thr: 0x000006A0
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@40C421C0
+#   at jrockit/vm/Locks.wait(Unknown Source)@412E00CC
+#   at jrockit/vm/Locks.wait(Unknown Source)@40C44811
+#   at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@40C4FED7
+#   at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@40C4FE5C
+#   at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@40C4FE0E
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@40C4FD43
+#   --- End of stack trace
+td.0.6.blockedObjectId=null
+td.0.6.blockerId=null
+td.0.6.condition=id: 0x00000380  prio: 8  WAITING, DAEMON, GCABLE
+td.0.6.header="Finalizer"  id: 0x00000380  prio: 8  WAITING, DAEMON, GCABLE
+td.0.6.id=0x00000380
+td.0.6.name=Finalizer
+td.0.6.isBlocked=false
+td.0.6.isDaemon=true
+td.0.6.isDeadLocked=false
+td.0.6.isIdle=true
+
+#"Reference Handler"  id: 0x00000400  prio: 10  WAITING, DAEMON, GCABLE
+#   thread: 0x40CB2550  lastj: 0x4136FDD8  pt_thr: 0x00000788
+#   at java/lang/ref/Reference.getPending(Native Method)@412E8840
+#   at java/lang/ref/Reference.access$000(Unknown Source)@412E8895
+#   at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@412E87B0
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@40C4FD43
+#   --- End of stack trace
+td.0.7.blockedObjectId=null
+td.0.7.blockerId=null
+td.0.7.condition=id: 0x00000400  prio: 10  WAITING, DAEMON, GCABLE
+td.0.7.header="Reference Handler"  id: 0x00000400  prio: 10  WAITING, DAEMON, GCABLE
+td.0.7.id=0x00000400
+td.0.7.name=Reference Handler
+td.0.7.isBlocked=false
+td.0.7.isDaemon=true
+td.0.7.isDeadLocked=false
+td.0.7.isIdle=true
+
+#"(Hotspot Detector)"  id: 0x00000480  prio: 10  ACTIVE, DAEMON, GCABLE
+#   thread: 0x40D386F0  lastj: 0xFFFFFFFC  pt_thr: 0x000006C0
+#   No Java stack trace available
+td.0.8.blockedObjectId=null
+td.0.8.blockerId=null
+td.0.8.condition=id: 0x00000480  prio: 10  ACTIVE, DAEMON, GCABLE
+td.0.8.header="(Hotspot Detector)"  id: 0x00000480  prio: 10  ACTIVE, DAEMON, GCABLE
+td.0.8.id=0x00000480
+td.0.8.name=(Hotspot Detector)
+td.0.8.isBlocked=false
+td.0.8.isDaemon=true
+td.0.8.isDeadLocked=false
+td.0.8.isIdle=false
+
+ftd.1.deadLockSize=0
+ftd.1.threadCount=9
+#"Main Thread"  id: 0x00000080  prio: 5  WAITING, NONDAEMON, GCABLE
+#   thread: 0x00AD3D40  lastj: 0x0006FB70  pt_thr: 0x000005E8
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@40C44720
+#   at jrockit/vm/Locks.wait(Unknown Source)@40C448DA
+#   at java/lang/Thread.sleep(Unknown Source)@414D30E2
+#   at net/homeip/yusuke/samurai/test/IdleSample.main(IdleSample.java:5)@414F000C
+#   --- End of stack trace
+td.1.0.blockedObjectId=null
+td.1.0.blockerId=null
+td.1.0.condition=id: 0x00000080  prio: 5  WAITING, NONDAEMON, GCABLE
+td.1.0.header="Main Thread"  id: 0x00000080  prio: 5  WAITING, NONDAEMON, GCABLE
+td.1.0.id=0x00000080
+td.1.0.name=Main Thread
+td.1.0.isBlocked=false
+td.1.0.isDaemon=false
+td.1.0.isDeadLocked=false
+td.1.0.isIdle=true
+
+#"(Signal Handler)"  id: 0x00000100  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x40C7C750  lastj: 0xFFFFFFFC  pt_thr: 0x00000430
+#   No Java stack trace available
+td.1.1.blockedObjectId=null
+td.1.1.blockerId=null
+td.1.1.condition=id: 0x00000100  prio: 5  ACTIVE, DAEMON, GCABLE
+td.1.1.header="(Signal Handler)"  id: 0x00000100  prio: 5  ACTIVE, DAEMON, GCABLE
+td.1.1.id=0x00000100
+td.1.1.name=(Signal Handler)
+td.1.1.isBlocked=false
+td.1.1.isDaemon=true
+td.1.1.isDeadLocked=false
+td.1.1.isIdle=false
+
+#"(Code Generation Thread 1)"  id: 0x00000180  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+#   thread: 0x40BE2C80  lastj: 0xFFFFFFFC  pt_thr: 0x000007C4
+#   No Java stack trace available
+td.1.2.blockedObjectId=null
+td.1.2.blockerId=null
+td.1.2.condition=id: 0x00000180  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.1.2.header="(Code Generation Thread 1)"  id: 0x00000180  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.1.2.id=0x00000180
+td.1.2.name=(Code Generation Thread 1)
+td.1.2.isBlocked=false
+td.1.2.isDaemon=true
+td.1.2.isDeadLocked=false
+td.1.2.isIdle=false
+
+#"(Code Optimization Thread 1)"  id: 0x00000200  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+#   thread: 0x40BE2D78  lastj: 0xFFFFFFFC  pt_thr: 0x000006FC
+#   No Java stack trace available
+td.1.3.blockedObjectId=null
+td.1.3.blockerId=null
+td.1.3.condition=id: 0x00000200  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.1.3.header="(Code Optimization Thread 1)"  id: 0x00000200  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.1.3.id=0x00000200
+td.1.3.name=(Code Optimization Thread 1)
+td.1.3.isBlocked=false
+td.1.3.isDaemon=true
+td.1.3.isDeadLocked=false
+td.1.3.isIdle=false
+
+#"(GC Main Thread)"  id: 0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x40BBCDC0  lastj: 0xFFFFFFFC  pt_thr: 0x0000070C
+#   No Java stack trace available
+td.1.4.blockedObjectId=null
+td.1.4.blockerId=null
+td.1.4.condition=id: 0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+td.1.4.header="(GC Main Thread)"  id: 0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+td.1.4.id=0x00000280
+td.1.4.name=(GC Main Thread)
+td.1.4.isBlocked=false
+td.1.4.isDaemon=true
+td.1.4.isDeadLocked=false
+td.1.4.isIdle=false
+
+#"(GC Worker Thread 1)"  id: 0x00000300  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+#   thread: 0x40C84990  lastj: 0xFFFFFFFC  pt_thr: 0x00000730
+#   No Java stack trace available
+td.1.5.blockedObjectId=null
+td.1.5.blockerId=null
+td.1.5.condition=id: 0x00000300  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.1.5.header="(GC Worker Thread 1)"  id: 0x00000300  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.1.5.id=0x00000300
+td.1.5.name=(GC Worker Thread 1)
+td.1.5.isBlocked=false
+td.1.5.isDaemon=true
+td.1.5.isDeadLocked=false
+td.1.5.isIdle=false
+
+#"Finalizer"  id: 0x00000380  prio: 8  WAITING, DAEMON, GCABLE
+#   thread: 0x40C906A8  lastj: 0x4125FD8C  pt_thr: 0x000006A0
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@40C421C0
+#   at jrockit/vm/Locks.wait(Unknown Source)@412E00CC
+#   at jrockit/vm/Locks.wait(Unknown Source)@40C44811
+#   at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@40C4FED7
+#   at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@40C4FE5C
+#   at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@40C4FE0E
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@40C4FD43
+#   --- End of stack trace
+td.1.6.blockedObjectId=null
+td.1.6.blockerId=null
+td.1.6.condition=id: 0x00000380  prio: 8  WAITING, DAEMON, GCABLE
+td.1.6.header="Finalizer"  id: 0x00000380  prio: 8  WAITING, DAEMON, GCABLE
+td.1.6.id=0x00000380
+td.1.6.name=Finalizer
+td.1.6.isBlocked=false
+td.1.6.isDaemon=true
+td.1.6.isDeadLocked=false
+td.1.6.isIdle=true
+
+#"Reference Handler"  id: 0x00000400  prio: 10  WAITING, DAEMON, GCABLE
+#   thread: 0x40CB2550  lastj: 0x4136FDD8  pt_thr: 0x00000788
+#   at java/lang/ref/Reference.getPending(Native Method)@412E8840
+#   at java/lang/ref/Reference.access$000(Unknown Source)@412E8895
+#   at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@412E87B0
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@40C4FD43
+#   --- End of stack trace
+td.1.7.blockedObjectId=null
+td.1.7.blockerId=null
+td.1.7.condition=id: 0x00000400  prio: 10  WAITING, DAEMON, GCABLE
+td.1.7.header="Reference Handler"  id: 0x00000400  prio: 10  WAITING, DAEMON, GCABLE
+td.1.7.id=0x00000400
+td.1.7.name=Reference Handler
+td.1.7.isBlocked=false
+td.1.7.isDaemon=true
+td.1.7.isDeadLocked=false
+td.1.7.isIdle=true
+
+#"(Hotspot Detector)"  id: 0x00000480  prio: 10  ACTIVE, DAEMON, GCABLE
+#   thread: 0x40D386F0  lastj: 0xFFFFFFFC  pt_thr: 0x000006C0
+#   No Java stack trace available
+td.1.8.blockedObjectId=null
+td.1.8.blockerId=null
+td.1.8.condition=id: 0x00000480  prio: 10  ACTIVE, DAEMON, GCABLE
+td.1.8.header="(Hotspot Detector)"  id: 0x00000480  prio: 10  ACTIVE, DAEMON, GCABLE
+td.1.8.id=0x00000480
+td.1.8.name=(Hotspot Detector)
+td.1.8.isBlocked=false
+td.1.8.isDaemon=true
+td.1.8.isDeadLocked=false
+td.1.8.isIdle=false
+
+ftd.2.deadLockSize=0
+ftd.2.threadCount=9
+#"Main Thread"  id: 0x00000080  prio: 5  WAITING, NONDAEMON, GCABLE
+#   thread: 0x00AD3D40  lastj: 0x0006FB70  pt_thr: 0x000005E8
+#   at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@40C44720
+#   at jrockit/vm/Locks.wait(Unknown Source)@40C448DA
+#   at java/lang/Thread.sleep(Unknown Source)@414D30E2
+#   at net/homeip/yusuke/samurai/test/IdleSample.main(IdleSample.java:5)@414F000C
+#   --- End of stack trace
+td.2.0.blockedObjectId=null
+td.2.0.blockerId=null
+td.2.0.condition=id: 0x00000080  prio: 5  WAITING, NONDAEMON, GCABLE
+td.2.0.header="Main Thread"  id: 0x00000080  prio: 5  WAITING, NONDAEMON, GCABLE
+td.2.0.id=0x00000080
+td.2.0.name=Main Thread
+td.2.0.isBlocked=false
+td.2.0.isDaemon=false
+td.2.0.isDeadLocked=false
+td.2.0.isIdle=true
+
+#"(Signal Handler)"  id: 0x00000100  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x40C7C750  lastj: 0xFFFFFFFC  pt_thr: 0x00000430
+#   No Java stack trace available
+td.2.1.blockedObjectId=null
+td.2.1.blockerId=null
+td.2.1.condition=id: 0x00000100  prio: 5  ACTIVE, DAEMON, GCABLE
+td.2.1.header="(Signal Handler)"  id: 0x00000100  prio: 5  ACTIVE, DAEMON, GCABLE
+td.2.1.id=0x00000100
+td.2.1.name=(Signal Handler)
+td.2.1.isBlocked=false
+td.2.1.isDaemon=true
+td.2.1.isDeadLocked=false
+td.2.1.isIdle=false
+
+#"(Code Generation Thread 1)"  id: 0x00000180  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+#   thread: 0x40BE2C80  lastj: 0xFFFFFFFC  pt_thr: 0x000007C4
+#   No Java stack trace available
+td.2.2.blockedObjectId=null
+td.2.2.blockerId=null
+td.2.2.condition=id: 0x00000180  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.2.2.header="(Code Generation Thread 1)"  id: 0x00000180  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.2.2.id=0x00000180
+td.2.2.name=(Code Generation Thread 1)
+td.2.2.isBlocked=false
+td.2.2.isDaemon=true
+td.2.2.isDeadLocked=false
+td.2.2.isIdle=false
+
+#"(Code Optimization Thread 1)"  id: 0x00000200  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+#   thread: 0x40BE2D78  lastj: 0xFFFFFFFC  pt_thr: 0x000006FC
+#   No Java stack trace available
+td.2.3.blockedObjectId=null
+td.2.3.blockerId=null
+td.2.3.condition=id: 0x00000200  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.2.3.header="(Code Optimization Thread 1)"  id: 0x00000200  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.2.3.id=0x00000200
+td.2.3.name=(Code Optimization Thread 1)
+td.2.3.isBlocked=false
+td.2.3.isDaemon=true
+td.2.3.isDeadLocked=false
+td.2.3.isIdle=false
+
+#"(GC Main Thread)"  id: 0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+#   thread: 0x40BBCDC0  lastj: 0xFFFFFFFC  pt_thr: 0x0000070C
+#   No Java stack trace available
+td.2.4.blockedObjectId=null
+td.2.4.blockerId=null
+td.2.4.condition=id: 0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+td.2.4.header="(GC Main Thread)"  id: 0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+td.2.4.id=0x00000280
+td.2.4.name=(GC Main Thread)
+td.2.4.isBlocked=false
+td.2.4.isDaemon=true
+td.2.4.isDeadLocked=false
+td.2.4.isIdle=false
+
+#"(GC Worker Thread 1)"  id: 0x00000300  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+#   thread: 0x40C84990  lastj: 0xFFFFFFFC  pt_thr: 0x00000730
+#   No Java stack trace available
+td.2.5.blockedObjectId=null
+td.2.5.blockerId=null
+td.2.5.condition=id: 0x00000300  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.2.5.header="(GC Worker Thread 1)"  id: 0x00000300  prio: 5  ACTIVE, NATIVE_LOCK_WAITING, DAEMON, GCABLE
+td.2.5.id=0x00000300
+td.2.5.name=(GC Worker Thread 1)
+td.2.5.isBlocked=false
+td.2.5.isDaemon=true
+td.2.5.isDeadLocked=false
+td.2.5.isIdle=false
+
+#"Finalizer"  id: 0x00000380  prio: 8  WAITING, DAEMON, GCABLE
+#   thread: 0x40C906A8  lastj: 0x4125FD8C  pt_thr: 0x000006A0
+#   at jrockit/vm/Threads.waitForSignal(Native Method)@40C421C0
+#   at jrockit/vm/Locks.wait(Unknown Source)@412E00CC
+#   at jrockit/vm/Locks.wait(Unknown Source)@40C44811
+#   at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@40C4FED7
+#   at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@40C4FE5C
+#   at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@40C4FE0E
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@40C4FD43
+#   --- End of stack trace
+td.2.6.blockedObjectId=null
+td.2.6.blockerId=null
+td.2.6.condition=id: 0x00000380  prio: 8  WAITING, DAEMON, GCABLE
+td.2.6.header="Finalizer"  id: 0x00000380  prio: 8  WAITING, DAEMON, GCABLE
+td.2.6.id=0x00000380
+td.2.6.name=Finalizer
+td.2.6.isBlocked=false
+td.2.6.isDaemon=true
+td.2.6.isDeadLocked=false
+td.2.6.isIdle=true
+
+#"Reference Handler"  id: 0x00000400  prio: 10  WAITING, DAEMON, GCABLE
+#   thread: 0x40CB2550  lastj: 0x4136FDD8  pt_thr: 0x00000788
+#   at java/lang/ref/Reference.getPending(Native Method)@412E8840
+#   at java/lang/ref/Reference.access$000(Unknown Source)@412E8895
+#   at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@412E87B0
+#   at java/lang/Thread.startThreadFromVM(Unknown Source)@40C4FD43
+#   --- End of stack trace
+td.2.7.blockedObjectId=null
+td.2.7.blockerId=null
+td.2.7.condition=id: 0x00000400  prio: 10  WAITING, DAEMON, GCABLE
+td.2.7.header="Reference Handler"  id: 0x00000400  prio: 10  WAITING, DAEMON, GCABLE
+td.2.7.id=0x00000400
+td.2.7.name=Reference Handler
+td.2.7.isBlocked=false
+td.2.7.isDaemon=true
+td.2.7.isDeadLocked=false
+td.2.7.isIdle=true
+
+#"(Hotspot Detector)"  id: 0x00000480  prio: 10  ACTIVE, DAEMON, GCABLE
+#   thread: 0x40D386F0  lastj: 0xFFFFFFFC  pt_thr: 0x000006C0
+#   No Java stack trace available
+td.2.8.blockedObjectId=null
+td.2.8.blockerId=null
+td.2.8.condition=id: 0x00000480  prio: 10  ACTIVE, DAEMON, GCABLE
+td.2.8.header="(Hotspot Detector)"  id: 0x00000480  prio: 10  ACTIVE, DAEMON, GCABLE
+td.2.8.id=0x00000480
+td.2.8.name=(Hotspot Detector)
+td.2.8.isBlocked=false
+td.2.8.isDaemon=true
+td.2.8.isDeadLocked=false
+td.2.8.isIdle=false
+

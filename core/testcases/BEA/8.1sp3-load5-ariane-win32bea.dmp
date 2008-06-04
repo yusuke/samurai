@@ -1,0 +1,1827 @@
+===== FULL THREAD DUMP ===============
+Thu Feb 26 15:47:12 2004
+
+"Main Thread" prio=5 id=0x80 pid=13184 waiting
+    -- Waiting for notification on: weblogic/t3/srvr/T3Srvr@0x4286c608[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/t3/srvr/T3Srvr.waitForDeath(T3Srvr.java:1170)@0x55a1c074
+    ^-- Lock released while waiting: weblogic/t3/srvr/T3Srvr@0x4286c608[fat lock]
+    at weblogic/t3/srvr/T3Srvr.run(T3Srvr.java:384)@0x40dc2066
+    at weblogic/Server.main(Server.java:32)@0x40dc1dd2
+    --- End of stack trace
+
+"(Signal Handler)" prio=5 id=0x100 pid=13186 active, daemon
+
+"(Code Generation Thread 1)" prio=5 id=0x180 pid=13187 active, native_waiting, daemon
+
+"(Code Optimization Thread 1)" prio=5 id=0x200 pid=13188 active, native_waiting, daemon
+
+"(GC Main Thread)" prio=5 id=0x280 pid=13189 active, daemon
+
+"(GC Worker Thread 1)" prio=5 id=0x300 pid=13190 active, native_waiting, daemon
+
+"Finalizer" prio=8 id=0x380 pid=13191 waiting, daemon
+    -- Waiting for notification on: java/lang/ref/ReferenceQueue$Lock@0x42447800[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03ce1
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@0x40d09661
+    ^-- Lock released while waiting: java/lang/ref/ReferenceQueue$Lock@0x42447800[fat lock]
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@0x40d0949c
+    at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@0x40d05b43
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Reference Handler" prio=10 id=0x400 pid=13192 waiting for pending references, daemon
+    at java/lang/ref/Reference.getPending(Native Method)@0x40d60e80
+    at java/lang/ref/Reference.access$000(Unknown Source)@0x40d60ef5
+    at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@0x40d60df0
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] Connection Listener" prio=5 id=0x480 pid=13194 active, daemon
+    at jrockit/net/SocketNativeIO.accept(Native Method)@0x40de0310
+    at jrockit/net/SocketNativeIO.accept(Unknown Source)@0x40de03db
+    at java/net/AbstractSocketImpl.accept(Unknown Source)@0x40de0213
+    ^-- Holding lock: java/net/PlainSocketImpl@0x42496d08[thin lock]
+    at java/net/ServerSocket.implAccept(ServerSocket.java:448)@0x40de00fc
+    at java/net/ServerSocket.accept(ServerSocket.java:419)@0x40d8ff4c
+    at com/jrockit/management/rmp/RmpSocketListener.run(RmpSocketListener.java:170)@0x40dc1a7a
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"(Hotspot Detector)" prio=10 id=0x500 pid=13195 active, daemon
+
+"ExecuteThread: '0' for queue: 'JMS.TimerClientPool'" prio=5 id=0x580 pid=13270 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb9db0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb9db0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'JMS.TimerClientPool'" prio=5 id=0x600 pid=13271 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb2990[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb2990[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'JMS.TimerClientPool'" prio=5 id=0x680 pid=13272 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb31c0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb31c0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] GCChangeEventThread" prio=5 id=0x700 pid=13201 active, native_waiting, daemon
+    at jrockit/management/jvm/GCChangeEventProvider.waitForEvent(Native Method)@0x523796b0
+    at jrockit/management/jvm/GCChangeEventProvider.access$000(Unknown Source)@0x52379725
+    at jrockit/management/jvm/GCChangeEventProvider$GCChangeEventThread.getNextEvent(Unknown Source)@0x523795de
+    at jrockit/management/jvm/AsyncEventProvider$EventThread.run(Unknown Source)@0x52379542
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] GCEventThread" prio=5 id=0x780 pid=13202 active, native_waiting, daemon
+    at jrockit/management/jvm/GarbageCollectorImpl.waitForEvent(Native Method)@0x523797f0
+    at jrockit/management/jvm/GarbageCollectorImpl.access$000(Unknown Source)@0x52379865
+    at jrockit/management/jvm/GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)@0x5237973e
+    at jrockit/management/jvm/AsyncEventProvider$EventThread.run(Unknown Source)@0x52379542
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" prio=5 id=0x800 pid=13203 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44972910[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44972910[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" prio=5 id=0x880 pid=13204 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44972ff0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44972ff0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" prio=5 id=0x900 pid=13205 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449734e8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449734e8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" prio=5 id=0x980 pid=13206 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449739e0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449739e0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa00 pid=13207 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44973ed8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44973ed8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa80 pid=13208 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449743d0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449743d0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb00 pid=13209 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449748c8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449748c8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb80 pid=13210 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44974dc0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44974dc0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc00 pid=13211 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449752b8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449752b8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc80 pid=13212 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44975800[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44975800[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd00 pid=13213 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44975cf8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44975cf8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd80 pid=13214 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449761f0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449761f0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe00 pid=13215 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449766e8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449766e8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe80 pid=13216 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44976be0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44976be0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" prio=5 id=0xf00 pid=13217 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449770d8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449770d8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.kernel.System'" prio=5 id=0xf80 pid=13218 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449783c0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449783c0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.kernel.System'" prio=5 id=0x1000 pid=13219 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44978900[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44978900[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.kernel.System'" prio=5 id=0x1080 pid=13220 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44978e40[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44978e40[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'weblogic.kernel.System'" prio=5 id=0x1100 pid=13221 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44979380[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44979380[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '4' for queue: 'weblogic.kernel.System'" prio=5 id=0x1180 pid=13222 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449798c0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449798c0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"weblogic.time.TimeEventGenerator" prio=9 id=0x1200 pid=13223 waiting, daemon
+    -- Waiting for notification on: weblogic/time/common/internal/TimeTable@0x4497a408[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at weblogic/time/common/internal/TimeTable.snooze(TimeTable.java:271)@0x52cf258d
+    ^-- Lock released while waiting: weblogic/time/common/internal/TimeTable@0x4497a408[fat lock]
+    at weblogic/time/common/internal/TimeEventGenerator.run(TimeEventGenerator.java:118)@0x52cf2174
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"weblogic.security.SpinnerRandomSource" prio=5 id=0x1280 pid=13224 waiting, daemon
+    -- Waiting for notification on: java/lang/Object@0x4497dc00[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/security/SpinnerRandomBitsSource.run(SpinnerRandomBitsSource.java:60)@0x52cf7575
+    ^-- Lock released while waiting: java/lang/Object@0x4497dc00[fat lock]
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1300 pid=13225 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44a87ac0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44a87ac0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1380 pid=13226 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44a88018[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44a88018[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1400 pid=13227 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x453400d8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x453400d8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1480 pid=13228 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x45340630[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x45340630[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1500 pid=13229 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x45340b68[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x45340b68[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"VDE Transaction Processor Thread" prio=2 id=0x1580 pid=13230 waiting
+    -- Waiting for notification on: com/octetstring/vde/backend/standard/TransactionProcessor@0x44a006f0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at com/octetstring/vde/backend/standard/TransactionProcessor.waitChange(TransactionProcessor.java:356)@0x5320c1a5
+    ^-- Lock released while waiting: com/octetstring/vde/backend/standard/TransactionProcessor@0x44a006f0[fat lock]
+    at com/octetstring/vde/backend/standard/TransactionProcessor.run(TransactionProcessor.java:212)@0x5320b83d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"VDE Replication Thread" prio=5 id=0x1600 pid=13231 waiting
+    -- Waiting for notification on: com/octetstring/vde/replication/Replication@0x453c6750[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at com/octetstring/vde/replication/Replication.wait30sec(Replication.java:395)@0x5333445e
+    ^-- Lock released while waiting: com/octetstring/vde/replication/Replication@0x453c6750[fat lock]
+    at com/octetstring/vde/replication/Replication.run(Replication.java:365)@0x5333275a
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-4" prio=5 id=0x1680 pid=13233 waiting
+    -- Waiting for notification on: java/util/TaskQueue@0x467e93e0[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/util/TimerThread.mainLoop(Timer.java:429)@0x5337eae3
+    ^-- Lock released while waiting: java/util/TaskQueue@0x467e93e0[fat lock]
+    at java/util/TimerThread.run(Timer.java:382)@0x5337e8e2
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"weblogic.health.CoreHealthMonitor" prio=5 id=0x1700 pid=13234 waiting, daemon
+    -- Waiting for notification on: java/lang/Object@0x468703b8[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+    ^-- Lock released while waiting: java/lang/Object@0x468703b8[fat lock]
+    at weblogic/t3/srvr/CoreHealthMonitorThread.run(CoreHealthMonitorThread.java:127)@0x5416a964
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"SNMP Service Thread" prio=5 id=0x1780 pid=13235 waiting
+    -- Waiting for notification on: java/lang/Object@0x436f5188[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+    ^-- Lock released while waiting: java/lang/Object@0x436f5188[fat lock]
+    at weblogic/management/snmp/agent/WlsSnmpAgent.mainLoopHandler(WlsSnmpAgent.java:649)@0x54fd1057
+    at weblogic/management/snmp/agent/WlsSnmpAgent.startAgent(WlsSnmpAgent.java:357)@0x54cd8538
+    at weblogic/management/snmp/SNMPService$SNMPMain.run(SNMPService.java:16)@0x54cd8105
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-5" prio=5 id=0x1800 pid=13236 waiting
+    -- Waiting for notification on: java/lang/Object@0x428a1b88[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+    ^-- Lock released while waiting: java/lang/Object@0x428a1b88[fat lock]
+    at com/adventnet/snmp/snmp2/SnmpAPI.run(SnmpAPI.java:134)@0x54cdc659
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-10" prio=5 id=0x1880 pid=13243 active
+    at jrockit/net/SocketNativeIO.receive(Native Method)@0x53e9bec0
+    at jrockit/net/SocketNativeIO.receive(Unknown Source)@0x53e9bff0
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9beb0
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bdcd
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bd97
+    at java/net/DatagramSocket.receive(Unknown Source)@0x53e9bcf2
+    ^-- Holding lock: java/net/DatagramPacket@0x4218e9c0[thin lock]
+    ^-- Holding lock: java/net/DatagramSocket@0x422c6b68[thin lock]
+    at com/adventnet/snmp/snmp2/IpTSocket.receive(IpTSocket.java:30)@0x54cde28f
+    ^-- Holding lock: com/adventnet/snmp/snmp2/IpTSocket@0x422c6b58[thin lock]
+    at com/adventnet/snmp/snmp2/SnmpSession.receiver(SnmpSession.java:1530)@0x54cdd817
+    at com/adventnet/snmp/snmp2/SnmpSession.run(SnmpSession.java:653)@0x54cdd72e
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-7" prio=5 id=0x1900 pid=13238 active
+    at jrockit/net/SocketNativeIO.receive(Native Method)@0x53e9bec0
+    at jrockit/net/SocketNativeIO.receive(Unknown Source)@0x53e9bff0
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9beb0
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bdcd
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bd97
+    at java/net/DatagramSocket.receive(Unknown Source)@0x53e9bcf2
+    ^-- Holding lock: java/net/DatagramSocket@0x4276d038[thin lock]
+    ^-- Holding lock: java/net/DatagramPacket@0x428a2398[thin lock]
+    at com/adventnet/snmp/snmp2/IpTSocket.receive(IpTSocket.java:30)@0x54cde28f
+    ^-- Holding lock: com/adventnet/snmp/snmp2/IpTSocket@0x4276d028[thin lock]
+    at com/adventnet/snmp/snmp2/SnmpSession.receiver(SnmpSession.java:1530)@0x54cdd817
+    at com/adventnet/snmp/snmp2/SnmpSession.run(SnmpSession.java:653)@0x54cdd72e
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ListenThread.Default" prio=5 id=0x1980 pid=13245 active
+    at jrockit/net/SocketNativeIO.accept(Native Method)@0x40de0310
+    at jrockit/net/SocketNativeIO.accept(Unknown Source)@0x40de03db
+    at java/net/AbstractSocketImpl.accept(Unknown Source)@0x40de0213
+    ^-- Holding lock: java/net/PlainSocketImpl@0x435a5450[thin lock]
+    at java/net/ServerSocket.implAccept(ServerSocket.java:448)@0x40de00fc
+    at java/net/ServerSocket.accept(ServerSocket.java:419)@0x40d8ff4c
+    at weblogic/socket/WeblogicServerSocket.accept(WeblogicServerSocket.java:24)@0x55655737
+    at weblogic/t3/srvr/ListenThread.accept(ListenThread.java:739)@0x55655717
+    at weblogic/t3/srvr/ListenThread.run(ListenThread.java:292)@0x55653430
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" prio=5 id=0x1a00 pid=13242 waiting, daemon
+    -- Waiting for notification on: weblogic/jms/backend/BETimerTree@0x4260e298[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at weblogic/jms/backend/BETimerTree.execute(BETimerTree.java:146)@0x550daa6a
+    ^-- Lock released while waiting: weblogic/jms/backend/BETimerTree@0x4260e298[fat lock]
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-11" prio=5 id=0x1a80 pid=13244 waiting, daemon
+    -- Waiting for notification on: java/util/TaskQueue@0x43630928[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/util/TimerThread.mainLoop(Timer.java:429)@0x5337eae3
+    ^-- Lock released while waiting: java/util/TaskQueue@0x43630928[fat lock]
+    at java/util/TimerThread.run(Timer.java:382)@0x5337e8e2
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b00 pid=13246 waiting, daemon
+    -- Waiting for notification on: [Lweblogic/socket/PosixSocketInfo$FdStruct;@0x43fe3438[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:95)@0x55654f27
+    ^-- Holding lock: java/lang/String@0x435f6908[fat lock]
+    ^-- Lock released while waiting: [Lweblogic/socket/PosixSocketInfo$FdStruct;@0x43fe3438[fat lock]
+    at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b80 pid=13247 blocked, daemon
+    -- Blocked trying to get lock: java/lang/String@0x435f6908[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.lockFat(Unknown Source)@0x40d02376
+    at jrockit/vm/Locks.monitorEnterSlowCase(Unknown Source)@0x52377257
+    at jrockit/vm/Locks.monitorEnter(Native Method)@0x40d00fc3
+    at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:91)@0x55654efc
+    at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1c00 pid=13248 blocked, daemon
+    -- Blocked trying to get lock: java/lang/String@0x435f6908[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.raceForTheFatLock(Unknown Source)@0x40d0228c
+    at jrockit/vm/Locks.lockFat(Unknown Source)@0x40d02385
+    at jrockit/vm/Locks.monitorEnterSlowCase(Unknown Source)@0x52377257
+    at jrockit/vm/Locks.monitorEnter(Native Method)@0x40d00fc3
+    at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:91)@0x55654efc
+    at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" prio=5 id=0x1c80 pid=13273 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb3a18[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb3a18[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+Blocked lock chains
+===================
+Chain 2:
+"ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'" (id: 0x00001c00) waiting for java/lang/String@0x435f6908 held by:
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" (id: 0x00001b00) in chain 1
+
+Open lock chains
+================
+Chain 1:
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" (id: 0x00001b80) waiting for java/lang/String@0x435f6908 held by:
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" (id: 0x00001b00) (waiting on notification)
+
+===== END OF THREAD DUMP ===============
+
+[JRockit] New Management Server connection from ymiki01
+
+===== FULL THREAD DUMP ===============
+Thu Feb 26 15:49:02 2004
+
+"Main Thread" prio=5 id=0x80 pid=13184 waiting
+    -- Waiting for notification on: weblogic/t3/srvr/T3Srvr@0x4286c608[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/t3/srvr/T3Srvr.waitForDeath(T3Srvr.java:1170)@0x55a1c074
+    ^-- Lock released while waiting: weblogic/t3/srvr/T3Srvr@0x4286c608[fat lock]
+    at weblogic/t3/srvr/T3Srvr.run(T3Srvr.java:384)@0x40dc2066
+    at weblogic/Server.main(Server.java:32)@0x40dc1dd2
+    --- End of stack trace
+
+"(Signal Handler)" prio=5 id=0x100 pid=13186 active, daemon
+
+"(Code Generation Thread 1)" prio=5 id=0x180 pid=13187 active, native_waiting, daemon
+
+"(Code Optimization Thread 1)" prio=5 id=0x200 pid=13188 active, native_waiting, daemon
+
+"(GC Main Thread)" prio=5 id=0x280 pid=13189 active, daemon
+
+"(GC Worker Thread 1)" prio=5 id=0x300 pid=13190 active, native_waiting, daemon
+
+"Finalizer" prio=8 id=0x380 pid=13191 waiting, daemon
+    -- Waiting for notification on: java/lang/ref/ReferenceQueue$Lock@0x42447800[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03ce1
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@0x40d09661
+    ^-- Lock released while waiting: java/lang/ref/ReferenceQueue$Lock@0x42447800[fat lock]
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@0x40d0949c
+    at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@0x40d05b43
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Reference Handler" prio=10 id=0x400 pid=13192 waiting for pending references, daemon
+    at java/lang/ref/Reference.getPending(Native Method)@0x40d60e80
+    at java/lang/ref/Reference.access$000(Unknown Source)@0x40d60ef5
+    at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@0x40d60df0
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] Connection Listener" prio=5 id=0x480 pid=13194 active, daemon
+    at jrockit/net/SocketNativeIO.accept(Native Method)@0x40de0310
+    at jrockit/net/SocketNativeIO.accept(Unknown Source)@0x40de03db
+    at java/net/AbstractSocketImpl.accept(Unknown Source)@0x40de0213
+    ^-- Holding lock: java/net/PlainSocketImpl@0x42496d08[thin lock]
+    at java/net/ServerSocket.implAccept(ServerSocket.java:448)@0x40de00fc
+    at java/net/ServerSocket.accept(ServerSocket.java:419)@0x40d8ff4c
+    at com/jrockit/management/rmp/RmpSocketListener.run(RmpSocketListener.java:170)@0x40dc1a7a
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"(Hotspot Detector)" prio=10 id=0x500 pid=13195 active, daemon
+
+"ExecuteThread: '0' for queue: 'JMS.TimerClientPool'" prio=5 id=0x580 pid=13270 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb9db0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb9db0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'JMS.TimerClientPool'" prio=5 id=0x600 pid=13271 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb2990[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb2990[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'JMS.TimerClientPool'" prio=5 id=0x680 pid=13272 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb31c0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb31c0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] GCChangeEventThread" prio=5 id=0x700 pid=13201 active, native_waiting, daemon
+    at jrockit/management/jvm/GCChangeEventProvider.waitForEvent(Native Method)@0x523796b0
+    at jrockit/management/jvm/GCChangeEventProvider.access$000(Unknown Source)@0x52379725
+    at jrockit/management/jvm/GCChangeEventProvider$GCChangeEventThread.getNextEvent(Unknown Source)@0x523795de
+    at jrockit/management/jvm/AsyncEventProvider$EventThread.run(Unknown Source)@0x52379542
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] GCEventThread" prio=5 id=0x780 pid=13202 active, native_waiting, daemon
+    at jrockit/management/jvm/GarbageCollectorImpl.waitForEvent(Native Method)@0x523797f0
+    at jrockit/management/jvm/GarbageCollectorImpl.access$000(Unknown Source)@0x52379865
+    at jrockit/management/jvm/GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)@0x5237973e
+    at jrockit/management/jvm/AsyncEventProvider$EventThread.run(Unknown Source)@0x52379542
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" prio=5 id=0x800 pid=13203 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44972910[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44972910[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" prio=5 id=0x880 pid=13204 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44972ff0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44972ff0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" prio=5 id=0x900 pid=13205 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449734e8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449734e8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" prio=5 id=0x980 pid=13206 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449739e0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449739e0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa00 pid=13207 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44973ed8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44973ed8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa80 pid=13208 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449743d0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449743d0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb00 pid=13209 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449748c8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449748c8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb80 pid=13210 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44974dc0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44974dc0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc00 pid=13211 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449752b8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449752b8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc80 pid=13212 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44975800[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44975800[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd00 pid=13213 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44975cf8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44975cf8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd80 pid=13214 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449761f0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449761f0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe00 pid=13215 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449766e8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449766e8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe80 pid=13216 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44976be0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44976be0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" prio=5 id=0xf00 pid=13217 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449770d8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449770d8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.kernel.System'" prio=5 id=0xf80 pid=13218 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449783c0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449783c0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.kernel.System'" prio=5 id=0x1000 pid=13219 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44978900[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44978900[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.kernel.System'" prio=5 id=0x1080 pid=13220 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44978e40[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44978e40[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'weblogic.kernel.System'" prio=5 id=0x1100 pid=13221 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44979380[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44979380[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '4' for queue: 'weblogic.kernel.System'" prio=5 id=0x1180 pid=13222 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449798c0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449798c0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"weblogic.time.TimeEventGenerator" prio=9 id=0x1200 pid=13223 waiting, daemon
+    -- Waiting for notification on: weblogic/time/common/internal/TimeTable@0x4497a408[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at weblogic/time/common/internal/TimeTable.snooze(TimeTable.java:271)@0x52cf258d
+    ^-- Lock released while waiting: weblogic/time/common/internal/TimeTable@0x4497a408[fat lock]
+    at weblogic/time/common/internal/TimeEventGenerator.run(TimeEventGenerator.java:118)@0x52cf2174
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"weblogic.security.SpinnerRandomSource" prio=5 id=0x1280 pid=13224 waiting, daemon
+    -- Waiting for notification on: java/lang/Object@0x4497dc00[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/security/SpinnerRandomBitsSource.run(SpinnerRandomBitsSource.java:60)@0x52cf7575
+    ^-- Lock released while waiting: java/lang/Object@0x4497dc00[fat lock]
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1300 pid=13225 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44a87ac0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44a87ac0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1380 pid=13226 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44a88018[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44a88018[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1400 pid=13227 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x453400d8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x453400d8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1480 pid=13228 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x45340630[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x45340630[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1500 pid=13229 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x45340b68[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x45340b68[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"VDE Transaction Processor Thread" prio=2 id=0x1580 pid=13230 waiting
+    -- Waiting for notification on: com/octetstring/vde/backend/standard/TransactionProcessor@0x44a006f0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at com/octetstring/vde/backend/standard/TransactionProcessor.waitChange(TransactionProcessor.java:356)@0x5320c1a5
+    ^-- Lock released while waiting: com/octetstring/vde/backend/standard/TransactionProcessor@0x44a006f0[fat lock]
+    at com/octetstring/vde/backend/standard/TransactionProcessor.run(TransactionProcessor.java:212)@0x5320b83d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"VDE Replication Thread" prio=5 id=0x1600 pid=13231 waiting
+    -- Waiting for notification on: com/octetstring/vde/replication/Replication@0x453c6750[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at com/octetstring/vde/replication/Replication.wait30sec(Replication.java:395)@0x5333445e
+    ^-- Lock released while waiting: com/octetstring/vde/replication/Replication@0x453c6750[fat lock]
+    at com/octetstring/vde/replication/Replication.run(Replication.java:365)@0x5333275a
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-4" prio=5 id=0x1680 pid=13233 waiting
+    -- Waiting for notification on: java/util/TaskQueue@0x467e93e0[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/util/TimerThread.mainLoop(Timer.java:429)@0x5337eae3
+    ^-- Lock released while waiting: java/util/TaskQueue@0x467e93e0[fat lock]
+    at java/util/TimerThread.run(Timer.java:382)@0x5337e8e2
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"weblogic.health.CoreHealthMonitor" prio=5 id=0x1700 pid=13234 waiting, daemon
+    -- Waiting for notification on: java/lang/Object@0x468703b8[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+    ^-- Lock released while waiting: java/lang/Object@0x468703b8[fat lock]
+    at weblogic/t3/srvr/CoreHealthMonitorThread.run(CoreHealthMonitorThread.java:127)@0x5416a964
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"SNMP Service Thread" prio=5 id=0x1780 pid=13235 waiting
+    -- Waiting for notification on: java/lang/Object@0x436f5188[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+    ^-- Lock released while waiting: java/lang/Object@0x436f5188[fat lock]
+    at weblogic/management/snmp/agent/WlsSnmpAgent.mainLoopHandler(WlsSnmpAgent.java:649)@0x54fd1057
+    at weblogic/management/snmp/agent/WlsSnmpAgent.startAgent(WlsSnmpAgent.java:357)@0x54cd8538
+    at weblogic/management/snmp/SNMPService$SNMPMain.run(SNMPService.java:16)@0x54cd8105
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-5" prio=5 id=0x1800 pid=13236 waiting
+    -- Waiting for notification on: java/lang/Object@0x428a1b88[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+    ^-- Lock released while waiting: java/lang/Object@0x428a1b88[fat lock]
+    at com/adventnet/snmp/snmp2/SnmpAPI.run(SnmpAPI.java:134)@0x54cdc659
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-10" prio=5 id=0x1880 pid=13243 active
+    at jrockit/net/SocketNativeIO.receive(Native Method)@0x53e9bec0
+    at jrockit/net/SocketNativeIO.receive(Unknown Source)@0x53e9bff0
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9beb0
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bdcd
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bd97
+    at java/net/DatagramSocket.receive(Unknown Source)@0x53e9bcf2
+    ^-- Holding lock: java/net/DatagramPacket@0x4218e9c0[thin lock]
+    ^-- Holding lock: java/net/DatagramSocket@0x422c6b68[thin lock]
+    at com/adventnet/snmp/snmp2/IpTSocket.receive(IpTSocket.java:30)@0x54cde28f
+    ^-- Holding lock: com/adventnet/snmp/snmp2/IpTSocket@0x422c6b58[thin lock]
+    at com/adventnet/snmp/snmp2/SnmpSession.receiver(SnmpSession.java:1530)@0x54cdd817
+    at com/adventnet/snmp/snmp2/SnmpSession.run(SnmpSession.java:653)@0x54cdd72e
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-7" prio=5 id=0x1900 pid=13238 active
+    at jrockit/net/SocketNativeIO.receive(Native Method)@0x53e9bec0
+    at jrockit/net/SocketNativeIO.receive(Unknown Source)@0x53e9bff0
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9beb0
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bdcd
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bd97
+    at java/net/DatagramSocket.receive(Unknown Source)@0x53e9bcf2
+    ^-- Holding lock: java/net/DatagramSocket@0x4276d038[thin lock]
+    ^-- Holding lock: java/net/DatagramPacket@0x428a2398[thin lock]
+    at com/adventnet/snmp/snmp2/IpTSocket.receive(IpTSocket.java:30)@0x54cde28f
+    ^-- Holding lock: com/adventnet/snmp/snmp2/IpTSocket@0x4276d028[thin lock]
+    at com/adventnet/snmp/snmp2/SnmpSession.receiver(SnmpSession.java:1530)@0x54cdd817
+    at com/adventnet/snmp/snmp2/SnmpSession.run(SnmpSession.java:653)@0x54cdd72e
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ListenThread.Default" prio=5 id=0x1980 pid=13245 active
+    at jrockit/net/SocketNativeIO.accept(Native Method)@0x40de0310
+    at jrockit/net/SocketNativeIO.accept(Unknown Source)@0x40de03db
+    at java/net/AbstractSocketImpl.accept(Unknown Source)@0x40de0213
+    ^-- Holding lock: java/net/PlainSocketImpl@0x435a5450[thin lock]
+    at java/net/ServerSocket.implAccept(ServerSocket.java:448)@0x40de00fc
+    at java/net/ServerSocket.accept(ServerSocket.java:419)@0x40d8ff4c
+    at weblogic/socket/WeblogicServerSocket.accept(WeblogicServerSocket.java:24)@0x55655737
+    at weblogic/t3/srvr/ListenThread.accept(ListenThread.java:739)@0x55655717
+    at weblogic/t3/srvr/ListenThread.run(ListenThread.java:292)@0x55653430
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" prio=5 id=0x1a00 pid=13242 waiting, daemon
+    -- Waiting for notification on: weblogic/jms/backend/BETimerTree@0x4260e298[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at weblogic/jms/backend/BETimerTree.execute(BETimerTree.java:146)@0x550daa6a
+    ^-- Lock released while waiting: weblogic/jms/backend/BETimerTree@0x4260e298[fat lock]
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-11" prio=5 id=0x1a80 pid=13244 waiting, daemon
+    -- Waiting for notification on: java/util/TaskQueue@0x43630928[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/util/TimerThread.mainLoop(Timer.java:429)@0x5337eae3
+    ^-- Lock released while waiting: java/util/TaskQueue@0x43630928[fat lock]
+    at java/util/TimerThread.run(Timer.java:382)@0x5337e8e2
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b00 pid=13246 blocked, daemon
+    -- Blocked trying to get lock: java/lang/String@0x435f6908[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.raceForTheFatLock(Unknown Source)@0x40d0228c
+    at jrockit/vm/Locks.lockFat(Unknown Source)@0x40d02385
+    at jrockit/vm/Locks.monitorEnterSlowCase(Unknown Source)@0x52377257
+    at jrockit/vm/Locks.monitorEnter(Native Method)@0x40d00fc3
+    at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:91)@0x55654efc
+    at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b80 pid=13247 waiting, daemon
+    -- Waiting for notification on: [Lweblogic/socket/PosixSocketInfo$FdStruct;@0x43fe3438[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:95)@0x55654f27
+    ^-- Holding lock: java/lang/String@0x435f6908[fat lock]
+    ^-- Lock released while waiting: [Lweblogic/socket/PosixSocketInfo$FdStruct;@0x43fe3438[fat lock]
+    at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1c00 pid=13248 blocked, daemon
+    -- Blocked trying to get lock: java/lang/String@0x435f6908[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.lockFat(Unknown Source)@0x40d02376
+    at jrockit/vm/Locks.monitorEnterSlowCase(Unknown Source)@0x52377257
+    at jrockit/vm/Locks.monitorEnter(Native Method)@0x40d00fc3
+    at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:91)@0x55654efc
+    at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" prio=5 id=0x1c80 pid=13273 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb3a18[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb3a18[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] Write Queue" prio=5 id=0x1d00 pid=13319 waiting, daemon
+    -- Waiting for notification on: com/jrockit/management/rmp/RmpWriterThread@0x42e76f28[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at com/jrockit/management/rmp/RmpWriterThread.run(RmpWriterThread.java:128)@0x52a0d25f
+    ^-- Lock released while waiting: com/jrockit/management/rmp/RmpWriterThread@0x42e76f28[fat lock]
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] Management Server" prio=5 id=0x1d80 pid=13321 active, daemon
+    at jrockit/net/SocketNativeIO.read(Native Method)@0x52377100
+    at jrockit/net/SocketNativeIO.read(Unknown Source)@0x523771a7
+    at java/net/AbstractSocketImpl$1.read(Unknown Source)@0x52377070
+    at jrockit/io/NativeIOInputStream.read(Unknown Source)@0x40d4e34c
+    at jrockit/io/NativeIOInputStream.read(Unknown Source)@0x40d4e2f1
+    at com/jrockit/common/rmp/RmpPacket.readBytesFromInputStream(RmpPacket.java:465)@0x52a0d795
+    at com/jrockit/common/rmp/RmpPacket.readPacketLengthFromInputStream(RmpPacket.java:587)@0x52a0d698
+    at com/jrockit/common/rmp/RmpPacket.readFromStream(RmpPacket.java:495)@0x52a0d476
+    at com/jrockit/common/rmp/RmpPacket.readFromStream(RmpPacket.java:569)@0x52a0dffa
+    at com/jrockit/management/rmp/RmpServer.runConnectionLoop(RmpServer.java:348)@0x52a0dc1a
+    at com/jrockit/management/rmp/RmpServer.run(RmpServer.java:163)@0x52a0d335
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] Subscription Update" prio=5 id=0x1e00 pid=13322 waiting, daemon
+    -- Waiting for notification on: java/lang/Object@0x42acfc40[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+    ^-- Lock released while waiting: java/lang/Object@0x42acfc40[fat lock]
+    at com/jrockit/management/rmp/RmpSubscriptionThread.run(RmpSubscriptionThread.java:92)@0x52a0e030
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+Blocked lock chains
+===================
+Chain 2:
+"ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'" (id: 0x00001c00) waiting for java/lang/String@0x435f6908 held by:
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" (id: 0x00001b80) in chain 1
+
+Open lock chains
+================
+Chain 1:
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" (id: 0x00001b00) waiting for java/lang/String@0x435f6908 held by:
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" (id: 0x00001b80) (waiting on notification)
+
+===== END OF THREAD DUMP ===============
+
+===== FULL THREAD DUMP ===============
+Thu Feb 26 15:49:18 2004
+
+"Main Thread" prio=5 id=0x80 pid=13184 waiting
+    -- Waiting for notification on: weblogic/t3/srvr/T3Srvr@0x4286c608[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/t3/srvr/T3Srvr.waitForDeath(T3Srvr.java:1170)@0x55a1c074
+    ^-- Lock released while waiting: weblogic/t3/srvr/T3Srvr@0x4286c608[fat lock]
+    at weblogic/t3/srvr/T3Srvr.run(T3Srvr.java:384)@0x40dc2066
+    at weblogic/Server.main(Server.java:32)@0x40dc1dd2
+    --- End of stack trace
+
+"(Signal Handler)" prio=5 id=0x100 pid=13186 active, daemon
+
+"(Code Generation Thread 1)" prio=5 id=0x180 pid=13187 active, native_waiting, daemon
+
+"(Code Optimization Thread 1)" prio=5 id=0x200 pid=13188 active, native_waiting, daemon
+
+"(GC Main Thread)" prio=5 id=0x280 pid=13189 active, daemon
+
+"(GC Worker Thread 1)" prio=5 id=0x300 pid=13190 active, native_waiting, daemon
+
+"Finalizer" prio=8 id=0x380 pid=13191 waiting, daemon
+    -- Waiting for notification on: java/lang/ref/ReferenceQueue$Lock@0x42447800[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03ce1
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@0x40d09661
+    ^-- Lock released while waiting: java/lang/ref/ReferenceQueue$Lock@0x42447800[fat lock]
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@0x40d0949c
+    at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@0x40d05b43
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Reference Handler" prio=10 id=0x400 pid=13192 waiting for pending references, daemon
+    at java/lang/ref/Reference.getPending(Native Method)@0x40d60e80
+    at java/lang/ref/Reference.access$000(Unknown Source)@0x40d60ef5
+    at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@0x40d60df0
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] Connection Listener" prio=5 id=0x480 pid=13194 active, daemon
+    at jrockit/net/SocketNativeIO.accept(Native Method)@0x40de0310
+    at jrockit/net/SocketNativeIO.accept(Unknown Source)@0x40de03db
+    at java/net/AbstractSocketImpl.accept(Unknown Source)@0x40de0213
+    ^-- Holding lock: java/net/PlainSocketImpl@0x42496d08[thin lock]
+    at java/net/ServerSocket.implAccept(ServerSocket.java:448)@0x40de00fc
+    at java/net/ServerSocket.accept(ServerSocket.java:419)@0x40d8ff4c
+    at com/jrockit/management/rmp/RmpSocketListener.run(RmpSocketListener.java:170)@0x40dc1a7a
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"(Hotspot Detector)" prio=10 id=0x500 pid=13195 active, daemon
+
+"ExecuteThread: '0' for queue: 'JMS.TimerClientPool'" prio=5 id=0x580 pid=13270 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb9db0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb9db0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'JMS.TimerClientPool'" prio=5 id=0x600 pid=13271 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb2990[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb2990[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'JMS.TimerClientPool'" prio=5 id=0x680 pid=13272 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb31c0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb31c0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] GCChangeEventThread" prio=5 id=0x700 pid=13201 active, native_waiting, daemon
+    at jrockit/management/jvm/GCChangeEventProvider.waitForEvent(Native Method)@0x523796b0
+    at jrockit/management/jvm/GCChangeEventProvider.access$000(Unknown Source)@0x52379725
+    at jrockit/management/jvm/GCChangeEventProvider$GCChangeEventThread.getNextEvent(Unknown Source)@0x523795de
+    at jrockit/management/jvm/AsyncEventProvider$EventThread.run(Unknown Source)@0x52379542
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] GCEventThread" prio=5 id=0x780 pid=13202 active, native_waiting, daemon
+    at jrockit/management/jvm/GarbageCollectorImpl.waitForEvent(Native Method)@0x523797f0
+    at jrockit/management/jvm/GarbageCollectorImpl.access$000(Unknown Source)@0x52379865
+    at jrockit/management/jvm/GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)@0x5237973e
+    at jrockit/management/jvm/AsyncEventProvider$EventThread.run(Unknown Source)@0x52379542
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" prio=5 id=0x800 pid=13203 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44972910[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44972910[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" prio=5 id=0x880 pid=13204 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44972ff0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44972ff0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" prio=5 id=0x900 pid=13205 active, daemon
+    at jrockit/vm/MemSystem.getMoreTLAMemory(Native Method)@0x40d00750
+    at jrockit/vm/MemSystem.getMoreTLAMemoryWrapper(Native Method)@0x40d007e8
+    at jrockit/vm/MemSystem.allocArray2(Native Method)@0x40d00b90
+    at weblogic/utils/UnsyncStringBuffer.ensureCapacity(UnsyncStringBuffer.java:61)@0x52cf9e08
+    at weblogic/utils/UnsyncStringBuffer.append(UnsyncStringBuffer.java:120)@0x52cf9dab
+    at weblogic/servlet/internal/session/SessionData.getInternalId(SessionData.java:335)@0x5587e3c5
+    at weblogic/servlet/security/internal/ServletSecurityManager.checkAccess(ServletSecurityManager.java:151)@0x558742fd
+    at weblogic/servlet/internal/WebAppServletContext.invokeServlet(Optimized Method)@0x558f3a52
+    at weblogic/servlet/internal/ServletRequestImpl.execute(Optimized Method)@0x558f1477
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" prio=5 id=0x980 pid=13206 active, daemon
+    at jrockit/vm/MemSystem.getMoreTLAMemory(Native Method)@0x40d00750
+    at jrockit/vm/MemSystem.getMoreTLAMemoryWrapper(Native Method)@0x40d007e8
+    at jrockit/vm/MemSystem.allocArray2(Native Method)@0x40d00b90
+    at weblogic/utils/UnsyncStringBuffer.<init>(UnsyncStringBuffer.java:26)@0x52cf9d5f
+    at weblogic/servlet/internal/session/SessionData.getInternalId(SessionData.java:326)@0x5587e375
+    at weblogic/servlet/security/internal/SecurityModule.getCurrentUser(SecurityModule.java:245)@0x55876102
+    at weblogic/servlet/security/internal/SecurityModule.beginCheck(SecurityModule.java:156)@0x55874f0e
+    at weblogic/servlet/security/internal/BasicSecurityModule.checkA(BasicSecurityModule.java:46)@0x55874e27
+    at weblogic/servlet/security/internal/ServletSecurityManager.checkAccess(ServletSecurityManager.java:145)@0x55874263
+    at weblogic/servlet/internal/WebAppServletContext.invokeServlet(Optimized Method)@0x558f3a52
+    at weblogic/servlet/internal/ServletRequestImpl.execute(Optimized Method)@0x558f1477
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa00 pid=13207 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44973ed8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44973ed8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" prio=5 id=0xa80 pid=13208 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449743d0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449743d0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb00 pid=13209 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449748c8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449748c8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" prio=5 id=0xb80 pid=13210 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44974dc0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44974dc0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc00 pid=13211 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449752b8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449752b8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" prio=5 id=0xc80 pid=13212 active, daemon
+    at jrockit/vm/MemSystem.getMoreTLAMemory(Native Method)@0x40d00750
+    at jrockit/vm/MemSystem.getMoreTLAMemoryWrapper(Native Method)@0x40d007e8
+    at jrockit/vm/MemSystem.allocArray2(Native Method)@0x40d00b90
+    at weblogic/utils/UnsyncStringBuffer.ensureCapacity(UnsyncStringBuffer.java:61)@0x52cf9e08
+    at weblogic/utils/UnsyncStringBuffer.append(UnsyncStringBuffer.java:120)@0x52cf9dab
+    at weblogic/servlet/internal/session/SessionData.getInternalId(SessionData.java:335)@0x5587e3c5
+    at weblogic/servlet/security/internal/ServletSecurityManager.checkAccess(ServletSecurityManager.java:151)@0x558742fd
+    at weblogic/servlet/internal/WebAppServletContext.invokeServlet(Optimized Method)@0x558f3a52
+    at weblogic/servlet/internal/ServletRequestImpl.execute(Optimized Method)@0x558f1477
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd00 pid=13213 active, daemon
+    at jrockit/vm/MemSystem.allocLargeArray(Native Method)@0x40d00970
+    at jrockit/vm/MemSystem.allocArray2(Native Method)@0x40d00b81
+    at weblogic/servlet/internal/MultibyteOutput.<init>(ChunkOutput.java:405)@0x5587d45f
+    at weblogic/servlet/internal/ChunkOutput.create(ChunkOutput.java:128)@0x5587d29b
+    at weblogic/servlet/internal/ChunkOutputWrapper.changeToCharset(ChunkOutputWrapper.java:39)@0x5587d202
+    at weblogic/servlet/internal/ServletResponseImpl.setEncoding(ServletResponseImpl.java:857)@0x5587d0b3
+    at weblogic/servlet/internal/ServletResponseImpl.setHeader(ServletResponseImpl.java:674)@0x558716e1
+    at jsp_servlet/__jsp1._jspService(Optimized Method)@0x559b1128
+    at weblogic/servlet/jsp/JspBase.service(JspBase.java:33)@0x5587c0d9
+    at weblogic/servlet/internal/ServletStubImpl$ServletInvocationAction.run(ServletStubImpl.java:971)@0x55879275
+    at weblogic/servlet/internal/ServletStubImpl.invokeServlet(ServletStubImpl.java:402)@0x5587752b
+    at weblogic/servlet/internal/ServletStubImpl.invokeServlet(ServletStubImpl.java:305)@0x55877288
+    at weblogic/servlet/internal/WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:6350)@0x55877202
+    at weblogic/security/acl/internal/AuthenticatedSubject.doAs(AuthenticatedSubject.java:317)@0x528ee686
+    at weblogic/security/service/SecurityManager.runAs(SecurityManager.java:114)@0x528ee601
+    at weblogic/servlet/internal/WebAppServletContext.invokeServlet(Optimized Method)@0x558f3721
+    at weblogic/servlet/internal/ServletRequestImpl.execute(Optimized Method)@0x558f1477
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" prio=5 id=0xd80 pid=13214 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449761f0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449761f0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe00 pid=13215 active, daemon
+    at jrockit/vm/MemSystem.getMoreTLAMemory(Native Method)@0x40d00750
+    at jrockit/vm/MemSystem.getMoreTLAMemoryWrapper(Native Method)@0x40d007e8
+    at jrockit/vm/MemSystem.allocArray2(Native Method)@0x40d00b90
+    at java/lang/StringCoding$CharsetSD.decode(Unknown Source)@0x40d82bd4
+    at java/lang/StringCoding.decode(Unknown Source)@0x40d8293b
+    at java/lang/StringCoding$DefaultDecoder.decode(Unknown Source)@0x40de11cd
+    at java/lang/StringCoding.decode(Unknown Source)@0x40de11ae
+    at java/lang/String.<init>(Unknown Source)@0x40de1176
+    at weblogic/servlet/internal/ServletRequestImpl.getSessionIdFromCookieHeaders(ServletRequestImpl.java:2294)@0x55875ce5
+    at weblogic/servlet/internal/ServletRequestImpl.initSessionInfo(ServletRequestImpl.java:2350)@0x5587547e
+    at weblogic/servlet/internal/ServletRequestImpl.getSession(ServletRequestImpl.java:2124)@0x5587524d
+    at weblogic/servlet/security/internal/SecurityModule$SessionRetrievalAction.run(SecurityModule.java:637)@0x558751ed
+    at weblogic/security/acl/internal/AuthenticatedSubject.doAs(AuthenticatedSubject.java:317)@0x528ee686
+    at weblogic/security/service/SecurityManager.runAs(SecurityManager.java:118)@0x528ee61a
+    at weblogic/servlet/security/internal/SecurityModule.getUserSession(SecurityModule.java:612)@0x558750af
+    at weblogic/servlet/security/internal/SecurityModule.beginCheck(SecurityModule.java:153)@0x55874ef3
+    at weblogic/servlet/security/internal/BasicSecurityModule.checkA(BasicSecurityModule.java:46)@0x55874e27
+    at weblogic/servlet/security/internal/ServletSecurityManager.checkAccess(ServletSecurityManager.java:145)@0x55874263
+    at weblogic/servlet/internal/WebAppServletContext.invokeServlet(Optimized Method)@0x558f3a52
+    at weblogic/servlet/internal/ServletRequestImpl.execute(Optimized Method)@0x558f1477
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" prio=5 id=0xe80 pid=13216 active, daemon
+    at jrockit/vm/MemSystem.getMoreTLAMemory(Native Method)@0x40d00750
+    at jrockit/vm/MemSystem.getMoreTLAMemoryWrapper(Native Method)@0x40d007e8
+    at jrockit/vm/MemSystem.allocArray2(Native Method)@0x40d00b90
+    at weblogic/utils/UnsyncStringBuffer.<init>(UnsyncStringBuffer.java:26)@0x52cf9d5f
+    at weblogic/servlet/internal/session/SessionData.getInternalId(SessionData.java:326)@0x5587e375
+    at weblogic/servlet/security/internal/SecurityModule.getCurrentUser(SecurityModule.java:245)@0x55876102
+    at weblogic/servlet/security/internal/SecurityModule.beginCheck(SecurityModule.java:156)@0x55874f0e
+    at weblogic/servlet/security/internal/BasicSecurityModule.checkA(BasicSecurityModule.java:46)@0x55874e27
+    at weblogic/servlet/security/internal/ServletSecurityManager.checkAccess(ServletSecurityManager.java:145)@0x55874263
+    at weblogic/servlet/internal/WebAppServletContext.invokeServlet(Optimized Method)@0x558f3a52
+    at weblogic/servlet/internal/ServletRequestImpl.execute(Optimized Method)@0x558f1477
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" prio=5 id=0xf00 pid=13217 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449770d8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449770d8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.kernel.System'" prio=5 id=0xf80 pid=13218 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449783c0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449783c0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.kernel.System'" prio=5 id=0x1000 pid=13219 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44978900[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44978900[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.kernel.System'" prio=5 id=0x1080 pid=13220 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44978e40[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44978e40[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'weblogic.kernel.System'" prio=5 id=0x1100 pid=13221 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44979380[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44979380[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '4' for queue: 'weblogic.kernel.System'" prio=5 id=0x1180 pid=13222 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x449798c0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x449798c0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"weblogic.time.TimeEventGenerator" prio=9 id=0x1200 pid=13223 waiting, daemon
+    -- Waiting for notification on: weblogic/time/common/internal/TimeTable@0x4497a408[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at weblogic/time/common/internal/TimeTable.snooze(TimeTable.java:271)@0x52cf258d
+    ^-- Lock released while waiting: weblogic/time/common/internal/TimeTable@0x4497a408[fat lock]
+    at weblogic/time/common/internal/TimeEventGenerator.run(TimeEventGenerator.java:118)@0x52cf2174
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"weblogic.security.SpinnerRandomSource" prio=5 id=0x1280 pid=13224 waiting, daemon
+    -- Waiting for notification on: java/lang/Object@0x4497dc00[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/security/SpinnerRandomBitsSource.run(SpinnerRandomBitsSource.java:60)@0x52cf7575
+    ^-- Lock released while waiting: java/lang/Object@0x4497dc00[fat lock]
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1300 pid=13225 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44a87ac0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44a87ac0[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" prio=5 id=0x1380 pid=13226 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x44a88018[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x44a88018[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1400 pid=13227 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x453400d8[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x453400d8[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1480 pid=13228 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x45340630[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x45340630[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" prio=5 id=0x1500 pid=13229 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x45340b68[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x45340b68[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"VDE Transaction Processor Thread" prio=2 id=0x1580 pid=13230 waiting
+    -- Waiting for notification on: com/octetstring/vde/backend/standard/TransactionProcessor@0x44a006f0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at com/octetstring/vde/backend/standard/TransactionProcessor.waitChange(TransactionProcessor.java:356)@0x5320c1a5
+    ^-- Lock released while waiting: com/octetstring/vde/backend/standard/TransactionProcessor@0x44a006f0[fat lock]
+    at com/octetstring/vde/backend/standard/TransactionProcessor.run(TransactionProcessor.java:212)@0x5320b83d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"VDE Replication Thread" prio=5 id=0x1600 pid=13231 waiting
+    -- Waiting for notification on: com/octetstring/vde/replication/Replication@0x453c6750[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at com/octetstring/vde/replication/Replication.wait30sec(Replication.java:395)@0x5333445e
+    ^-- Lock released while waiting: com/octetstring/vde/replication/Replication@0x453c6750[fat lock]
+    at com/octetstring/vde/replication/Replication.run(Replication.java:365)@0x5333275a
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-4" prio=5 id=0x1680 pid=13233 waiting
+    -- Waiting for notification on: java/util/TaskQueue@0x467e93e0[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/util/TimerThread.mainLoop(Timer.java:429)@0x5337eae3
+    ^-- Lock released while waiting: java/util/TaskQueue@0x467e93e0[fat lock]
+    at java/util/TimerThread.run(Timer.java:382)@0x5337e8e2
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"weblogic.health.CoreHealthMonitor" prio=5 id=0x1700 pid=13234 waiting, daemon
+    -- Waiting for notification on: java/lang/Object@0x468703b8[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+    ^-- Lock released while waiting: java/lang/Object@0x468703b8[fat lock]
+    at weblogic/t3/srvr/CoreHealthMonitorThread.run(CoreHealthMonitorThread.java:127)@0x5416a964
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"SNMP Service Thread" prio=5 id=0x1780 pid=13235 waiting
+    -- Waiting for notification on: java/lang/Object@0x436f5188[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+    ^-- Lock released while waiting: java/lang/Object@0x436f5188[fat lock]
+    at weblogic/management/snmp/agent/WlsSnmpAgent.mainLoopHandler(WlsSnmpAgent.java:649)@0x54fd1057
+    at weblogic/management/snmp/agent/WlsSnmpAgent.startAgent(WlsSnmpAgent.java:357)@0x54cd8538
+    at weblogic/management/snmp/SNMPService$SNMPMain.run(SNMPService.java:16)@0x54cd8105
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-5" prio=5 id=0x1800 pid=13236 waiting
+    -- Waiting for notification on: java/lang/Object@0x428a1b88[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+    ^-- Lock released while waiting: java/lang/Object@0x428a1b88[fat lock]
+    at com/adventnet/snmp/snmp2/SnmpAPI.run(SnmpAPI.java:134)@0x54cdc659
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-10" prio=5 id=0x1880 pid=13243 active
+    at jrockit/net/SocketNativeIO.receive(Native Method)@0x53e9bec0
+    at jrockit/net/SocketNativeIO.receive(Unknown Source)@0x53e9bff0
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9beb0
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bdcd
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bd97
+    at java/net/DatagramSocket.receive(Unknown Source)@0x53e9bcf2
+    ^-- Holding lock: java/net/DatagramPacket@0x4218e9c0[thin lock]
+    ^-- Holding lock: java/net/DatagramSocket@0x422c6b68[thin lock]
+    at com/adventnet/snmp/snmp2/IpTSocket.receive(IpTSocket.java:30)@0x54cde28f
+    ^-- Holding lock: com/adventnet/snmp/snmp2/IpTSocket@0x422c6b58[thin lock]
+    at com/adventnet/snmp/snmp2/SnmpSession.receiver(SnmpSession.java:1530)@0x54cdd817
+    at com/adventnet/snmp/snmp2/SnmpSession.run(SnmpSession.java:653)@0x54cdd72e
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-7" prio=5 id=0x1900 pid=13238 active
+    at jrockit/net/SocketNativeIO.receive(Native Method)@0x53e9bec0
+    at jrockit/net/SocketNativeIO.receive(Unknown Source)@0x53e9bff0
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9beb0
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bdcd
+    at java/net/PlainDatagramSocketImpl.receive(Unknown Source)@0x53e9bd97
+    at java/net/DatagramSocket.receive(Unknown Source)@0x53e9bcf2
+    ^-- Holding lock: java/net/DatagramSocket@0x4276d038[thin lock]
+    ^-- Holding lock: java/net/DatagramPacket@0x428a2398[thin lock]
+    at com/adventnet/snmp/snmp2/IpTSocket.receive(IpTSocket.java:30)@0x54cde28f
+    ^-- Holding lock: com/adventnet/snmp/snmp2/IpTSocket@0x4276d028[thin lock]
+    at com/adventnet/snmp/snmp2/SnmpSession.receiver(SnmpSession.java:1530)@0x54cdd817
+    at com/adventnet/snmp/snmp2/SnmpSession.run(SnmpSession.java:653)@0x54cdd72e
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ListenThread.Default" prio=5 id=0x1980 pid=13245 active
+    at jrockit/net/SocketNativeIO.accept(Native Method)@0x40de0310
+    at jrockit/net/SocketNativeIO.accept(Unknown Source)@0x40de03db
+    at java/net/AbstractSocketImpl.accept(Unknown Source)@0x40de0213
+    ^-- Holding lock: java/net/PlainSocketImpl@0x435a5450[thin lock]
+    at java/net/ServerSocket.implAccept(ServerSocket.java:448)@0x40de00fc
+    at java/net/ServerSocket.accept(ServerSocket.java:419)@0x40d8ff4c
+    at weblogic/socket/WeblogicServerSocket.accept(WeblogicServerSocket.java:24)@0x55655737
+    at weblogic/t3/srvr/ListenThread.accept(ListenThread.java:739)@0x55655717
+    at weblogic/t3/srvr/ListenThread.run(ListenThread.java:292)@0x55653430
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" prio=5 id=0x1a00 pid=13242 waiting, daemon
+    -- Waiting for notification on: weblogic/jms/backend/BETimerTree@0x4260e298[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at weblogic/jms/backend/BETimerTree.execute(BETimerTree.java:146)@0x550daa6a
+    ^-- Lock released while waiting: weblogic/jms/backend/BETimerTree@0x4260e298[fat lock]
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"Thread-11" prio=5 id=0x1a80 pid=13244 waiting, daemon
+    -- Waiting for notification on: java/util/TaskQueue@0x43630928[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/util/TimerThread.mainLoop(Timer.java:429)@0x5337eae3
+    ^-- Lock released while waiting: java/util/TaskQueue@0x43630928[fat lock]
+    at java/util/TimerThread.run(Timer.java:382)@0x5337e8e2
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b00 pid=13246 blocked, daemon
+    -- Blocked trying to get lock: java/lang/String@0x435f6908[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.lockFat(Unknown Source)@0x40d02376
+    at jrockit/vm/Locks.monitorEnterSlowCase(Unknown Source)@0x52377257
+    at jrockit/vm/Locks.monitorEnter(Native Method)@0x40d00fc3
+    at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:91)@0x55654efc
+    at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1b80 pid=13247 waiting, daemon
+    -- Waiting for notification on: [Lweblogic/socket/PosixSocketInfo$FdStruct;@0x43fe3438[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:95)@0x55654f27
+    ^-- Holding lock: java/lang/String@0x435f6908[fat lock]
+    ^-- Lock released while waiting: [Lweblogic/socket/PosixSocketInfo$FdStruct;@0x43fe3438[fat lock]
+    at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'" prio=5 id=0x1c00 pid=13248 blocked, daemon
+    -- Blocked trying to get lock: java/lang/String@0x435f6908[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.raceForTheFatLock(Unknown Source)@0x40d0228c
+    at jrockit/vm/Locks.lockFat(Unknown Source)@0x40d02385
+    at jrockit/vm/Locks.monitorEnterSlowCase(Unknown Source)@0x52377257
+    at jrockit/vm/Locks.monitorEnter(Native Method)@0x40d00fc3
+    at weblogic/socket/PosixSocketMuxer.processSockets(PosixSocketMuxer.java:91)@0x55654efc
+    at weblogic/socket/SocketReaderRequest.execute(SocketReaderRequest.java:32)@0x55654e0a
+    at weblogic/kernel/ExecuteThread.execute(ExecuteThread.java:197)@0x53cfbb91
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:170)@0x52cf186d
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" prio=5 id=0x1c80 pid=13273 waiting, daemon
+    -- Waiting for notification on: weblogic/kernel/ExecuteThread@0x49eb3a18[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x40d02180
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d0993d
+    at weblogic/kernel/ExecuteThread.waitForRequest(ExecuteThread.java:145)@0x52cf1aab
+    ^-- Lock released while waiting: weblogic/kernel/ExecuteThread@0x49eb3a18[fat lock]
+    at weblogic/kernel/ExecuteThread.run(ExecuteThread.java:164)@0x52cf1847
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] Write Queue" prio=5 id=0x1d00 pid=13319 waiting, daemon
+    -- Waiting for notification on: com/jrockit/management/rmp/RmpWriterThread@0x42e76f28[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at com/jrockit/management/rmp/RmpWriterThread.run(RmpWriterThread.java:128)@0x52a0d25f
+    ^-- Lock released while waiting: com/jrockit/management/rmp/RmpWriterThread@0x42e76f28[fat lock]
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] Management Server" prio=5 id=0x1d80 pid=13321 active, daemon
+    at jrockit/net/SocketNativeIO.read(Native Method)@0x52377100
+    at jrockit/net/SocketNativeIO.read(Unknown Source)@0x523771a7
+    at java/net/AbstractSocketImpl$1.read(Unknown Source)@0x52377070
+    at jrockit/io/NativeIOInputStream.read(Unknown Source)@0x40d4e34c
+    at jrockit/io/NativeIOInputStream.read(Unknown Source)@0x40d4e2f1
+    at com/jrockit/common/rmp/RmpPacket.readBytesFromInputStream(RmpPacket.java:465)@0x52a0d795
+    at com/jrockit/common/rmp/RmpPacket.readPacketLengthFromInputStream(RmpPacket.java:587)@0x52a0d698
+    at com/jrockit/common/rmp/RmpPacket.readFromStream(RmpPacket.java:495)@0x52a0d476
+    at com/jrockit/common/rmp/RmpPacket.readFromStream(RmpPacket.java:569)@0x52a0dffa
+    at com/jrockit/management/rmp/RmpServer.runConnectionLoop(RmpServer.java:348)@0x52a0dc1a
+    at com/jrockit/management/rmp/RmpServer.run(RmpServer.java:163)@0x52a0d335
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+"[JRockit] Subscription Update" prio=5 id=0x1e00 pid=13322 waiting, daemon
+    -- Waiting for notification on: java/lang/Object@0x42acfc40[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(Native Method)@0x40d03b90
+    at jrockit/vm/Locks.wait(Unknown Source)@0x40d03dbb
+    at java/lang/Thread.sleep(Unknown Source)@0x523776c1
+    ^-- Lock released while waiting: java/lang/Object@0x42acfc40[fat lock]
+    at com/jrockit/management/rmp/RmpSubscriptionThread.run(RmpSubscriptionThread.java:92)@0x52a0e030
+    at java/lang/Thread.run(Unknown Source)@0x40d8feff
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x40d05aa3
+    --- End of stack trace
+
+Blocked lock chains
+===================
+Chain 2:
+"ExecuteThread: '2' for queue: 'weblogic.socket.Muxer'" (id: 0x00001c00) waiting for java/lang/String@0x435f6908 held by:
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" (id: 0x00001b80) in chain 1
+
+Open lock chains
+================
+Chain 1:
+"ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" (id: 0x00001b00) waiting for java/lang/String@0x435f6908 held by:
+"ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" (id: 0x00001b80) (waiting on notification)
+
+===== END OF THREAD DUMP ===============
+[JRockit] Management Server connection closed.

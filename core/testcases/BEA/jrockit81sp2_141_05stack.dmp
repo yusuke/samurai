@@ -1,0 +1,77 @@
+
+===== FULL THREAD DUMP ===============
+Thu Mar 04 22:47:10 2004
+
+"Finalizer"  id: 0x0x00000180  prio: 8  WAITING, DAEMON, GCABLE
+    thread: 0x01F75898  lastj: 0x7FF30E9C
+    pt_thr: 0x000001CC
+    at java.lang.Thread.doYield(Native Method)@32520A68
+    at java.lang.Object.wait0(Unknown Source)@32522103
+    at java.lang.Object.wait0(Unknown Source)@32524775
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:111)@32527545
+    at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:127)@325274BC
+    at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)@32527451
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@32523645
+    --- End of stack trace
+
+"SignalHandler"  id: 0x0x00000200  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x01FAB058  lastj: 0x7FEE0EF0
+    pt_thr: 0x00000490
+    at COM.jrockit.vm.SignalHandler.waitForSignals(Native Method)@340073F0
+    at COM.jrockit.vm.SignalHandler$1.run(Unknown Source)@34007475
+    at java.lang.Thread.run(Unknown Source)@325237A1
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@32523645
+    --- End of stack trace
+
+"Hotspot Detector"  id: 0x0x00000280  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x01FAB140  lastj: 0x7FEC0EF0
+    pt_thr: 0x000001D8
+    at COM.jrockit.vm.HotspotDetector.findHotSpotCandidate(Native Method)@340074B0
+    at COM.jrockit.vm.HotspotDetector.run(Unknown Source)@340074E5
+    at java.lang.Thread.run(Unknown Source)@325237A1
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@32523645
+    --- End of stack trace
+
+"Reference Handler"  id: 0x0x00000300  prio: 10  WAITING, DAEMON, GCABLE
+    thread: 0x01FAB3A0  lastj: 0x7FEA0EE4
+    pt_thr: 0x000002F4
+    at java.lang.ref.Reference.getPending(Native Method)@3400528E
+    at java.lang.ref.Reference.access$000(Unknown Source)@340052C5
+    at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)@340051FF
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@32523645
+    --- End of stack trace
+
+"Noname"  id: 0x0x00000400  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x01FAB6F8  lastj: 0x7FE80F08
+    pt_thr: 0x000004A4
+    at COM.jrockit.vm.MemSystem.mcGenConEP(Native Method)@34005B38
+    --- End of stack trace
+
+"Thread-2"  id: 0x0x00000480  prio: 5  ACTIVE, NONDAEMON, GCABLE
+    thread: 0x01FD8FC8  lastj: 0x7FE30ED0
+    pt_thr: 0x00000570
+    at COM.jrockit.vm.RNI.waitOnThinLocker(Native Method)@3252012A
+    at COM.jrockit.vm.RNI.waitOnThinLocker(Native Method)@32520180
+    at java.lang.Object.stage2Lock(Native Method)@32520C42
+    at java.lang.Object.monitorEnter(Native Method)@32520CE6
+    at net.homeip.yusuke.samurai.test.AThread.run(StackSample.java:25)@3469013C
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@32523645
+    --- End of stack trace
+
+"Thread-3"  id: 0x0x00000500  prio: 5  ACTIVE, NONDAEMON, GCABLE
+    thread: 0x01FD90B8  lastj: 0x7FE10ED0
+    pt_thr: 0x00000238
+    at COM.jrockit.vm.RNI.waitOnThinLocker(Native Method)@3252012A
+    at COM.jrockit.vm.RNI.waitOnThinLocker(Native Method)@32520180
+    at java.lang.Object.stage2Lock(Native Method)@32520C42
+    at java.lang.Object.monitorEnter(Native Method)@32520CE6
+    at net.homeip.yusuke.samurai.test.AThread.run(StackSample.java:25)@3469013C
+    at java.lang.Thread.startThreadFromVM(Unknown Source)@32523645
+    --- End of stack trace
+
+"Thread-4"  id: 0x0x00000580  prio: 5  ACTIVE, DAEMON, GCABLE
+    thread: 0x01FAB5E0  lastj: 0x326EA0BC
+    pt_thr: 0x00000438
+    --- End of stack trace
+
+=====================

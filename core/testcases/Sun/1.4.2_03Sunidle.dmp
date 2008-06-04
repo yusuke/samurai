@@ -1,0 +1,83 @@
+Full thread dump Java HotSpot(TM) Client VM (1.4.2_03-b02 mixed mode):
+
+"Signal Dispatcher" daemon prio=10 tid=0x0097a818 nid=0x570 waiting on condition [0..0]
+
+"Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait() [1816f000..1816fd88]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x10010498> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	- locked <0x10010498> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+"Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Object.wait() [1812f000..1812fd88]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x10010388> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Unknown Source)
+	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+	- locked <0x10010388> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x00285c40 nid=0x438 waiting on condition [6f000..6fc3c]
+	at java.lang.Thread.sleep(Native Method)
+	at net.homeip.yusuke.samurai.test.IdleSample.main(IdleSample.java:5)
+
+"VM Thread" prio=5 tid=0x00959360 nid=0x1fc runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x00973010 nid=0x4a4 waiting on condition 
+"Suspend Checker Thread" prio=10 tid=0x0097a0c8 nid=0x1d8 runnable 
+
+Full thread dump Java HotSpot(TM) Client VM (1.4.2_03-b02 mixed mode):
+
+"Signal Dispatcher" daemon prio=10 tid=0x0097a818 nid=0x570 waiting on condition [0..0]
+
+"Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait() [1816f000..1816fd88]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x10010498> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	- locked <0x10010498> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+"Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Object.wait() [1812f000..1812fd88]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x10010388> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Unknown Source)
+	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+	- locked <0x10010388> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x00285c40 nid=0x438 waiting on condition [6f000..6fc3c]
+	at java.lang.Thread.sleep(Native Method)
+	at net.homeip.yusuke.samurai.test.IdleSample.main(IdleSample.java:5)
+
+"VM Thread" prio=5 tid=0x00959360 nid=0x1fc runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x00973010 nid=0x4a4 waiting on condition 
+"Suspend Checker Thread" prio=10 tid=0x0097a0c8 nid=0x1d8 runnable 
+
+Full thread dump Java HotSpot(TM) Client VM (1.4.2_03-b02 mixed mode):
+
+"Signal Dispatcher" daemon prio=10 tid=0x0097a818 nid=0x570 waiting on condition [0..0]
+
+"Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait() [1816f000..1816fd88]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x10010498> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	- locked <0x10010498> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(Unknown Source)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)
+
+"Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Object.wait() [1812f000..1812fd88]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x10010388> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Unknown Source)
+	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+	- locked <0x10010388> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x00285c40 nid=0x438 waiting on condition [6f000..6fc3c]
+	at java.lang.Thread.sleep(Native Method)
+	at net.homeip.yusuke.samurai.test.IdleSample.main(IdleSample.java:5)
+
+"VM Thread" prio=5 tid=0x00959360 nid=0x1fc runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x00973010 nid=0x4a4 waiting on condition 
+"Suspend Checker Thread" prio=10 tid=0x0097a0c8 nid=0x1d8 runnable 

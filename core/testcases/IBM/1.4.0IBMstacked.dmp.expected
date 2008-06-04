@@ -1,0 +1,99 @@
+ftd.0.deadLockSize=1
+ftd.0.threadCount=7
+#"Thread-3" (TID:0x910608, sys_thread_t:0x284E48, state:CW, native ID:0x1B8) prio=5
+td.0.0.blockedObjectId=null
+td.0.0.blockerId=null
+td.0.0.condition=(TID:0x910608, sys_thread_t:0x284E48, state:CW, native ID:0x1B8) prio=5
+td.0.0.header="Thread-3" (TID:0x910608, sys_thread_t:0x284E48, state:CW, native ID:0x1B8) prio=5
+td.0.0.id=0x284E48
+td.0.0.name=Thread-3
+td.0.0.isBlocked=false
+td.0.0.isDaemon=false
+td.0.0.isDeadLocked=false
+td.0.0.isIdle=true
+
+#"Thread-2" (TID:0x910660, sys_thread_t:0x22AAAED0, state:CW, native ID:0x274) prio=5
+#- waiting to lock <9B3D88/9B3D90> (java.lang.Object)
+#- locked <9B3D78/9B3D80> (java.lang.Object)
+#         at net.homeip.yusuke.samurai.test.AThread.run(StackSample.java:24)
+td.0.1.blockedObjectId=9B3D88/9B3D90
+td.0.1.blockerId=0x22AAACA8
+td.0.1.condition=(TID:0x910660, sys_thread_t:0x22AAAED0, state:CW, native ID:0x274) prio=5
+td.0.1.header="Thread-2" (TID:0x910660, sys_thread_t:0x22AAAED0, state:CW, native ID:0x274) prio=5
+td.0.1.id=0x22AAAED0
+td.0.1.name=Thread-2
+td.0.1.isBlocked=true
+td.0.1.isDaemon=false
+td.0.1.isDeadLocked=true
+td.0.1.isIdle=false
+
+#"Thread-1" (TID:0x9106C0, sys_thread_t:0x22AAACA8, state:CW, native ID:0x700) prio=5
+#- waiting to lock <9B3D78/9B3D80> (java.lang.Object)
+#- locked <9B3D88/9B3D90> (java.lang.Object)
+#         at net.homeip.yusuke.samurai.test.AThread.run(StackSample.java:25)
+td.0.2.blockedObjectId=9B3D78/9B3D80
+td.0.2.blockerId=0x22AAAED0
+td.0.2.condition=(TID:0x9106C0, sys_thread_t:0x22AAACA8, state:CW, native ID:0x700) prio=5
+td.0.2.header="Thread-1" (TID:0x9106C0, sys_thread_t:0x22AAACA8, state:CW, native ID:0x700) prio=5
+td.0.2.id=0x22AAACA8
+td.0.2.name=Thread-1
+td.0.2.isBlocked=true
+td.0.2.isDaemon=false
+td.0.2.isDeadLocked=true
+td.0.2.isIdle=false
+
+#"JIT PProfiler thread" (TID:0x910720, sys_thread_t:0x22A572C8, state:R, native ID:0x898) prio=5
+td.0.3.blockedObjectId=null
+td.0.3.blockerId=null
+td.0.3.condition=(TID:0x910720, sys_thread_t:0x22A572C8, state:R, native ID:0x898) prio=5
+td.0.3.header="JIT PProfiler thread" (TID:0x910720, sys_thread_t:0x22A572C8, state:R, native ID:0x898) prio=5
+td.0.3.id=0x22A572C8
+td.0.3.name=JIT PProfiler thread
+td.0.3.isBlocked=false
+td.0.3.isDaemon=false
+td.0.3.isDeadLocked=false
+td.0.3.isIdle=false
+
+#"Finalizer" (TID:0x9108C0, sys_thread_t:0x22943A20, state:CW, native ID:0x780) prio=8
+#         at java.lang.Object.wait(Native Method)
+#         at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:142)
+#         at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:158)
+#         at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+td.0.4.blockedObjectId=null
+td.0.4.blockerId=null
+td.0.4.condition=(TID:0x9108C0, sys_thread_t:0x22943A20, state:CW, native ID:0x780) prio=8
+td.0.4.header="Finalizer" (TID:0x9108C0, sys_thread_t:0x22943A20, state:CW, native ID:0x780) prio=8
+td.0.4.id=0x22943A20
+td.0.4.name=Finalizer
+td.0.4.isBlocked=false
+td.0.4.isDaemon=false
+td.0.4.isDeadLocked=false
+td.0.4.isIdle=true
+
+#"Reference Handler" (TID:0x910918, sys_thread_t:0x2292BF28, state:CW, native ID:0x654) prio=10
+#         at java.lang.Object.wait(Native Method)
+#         at java.lang.Object.wait(Object.java:437)
+#         at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:124)
+td.0.5.blockedObjectId=null
+td.0.5.blockerId=null
+td.0.5.condition=(TID:0x910918, sys_thread_t:0x2292BF28, state:CW, native ID:0x654) prio=10
+td.0.5.header="Reference Handler" (TID:0x910918, sys_thread_t:0x2292BF28, state:CW, native ID:0x654) prio=10
+td.0.5.id=0x2292BF28
+td.0.5.name=Reference Handler
+td.0.5.isBlocked=false
+td.0.5.isDaemon=false
+td.0.5.isDeadLocked=false
+td.0.5.isIdle=true
+
+#"Signal dispatcher" (TID:0x910970, sys_thread_t:0x880E28, state:R, native ID:0x500) prio=5
+td.0.6.blockedObjectId=null
+td.0.6.blockerId=null
+td.0.6.condition=(TID:0x910970, sys_thread_t:0x880E28, state:R, native ID:0x500) prio=5
+td.0.6.header="Signal dispatcher" (TID:0x910970, sys_thread_t:0x880E28, state:R, native ID:0x500) prio=5
+td.0.6.id=0x880E28
+td.0.6.name=Signal dispatcher
+td.0.6.isBlocked=false
+td.0.6.isDaemon=false
+td.0.6.isDeadLocked=false
+td.0.6.isIdle=false
+

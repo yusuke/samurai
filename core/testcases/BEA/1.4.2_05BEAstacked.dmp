@@ -1,0 +1,204 @@
+
+===== FULL THREAD DUMP ===============
+Wed Aug 17 00:45:54 2005
+
+"Main Thread" prio=5 id=0x80 tid=0x104c active, daemon
+
+"(Signal Handler)" prio=5 id=0x100 tid=0x1410 active, daemon
+
+"(Code Generation Thread 1)" prio=5 id=0x180 tid=0x1048 active, native_waiting, daemon
+
+"(Code Optimization Thread 1)" prio=5 id=0x200 tid=0x140c active, native_waiting, daemon
+
+"(GC Main Thread)" prio=5 id=0x280 tid=0xe24 active, daemon
+
+"(GC Worker Thread 1)" prio=5 id=0x300 tid=0x1314 active, native_waiting, daemon
+
+"Finalizer" prio=8 id=0x380 tid=0x7c8 waiting, daemon
+    -- Waiting for notification on: java/lang/ref/ReferenceQueue$Lock@0x015D6868[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x00CCC620
+    at jrockit/vm/Locks.wait(Unknown Source)@0x00CCC763
+    at jrockit/vm/Locks.wait(Unknown Source)@0x00CC3A11
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@0x00CCC541
+    ^-- Lock released while waiting: java/lang/ref/ReferenceQueue$Lock@0x015D6868[fat lock]
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@0x00CCC4DC
+    at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@0x00CCC4A3
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x00CCC403
+    --- End of stack trace
+
+"Reference Handler" prio=10 id=0x400 tid=0x4e8 waiting for pending references, daemon
+    at java/lang/ref/Reference.getPending(Native Method)@0x00CE3BD0
+    at java/lang/ref/Reference.access$000(Unknown Source)@0x00CE3C45
+    at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@0x00CE3B50
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x00CCC403
+    --- End of stack trace
+
+"(Hotspot Detector)" prio=10 id=0x480 tid=0xc7c active, daemon
+
+"Thread-1" prio=5 id=0x500 tid=0x1280 blocked
+    -- Blocked trying to get lock: java/lang/Object@0x015F10C0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x00CCC620
+    at jrockit/vm/Locks.fatLockWaitOrSpin(Unknown Source)@0x00CF08CE
+    at jrockit/vm/Locks.lockFat(Unknown Source)@0x00CC2191
+    at jrockit/vm/Locks.monitorEnterSecondStage(Unknown Source)@0x00CF06E2
+    at jrockit/vm/Locks.monitorEnter(Native Method)@0x00CC0F23
+    at net/homeip/yusuke/samurai/test/AThread.run(StackSample.java:25)@0x00D100E5
+    ^-- Holding lock: java/lang/Object@0x015F10B8[thin lock]
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x00CCC403
+    --- End of stack trace
+
+"Thread-2" prio=5 id=0x580 tid=0x176c active
+    -- Blocked trying to get lock: java/lang/Object@0x015F10B8[thin lock]
+    at jrockit/vm/Threads.shortNap(Native Method)@0x00CF0760
+    at jrockit/vm/Locks.waitForThinRelease(Unknown Source)@0x00CF07E0
+    at jrockit/vm/Locks.monitorEnterSecondStage(Unknown Source)@0x00CF06F8
+    at jrockit/vm/Locks.monitorEnter(Native Method)@0x00CC0F23
+    at net/homeip/yusuke/samurai/test/AThread.run(StackSample.java:25)@0x00D100E5
+    ^-- Holding lock: java/lang/Object@0x015F10C0[fat lock]
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x00CCC403
+    --- End of stack trace
+
+Circular (deadlocked) lock chains
+=================================
+Chain 2:
+"Thread-1" (id: 0x00000500) waiting for java/lang/Object@0x015F10C0 held by:
+"Thread-2" (id: 0x00000580) waiting for java/lang/Object@0x015F10B8 held by:
+"Thread-1" (id: 0x00000500)
+
+===== END OF THREAD DUMP ===============
+
+===== FULL THREAD DUMP ===============
+Wed Aug 17 00:45:59 2005
+
+"Main Thread" prio=5 id=0x80 tid=0x104c active, daemon
+
+"(Signal Handler)" prio=5 id=0x100 tid=0x1410 active, daemon
+
+"(Code Generation Thread 1)" prio=5 id=0x180 tid=0x1048 active, native_waiting, daemon
+
+"(Code Optimization Thread 1)" prio=5 id=0x200 tid=0x140c active, native_waiting, daemon
+
+"(GC Main Thread)" prio=5 id=0x280 tid=0xe24 active, daemon
+
+"(GC Worker Thread 1)" prio=5 id=0x300 tid=0x1314 active, native_waiting, daemon
+
+"Finalizer" prio=8 id=0x380 tid=0x7c8 waiting, daemon
+    -- Waiting for notification on: java/lang/ref/ReferenceQueue$Lock@0x015D6868[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x00CCC620
+    at jrockit/vm/Locks.wait(Unknown Source)@0x00CCC763
+    at jrockit/vm/Locks.wait(Unknown Source)@0x00CC3A11
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@0x00CCC541
+    ^-- Lock released while waiting: java/lang/ref/ReferenceQueue$Lock@0x015D6868[fat lock]
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@0x00CCC4DC
+    at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@0x00CCC4A3
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x00CCC403
+    --- End of stack trace
+
+"Reference Handler" prio=10 id=0x400 tid=0x4e8 waiting for pending references, daemon
+    at java/lang/ref/Reference.getPending(Native Method)@0x00CE3BD0
+    at java/lang/ref/Reference.access$000(Unknown Source)@0x00CE3C45
+    at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@0x00CE3B50
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x00CCC403
+    --- End of stack trace
+
+"(Hotspot Detector)" prio=10 id=0x480 tid=0xc7c active, daemon
+
+"Thread-1" prio=5 id=0x500 tid=0x1280 blocked
+    -- Blocked trying to get lock: java/lang/Object@0x015F10C0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x00CCC620
+    at jrockit/vm/Locks.fatLockWaitOrSpin(Unknown Source)@0x00CF08CE
+    at jrockit/vm/Locks.lockFat(Unknown Source)@0x00CC2191
+    at jrockit/vm/Locks.monitorEnterSecondStage(Unknown Source)@0x00CF06E2
+    at jrockit/vm/Locks.monitorEnter(Native Method)@0x00CC0F23
+    at net/homeip/yusuke/samurai/test/AThread.run(StackSample.java:25)@0x00D100E5
+    ^-- Holding lock: java/lang/Object@0x015F10B8[thin lock]
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x00CCC403
+    --- End of stack trace
+
+"Thread-2" prio=5 id=0x580 tid=0x176c active
+    -- Blocked trying to get lock: java/lang/Object@0x015F10B8[thin lock]
+    at jrockit/vm/Threads.shortNap(Native Method)@0x00CF0760
+    at jrockit/vm/Locks.waitForThinRelease(Unknown Source)@0x00CF07E0
+    at jrockit/vm/Locks.monitorEnterSecondStage(Unknown Source)@0x00CF06F8
+    at jrockit/vm/Locks.monitorEnter(Native Method)@0x00CC0F23
+    at net/homeip/yusuke/samurai/test/AThread.run(StackSample.java:25)@0x00D100E5
+    ^-- Holding lock: java/lang/Object@0x015F10C0[fat lock]
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x00CCC403
+    --- End of stack trace
+
+Circular (deadlocked) lock chains
+=================================
+Chain 2:
+"Thread-1" (id: 0x00000500) waiting for java/lang/Object@0x015F10C0 held by:
+"Thread-2" (id: 0x00000580) waiting for java/lang/Object@0x015F10B8 held by:
+"Thread-1" (id: 0x00000500)
+
+===== END OF THREAD DUMP ===============
+
+===== FULL THREAD DUMP ===============
+Wed Aug 17 00:46:03 2005
+
+"Main Thread" prio=5 id=0x80 tid=0x104c active, daemon
+
+"(Signal Handler)" prio=5 id=0x100 tid=0x1410 active, daemon
+
+"(Code Generation Thread 1)" prio=5 id=0x180 tid=0x1048 active, native_waiting, daemon
+
+"(Code Optimization Thread 1)" prio=5 id=0x200 tid=0x140c active, native_waiting, daemon
+
+"(GC Main Thread)" prio=5 id=0x280 tid=0xe24 active, daemon
+
+"(GC Worker Thread 1)" prio=5 id=0x300 tid=0x1314 active, native_waiting, daemon
+
+"Finalizer" prio=8 id=0x380 tid=0x7c8 waiting, daemon
+    -- Waiting for notification on: java/lang/ref/ReferenceQueue$Lock@0x015D6868[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x00CCC620
+    at jrockit/vm/Locks.wait(Unknown Source)@0x00CCC763
+    at jrockit/vm/Locks.wait(Unknown Source)@0x00CC3A11
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:111)@0x00CCC541
+    ^-- Lock released while waiting: java/lang/ref/ReferenceQueue$Lock@0x015D6868[fat lock]
+    at java/lang/ref/ReferenceQueue.remove(ReferenceQueue.java:127)@0x00CCC4DC
+    at java/lang/ref/Finalizer$FinalizerThread.run(Unknown Source)@0x00CCC4A3
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x00CCC403
+    --- End of stack trace
+
+"Reference Handler" prio=10 id=0x400 tid=0x4e8 waiting for pending references, daemon
+    at java/lang/ref/Reference.getPending(Native Method)@0x00CE3BD0
+    at java/lang/ref/Reference.access$000(Unknown Source)@0x00CE3C45
+    at java/lang/ref/Reference$ReferenceHandler.run(Unknown Source)@0x00CE3B50
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x00CCC403
+    --- End of stack trace
+
+"(Hotspot Detector)" prio=10 id=0x480 tid=0xc7c active, daemon
+
+"Thread-1" prio=5 id=0x500 tid=0x1280 blocked
+    -- Blocked trying to get lock: java/lang/Object@0x015F10C0[fat lock]
+    at jrockit/vm/Threads.waitForSignal(Native Method)@0x00CCC620
+    at jrockit/vm/Locks.fatLockWaitOrSpin(Unknown Source)@0x00CF08CE
+    at jrockit/vm/Locks.lockFat(Unknown Source)@0x00CC2191
+    at jrockit/vm/Locks.monitorEnterSecondStage(Unknown Source)@0x00CF06E2
+    at jrockit/vm/Locks.monitorEnter(Native Method)@0x00CC0F23
+    at net/homeip/yusuke/samurai/test/AThread.run(StackSample.java:25)@0x00D100E5
+    ^-- Holding lock: java/lang/Object@0x015F10B8[thin lock]
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x00CCC403
+    --- End of stack trace
+
+"Thread-2" prio=5 id=0x580 tid=0x176c active
+    -- Blocked trying to get lock: java/lang/Object@0x015F10B8[thin lock]
+    at jrockit/vm/Threads.shortNap(Native Method)@0x00CF0760
+    at jrockit/vm/Locks.waitForThinRelease(Unknown Source)@0x00CF07E0
+    at jrockit/vm/Locks.monitorEnterSecondStage(Unknown Source)@0x00CF06F8
+    at jrockit/vm/Locks.monitorEnter(Native Method)@0x00CC0F23
+    at net/homeip/yusuke/samurai/test/AThread.run(StackSample.java:25)@0x00D100E5
+    ^-- Holding lock: java/lang/Object@0x015F10C0[fat lock]
+    at java/lang/Thread.startThreadFromVM(Unknown Source)@0x00CCC403
+    --- End of stack trace
+
+Circular (deadlocked) lock chains
+=================================
+Chain 2:
+"Thread-1" (id: 0x00000500) waiting for java/lang/Object@0x015F10C0 held by:
+"Thread-2" (id: 0x00000580) waiting for java/lang/Object@0x015F10B8 held by:
+"Thread-1" (id: 0x00000500)
+
+===== END OF THREAD DUMP ===============

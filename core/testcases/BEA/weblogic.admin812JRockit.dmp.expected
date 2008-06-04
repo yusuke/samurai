@@ -1,0 +1,3731 @@
+ftd.0.deadLockSize=0
+ftd.0.threadCount=42
+#Thread-0x80 "ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.0.blockedObjectId=null
+td.0.0.blockerId=null
+td.0.0.condition=Waiting, priority=5, DAEMON
+td.0.0.header=Thread-0x80 "ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.0.id=0x80
+td.0.0.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
+td.0.0.isBlocked=false
+td.0.0.isDaemon=true
+td.0.0.isDeadLocked=false
+td.0.0.isIdle=true
+
+#Thread-0x100 "ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.1.blockedObjectId=null
+td.0.1.blockerId=null
+td.0.1.condition=Waiting, priority=5, DAEMON
+td.0.1.header=Thread-0x100 "ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.1.id=0x100
+td.0.1.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
+td.0.1.isBlocked=false
+td.0.1.isDaemon=true
+td.0.1.isDeadLocked=false
+td.0.1.isIdle=true
+
+#Thread-0x180 "Finalizer" <Waiting, priority=8, DAEMON> {
+#Method)
+#Source)
+#Source)
+#	java.lang.ref.ReferenceQueue.remove(J)Ljava.lang.ref.Reference;(ReferenceQueue.java:127)
+#	java.lang.ref.ReferenceQueue.remove()Ljava.lang.ref.Reference;(ReferenceQueue.java:159)
+#	java.lang.ref.Finalizer$FinalizerThread.run()V(Finalizer.java:???)
+#Method)
+td.0.2.blockedObjectId=null
+td.0.2.blockerId=null
+td.0.2.condition=Waiting, priority=8, DAEMON
+td.0.2.header=Thread-0x180 "Finalizer" <Waiting, priority=8, DAEMON> {
+td.0.2.id=0x180
+td.0.2.name=Finalizer
+td.0.2.isBlocked=false
+td.0.2.isDaemon=true
+td.0.2.isDeadLocked=false
+td.0.2.isIdle=true
+
+#Thread-0x200 "SignalHandler" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.0.3.blockedObjectId=null
+td.0.3.blockerId=null
+td.0.3.condition=Active, priority=5, DAEMON
+td.0.3.header=Thread-0x200 "SignalHandler" <Active, priority=5, DAEMON> {
+td.0.3.id=0x200
+td.0.3.name=SignalHandler
+td.0.3.isBlocked=false
+td.0.3.isDaemon=true
+td.0.3.isDeadLocked=false
+td.0.3.isIdle=false
+
+#Thread-0x280 "Hotspot Detector" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.0.4.blockedObjectId=null
+td.0.4.blockerId=null
+td.0.4.condition=Active, priority=5, DAEMON
+td.0.4.header=Thread-0x280 "Hotspot Detector" <Active, priority=5, DAEMON> {
+td.0.4.id=0x280
+td.0.4.name=Hotspot Detector
+td.0.4.isBlocked=false
+td.0.4.isDaemon=true
+td.0.4.isDeadLocked=false
+td.0.4.isIdle=false
+
+#Thread-0x300 "Reference Handler" <Waiting, priority=10, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.0.5.blockedObjectId=null
+td.0.5.blockerId=null
+td.0.5.condition=Waiting, priority=10, DAEMON
+td.0.5.header=Thread-0x300 "Reference Handler" <Waiting, priority=10, DAEMON> {
+td.0.5.id=0x300
+td.0.5.name=Reference Handler
+td.0.5.isBlocked=false
+td.0.5.isDaemon=true
+td.0.5.isDeadLocked=false
+td.0.5.isIdle=true
+
+#Thread-0x380 "Thread-1" <Waiting, priority=5> {
+#Method)
+#Source)
+#	weblogic.t3.srvr.T3Srvr.waitForDeath()V(T3Srvr.java:384)
+#	weblogic.t3.srvr.T3Srvr.run([Ljava.lang.String;)I(T3Srvr.java:32)
+#	weblogic.Server.main([Ljava.lang.String;)V(Server.java:???)
+td.0.6.blockedObjectId=null
+td.0.6.blockerId=null
+td.0.6.condition=Waiting, priority=5
+td.0.6.header=Thread-0x380 "Thread-1" <Waiting, priority=5> {
+td.0.6.id=0x380
+td.0.6.name=Thread-1
+td.0.6.isBlocked=false
+td.0.6.isDaemon=false
+td.0.6.isDeadLocked=false
+td.0.6.isIdle=true
+
+#Thread-0x400 "" <Active, priority=5, DAEMON> {
+#Method)
+td.0.7.blockedObjectId=null
+td.0.7.blockerId=null
+td.0.7.condition=Active, priority=5, DAEMON
+td.0.7.header=Thread-0x400 "" <Active, priority=5, DAEMON> {
+td.0.7.id=0x400
+td.0.7.name=
+td.0.7.isBlocked=false
+td.0.7.isDaemon=true
+td.0.7.isDeadLocked=false
+td.0.7.isIdle=false
+
+#Thread-0x480 "ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.8.blockedObjectId=null
+td.0.8.blockerId=null
+td.0.8.condition=Waiting, priority=5, DAEMON
+td.0.8.header=Thread-0x480 "ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.8.id=0x480
+td.0.8.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
+td.0.8.isBlocked=false
+td.0.8.isDaemon=true
+td.0.8.isDeadLocked=false
+td.0.8.isIdle=true
+
+#Thread-0x500 "ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.9.blockedObjectId=null
+td.0.9.blockerId=null
+td.0.9.condition=Waiting, priority=5, DAEMON
+td.0.9.header=Thread-0x500 "ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.9.id=0x500
+td.0.9.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
+td.0.9.isBlocked=false
+td.0.9.isDaemon=true
+td.0.9.isDeadLocked=false
+td.0.9.isIdle=true
+
+#Thread-0x580 "ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.10.blockedObjectId=null
+td.0.10.blockerId=null
+td.0.10.condition=Waiting, priority=5, DAEMON
+td.0.10.header=Thread-0x580 "ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.10.id=0x580
+td.0.10.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
+td.0.10.isBlocked=false
+td.0.10.isDaemon=true
+td.0.10.isDeadLocked=false
+td.0.10.isIdle=true
+
+#Thread-0x600 "ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.11.blockedObjectId=null
+td.0.11.blockerId=null
+td.0.11.condition=Waiting, priority=5, DAEMON
+td.0.11.header=Thread-0x600 "ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.11.id=0x600
+td.0.11.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
+td.0.11.isBlocked=false
+td.0.11.isDaemon=true
+td.0.11.isDeadLocked=false
+td.0.11.isIdle=true
+
+#Thread-0x680 "ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.12.blockedObjectId=null
+td.0.12.blockerId=null
+td.0.12.condition=Waiting, priority=5, DAEMON
+td.0.12.header=Thread-0x680 "ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.12.id=0x680
+td.0.12.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
+td.0.12.isBlocked=false
+td.0.12.isDaemon=true
+td.0.12.isDeadLocked=false
+td.0.12.isIdle=true
+
+#Thread-0x700 "ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.13.blockedObjectId=null
+td.0.13.blockerId=null
+td.0.13.condition=Waiting, priority=5, DAEMON
+td.0.13.header=Thread-0x700 "ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.13.id=0x700
+td.0.13.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
+td.0.13.isBlocked=false
+td.0.13.isDaemon=true
+td.0.13.isDeadLocked=false
+td.0.13.isIdle=true
+
+#Thread-0x780 "ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.14.blockedObjectId=null
+td.0.14.blockerId=null
+td.0.14.condition=Waiting, priority=5, DAEMON
+td.0.14.header=Thread-0x780 "ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.14.id=0x780
+td.0.14.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
+td.0.14.isBlocked=false
+td.0.14.isDaemon=true
+td.0.14.isDeadLocked=false
+td.0.14.isIdle=true
+
+#Thread-0x800 "ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.15.blockedObjectId=null
+td.0.15.blockerId=null
+td.0.15.condition=Waiting, priority=5, DAEMON
+td.0.15.header=Thread-0x800 "ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.15.id=0x800
+td.0.15.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
+td.0.15.isBlocked=false
+td.0.15.isDaemon=true
+td.0.15.isDeadLocked=false
+td.0.15.isIdle=true
+
+#Thread-0x880 "ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.16.blockedObjectId=null
+td.0.16.blockerId=null
+td.0.16.condition=Waiting, priority=5, DAEMON
+td.0.16.header=Thread-0x880 "ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.16.id=0x880
+td.0.16.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
+td.0.16.isBlocked=false
+td.0.16.isDaemon=true
+td.0.16.isDeadLocked=false
+td.0.16.isIdle=true
+
+#Thread-0x900 "ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.17.blockedObjectId=null
+td.0.17.blockerId=null
+td.0.17.condition=Waiting, priority=5, DAEMON
+td.0.17.header=Thread-0x900 "ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.17.id=0x900
+td.0.17.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
+td.0.17.isBlocked=false
+td.0.17.isDaemon=true
+td.0.17.isDeadLocked=false
+td.0.17.isIdle=true
+
+#Thread-0x980 "ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.18.blockedObjectId=null
+td.0.18.blockerId=null
+td.0.18.condition=Waiting, priority=5, DAEMON
+td.0.18.header=Thread-0x980 "ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.18.id=0x980
+td.0.18.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
+td.0.18.isBlocked=false
+td.0.18.isDaemon=true
+td.0.18.isDeadLocked=false
+td.0.18.isIdle=true
+
+#Thread-0xa00 "ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.19.blockedObjectId=null
+td.0.19.blockerId=null
+td.0.19.condition=Waiting, priority=5, DAEMON
+td.0.19.header=Thread-0xa00 "ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.19.id=0xa00
+td.0.19.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
+td.0.19.isBlocked=false
+td.0.19.isDaemon=true
+td.0.19.isDeadLocked=false
+td.0.19.isIdle=true
+
+#Thread-0xa80 "ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+#	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:971)
+#	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:402)
+#	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:446)
+#	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+#	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6350)
+#	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+#	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+#	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3635)
+#	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2585)
+#	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.20.blockedObjectId=null
+td.0.20.blockerId=null
+td.0.20.condition=Waiting, priority=5, DAEMON
+td.0.20.header=Thread-0xa80 "ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.0.20.id=0xa80
+td.0.20.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
+td.0.20.isBlocked=false
+td.0.20.isDaemon=true
+td.0.20.isDeadLocked=false
+td.0.20.isIdle=true
+
+#Thread-0xb00 "ExecuteThread: '0' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.21.blockedObjectId=null
+td.0.21.blockerId=null
+td.0.21.condition=Waiting, priority=5, DAEMON
+td.0.21.header=Thread-0xb00 "ExecuteThread: '0' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.0.21.id=0xb00
+td.0.21.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
+td.0.21.isBlocked=false
+td.0.21.isDaemon=true
+td.0.21.isDeadLocked=false
+td.0.21.isIdle=true
+
+#Thread-0xb80 "ExecuteThread: '1' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.22.blockedObjectId=null
+td.0.22.blockerId=null
+td.0.22.condition=Waiting, priority=5, DAEMON
+td.0.22.header=Thread-0xb80 "ExecuteThread: '1' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.0.22.id=0xb80
+td.0.22.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
+td.0.22.isBlocked=false
+td.0.22.isDaemon=true
+td.0.22.isDeadLocked=false
+td.0.22.isIdle=true
+
+#Thread-0xc00 "ExecuteThread: '2' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.23.blockedObjectId=null
+td.0.23.blockerId=null
+td.0.23.condition=Waiting, priority=5, DAEMON
+td.0.23.header=Thread-0xc00 "ExecuteThread: '2' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.0.23.id=0xc00
+td.0.23.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
+td.0.23.isBlocked=false
+td.0.23.isDaemon=true
+td.0.23.isDeadLocked=false
+td.0.23.isIdle=true
+
+#Thread-0xc80 "ExecuteThread: '3' for queue: 'weblogic.kernel.System'" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Source)
+#	weblogic.platform.JRockitVM.threadDump()V(JRockitVM.java:214)
+#	weblogic.common.internal.AdminProxy.execute(Lweblogic.t3.srvr.ExecutionContext;Ljava.lang.Object;)Ljava.lang.Object;(AdminProxy.java:699)
+#	weblogic.t3.srvr.ClientRequest$1.run()Ljava.lang.Object;(ClientContext.java:353)
+#	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(AuthenticatedSubject.java:144)
+#	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(SecurityManager.java:696)
+#	weblogic.t3.srvr.ClientRequest.execute(Lweblogic.kernel.ExecuteThread;)V(ClientContext.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.24.blockedObjectId=null
+td.0.24.blockerId=null
+td.0.24.condition=Active, priority=5, DAEMON
+td.0.24.header=Thread-0xc80 "ExecuteThread: '3' for queue: 'weblogic.kernel.System'" <Active, priority=5, DAEMON> {
+td.0.24.id=0xc80
+td.0.24.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
+td.0.24.isBlocked=false
+td.0.24.isDaemon=true
+td.0.24.isDeadLocked=false
+td.0.24.isIdle=false
+
+#Thread-0xd00 "ExecuteThread: '4' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.25.blockedObjectId=null
+td.0.25.blockerId=null
+td.0.25.condition=Waiting, priority=5, DAEMON
+td.0.25.header=Thread-0xd00 "ExecuteThread: '4' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.0.25.id=0xd00
+td.0.25.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
+td.0.25.isBlocked=false
+td.0.25.isDaemon=true
+td.0.25.isDeadLocked=false
+td.0.25.isIdle=true
+
+#Thread-0xd80 "weblogic.time.TimeEventGenerator" <Waiting, priority=9, DAEMON> {
+#Method)
+#Source)
+#	weblogic.time.common.internal.TimeTable.snooze()V(TimeTable.java:118)
+#	weblogic.time.common.internal.TimeEventGenerator.run()V(TimeEventGenerator.java:???)
+#Source)
+#Method)
+td.0.26.blockedObjectId=null
+td.0.26.blockerId=null
+td.0.26.condition=Waiting, priority=9, DAEMON
+td.0.26.header=Thread-0xd80 "weblogic.time.TimeEventGenerator" <Waiting, priority=9, DAEMON> {
+td.0.26.id=0xd80
+td.0.26.name=weblogic.time.TimeEventGenerator
+td.0.26.isBlocked=false
+td.0.26.isDaemon=true
+td.0.26.isDeadLocked=false
+td.0.26.isIdle=true
+
+#Thread-0xe00 "weblogic.security.SpinnerRandomSource" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.security.SpinnerRandomBitsSource.run()V(SpinnerRandomBitsSource.java:???)
+#Source)
+#Method)
+td.0.27.blockedObjectId=null
+td.0.27.blockerId=null
+td.0.27.condition=Waiting, priority=5, DAEMON
+td.0.27.header=Thread-0xe00 "weblogic.security.SpinnerRandomSource" <Waiting, priority=5, DAEMON> {
+td.0.27.id=0xe00
+td.0.27.name=weblogic.security.SpinnerRandomSource
+td.0.27.isBlocked=false
+td.0.27.isDaemon=true
+td.0.27.isDeadLocked=false
+td.0.27.isIdle=true
+
+#Thread-0xe80 "ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.28.blockedObjectId=null
+td.0.28.blockerId=null
+td.0.28.condition=Waiting, priority=5, DAEMON
+td.0.28.header=Thread-0xe80 "ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+td.0.28.id=0xe80
+td.0.28.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
+td.0.28.isBlocked=false
+td.0.28.isDaemon=true
+td.0.28.isDeadLocked=false
+td.0.28.isIdle=true
+
+#Thread-0xf00 "ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.29.blockedObjectId=null
+td.0.29.blockerId=null
+td.0.29.condition=Waiting, priority=5, DAEMON
+td.0.29.header=Thread-0xf00 "ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+td.0.29.id=0xf00
+td.0.29.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
+td.0.29.isBlocked=false
+td.0.29.isDaemon=true
+td.0.29.isDeadLocked=false
+td.0.29.isIdle=true
+
+#Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.30.blockedObjectId=null
+td.0.30.blockerId=null
+td.0.30.condition=Waiting, priority=5, DAEMON
+td.0.30.header=Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.0.30.id=0xf80
+td.0.30.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
+td.0.30.isBlocked=false
+td.0.30.isDaemon=true
+td.0.30.isDeadLocked=false
+td.0.30.isIdle=true
+
+#Thread-0x1000 "ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.31.blockedObjectId=null
+td.0.31.blockerId=null
+td.0.31.condition=Waiting, priority=5, DAEMON
+td.0.31.header=Thread-0x1000 "ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.0.31.id=0x1000
+td.0.31.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
+td.0.31.isBlocked=false
+td.0.31.isDaemon=true
+td.0.31.isDeadLocked=false
+td.0.31.isIdle=true
+
+#Thread-0x1080 "ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.32.blockedObjectId=null
+td.0.32.blockerId=null
+td.0.32.condition=Waiting, priority=5, DAEMON
+td.0.32.header=Thread-0x1080 "ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.0.32.id=0x1080
+td.0.32.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
+td.0.32.isBlocked=false
+td.0.32.isDaemon=true
+td.0.32.isDeadLocked=false
+td.0.32.isIdle=true
+
+#Thread-0x1100 "VDE Transaction Processor Thread" <Waiting, priority=2> {
+#Method)
+#Source)
+#	com.octetstring.vde.backend.standard.TransactionProcessor.waitChange()V(TransactionProcessor.java:212)
+#	com.octetstring.vde.backend.standard.TransactionProcessor.run()V(TransactionProcessor.java:???)
+#Method)
+td.0.33.blockedObjectId=null
+td.0.33.blockerId=null
+td.0.33.condition=Waiting, priority=2
+td.0.33.header=Thread-0x1100 "VDE Transaction Processor Thread" <Waiting, priority=2> {
+td.0.33.id=0x1100
+td.0.33.name=VDE Transaction Processor Thread
+td.0.33.isBlocked=false
+td.0.33.isDaemon=false
+td.0.33.isDeadLocked=false
+td.0.33.isIdle=true
+
+#Thread-0x1180 "Thread-5" <Waiting, priority=5> {
+#Method)
+#Source)
+#	java.util.TimerThread.mainLoop()V(Timer.java:382)
+#	java.util.TimerThread.run()V(Timer.java:???)
+#Method)
+td.0.34.blockedObjectId=null
+td.0.34.blockerId=null
+td.0.34.condition=Waiting, priority=5
+td.0.34.header=Thread-0x1180 "Thread-5" <Waiting, priority=5> {
+td.0.34.id=0x1180
+td.0.34.name=Thread-5
+td.0.34.isBlocked=false
+td.0.34.isDaemon=false
+td.0.34.isDeadLocked=false
+td.0.34.isIdle=true
+
+#Thread-0x1200 "[JRockit] GCEventThread" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Source)
+#Method)
+td.0.35.blockedObjectId=null
+td.0.35.blockerId=null
+td.0.35.condition=Waiting, priority=5, DAEMON
+td.0.35.header=Thread-0x1200 "[JRockit] GCEventThread" <Waiting, priority=5, DAEMON> {
+td.0.35.id=0x1200
+td.0.35.name=[JRockit] GCEventThread
+td.0.35.isBlocked=false
+td.0.35.isDaemon=true
+td.0.35.isDeadLocked=false
+td.0.35.isIdle=true
+
+#Thread-0x1280 "weblogic.health.CoreHealthMonitor" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#	weblogic.t3.srvr.CoreHealthMonitorThread.run()V(CoreHealthMonitorThread.java:???)
+#Method)
+td.0.36.blockedObjectId=null
+td.0.36.blockerId=null
+td.0.36.condition=Waiting, priority=5, DAEMON
+td.0.36.header=Thread-0x1280 "weblogic.health.CoreHealthMonitor" <Waiting, priority=5, DAEMON> {
+td.0.36.id=0x1280
+td.0.36.name=weblogic.health.CoreHealthMonitor
+td.0.36.isBlocked=false
+td.0.36.isDaemon=true
+td.0.36.isDeadLocked=false
+td.0.36.isIdle=true
+
+#Thread-0x1300 "ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.jms.backend.BETimerTree.execute(Lweblogic.kernel.ExecuteThread;)V(BETimerTree.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.37.blockedObjectId=null
+td.0.37.blockerId=null
+td.0.37.condition=Waiting, priority=5, DAEMON
+td.0.37.header=Thread-0x1300 "ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" <Waiting, priority=5, DAEMON> {
+td.0.37.id=0x1300
+td.0.37.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
+td.0.37.isBlocked=false
+td.0.37.isDaemon=true
+td.0.37.isDeadLocked=false
+td.0.37.isIdle=true
+
+#Thread-0x1380 "Thread-6" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	java.util.TimerThread.mainLoop()V(Timer.java:382)
+#	java.util.TimerThread.run()V(Timer.java:???)
+#Method)
+td.0.38.blockedObjectId=null
+td.0.38.blockerId=null
+td.0.38.condition=Waiting, priority=5, DAEMON
+td.0.38.header=Thread-0x1380 "Thread-6" <Waiting, priority=5, DAEMON> {
+td.0.38.id=0x1380
+td.0.38.name=Thread-6
+td.0.38.isBlocked=false
+td.0.38.isDaemon=true
+td.0.38.isDeadLocked=false
+td.0.38.isIdle=true
+
+#Thread-0x1400 "ListenThread.Default" <Active, priority=5> {
+#Method)
+#Source)
+#Source)
+#	java.net.ServerSocket.implAccept(Ljava.net.Socket;)V(ServerSocket.java:419)
+#	java.net.ServerSocket.accept()Ljava.net.Socket;(ServerSocket.java:24)
+#	weblogic.socket.WeblogicServerSocket.accept()Ljava.net.Socket;(WeblogicServerSocket.java:739)
+#	weblogic.t3.srvr.ListenThread.accept()Ljava.net.Socket;(ListenThread.java:292)
+#	weblogic.t3.srvr.ListenThread.run()V(ListenThread.java:???)
+#Method)
+td.0.39.blockedObjectId=null
+td.0.39.blockerId=null
+td.0.39.condition=Active, priority=5
+td.0.39.header=Thread-0x1400 "ListenThread.Default" <Active, priority=5> {
+td.0.39.id=0x1400
+td.0.39.name=ListenThread.Default
+td.0.39.isBlocked=false
+td.0.39.isDaemon=false
+td.0.39.isDeadLocked=false
+td.0.39.isIdle=false
+
+#Thread-0x1480 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+#Method)
+#	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+#	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.40.blockedObjectId=null
+td.0.40.blockerId=null
+td.0.40.condition=Active, priority=5, DAEMON
+td.0.40.header=Thread-0x1480 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+td.0.40.id=0x1480
+td.0.40.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
+td.0.40.isBlocked=false
+td.0.40.isDaemon=true
+td.0.40.isDeadLocked=false
+td.0.40.isIdle=false
+
+#Thread-0x1500 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+#Method)
+#	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+#	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.0.41.blockedObjectId=null
+td.0.41.blockerId=null
+td.0.41.condition=Active, priority=5, DAEMON
+td.0.41.header=Thread-0x1500 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+td.0.41.id=0x1500
+td.0.41.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
+td.0.41.isBlocked=false
+td.0.41.isDaemon=true
+td.0.41.isDeadLocked=false
+td.0.41.isIdle=false
+
+ftd.1.deadLockSize=0
+ftd.1.threadCount=42
+#Thread-0x80 "ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.0.blockedObjectId=null
+td.1.0.blockerId=null
+td.1.0.condition=Waiting, priority=5, DAEMON
+td.1.0.header=Thread-0x80 "ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.0.id=0x80
+td.1.0.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
+td.1.0.isBlocked=false
+td.1.0.isDaemon=true
+td.1.0.isDeadLocked=false
+td.1.0.isIdle=true
+
+#Thread-0x100 "ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.1.blockedObjectId=null
+td.1.1.blockerId=null
+td.1.1.condition=Waiting, priority=5, DAEMON
+td.1.1.header=Thread-0x100 "ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.1.id=0x100
+td.1.1.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
+td.1.1.isBlocked=false
+td.1.1.isDaemon=true
+td.1.1.isDeadLocked=false
+td.1.1.isIdle=true
+
+#Thread-0x180 "Finalizer" <Waiting, priority=8, DAEMON> {
+#Method)
+#Source)
+#Source)
+#	java.lang.ref.ReferenceQueue.remove(J)Ljava.lang.ref.Reference;(ReferenceQueue.java:127)
+#	java.lang.ref.ReferenceQueue.remove()Ljava.lang.ref.Reference;(ReferenceQueue.java:159)
+#	java.lang.ref.Finalizer$FinalizerThread.run()V(Finalizer.java:???)
+#Method)
+td.1.2.blockedObjectId=null
+td.1.2.blockerId=null
+td.1.2.condition=Waiting, priority=8, DAEMON
+td.1.2.header=Thread-0x180 "Finalizer" <Waiting, priority=8, DAEMON> {
+td.1.2.id=0x180
+td.1.2.name=Finalizer
+td.1.2.isBlocked=false
+td.1.2.isDaemon=true
+td.1.2.isDeadLocked=false
+td.1.2.isIdle=true
+
+#Thread-0x200 "SignalHandler" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.1.3.blockedObjectId=null
+td.1.3.blockerId=null
+td.1.3.condition=Active, priority=5, DAEMON
+td.1.3.header=Thread-0x200 "SignalHandler" <Active, priority=5, DAEMON> {
+td.1.3.id=0x200
+td.1.3.name=SignalHandler
+td.1.3.isBlocked=false
+td.1.3.isDaemon=true
+td.1.3.isDeadLocked=false
+td.1.3.isIdle=false
+
+#Thread-0x280 "Hotspot Detector" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.1.4.blockedObjectId=null
+td.1.4.blockerId=null
+td.1.4.condition=Active, priority=5, DAEMON
+td.1.4.header=Thread-0x280 "Hotspot Detector" <Active, priority=5, DAEMON> {
+td.1.4.id=0x280
+td.1.4.name=Hotspot Detector
+td.1.4.isBlocked=false
+td.1.4.isDaemon=true
+td.1.4.isDeadLocked=false
+td.1.4.isIdle=false
+
+#Thread-0x300 "Reference Handler" <Waiting, priority=10, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.1.5.blockedObjectId=null
+td.1.5.blockerId=null
+td.1.5.condition=Waiting, priority=10, DAEMON
+td.1.5.header=Thread-0x300 "Reference Handler" <Waiting, priority=10, DAEMON> {
+td.1.5.id=0x300
+td.1.5.name=Reference Handler
+td.1.5.isBlocked=false
+td.1.5.isDaemon=true
+td.1.5.isDeadLocked=false
+td.1.5.isIdle=true
+
+#Thread-0x380 "Thread-1" <Waiting, priority=5> {
+#Method)
+#Source)
+#	weblogic.t3.srvr.T3Srvr.waitForDeath()V(T3Srvr.java:384)
+#	weblogic.t3.srvr.T3Srvr.run([Ljava.lang.String;)I(T3Srvr.java:32)
+#	weblogic.Server.main([Ljava.lang.String;)V(Server.java:???)
+td.1.6.blockedObjectId=null
+td.1.6.blockerId=null
+td.1.6.condition=Waiting, priority=5
+td.1.6.header=Thread-0x380 "Thread-1" <Waiting, priority=5> {
+td.1.6.id=0x380
+td.1.6.name=Thread-1
+td.1.6.isBlocked=false
+td.1.6.isDaemon=false
+td.1.6.isDeadLocked=false
+td.1.6.isIdle=true
+
+#Thread-0x400 "" <Active, priority=5, DAEMON> {
+#Method)
+td.1.7.blockedObjectId=null
+td.1.7.blockerId=null
+td.1.7.condition=Active, priority=5, DAEMON
+td.1.7.header=Thread-0x400 "" <Active, priority=5, DAEMON> {
+td.1.7.id=0x400
+td.1.7.name=
+td.1.7.isBlocked=false
+td.1.7.isDaemon=true
+td.1.7.isDeadLocked=false
+td.1.7.isIdle=false
+
+#Thread-0x480 "ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.8.blockedObjectId=null
+td.1.8.blockerId=null
+td.1.8.condition=Waiting, priority=5, DAEMON
+td.1.8.header=Thread-0x480 "ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.8.id=0x480
+td.1.8.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
+td.1.8.isBlocked=false
+td.1.8.isDaemon=true
+td.1.8.isDeadLocked=false
+td.1.8.isIdle=true
+
+#Thread-0x500 "ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.9.blockedObjectId=null
+td.1.9.blockerId=null
+td.1.9.condition=Waiting, priority=5, DAEMON
+td.1.9.header=Thread-0x500 "ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.9.id=0x500
+td.1.9.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
+td.1.9.isBlocked=false
+td.1.9.isDaemon=true
+td.1.9.isDeadLocked=false
+td.1.9.isIdle=true
+
+#Thread-0x580 "ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.10.blockedObjectId=null
+td.1.10.blockerId=null
+td.1.10.condition=Waiting, priority=5, DAEMON
+td.1.10.header=Thread-0x580 "ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.10.id=0x580
+td.1.10.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
+td.1.10.isBlocked=false
+td.1.10.isDaemon=true
+td.1.10.isDeadLocked=false
+td.1.10.isIdle=true
+
+#Thread-0x600 "ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.11.blockedObjectId=null
+td.1.11.blockerId=null
+td.1.11.condition=Waiting, priority=5, DAEMON
+td.1.11.header=Thread-0x600 "ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.11.id=0x600
+td.1.11.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
+td.1.11.isBlocked=false
+td.1.11.isDaemon=true
+td.1.11.isDeadLocked=false
+td.1.11.isIdle=true
+
+#Thread-0x680 "ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.12.blockedObjectId=null
+td.1.12.blockerId=null
+td.1.12.condition=Waiting, priority=5, DAEMON
+td.1.12.header=Thread-0x680 "ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.12.id=0x680
+td.1.12.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
+td.1.12.isBlocked=false
+td.1.12.isDaemon=true
+td.1.12.isDeadLocked=false
+td.1.12.isIdle=true
+
+#Thread-0x700 "ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.13.blockedObjectId=null
+td.1.13.blockerId=null
+td.1.13.condition=Waiting, priority=5, DAEMON
+td.1.13.header=Thread-0x700 "ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.13.id=0x700
+td.1.13.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
+td.1.13.isBlocked=false
+td.1.13.isDaemon=true
+td.1.13.isDeadLocked=false
+td.1.13.isIdle=true
+
+#Thread-0x780 "ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.14.blockedObjectId=null
+td.1.14.blockerId=null
+td.1.14.condition=Waiting, priority=5, DAEMON
+td.1.14.header=Thread-0x780 "ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.14.id=0x780
+td.1.14.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
+td.1.14.isBlocked=false
+td.1.14.isDaemon=true
+td.1.14.isDeadLocked=false
+td.1.14.isIdle=true
+
+#Thread-0x800 "ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.15.blockedObjectId=null
+td.1.15.blockerId=null
+td.1.15.condition=Waiting, priority=5, DAEMON
+td.1.15.header=Thread-0x800 "ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.15.id=0x800
+td.1.15.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
+td.1.15.isBlocked=false
+td.1.15.isDaemon=true
+td.1.15.isDeadLocked=false
+td.1.15.isIdle=true
+
+#Thread-0x880 "ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.16.blockedObjectId=null
+td.1.16.blockerId=null
+td.1.16.condition=Waiting, priority=5, DAEMON
+td.1.16.header=Thread-0x880 "ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.16.id=0x880
+td.1.16.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
+td.1.16.isBlocked=false
+td.1.16.isDaemon=true
+td.1.16.isDeadLocked=false
+td.1.16.isIdle=true
+
+#Thread-0x900 "ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.17.blockedObjectId=null
+td.1.17.blockerId=null
+td.1.17.condition=Waiting, priority=5, DAEMON
+td.1.17.header=Thread-0x900 "ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.17.id=0x900
+td.1.17.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
+td.1.17.isBlocked=false
+td.1.17.isDaemon=true
+td.1.17.isDeadLocked=false
+td.1.17.isIdle=true
+
+#Thread-0x980 "ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.18.blockedObjectId=null
+td.1.18.blockerId=null
+td.1.18.condition=Waiting, priority=5, DAEMON
+td.1.18.header=Thread-0x980 "ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.18.id=0x980
+td.1.18.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
+td.1.18.isBlocked=false
+td.1.18.isDaemon=true
+td.1.18.isDeadLocked=false
+td.1.18.isIdle=true
+
+#Thread-0xa00 "ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.19.blockedObjectId=null
+td.1.19.blockerId=null
+td.1.19.condition=Waiting, priority=5, DAEMON
+td.1.19.header=Thread-0xa00 "ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.19.id=0xa00
+td.1.19.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
+td.1.19.isBlocked=false
+td.1.19.isDaemon=true
+td.1.19.isDeadLocked=false
+td.1.19.isIdle=true
+
+#Thread-0xa80 "ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.20.blockedObjectId=null
+td.1.20.blockerId=null
+td.1.20.condition=Waiting, priority=5, DAEMON
+td.1.20.header=Thread-0xa80 "ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.1.20.id=0xa80
+td.1.20.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
+td.1.20.isBlocked=false
+td.1.20.isDaemon=true
+td.1.20.isDeadLocked=false
+td.1.20.isIdle=true
+
+#Thread-0xb00 "ExecuteThread: '0' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.21.blockedObjectId=null
+td.1.21.blockerId=null
+td.1.21.condition=Waiting, priority=5, DAEMON
+td.1.21.header=Thread-0xb00 "ExecuteThread: '0' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.1.21.id=0xb00
+td.1.21.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
+td.1.21.isBlocked=false
+td.1.21.isDaemon=true
+td.1.21.isDeadLocked=false
+td.1.21.isIdle=true
+
+#Thread-0xb80 "ExecuteThread: '1' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.22.blockedObjectId=null
+td.1.22.blockerId=null
+td.1.22.condition=Waiting, priority=5, DAEMON
+td.1.22.header=Thread-0xb80 "ExecuteThread: '1' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.1.22.id=0xb80
+td.1.22.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
+td.1.22.isBlocked=false
+td.1.22.isDaemon=true
+td.1.22.isDeadLocked=false
+td.1.22.isIdle=true
+
+#Thread-0xc00 "ExecuteThread: '2' for queue: 'weblogic.kernel.System'" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Source)
+#	weblogic.platform.JRockitVM.threadDump()V(JRockitVM.java:214)
+#	weblogic.common.internal.AdminProxy.execute(Lweblogic.t3.srvr.ExecutionContext;Ljava.lang.Object;)Ljava.lang.Object;(AdminProxy.java:699)
+#	weblogic.t3.srvr.ClientRequest$1.run()Ljava.lang.Object;(ClientContext.java:353)
+#	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(AuthenticatedSubject.java:144)
+#	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(SecurityManager.java:696)
+#	weblogic.t3.srvr.ClientRequest.execute(Lweblogic.kernel.ExecuteThread;)V(ClientContext.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.23.blockedObjectId=null
+td.1.23.blockerId=null
+td.1.23.condition=Active, priority=5, DAEMON
+td.1.23.header=Thread-0xc00 "ExecuteThread: '2' for queue: 'weblogic.kernel.System'" <Active, priority=5, DAEMON> {
+td.1.23.id=0xc00
+td.1.23.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
+td.1.23.isBlocked=false
+td.1.23.isDaemon=true
+td.1.23.isDeadLocked=false
+td.1.23.isIdle=false
+
+#Thread-0xc80 "ExecuteThread: '3' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.24.blockedObjectId=null
+td.1.24.blockerId=null
+td.1.24.condition=Waiting, priority=5, DAEMON
+td.1.24.header=Thread-0xc80 "ExecuteThread: '3' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.1.24.id=0xc80
+td.1.24.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
+td.1.24.isBlocked=false
+td.1.24.isDaemon=true
+td.1.24.isDeadLocked=false
+td.1.24.isIdle=true
+
+#Thread-0xd00 "ExecuteThread: '4' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.25.blockedObjectId=null
+td.1.25.blockerId=null
+td.1.25.condition=Waiting, priority=5, DAEMON
+td.1.25.header=Thread-0xd00 "ExecuteThread: '4' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.1.25.id=0xd00
+td.1.25.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
+td.1.25.isBlocked=false
+td.1.25.isDaemon=true
+td.1.25.isDeadLocked=false
+td.1.25.isIdle=true
+
+#Thread-0xd80 "weblogic.time.TimeEventGenerator" <Waiting, priority=9, DAEMON> {
+#Method)
+#Source)
+#	weblogic.time.common.internal.TimeTable.snooze()V(TimeTable.java:118)
+#	weblogic.time.common.internal.TimeEventGenerator.run()V(TimeEventGenerator.java:???)
+#Source)
+#Method)
+td.1.26.blockedObjectId=null
+td.1.26.blockerId=null
+td.1.26.condition=Waiting, priority=9, DAEMON
+td.1.26.header=Thread-0xd80 "weblogic.time.TimeEventGenerator" <Waiting, priority=9, DAEMON> {
+td.1.26.id=0xd80
+td.1.26.name=weblogic.time.TimeEventGenerator
+td.1.26.isBlocked=false
+td.1.26.isDaemon=true
+td.1.26.isDeadLocked=false
+td.1.26.isIdle=true
+
+#Thread-0xe00 "weblogic.security.SpinnerRandomSource" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.security.SpinnerRandomBitsSource.run()V(SpinnerRandomBitsSource.java:???)
+#Source)
+#Method)
+td.1.27.blockedObjectId=null
+td.1.27.blockerId=null
+td.1.27.condition=Waiting, priority=5, DAEMON
+td.1.27.header=Thread-0xe00 "weblogic.security.SpinnerRandomSource" <Waiting, priority=5, DAEMON> {
+td.1.27.id=0xe00
+td.1.27.name=weblogic.security.SpinnerRandomSource
+td.1.27.isBlocked=false
+td.1.27.isDaemon=true
+td.1.27.isDeadLocked=false
+td.1.27.isIdle=true
+
+#Thread-0xe80 "ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.28.blockedObjectId=null
+td.1.28.blockerId=null
+td.1.28.condition=Waiting, priority=5, DAEMON
+td.1.28.header=Thread-0xe80 "ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+td.1.28.id=0xe80
+td.1.28.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
+td.1.28.isBlocked=false
+td.1.28.isDaemon=true
+td.1.28.isDeadLocked=false
+td.1.28.isIdle=true
+
+#Thread-0xf00 "ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.29.blockedObjectId=null
+td.1.29.blockerId=null
+td.1.29.condition=Waiting, priority=5, DAEMON
+td.1.29.header=Thread-0xf00 "ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+td.1.29.id=0xf00
+td.1.29.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
+td.1.29.isBlocked=false
+td.1.29.isDaemon=true
+td.1.29.isDeadLocked=false
+td.1.29.isIdle=true
+
+#Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.30.blockedObjectId=null
+td.1.30.blockerId=null
+td.1.30.condition=Waiting, priority=5, DAEMON
+td.1.30.header=Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.1.30.id=0xf80
+td.1.30.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
+td.1.30.isBlocked=false
+td.1.30.isDaemon=true
+td.1.30.isDeadLocked=false
+td.1.30.isIdle=true
+
+#Thread-0x1000 "ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.31.blockedObjectId=null
+td.1.31.blockerId=null
+td.1.31.condition=Waiting, priority=5, DAEMON
+td.1.31.header=Thread-0x1000 "ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.1.31.id=0x1000
+td.1.31.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
+td.1.31.isBlocked=false
+td.1.31.isDaemon=true
+td.1.31.isDeadLocked=false
+td.1.31.isIdle=true
+
+#Thread-0x1080 "ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.32.blockedObjectId=null
+td.1.32.blockerId=null
+td.1.32.condition=Waiting, priority=5, DAEMON
+td.1.32.header=Thread-0x1080 "ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.1.32.id=0x1080
+td.1.32.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
+td.1.32.isBlocked=false
+td.1.32.isDaemon=true
+td.1.32.isDeadLocked=false
+td.1.32.isIdle=true
+
+#Thread-0x1100 "VDE Transaction Processor Thread" <Waiting, priority=2> {
+#Method)
+#Source)
+#	com.octetstring.vde.backend.standard.TransactionProcessor.waitChange()V(TransactionProcessor.java:212)
+#	com.octetstring.vde.backend.standard.TransactionProcessor.run()V(TransactionProcessor.java:???)
+#Method)
+td.1.33.blockedObjectId=null
+td.1.33.blockerId=null
+td.1.33.condition=Waiting, priority=2
+td.1.33.header=Thread-0x1100 "VDE Transaction Processor Thread" <Waiting, priority=2> {
+td.1.33.id=0x1100
+td.1.33.name=VDE Transaction Processor Thread
+td.1.33.isBlocked=false
+td.1.33.isDaemon=false
+td.1.33.isDeadLocked=false
+td.1.33.isIdle=true
+
+#Thread-0x1180 "Thread-5" <Waiting, priority=5> {
+#Method)
+#Source)
+#	java.util.TimerThread.mainLoop()V(Timer.java:382)
+#	java.util.TimerThread.run()V(Timer.java:???)
+#Method)
+td.1.34.blockedObjectId=null
+td.1.34.blockerId=null
+td.1.34.condition=Waiting, priority=5
+td.1.34.header=Thread-0x1180 "Thread-5" <Waiting, priority=5> {
+td.1.34.id=0x1180
+td.1.34.name=Thread-5
+td.1.34.isBlocked=false
+td.1.34.isDaemon=false
+td.1.34.isDeadLocked=false
+td.1.34.isIdle=true
+
+#Thread-0x1200 "[JRockit] GCEventThread" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Source)
+#Method)
+td.1.35.blockedObjectId=null
+td.1.35.blockerId=null
+td.1.35.condition=Waiting, priority=5, DAEMON
+td.1.35.header=Thread-0x1200 "[JRockit] GCEventThread" <Waiting, priority=5, DAEMON> {
+td.1.35.id=0x1200
+td.1.35.name=[JRockit] GCEventThread
+td.1.35.isBlocked=false
+td.1.35.isDaemon=true
+td.1.35.isDeadLocked=false
+td.1.35.isIdle=true
+
+#Thread-0x1280 "weblogic.health.CoreHealthMonitor" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#	weblogic.t3.srvr.CoreHealthMonitorThread.run()V(CoreHealthMonitorThread.java:???)
+#Method)
+td.1.36.blockedObjectId=null
+td.1.36.blockerId=null
+td.1.36.condition=Waiting, priority=5, DAEMON
+td.1.36.header=Thread-0x1280 "weblogic.health.CoreHealthMonitor" <Waiting, priority=5, DAEMON> {
+td.1.36.id=0x1280
+td.1.36.name=weblogic.health.CoreHealthMonitor
+td.1.36.isBlocked=false
+td.1.36.isDaemon=true
+td.1.36.isDeadLocked=false
+td.1.36.isIdle=true
+
+#Thread-0x1300 "ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.jms.backend.BETimerTree.execute(Lweblogic.kernel.ExecuteThread;)V(BETimerTree.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.37.blockedObjectId=null
+td.1.37.blockerId=null
+td.1.37.condition=Waiting, priority=5, DAEMON
+td.1.37.header=Thread-0x1300 "ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" <Waiting, priority=5, DAEMON> {
+td.1.37.id=0x1300
+td.1.37.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
+td.1.37.isBlocked=false
+td.1.37.isDaemon=true
+td.1.37.isDeadLocked=false
+td.1.37.isIdle=true
+
+#Thread-0x1380 "Thread-6" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	java.util.TimerThread.mainLoop()V(Timer.java:382)
+#	java.util.TimerThread.run()V(Timer.java:???)
+#Method)
+td.1.38.blockedObjectId=null
+td.1.38.blockerId=null
+td.1.38.condition=Waiting, priority=5, DAEMON
+td.1.38.header=Thread-0x1380 "Thread-6" <Waiting, priority=5, DAEMON> {
+td.1.38.id=0x1380
+td.1.38.name=Thread-6
+td.1.38.isBlocked=false
+td.1.38.isDaemon=true
+td.1.38.isDeadLocked=false
+td.1.38.isIdle=true
+
+#Thread-0x1400 "ListenThread.Default" <Active, priority=5> {
+#Method)
+#Source)
+#Source)
+#	java.net.ServerSocket.implAccept(Ljava.net.Socket;)V(ServerSocket.java:419)
+#	java.net.ServerSocket.accept()Ljava.net.Socket;(ServerSocket.java:24)
+#	weblogic.socket.WeblogicServerSocket.accept()Ljava.net.Socket;(WeblogicServerSocket.java:739)
+#	weblogic.t3.srvr.ListenThread.accept()Ljava.net.Socket;(ListenThread.java:292)
+#	weblogic.t3.srvr.ListenThread.run()V(ListenThread.java:???)
+#Method)
+td.1.39.blockedObjectId=null
+td.1.39.blockerId=null
+td.1.39.condition=Active, priority=5
+td.1.39.header=Thread-0x1400 "ListenThread.Default" <Active, priority=5> {
+td.1.39.id=0x1400
+td.1.39.name=ListenThread.Default
+td.1.39.isBlocked=false
+td.1.39.isDaemon=false
+td.1.39.isDeadLocked=false
+td.1.39.isIdle=false
+
+#Thread-0x1480 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+#Method)
+#	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+#	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.40.blockedObjectId=null
+td.1.40.blockerId=null
+td.1.40.condition=Active, priority=5, DAEMON
+td.1.40.header=Thread-0x1480 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+td.1.40.id=0x1480
+td.1.40.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
+td.1.40.isBlocked=false
+td.1.40.isDaemon=true
+td.1.40.isDeadLocked=false
+td.1.40.isIdle=false
+
+#Thread-0x1500 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+#Method)
+#	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+#	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.1.41.blockedObjectId=null
+td.1.41.blockerId=null
+td.1.41.condition=Active, priority=5, DAEMON
+td.1.41.header=Thread-0x1500 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+td.1.41.id=0x1500
+td.1.41.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
+td.1.41.isBlocked=false
+td.1.41.isDaemon=true
+td.1.41.isDeadLocked=false
+td.1.41.isIdle=false
+
+ftd.2.deadLockSize=0
+ftd.2.threadCount=42
+#Thread-0x80 "ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.0.blockedObjectId=null
+td.2.0.blockerId=null
+td.2.0.condition=Waiting, priority=5, DAEMON
+td.2.0.header=Thread-0x80 "ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.0.id=0x80
+td.2.0.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
+td.2.0.isBlocked=false
+td.2.0.isDaemon=true
+td.2.0.isDeadLocked=false
+td.2.0.isIdle=true
+
+#Thread-0x100 "ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.1.blockedObjectId=null
+td.2.1.blockerId=null
+td.2.1.condition=Waiting, priority=5, DAEMON
+td.2.1.header=Thread-0x100 "ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.1.id=0x100
+td.2.1.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
+td.2.1.isBlocked=false
+td.2.1.isDaemon=true
+td.2.1.isDeadLocked=false
+td.2.1.isIdle=true
+
+#Thread-0x180 "Finalizer" <Waiting, priority=8, DAEMON> {
+#Method)
+#Source)
+#Source)
+#	java.lang.ref.ReferenceQueue.remove(J)Ljava.lang.ref.Reference;(ReferenceQueue.java:127)
+#	java.lang.ref.ReferenceQueue.remove()Ljava.lang.ref.Reference;(ReferenceQueue.java:159)
+#	java.lang.ref.Finalizer$FinalizerThread.run()V(Finalizer.java:???)
+#Method)
+td.2.2.blockedObjectId=null
+td.2.2.blockerId=null
+td.2.2.condition=Waiting, priority=8, DAEMON
+td.2.2.header=Thread-0x180 "Finalizer" <Waiting, priority=8, DAEMON> {
+td.2.2.id=0x180
+td.2.2.name=Finalizer
+td.2.2.isBlocked=false
+td.2.2.isDaemon=true
+td.2.2.isDeadLocked=false
+td.2.2.isIdle=true
+
+#Thread-0x200 "SignalHandler" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.2.3.blockedObjectId=null
+td.2.3.blockerId=null
+td.2.3.condition=Active, priority=5, DAEMON
+td.2.3.header=Thread-0x200 "SignalHandler" <Active, priority=5, DAEMON> {
+td.2.3.id=0x200
+td.2.3.name=SignalHandler
+td.2.3.isBlocked=false
+td.2.3.isDaemon=true
+td.2.3.isDeadLocked=false
+td.2.3.isIdle=false
+
+#Thread-0x280 "Hotspot Detector" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.2.4.blockedObjectId=null
+td.2.4.blockerId=null
+td.2.4.condition=Active, priority=5, DAEMON
+td.2.4.header=Thread-0x280 "Hotspot Detector" <Active, priority=5, DAEMON> {
+td.2.4.id=0x280
+td.2.4.name=Hotspot Detector
+td.2.4.isBlocked=false
+td.2.4.isDaemon=true
+td.2.4.isDeadLocked=false
+td.2.4.isIdle=false
+
+#Thread-0x300 "Reference Handler" <Waiting, priority=10, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.2.5.blockedObjectId=null
+td.2.5.blockerId=null
+td.2.5.condition=Waiting, priority=10, DAEMON
+td.2.5.header=Thread-0x300 "Reference Handler" <Waiting, priority=10, DAEMON> {
+td.2.5.id=0x300
+td.2.5.name=Reference Handler
+td.2.5.isBlocked=false
+td.2.5.isDaemon=true
+td.2.5.isDeadLocked=false
+td.2.5.isIdle=true
+
+#Thread-0x380 "Thread-1" <Waiting, priority=5> {
+#Method)
+#Source)
+#	weblogic.t3.srvr.T3Srvr.waitForDeath()V(T3Srvr.java:384)
+#	weblogic.t3.srvr.T3Srvr.run([Ljava.lang.String;)I(T3Srvr.java:32)
+#	weblogic.Server.main([Ljava.lang.String;)V(Server.java:???)
+td.2.6.blockedObjectId=null
+td.2.6.blockerId=null
+td.2.6.condition=Waiting, priority=5
+td.2.6.header=Thread-0x380 "Thread-1" <Waiting, priority=5> {
+td.2.6.id=0x380
+td.2.6.name=Thread-1
+td.2.6.isBlocked=false
+td.2.6.isDaemon=false
+td.2.6.isDeadLocked=false
+td.2.6.isIdle=true
+
+#Thread-0x400 "" <Active, priority=5, DAEMON> {
+#Method)
+td.2.7.blockedObjectId=null
+td.2.7.blockerId=null
+td.2.7.condition=Active, priority=5, DAEMON
+td.2.7.header=Thread-0x400 "" <Active, priority=5, DAEMON> {
+td.2.7.id=0x400
+td.2.7.name=
+td.2.7.isBlocked=false
+td.2.7.isDaemon=true
+td.2.7.isDeadLocked=false
+td.2.7.isIdle=false
+
+#Thread-0x480 "ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.8.blockedObjectId=null
+td.2.8.blockerId=null
+td.2.8.condition=Waiting, priority=5, DAEMON
+td.2.8.header=Thread-0x480 "ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.8.id=0x480
+td.2.8.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
+td.2.8.isBlocked=false
+td.2.8.isDaemon=true
+td.2.8.isDeadLocked=false
+td.2.8.isIdle=true
+
+#Thread-0x500 "ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.9.blockedObjectId=null
+td.2.9.blockerId=null
+td.2.9.condition=Waiting, priority=5, DAEMON
+td.2.9.header=Thread-0x500 "ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.9.id=0x500
+td.2.9.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
+td.2.9.isBlocked=false
+td.2.9.isDaemon=true
+td.2.9.isDeadLocked=false
+td.2.9.isIdle=true
+
+#Thread-0x580 "ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.10.blockedObjectId=null
+td.2.10.blockerId=null
+td.2.10.condition=Waiting, priority=5, DAEMON
+td.2.10.header=Thread-0x580 "ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.10.id=0x580
+td.2.10.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
+td.2.10.isBlocked=false
+td.2.10.isDaemon=true
+td.2.10.isDeadLocked=false
+td.2.10.isIdle=true
+
+#Thread-0x600 "ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.11.blockedObjectId=null
+td.2.11.blockerId=null
+td.2.11.condition=Waiting, priority=5, DAEMON
+td.2.11.header=Thread-0x600 "ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.11.id=0x600
+td.2.11.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
+td.2.11.isBlocked=false
+td.2.11.isDaemon=true
+td.2.11.isDeadLocked=false
+td.2.11.isIdle=true
+
+#Thread-0x680 "ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.12.blockedObjectId=null
+td.2.12.blockerId=null
+td.2.12.condition=Waiting, priority=5, DAEMON
+td.2.12.header=Thread-0x680 "ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.12.id=0x680
+td.2.12.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
+td.2.12.isBlocked=false
+td.2.12.isDaemon=true
+td.2.12.isDeadLocked=false
+td.2.12.isIdle=true
+
+#Thread-0x700 "ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.13.blockedObjectId=null
+td.2.13.blockerId=null
+td.2.13.condition=Waiting, priority=5, DAEMON
+td.2.13.header=Thread-0x700 "ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.13.id=0x700
+td.2.13.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
+td.2.13.isBlocked=false
+td.2.13.isDaemon=true
+td.2.13.isDeadLocked=false
+td.2.13.isIdle=true
+
+#Thread-0x780 "ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.14.blockedObjectId=null
+td.2.14.blockerId=null
+td.2.14.condition=Waiting, priority=5, DAEMON
+td.2.14.header=Thread-0x780 "ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.14.id=0x780
+td.2.14.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
+td.2.14.isBlocked=false
+td.2.14.isDaemon=true
+td.2.14.isDeadLocked=false
+td.2.14.isIdle=true
+
+#Thread-0x800 "ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.15.blockedObjectId=null
+td.2.15.blockerId=null
+td.2.15.condition=Waiting, priority=5, DAEMON
+td.2.15.header=Thread-0x800 "ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.15.id=0x800
+td.2.15.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
+td.2.15.isBlocked=false
+td.2.15.isDaemon=true
+td.2.15.isDeadLocked=false
+td.2.15.isIdle=true
+
+#Thread-0x880 "ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.16.blockedObjectId=null
+td.2.16.blockerId=null
+td.2.16.condition=Waiting, priority=5, DAEMON
+td.2.16.header=Thread-0x880 "ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.16.id=0x880
+td.2.16.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
+td.2.16.isBlocked=false
+td.2.16.isDaemon=true
+td.2.16.isDeadLocked=false
+td.2.16.isIdle=true
+
+#Thread-0x900 "ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.17.blockedObjectId=null
+td.2.17.blockerId=null
+td.2.17.condition=Waiting, priority=5, DAEMON
+td.2.17.header=Thread-0x900 "ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.17.id=0x900
+td.2.17.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
+td.2.17.isBlocked=false
+td.2.17.isDaemon=true
+td.2.17.isDeadLocked=false
+td.2.17.isIdle=true
+
+#Thread-0x980 "ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.18.blockedObjectId=null
+td.2.18.blockerId=null
+td.2.18.condition=Waiting, priority=5, DAEMON
+td.2.18.header=Thread-0x980 "ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.18.id=0x980
+td.2.18.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
+td.2.18.isBlocked=false
+td.2.18.isDaemon=true
+td.2.18.isDeadLocked=false
+td.2.18.isIdle=true
+
+#Thread-0xa00 "ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.19.blockedObjectId=null
+td.2.19.blockerId=null
+td.2.19.condition=Waiting, priority=5, DAEMON
+td.2.19.header=Thread-0xa00 "ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.19.id=0xa00
+td.2.19.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
+td.2.19.isBlocked=false
+td.2.19.isDaemon=true
+td.2.19.isDeadLocked=false
+td.2.19.isIdle=true
+
+#Thread-0xa80 "ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.20.blockedObjectId=null
+td.2.20.blockerId=null
+td.2.20.condition=Waiting, priority=5, DAEMON
+td.2.20.header=Thread-0xa80 "ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.2.20.id=0xa80
+td.2.20.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
+td.2.20.isBlocked=false
+td.2.20.isDaemon=true
+td.2.20.isDeadLocked=false
+td.2.20.isIdle=true
+
+#Thread-0xb00 "ExecuteThread: '0' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.21.blockedObjectId=null
+td.2.21.blockerId=null
+td.2.21.condition=Waiting, priority=5, DAEMON
+td.2.21.header=Thread-0xb00 "ExecuteThread: '0' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.2.21.id=0xb00
+td.2.21.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
+td.2.21.isBlocked=false
+td.2.21.isDaemon=true
+td.2.21.isDeadLocked=false
+td.2.21.isIdle=true
+
+#Thread-0xb80 "ExecuteThread: '1' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.22.blockedObjectId=null
+td.2.22.blockerId=null
+td.2.22.condition=Waiting, priority=5, DAEMON
+td.2.22.header=Thread-0xb80 "ExecuteThread: '1' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.2.22.id=0xb80
+td.2.22.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
+td.2.22.isBlocked=false
+td.2.22.isDaemon=true
+td.2.22.isDeadLocked=false
+td.2.22.isIdle=true
+
+#Thread-0xc00 "ExecuteThread: '2' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.23.blockedObjectId=null
+td.2.23.blockerId=null
+td.2.23.condition=Waiting, priority=5, DAEMON
+td.2.23.header=Thread-0xc00 "ExecuteThread: '2' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.2.23.id=0xc00
+td.2.23.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
+td.2.23.isBlocked=false
+td.2.23.isDaemon=true
+td.2.23.isDeadLocked=false
+td.2.23.isIdle=true
+
+#Thread-0xc80 "ExecuteThread: '3' for queue: 'weblogic.kernel.System'" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Source)
+#	weblogic.platform.JRockitVM.threadDump()V(JRockitVM.java:214)
+#	weblogic.common.internal.AdminProxy.execute(Lweblogic.t3.srvr.ExecutionContext;Ljava.lang.Object;)Ljava.lang.Object;(AdminProxy.java:699)
+#	weblogic.t3.srvr.ClientRequest$1.run()Ljava.lang.Object;(ClientContext.java:353)
+#	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(AuthenticatedSubject.java:144)
+#	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(SecurityManager.java:696)
+#	weblogic.t3.srvr.ClientRequest.execute(Lweblogic.kernel.ExecuteThread;)V(ClientContext.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.24.blockedObjectId=null
+td.2.24.blockerId=null
+td.2.24.condition=Active, priority=5, DAEMON
+td.2.24.header=Thread-0xc80 "ExecuteThread: '3' for queue: 'weblogic.kernel.System'" <Active, priority=5, DAEMON> {
+td.2.24.id=0xc80
+td.2.24.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
+td.2.24.isBlocked=false
+td.2.24.isDaemon=true
+td.2.24.isDeadLocked=false
+td.2.24.isIdle=false
+
+#Thread-0xd00 "ExecuteThread: '4' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.25.blockedObjectId=null
+td.2.25.blockerId=null
+td.2.25.condition=Waiting, priority=5, DAEMON
+td.2.25.header=Thread-0xd00 "ExecuteThread: '4' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.2.25.id=0xd00
+td.2.25.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
+td.2.25.isBlocked=false
+td.2.25.isDaemon=true
+td.2.25.isDeadLocked=false
+td.2.25.isIdle=true
+
+#Thread-0xd80 "weblogic.time.TimeEventGenerator" <Waiting, priority=9, DAEMON> {
+#Method)
+#Source)
+#	weblogic.time.common.internal.TimeTable.snooze()V(TimeTable.java:118)
+#	weblogic.time.common.internal.TimeEventGenerator.run()V(TimeEventGenerator.java:???)
+#Source)
+#Method)
+td.2.26.blockedObjectId=null
+td.2.26.blockerId=null
+td.2.26.condition=Waiting, priority=9, DAEMON
+td.2.26.header=Thread-0xd80 "weblogic.time.TimeEventGenerator" <Waiting, priority=9, DAEMON> {
+td.2.26.id=0xd80
+td.2.26.name=weblogic.time.TimeEventGenerator
+td.2.26.isBlocked=false
+td.2.26.isDaemon=true
+td.2.26.isDeadLocked=false
+td.2.26.isIdle=true
+
+#Thread-0xe00 "weblogic.security.SpinnerRandomSource" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.security.SpinnerRandomBitsSource.run()V(SpinnerRandomBitsSource.java:???)
+#Source)
+#Method)
+td.2.27.blockedObjectId=null
+td.2.27.blockerId=null
+td.2.27.condition=Waiting, priority=5, DAEMON
+td.2.27.header=Thread-0xe00 "weblogic.security.SpinnerRandomSource" <Waiting, priority=5, DAEMON> {
+td.2.27.id=0xe00
+td.2.27.name=weblogic.security.SpinnerRandomSource
+td.2.27.isBlocked=false
+td.2.27.isDaemon=true
+td.2.27.isDeadLocked=false
+td.2.27.isIdle=true
+
+#Thread-0xe80 "ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.28.blockedObjectId=null
+td.2.28.blockerId=null
+td.2.28.condition=Waiting, priority=5, DAEMON
+td.2.28.header=Thread-0xe80 "ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+td.2.28.id=0xe80
+td.2.28.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
+td.2.28.isBlocked=false
+td.2.28.isDaemon=true
+td.2.28.isDeadLocked=false
+td.2.28.isIdle=true
+
+#Thread-0xf00 "ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.29.blockedObjectId=null
+td.2.29.blockerId=null
+td.2.29.condition=Waiting, priority=5, DAEMON
+td.2.29.header=Thread-0xf00 "ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+td.2.29.id=0xf00
+td.2.29.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
+td.2.29.isBlocked=false
+td.2.29.isDaemon=true
+td.2.29.isDeadLocked=false
+td.2.29.isIdle=true
+
+#Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.30.blockedObjectId=null
+td.2.30.blockerId=null
+td.2.30.condition=Waiting, priority=5, DAEMON
+td.2.30.header=Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.2.30.id=0xf80
+td.2.30.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
+td.2.30.isBlocked=false
+td.2.30.isDaemon=true
+td.2.30.isDeadLocked=false
+td.2.30.isIdle=true
+
+#Thread-0x1000 "ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.31.blockedObjectId=null
+td.2.31.blockerId=null
+td.2.31.condition=Waiting, priority=5, DAEMON
+td.2.31.header=Thread-0x1000 "ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.2.31.id=0x1000
+td.2.31.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
+td.2.31.isBlocked=false
+td.2.31.isDaemon=true
+td.2.31.isDeadLocked=false
+td.2.31.isIdle=true
+
+#Thread-0x1080 "ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.32.blockedObjectId=null
+td.2.32.blockerId=null
+td.2.32.condition=Waiting, priority=5, DAEMON
+td.2.32.header=Thread-0x1080 "ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.2.32.id=0x1080
+td.2.32.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
+td.2.32.isBlocked=false
+td.2.32.isDaemon=true
+td.2.32.isDeadLocked=false
+td.2.32.isIdle=true
+
+#Thread-0x1100 "VDE Transaction Processor Thread" <Waiting, priority=2> {
+#Method)
+#Source)
+#	com.octetstring.vde.backend.standard.TransactionProcessor.waitChange()V(TransactionProcessor.java:212)
+#	com.octetstring.vde.backend.standard.TransactionProcessor.run()V(TransactionProcessor.java:???)
+#Method)
+td.2.33.blockedObjectId=null
+td.2.33.blockerId=null
+td.2.33.condition=Waiting, priority=2
+td.2.33.header=Thread-0x1100 "VDE Transaction Processor Thread" <Waiting, priority=2> {
+td.2.33.id=0x1100
+td.2.33.name=VDE Transaction Processor Thread
+td.2.33.isBlocked=false
+td.2.33.isDaemon=false
+td.2.33.isDeadLocked=false
+td.2.33.isIdle=true
+
+#Thread-0x1180 "Thread-5" <Waiting, priority=5> {
+#Method)
+#Source)
+#	java.util.TimerThread.mainLoop()V(Timer.java:382)
+#	java.util.TimerThread.run()V(Timer.java:???)
+#Method)
+td.2.34.blockedObjectId=null
+td.2.34.blockerId=null
+td.2.34.condition=Waiting, priority=5
+td.2.34.header=Thread-0x1180 "Thread-5" <Waiting, priority=5> {
+td.2.34.id=0x1180
+td.2.34.name=Thread-5
+td.2.34.isBlocked=false
+td.2.34.isDaemon=false
+td.2.34.isDeadLocked=false
+td.2.34.isIdle=true
+
+#Thread-0x1200 "[JRockit] GCEventThread" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Source)
+#Method)
+td.2.35.blockedObjectId=null
+td.2.35.blockerId=null
+td.2.35.condition=Waiting, priority=5, DAEMON
+td.2.35.header=Thread-0x1200 "[JRockit] GCEventThread" <Waiting, priority=5, DAEMON> {
+td.2.35.id=0x1200
+td.2.35.name=[JRockit] GCEventThread
+td.2.35.isBlocked=false
+td.2.35.isDaemon=true
+td.2.35.isDeadLocked=false
+td.2.35.isIdle=true
+
+#Thread-0x1280 "weblogic.health.CoreHealthMonitor" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#	weblogic.t3.srvr.CoreHealthMonitorThread.run()V(CoreHealthMonitorThread.java:???)
+#Method)
+td.2.36.blockedObjectId=null
+td.2.36.blockerId=null
+td.2.36.condition=Waiting, priority=5, DAEMON
+td.2.36.header=Thread-0x1280 "weblogic.health.CoreHealthMonitor" <Waiting, priority=5, DAEMON> {
+td.2.36.id=0x1280
+td.2.36.name=weblogic.health.CoreHealthMonitor
+td.2.36.isBlocked=false
+td.2.36.isDaemon=true
+td.2.36.isDeadLocked=false
+td.2.36.isIdle=true
+
+#Thread-0x1300 "ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.jms.backend.BETimerTree.execute(Lweblogic.kernel.ExecuteThread;)V(BETimerTree.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.37.blockedObjectId=null
+td.2.37.blockerId=null
+td.2.37.condition=Waiting, priority=5, DAEMON
+td.2.37.header=Thread-0x1300 "ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" <Waiting, priority=5, DAEMON> {
+td.2.37.id=0x1300
+td.2.37.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
+td.2.37.isBlocked=false
+td.2.37.isDaemon=true
+td.2.37.isDeadLocked=false
+td.2.37.isIdle=true
+
+#Thread-0x1380 "Thread-6" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	java.util.TimerThread.mainLoop()V(Timer.java:382)
+#	java.util.TimerThread.run()V(Timer.java:???)
+#Method)
+td.2.38.blockedObjectId=null
+td.2.38.blockerId=null
+td.2.38.condition=Waiting, priority=5, DAEMON
+td.2.38.header=Thread-0x1380 "Thread-6" <Waiting, priority=5, DAEMON> {
+td.2.38.id=0x1380
+td.2.38.name=Thread-6
+td.2.38.isBlocked=false
+td.2.38.isDaemon=true
+td.2.38.isDeadLocked=false
+td.2.38.isIdle=true
+
+#Thread-0x1400 "ListenThread.Default" <Active, priority=5> {
+#Method)
+#Source)
+#Source)
+#	java.net.ServerSocket.implAccept(Ljava.net.Socket;)V(ServerSocket.java:419)
+#	java.net.ServerSocket.accept()Ljava.net.Socket;(ServerSocket.java:24)
+#	weblogic.socket.WeblogicServerSocket.accept()Ljava.net.Socket;(WeblogicServerSocket.java:739)
+#	weblogic.t3.srvr.ListenThread.accept()Ljava.net.Socket;(ListenThread.java:292)
+#	weblogic.t3.srvr.ListenThread.run()V(ListenThread.java:???)
+#Method)
+td.2.39.blockedObjectId=null
+td.2.39.blockerId=null
+td.2.39.condition=Active, priority=5
+td.2.39.header=Thread-0x1400 "ListenThread.Default" <Active, priority=5> {
+td.2.39.id=0x1400
+td.2.39.name=ListenThread.Default
+td.2.39.isBlocked=false
+td.2.39.isDaemon=false
+td.2.39.isDeadLocked=false
+td.2.39.isIdle=false
+
+#Thread-0x1480 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+#Method)
+#	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+#	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.40.blockedObjectId=null
+td.2.40.blockerId=null
+td.2.40.condition=Active, priority=5, DAEMON
+td.2.40.header=Thread-0x1480 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+td.2.40.id=0x1480
+td.2.40.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
+td.2.40.isBlocked=false
+td.2.40.isDaemon=true
+td.2.40.isDeadLocked=false
+td.2.40.isIdle=false
+
+#Thread-0x1500 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+#Method)
+#	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+#	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.2.41.blockedObjectId=null
+td.2.41.blockerId=null
+td.2.41.condition=Active, priority=5, DAEMON
+td.2.41.header=Thread-0x1500 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+td.2.41.id=0x1500
+td.2.41.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
+td.2.41.isBlocked=false
+td.2.41.isDaemon=true
+td.2.41.isDeadLocked=false
+td.2.41.isIdle=false
+
+ftd.3.deadLockSize=0
+ftd.3.threadCount=42
+#Thread-0x80 "ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.0.blockedObjectId=null
+td.3.0.blockerId=null
+td.3.0.condition=Waiting, priority=5, DAEMON
+td.3.0.header=Thread-0x80 "ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.0.id=0x80
+td.3.0.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
+td.3.0.isBlocked=false
+td.3.0.isDaemon=true
+td.3.0.isDeadLocked=false
+td.3.0.isIdle=true
+
+#Thread-0x100 "ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.1.blockedObjectId=null
+td.3.1.blockerId=null
+td.3.1.condition=Waiting, priority=5, DAEMON
+td.3.1.header=Thread-0x100 "ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.1.id=0x100
+td.3.1.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
+td.3.1.isBlocked=false
+td.3.1.isDaemon=true
+td.3.1.isDeadLocked=false
+td.3.1.isIdle=true
+
+#Thread-0x180 "Finalizer" <Waiting, priority=8, DAEMON> {
+#Method)
+#Source)
+#Source)
+#	java.lang.ref.ReferenceQueue.remove(J)Ljava.lang.ref.Reference;(ReferenceQueue.java:127)
+#	java.lang.ref.ReferenceQueue.remove()Ljava.lang.ref.Reference;(ReferenceQueue.java:159)
+#	java.lang.ref.Finalizer$FinalizerThread.run()V(Finalizer.java:???)
+#Method)
+td.3.2.blockedObjectId=null
+td.3.2.blockerId=null
+td.3.2.condition=Waiting, priority=8, DAEMON
+td.3.2.header=Thread-0x180 "Finalizer" <Waiting, priority=8, DAEMON> {
+td.3.2.id=0x180
+td.3.2.name=Finalizer
+td.3.2.isBlocked=false
+td.3.2.isDaemon=true
+td.3.2.isDeadLocked=false
+td.3.2.isIdle=true
+
+#Thread-0x200 "SignalHandler" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.3.3.blockedObjectId=null
+td.3.3.blockerId=null
+td.3.3.condition=Active, priority=5, DAEMON
+td.3.3.header=Thread-0x200 "SignalHandler" <Active, priority=5, DAEMON> {
+td.3.3.id=0x200
+td.3.3.name=SignalHandler
+td.3.3.isBlocked=false
+td.3.3.isDaemon=true
+td.3.3.isDeadLocked=false
+td.3.3.isIdle=false
+
+#Thread-0x280 "Hotspot Detector" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.3.4.blockedObjectId=null
+td.3.4.blockerId=null
+td.3.4.condition=Active, priority=5, DAEMON
+td.3.4.header=Thread-0x280 "Hotspot Detector" <Active, priority=5, DAEMON> {
+td.3.4.id=0x280
+td.3.4.name=Hotspot Detector
+td.3.4.isBlocked=false
+td.3.4.isDaemon=true
+td.3.4.isDeadLocked=false
+td.3.4.isIdle=false
+
+#Thread-0x300 "Reference Handler" <Waiting, priority=10, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.3.5.blockedObjectId=null
+td.3.5.blockerId=null
+td.3.5.condition=Waiting, priority=10, DAEMON
+td.3.5.header=Thread-0x300 "Reference Handler" <Waiting, priority=10, DAEMON> {
+td.3.5.id=0x300
+td.3.5.name=Reference Handler
+td.3.5.isBlocked=false
+td.3.5.isDaemon=true
+td.3.5.isDeadLocked=false
+td.3.5.isIdle=true
+
+#Thread-0x380 "Thread-1" <Waiting, priority=5> {
+#Method)
+#Source)
+#	weblogic.t3.srvr.T3Srvr.waitForDeath()V(T3Srvr.java:384)
+#	weblogic.t3.srvr.T3Srvr.run([Ljava.lang.String;)I(T3Srvr.java:32)
+#	weblogic.Server.main([Ljava.lang.String;)V(Server.java:???)
+td.3.6.blockedObjectId=null
+td.3.6.blockerId=null
+td.3.6.condition=Waiting, priority=5
+td.3.6.header=Thread-0x380 "Thread-1" <Waiting, priority=5> {
+td.3.6.id=0x380
+td.3.6.name=Thread-1
+td.3.6.isBlocked=false
+td.3.6.isDaemon=false
+td.3.6.isDeadLocked=false
+td.3.6.isIdle=true
+
+#Thread-0x400 "" <Active, priority=5, DAEMON> {
+#Method)
+td.3.7.blockedObjectId=null
+td.3.7.blockerId=null
+td.3.7.condition=Active, priority=5, DAEMON
+td.3.7.header=Thread-0x400 "" <Active, priority=5, DAEMON> {
+td.3.7.id=0x400
+td.3.7.name=
+td.3.7.isBlocked=false
+td.3.7.isDaemon=true
+td.3.7.isDeadLocked=false
+td.3.7.isIdle=false
+
+#Thread-0x480 "ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.8.blockedObjectId=null
+td.3.8.blockerId=null
+td.3.8.condition=Waiting, priority=5, DAEMON
+td.3.8.header=Thread-0x480 "ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.8.id=0x480
+td.3.8.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
+td.3.8.isBlocked=false
+td.3.8.isDaemon=true
+td.3.8.isDeadLocked=false
+td.3.8.isIdle=true
+
+#Thread-0x500 "ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.9.blockedObjectId=null
+td.3.9.blockerId=null
+td.3.9.condition=Waiting, priority=5, DAEMON
+td.3.9.header=Thread-0x500 "ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.9.id=0x500
+td.3.9.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
+td.3.9.isBlocked=false
+td.3.9.isDaemon=true
+td.3.9.isDeadLocked=false
+td.3.9.isIdle=true
+
+#Thread-0x580 "ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.10.blockedObjectId=null
+td.3.10.blockerId=null
+td.3.10.condition=Waiting, priority=5, DAEMON
+td.3.10.header=Thread-0x580 "ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.10.id=0x580
+td.3.10.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
+td.3.10.isBlocked=false
+td.3.10.isDaemon=true
+td.3.10.isDeadLocked=false
+td.3.10.isIdle=true
+
+#Thread-0x600 "ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.11.blockedObjectId=null
+td.3.11.blockerId=null
+td.3.11.condition=Waiting, priority=5, DAEMON
+td.3.11.header=Thread-0x600 "ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.11.id=0x600
+td.3.11.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
+td.3.11.isBlocked=false
+td.3.11.isDaemon=true
+td.3.11.isDeadLocked=false
+td.3.11.isIdle=true
+
+#Thread-0x680 "ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.12.blockedObjectId=null
+td.3.12.blockerId=null
+td.3.12.condition=Waiting, priority=5, DAEMON
+td.3.12.header=Thread-0x680 "ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.12.id=0x680
+td.3.12.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
+td.3.12.isBlocked=false
+td.3.12.isDaemon=true
+td.3.12.isDeadLocked=false
+td.3.12.isIdle=true
+
+#Thread-0x700 "ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.13.blockedObjectId=null
+td.3.13.blockerId=null
+td.3.13.condition=Waiting, priority=5, DAEMON
+td.3.13.header=Thread-0x700 "ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.13.id=0x700
+td.3.13.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
+td.3.13.isBlocked=false
+td.3.13.isDaemon=true
+td.3.13.isDeadLocked=false
+td.3.13.isIdle=true
+
+#Thread-0x780 "ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.14.blockedObjectId=null
+td.3.14.blockerId=null
+td.3.14.condition=Waiting, priority=5, DAEMON
+td.3.14.header=Thread-0x780 "ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.14.id=0x780
+td.3.14.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
+td.3.14.isBlocked=false
+td.3.14.isDaemon=true
+td.3.14.isDeadLocked=false
+td.3.14.isIdle=true
+
+#Thread-0x800 "ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.15.blockedObjectId=null
+td.3.15.blockerId=null
+td.3.15.condition=Waiting, priority=5, DAEMON
+td.3.15.header=Thread-0x800 "ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.15.id=0x800
+td.3.15.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
+td.3.15.isBlocked=false
+td.3.15.isDaemon=true
+td.3.15.isDeadLocked=false
+td.3.15.isIdle=true
+
+#Thread-0x880 "ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.16.blockedObjectId=null
+td.3.16.blockerId=null
+td.3.16.condition=Waiting, priority=5, DAEMON
+td.3.16.header=Thread-0x880 "ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.16.id=0x880
+td.3.16.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
+td.3.16.isBlocked=false
+td.3.16.isDaemon=true
+td.3.16.isDeadLocked=false
+td.3.16.isIdle=true
+
+#Thread-0x900 "ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.17.blockedObjectId=null
+td.3.17.blockerId=null
+td.3.17.condition=Waiting, priority=5, DAEMON
+td.3.17.header=Thread-0x900 "ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.17.id=0x900
+td.3.17.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
+td.3.17.isBlocked=false
+td.3.17.isDaemon=true
+td.3.17.isDeadLocked=false
+td.3.17.isIdle=true
+
+#Thread-0x980 "ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.18.blockedObjectId=null
+td.3.18.blockerId=null
+td.3.18.condition=Waiting, priority=5, DAEMON
+td.3.18.header=Thread-0x980 "ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.18.id=0x980
+td.3.18.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
+td.3.18.isBlocked=false
+td.3.18.isDaemon=true
+td.3.18.isDeadLocked=false
+td.3.18.isIdle=true
+
+#Thread-0xa00 "ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.19.blockedObjectId=null
+td.3.19.blockerId=null
+td.3.19.condition=Waiting, priority=5, DAEMON
+td.3.19.header=Thread-0xa00 "ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.19.id=0xa00
+td.3.19.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
+td.3.19.isBlocked=false
+td.3.19.isDaemon=true
+td.3.19.isDeadLocked=false
+td.3.19.isIdle=true
+
+#Thread-0xa80 "ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.20.blockedObjectId=null
+td.3.20.blockerId=null
+td.3.20.condition=Waiting, priority=5, DAEMON
+td.3.20.header=Thread-0xa80 "ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.3.20.id=0xa80
+td.3.20.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
+td.3.20.isBlocked=false
+td.3.20.isDaemon=true
+td.3.20.isDeadLocked=false
+td.3.20.isIdle=true
+
+#Thread-0xb00 "ExecuteThread: '0' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.21.blockedObjectId=null
+td.3.21.blockerId=null
+td.3.21.condition=Waiting, priority=5, DAEMON
+td.3.21.header=Thread-0xb00 "ExecuteThread: '0' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.3.21.id=0xb00
+td.3.21.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
+td.3.21.isBlocked=false
+td.3.21.isDaemon=true
+td.3.21.isDeadLocked=false
+td.3.21.isIdle=true
+
+#Thread-0xb80 "ExecuteThread: '1' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.22.blockedObjectId=null
+td.3.22.blockerId=null
+td.3.22.condition=Waiting, priority=5, DAEMON
+td.3.22.header=Thread-0xb80 "ExecuteThread: '1' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.3.22.id=0xb80
+td.3.22.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
+td.3.22.isBlocked=false
+td.3.22.isDaemon=true
+td.3.22.isDeadLocked=false
+td.3.22.isIdle=true
+
+#Thread-0xc00 "ExecuteThread: '2' for queue: 'weblogic.kernel.System'" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Source)
+#	weblogic.platform.JRockitVM.threadDump()V(JRockitVM.java:214)
+#	weblogic.common.internal.AdminProxy.execute(Lweblogic.t3.srvr.ExecutionContext;Ljava.lang.Object;)Ljava.lang.Object;(AdminProxy.java:699)
+#	weblogic.t3.srvr.ClientRequest$1.run()Ljava.lang.Object;(ClientContext.java:353)
+#	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(AuthenticatedSubject.java:144)
+#	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(SecurityManager.java:696)
+#	weblogic.t3.srvr.ClientRequest.execute(Lweblogic.kernel.ExecuteThread;)V(ClientContext.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.23.blockedObjectId=null
+td.3.23.blockerId=null
+td.3.23.condition=Active, priority=5, DAEMON
+td.3.23.header=Thread-0xc00 "ExecuteThread: '2' for queue: 'weblogic.kernel.System'" <Active, priority=5, DAEMON> {
+td.3.23.id=0xc00
+td.3.23.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
+td.3.23.isBlocked=false
+td.3.23.isDaemon=true
+td.3.23.isDeadLocked=false
+td.3.23.isIdle=false
+
+#Thread-0xc80 "ExecuteThread: '3' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.24.blockedObjectId=null
+td.3.24.blockerId=null
+td.3.24.condition=Waiting, priority=5, DAEMON
+td.3.24.header=Thread-0xc80 "ExecuteThread: '3' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.3.24.id=0xc80
+td.3.24.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
+td.3.24.isBlocked=false
+td.3.24.isDaemon=true
+td.3.24.isDeadLocked=false
+td.3.24.isIdle=true
+
+#Thread-0xd00 "ExecuteThread: '4' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.25.blockedObjectId=null
+td.3.25.blockerId=null
+td.3.25.condition=Waiting, priority=5, DAEMON
+td.3.25.header=Thread-0xd00 "ExecuteThread: '4' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.3.25.id=0xd00
+td.3.25.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
+td.3.25.isBlocked=false
+td.3.25.isDaemon=true
+td.3.25.isDeadLocked=false
+td.3.25.isIdle=true
+
+#Thread-0xd80 "weblogic.time.TimeEventGenerator" <Waiting, priority=9, DAEMON> {
+#Method)
+#Source)
+#	weblogic.time.common.internal.TimeTable.snooze()V(TimeTable.java:118)
+#	weblogic.time.common.internal.TimeEventGenerator.run()V(TimeEventGenerator.java:???)
+#Source)
+#Method)
+td.3.26.blockedObjectId=null
+td.3.26.blockerId=null
+td.3.26.condition=Waiting, priority=9, DAEMON
+td.3.26.header=Thread-0xd80 "weblogic.time.TimeEventGenerator" <Waiting, priority=9, DAEMON> {
+td.3.26.id=0xd80
+td.3.26.name=weblogic.time.TimeEventGenerator
+td.3.26.isBlocked=false
+td.3.26.isDaemon=true
+td.3.26.isDeadLocked=false
+td.3.26.isIdle=true
+
+#Thread-0xe00 "weblogic.security.SpinnerRandomSource" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.security.SpinnerRandomBitsSource.run()V(SpinnerRandomBitsSource.java:???)
+#Source)
+#Method)
+td.3.27.blockedObjectId=null
+td.3.27.blockerId=null
+td.3.27.condition=Waiting, priority=5, DAEMON
+td.3.27.header=Thread-0xe00 "weblogic.security.SpinnerRandomSource" <Waiting, priority=5, DAEMON> {
+td.3.27.id=0xe00
+td.3.27.name=weblogic.security.SpinnerRandomSource
+td.3.27.isBlocked=false
+td.3.27.isDaemon=true
+td.3.27.isDeadLocked=false
+td.3.27.isIdle=true
+
+#Thread-0xe80 "ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.28.blockedObjectId=null
+td.3.28.blockerId=null
+td.3.28.condition=Waiting, priority=5, DAEMON
+td.3.28.header=Thread-0xe80 "ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+td.3.28.id=0xe80
+td.3.28.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
+td.3.28.isBlocked=false
+td.3.28.isDaemon=true
+td.3.28.isDeadLocked=false
+td.3.28.isIdle=true
+
+#Thread-0xf00 "ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.29.blockedObjectId=null
+td.3.29.blockerId=null
+td.3.29.condition=Waiting, priority=5, DAEMON
+td.3.29.header=Thread-0xf00 "ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+td.3.29.id=0xf00
+td.3.29.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
+td.3.29.isBlocked=false
+td.3.29.isDaemon=true
+td.3.29.isDeadLocked=false
+td.3.29.isIdle=true
+
+#Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.30.blockedObjectId=null
+td.3.30.blockerId=null
+td.3.30.condition=Waiting, priority=5, DAEMON
+td.3.30.header=Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.3.30.id=0xf80
+td.3.30.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
+td.3.30.isBlocked=false
+td.3.30.isDaemon=true
+td.3.30.isDeadLocked=false
+td.3.30.isIdle=true
+
+#Thread-0x1000 "ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.31.blockedObjectId=null
+td.3.31.blockerId=null
+td.3.31.condition=Waiting, priority=5, DAEMON
+td.3.31.header=Thread-0x1000 "ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.3.31.id=0x1000
+td.3.31.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
+td.3.31.isBlocked=false
+td.3.31.isDaemon=true
+td.3.31.isDeadLocked=false
+td.3.31.isIdle=true
+
+#Thread-0x1080 "ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.32.blockedObjectId=null
+td.3.32.blockerId=null
+td.3.32.condition=Waiting, priority=5, DAEMON
+td.3.32.header=Thread-0x1080 "ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.3.32.id=0x1080
+td.3.32.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
+td.3.32.isBlocked=false
+td.3.32.isDaemon=true
+td.3.32.isDeadLocked=false
+td.3.32.isIdle=true
+
+#Thread-0x1100 "VDE Transaction Processor Thread" <Waiting, priority=2> {
+#Method)
+#Source)
+#	com.octetstring.vde.backend.standard.TransactionProcessor.waitChange()V(TransactionProcessor.java:212)
+#	com.octetstring.vde.backend.standard.TransactionProcessor.run()V(TransactionProcessor.java:???)
+#Method)
+td.3.33.blockedObjectId=null
+td.3.33.blockerId=null
+td.3.33.condition=Waiting, priority=2
+td.3.33.header=Thread-0x1100 "VDE Transaction Processor Thread" <Waiting, priority=2> {
+td.3.33.id=0x1100
+td.3.33.name=VDE Transaction Processor Thread
+td.3.33.isBlocked=false
+td.3.33.isDaemon=false
+td.3.33.isDeadLocked=false
+td.3.33.isIdle=true
+
+#Thread-0x1180 "Thread-5" <Waiting, priority=5> {
+#Method)
+#Source)
+#	java.util.TimerThread.mainLoop()V(Timer.java:382)
+#	java.util.TimerThread.run()V(Timer.java:???)
+#Method)
+td.3.34.blockedObjectId=null
+td.3.34.blockerId=null
+td.3.34.condition=Waiting, priority=5
+td.3.34.header=Thread-0x1180 "Thread-5" <Waiting, priority=5> {
+td.3.34.id=0x1180
+td.3.34.name=Thread-5
+td.3.34.isBlocked=false
+td.3.34.isDaemon=false
+td.3.34.isDeadLocked=false
+td.3.34.isIdle=true
+
+#Thread-0x1200 "[JRockit] GCEventThread" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Source)
+#Method)
+td.3.35.blockedObjectId=null
+td.3.35.blockerId=null
+td.3.35.condition=Waiting, priority=5, DAEMON
+td.3.35.header=Thread-0x1200 "[JRockit] GCEventThread" <Waiting, priority=5, DAEMON> {
+td.3.35.id=0x1200
+td.3.35.name=[JRockit] GCEventThread
+td.3.35.isBlocked=false
+td.3.35.isDaemon=true
+td.3.35.isDeadLocked=false
+td.3.35.isIdle=true
+
+#Thread-0x1280 "weblogic.health.CoreHealthMonitor" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#	weblogic.t3.srvr.CoreHealthMonitorThread.run()V(CoreHealthMonitorThread.java:???)
+#Method)
+td.3.36.blockedObjectId=null
+td.3.36.blockerId=null
+td.3.36.condition=Waiting, priority=5, DAEMON
+td.3.36.header=Thread-0x1280 "weblogic.health.CoreHealthMonitor" <Waiting, priority=5, DAEMON> {
+td.3.36.id=0x1280
+td.3.36.name=weblogic.health.CoreHealthMonitor
+td.3.36.isBlocked=false
+td.3.36.isDaemon=true
+td.3.36.isDeadLocked=false
+td.3.36.isIdle=true
+
+#Thread-0x1300 "ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.jms.backend.BETimerTree.execute(Lweblogic.kernel.ExecuteThread;)V(BETimerTree.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.37.blockedObjectId=null
+td.3.37.blockerId=null
+td.3.37.condition=Waiting, priority=5, DAEMON
+td.3.37.header=Thread-0x1300 "ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" <Waiting, priority=5, DAEMON> {
+td.3.37.id=0x1300
+td.3.37.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
+td.3.37.isBlocked=false
+td.3.37.isDaemon=true
+td.3.37.isDeadLocked=false
+td.3.37.isIdle=true
+
+#Thread-0x1380 "Thread-6" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	java.util.TimerThread.mainLoop()V(Timer.java:382)
+#	java.util.TimerThread.run()V(Timer.java:???)
+#Method)
+td.3.38.blockedObjectId=null
+td.3.38.blockerId=null
+td.3.38.condition=Waiting, priority=5, DAEMON
+td.3.38.header=Thread-0x1380 "Thread-6" <Waiting, priority=5, DAEMON> {
+td.3.38.id=0x1380
+td.3.38.name=Thread-6
+td.3.38.isBlocked=false
+td.3.38.isDaemon=true
+td.3.38.isDeadLocked=false
+td.3.38.isIdle=true
+
+#Thread-0x1400 "ListenThread.Default" <Active, priority=5> {
+#Method)
+#Source)
+#Source)
+#	java.net.ServerSocket.implAccept(Ljava.net.Socket;)V(ServerSocket.java:419)
+#	java.net.ServerSocket.accept()Ljava.net.Socket;(ServerSocket.java:24)
+#	weblogic.socket.WeblogicServerSocket.accept()Ljava.net.Socket;(WeblogicServerSocket.java:739)
+#	weblogic.t3.srvr.ListenThread.accept()Ljava.net.Socket;(ListenThread.java:292)
+#	weblogic.t3.srvr.ListenThread.run()V(ListenThread.java:???)
+#Method)
+td.3.39.blockedObjectId=null
+td.3.39.blockerId=null
+td.3.39.condition=Active, priority=5
+td.3.39.header=Thread-0x1400 "ListenThread.Default" <Active, priority=5> {
+td.3.39.id=0x1400
+td.3.39.name=ListenThread.Default
+td.3.39.isBlocked=false
+td.3.39.isDaemon=false
+td.3.39.isDeadLocked=false
+td.3.39.isIdle=false
+
+#Thread-0x1480 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+#Method)
+#	weblogic.kernel.ExecuteThread.notifyRequest(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:362)
+#	weblogic.kernel.ExecuteThreadManager.execute(Lweblogic.kernel.ExecuteRequest;Z)V(ExecuteThreadManager.java:338)
+#	weblogic.kernel.Kernel.execute(Lweblogic.kernel.ExecuteRequest;IZ)V(Kernel.java:360)
+#	weblogic.kernel.Kernel.execute(Lweblogic.kernel.ExecuteRequest;Ljava.lang.String;Z)V(Kernel.java:348)
+#	weblogic.kernel.Kernel.execute(Lweblogic.kernel.ExecuteRequest;Ljava.lang.String;)V(Kernel.java:319)
+#	weblogic.t3.srvr.ClientContext.enqueueWork(Lweblogic.kernel.ExecuteRequest;)V(ClientContext.java:369)
+#	weblogic.t3.srvr.ClientContext.invoke(Lweblogic.rjvm.RemoteRequest;)V(ClientContext.java:932)
+#	weblogic.rjvm.RJVMImpl.dispatchRequest(Lweblogic.rjvm.MsgAbbrevInputStream;)V(RJVMImpl.java:844)
+#	weblogic.rjvm.RJVMImpl.dispatch(Lweblogic.rjvm.MsgAbbrevInputStream;)V(RJVMImpl.java:222)
+#	weblogic.rjvm.ConnectionManagerServer.handleRJVM(Lweblogic.rjvm.MsgAbbrevJVMConnection;Lweblogic.rjvm.MsgAbbrevInputStream;)V(ConnectionManagerServer.java:794)
+#	weblogic.rjvm.ConnectionManager.dispatch(Lweblogic.rjvm.MsgAbbrevJVMConnection;Lweblogic.utils.io.Chunk;)V(ConnectionManager.java:570)
+#	weblogic.rjvm.t3.T3JVMConnection.dispatch()V(T3JVMConnection.java:105)
+#	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+#	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.40.blockedObjectId=null
+td.3.40.blockerId=null
+td.3.40.condition=Active, priority=5, DAEMON
+td.3.40.header=Thread-0x1480 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+td.3.40.id=0x1480
+td.3.40.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
+td.3.40.isBlocked=false
+td.3.40.isDaemon=true
+td.3.40.isDeadLocked=false
+td.3.40.isIdle=false
+
+#Thread-0x1500 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+#Method)
+#	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+#	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.3.41.blockedObjectId=null
+td.3.41.blockerId=null
+td.3.41.condition=Active, priority=5, DAEMON
+td.3.41.header=Thread-0x1500 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+td.3.41.id=0x1500
+td.3.41.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
+td.3.41.isBlocked=false
+td.3.41.isDaemon=true
+td.3.41.isDeadLocked=false
+td.3.41.isIdle=false
+
+ftd.4.deadLockSize=0
+ftd.4.threadCount=46
+#Thread-0x80 "ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.0.blockedObjectId=null
+td.4.0.blockerId=null
+td.4.0.condition=Waiting, priority=5, DAEMON
+td.4.0.header=Thread-0x80 "ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.0.id=0x80
+td.4.0.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
+td.4.0.isBlocked=false
+td.4.0.isDaemon=true
+td.4.0.isDeadLocked=false
+td.4.0.isIdle=true
+
+#Thread-0x100 "ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.1.blockedObjectId=null
+td.4.1.blockerId=null
+td.4.1.condition=Waiting, priority=5, DAEMON
+td.4.1.header=Thread-0x100 "ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.1.id=0x100
+td.4.1.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
+td.4.1.isBlocked=false
+td.4.1.isDaemon=true
+td.4.1.isDeadLocked=false
+td.4.1.isIdle=true
+
+#Thread-0x180 "Finalizer" <Waiting, priority=8, DAEMON> {
+#Method)
+#Source)
+#Source)
+#	java.lang.ref.ReferenceQueue.remove(J)Ljava.lang.ref.Reference;(ReferenceQueue.java:127)
+#	java.lang.ref.ReferenceQueue.remove()Ljava.lang.ref.Reference;(ReferenceQueue.java:159)
+#	java.lang.ref.Finalizer$FinalizerThread.run()V(Finalizer.java:???)
+#Method)
+td.4.2.blockedObjectId=null
+td.4.2.blockerId=null
+td.4.2.condition=Waiting, priority=8, DAEMON
+td.4.2.header=Thread-0x180 "Finalizer" <Waiting, priority=8, DAEMON> {
+td.4.2.id=0x180
+td.4.2.name=Finalizer
+td.4.2.isBlocked=false
+td.4.2.isDaemon=true
+td.4.2.isDeadLocked=false
+td.4.2.isIdle=true
+
+#Thread-0x200 "SignalHandler" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.4.3.blockedObjectId=null
+td.4.3.blockerId=null
+td.4.3.condition=Active, priority=5, DAEMON
+td.4.3.header=Thread-0x200 "SignalHandler" <Active, priority=5, DAEMON> {
+td.4.3.id=0x200
+td.4.3.name=SignalHandler
+td.4.3.isBlocked=false
+td.4.3.isDaemon=true
+td.4.3.isDeadLocked=false
+td.4.3.isIdle=false
+
+#Thread-0x280 "Hotspot Detector" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.4.4.blockedObjectId=null
+td.4.4.blockerId=null
+td.4.4.condition=Active, priority=5, DAEMON
+td.4.4.header=Thread-0x280 "Hotspot Detector" <Active, priority=5, DAEMON> {
+td.4.4.id=0x280
+td.4.4.name=Hotspot Detector
+td.4.4.isBlocked=false
+td.4.4.isDaemon=true
+td.4.4.isDeadLocked=false
+td.4.4.isIdle=false
+
+#Thread-0x300 "Reference Handler" <Waiting, priority=10, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Method)
+td.4.5.blockedObjectId=null
+td.4.5.blockerId=null
+td.4.5.condition=Waiting, priority=10, DAEMON
+td.4.5.header=Thread-0x300 "Reference Handler" <Waiting, priority=10, DAEMON> {
+td.4.5.id=0x300
+td.4.5.name=Reference Handler
+td.4.5.isBlocked=false
+td.4.5.isDaemon=true
+td.4.5.isDeadLocked=false
+td.4.5.isIdle=true
+
+#Thread-0x380 "Thread-1" <Waiting, priority=5> {
+#Method)
+#Source)
+#	weblogic.t3.srvr.T3Srvr.waitForDeath()V(T3Srvr.java:384)
+#	weblogic.t3.srvr.T3Srvr.run([Ljava.lang.String;)I(T3Srvr.java:32)
+#	weblogic.Server.main([Ljava.lang.String;)V(Server.java:???)
+td.4.6.blockedObjectId=null
+td.4.6.blockerId=null
+td.4.6.condition=Waiting, priority=5
+td.4.6.header=Thread-0x380 "Thread-1" <Waiting, priority=5> {
+td.4.6.id=0x380
+td.4.6.name=Thread-1
+td.4.6.isBlocked=false
+td.4.6.isDaemon=false
+td.4.6.isDeadLocked=false
+td.4.6.isIdle=true
+
+#Thread-0x400 "" <Active, priority=5, DAEMON> {
+#Method)
+td.4.7.blockedObjectId=null
+td.4.7.blockerId=null
+td.4.7.condition=Active, priority=5, DAEMON
+td.4.7.header=Thread-0x400 "" <Active, priority=5, DAEMON> {
+td.4.7.id=0x400
+td.4.7.name=
+td.4.7.isBlocked=false
+td.4.7.isDaemon=true
+td.4.7.isDeadLocked=false
+td.4.7.isIdle=false
+
+#Thread-0x480 "ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.8.blockedObjectId=null
+td.4.8.blockerId=null
+td.4.8.condition=Waiting, priority=5, DAEMON
+td.4.8.header=Thread-0x480 "ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.8.id=0x480
+td.4.8.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
+td.4.8.isBlocked=false
+td.4.8.isDaemon=true
+td.4.8.isDeadLocked=false
+td.4.8.isIdle=true
+
+#Thread-0x500 "ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.9.blockedObjectId=null
+td.4.9.blockerId=null
+td.4.9.condition=Waiting, priority=5, DAEMON
+td.4.9.header=Thread-0x500 "ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.9.id=0x500
+td.4.9.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
+td.4.9.isBlocked=false
+td.4.9.isDaemon=true
+td.4.9.isDeadLocked=false
+td.4.9.isIdle=true
+
+#Thread-0x580 "ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.10.blockedObjectId=null
+td.4.10.blockerId=null
+td.4.10.condition=Waiting, priority=5, DAEMON
+td.4.10.header=Thread-0x580 "ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.10.id=0x580
+td.4.10.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
+td.4.10.isBlocked=false
+td.4.10.isDaemon=true
+td.4.10.isDeadLocked=false
+td.4.10.isIdle=true
+
+#Thread-0x600 "ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.11.blockedObjectId=null
+td.4.11.blockerId=null
+td.4.11.condition=Waiting, priority=5, DAEMON
+td.4.11.header=Thread-0x600 "ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.11.id=0x600
+td.4.11.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
+td.4.11.isBlocked=false
+td.4.11.isDaemon=true
+td.4.11.isDeadLocked=false
+td.4.11.isIdle=true
+
+#Thread-0x680 "ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.12.blockedObjectId=null
+td.4.12.blockerId=null
+td.4.12.condition=Waiting, priority=5, DAEMON
+td.4.12.header=Thread-0x680 "ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.12.id=0x680
+td.4.12.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
+td.4.12.isBlocked=false
+td.4.12.isDaemon=true
+td.4.12.isDeadLocked=false
+td.4.12.isIdle=true
+
+#Thread-0x700 "ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.13.blockedObjectId=null
+td.4.13.blockerId=null
+td.4.13.condition=Waiting, priority=5, DAEMON
+td.4.13.header=Thread-0x700 "ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.13.id=0x700
+td.4.13.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
+td.4.13.isBlocked=false
+td.4.13.isDaemon=true
+td.4.13.isDeadLocked=false
+td.4.13.isIdle=true
+
+#Thread-0x780 "ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.14.blockedObjectId=null
+td.4.14.blockerId=null
+td.4.14.condition=Waiting, priority=5, DAEMON
+td.4.14.header=Thread-0x780 "ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.14.id=0x780
+td.4.14.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
+td.4.14.isBlocked=false
+td.4.14.isDaemon=true
+td.4.14.isDeadLocked=false
+td.4.14.isIdle=true
+
+#Thread-0x800 "ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.15.blockedObjectId=null
+td.4.15.blockerId=null
+td.4.15.condition=Waiting, priority=5, DAEMON
+td.4.15.header=Thread-0x800 "ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.15.id=0x800
+td.4.15.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
+td.4.15.isBlocked=false
+td.4.15.isDaemon=true
+td.4.15.isDeadLocked=false
+td.4.15.isIdle=true
+
+#Thread-0x880 "ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.16.blockedObjectId=null
+td.4.16.blockerId=null
+td.4.16.condition=Waiting, priority=5, DAEMON
+td.4.16.header=Thread-0x880 "ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.16.id=0x880
+td.4.16.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
+td.4.16.isBlocked=false
+td.4.16.isDaemon=true
+td.4.16.isDeadLocked=false
+td.4.16.isIdle=true
+
+#Thread-0x900 "ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.17.blockedObjectId=null
+td.4.17.blockerId=null
+td.4.17.condition=Waiting, priority=5, DAEMON
+td.4.17.header=Thread-0x900 "ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.17.id=0x900
+td.4.17.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
+td.4.17.isBlocked=false
+td.4.17.isDaemon=true
+td.4.17.isDeadLocked=false
+td.4.17.isIdle=true
+
+#Thread-0x980 "ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.18.blockedObjectId=null
+td.4.18.blockerId=null
+td.4.18.condition=Waiting, priority=5, DAEMON
+td.4.18.header=Thread-0x980 "ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.18.id=0x980
+td.4.18.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
+td.4.18.isBlocked=false
+td.4.18.isDaemon=true
+td.4.18.isDeadLocked=false
+td.4.18.isIdle=true
+
+#Thread-0xa00 "ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.19.blockedObjectId=null
+td.4.19.blockerId=null
+td.4.19.condition=Waiting, priority=5, DAEMON
+td.4.19.header=Thread-0xa00 "ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.19.id=0xa00
+td.4.19.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
+td.4.19.isBlocked=false
+td.4.19.isDaemon=true
+td.4.19.isDeadLocked=false
+td.4.19.isIdle=true
+
+#Thread-0xa80 "ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.20.blockedObjectId=null
+td.4.20.blockerId=null
+td.4.20.condition=Waiting, priority=5, DAEMON
+td.4.20.header=Thread-0xa80 "ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+td.4.20.id=0xa80
+td.4.20.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
+td.4.20.isBlocked=false
+td.4.20.isDaemon=true
+td.4.20.isDeadLocked=false
+td.4.20.isIdle=true
+
+#Thread-0xb00 "ExecuteThread: '0' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.21.blockedObjectId=null
+td.4.21.blockerId=null
+td.4.21.condition=Waiting, priority=5, DAEMON
+td.4.21.header=Thread-0xb00 "ExecuteThread: '0' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.4.21.id=0xb00
+td.4.21.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
+td.4.21.isBlocked=false
+td.4.21.isDaemon=true
+td.4.21.isDeadLocked=false
+td.4.21.isIdle=true
+
+#Thread-0xb80 "ExecuteThread: '1' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.22.blockedObjectId=null
+td.4.22.blockerId=null
+td.4.22.condition=Waiting, priority=5, DAEMON
+td.4.22.header=Thread-0xb80 "ExecuteThread: '1' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.4.22.id=0xb80
+td.4.22.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
+td.4.22.isBlocked=false
+td.4.22.isDaemon=true
+td.4.22.isDeadLocked=false
+td.4.22.isIdle=true
+
+#Thread-0xc00 "ExecuteThread: '2' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.23.blockedObjectId=null
+td.4.23.blockerId=null
+td.4.23.condition=Waiting, priority=5, DAEMON
+td.4.23.header=Thread-0xc00 "ExecuteThread: '2' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.4.23.id=0xc00
+td.4.23.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
+td.4.23.isBlocked=false
+td.4.23.isDaemon=true
+td.4.23.isDeadLocked=false
+td.4.23.isIdle=true
+
+#Thread-0xc80 "ExecuteThread: '3' for queue: 'weblogic.kernel.System'" <Active, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Source)
+#	weblogic.platform.JRockitVM.threadDump()V(JRockitVM.java:214)
+#	weblogic.common.internal.AdminProxy.execute(Lweblogic.t3.srvr.ExecutionContext;Ljava.lang.Object;)Ljava.lang.Object;(AdminProxy.java:699)
+#	weblogic.t3.srvr.ClientRequest$1.run()Ljava.lang.Object;(ClientContext.java:353)
+#	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(AuthenticatedSubject.java:144)
+#	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(SecurityManager.java:696)
+#	weblogic.t3.srvr.ClientRequest.execute(Lweblogic.kernel.ExecuteThread;)V(ClientContext.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.24.blockedObjectId=null
+td.4.24.blockerId=null
+td.4.24.condition=Active, priority=5, DAEMON
+td.4.24.header=Thread-0xc80 "ExecuteThread: '3' for queue: 'weblogic.kernel.System'" <Active, priority=5, DAEMON> {
+td.4.24.id=0xc80
+td.4.24.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
+td.4.24.isBlocked=false
+td.4.24.isDaemon=true
+td.4.24.isDeadLocked=false
+td.4.24.isIdle=false
+
+#Thread-0xd00 "ExecuteThread: '4' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.25.blockedObjectId=null
+td.4.25.blockerId=null
+td.4.25.condition=Waiting, priority=5, DAEMON
+td.4.25.header=Thread-0xd00 "ExecuteThread: '4' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+td.4.25.id=0xd00
+td.4.25.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
+td.4.25.isBlocked=false
+td.4.25.isDaemon=true
+td.4.25.isDeadLocked=false
+td.4.25.isIdle=true
+
+#Thread-0xd80 "weblogic.time.TimeEventGenerator" <Waiting, priority=9, DAEMON> {
+#Method)
+#Source)
+#	weblogic.time.common.internal.TimeTable.snooze()V(TimeTable.java:118)
+#	weblogic.time.common.internal.TimeEventGenerator.run()V(TimeEventGenerator.java:???)
+#Source)
+#Method)
+td.4.26.blockedObjectId=null
+td.4.26.blockerId=null
+td.4.26.condition=Waiting, priority=9, DAEMON
+td.4.26.header=Thread-0xd80 "weblogic.time.TimeEventGenerator" <Waiting, priority=9, DAEMON> {
+td.4.26.id=0xd80
+td.4.26.name=weblogic.time.TimeEventGenerator
+td.4.26.isBlocked=false
+td.4.26.isDaemon=true
+td.4.26.isDeadLocked=false
+td.4.26.isIdle=true
+
+#Thread-0xe00 "weblogic.security.SpinnerRandomSource" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.security.SpinnerRandomBitsSource.run()V(SpinnerRandomBitsSource.java:???)
+#Source)
+#Method)
+td.4.27.blockedObjectId=null
+td.4.27.blockerId=null
+td.4.27.condition=Waiting, priority=5, DAEMON
+td.4.27.header=Thread-0xe00 "weblogic.security.SpinnerRandomSource" <Waiting, priority=5, DAEMON> {
+td.4.27.id=0xe00
+td.4.27.name=weblogic.security.SpinnerRandomSource
+td.4.27.isBlocked=false
+td.4.27.isDaemon=true
+td.4.27.isDeadLocked=false
+td.4.27.isIdle=true
+
+#Thread-0xe80 "ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.28.blockedObjectId=null
+td.4.28.blockerId=null
+td.4.28.condition=Waiting, priority=5, DAEMON
+td.4.28.header=Thread-0xe80 "ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+td.4.28.id=0xe80
+td.4.28.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
+td.4.28.isBlocked=false
+td.4.28.isDaemon=true
+td.4.28.isDeadLocked=false
+td.4.28.isIdle=true
+
+#Thread-0xf00 "ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.29.blockedObjectId=null
+td.4.29.blockerId=null
+td.4.29.condition=Waiting, priority=5, DAEMON
+td.4.29.header=Thread-0xf00 "ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+td.4.29.id=0xf00
+td.4.29.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
+td.4.29.isBlocked=false
+td.4.29.isDaemon=true
+td.4.29.isDeadLocked=false
+td.4.29.isIdle=true
+
+#Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.30.blockedObjectId=null
+td.4.30.blockerId=null
+td.4.30.condition=Waiting, priority=5, DAEMON
+td.4.30.header=Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.4.30.id=0xf80
+td.4.30.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
+td.4.30.isBlocked=false
+td.4.30.isDaemon=true
+td.4.30.isDeadLocked=false
+td.4.30.isIdle=true
+
+#Thread-0x1000 "ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.31.blockedObjectId=null
+td.4.31.blockerId=null
+td.4.31.condition=Waiting, priority=5, DAEMON
+td.4.31.header=Thread-0x1000 "ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.4.31.id=0x1000
+td.4.31.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
+td.4.31.isBlocked=false
+td.4.31.isDaemon=true
+td.4.31.isDeadLocked=false
+td.4.31.isIdle=true
+
+#Thread-0x1080 "ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.32.blockedObjectId=null
+td.4.32.blockerId=null
+td.4.32.condition=Waiting, priority=5, DAEMON
+td.4.32.header=Thread-0x1080 "ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+td.4.32.id=0x1080
+td.4.32.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
+td.4.32.isBlocked=false
+td.4.32.isDaemon=true
+td.4.32.isDeadLocked=false
+td.4.32.isIdle=true
+
+#Thread-0x1100 "VDE Transaction Processor Thread" <Waiting, priority=2> {
+#Method)
+#Source)
+#	com.octetstring.vde.backend.standard.TransactionProcessor.waitChange()V(TransactionProcessor.java:212)
+#	com.octetstring.vde.backend.standard.TransactionProcessor.run()V(TransactionProcessor.java:???)
+#Method)
+td.4.33.blockedObjectId=null
+td.4.33.blockerId=null
+td.4.33.condition=Waiting, priority=2
+td.4.33.header=Thread-0x1100 "VDE Transaction Processor Thread" <Waiting, priority=2> {
+td.4.33.id=0x1100
+td.4.33.name=VDE Transaction Processor Thread
+td.4.33.isBlocked=false
+td.4.33.isDaemon=false
+td.4.33.isDeadLocked=false
+td.4.33.isIdle=true
+
+#Thread-0x1180 "Thread-5" <Waiting, priority=5> {
+#Method)
+#Source)
+#	java.util.TimerThread.mainLoop()V(Timer.java:382)
+#	java.util.TimerThread.run()V(Timer.java:???)
+#Method)
+td.4.34.blockedObjectId=null
+td.4.34.blockerId=null
+td.4.34.condition=Waiting, priority=5
+td.4.34.header=Thread-0x1180 "Thread-5" <Waiting, priority=5> {
+td.4.34.id=0x1180
+td.4.34.name=Thread-5
+td.4.34.isBlocked=false
+td.4.34.isDaemon=false
+td.4.34.isDeadLocked=false
+td.4.34.isIdle=true
+
+#Thread-0x1200 "[JRockit] GCEventThread" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#Source)
+#Method)
+td.4.35.blockedObjectId=null
+td.4.35.blockerId=null
+td.4.35.condition=Waiting, priority=5, DAEMON
+td.4.35.header=Thread-0x1200 "[JRockit] GCEventThread" <Waiting, priority=5, DAEMON> {
+td.4.35.id=0x1200
+td.4.35.name=[JRockit] GCEventThread
+td.4.35.isBlocked=false
+td.4.35.isDaemon=true
+td.4.35.isDeadLocked=false
+td.4.35.isIdle=true
+
+#Thread-0x1280 "weblogic.health.CoreHealthMonitor" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#Source)
+#	weblogic.t3.srvr.CoreHealthMonitorThread.run()V(CoreHealthMonitorThread.java:???)
+#Method)
+td.4.36.blockedObjectId=null
+td.4.36.blockerId=null
+td.4.36.condition=Waiting, priority=5, DAEMON
+td.4.36.header=Thread-0x1280 "weblogic.health.CoreHealthMonitor" <Waiting, priority=5, DAEMON> {
+td.4.36.id=0x1280
+td.4.36.name=weblogic.health.CoreHealthMonitor
+td.4.36.isBlocked=false
+td.4.36.isDaemon=true
+td.4.36.isDeadLocked=false
+td.4.36.isIdle=true
+
+#Thread-0x1300 "ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.jms.backend.BETimerTree.execute(Lweblogic.kernel.ExecuteThread;)V(BETimerTree.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.37.blockedObjectId=null
+td.4.37.blockerId=null
+td.4.37.condition=Waiting, priority=5, DAEMON
+td.4.37.header=Thread-0x1300 "ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" <Waiting, priority=5, DAEMON> {
+td.4.37.id=0x1300
+td.4.37.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
+td.4.37.isBlocked=false
+td.4.37.isDaemon=true
+td.4.37.isDeadLocked=false
+td.4.37.isIdle=true
+
+#Thread-0x1380 "Thread-6" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	java.util.TimerThread.mainLoop()V(Timer.java:382)
+#	java.util.TimerThread.run()V(Timer.java:???)
+#Method)
+td.4.38.blockedObjectId=null
+td.4.38.blockerId=null
+td.4.38.condition=Waiting, priority=5, DAEMON
+td.4.38.header=Thread-0x1380 "Thread-6" <Waiting, priority=5, DAEMON> {
+td.4.38.id=0x1380
+td.4.38.name=Thread-6
+td.4.38.isBlocked=false
+td.4.38.isDaemon=true
+td.4.38.isDeadLocked=false
+td.4.38.isIdle=true
+
+#Thread-0x1400 "ListenThread.Default" <Active, priority=5> {
+#Method)
+#Source)
+#Source)
+#	java.net.ServerSocket.implAccept(Ljava.net.Socket;)V(ServerSocket.java:419)
+#	java.net.ServerSocket.accept()Ljava.net.Socket;(ServerSocket.java:24)
+#	weblogic.socket.WeblogicServerSocket.accept()Ljava.net.Socket;(WeblogicServerSocket.java:739)
+#	weblogic.t3.srvr.ListenThread.accept()Ljava.net.Socket;(ListenThread.java:292)
+#	weblogic.t3.srvr.ListenThread.run()V(ListenThread.java:???)
+#Method)
+td.4.39.blockedObjectId=null
+td.4.39.blockerId=null
+td.4.39.condition=Active, priority=5
+td.4.39.header=Thread-0x1400 "ListenThread.Default" <Active, priority=5> {
+td.4.39.id=0x1400
+td.4.39.name=ListenThread.Default
+td.4.39.isBlocked=false
+td.4.39.isDaemon=false
+td.4.39.isDeadLocked=false
+td.4.39.isIdle=false
+
+#Thread-0x1480 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+#Method)
+#	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+#	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.40.blockedObjectId=null
+td.4.40.blockerId=null
+td.4.40.condition=Active, priority=5, DAEMON
+td.4.40.header=Thread-0x1480 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+td.4.40.id=0x1480
+td.4.40.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
+td.4.40.isBlocked=false
+td.4.40.isDaemon=true
+td.4.40.isDeadLocked=false
+td.4.40.isIdle=false
+
+#Thread-0x1500 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+#Method)
+#	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+#	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+#	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.41.blockedObjectId=null
+td.4.41.blockerId=null
+td.4.41.condition=Active, priority=5, DAEMON
+td.4.41.header=Thread-0x1500 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+td.4.41.id=0x1500
+td.4.41.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
+td.4.41.isBlocked=false
+td.4.41.isDaemon=true
+td.4.41.isDeadLocked=false
+td.4.41.isIdle=false
+
+#Thread-0x1580 "ExecuteThread: '0' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.42.blockedObjectId=null
+td.4.42.blockerId=null
+td.4.42.condition=Waiting, priority=5, DAEMON
+td.4.42.header=Thread-0x1580 "ExecuteThread: '0' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+td.4.42.id=0x1580
+td.4.42.name=ExecuteThread: '0' for queue: 'JMS.TimerClientPool'
+td.4.42.isBlocked=false
+td.4.42.isDaemon=true
+td.4.42.isDeadLocked=false
+td.4.42.isIdle=true
+
+#Thread-0x1600 "ExecuteThread: '1' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.43.blockedObjectId=null
+td.4.43.blockerId=null
+td.4.43.condition=Waiting, priority=5, DAEMON
+td.4.43.header=Thread-0x1600 "ExecuteThread: '1' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+td.4.43.id=0x1600
+td.4.43.name=ExecuteThread: '1' for queue: 'JMS.TimerClientPool'
+td.4.43.isBlocked=false
+td.4.43.isDaemon=true
+td.4.43.isDeadLocked=false
+td.4.43.isIdle=true
+
+#Thread-0x1680 "ExecuteThread: '2' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.44.blockedObjectId=null
+td.4.44.blockerId=null
+td.4.44.condition=Waiting, priority=5, DAEMON
+td.4.44.header=Thread-0x1680 "ExecuteThread: '2' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+td.4.44.id=0x1680
+td.4.44.name=ExecuteThread: '2' for queue: 'JMS.TimerClientPool'
+td.4.44.isBlocked=false
+td.4.44.isDaemon=true
+td.4.44.isDeadLocked=false
+td.4.44.isIdle=true
+
+#Thread-0x1700 "ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+#Method)
+#Source)
+#	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+#	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+#Method)
+td.4.45.blockedObjectId=null
+td.4.45.blockerId=null
+td.4.45.condition=Waiting, priority=5, DAEMON
+td.4.45.header=Thread-0x1700 "ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+td.4.45.id=0x1700
+td.4.45.name=ExecuteThread: '3' for queue: 'JMS.TimerClientPool'
+td.4.45.isBlocked=false
+td.4.45.isDaemon=true
+td.4.45.isDeadLocked=false
+td.4.45.isIdle=true
+

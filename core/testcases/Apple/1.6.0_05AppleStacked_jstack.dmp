@@ -1,0 +1,279 @@
+2008-05-10 12:13:35
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (1.6.0_05-b13-52 mixed mode):
+
+"Attach Listener" daemon prio=9 tid=0x0000000101854800 nid=0x110716000 waiting on condition [0x0000000000000000..0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"DeadLockThread3" prio=5 tid=0x0000000101853000 nid=0x110613000 waiting for monitor entry [0x0000000110612000..0x0000000110612ad0]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:38)
+	- waiting to lock <0x000000010507f180> (a java.lang.Object)
+
+"DeadLockThread2" prio=5 tid=0x0000000101852800 nid=0x110510000 waiting for monitor entry [0x000000011050f000..0x000000011050fad0]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:40)
+	- waiting to lock <0x000000010507f170> (a java.lang.Object)
+	- locked <0x000000010507f180> (a java.lang.Object)
+
+"DeadLockThread1" prio=5 tid=0x0000000101851000 nid=0x1103fa000 waiting for monitor entry [0x00000001103f9000..0x00000001103f9ad0]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:40)
+	- waiting to lock <0x000000010507f180> (a java.lang.Object)
+	- locked <0x000000010507f170> (a java.lang.Object)
+
+"Low Memory Detector" daemon prio=5 tid=0x0000000101844800 nid=0x10fff4000 runnable [0x0000000000000000..0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"CompilerThread1" daemon prio=9 tid=0x0000000101843000 nid=0x10fef1000 waiting on condition [0x0000000000000000..0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"CompilerThread0" daemon prio=9 tid=0x0000000101841800 nid=0x10fdee000 waiting on condition [0x0000000000000000..0x000000010fdec290]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" daemon prio=9 tid=0x0000000101841000 nid=0x10fceb000 runnable [0x0000000000000000..0x000000010fcea7d0]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" daemon prio=8 tid=0x0000000101829800 nid=0x10fbe8000 in Object.wait() [0x000000010fbe7000..0x000000010fbe7ad0]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x0000000105001d50> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x0000000105001d50> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x0000000101828800 nid=0x10fae5000 in Object.wait() [0x000000010fae4000..0x000000010fae4ad0]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x0000000105001a50> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:485)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+	- locked <0x0000000105001a50> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x0000000101801000 nid=0x100401000 waiting on condition [0x0000000100400000..0x0000000100400c60]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at net.homeip.yusuke.samurai.test.DeadLockingThreads.main(DeadLockingThreads.java:20)
+
+"VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition 
+
+"Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable 
+JNI global references: 588
+
+
+Found one Java-level deadlock:
+=============================
+"DeadLockThread3":
+  waiting to lock monitor 0x00000001007ae360 (object 0x000000010507f180, a java.lang.Object),
+  which is held by "DeadLockThread2"
+"DeadLockThread2":
+  waiting to lock monitor 0x00000001103fd508 (object 0x000000010507f170, a java.lang.Object),
+  which is held by "DeadLockThread1"
+"DeadLockThread1":
+  waiting to lock monitor 0x00000001007ae360 (object 0x000000010507f180, a java.lang.Object),
+  which is held by "DeadLockThread2"
+
+Java stack information for the threads listed above:
+===================================================
+"DeadLockThread3":
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:38)
+	- waiting to lock <0x000000010507f180> (a java.lang.Object)
+"DeadLockThread2":
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:40)
+	- waiting to lock <0x000000010507f170> (a java.lang.Object)
+	- locked <0x000000010507f180> (a java.lang.Object)
+"DeadLockThread1":
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:40)
+	- waiting to lock <0x000000010507f180> (a java.lang.Object)
+	- locked <0x000000010507f170> (a java.lang.Object)
+
+Found 1 deadlock.
+
+2008-05-10 12:13:39
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (1.6.0_05-b13-52 mixed mode):
+
+"Attach Listener" daemon prio=9 tid=0x0000000101854800 nid=0x110716000 waiting on condition [0x0000000000000000..0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"DeadLockThread3" prio=5 tid=0x0000000101853000 nid=0x110613000 waiting for monitor entry [0x0000000110612000..0x0000000110612ad0]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:38)
+	- waiting to lock <0x000000010507f180> (a java.lang.Object)
+
+"DeadLockThread2" prio=5 tid=0x0000000101852800 nid=0x110510000 waiting for monitor entry [0x000000011050f000..0x000000011050fad0]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:40)
+	- waiting to lock <0x000000010507f170> (a java.lang.Object)
+	- locked <0x000000010507f180> (a java.lang.Object)
+
+"DeadLockThread1" prio=5 tid=0x0000000101851000 nid=0x1103fa000 waiting for monitor entry [0x00000001103f9000..0x00000001103f9ad0]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:40)
+	- waiting to lock <0x000000010507f180> (a java.lang.Object)
+	- locked <0x000000010507f170> (a java.lang.Object)
+
+"Low Memory Detector" daemon prio=5 tid=0x0000000101844800 nid=0x10fff4000 runnable [0x0000000000000000..0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"CompilerThread1" daemon prio=9 tid=0x0000000101843000 nid=0x10fef1000 waiting on condition [0x0000000000000000..0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"CompilerThread0" daemon prio=9 tid=0x0000000101841800 nid=0x10fdee000 waiting on condition [0x0000000000000000..0x000000010fdec290]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" daemon prio=9 tid=0x0000000101841000 nid=0x10fceb000 runnable [0x0000000000000000..0x000000010fcea7d0]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" daemon prio=8 tid=0x0000000101829800 nid=0x10fbe8000 in Object.wait() [0x000000010fbe7000..0x000000010fbe7ad0]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x0000000105001d50> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x0000000105001d50> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x0000000101828800 nid=0x10fae5000 in Object.wait() [0x000000010fae4000..0x000000010fae4ad0]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x0000000105001a50> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:485)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+	- locked <0x0000000105001a50> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x0000000101801000 nid=0x100401000 waiting on condition [0x0000000100400000..0x0000000100400c60]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at net.homeip.yusuke.samurai.test.DeadLockingThreads.main(DeadLockingThreads.java:20)
+
+"VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition 
+
+"Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable 
+JNI global references: 588
+
+
+Found one Java-level deadlock:
+=============================
+"DeadLockThread3":
+  waiting to lock monitor 0x00000001007ae360 (object 0x000000010507f180, a java.lang.Object),
+  which is held by "DeadLockThread2"
+"DeadLockThread2":
+  waiting to lock monitor 0x00000001103fd508 (object 0x000000010507f170, a java.lang.Object),
+  which is held by "DeadLockThread1"
+"DeadLockThread1":
+  waiting to lock monitor 0x00000001007ae360 (object 0x000000010507f180, a java.lang.Object),
+  which is held by "DeadLockThread2"
+
+Java stack information for the threads listed above:
+===================================================
+"DeadLockThread3":
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:38)
+	- waiting to lock <0x000000010507f180> (a java.lang.Object)
+"DeadLockThread2":
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:40)
+	- waiting to lock <0x000000010507f170> (a java.lang.Object)
+	- locked <0x000000010507f180> (a java.lang.Object)
+"DeadLockThread1":
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:40)
+	- waiting to lock <0x000000010507f180> (a java.lang.Object)
+	- locked <0x000000010507f170> (a java.lang.Object)
+
+Found 1 deadlock.
+
+2008-05-10 12:13:43
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (1.6.0_05-b13-52 mixed mode):
+
+"Attach Listener" daemon prio=9 tid=0x0000000101854800 nid=0x110716000 waiting on condition [0x0000000000000000..0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"DeadLockThread3" prio=5 tid=0x0000000101853000 nid=0x110613000 waiting for monitor entry [0x0000000110612000..0x0000000110612ad0]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:38)
+	- waiting to lock <0x000000010507f180> (a java.lang.Object)
+
+"DeadLockThread2" prio=5 tid=0x0000000101852800 nid=0x110510000 waiting for monitor entry [0x000000011050f000..0x000000011050fad0]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:40)
+	- waiting to lock <0x000000010507f170> (a java.lang.Object)
+	- locked <0x000000010507f180> (a java.lang.Object)
+
+"DeadLockThread1" prio=5 tid=0x0000000101851000 nid=0x1103fa000 waiting for monitor entry [0x00000001103f9000..0x00000001103f9ad0]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:40)
+	- waiting to lock <0x000000010507f180> (a java.lang.Object)
+	- locked <0x000000010507f170> (a java.lang.Object)
+
+"Low Memory Detector" daemon prio=5 tid=0x0000000101844800 nid=0x10fff4000 runnable [0x0000000000000000..0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"CompilerThread1" daemon prio=9 tid=0x0000000101843000 nid=0x10fef1000 waiting on condition [0x0000000000000000..0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"CompilerThread0" daemon prio=9 tid=0x0000000101841800 nid=0x10fdee000 waiting on condition [0x0000000000000000..0x000000010fdec290]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" daemon prio=9 tid=0x0000000101841000 nid=0x10fceb000 runnable [0x0000000000000000..0x000000010fcea7d0]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" daemon prio=8 tid=0x0000000101829800 nid=0x10fbe8000 in Object.wait() [0x000000010fbe7000..0x000000010fbe7ad0]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x0000000105001d50> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x0000000105001d50> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x0000000101828800 nid=0x10fae5000 in Object.wait() [0x000000010fae4000..0x000000010fae4ad0]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x0000000105001a50> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:485)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+	- locked <0x0000000105001a50> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x0000000101801000 nid=0x100401000 waiting on condition [0x0000000100400000..0x0000000100400c60]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at net.homeip.yusuke.samurai.test.DeadLockingThreads.main(DeadLockingThreads.java:20)
+
+"VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition 
+
+"Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable 
+JNI global references: 588
+
+
+Found one Java-level deadlock:
+=============================
+"DeadLockThread3":
+  waiting to lock monitor 0x00000001007ae360 (object 0x000000010507f180, a java.lang.Object),
+  which is held by "DeadLockThread2"
+"DeadLockThread2":
+  waiting to lock monitor 0x00000001103fd508 (object 0x000000010507f170, a java.lang.Object),
+  which is held by "DeadLockThread1"
+"DeadLockThread1":
+  waiting to lock monitor 0x00000001007ae360 (object 0x000000010507f180, a java.lang.Object),
+  which is held by "DeadLockThread2"
+
+Java stack information for the threads listed above:
+===================================================
+"DeadLockThread3":
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:38)
+	- waiting to lock <0x000000010507f180> (a java.lang.Object)
+"DeadLockThread2":
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:40)
+	- waiting to lock <0x000000010507f170> (a java.lang.Object)
+	- locked <0x000000010507f180> (a java.lang.Object)
+"DeadLockThread1":
+	at net.homeip.yusuke.samurai.test.TheThread.run(DeadLockingThreads.java:40)
+	- waiting to lock <0x000000010507f180> (a java.lang.Object)
+	- locked <0x000000010507f170> (a java.lang.Object)
+
+Found 1 deadlock.
+

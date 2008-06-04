@@ -1,0 +1,192 @@
+Full thread dump Java HotSpot(TM) Client VM (1.4.2-54 mixed mode):
+
+"DeadLockThread" prio=5 tid=0x0050b3d0 nid=0x1858a00 waiting for monitor entry [f0d0a000..f0d0aac0]
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:47)
+	- waiting to lock <0x65050880> (a java.lang.Object)
+
+"DeadLockThread" prio=5 tid=0x0050b110 nid=0x1858600 waiting for monitor entry [f0c89000..f0c89ac0]
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:49)
+	- waiting to lock <0x65050878> (a java.lang.Object)
+	- locked <0x65050880> (a java.lang.Object)
+
+"DeadLockThread" prio=5 tid=0x0050af00 nid=0x1858200 waiting for monitor entry [f0c08000..f0c08ac0]
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:49)
+	- waiting to lock <0x65050880> (a java.lang.Object)
+	- locked <0x65050878> (a java.lang.Object)
+
+"Signal Dispatcher" daemon prio=10 tid=0x00508140 nid=0x180ca00 waiting on condition [0..0]
+
+"Finalizer" daemon prio=8 tid=0x00506b20 nid=0x1810e00 in Object.wait() [f0a04000..f0a04ac0]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x65000448> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:111)
+	- locked <0x65000448> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:127)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x005067f0 nid=0x1803e00 in Object.wait() [f0983000..f0983ac0]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x65000338> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:429)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:115)
+	- locked <0x65000338> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x00500c70 nid=0x1804c00 waiting on condition [f0800000..f08002e8]
+	at java.lang.Thread.sleep(Native Method)
+	at net.homeip.yusuke.samurai.test.TrickyThreads.main(TrickyThreads.java:32)
+
+"VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition 
+"Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable 
+
+Found one Java-level deadlock:
+=============================
+"DeadLockThread":
+  waiting to lock monitor 0x1810500 (object 0x65050878, a java.lang.Object),
+  which is held by "DeadLockThread"
+"DeadLockThread":
+  waiting to lock monitor 0x18104dc (object 0x65050880, a java.lang.Object),
+  which is held by "DeadLockThread"
+
+Java stack information for the threads listed above:
+===================================================
+"DeadLockThread":
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:49)
+	- waiting to lock <0x65050878> (a java.lang.Object)
+	- locked <0x65050880> (a java.lang.Object)
+"DeadLockThread":
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:49)
+	- waiting to lock <0x65050880> (a java.lang.Object)
+	- locked <0x65050878> (a java.lang.Object)
+
+Found 1 deadlock.
+
+Full thread dump Java HotSpot(TM) Client VM (1.4.2-54 mixed mode):
+
+"DeadLockThread" prio=5 tid=0x0050b3d0 nid=0x1858a00 waiting for monitor entry [f0d0a000..f0d0aac0]
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:47)
+	- waiting to lock <0x65050880> (a java.lang.Object)
+
+"DeadLockThread" prio=5 tid=0x0050b110 nid=0x1858600 waiting for monitor entry [f0c89000..f0c89ac0]
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:49)
+	- waiting to lock <0x65050878> (a java.lang.Object)
+	- locked <0x65050880> (a java.lang.Object)
+
+"DeadLockThread" prio=5 tid=0x0050af00 nid=0x1858200 waiting for monitor entry [f0c08000..f0c08ac0]
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:49)
+	- waiting to lock <0x65050880> (a java.lang.Object)
+	- locked <0x65050878> (a java.lang.Object)
+
+"Signal Dispatcher" daemon prio=10 tid=0x00508140 nid=0x180ca00 waiting on condition [0..0]
+
+"Finalizer" daemon prio=8 tid=0x00506b20 nid=0x1810e00 in Object.wait() [f0a04000..f0a04ac0]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x65000448> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:111)
+	- locked <0x65000448> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:127)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x005067f0 nid=0x1803e00 in Object.wait() [f0983000..f0983ac0]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x65000338> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:429)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:115)
+	- locked <0x65000338> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x00500c70 nid=0x1804c00 waiting on condition [f0800000..f08002e8]
+	at java.lang.Thread.sleep(Native Method)
+	at net.homeip.yusuke.samurai.test.TrickyThreads.main(TrickyThreads.java:32)
+
+"VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition 
+"Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable 
+
+Found one Java-level deadlock:
+=============================
+"DeadLockThread":
+  waiting to lock monitor 0x1810500 (object 0x65050878, a java.lang.Object),
+  which is held by "DeadLockThread"
+"DeadLockThread":
+  waiting to lock monitor 0x18104dc (object 0x65050880, a java.lang.Object),
+  which is held by "DeadLockThread"
+
+Java stack information for the threads listed above:
+===================================================
+"DeadLockThread":
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:49)
+	- waiting to lock <0x65050878> (a java.lang.Object)
+	- locked <0x65050880> (a java.lang.Object)
+"DeadLockThread":
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:49)
+	- waiting to lock <0x65050880> (a java.lang.Object)
+	- locked <0x65050878> (a java.lang.Object)
+
+Found 1 deadlock.
+
+Full thread dump Java HotSpot(TM) Client VM (1.4.2-54 mixed mode):
+
+"DeadLockThread" prio=5 tid=0x0050b3d0 nid=0x1858a00 waiting for monitor entry [f0d0a000..f0d0aac0]
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:47)
+	- waiting to lock <0x65050880> (a java.lang.Object)
+
+"DeadLockThread" prio=5 tid=0x0050b110 nid=0x1858600 waiting for monitor entry [f0c89000..f0c89ac0]
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:49)
+	- waiting to lock <0x65050878> (a java.lang.Object)
+	- locked <0x65050880> (a java.lang.Object)
+
+"DeadLockThread" prio=5 tid=0x0050af00 nid=0x1858200 waiting for monitor entry [f0c08000..f0c08ac0]
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:49)
+	- waiting to lock <0x65050880> (a java.lang.Object)
+	- locked <0x65050878> (a java.lang.Object)
+
+"Signal Dispatcher" daemon prio=10 tid=0x00508140 nid=0x180ca00 waiting on condition [0..0]
+
+"Finalizer" daemon prio=8 tid=0x00506b20 nid=0x1810e00 in Object.wait() [f0a04000..f0a04ac0]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x65000448> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:111)
+	- locked <0x65000448> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:127)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x005067f0 nid=0x1803e00 in Object.wait() [f0983000..f0983ac0]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x65000338> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:429)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:115)
+	- locked <0x65000338> (a java.lang.ref.Reference$Lock)
+
+"main" prio=5 tid=0x00500c70 nid=0x1804c00 waiting on condition [f0800000..f08002e8]
+	at java.lang.Thread.sleep(Native Method)
+	at net.homeip.yusuke.samurai.test.TrickyThreads.main(TrickyThreads.java:32)
+
+"VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition 
+"Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable 
+
+Found one Java-level deadlock:
+=============================
+"DeadLockThread":
+  waiting to lock monitor 0x1810500 (object 0x65050878, a java.lang.Object),
+  which is held by "DeadLockThread"
+"DeadLockThread":
+  waiting to lock monitor 0x18104dc (object 0x65050880, a java.lang.Object),
+  which is held by "DeadLockThread"
+
+Java stack information for the threads listed above:
+===================================================
+"DeadLockThread":
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:49)
+	- waiting to lock <0x65050878> (a java.lang.Object)
+	- locked <0x65050880> (a java.lang.Object)
+"DeadLockThread":
+	at net.homeip.yusuke.samurai.test.TheThread.run(TrickyThreads.java:49)
+	- waiting to lock <0x65050880> (a java.lang.Object)
+	- locked <0x65050878> (a java.lang.Object)
+
+Found 1 deadlock.
+

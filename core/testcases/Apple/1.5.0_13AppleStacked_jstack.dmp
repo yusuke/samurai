@@ -1,0 +1,111 @@
+Attaching to process ID 31781, please wait...
+Debugger attached successfully.
+Client compiler detected.
+JVM version is 1.5.0_13-119
+Thread t@60675: (state = BLOCKED)
+ - samurai.core.DeadLockingThread.run() @bci=7, line=38 (Interpreted frame)
+
+
+Thread t@64515: (state = BLOCKED)
+ - samurai.core.DeadLockingThread.run() @bci=20, line=40 (Interpreted frame)
+
+
+Thread t@64771: (state = BLOCKED)
+ - samurai.core.DeadLockingThread.run() @bci=20, line=40 (Interpreted frame)
+
+
+Thread t@66307: (state = BLOCKED)
+
+
+Thread t@66563: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove(long) @bci=44, line=116 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove() @bci=2, line=132 (Interpreted frame)
+ - java.lang.ref.Finalizer$FinalizerThread.run() @bci=3, line=159 (Interpreted frame)
+
+
+Thread t@66819: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.Object.wait() @bci=2, line=474 (Interpreted frame)
+ - java.lang.ref.Reference$ReferenceHandler.run() @bci=46, line=116 (Interpreted frame)
+
+
+Thread t@67075: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Interpreted frame)
+ - samurai.core.DeadLockingThreads.main(java.lang.String[]) @bci=85, line=20 (Interpreted frame)
+
+
+Attaching to process ID 31781, please wait...
+Debugger attached successfully.
+Client compiler detected.
+JVM version is 1.5.0_13-119
+Thread t@60675: (state = BLOCKED)
+ - samurai.core.DeadLockingThread.run() @bci=7, line=38 (Interpreted frame)
+
+
+Thread t@64771: (state = BLOCKED)
+ - samurai.core.DeadLockingThread.run() @bci=20, line=40 (Interpreted frame)
+
+
+Thread t@65027: (state = BLOCKED)
+ - samurai.core.DeadLockingThread.run() @bci=20, line=40 (Interpreted frame)
+
+
+Thread t@66563: (state = BLOCKED)
+
+
+Thread t@66819: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove(long) @bci=44, line=116 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove() @bci=2, line=132 (Interpreted frame)
+ - java.lang.ref.Finalizer$FinalizerThread.run() @bci=3, line=159 (Interpreted frame)
+
+
+Thread t@67075: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.Object.wait() @bci=2, line=474 (Interpreted frame)
+ - java.lang.ref.Reference$ReferenceHandler.run() @bci=46, line=116 (Interpreted frame)
+
+
+Thread t@67331: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Interpreted frame)
+ - samurai.core.DeadLockingThreads.main(java.lang.String[]) @bci=85, line=20 (Interpreted frame)
+
+
+Attaching to process ID 31781, please wait...
+Debugger attached successfully.
+Client compiler detected.
+JVM version is 1.5.0_13-119
+Thread t@60675: (state = BLOCKED)
+ - samurai.core.DeadLockingThread.run() @bci=7, line=38 (Interpreted frame)
+
+
+Thread t@64515: (state = BLOCKED)
+ - samurai.core.DeadLockingThread.run() @bci=20, line=40 (Interpreted frame)
+
+
+Thread t@64771: (state = BLOCKED)
+ - samurai.core.DeadLockingThread.run() @bci=20, line=40 (Interpreted frame)
+
+
+Thread t@66307: (state = BLOCKED)
+
+
+Thread t@66563: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove(long) @bci=44, line=116 (Interpreted frame)
+ - java.lang.ref.ReferenceQueue.remove() @bci=2, line=132 (Interpreted frame)
+ - java.lang.ref.Finalizer$FinalizerThread.run() @bci=3, line=159 (Interpreted frame)
+
+
+Thread t@66819: (state = BLOCKED)
+ - java.lang.Object.wait(long) @bci=0 (Interpreted frame)
+ - java.lang.Object.wait() @bci=2, line=474 (Interpreted frame)
+ - java.lang.ref.Reference$ReferenceHandler.run() @bci=46, line=116 (Interpreted frame)
+
+
+Thread t@67075: (state = BLOCKED)
+ - java.lang.Thread.sleep(long) @bci=0 (Interpreted frame)
+ - samurai.core.DeadLockingThreads.main(java.lang.String[]) @bci=85, line=20 (Interpreted frame)
+
+
