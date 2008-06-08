@@ -3,6 +3,9 @@ package samurai.gc;
 import samurai.util.GUIResourceBundle;
 import samurai.util.ScattergramDataSourceParser;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * <p>Title: Samurai</p>
  * <p/>
@@ -20,9 +23,18 @@ public class SunGCParser implements ScattergramDataSourceParser {
     private boolean labelSet = false;
     private double memoryMax = 0;
     private boolean unloadingClasses = false;
+    private Pattern heapSizePtn = Pattern.compile("(?<=K\\()[0-9]*");
+    private Pattern memoryBeforePtn = Pattern.compile("(?<= )[0-9]*(?=K->)");
+    private Pattern memoryAfterPtn = Pattern.compile("(?<=K->)[0-9]*(?=K\\()");
+    private Pattern timeSpentPtn = Pattern.compile("(?<=, )[0-9\\.]*(?= secs)");
 
     public SunGCParser() {
     }
+    /*
+        [GC 115008K->103309K(129664K), 0.0254331 secs]
+        [Full GC 61365K->51414K(129664K), 1.0320474 secs]
+        [ParNew 226778K->33381K(1022400K), 0.3251635 secs]
+     */
 
     public boolean parse(String line, ScattergramRenderer renderer) {
         try {
@@ -39,29 +51,17 @@ public class SunGCParser implements ScattergramDataSourceParser {
                     //finished unloading classes
 
                     try {
-                        double currentMemoryMax = Double.parseDouble(line.substring(line.indexOf("K(") + 2,
-                                line.indexOf("K)")));
+                        double currentMemoryMax = extract(line,heapSizePtn);
                         if (memoryMax < currentMemoryMax) {
                             memoryMax = currentMemoryMax;
                             renderer.setMaxAt(1, memoryMax);
                             renderer.setMaxAt(2, memoryMax);
                         }
 
-                        double time = Double.parseDouble(line.substring(line.indexOf(", ") + 2, line.lastIndexOf(" secs")));
-                        int memoryBeforeBegin = line.indexOf("GC ");
-                        if (-1 == memoryBeforeBegin) {
-                            memoryBeforeBegin = line.indexOf("ParNew ")+7;
-                            if (-1 == memoryBeforeBegin) {
-                                memoryBeforeBegin = 1;
-                            }
-                        } else {
-                            memoryBeforeBegin += 3;
-                        }
-                        double memoryBefore = Double.parseDouble(line.substring(memoryBeforeBegin,
-                                line.indexOf("K->")));
-                        double memoryAfter = Double.parseDouble(line.substring(line.indexOf("->") + 2,
-                                line.indexOf("K(")));
-                        renderer.addValues(new double[]{time, memoryBefore, memoryAfter});
+                        double timeSpent = extract(line,timeSpentPtn);
+                        double memoryBefore = extract(line,memoryBeforePtn);
+                        double memoryAfter = extract(line,memoryAfterPtn);
+                        renderer.addValues(new double[]{timeSpent, memoryBefore, memoryAfter});
                         return true;
                     } catch (NumberFormatException ignore) {
                     }
@@ -69,7 +69,17 @@ public class SunGCParser implements ScattergramDataSourceParser {
             }
         } catch (StringIndexOutOfBoundsException sioobe) {
             System.err.println("unexpected format:" + line);
+        } catch (IllegalArgumentException iae) {
+            System.err.println("unexpected format:" + line);
         }
         return false;
+    }
+    private double extract(String line,Pattern pattern){
+        Matcher m = pattern.matcher(line);
+        if(m.find()){
+            return Double.parseDouble(m.group());
+        }else{
+            throw new IllegalArgumentException();
+        }
     }
 }
