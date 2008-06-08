@@ -1,6 +1,6 @@
 package samurai.gc;
 
-import samurai.util.ScattergramDataSourceParser;
+import samurai.util.LineGraphDataSourceParser;
 /**
  * <p>Title: Samurai</p>
  * <p/>
@@ -13,14 +13,14 @@ import samurai.util.ScattergramDataSourceParser;
  * @author Yusuke Yamamoto
  * @version 2.0.5
  */
-public class GCParser implements ScattergramDataSourceParser {
-    private ScattergramDataSourceParser[] gcParsers = new ScattergramDataSourceParser[]{new BEAGCParser(), new SunGCParser(), new IBMGCParser()};
-    private ScattergramDataSourceParser finalParser = null;
+public class GCParser implements LineGraphDataSourceParser {
+    private LineGraphDataSourceParser[] gcParsers = new LineGraphDataSourceParser[]{new BEAGCParser(), new SunGCParser(), new IBMGCParser()};
+    private LineGraphDataSourceParser finalParser = null;
 
     public GCParser() {
     }
 
-    public boolean parse(String line, ScattergramRenderer renderer) {
+    public boolean parse(String line, LineGraphRenderer renderer) {
         if (null != finalParser) {
             return finalParser.parse(line, renderer);
         } else {

@@ -2,7 +2,7 @@ package samurai.gc;
 
 import java.awt.Color;
 
-public interface ScattergramRenderer {
+public interface LineGraphRenderer {
     public void addValues(double[] values);
 
     public void setColorAt(int index, Color color);

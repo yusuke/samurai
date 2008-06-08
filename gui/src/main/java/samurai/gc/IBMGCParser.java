@@ -1,7 +1,7 @@
 package samurai.gc;
 
 import samurai.util.GUIResourceBundle;
-import samurai.util.ScattergramDataSourceParser;
+import samurai.util.LineGraphDataSourceParser;
 
 /**
  * <p>Title: Samurai</p>
@@ -15,7 +15,7 @@ import samurai.util.ScattergramDataSourceParser;
  * @author Yusuke Yamamoto
  * @version 2.0.5
  */
-public class IBMGCParser implements ScattergramDataSourceParser {
+public class IBMGCParser implements LineGraphDataSourceParser {
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private boolean labelSet = false;
     private double memoryMax = 0;
@@ -29,7 +29,7 @@ public class IBMGCParser implements ScattergramDataSourceParser {
 
     int freedIndex = 0;
 
-    public boolean parse(String line, ScattergramRenderer renderer) {
+    public boolean parse(String line, LineGraphRenderer renderer) {
         try {
             if (line.startsWith("  <GC(") && -1 != (freedIndex = line.indexOf("): freed"))) {
                 if (!labelSet) {

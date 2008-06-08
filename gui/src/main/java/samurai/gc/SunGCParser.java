@@ -1,7 +1,7 @@
 package samurai.gc;
 
 import samurai.util.GUIResourceBundle;
-import samurai.util.ScattergramDataSourceParser;
+import samurai.util.LineGraphDataSourceParser;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
  * @author Yusuke Yamamoto
  * @version 2.0.5
  */
-public class SunGCParser implements ScattergramDataSourceParser {
+public class SunGCParser implements LineGraphDataSourceParser {
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private boolean labelSet = false;
     private double memoryMax = 0;
@@ -36,7 +36,7 @@ public class SunGCParser implements ScattergramDataSourceParser {
         [ParNew 226778K->33381K(1022400K), 0.3251635 secs]
      */
 
-    public boolean parse(String line, ScattergramRenderer renderer) {
+    public boolean parse(String line, LineGraphRenderer renderer) {
         try {
             if (-1 != line.indexOf("[GC ") || -1 != line.indexOf("[Full GC ") ||-1 != line.indexOf("[ParNew ") ||  unloadingClasses || -1 != line.indexOf("[Unloading class")) {
                 if (!labelSet) {

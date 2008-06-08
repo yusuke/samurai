@@ -1,6 +1,6 @@
 package samurai.swing;
 
-import samurai.gc.ScattergramRenderer;
+import samurai.gc.LineGraphRenderer;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
@@ -32,7 +32,7 @@ import java.text.DecimalFormat;
  * @version 2.0.5
  */
 
-public class ScattergramPanel extends JPanel implements ClipBoardOperationListener, ScattergramRenderer {
+public class LineGraphPanel extends JPanel implements ClipBoardOperationListener, LineGraphRenderer {
     DecimalFormat format = new DecimalFormat("####0.0#############################");
     private Color background = Color.BLACK;
     private Color gridColor = new Color(0, 70, 0);
@@ -46,7 +46,7 @@ public class ScattergramPanel extends JPanel implements ClipBoardOperationListen
     };
     private static final boolean isMac = (-1 != System.getProperty("os.name").toLowerCase().indexOf("mac"));
 
-    public ScattergramPanel() {
+    public LineGraphPanel() {
         try {
             jbInit();
         } catch (Exception ex) {
@@ -56,9 +56,9 @@ public class ScattergramPanel extends JPanel implements ClipBoardOperationListen
 
     void jbInit() throws Exception {
         this.setInputVerifier(null);
-        this.addMouseListener(new ScattergramPanel_this_mouseAdapter(this));
-        this.addMouseMotionListener(new ScattergramPanel_this_mouseMotionAdapter(this));
-        this.addComponentListener(new ScattergramPanel_this_componentAdapter(this));
+        this.addMouseListener(new LineGraphPanel_this_mouseAdapter(this));
+        this.addMouseMotionListener(new LineGraphPanel_this_mouseMotionAdapter(this));
+        this.addComponentListener(new LineGraphPanel_this_componentAdapter(this));
         this.setLayout(borderLayout1);
         scrollBar.setMaximum(200);
         scrollBar.setMinimum(0);
@@ -66,7 +66,7 @@ public class ScattergramPanel extends JPanel implements ClipBoardOperationListen
         scrollBar.setValue(1);
         this.add(scrollBar, BorderLayout.SOUTH);
         this.add(panel, BorderLayout.CENTER);
-        scrollBar.addAdjustmentListener(new ScattergramPanel_scrollBar_adjustmentAdapter(this));
+        scrollBar.addAdjustmentListener(new LineGraphPanel_scrollBar_adjustmentAdapter(this));
         adjustScrollBar();
     }
 
@@ -303,10 +303,10 @@ public class ScattergramPanel extends JPanel implements ClipBoardOperationListen
 
 }
 
-class ScattergramPanel_this_componentAdapter extends java.awt.event.ComponentAdapter {
-    ScattergramPanel adaptee;
+class LineGraphPanel_this_componentAdapter extends java.awt.event.ComponentAdapter {
+    LineGraphPanel adaptee;
 
-    ScattergramPanel_this_componentAdapter(ScattergramPanel adaptee) {
+    LineGraphPanel_this_componentAdapter(LineGraphPanel adaptee) {
         this.adaptee = adaptee;
     }
 
@@ -315,10 +315,10 @@ class ScattergramPanel_this_componentAdapter extends java.awt.event.ComponentAda
     }
 }
 
-class ScattergramPanel_scrollBar_adjustmentAdapter implements java.awt.event.AdjustmentListener {
-    ScattergramPanel adaptee;
+class LineGraphPanel_scrollBar_adjustmentAdapter implements java.awt.event.AdjustmentListener {
+    LineGraphPanel adaptee;
 
-    ScattergramPanel_scrollBar_adjustmentAdapter(ScattergramPanel adaptee) {
+    LineGraphPanel_scrollBar_adjustmentAdapter(LineGraphPanel adaptee) {
         this.adaptee = adaptee;
     }
 
@@ -327,10 +327,10 @@ class ScattergramPanel_scrollBar_adjustmentAdapter implements java.awt.event.Adj
     }
 }
 
-class ScattergramPanel_this_mouseMotionAdapter extends java.awt.event.MouseMotionAdapter {
-    ScattergramPanel adaptee;
+class LineGraphPanel_this_mouseMotionAdapter extends java.awt.event.MouseMotionAdapter {
+    LineGraphPanel adaptee;
 
-    ScattergramPanel_this_mouseMotionAdapter(ScattergramPanel adaptee) {
+    LineGraphPanel_this_mouseMotionAdapter(LineGraphPanel adaptee) {
         this.adaptee = adaptee;
     }
 
@@ -339,10 +339,10 @@ class ScattergramPanel_this_mouseMotionAdapter extends java.awt.event.MouseMotio
     }
 }
 
-class ScattergramPanel_this_mouseAdapter extends java.awt.event.MouseAdapter {
-    ScattergramPanel adaptee;
+class LineGraphPanel_this_mouseAdapter extends java.awt.event.MouseAdapter {
+    LineGraphPanel adaptee;
 
-    ScattergramPanel_this_mouseAdapter(ScattergramPanel adaptee) {
+    LineGraphPanel_this_mouseAdapter(LineGraphPanel adaptee) {
         this.adaptee = adaptee;
     }
 

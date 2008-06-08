@@ -1,7 +1,7 @@
 package samurai.gc;
 
 import samurai.util.GUIResourceBundle;
-import samurai.util.ScattergramDataSourceParser;
+import samurai.util.LineGraphDataSourceParser;
 
 /**
  * <p>Title: Samurai</p>
@@ -15,7 +15,7 @@ import samurai.util.ScattergramDataSourceParser;
  * @author Yusuke Yamamoto
  * @version 2.0.5
  */
-public class BEAGCParser implements ScattergramDataSourceParser {
+public class BEAGCParser implements LineGraphDataSourceParser {
     public BEAGCParser() {
     }
 
@@ -35,7 +35,7 @@ public class BEAGCParser implements ScattergramDataSourceParser {
      * @param line String
      * @return boolean
      */
-    public boolean parse(String line, ScattergramRenderer renderer) {
+    public boolean parse(String line, LineGraphRenderer renderer) {
         if (line.startsWith("[memory ] ")) {
             try {
                 if (!labelSet) {

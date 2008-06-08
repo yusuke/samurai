@@ -20,7 +20,7 @@ import java.io.File;
 
 public class GraphPanel extends LogRenderer implements ClipBoardOperationListener {
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    private ScattergramPanel scattergramPanel = new ScattergramPanel() {
+    private LineGraphPanel lineGraphPanel = new LineGraphPanel() {
         public void setLabels(String[] labels) {
             super.setLabels(labels);
             if (isCSV) {
@@ -42,11 +42,11 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
 
     public GraphPanel(SamuraiPanel samuraiPanel, Context context) {
         super(true, samuraiPanel);
-        context.getConfig().apply(scattergramPanel.plotSetting);
-        resources.inject(scattergramPanel.plotSetting);
-        context.getConfig().applyLocation("PlotSettingDialog.location", scattergramPanel.plotSetting);
+        context.getConfig().apply(lineGraphPanel.plotSetting);
+        resources.inject(lineGraphPanel.plotSetting);
+        context.getConfig().applyLocation("PlotSettingDialog.location", lineGraphPanel.plotSetting);
         this.setLayout(new BorderLayout());
-        this.add(scattergramPanel, BorderLayout.CENTER);
+        this.add(lineGraphPanel, BorderLayout.CENTER);
     }
 
     private boolean isCSV = false;
@@ -56,9 +56,9 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
     public void onLine(File file, String line, long filePointer) {
         super.onLine(file, line, filePointer);
         if (isCSV) {
-            csvParser.parse(line, scattergramPanel);
+            csvParser.parse(line, lineGraphPanel);
         } else {
-            gcParser.parse(line, scattergramPanel);
+            gcParser.parse(line, lineGraphPanel);
         }
     }
 
@@ -71,7 +71,7 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
             isCSV = false;
             gcParser = new GCParser();
         }
-        scattergramPanel.adjustScrollBar();
+        lineGraphPanel.adjustScrollBar();
     }
 
     public void cut() {
@@ -79,7 +79,7 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
     }
 
     public void copy() {
-        this.scattergramPanel.copy();
+        this.lineGraphPanel.copy();
     }
 
     public void paste() {
