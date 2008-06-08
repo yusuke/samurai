@@ -18,6 +18,7 @@ import samurai.util.LineGraphDataSourceParser;
 public class IBMGCParser implements LineGraphDataSourceParser {
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private boolean labelSet = false;
+    private LineGraph lineGraph;
     private double memoryMax = 0;
     private double currentMemoryMax = 0;
     private double memoryFreed = 0;
@@ -33,7 +34,7 @@ public class IBMGCParser implements LineGraphDataSourceParser {
         try {
             if (line.startsWith("  <GC(") && -1 != (freedIndex = line.indexOf("): freed"))) {
                 if (!labelSet) {
-                    renderer.setLabels(new String[]{resources.getMessage("GraphPanel.time") + "(ms)",
+                    lineGraph = renderer.addLineGraph(new String[]{resources.getMessage("GraphPanel.time") + "(ms)",
                             resources.getMessage("GraphPanel.memoryFreed"),
                             resources.getMessage("GraphPanel.memoryAfterGCbytes")});
                     labelSet = true;
@@ -42,13 +43,13 @@ public class IBMGCParser implements LineGraphDataSourceParser {
                     currentMemoryMax = Double.parseDouble(line.substring(line.lastIndexOf("/") + 1, line.lastIndexOf(")")));
                     if (memoryMax < currentMemoryMax) {
                         memoryMax = currentMemoryMax;
-                        renderer.setMaxAt(1, memoryMax);
-                        renderer.setMaxAt(2, memoryMax);
+                        lineGraph.setMaxAt(1, memoryMax);
+                        lineGraph.setMaxAt(2, memoryMax);
                     }
                     memoryFreed = Double.parseDouble(line.substring(freedIndex + 9, line.indexOf(" byte")));
                     memoryAfter = Double.parseDouble(line.substring(line.lastIndexOf("(") + 1, line.lastIndexOf("/")));
                     time = Double.parseDouble(line.substring(line.lastIndexOf("in ") + 3, line.lastIndexOf(" ms")));
-                    renderer.addValues(new double[]{time, memoryFreed, memoryAfter});
+                    lineGraph.addValues(new double[]{time, memoryFreed, memoryAfter});
                     return true;
                 } catch (NumberFormatException wasNotGC) {
 //         wasNotGC.printStackTrace();

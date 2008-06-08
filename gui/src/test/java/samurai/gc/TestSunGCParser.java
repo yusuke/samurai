@@ -4,7 +4,7 @@ import junit.framework.TestCase;
 
 import java.awt.Color;
 
-public class TestSunGCParser extends TestCase implements ScattergramRenderer {
+public class TestSunGCParser extends TestCase implements LineGraph,LineGraphRenderer {
 
     protected void setUp() throws Exception {
         super.setUp();
@@ -19,6 +19,29 @@ public class TestSunGCParser extends TestCase implements ScattergramRenderer {
 
     double[] expected;
 
+    public LineGraph addLineGraph(String labels[]){
+        this.setLabels(labels);
+        return this;
+    }
+
+    public void addValues(double[] values) {
+        assertEquals(expected.length, values.length);
+        for (int i = 0; i < expected.length; i++) {
+            assertEquals(expected[i], values[i]);
+        }
+        count++;
+    }
+
+    public void setColorAt(int index, Color color) {
+
+    }
+
+    public void setLabels(String[] labels) {
+    }
+
+    public void setMaxAt(int index, double max) {
+
+    }
 
     public void testStandardVerbosegc() throws Exception {
         SunGCParser parser = new SunGCParser();
@@ -66,23 +89,5 @@ public class TestSunGCParser extends TestCase implements ScattergramRenderer {
         assertEquals(3, count);
     }
 
-    public void addValues(double[] values) {
-        assertEquals(expected.length, values.length);
-        for (int i = 0; i < expected.length; i++) {
-            assertEquals(expected[i], values[i]);
-        }
-        count++;
-    }
-
-    public void setColorAt(int index, Color color) {
-
-    }
-
-    public void setLabels(String[] labels) {
-    }
-
-    public void setMaxAt(int index, double max) {
-
-    }
 
 }

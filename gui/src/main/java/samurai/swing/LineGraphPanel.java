@@ -1,5 +1,6 @@
 package samurai.swing;
 
+import samurai.gc.LineGraph;
 import samurai.gc.LineGraphRenderer;
 
 import javax.swing.ImageIcon;
@@ -32,7 +33,7 @@ import java.text.DecimalFormat;
  * @version 2.0.5
  */
 
-public class LineGraphPanel extends JPanel implements ClipBoardOperationListener, LineGraphRenderer {
+public class LineGraphPanel extends JPanel implements ClipBoardOperationListener, LineGraphRenderer ,LineGraph{
     DecimalFormat format = new DecimalFormat("####0.0#############################");
     private Color background = Color.BLACK;
     private Color gridColor = new Color(0, 70, 0);
@@ -68,6 +69,10 @@ public class LineGraphPanel extends JPanel implements ClipBoardOperationListener
         this.add(panel, BorderLayout.CENTER);
         scrollBar.addAdjustmentListener(new LineGraphPanel_scrollBar_adjustmentAdapter(this));
         adjustScrollBar();
+    }
+    public LineGraph addLineGraph(String[] labels){
+        this.setLabels(labels);
+        return this;
     }
 
     public void setLabels(String[] labels) {

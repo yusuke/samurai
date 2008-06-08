@@ -20,7 +20,7 @@ public class BEAGCParser implements LineGraphDataSourceParser {
     }
 
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    private boolean labelSet = false;
+    private LineGraph lineGraph = null;
     private double memoryMax = 0;
     private double currentMemoryMax = 0;
     private double time = 0;
@@ -38,11 +38,10 @@ public class BEAGCParser implements LineGraphDataSourceParser {
     public boolean parse(String line, LineGraphRenderer renderer) {
         if (line.startsWith("[memory ] ")) {
             try {
-                if (!labelSet) {
-                    renderer.setLabels(new String[]{resources.getMessage("GraphPanel.time") + "(ms)",
+                if (null == lineGraph) {
+                    lineGraph = renderer.addLineGraph(new String[]{resources.getMessage("GraphPanel.time") + "(ms)",
                             resources.getMessage("GraphPanel.memoryBeforeGC"),
                             resources.getMessage("GraphPanel.memoryAfterGC")});
-                    labelSet = true;
                 }
 //[memory ] 14.210: Nursery GC 34347K->26260K (141312K), 197.487 ms
 //[memory ] 1437.757-1445.118: GC 125428K->43203K (141312K), 7.361 s (6388.739 ms)
@@ -58,15 +57,15 @@ public class BEAGCParser implements LineGraphDataSourceParser {
                             line.indexOf("K)")));
                     if (memoryMax < currentMemoryMax) {
                         memoryMax = currentMemoryMax;
-                        renderer.setMaxAt(1, memoryMax);
-                        renderer.setMaxAt(2, memoryMax);
+                        lineGraph.setMaxAt(1, memoryMax);
+                        lineGraph.setMaxAt(2, memoryMax);
                     }
                     time = Double.parseDouble(line.substring(timeStart, line.lastIndexOf(" ms")));
                     memoryBefore = Double.parseDouble(line.substring(line.indexOf("GC ") + 3,
                             line.indexOf("K->")));
                     memoryAfter = Double.parseDouble(line.substring(line.indexOf("->") + 2,
                             line.indexOf("K (")));
-                    renderer.addValues(new double[]{time, memoryBefore, memoryAfter});
+                    lineGraph.addValues(new double[]{time, memoryBefore, memoryAfter});
                     return true;
                 } catch (NumberFormatException wasNotGC) {
 //         wasNotGC.printStackTrace();

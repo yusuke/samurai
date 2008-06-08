@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
  */
 public class SunGCParser implements LineGraphDataSourceParser {
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    private boolean labelSet = false;
+    private LineGraph lineGraph = null;
     private double memoryMax = 0;
     private boolean unloadingClasses = false;
     private Pattern heapSizePtn = Pattern.compile("(?<=K\\()[0-9]*");
@@ -39,11 +39,10 @@ public class SunGCParser implements LineGraphDataSourceParser {
     public boolean parse(String line, LineGraphRenderer renderer) {
         try {
             if (-1 != line.indexOf("[GC ") || -1 != line.indexOf("[Full GC ") ||-1 != line.indexOf("[ParNew ") ||  unloadingClasses || -1 != line.indexOf("[Unloading class")) {
-                if (!labelSet) {
-                    renderer.setLabels(new String[]{resources.getMessage("GraphPanel.time") + "(secs)",
+                if (null == lineGraph) {
+                    lineGraph = renderer.addLineGraph(new String[]{resources.getMessage("GraphPanel.time") + "(secs)",
                             resources.getMessage("GraphPanel.memoryBeforeGC"),
                             resources.getMessage("GraphPanel.memoryAfterGC")});
-                    labelSet = true;
                 }
 
                 unloadingClasses = -1 != line.indexOf("[Unloading class");
@@ -54,14 +53,14 @@ public class SunGCParser implements LineGraphDataSourceParser {
                         double currentMemoryMax = extract(line,heapSizePtn);
                         if (memoryMax < currentMemoryMax) {
                             memoryMax = currentMemoryMax;
-                            renderer.setMaxAt(1, memoryMax);
-                            renderer.setMaxAt(2, memoryMax);
+                            lineGraph.setMaxAt(1, memoryMax);
+                            lineGraph.setMaxAt(2, memoryMax);
                         }
 
                         double timeSpent = extract(line,timeSpentPtn);
                         double memoryBefore = extract(line,memoryBeforePtn);
                         double memoryAfter = extract(line,memoryAfterPtn);
-                        renderer.addValues(new double[]{timeSpent, memoryBefore, memoryAfter});
+                        lineGraph.addValues(new double[]{timeSpent, memoryBefore, memoryAfter});
                         return true;
                     } catch (NumberFormatException ignore) {
                     }

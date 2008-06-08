@@ -1,6 +1,7 @@
 package samurai.util;
 
-import samurai.gc.ScattergramRenderer;
+import samurai.gc.LineGraph;
+import samurai.gc.LineGraphRenderer;
 
 /**
  * <p>Title: Samurai</p>i
@@ -14,18 +15,17 @@ import samurai.gc.ScattergramRenderer;
  * @author Yusuke Yamamoto
  * @version 2.0.5
  */
-public class CSVParser implements ScattergramDataSourceParser {
+public class CSVParser implements LineGraphDataSourceParser {
     public CSVParser() {
     }
 
     private String[] labels = null;
-    private boolean labelSet = false;
+    private LineGraph lineGraph = null;
 
-    public boolean parse(String line, ScattergramRenderer renderer) {
-        if (!labelSet) {
+    public boolean parse(String line, LineGraphRenderer renderer) {
+        if (null == lineGraph) {
             labels = line.split(",");
-            renderer.setLabels(labels);
-            labelSet = true;
+            lineGraph =renderer.addLineGraph(labels);
         } else {
             String[] splitted = line.split(",");
             double[] datas = new double[labels.length];
@@ -38,7 +38,7 @@ public class CSVParser implements ScattergramDataSourceParser {
                     datas[i] = 0d;
                 }
             }
-            renderer.addValues(datas);
+            lineGraph.addValues(datas);
         }
         return true;
     }

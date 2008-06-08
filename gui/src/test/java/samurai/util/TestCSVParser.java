@@ -1,7 +1,8 @@
 package samurai.util;
 
 import junit.framework.TestCase;
-import samurai.gc.ScattergramRenderer;
+import samurai.gc.LineGraphRenderer;
+import samurai.gc.LineGraph;
 
 import java.awt.Color;
 
@@ -17,13 +18,7 @@ import java.awt.Color;
  * @author Yusuke Yamamoto
  * @version 2.0.5
  */
-public class TestCSVParser extends TestCase implements ScattergramRenderer {
-    public TestCSVParser() {
-    }
-
-    public static void main(String[] args) {
-        junit.textui.TestRunner.run(TestCSVParser.class);
-    }
+public class TestCSVParser extends TestCase  implements LineGraph,LineGraphRenderer {
 
     protected void setUp() throws Exception {
         super.setUp();
@@ -35,28 +30,19 @@ public class TestCSVParser extends TestCase implements ScattergramRenderer {
     }
 
     private int count = 0;
-    private int passed = 0;
 
-    public void testLogContinued() throws Exception {
-        CSVParser parser = new CSVParser();
-        parser.parse("column1,column2,column3", this);
-        parser.parse("1,2,3", this);
-        parser.parse("3,3,1", this);
-        parser.parse("7,5", this);
-        parser.parse("9,6,79,6,79,6,7", this);
-        parser.parse("11,7,9", this);
-        assertEquals(7, passed);
+    double[] expected;
+
+    public LineGraph addLineGraph(String labels[]){
+        this.setLabels(labels);
+        return this;
     }
 
     public void addValues(double[] values) {
-        if (count == 0) {
-            assertEquals(1d, values[0]);
-            assertEquals(2d, values[1]);
-            assertEquals(3d, values[2]);
-            passed++;
+        assertEquals(expected.length, values.length);
+        for (int i = 0; i < expected.length; i++) {
+            assertEquals(expected[i], values[i]);
         }
-        assertEquals(3, values.length);
-        passed++;
         count++;
     }
 
@@ -65,15 +51,26 @@ public class TestCSVParser extends TestCase implements ScattergramRenderer {
     }
 
     public void setLabels(String[] labels) {
-
-        assertEquals("column1", labels[0]);
-        assertEquals("column2", labels[1]);
-        assertEquals("column3", labels[2]);
-        assertEquals(0, passed);
-        passed++;
     }
 
     public void setMaxAt(int index, double max) {
 
+    }
+
+    public void testCSVParser() throws Exception {
+        CSVParser parser = new CSVParser();
+        parser.parse("column1,column2,column3", this);
+
+        expected = new double[]{1d, 2d, 3d};
+        parser.parse("1,2,3", this);
+        expected = new double[]{3d, 3d, 1d};
+        parser.parse("3,3,1", this);
+        expected = new double[]{7d, 5d, 0d};
+        parser.parse("7,5", this);
+        expected = new double[]{9d, 6d, 79d};
+        parser.parse("9,6,79,6,79,6,7", this);
+        expected = new double[]{11d, 7d, 9d};
+        parser.parse("11,7,9", this);
+        assertEquals(5, count);
     }
 }

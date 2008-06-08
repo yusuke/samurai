@@ -1,6 +1,6 @@
 package samurai.util;
 
-import samurai.gc.ScattergramRenderer;
+import samurai.gc.LineGraphRenderer;
 
 /**
  * <p>Title: Samurai</p>
@@ -14,6 +14,6 @@ import samurai.gc.ScattergramRenderer;
  * @author Yusuke Yamamoto
  * @version 2.0.5
  */
-public interface ScattergramDataSourceParser {
-    boolean parse(String line, ScattergramRenderer renderer);
+public interface LineGraphDataSourceParser {
+    boolean parse(String line, LineGraphRenderer renderer);
 }
