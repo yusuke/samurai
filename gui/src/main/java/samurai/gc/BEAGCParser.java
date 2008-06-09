@@ -3,6 +3,8 @@ package samurai.gc;
 import samurai.util.GUIResourceBundle;
 import samurai.util.LineGraphDataSourceParser;
 
+import java.awt.Color;
+
 /**
  * <p>Title: Samurai</p>
  * <p/>
@@ -39,9 +41,12 @@ public class BEAGCParser implements LineGraphDataSourceParser {
         if (line.startsWith("[memory ] ")) {
             try {
                 if (null == lineGraph) {
-                    lineGraph = renderer.addLineGraph(new String[]{resources.getMessage("GraphPanel.time") + "(ms)",
+                    lineGraph = renderer.addLineGraph(resources.getMessage("GraphPanel.memory"),new String[]{resources.getMessage("GraphPanel.time") + "(ms)",
                             resources.getMessage("GraphPanel.memoryBeforeGC"),
                             resources.getMessage("GraphPanel.memoryAfterGC")});
+                    lineGraph.setColorAt(0, Color.GRAY);
+                    lineGraph.setColorAt(1, Color.RED);
+                    lineGraph.setColorAt(2, Color.YELLOW);
                 }
 //[memory ] 14.210: Nursery GC 34347K->26260K (141312K), 197.487 ms
 //[memory ] 1437.757-1445.118: GC 125428K->43203K (141312K), 7.361 s (6388.739 ms)

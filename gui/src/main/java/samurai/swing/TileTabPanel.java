@@ -458,6 +458,10 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         menuHorizontal.setEnabled(layout != TILE_HORIZONTAL);
     }
 
+    public void setDividerSize(int size){
+        this.tilePanel.setDeviderSize(size);
+    }
+
     public int indexAtLocation(int x, int y) {
         if (layout == TAB) {
             return tab.indexAtLocation(x, y);

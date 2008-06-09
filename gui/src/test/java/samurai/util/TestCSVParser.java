@@ -20,8 +20,10 @@ import java.awt.Color;
  */
 public class TestCSVParser extends TestCase  implements LineGraph,LineGraphRenderer {
 
+
     protected void setUp() throws Exception {
         super.setUp();
+        columnCount = 0;
         count = 0;
     }
 
@@ -32,18 +34,25 @@ public class TestCSVParser extends TestCase  implements LineGraph,LineGraphRende
     private int count = 0;
 
     double[] expected;
+    private int columnCount = 0;
 
-    public LineGraph addLineGraph(String labels[]){
+    public LineGraph addLineGraph(String line, String labels[]) {
         this.setLabels(labels);
+        columnCount+=labels.length;
         return this;
     }
 
+    private int index = 0;
+
     public void addValues(double[] values) {
-        assertEquals(expected.length, values.length);
-        for (int i = 0; i < expected.length; i++) {
-            assertEquals(expected[i], values[i]);
+        for (int i = 0; i < values.length; i++) {
+            assertEquals(expected[i + index], values[i]);
         }
-        count++;
+        index+=values.length;
+        if(index == columnCount){
+            index = 0;
+            count++;
+        }
     }
 
     public void setColorAt(int index, Color color) {
@@ -60,7 +69,6 @@ public class TestCSVParser extends TestCase  implements LineGraph,LineGraphRende
     public void testCSVParser() throws Exception {
         CSVParser parser = new CSVParser();
         parser.parse("column1,column2,column3", this);
-
         expected = new double[]{1d, 2d, 3d};
         parser.parse("1,2,3", this);
         expected = new double[]{3d, 3d, 1d};

@@ -1,12 +1,15 @@
 package samurai.swing;
 
 import samurai.gc.GCParser;
+import samurai.gc.LineGraph;
+import samurai.gc.LineGraphRenderer;
 import samurai.util.CSVParser;
 import samurai.util.GUIResourceBundle;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>Title: Samurai</p>
@@ -18,35 +21,37 @@ import java.io.File;
  * @version 2.0.5
  */
 
-public class GraphPanel extends LogRenderer implements ClipBoardOperationListener {
+public class GraphPanel extends LogRenderer implements ClipBoardOperationListener , LineGraphRenderer{
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    private LineGraphPanel lineGraphPanel = new LineGraphPanel() {
-        public void setLabels(String[] labels) {
-            super.setLabels(labels);
-            if (isCSV) {
-                showMe(resources.getMessage("GraphPanel.csv"));
-            } else {
-                showMe(resources.getMessage("GraphPanel.memory"));
-            }
-            if (!isCSV) {
-                setColorAt(0, Color.GRAY);
-                setColorAt(1, Color.RED);
-                setColorAt(2, Color.YELLOW);
-            }
-        }
+    List<LineGraphPanel> graphs = new ArrayList<LineGraphPanel>(1);
+    private Context context;
 
-        public void setMaxAt(int index, double value) {
-            super.setMaxAt(index, value);
-        }
-    };
+    private TileTabPanel<LineGraphPanel> tileTabPanel = new TileTabPanel<LineGraphPanel>(true);
 
     public GraphPanel(SamuraiPanel samuraiPanel, Context context) {
         super(true, samuraiPanel);
+        this.context = context;
+        this.setLayout(new BorderLayout());
+        tileTabPanel.setOrientation(TileTabPanel.TILE_HORIZONTAL);
+        tileTabPanel.setDividerSize(2);
+//        tileTabPanel.setOrientation(TileTabPanel.TILE_VERTICAL);
+        this.add(tileTabPanel, BorderLayout.CENTER);
+    }
+
+    public LineGraph addLineGraph(String title,String[] labels){
+        LineGraphPanel lineGraphPanel = new LineGraphPanel();
+        lineGraphPanel.setLabels(labels);
+        context.getConfig().applyLocation("PlotSettingDialog.location", lineGraphPanel.plotSetting);
         context.getConfig().apply(lineGraphPanel.plotSetting);
         resources.inject(lineGraphPanel.plotSetting);
-        context.getConfig().applyLocation("PlotSettingDialog.location", lineGraphPanel.plotSetting);
-        this.setLayout(new BorderLayout());
-        this.add(lineGraphPanel, BorderLayout.CENTER);
+        tileTabPanel.addComponent(title,lineGraphPanel);
+        if(isCSV){
+            showMe(resources.getMessage("GraphPanel.csv"));
+        }else{
+            showMe(resources.getMessage("GraphPanel.memory"));
+        }
+
+        return lineGraphPanel;
     }
 
     private boolean isCSV = false;
@@ -56,9 +61,9 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
     public void onLine(File file, String line, long filePointer) {
         super.onLine(file, line, filePointer);
         if (isCSV) {
-            csvParser.parse(line, lineGraphPanel);
+            csvParser.parse(line, this);
         } else {
-            gcParser.parse(line, lineGraphPanel);
+            gcParser.parse(line, this);
         }
     }
 
@@ -71,7 +76,9 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
             isCSV = false;
             gcParser = new GCParser();
         }
-        lineGraphPanel.adjustScrollBar();
+        for (LineGraphPanel graphPanel : graphs) {
+            graphPanel.adjustScrollBar();
+        }
     }
 
     public void cut() {
@@ -79,7 +86,7 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
     }
 
     public void copy() {
-        this.lineGraphPanel.copy();
+        tileTabPanel.getSelectedComponent().copy();
     }
 
     public void paste() {

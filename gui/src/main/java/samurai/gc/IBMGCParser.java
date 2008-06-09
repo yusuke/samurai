@@ -3,6 +3,8 @@ package samurai.gc;
 import samurai.util.GUIResourceBundle;
 import samurai.util.LineGraphDataSourceParser;
 
+import java.awt.Color;
+
 /**
  * <p>Title: Samurai</p>
  * <p/>
@@ -34,10 +36,13 @@ public class IBMGCParser implements LineGraphDataSourceParser {
         try {
             if (line.startsWith("  <GC(") && -1 != (freedIndex = line.indexOf("): freed"))) {
                 if (!labelSet) {
-                    lineGraph = renderer.addLineGraph(new String[]{resources.getMessage("GraphPanel.time") + "(ms)",
-                            resources.getMessage("GraphPanel.memoryFreed"),
-                            resources.getMessage("GraphPanel.memoryAfterGCbytes")});
+                    lineGraph = renderer.addLineGraph(resources.getMessage("GraphPanel.memory"),new String[]{resources.getMessage("GraphPanel.time") + "(ms)",
+                            resources.getMessage("GraphPanel.heapFreed"),
+                            resources.getMessage("GraphPanel.heapAfterGCbytes")});
                     labelSet = true;
+                    lineGraph.setColorAt(0, Color.GRAY);
+                    lineGraph.setColorAt(1, Color.RED);
+                    lineGraph.setColorAt(2, Color.YELLOW);
                 }
                 try {
                     currentMemoryMax = Double.parseDouble(line.substring(line.lastIndexOf("/") + 1, line.lastIndexOf(")")));

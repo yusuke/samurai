@@ -3,6 +3,9 @@ package samurai.util;
 import samurai.gc.LineGraph;
 import samurai.gc.LineGraphRenderer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * <p>Title: Samurai</p>i
  * <p/>
@@ -20,12 +23,15 @@ public class CSVParser implements LineGraphDataSourceParser {
     }
 
     private String[] labels = null;
-    private LineGraph lineGraph = null;
+    private List<LineGraph> lineGraphs = null;
 
     public boolean parse(String line, LineGraphRenderer renderer) {
-        if (null == lineGraph) {
+        if (null == lineGraphs) {
             labels = line.split(",");
-            lineGraph =renderer.addLineGraph(labels);
+            lineGraphs = new ArrayList<LineGraph>(labels.length);
+            for(String label:labels){
+                lineGraphs.add(renderer.addLineGraph(label, new String[]{label}));
+            }
         } else {
             String[] splitted = line.split(",");
             double[] datas = new double[labels.length];
@@ -38,7 +44,9 @@ public class CSVParser implements LineGraphDataSourceParser {
                     datas[i] = 0d;
                 }
             }
-            lineGraph.addValues(datas);
+            for(int i=0;i<labels.length;i++){
+                lineGraphs.get(i).addValues(new double[]{datas[i]});
+            }
         }
         return true;
     }

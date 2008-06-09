@@ -69,7 +69,7 @@ import java.util.List;
     /**
      * flag for tiling orientation
      */
-    private boolean tileHorizontal = true;
+    private boolean tileHorizontal = false;
 
     private int selectedIndex = 0;
 
@@ -206,6 +206,11 @@ import java.util.List;
         return -1;
     }
 
+    private int dividerSize = 3;
+    public void setDeviderSize(int size){
+        this.dividerSize = size;
+    }
+
     public void addComponent(String title, ImageIcon icon, JComponent component) {
         resizing = true;
         ComponentInfo<JComponent> cf = new ComponentInfo<JComponent>(component, title, icon);
@@ -229,6 +234,7 @@ import java.util.List;
                 JComponent second = tiles.get(size - 1);
                 splitPane = new JSplitPane(tileHorizontal ? JSplitPane.HORIZONTAL_SPLIT :
                         JSplitPane.VERTICAL_SPLIT, first, second);
+                splitPane.setDividerSize(dividerSize);
                 splitPane.setBorder(null);
                 splitPane.setContinuousLayout(true);
                 splitPanes.add(splitPane);

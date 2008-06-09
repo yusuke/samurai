@@ -31,7 +31,7 @@ public class TestBEAGCParser extends TestCase implements LineGraph,LineGraphRend
 
     double[] expected;
 
-    public LineGraph addLineGraph(String labels[]){
+    public LineGraph addLineGraph(String line, String labels[]) {
         this.setLabels(labels);
         return this;
     }
