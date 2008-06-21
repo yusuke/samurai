@@ -100,6 +100,32 @@ public class TestSunGCParser extends TestCase implements LineGraph,LineGraphRend
         assertTrue(parser.parse("42.062: [GC 226778K->33381K(1022400K), 0.3251635 secs]", this));
         assertEquals(3, count);
     }
+    public void testParallelGCDetails() throws Exception {
+        SunGCParser parser = new SunGCParser();
+        expected.add(new double[]{0.0210314d, 25019d, 4285d});
+        expectedMax.add(32384d);
+        expectedMax.add(32384d);
+        assertTrue(parser.parse("[GC [PSYoungGen: 25019K->4285K(32384K)] 49755K->29433K(62656K), 0.0210314 secs]", this));
+        expected.add(new double[]{0.0188023d, 28733d, 1128d});
+        assertTrue(parser.parse("[GC [PSYoungGen: 28733K->1128K(32000K)] 53881K->29949K(62272K), 0.0188023 secs]", this));
+        expected.add(new double[]{0.2284255d, 1128d, 0d});
+        expected.add(new double[]{0.2284255d, 28821d, 21467d});
+        expected.add(new double[]{11772d, 11755d});
+        expectedMax.add(66176d);
+        expectedMax.add(66176d);
+        expectedMax.add(23552d);
+        expectedMax.add(23552d);
+        assertTrue(parser.parse("[Full GC [PSYoungGen: 1128K->0K(32000K)] [ParOldGen: 28821K->21467K(66176K)] 29949K->21467K(98176K) [PSPermGen: 11772K->11755K(23552K)], 0.2284255 secs]", this));
+        expected.add(new double[]{.3924338d, 7868d, 0d});
+        expected.add(new double[]{.3924338d, 65738d, 36992d});
+        expected.add(new double[]{11759d, 11758d});
+        expectedMax.add(99072d);
+        expectedMax.add(99072d);
+        expectedMax.add(26624d);
+        expectedMax.add(26624d);
+        assertTrue(parser.parse("[Full GC [PSYoungGen: 7868K->0K(23488K)] [ParOldGen: 65738K->36992K(99072K)] 73606K->36992K(122560K) [PSPermGen: 11759K->11758K(26624K)], 0.3924338 secs]", this));
+        assertEquals(8, count);
+    }
 
 
     public void testPrintGCDetails() throws Exception {
@@ -128,13 +154,13 @@ public class TestSunGCParser extends TestCase implements LineGraph,LineGraphRend
         assertTrue(parser.parse("7.675: [Full GC 7.675: [CMS: 0K->4273K(786432K), 0.1872279 secs] 89008K->4273K(1048384K), [CMS Perm : 9997K->9986K(131072K)], 0.1936041 secs]", this));
         assertEquals(8, count);
 
-        expected.add(new double[]{0.0785944d, 209792d, 12709d});
+        expected.add(new double[]{0.0784815d, 209792d, 12709d});
         expectedMax.add(235968d);
         expectedMax.add(235968d);
         assertTrue(parser.parse("23.266: [GC 23.266: [ParNew: 209792K->12709K(235968K), 0.0784815 secs] 214067K->16985K(1022400K), 0.0785944 secs]", this));
         assertEquals(9, count);
 
-        expected.add(new double[]{0.1605807d, 222501d, 26176d});
+        expected.add(new double[]{0.1604727d, 222501d, 26176d});
         expectedMax.add(2359608d);
         expectedMax.add(2359608d);
         assertTrue(parser.parse("37.225: [GC 37.225: [ParNew: 222501K->26176K(2359608K), 0.1604727 secs] 226777K->33265K(1022400K), 0.1605807 secs]", this));
