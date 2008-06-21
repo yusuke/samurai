@@ -88,6 +88,29 @@ public class TestSunGCParser extends TestCase implements LineGraph,LineGraphRend
         assertTrue(parser.parse("[ParNew 226778K->33381K(1022400K), 0.3251635 secs]", this));
         assertEquals(2, count);
     }
+
+    public void testCMSWithPrintGCTimeStamps() throws Exception {
+        SunGCParser parser = new SunGCParser();
+        expected.add(new double[]{0.1580060d, 0d, 6086d});
+        expectedMax.add(3145728d);
+        expectedMax.add(3145728d);
+        expected.add(new double[]{13871d,13854d});
+        expectedMax.add(131072d);
+        expectedMax.add(131072d);
+        assertTrue(parser.parse("3.202: [Full GC 3.202: [CMS: 0K->6086K(3145728K), 0.1578300 secs] 301994K->6086K(5976896K), [CMS Perm : 13871K->13854K(131072K)], 0.1580060 secs]", this));
+        assertEquals(2, count);
+
+        expected.add(new double[]{0.2179840d, 2516608d, 104213d});
+        expectedMax.add(2831168d);
+        expectedMax.add(2831168d);
+        assertTrue(parser.parse("34.966: [GC 34.966: [ParNew: 2516608K->104213K(2831168K), 0.2179840 secs] 2522694K->110300K(5976896K), 0.2181880 secs]", this));
+        assertEquals(3, count);
+
+        expected.add(new double[]{0.2045160d, 2620821d, 129482d});
+        assertTrue(parser.parse("374.638: [GC 374.638: [ParNew: 2620821K->129482K(2831168K), 0.2045160 secs] 2626908K->135568K(5976896K), 0.2046990 secs]", this));
+        assertEquals(4, count);
+    }
+
     public void testPrintGCTimeStamps() throws Exception {
         SunGCParser parser = new SunGCParser();
         expected.add(new double[]{.1489631d, 79733d, 4275d});

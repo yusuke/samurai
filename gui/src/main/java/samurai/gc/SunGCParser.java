@@ -48,7 +48,7 @@ public class SunGCParser implements LineGraphDataSourceParser {
 [Full GC 61365K->51414K(129664K), 1.0320474 secs]
     */
     private Pattern verboseGCPtn = Pattern.compile("\\[(ParNew|GC|Full GC) [0-9]+K->[0-9]+K\\([0-9]+K\\), [0-9\\.]+ secs\\]");
-    private Pattern printGCDetailsPtn = Pattern.compile("\\[(GC|Full GC) \\[");
+    private Pattern printGCDetailsPtn = Pattern.compile("\\[(GC|Full GC) ([0-9\\.]+: )?\\[");
     /*
     a pattern catches new area gc log
 [ParNew 226778K->33381K(1022400K), 0.3251635 secs]
@@ -157,8 +157,14 @@ public class SunGCParser implements LineGraphDataSourceParser {
                 double currentSize = extract(found, heapSizePtn);
                 if (maxSize < currentSize) {
                     maxSize = currentSize;
-                    lineGraph.setMaxAt(1, maxSize);
-                    lineGraph.setMaxAt(2, maxSize);
+                    if(pattern == permGCPtn){
+                        lineGraph.setMaxAt(0, maxSize);
+                        lineGraph.setMaxAt(1, maxSize);
+
+                    }else{
+                        lineGraph.setMaxAt(1, maxSize);
+                        lineGraph.setMaxAt(2, maxSize);
+                    }
                 }
                 double heapBeforeGC = extract(found, heapBeforeGCPtn);
                 double heapAfterGC = extract(found, heapAfterGCPtn);
