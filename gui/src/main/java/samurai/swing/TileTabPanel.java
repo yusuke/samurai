@@ -402,6 +402,11 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     }
 
     public void setOrientation(int orientation) {
+        if (orientation == TILE_HORIZONTAL) {
+            tilePanel.setOrientation(TilePanel.HORIZONTAL);
+        } else {
+            tilePanel.setOrientation(TilePanel.VERTICAL);
+        }
         this.currentSelectedIndex = getSelectedIndex();
         if (this.layout != orientation) {
             switch (this.components.size()) {
@@ -436,11 +441,11 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
                             }
                             tilePanel.setSelectedIndex(this.currentSelectedIndex);
                         }
-                        if (orientation == TILE_HORIZONTAL) {
-                            tilePanel.setOrientation(TilePanel.TILE_HORIZONTAL);
-                        } else {
-                            tilePanel.setOrientation(TilePanel.TILE_VERTICAL);
-                        }
+//                        if (orientation == TILE_HORIZONTAL) {
+//                            tilePanel.setOrientation(TilePanel.HORIZONTAL);
+//                        } else {
+//                            tilePanel.setOrientation(TilePanel.VERTICAL);
+//                        }
                         validate();
                     }
             }
