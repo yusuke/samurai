@@ -32,9 +32,8 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
         super(true, samuraiPanel);
         this.context = context;
         this.setLayout(new BorderLayout());
-        tileTabPanel.setOrientation(TileTabPanel.TILE_HORIZONTAL);
-        tileTabPanel.setDividerSize(2);
-//        tileTabPanel.setOrientation(TileTabPanel.VERTICAL);
+        tileTabPanel.setOrientation(TileTabPanel.TILE_VERTICAL);
+        tileTabPanel.setDividerSize(0);
         this.add(tileTabPanel, BorderLayout.CENTER);
     }
 
@@ -76,9 +75,17 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
             isCSV = false;
             gcParser = new GCParser();
         }
-        for (LineGraphPanel graphPanel : graphs) {
-            graphPanel.adjustScrollBar();
-        }
+        invokeLater(new Runnable(){
+            public void run(){
+                while(tileTabPanel.getComponentSize() > 0){
+                    tileTabPanel.removeComponentAt(0);
+                }
+                for (LineGraphPanel graphPanel : graphs) {
+                    graphPanel.adjustScrollBar();
+                }
+
+            }
+        });
     }
 
     public void cut() {

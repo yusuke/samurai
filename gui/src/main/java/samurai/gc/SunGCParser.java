@@ -64,7 +64,7 @@ public class SunGCParser implements LineGraphDataSourceParser {
 [ParOldGen: 65738K->36992K(99072K)]
 [PSOldGen: 43812K->28039K(67968K)]
      */
-    private Pattern oldGCPtn = Pattern.compile("\\[(Tenured|CMS|ParOldGen|PSOldGen): [0-9]+K->[0-9]+K\\([0-9]+K\\)(, [0-9\\.]+ secs)?\\]");
+    private Pattern oldGCPtn = Pattern.compile("\\[(Tenured|CMS( \\(concurrent mode failure\\))?|ParOldGen|PSOldGen): [0-9]+K->[0-9]+K\\([0-9]+K\\)(, [0-9\\.]+ secs)?\\]");
 
     /*
     a pattern catches permanent area gc log

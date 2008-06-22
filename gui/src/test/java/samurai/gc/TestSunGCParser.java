@@ -109,6 +109,12 @@ public class TestSunGCParser extends TestCase implements LineGraph,LineGraphRend
         expected.add(new double[]{0.2045160d, 2620821d, 129482d});
         assertTrue(parser.parse("374.638: [GC 374.638: [ParNew: 2620821K->129482K(2831168K), 0.2045160 secs] 2626908K->135568K(5976896K), 0.2046990 secs]", this));
         assertEquals(4, count);
+
+        expected.add(new double[]{0.9489080d, 142151d, 182754d});
+        expected.add(new double[]{131071d,92812d});
+        expectedMax.add(3145728d);
+        assertTrue(parser.parse("12656.259: [Full GC 12656.259: [CMS (concurrent mode failure): 142151K->182754K(3145728K), 0.9486870 secs] 2099331K->182754K(5976896K), [CMS Perm : 131071K->92812K(131072K)], 0.9489080 secs]", this));
+
     }
 
     public void testPrintGCTimeStamps() throws Exception {
