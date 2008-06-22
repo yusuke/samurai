@@ -26,7 +26,6 @@ import java.util.List;
  * <p>Copyright: Copyright (c) Yusuke Yamamoto 2003-2006</p>
  * <p/>
  * <p> </p>
- * mou
  *
  * @author Yusuke Yamamoto
  * @version 2.0.5
@@ -90,22 +89,12 @@ import java.util.List;
 
         for (int i = 0; i < dividers.size(); i++) {
             JPanel divider = dividers.get(i);
-            divider.setMinimumSize(dividerSize);
-            divider.setMaximumSize(dividerSize);
-            divider.setPreferredSize(dividerSize);
-            GridBagConstraints dividerConstraint = new GridBagConstraints();
-            dividerConstraint.weightx = 0;
-            dividerConstraint.weighty = 0;
             if (horizontal) {
-                dividerConstraint.fill = GridBagConstraints.VERTICAL;
-                dividerConstraint.gridx = i * 2 + 1;
                 divider.setCursor(Cursor.getPredefinedCursor(Cursor.W_RESIZE_CURSOR));
             } else {
-                dividerConstraint.fill = GridBagConstraints.HORIZONTAL;
-                dividerConstraint.gridy = i * 2 + 1;
                 divider.setCursor(Cursor.getPredefinedCursor(Cursor.N_RESIZE_CURSOR));
             }
-            add(divider, dividerConstraint);
+            add(divider, getDividerConstraints(i*2+1));
         }
 
         validate();
@@ -211,28 +200,38 @@ import java.util.List;
 
     private List<GridBagConstraints> constraints = new ArrayList<GridBagConstraints>(3);
 
+    private GridBagConstraints getDividerConstraints(int grid){
+        GridBagConstraints dividerConstraint = new GridBagConstraints();
+        dividerConstraint.weightx = 0;
+        dividerConstraint.weighty = 0;
+        if(horizontal){
+            dividerConstraint.gridx = grid;
+            dividerConstraint.fill = GridBagConstraints.VERTICAL;
+        }else{
+            dividerConstraint.gridy = grid;
+            dividerConstraint.fill = GridBagConstraints.HORIZONTAL;
+        }
+        return dividerConstraint;
+    }
+
     public void addComponent(String title, ImageIcon icon, JComponent component) {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.BOTH;
         gbc.gridx = 0;
+        gbc.gridy = 0;
         gbc.weightx = 100;
         gbc.weighty = 1;
 
-        GridBagConstraints dividerConstraint = new GridBagConstraints();
-        dividerConstraint.weightx = 0;
-        dividerConstraint.weighty = 0;
-
         if (tiles.size() > 0) {
             JPanel divider = new JPanel();
+            dividers.add(divider);
+            divider.addMouseListener(dividerMouseListener);
+            divider.addMouseMotionListener(dividerMouseListener);
             divider.setMinimumSize(dividerSize);
             divider.setMaximumSize(dividerSize);
             divider.setPreferredSize(dividerSize);
-            divider.addMouseListener(dividerMouseListener);
-            divider.addMouseMotionListener(dividerMouseListener);
-            dividers.add(divider);
             if (horizontal) {
                 gbc.gridx = tiles.size() * 2;
-                dividerConstraint.gridx = gbc.gridx - 1;
                 divider.setCursor(Cursor.getPredefinedCursor(Cursor.W_RESIZE_CURSOR));
                 gbc.gridy = 0;
                 double sum = 0;
@@ -240,20 +239,17 @@ import java.util.List;
                     sum += constraint.weightx;
                 }
                 gbc.weightx = sum / constraints.size();
-                dividerConstraint.fill = GridBagConstraints.VERTICAL;
             } else {
                 gbc.gridx = 0;
                 gbc.gridy = tiles.size() * 2;
-                dividerConstraint.gridy = gbc.gridy - 1;
                 divider.setCursor(Cursor.getPredefinedCursor(Cursor.N_RESIZE_CURSOR));
                 double sum = 0;
                 for (GridBagConstraints constraint : constraints) {
                     sum += constraint.weighty;
                 }
                 gbc.weighty = sum / constraints.size();
-                dividerConstraint.fill = GridBagConstraints.HORIZONTAL;
             }
-            add(divider, dividerConstraint);
+            add(divider, getDividerConstraints(tiles.size() * 2 - 1));
         }
 
         Tile splittedPanel = new Tile(component, title, icon);
@@ -363,12 +359,28 @@ import java.util.List;
 
     public void removeTileAt(int index) {
         //remove the divider next to the specified component
-        if (index > 0) {
-            remove(dividers.remove(index - 1));
+        if (components.size() > 1) {
+            if(index == 0){
+                remove(dividers.remove(0));
+            }else{
+                remove(dividers.remove(index -1));
+            }
         }
         remove(tiles.remove(index));
         constraints.remove(index);
         components.remove(index);
+        for(int i=index;i<components.size();i++){
+            GridBagConstraints gbc = constraints.get(i);
+            if(horizontal){
+                gbc.gridx = i * 2;
+            }else{
+                gbc.gridy = i * 2;
+            }
+            add(tiles.get(i), gbc);
+            if (i > 0) {
+                add(dividers.get(i-1), getDividerConstraints(i * 2 - 1));
+            }
+        }
         if (this.selectedIndex >= this.getTileCount()) {
             selectedIndex = this.getTileCount() - 1;
         }
