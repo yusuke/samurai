@@ -1,3 +1,10 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.web;
 
 import org.apache.velocity.Template;
@@ -18,18 +25,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-/**
- * <p>Title: Samurai</p>
- * <p/>
- * <p>Description: a thread dump analyzing tool</p>
- * <p/>
- * <p>Copyright: Copyright (c) 2003,2004,2005,2006</p>
- * <p/>
- * <p> </p>
- *
- * @author Yusuke Yamamoto
- * @version 2.0.5
- */
 public class VelocityHtmlRenderer implements Constants {
     private ResourceBundle resource = ResourceBundle.getBundle("samurai.web.messages");
     public String config_wrapDump = "true";

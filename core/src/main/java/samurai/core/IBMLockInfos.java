@@ -1,20 +1,15 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.core;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * <p>Title: Samurai</p>
- * <p/>
- * <p>Description: a tabbed tail tool</p>
- * <p/>
- * <p>Copyright: Copyright (c) Yusuke Yamamoto 2003-2006</p>
- * <p/>
- * <p> </p>
- *
- * @author Yusuke Yamamoto
- * @version 2.0.5
- */
 public class IBMLockInfos implements java.io.Serializable {
     public static final String HEADER = "1LKPOOLINFO    Monitor pool info:";
     public static final String FOOTER = "1LKOBJMONDUMP";

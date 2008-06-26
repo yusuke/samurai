@@ -1,3 +1,10 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.core;
 
 import java.io.BufferedReader;
@@ -8,14 +15,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-/**
- * <p>Title: </p>
- * <p>Description: </p>
- * <p>Copyright: Copyright (c) 2003, 2004 Yusuke Yamamoto</p>
- *
- * @author Yusuke Yamamoto
- * @version 2.0.5
- */
 
 public class ThreadDumpExtractor {
     private ThreadDumpRenderer renderer;

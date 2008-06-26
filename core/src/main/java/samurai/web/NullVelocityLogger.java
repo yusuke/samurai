@@ -1,20 +1,15 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.web;
 
 import org.apache.velocity.runtime.RuntimeServices;
 import org.apache.velocity.runtime.log.LogSystem;
 
-/**
- * <p>Title: Samurai</p>
- * <p/>
- * <p>Description: a thread dump analyzing tool</p>
- * <p/>
- * <p>Copyright: Copyright (c) 2003,2004,2005,2006</p>
- * <p/>
- * <p> </p>
- *
- * @author Yusuke Yamamoto
- * @version 2.0.5
- */
 public class NullVelocityLogger implements LogSystem {
     public NullVelocityLogger() {
     }
