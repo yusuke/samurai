@@ -1,3 +1,10 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.util;
 
 import samurai.gc.LineGraph;
@@ -6,18 +13,6 @@ import samurai.gc.LineGraphRenderer;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * <p>Title: Samurai</p>i
- * <p/>
- * <p>Description: a tabbed tail tool</p>
- * <p/>
- * <p>Copyright: Copyright (c) Yusuke Yamamoto 2003-2006</p>
- * <p/>
- * <p> </p>
- *
- * @author Yusuke Yamamoto
- * @version 2.0.5
- */
 public class CSVParser implements LineGraphDataSourceParser {
     public CSVParser() {
     }

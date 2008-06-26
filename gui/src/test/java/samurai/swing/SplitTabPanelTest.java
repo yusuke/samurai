@@ -1,3 +1,10 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.swing;
 
 
@@ -12,18 +19,6 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * <p>Title: Samurai</p>
- * <p/>
- * <p>Description: a tabbed tail tool</p>
- * <p/>
- * <p>Copyright: Copyright (c) 2003,2004</p>
- * <p/>
- * <p> </p>
- *
- * @author Yusuke Yamamoto
- * @version 1.0
- */
 public class SplitTabPanelTest extends JFrame {
     GridBagLayout gbl = new GridBagLayout();
     BorderLayout borderLayout1 = new BorderLayout();

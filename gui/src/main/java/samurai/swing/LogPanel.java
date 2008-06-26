@@ -1,3 +1,10 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.swing;
 
 import samurai.util.Configuration;
@@ -16,16 +23,6 @@ import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
 import java.io.File;
 
-/**
- * log will be shown on this panel
- * <p>Title: Samurai</p>
- * <p>Description: a tabbed tail tool</p>
- * <p>Copyright: Copyright (c) Yusuke Yamamoto 2003-2006</p>
- * <p> </p>
- *
- * @author Yusuke Yamamoto
- * @version 2.0.5
- */
 public class LogPanel extends LogRenderer implements AdjustmentListener,
         ConfigurationListener, ClipBoardOperationListener {
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();

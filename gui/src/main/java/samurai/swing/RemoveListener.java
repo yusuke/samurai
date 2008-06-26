@@ -1,11 +1,11 @@
-/*
- * RemoveListener.java
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
  *
- * Created on 2005/12/30, 13:29
- *
- * To change this template, choose Tools | Template Manager
- * and open the template in the editor.
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
  */
+
 
 package samurai.swing;
 

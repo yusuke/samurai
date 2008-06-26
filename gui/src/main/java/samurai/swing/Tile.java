@@ -1,3 +1,11 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
+
 package samurai.swing;
 
 import samurai.util.OSDetector;
@@ -18,18 +26,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-/**
- * <p>Title: Samurai</p>
- * <p/>
- * <p>Description: a tabbed tail tool</p>
- * <p/>
- * <p>Copyright: Copyright (c) Yusuke Yamamoto 2003-2006</p>
- * <p/>
- * <p> </p>
- *
- * @author Yusuke Yamamoto
- * @version 2.0.5
- */
 /*package*/class Tile extends JPanel {
 
     private BorderLayout borderLayout1 = new BorderLayout();

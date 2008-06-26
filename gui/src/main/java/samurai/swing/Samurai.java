@@ -1,17 +1,16 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.swing;
 
 import samurai.util.GUIResourceBundle;
 import samurai.util.OSDetector;
 
-/**
- * <p>Title: Samurai</p>
- * <p>Description: a tabbed tail tool</p>
- * <p>Copyright: Copyright (c) Yusuke Yamamoto 2003-2006</p>
- * <p> </p>
- *
- * @author Yusuke Yamamoto
- * @version 2.0.5
- */
+
 public class Samurai {
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
 

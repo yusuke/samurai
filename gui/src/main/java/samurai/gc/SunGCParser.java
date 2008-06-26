@@ -1,3 +1,10 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.gc;
 
 import samurai.util.GUIResourceBundle;
@@ -7,18 +14,6 @@ import java.awt.Color;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * <p>Title: Samurai</p>
- * <p/>
- * <p>Description: a thread dump analyzing tool</p>
- * <p/>
- * <p>Copyright: Copyright (c) 2003-2006</p>
- * <p/>
- * <p> </p>
- *
- * @author Yusuke Yamamoto
- * @version 2.0.5
- */
 public class SunGCParser implements LineGraphDataSourceParser {
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private HeapGraph newGraph = null;

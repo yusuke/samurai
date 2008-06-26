@@ -1,3 +1,11 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
+
 package samurai.swing;
 
 import junit.framework.TestCase;
@@ -6,13 +14,6 @@ import java.awt.Color;
 import java.util.List;
 import java.util.ArrayList;
 
-/**
- * Created by IntelliJ IDEA.
- * User: yusukey
- * Date: Jun 5, 2008
- * Time: 11:15:32 PM
- * To change this template use File | Settings | File Templates.
- */
 public class TestPlotData extends TestCase implements GraphCanvas {
     PlotData plotData;
 

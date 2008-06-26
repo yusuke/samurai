@@ -1,13 +1,14 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.util;
 
 import junit.framework.TestCase;
 
-/**
- * @author yusukey
- *         <p/>
- *         To change the template for this generated type comment go to
- *         Window - Preferences - Java - Code Generation - Code and Comments
- */
 public class I18nizedResourceTest extends TestCase {
 
     private GUIResourceBundle resource;

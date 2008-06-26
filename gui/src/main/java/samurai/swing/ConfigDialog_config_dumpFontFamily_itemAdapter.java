@@ -1,12 +1,12 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.swing;
 
-/**
- * Created by IntelliJ IDEA.
- * User: yusukey
- * Date: May 9, 2008
- * Time: 9:39:22 AM
- * To change this template use File | Settings | File Templates.
- */
 class ConfigDialog_config_dumpFontFamily_itemAdapter implements java.awt.event.
         ItemListener {
     ConfigDialog adaptee;

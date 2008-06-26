@@ -1,3 +1,10 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.swing;
 
 import javax.swing.ImageIcon;
@@ -16,16 +23,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
-/**
- * the about dialog
- * <p>Title: Samurai</p>
- * <p>Description: a tabbed tail tool</p>
- * <p>Copyright: Copyright (c) Yusuke Yamamoto 2003-2006</p>
- * <p> </p>
- *
- * @author Yusuke Yamamoto
- * @version 2.0.5
- */
 public class AboutSamuraiDialog extends JDialog implements ActionListener {
 
     public JButton button1 = new JButton();

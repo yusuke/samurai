@@ -1,3 +1,10 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.swing;
 
 import javax.swing.ImageIcon;
@@ -18,18 +25,6 @@ import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * <p>Title: Samurai</p>
- * <p/>
- * <p>Description: a tabbed tail tool</p>
- * <p/>
- * <p>Copyright: Copyright (c) Yusuke Yamamoto 2003-2006</p>
- * <p/>
- * <p> </p>
- *
- * @author Yusuke Yamamoto
- * @version 2.0.5
- */
 /*package*/class TilePanel extends JPanel implements AncestorListener {
 
     GridBagLayout gridBagLayout = new GridBagLayout();

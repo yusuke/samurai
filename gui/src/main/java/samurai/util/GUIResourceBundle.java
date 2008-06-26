@@ -1,3 +1,10 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.util;
 
 import javax.swing.JButton;
@@ -27,15 +34,6 @@ import java.util.MissingResourceException;
 import java.util.Properties;
 import java.util.ResourceBundle;
 
-/**
- * <p>Title: Samurai</p>
- * <p>Description: a tabbed tail tool</p>
- * <p>Copyright: Copyright (c) Yusuke Yamamoto 2003-2006</p>
- * <p> </p>
- *
- * @author Yusuke Yamamoto
- * @version 2.0.52.0.5
- */
 public class GUIResourceBundle extends ResourceBundle {
     private static Map<String, Map<String, GUIResourceBundle>> resourceses = new HashMap<String, Map<String, GUIResourceBundle>>();
     private static final String DEFAULT_RESOURCE_NAME = "messages";

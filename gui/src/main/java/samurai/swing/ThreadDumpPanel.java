@@ -1,3 +1,10 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.swing;
 
 import samurai.core.FullThreadDump;
@@ -51,16 +58,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-/**
- * analyzed thread dumps will be shown on this panel
- * <p>Title: Samurai</p>
- * <p>Description: a tabbed tail tool</p>
- * <p>Copyright: Copyright (c) Yusuke Yamamoto 2003-2006</p>
- * <p> </p>
- *
- * @author Yusuke Yamamoto
- * @version 2.0.5
- */
 public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         ConfigurationListener, ClipBoardOperationListener {
     public String config_dumpFontFamily = "Monospace";

@@ -1,3 +1,10 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.swing;
 
 import samurai.util.CustomizableKeyStroke;
@@ -22,18 +29,6 @@ import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * <p>Title: Samurai</p>
- * <p/>
- * <p>Description: a tabbed tail tool</p>
- * <p/>
- * <p>Copyright: Copyright (c) 2003,2004</p>
- * <p/>
- * <p> </p>
- *
- * @author Yusuke Yamamotore
- * @version 1.0
- */
 
 public class TileTabPanel<T extends JComponent> extends JPanel implements MouseListener, MouseMotionListener {
 

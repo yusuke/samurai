@@ -1,3 +1,10 @@
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
+ *
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
+ */
 package samurai.swing;
 
 import samurai.util.Configuration;
@@ -11,18 +18,6 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import java.awt.Component;
 
-/**
- * <p>Title: Samurai</p>
- * <p/>
- * <p>Description: a tabbed tail tool</p>
- * <p/>
- * <p>Copyright: Copyright (c) Yusuke Yamamoto 2003-2006</p>
- * <p/>
- * <p> </p>
- *
- * @author Yusuke Yamamoto
- * @version 2.0.5
- */
 public class Context {
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private final Configuration config = new Configuration("samurai");

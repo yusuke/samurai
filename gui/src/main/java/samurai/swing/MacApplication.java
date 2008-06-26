@@ -1,21 +1,16 @@
-/*
- * MRJHandlerImpl.java
+/**
+ * Samurai
+ * Copyright 2003-2008, Yusuke Yamamoto.
  *
- * Created on 2005/12/30, 22:16
- *
- * To change this template, choose Tools | Template Manager
- * and open the template in the editor.
+ * Distributable under LGPL license.
+ * See terms of license at gnu.org.
  */
-
 package samurai.swing;
 
 import com.apple.eawt.Application;
 import com.apple.eawt.ApplicationAdapter;
 import com.apple.eawt.ApplicationEvent;
 
-/**
- * @author yusukey
- */
 public class MacApplication extends ApplicationAdapter {
     MainFrame frame;
 
