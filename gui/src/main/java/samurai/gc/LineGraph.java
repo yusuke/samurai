@@ -10,11 +10,12 @@ import java.awt.Color;
  * To change this template use File | Settings | File Templates.
  */
 public interface LineGraph {
-    void addValues(double[] values);
+    void addValues(double[] yvalues);
+    void addValues(double x,double[] yvalues);
 
     void setColorAt(int index, Color color);
 
     void setLabels(String[] labels);
 
-    void setMaxAt(int index, double max);
+    void setYMax(int index, double ymax);
 }

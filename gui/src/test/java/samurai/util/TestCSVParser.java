@@ -54,6 +54,9 @@ public class TestCSVParser extends TestCase  implements LineGraph,LineGraphRende
             count++;
         }
     }
+    public void addValues(double x,double[] values) {
+        addValues(values);
+    }
 
     public void setColorAt(int index, Color color) {
 
@@ -62,7 +65,7 @@ public class TestCSVParser extends TestCase  implements LineGraph,LineGraphRende
     public void setLabels(String[] labels) {
     }
 
-    public void setMaxAt(int index, double max) {
+    public void setYMax(int index, double max) {
 
     }
 

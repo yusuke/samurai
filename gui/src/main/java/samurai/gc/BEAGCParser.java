@@ -62,8 +62,8 @@ public class BEAGCParser implements LineGraphDataSourceParser {
                             line.indexOf("K)")));
                     if (memoryMax < currentMemoryMax) {
                         memoryMax = currentMemoryMax;
-                        lineGraph.setMaxAt(1, memoryMax);
-                        lineGraph.setMaxAt(2, memoryMax);
+                        lineGraph.setYMax(1, memoryMax);
+                        lineGraph.setYMax(2, memoryMax);
                     }
                     time = Double.parseDouble(line.substring(timeStart, line.lastIndexOf(" ms")));
                     memoryBefore = Double.parseDouble(line.substring(line.indexOf("GC ") + 3,

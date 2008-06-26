@@ -48,8 +48,8 @@ public class IBMGCParser implements LineGraphDataSourceParser {
                     currentMemoryMax = Double.parseDouble(line.substring(line.lastIndexOf("/") + 1, line.lastIndexOf(")")));
                     if (memoryMax < currentMemoryMax) {
                         memoryMax = currentMemoryMax;
-                        lineGraph.setMaxAt(1, memoryMax);
-                        lineGraph.setMaxAt(2, memoryMax);
+                        lineGraph.setYMax(1, memoryMax);
+                        lineGraph.setYMax(2, memoryMax);
                     }
                     memoryFreed = Double.parseDouble(line.substring(freedIndex + 9, line.indexOf(" byte")));
                     memoryAfter = Double.parseDouble(line.substring(line.lastIndexOf("(") + 1, line.lastIndexOf("/")));

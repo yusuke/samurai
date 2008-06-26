@@ -143,10 +143,13 @@ public class SunGCParser implements LineGraphDataSourceParser {
             this.pattern = pattern;
             this.lineGraph = lineGraph;
             this.parseGCtime = parseGCtime;
-            lineGraph.setColorAt(0, Color.GRAY);
-            lineGraph.setColorAt(1, Color.RED);
             if(parseGCtime){
+                lineGraph.setColorAt(0, Color.GRAY);
+                lineGraph.setColorAt(1, Color.RED);
                 lineGraph.setColorAt(2, Color.YELLOW);
+            }else{
+                lineGraph.setColorAt(0, Color.RED);
+                lineGraph.setColorAt(1, Color.YELLOW);
             }
         }
         void parse(String line){
@@ -158,12 +161,12 @@ public class SunGCParser implements LineGraphDataSourceParser {
                 if (maxSize < currentSize) {
                     maxSize = currentSize;
                     if(pattern == permGCPtn){
-                        lineGraph.setMaxAt(0, maxSize);
-                        lineGraph.setMaxAt(1, maxSize);
+                        lineGraph.setYMax(0, maxSize);
+                        lineGraph.setYMax(1, maxSize);
 
                     }else{
-                        lineGraph.setMaxAt(1, maxSize);
-                        lineGraph.setMaxAt(2, maxSize);
+                        lineGraph.setYMax(1, maxSize);
+                        lineGraph.setYMax(2, maxSize);
                     }
                 }
                 double heapBeforeGC = extract(found, heapBeforeGCPtn);

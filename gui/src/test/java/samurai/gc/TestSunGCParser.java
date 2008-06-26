@@ -1,50 +1,13 @@
 package samurai.gc;
 
-import junit.framework.TestCase;
-
-import java.awt.Color;
-import java.util.ArrayList;
-import java.util.List;
-
-public class TestSunGCParser extends TestCase implements LineGraph,LineGraphRenderer {
+public class TestSunGCParser extends AbstractGraphTest{
 
     protected void setUp() throws Exception {
         super.setUp();
-        count = 0;
     }
 
     protected void tearDown() throws Exception {
         super.tearDown();
-    }
-
-    private int count = 0;
-
-    List<double[]> expected = new ArrayList<double[]>();
-    List<Double> expectedMax = new ArrayList<Double>();
-
-    public LineGraph addLineGraph(String line, String labels[]) {
-        this.setLabels(labels);
-        return this;
-    }
-
-
-    public void addValues(double[] values) {
-        double[] ex = expected.remove(0);
-        for (int i = 0; i < ex.length; i++) {
-            assertEquals(ex[i], values[i]);
-        }
-        count++;
-    }
-
-    public void setColorAt(int index, Color color) {
-
-    }
-
-    public void setLabels(String[] labels) {
-    }
-
-    public void setMaxAt(int index, double max) {
-        assertEquals(expectedMax.remove(0).doubleValue(), max);
     }
 
     public void testStandardVerbosegc() throws Exception {
