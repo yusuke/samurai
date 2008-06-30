@@ -8,21 +8,43 @@
 package samurai.web;
 
 import junit.framework.TestCase;
-import junit.textui.TestRunner;
 import samurai.core.ThreadDumpExtractor;
+import samurai.core.ThreadStatistic;
 
 import java.io.File;
 import java.io.IOException;
 
 public class TestVelocityHtmlRenderer extends TestCase {
-    samurai.core.ThreadStatistic statistic = new samurai.core.ThreadStatistic();
+    ThreadStatistic statistic = new samurai.core.ThreadStatistic();
 
     public TestVelocityHtmlRenderer(String name) {
         super(name);
     }
 
-    public static void main(String[] args) {
-        TestRunner.run(TestVelocityHtmlRenderer.class);
+    public static void main(String[] args) throws IOException{
+        //do a performance test
+        ThreadStatistic statistic = new samurai.core.ThreadStatistic();
+        ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
+        analyzer.analyze(new File("testcases/BEA/910JRockit.dmp"));
+        VelocityHtmlRenderer renderer = new VelocityHtmlRenderer("samurai/web/outcss.vm");
+        //warm up
+        System.out.println("Warming up.");
+        for (int i = 0; i < 100; i++) {
+            renderer.saveTo(statistic, null, new ProgressListener() {
+                public void notifyProgress(int finished, int all) {
+                }
+            });
+        }
+        System.out.println("Testing...");
+        long before = System.currentTimeMillis();
+        for (int i = 0; i < 100; i++) {
+            renderer.saveTo(statistic, null, new ProgressListener() {
+                public void notifyProgress(int finished, int all) {
+                }
+            });
+        }
+        long timeSpent = System.currentTimeMillis() - before;
+        System.out.println("time spent:" + (timeSpent / 1000d) + " secs");
     }
 
     protected void setUp() throws Exception {

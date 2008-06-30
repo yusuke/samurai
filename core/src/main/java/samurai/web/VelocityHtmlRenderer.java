@@ -93,16 +93,23 @@ public class VelocityHtmlRenderer implements Constants {
         return array.length;
     }
 
-
+    /**
+     * Saves threadstatistic as html files.<br>
+     * @param stats statistics to be saved.
+     * @param directory Directory to save the html files.
+     * @param listener
+     * @throws IOException
+     */
     public void saveTo(ThreadStatistic stats, File directory, ProgressListener listener) throws IOException {
-
-        directory.mkdirs();
-        File tableDir = new File(directory.getAbsolutePath() + File.separator + Constants.MODE_TABLE);
-        tableDir.mkdirs();
-        File fullDir = new File(directory.getAbsolutePath() + File.separator + Constants.MODE_FULL);
-        fullDir.mkdirs();
-        File sequenceDir = new File(directory.getAbsolutePath() + File.separator + Constants.MODE_SEQUENCE);
-        sequenceDir.mkdirs();
+        if(null != directory){
+            File tableDir = new File(directory.getAbsolutePath() + File.separator + Constants.MODE_TABLE);
+            File fullDir = new File(directory.getAbsolutePath() + File.separator + Constants.MODE_FULL);
+            File sequenceDir = new File(directory.getAbsolutePath() + File.separator + Constants.MODE_SEQUENCE);
+            directory.mkdirs();
+            tableDir.mkdirs();
+            fullDir.mkdirs();
+            sequenceDir.mkdirs();
+        }
         ThreadFilter filter = new ThreadFilter();
         ThreadDumpSequence[] st = stats.getStackTracesAsArray();
         int count = stats.getFullThreadDumpCount() * 2 + st.length * 2 + 2;
@@ -148,19 +155,21 @@ public class VelocityHtmlRenderer implements Constants {
     }
 
     public void saveAs(File dir, String fileName, String utf8Content) throws IOException {
-        FileOutputStream fos = null;
-        BufferedWriter writer = null;
-        try {
-            fos = new FileOutputStream(dir + File.separator + fileName);
-            writer = new BufferedWriter(new OutputStreamWriter(fos, "UTF-8"));
-            writer.write(utf8Content);
-            writer.close();
-        } finally {
-            if (null != writer) {
+        if (null != dir) {
+            FileOutputStream fos = null;
+            BufferedWriter writer = null;
+            try {
+                fos = new FileOutputStream(dir + File.separator + fileName);
+                writer = new BufferedWriter(new OutputStreamWriter(fos, "UTF-8"));
+                writer.write(utf8Content);
                 writer.close();
-            }
-            if (null != fos) {
-                fos.close();
+            } finally {
+                if (null != writer) {
+                    writer.close();
+                }
+                if (null != fos) {
+                    fos.close();
+                }
             }
         }
     }
