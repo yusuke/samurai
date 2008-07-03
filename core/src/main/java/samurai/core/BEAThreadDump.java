@@ -12,9 +12,6 @@ import java.util.List;
 
 public class BEAThreadDump extends ThreadDump {
     private static final long serialVersionUID = -6581661997485086419L;
-    private boolean IS_BLOCKED;
-    private final boolean IS_IDLE;
-    private final boolean IS_DAEMON;
     private final String[] STATUS_ARRAY;
     private final boolean IS_WEBLOGIC_ADMIN;
     private final String CONDITION;

@@ -3,30 +3,31 @@
   <property file="build.properties"/>
   <target name="jar">
     <mkdir dir="./target/classes/license"/>
+
+    <unjar src="${user.home}/.m2/repository/velocity/velocity-dep/1.4/velocity-dep-1.4.jar"
+        dest="./target/classes"/>
+    <!--
+    -->
+    <!--
     <unjar src="${user.home}/.m2/repository/velocity/velocity/1.5/velocity-1.5.jar"
         dest="./target/classes"/>
     <move file="./target/classes/META-INF/LICENSE"
         tofile="./target/classes/license/velocity-LICENSE"/>
     <move file="./target/classes/META-INF/NOTICE"
         tofile="./target/classes/license/NOTICE"/>
-    <!--move file="./target/classes/META-INF/NOTICE"
-        tofile="./target/classes/META-INF/velocity-NOTICE"/-->
     <unjar src="${user.home}/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar"
         dest="./target/classes"/>
     <move file="./target/classes/META-INF/LICENSE"
         tofile="./target/classes/license/oro-LICENSE"/>
-    <unjar src="${user.home}/.m2/repository/commons-lang/commons-lang/2.1/commons-lang-2.1.jar"
+    <unjar src="${user.home}/.m2/repository/commons-lang/commons-lang/2.3/commons-lang-2.3.jar"
         dest="./target/classes"/>
     <move file="./target/classes/META-INF/LICENSE.txt"
         tofile="./target/classes/license/commons-lang-LICENSE.txt"/>
-    <!--move file="./target/classes/META-INF/NOTICE.txt"
-        tofile="./target/classes/META-INF/commons-lang-NOTICE.txt"/-->
     <unjar src="${user.home}/.m2/repository/commons-collections/commons-collections/3.1/commons-collections-3.1.jar"
         dest="./target/classes"/>
     <move file="./target/classes/META-INF/LICENSE.txt"
         tofile="./target/classes/license/commons-collections-LICENSE.txt"/>
-    <!--move file="./target/classes/META-INF/NOTICE.txt"
-        tofile="./target/classes/META-INF/commons-collections-NOTICE.txt"/-->
+    -->
     <unjar src="${user.home}/.m2/repository/samurai/samurai-core/1.0/samurai-core-1.0.jar"
         dest="./target/classes"/>
     <jar jarfile="${jarName}"

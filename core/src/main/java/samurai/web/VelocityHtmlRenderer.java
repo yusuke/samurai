@@ -64,7 +64,7 @@ public class VelocityHtmlRenderer implements Constants {
     public String render(ThreadFilter filter, ThreadStatistic statistic, Map myContext) {
 
         VelocityContext context = new VelocityContext(new VelocityContext(myContext));
-        Writer writer = new StringWriter();
+        Writer writer = new StringWriter(20480);
         context.put("resource", resource);
         context.put("style", style);
         context.put("wrap", config_wrapDump);

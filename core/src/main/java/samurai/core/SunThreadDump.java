@@ -12,10 +12,6 @@ package samurai.core;
 
 /*package*/ class SunThreadDump extends ThreadDump {
     private final String STATE;
-    private final String STACK_RANGE;
-    private final boolean IS_BLOCKED;
-    private boolean isIdle;
-    private final boolean IS_DAEMON;
 
     private final boolean debug = false;
 
@@ -132,48 +128,24 @@ package samurai.core;
         return getHeaderParameter("lwp_id");
     }
 
-
-    /**
-     * test if thread is a daemon thread.
-     *
-     * @return if the thread is a daemon thread.
-     */
-    public boolean isDaemon() {
-        return IS_DAEMON;
-    }
-
-    /**
-     * returns the thread's stack range.
-     *
-     * @return name
-     */
-    public String getStackRange() {
-        return this.STACK_RANGE;
-    }
-
-
-    public boolean isBlocked() {
-        return IS_BLOCKED;
-    }
-
     boolean isIdleAnalyzed = false;
 
-    public boolean isIdle() {
+    @Override public boolean isIdle() {
         if(!isIdleAnalyzed){
             //test if last method is Object.wait()
             if (STATE.equals(SunThreadDump.SUSPENDED) ||
                     STATE.equals("in Object.wait()")) {
-                isIdle = true;
+                IS_IDLE = true;
             }else if (size() > 0) {
-                isIdle= (getLine(0).getClassName().equals("java.lang.Object")
+                IS_IDLE= (getLine(0).getClassName().equals("java.lang.Object")
                         && getLine(0).getMethodName().equals("wait")) ||
                         (getLine(0).getClassName().equals("java.lang.Thread")
                                 && getLine(0).getMethodName().equals("sleep"));
             }else{
-                isIdle = false;
+                IS_IDLE = false;
             }
             isIdleAnalyzed = true;
         }
-        return isIdle;
+        return IS_IDLE;
     }
 }

@@ -20,6 +20,11 @@ public abstract class ThreadDump implements Serializable {
     private static final long serialVersionUID = -7984606567041592064L;
     private final String NAME;
 
+    protected String STACK_RANGE;
+    protected boolean IS_BLOCKED;
+    protected boolean IS_IDLE;
+    protected boolean IS_DAEMON;
+
     public ThreadDump(String header) {
         this.header = header;
         //extract thread name
@@ -108,11 +113,31 @@ public abstract class ThreadDump implements Serializable {
         return getStackLines().get(i);
     }
 
-    public abstract boolean isBlocked();
+    /**
+     * test if thread is a daemon thread.
+     *
+     * @return if the thread is a daemon thread.
+     */
+    public boolean isDaemon() {
+        return IS_DAEMON;
+    }
 
-    public abstract boolean isIdle();
+    /**
+     * returns the thread's stack range.
+     *
+     * @return name
+     */
+    public String getStackRange() {
+        return this.STACK_RANGE;
+    }
 
-    public abstract boolean isDaemon();
+
+    public boolean isBlocked() {
+        return IS_BLOCKED;
+    }
+    public boolean isIdle() {
+        return IS_IDLE;
+    }
 
     public abstract String getId();
 
