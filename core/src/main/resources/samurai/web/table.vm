@@ -35,12 +35,8 @@ $resource.getString("web.view"):&nbsp;
         #end
         #else #set($stateClass = "back-notexist")
         #end
-        ##evaluate if the thread is same as before
-        #if($stackTraces.sameAsBefore($velocityCount)) #set($sameFlag = "&lt;")
-        #else #set($sameFlag = "&nbsp;")
-        #end
-        <td class="$stateClass">#if($threadDump.isDeadLocked()) <img border="0" src="${baseurl}deadlocked.gif"> #else
-            $sameFlag #end
+        <td class="$stateClass"><a
+                href="../sequence/threadId-$stackTraces.getId()_shrink-${filter.getShrinkIdle()}.html#$velocityCount"><img border="0" width="16" height="16" #if($threadDump.isDeadLocked()) src="${baseurl}deadlocked.gif" #elseif($stackTraces.sameAsBefore($velocityCount)) src="${baseurl}same-h.gif" #else src="${baseurl}space.gif" #end ></a>
         </td>
         #end
     </tr>
@@ -60,7 +56,7 @@ $resource.getString("web.view"):&nbsp;
     </tr>
     <tr>
         <td nowrap colspan="3">$resource.getString("web.same")</td>
-        <td class="back-normal">&lt;</td>
+        <td class="back-normal"><img border="0" src="${baseurl}same-h.gif"></td>
         <td nowrap colspan="3">$resource.getString("web.deadlocked")</td>
         <td class="back-stacked"><img border="0" src="${baseurl}deadlocked.gif"></td>
     </tr>

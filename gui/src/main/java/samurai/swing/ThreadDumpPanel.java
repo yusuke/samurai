@@ -417,17 +417,17 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                                             File imageDir = new File(savedLocation.getAbsolutePath() + "/images/");
                                             imageDir.mkdir();
 
-                                            saveStreamAsFile(imageDir, "same.gif");
+                                            saveStreamAsFile(imageDir, "space.gif");
+                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 8, progressBar.getMaximum()));
+                                            saveStreamAsFile(imageDir, "same-v.gif");
+                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 7, progressBar.getMaximum()));
+                                            saveStreamAsFile(imageDir, "same-h.gif");
                                             SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 6, progressBar.getMaximum()));
                                             saveStreamAsFile(imageDir, "deadlocked.gif");
                                             SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 5, progressBar.getMaximum()));
                                             saveStreamAsFile(imageDir, "expandable_win.gif");
                                             SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 4, progressBar.getMaximum()));
-//                                            saveStreamAsFile(imageDir, "expandable_mac.gif");
-//                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 5, progressBar.getMaximum()));
                                             saveStreamAsFile(imageDir, "shrinkable_win.gif");
-//                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 4, progressBar.getMaximum()));
-//                                            saveStreamAsFile(imageDir, "shrinkable_mac.gif");
                                             SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 3, progressBar.getMaximum()));
 
                                             saveStreamAsFile(imageDir, "tableButton.gif");

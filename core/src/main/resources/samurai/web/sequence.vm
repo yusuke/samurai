@@ -46,7 +46,7 @@ $resource.getString("web.view"):
     #if($threadDump)
     ##test if the StackTrace is same as before
     "$util.escape($threadDump.getName())"#if($threadDump.isDeadLocked()) <img border="0" src="${baseurl}deadlocked.gif">#end
-    #if($sequence.sameAsBefore($velocityCount)) <img border="0" src="${baseurl}same.gif">#end
+    #if($sequence.sameAsBefore($velocityCount)) <img border="0" src="${baseurl}same-v.gif">#end
     $threadDump.getCondition()<br>
     #if($filter.getShrinkIdle() && $stateClass.equals("idle") && $threadDump.size() != 0)
     #foreach($line in $threadDump.getStackLines())
