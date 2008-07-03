@@ -16,11 +16,6 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>velocity</groupId>
-            <artifactId>velocity</artifactId>
-            <version>1.4</version>
-        </dependency>
-        <dependency>
             <groupId>samurai</groupId>
             <artifactId>samurai-core</artifactId>
             <version>1.0</version>
