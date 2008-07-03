@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ $[ja:<head xml:lang="ja" lang="ja">]$[en:<head xml:lang="en" lang="en">]
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Language" content="$[ja:ja]$[en:en]">
+  <link rel="shortcut icon" href="http://yusuke.homeip.net/twitter4j/$[ja:ja]$[en:en]/favicon.ico" type="image/x-icon">
+  <title>$[ja:侍 - ログ , スレッドダンプ解析ツール]$[en:Samurai - a GUI based tail , thread dump analysis tool]</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" >
+  <link rel="stylesheet" href="lightbox/lightbox.css" type="text/css" >
+  <script type="text/javascript" src="lightbox/spica.js"></script>
+  <script type="text/javascript" src="lightbox/lightbox_plus.js"></script>
+  <script type="text/javascript" src="js/gracefulscroll.js"></script>
+</head>
+  <body>
+
+<div class="center" id="center">
+<a name="top"><div onclick="location.href='./index.html'" class="logo"><div class="transparent"></div></div></a>
+<div class="left" id="left">
+	<div style="text-align:center">$[ja:<a href="../en/index.html">English</a> | Japanese]$[en:English | <a href="../ja/index.html">Japanese</a>]</div>
+
+
+<ul>
+<li><a href="#introduction" onclick="return scrollGracefully(this.href)">$[ja:&quot;侍&quot; とは]$[en:What is &quot;Samurai&quot;]</a></li>
+<li><a href="#systemRequirements" onclick="return scrollGracefully(this.href)">$[ja:システム要件]$[en:System Requirements]</a></li>
+<li><a href="#howToLaunch" onclick="return scrollGracefully(this.href)">$[ja:起動方法]$[en:Launching Samurai]</a></li>
+ <ol>
+  <li><a href="#jws" onclick="return scrollGracefully(this.href)">$[ja:Java Web Start]$[en:Java Web Start]</a></li>
+  <li><a href="#commandLine" onclick="return scrollGracefully(this.href)">$[ja:コマンドライン]$[en:Command line]</a></li>
+ </ol>
+<li><a href="#threadDumpAnalysis" onclick="return scrollGracefully(this.href)">$[ja:スレッドダンプの解析]$[en:Thread Dump View]</a></li>
+<li><a href="#gcAnalysis" onclick="return scrollGracefully(this.href)">$[ja:ヒープ使用状況の解析]$[en:Heap analysis View]</a></li>
+<li><a href="#csvVisualization" onclick="return scrollGracefully(this.href)">$[ja:CSV ファイルのグラフ化]$[en:CSV View]</a></li>
+<li><a href="#logAnalysis" onclick="return scrollGracefully(this.href)">$[ja:ログのインクリメンタルサーチ機能]$[en:Search Logs]</a></li>
+<li><a href="#sourceCode" onclick="return scrollGracefully(this.href)">$[ja:ソースコード]$[en:Source Code]</a></li>
+<li><a href="#mailingList" onclick="return scrollGracefully(this.href)">$[ja:メーリングリスト]$[en:Mailing list]</a></li>
+<li><a href="#license" onclick="return scrollGracefully(this.href)">$[ja:ライセンス]$[en:License]</a></li>
+</ul>
+<center>
+<include>paypal.html</include>
+<include>adsense200x200.html</include>
+</center>
+<!--script src="http://images.del.icio.us/static/js/blogbadge.js"></script>
+<script type="text/javascript">
+//digg_url = document.location.href;
+digg_url = "http://yusuke.homeip.net/komuso/ja/";
+digg_bgcolor = '#ff9900';
+digg_skin = 'compact';
+</script>
+<script src="http://digg.com/tools/diggthis.js" type="text/javascript"></script-->
+
+</div>
+
+
+<div class="content" id="content">
+    <a name="introduction"><h2>$[ja:&quot;侍&quot; とは]$[en:What is &quot;Samurai&quot;]</h2></a>
+    <p>$[ja:侍 はタブ表示できる GUI の tail ツールです。
+標準出力・標準エラー出力をリダイレクトしたログファイルより Java のスレッドダンプのみを切り出して色分け表示したり、-verbosegcオプションによるログをグラフ表示したりできるため特に Java のトラブルシューティングに役立ちます。]
+$[en:Samurai is a tabbed GUI tail tool.
+The three major things Samurai does for you are
+<ul>
+<li>Works as a GUI based and multi tabbed "tail -f"</li>
+<li>Picks up thread dumps from std/stderr output and visualize them.</li>
+<li>Visualizes "-verbose:gc" logs.</li></ul>]</p>
+<center><include>adsense468x60.html</include></center>
+    <a name="systemRequirements"><h2>$[ja:システム要件]$[en:System Requirements]</h2></a>
+    <p>$[ja:OS: JDK 1.4 以降の実行環境をサポートする Windows や Unix<br>
+JDKは以下のページからダウンロードできます。<br>
+http://java.sun.com/j2se/1.5.0/ja/download.html<br>
+検証済みの解析対象JVM: JDK 1.3.x,JDK 1.4.x,JDK5.0 準拠の Apple/BEA/Sun/HP/IBM 製JVM<br>
+JRE がインストールされていない環境では ActiveX ベースのインストーラ をご利用ください(IE のみ)。]
+$[en:OS: Windows and any flavor of Unix like OS supports JDK 1.4 or later<br>
+Tested JVM to inspect: JDK 1.3.x,JDK 1.4.x,JDK5.0 based JVM provided by Apple, BEA, HP, Sun and IBM<br>
+Automatic JRE installation is available here(IE only and ActiveX required to be enabled)]</p>
+</ul>
+
+    <a name="howToLaunch"><h2>$[ja:起動方法]$[en:Launching Samurai]</h2></a>
+    <p>$[ja:侍 は以下の2種類どちらかの方法で起動させることができます。]
+    $[en:There are two ways to launch Samurai. Choose suitable one.]</p>
+    <ol class="main">
+<li class="numberedlist"><a name="jws">$[ja:Java Web Start による起動]$[en:Launching Samurai via Java Web Start]</a></li>
+$[ja:ネットワーク経由で起動する方法です。<br>Dockやスタートメニューにショートカットを作成できたり、バージョンアップ時には自動的にアップデートされたりなどの特徴があり、お勧めの起動方法です。<br>
+J2SDK1.4.2 以上がインストールされている環境でブラウザから以下のアイコンをクリックすることで自動的にインストール、起動を行うことが出来ます。<br>]
+$[en:Java Web Start is a network based application launching protocol which comes with JRE1.4.2 or later.<br>
+WIth Java Web Start you can create a desktop shortcut or a start menu item just like other native applications.<br>
+Another cool feature with Java Web Start is that it automatically checks the latest version upon every launch and ensures the latest version is installed.<br>
+You can just launch Samurai by clicking the icon below.<br>
+If you don't have any JRE installed on your system, you can simply click here(IE only and ActiveX required to be enabled) to install JRE1.5.<br>]
+<br>
+$[ja: • 侍を起動:]$[en: • Launch Samurai: ] <a href="http://yusuke.homeip.net/samurai/ja/samurai.jnlp"><img src="./images/launchSamuraiAni.gif"/></a><br>
+<br>
+$[ja:JRE がインストールされていない環境では ActiveX ベースのインストーラ をご利用ください(IE のみ)。<br>
+初回起動時にはセキュリティ上安全でない、起動を勧めない旨のメッセージが表示されますが、気にせず「開始」を押して起動してください。<br> これは侍がログファイルの読み取りのためローカルファイルシステムにアクセスする権限を得る必要があるためです。ただし、ファイルシステムへのアクセス権を得た Java Web Start アプリケーションは技術上、あなたの PC を乗っ取り、重大な損害をもたらすことが可能です。<br>
+署名の有無にかかわらず信頼の出来ない Java Web Start  アプリケーションを起動することは危険な行為であることを常に認識してください。 <br>
+コンピュータのセキュリティの設定によっては samurai.jnlp というファイルがダウンロードされるだけで侍が起動しない場合があります。<br>
+その場合はダウンロードした samurai.jnlp をダブルクリックしてください。 <br>]
+$[en:Java Web Start system will pop up a warning dialog on the first launch which alerts that the application could violate your PC's security.<br>
+Please click "Start" to proceed. It's because Samurai needs to get a permission to access your local filesystem which is necessary in reading log files.<br>
+I am NOT suggesting that you may launch any Java Web Start applications without any concerns. You need to be aware that technically a Java Web Start application could crack your PC and cause fatal casualties.]
+<div class="screenshot"><img src="images/alert_$[ja:ja]$[en:en].png"/><br>
+$[ja:画面1　セキュリティ警告ダイアログ]$[en:fig. 1 Security alert dialog]
+</div>
+
+<li class="numberedlist"><a name="commandLine">$[ja:コマンドライン]$[en:Command line]</a></li>
+$[ja:<p>侍は DOSプロンプトなどのターミナルから起動することもできます。<br />
+インターネット接続がない環境などで起動する場合は、<a href="http://yusuke.homeip.net/samurai/ja/samurai.jar">http://yusuke.homeip.net/samurai/ja/samurai.jar</a> をダウンロード、コピーした上で以下のコマンドでで起動できます。</p>
+<pre class="codeSample">$ java -jar samurai.jar</pre>
+<p>ただし自動アップデートはされないので定期的に更新がないかチェックしてください。</p>]
+$[en:<p>The binary is available for download at <a href="http://yusuke.homeip.net/samurai/en/samurai.jar">http://yusuke.homeip.net/samurai/en/samurai.jar</a> <br />
+You can simply double-click to launch Samurai on your desktop or type as following in your command prompt<br /></p>
+<pre class="codeSample">$ java -jar samurai.jar</pre>
+<p>Automatic update is not available with this way.<br />
+Please check and download latest version manually.<br /></p>]
+</ol>
+
+    <a name="threadDumpAnalysis"><h2>$[ja:スレッドダンプの解析]$[en:Thread Dump View]</h2></a>
+    <ol class="main">
+<li class="numberedlist">初期画画面</li>
+<p>$[ja:侍 を起動すると画面2のようなウィンドウが表示されます。ログファイルをドロップすると監視が開始され、メッセージが追加される毎にリアルタイムで読み込まれます。]$[en:You'll see a window like fig.2. A tab named &quot;Thread dump&quot; will appear after you drag and drop a log file onto the window.<br>
+Currently drag and drop does not work on Linux environment. Use the file menu instead.]</p>
+<p><img src="./images/first_$[ja:ja.png]$[en:en.gif]" />
+$[ja:画面2　初期画面]$[en:fig. 2 an initial view]</p>
+
+<li class="numberedlist">$[ja:スレッドダンプタブ]$[en:Thread dump tab]</li>
+
+<p>$[ja:ログファイル中にスレッドダンプを検出すると自動的にスレッドダンプタブ(画面3)が表示されます。]$[en:When Samurai detects a thread dump in your log, a tab named &quot;Thread Dump&quot; will appear.]</p>
+<p><img src="./images/logDropped_$[ja:ja.png]$[en:en.gif]"/></a><br />
+$[ja:画面3　スレッドダンプタブの表示]$[en:fig. 3 &quot;Thread dump&quot; tab]</p>
+<p>$[ja:スレッドダンプタブをクリックすると、解析結果が表示されます。
+アイドル状態のスレッドは灰色で、ブロック(同期待ち)状態のスレッドは赤で表示されます。
+解析結果にはテーブル表示(画面4)/全スレッド表示(画面5)/時系列表示(画面6)の３通りの表示があります。  多くの場合はテーブル表示でスレッドの使用状況を確認し、時系列表示でスレッドの動きを確認することで解析を進めます。
+常に赤く表示されているスレッドや、全てのスレッドダンプにおいて同じ個所で停止しているスレッドは問題を抱えている可能性があります。]$[en:You can just click &quot;Thread dumps&quot; tab to see the analisys result.<br />
+Samurai colors idle threads in gray, blocked threds in red and running threds in green.<br />
+There are three result views and Samurai shows &quot;Table view&quot; by default.<br>In many case you are just interested in the table view and the sequence view. Use the table view to decide which thread needs be inspected, the sequence view to understand the thread's behavior.<br />
+You should take care especially threds always in red.</li></ul>]</p>
+<p><img src="./images/threadTab_$[ja:ja.png]$[en:en.gif]"/></a><br />
+$[ja:画面4　テーブル表示]$[en:fig. 4 Table view]</p>
+<p><img src="./images/threadAll_$[ja:ja.png]$[en:en.gif]"/></a><br />
+$[ja:画面5 全スレッド表示]$[en:fig. 5 All thread view]</p>
+<p><img src="./images/threadSequence_$[ja:ja.png]$[en:en.gif]"/></a><br />
+$[ja:画面6　時系列表示]$[en:fig. 6 Sequence view]</p>
+
+
+
+
+    <a name="gcAnalysis"><h2>$[ja:ヒープ使用状況の解析]$[en:Heap analysis View]</h2></a>
+<p>$[ja:Java は起動時に -verbose:gc というオプションをつけるとガベージコレクションを行った際にメッセージが標準エラー出力に記録されます。 メモリリークしていないか、ヒープが十分に確保されているかなどがこのメッセージからわかるのですが、文字で表現されているため解析が困難です。 侍にこのログを渡すと「メモリ」というタブが現れます。赤い線がガベージコレクション前の使用量、黄色い線がガベージコレクション後の使用量、グレーの線がコレクションに要した時間を表します。
+表示中のグラフは Ctrl+C (Macでは Cmd+C) でコピーすることができます。]$[en:Every JVM implimentation accepts &quot;-verbose:gc&quot; option which will show you the internal GC activity.<br />
+This is necessary when you check memory leaks, or decide if heap is allocated enough although the plain gc log is very hard to analyze.<br />
+Samurai gives you a nice and understandable view of the GC logs.<br />
+Red line stands for the heap usage before a GC.<br />
+Yellow one stands for the heap usage after a GC.<br />
+Gray one stands for the time spent for a GC.<br />
+You can copy the graph to your desktop clipboard by pressing Ctrl+C, or Cmd+C(Mac).]<br>
+<img src="./images/memory_$[ja:ja.png]$[en:en.gif]" /><br>
+$[ja:画面7　メモリタブ]$[en:fig. 7 Memory tab]
+</p>
+
+    <a name="csvVisualization"><h2>$[ja:CSV ファイルのグラフ化]$[en:CSV View]</h2></a>
+<p>$[ja:侍は CSV 形式のテキストファイルを渡すことで即座に内容をグラフ化してくれます。 <br />
+表示中のグラフは Ctrl+C (Macでは Cmd+C) でコピーすることができます。<br />
+侍に渡したファイルが CSV 形式かどうかは拡張子で判断されます。]$[en:Samurai provides you a realtime and visualized look of CSV files.<br />
+You can copy the graph to the system clipboard by pressing Ctrl+C (Mac -&gt; Cmd+C).]<br />
+<img src="./images/komuso_$[ja:ja.png]$[en:en.gif]"/><br />
+$[ja:画面8　CSVファイルのグラフ化]$[en:fig. 8 CSV graph]</p>
+
+<a name="logAnalysis"><h2>$[ja:ログのインクリメンタルサーチ機能]$[en:Search Logs]</h2></a>
+<p>$[ja:侍は手放しでも便利ですが、スレッドダンプやヒープ使用状況の解析だけがとりえではありません。侍へドロップしたファイルはリアルタイムに監視され、ログが追加されると都度ログタブに表示されます。つまり Unix における tail -f filename と同等に利用できます。 また、ログ・スレッドダンプどちらのタブでも内容の検索を行うことが出来ます。いわゆるインクリメンタルサーチ機能で、キーボードをタイプした瞬間からキーワードがハイライトされます。キーワードを入力後は Ctrl+G(Mac では Cmd+G)または F3で次、Shift+Ctrl+G(Mac では Shift+Cmd+G)または Shift+F3 で前の候補がハイライトされます。 設定パネルより正規表現の使用・不使用、大文字小文字の区別・無視も設定できます。]$[en:Samurai is not only a thread dump analyzer but also a handy log viewr.<br />
+It works just like a GUI version of &quot;tail -f filename&quot;, and you can search the text on the fly.<br />
+The searching function will be triggered when you type any texts.<br />
+A search result will be hilighted if there is any matches. You can press Ctrl+G(Mac: Cmd+G) or F3 for forward search, Shift+Ctrl+G(Mac: Shift+Cmd+G) for backward search.<br />
+You can also enable / disable the case sensitivity and regular expression.]</p>
+<img src="./images/highlight_$[ja:ja]$[en:en].gif"/><br />
+$[ja:画面10　候補のハイライト]$[en:fig. 10 hilighting a match]
+
+
+    <a name="sourceCode"><h2>$[ja:ソースコード]$[en:Source Code]</h2></a>
+    <p>$[ja:アーカイブにはソースコードが含まれています。<br>
+    プロジェクトのリポジトリには以下の URL からアクセスできます。<br><a href="http://yusuke.homeip.net/svnwebclient/directoryContent.jsp?url=samurai">http://yusuke.homeip.net/svnwebclient/directoryContent.jsp?url=samurai</a><br>
+    または以下のように subversion クライアントを使って最新のソースコードをチェックアウトすることもできます。]
+    $[en:The archive contains jar file along with source code.<br>
+    You can access the project repository via <a href="http://yusuke.homeip.net/svnwebclient/directoryContent.jsp?url=samurai">http://yusuke.homeip.net/svnwebclient/directoryContent.jsp?url=samurai</a><br>
+    Or you can check out the latest source code anonymously with a subversion client as follows:]
+    <pre class="codeSample">svn checkout http://yusuke.homeip.net/svn/samurai/trunk samurai
+</pre></p>
+
+
+
+    <a name="mailingList"><h2>$[ja:メーリングリスト]$[en:Mailing list]</h2></a>
+    <p>$[ja:侍 に関する質問、バグレポート、リクエストなどありましたら以下のメーリングリストにお気軽にどうぞ。<br>
+<table border=0 style="background-color: #fff; padding: 5px;" cellspacing=0>
+  <tr><td>
+    <img src="http://groups.google.com/groups/img/3/groups_bar_ja.gif"
+         height=26 width=132 alt="Google グループ">
+  </td></tr>
+  <tr><td style="padding-left: 5px"> <b>侍 - tail toolに参加</b> </td></tr>
+  <form action="http://groups.google.com/group/samurai-j/boxsubscribe">
+  <tr><td style="padding-left: 5px;"> メール アドレス: <input type=text name=email>
+           <input type=submit name="sub" value="登録">
+  </td></tr>
+</form>
+<tr><td align=right> <a href="http://groups.google.com/group/samurai-j">このグループにアクセス</a> </td></tr>
+</table>
+バグ、ロードマップなどについては Jira に登録してあります。<br>
+    <a href="http://yusuke.homeip.net/jira/browse/SMR">Jira へ</a>
+    ]
+    $[en:Any comment, bug report, feature request or patch is highly welcomed.<br>
+    Feel free to post your comments to the mailing list.<br>
+<table border=0 style="background-color: #fff; padding: 5px;" cellspacing=0>
+  <tr><td>
+    <img src="http://groups.google.com/groups/img/3/groups_bar.gif"
+         height=26 width=132 alt="Google Groups">
+  </td></tr>
+  <tr><td style="padding-left: 5px">
+    <b>Subscribe to samurai-tool</b>
+  </td></tr>
+  <form action="http://groups.google.com/group/samurai-tool/boxsubscribe">
+  <tr><td style="padding-left: 5px;">
+    Email: <input type=text name=email>
+           <input type=submit name="sub" value="Subscribe">
+  </td></tr>
+</form>
+<tr><td align=right>
+  <a href="http://groups.google.com/group/samurai-tool">Visit this group</a>
+</td></tr>
+</table>
+<br>
+Known bugs and feature requests will be filed to the Jira site.<br>
+    <a href="http://yusuke.homeip.net/jira/browse/SMR">Go to Jira</a>
+    ]
+    </p>
+
+    <a name="license"><h2>$[ja:ライセンス]$[en:License]</h2></a>
+$[ja:侍は LGPL ライセンスに基づいてリリースされています。]
+$[en:Samurai is released under the LGPL license.]
+<hr/>
+<pre class="codeSample">
+Samurai
+Copyright 2003-2008, Yusuke Yamamoto.
+
+Distributable under LGPL license.
+See terms of license at gnu.org.</pre>
+
+    <a name="pricing"><h2>$[ja:価格]$[en:Pricing]</h2></a>
+$[ja:侍はどなたでも商標、非商用にかかわらず無償でご利用いただけます。<br>
+もし侍があなたの生活を豊かにしてくれると感じたならば、以下の PayPal バッジから寄付していただくことも可能です。<br>
+<br>
+]$[en:Samurai is an opensourced software and free of charge.<br>
+You can use Samurai freely for any commercial or non-commercial project.<br>
+If you feel Samurai makes your life easier, please do consider making a donation!<br><br>]
+<include>paypal.html</include>
+    
+<center><include>adsense468x60.html</include></center>
+</div>
+</div>
+<include>urchin.html</include>
+  </body>
+</html>

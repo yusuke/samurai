@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="http://yusuke.homeip.net/samurai" href="samurai.jnlp">
+  <information>
+    <title>Samurai</title>
+    <vendor>Yusuke Yamamoto</vendor>
+    <homepage href="index.html" />
+    <description>Analyze Thread dumps</description>
+  <icon href="samurai128.gif"/>
+    <icon kind="splash" href="samurai128.gif"/>
+   <offline-allowed />
+  </information>
+  <security>
+    <all-permissions/>
+  </security>
+  <resources>
+    <j2se version="1.4+"  java-vm-args="-Xdock:name=Samurai"/>
+    <property name="com.apple.mrj.application.live-resize" value="false"/>
+	<property name="apple.laf.useScreenMenuBar" value="true"/>
+	<property name="apple.awt.brushMetalLook" value="true"/>
+    <jar href="samurai.jar" />
+  </resources>
+  <application-desc main-class="samurai.swing.Samurai" />
+</jnlp>
