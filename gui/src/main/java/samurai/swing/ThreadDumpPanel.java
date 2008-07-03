@@ -418,16 +418,16 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                                             imageDir.mkdir();
 
                                             saveStreamAsFile(imageDir, "same.gif");
-                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 8, progressBar.getMaximum()));
-                                            saveStreamAsFile(imageDir, "deadlocked.gif");
-                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 7, progressBar.getMaximum()));
-                                            saveStreamAsFile(imageDir, "expandable_win.gif");
                                             SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 6, progressBar.getMaximum()));
-                                            saveStreamAsFile(imageDir, "expandable_mac.gif");
+                                            saveStreamAsFile(imageDir, "deadlocked.gif");
                                             SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 5, progressBar.getMaximum()));
-                                            saveStreamAsFile(imageDir, "shrinkable_win.gif");
+                                            saveStreamAsFile(imageDir, "expandable_win.gif");
                                             SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 4, progressBar.getMaximum()));
-                                            saveStreamAsFile(imageDir, "shrinkable_mac.gif");
+//                                            saveStreamAsFile(imageDir, "expandable_mac.gif");
+//                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 5, progressBar.getMaximum()));
+                                            saveStreamAsFile(imageDir, "shrinkable_win.gif");
+//                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 4, progressBar.getMaximum()));
+//                                            saveStreamAsFile(imageDir, "shrinkable_mac.gif");
                                             SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 3, progressBar.getMaximum()));
 
                                             saveStreamAsFile(imageDir, "tableButton.gif");
@@ -439,6 +439,11 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
 
                                         }
                                         context.setTemporaryStatus(resources.getMessage("ThreadDumpPanel.saved", savedLocation.getAbsolutePath()));
+                                    } catch (Exception ioe) {
+                                        ioe.printStackTrace();
+                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum(), progressBar.getMaximum()));
+                                        context.setTemporaryStatus(ioe.getMessage());
+                                    }finally{
                                         context.invokeLater(new Task() {
                                             public void execute() {
                                                 progressBar.setVisible(false);
@@ -446,8 +451,6 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                                                 saveButton.setEnabled(true);
                                             }
                                         }, 2);
-                                    } catch (IOException ioe) {
-                                        context.setTemporaryStatus(ioe.getMessage());
                                     }
                                 }
                             });
@@ -501,7 +504,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     };
 
     private void saveStreamAsFile(File parentDir, String fileName) throws IOException {
-        InputStream is = ThreadDumpPanel.class.getResourceAsStream("images/" + fileName);
+        InputStream is = ThreadDumpPanel.class.getResourceAsStream("/samurai/web/images/" + fileName);
         FileOutputStream fos = null;
         try {
             fos = new FileOutputStream(parentDir.getAbsolutePath() + "/" + fileName);
