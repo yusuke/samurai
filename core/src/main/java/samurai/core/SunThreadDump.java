@@ -11,8 +11,11 @@ package samurai.core;
  */
 
 /*package*/ class SunThreadDump extends ThreadDump {
-    private String state;
-    private String stackRange;
+    private final String STATE;
+    private final String STACK_RANGE;
+    private final boolean IS_BLOCKED;
+    private boolean isIdle;
+    private final boolean IS_DAEMON;
 
     private final boolean debug = false;
 
@@ -23,6 +26,7 @@ package samurai.core;
     public static final String WAITING_ON_CONDITION = "waiting on condition";
     public static final String SUSPENDED = "suspended";
     private static final long serialVersionUID = -906873270679566722L;
+
 
     /*package*/ SunThreadDump(String header) {
         super(header);
@@ -39,27 +43,30 @@ package samurai.core;
         }
 
         if (state.equals("runnable")) {
-            this.state = RUNNABLE;
+            this.STATE = RUNNABLE;
         } else if (state.equals("waiting on monitor")) {
-            this.state = WAITING_ON_MONITOR;
+            this.STATE = WAITING_ON_MONITOR;
         } else if (state.equals("waiting for monitor entry")) {
-            this.state = WAITING_FOR_MONITOR_ENTRY;
+            this.STATE = WAITING_FOR_MONITOR_ENTRY;
         } else if (state.equals("waiting on condition")) {
-            this.state = WAITING_ON_CONDITION;
+            this.STATE = WAITING_ON_CONDITION;
         } else if (state.equals("suspended")) {
-            this.state = SUSPENDED;
+            this.STATE = SUSPENDED;
 
         } else {
-            this.state = state;
+            this.STATE = state;
         }
 
         //calculate thread stack range
         if (getHeader().endsWith("]")) {
             int stackbegin = getHeader().lastIndexOf("[");
-            this.stackRange = getHeader().substring(stackbegin);
+            this.STACK_RANGE = getHeader().substring(stackbegin);
         } else {
-            this.stackRange = "";
+            this.STACK_RANGE = "";
         }
+
+        IS_BLOCKED = STATE.equals("waiting for monitor entry");
+        IS_DAEMON = -1 != getHeader().indexOf(" daemon ", getHeader().lastIndexOf("\""));
     }
 
 
@@ -132,8 +139,7 @@ package samurai.core;
      * @return if the thread is a daemon thread.
      */
     public boolean isDaemon() {
-        return -1 !=
-                getHeader().indexOf(" daemon ", getHeader().lastIndexOf("\""));
+        return IS_DAEMON;
     }
 
     /**
@@ -142,30 +148,32 @@ package samurai.core;
      * @return name
      */
     public String getStackRange() {
-        return this.stackRange;
+        return this.STACK_RANGE;
     }
-
-//    public String getState() {
-//        return this.state;
-//    }
 
 
     public boolean isBlocked() {
-        return state.equals("waiting for monitor entry");
+        return IS_BLOCKED;
     }
 
+    boolean isIdleAnalyzed = false;
+
     public boolean isIdle() {
-        //test if last method is Object.wait()
-        if (state.equals(SunThreadDump.SUSPENDED) ||
-                state.equals("in Object.wait()")) {
-            return true;
+        if(!isIdleAnalyzed){
+            //test if last method is Object.wait()
+            if (STATE.equals(SunThreadDump.SUSPENDED) ||
+                    STATE.equals("in Object.wait()")) {
+                isIdle = true;
+            }else if (size() > 0) {
+                isIdle= (getLine(0).getClassName().equals("java.lang.Object")
+                        && getLine(0).getMethodName().equals("wait")) ||
+                        (getLine(0).getClassName().equals("java.lang.Thread")
+                                && getLine(0).getMethodName().equals("sleep"));
+            }else{
+                isIdle = false;
+            }
+            isIdleAnalyzed = true;
         }
-        if (size() > 0) {
-            return (getLine(0).getClassName().equals("java.lang.Object")
-                    && getLine(0).getMethodName().equals("wait")) ||
-                    (getLine(0).getClassName().equals("java.lang.Thread")
-                            && getLine(0).getMethodName().equals("sleep"));
-        }
-        return false;
+        return isIdle;
     }
 }

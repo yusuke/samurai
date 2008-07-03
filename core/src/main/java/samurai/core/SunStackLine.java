@@ -11,35 +11,24 @@ package samurai.core;
  */
 public class SunStackLine extends StackLine {
     private static final long serialVersionUID = 2404952046137420766L;
+    private final boolean IS_WAITING_ON;
+    private final String TARGET;
 
     /*package*/ SunStackLine(String line) {
         super(line);
-    }
-
-    /*methods for condition*/
-
-//  public boolean isWaitingToLock() {
-//    return -1 != getLine().indexOf("waiting to lock");
-//  }
-
-//  public boolean isLocked() {
-//    return -1 != getLine().indexOf("locked");
-//  }
-
-    //
-    public boolean isWaitingOn() {
-        return -1 != getLine().indexOf("waiting on");
-    }
-
-    public String getTarget() {
-        if (isLine()) {
-            return "n/a";
+        IS_WAITING_ON = -1 != getLine().indexOf("waiting on");
+        if (isLine() || -1 == getLine().indexOf("<")) {
+            TARGET = "n/a";
         } else {
-            return getLine().substring(getLine().indexOf("<"));
+            TARGET = getLine().substring(getLine().indexOf("<"));
         }
     }
 
-//  public boolean isCondition() {
-//    return getLine().trim().startsWith("-");
-//  }
+    public boolean isWaitingOn() {
+        return IS_WAITING_ON;
+    }
+
+    public String getTarget() {
+        return TARGET;
+    }
 }

@@ -78,20 +78,20 @@ public class TestThreadDump extends TestCase {
         for (int i = 0; i < statistic.getFullThreadDumpCount(); i++) {
             String examining = in.getAbsolutePath() + ":";
             FullThreadDump ftd = statistic.getFullThreadDump(i);
-            assertEquals(examining + "ftd" + i + ".deadLockSize", String.valueOf(ftd.getDeadLockSize()), props.getProperty("ftd." + i + ".deadLockSize"));
-            assertEquals(examining + "ftd" + i + ".threadCount", String.valueOf(ftd.getThreadCount()), props.getProperty("ftd." + i + ".threadCount"));
+            assertEquals(examining + "ftd" + i + ".deadLockSize", props.getProperty("ftd." + i + ".deadLockSize"), String.valueOf(ftd.getDeadLockSize()));
+            assertEquals(examining + "ftd" + i + ".threadCount", props.getProperty("ftd." + i + ".threadCount"), String.valueOf(ftd.getThreadCount()));
             for (int j = 0; j < ftd.getThreadCount(); j++) {
                 ThreadDump td = ftd.getThreadDump(j);
-                assertEquals(examining + "td." + i + j + ".blockedObjectId", String.valueOf(td.getBlockedObjectId()), props.getProperty("td." + i + "." + j + ".blockedObjectId"));
-                assertEquals(examining + "td." + i + j + ".blockerId", String.valueOf(td.getBlockerId()), props.getProperty("td." + i + "." + j + ".blockerId"));
-                assertEquals(examining + "td." + i + j + ".condition", String.valueOf(td.getCondition()), props.getProperty("td." + i + "." + j + ".condition"));
-                assertEquals(examining + "td." + i + j + ".header", String.valueOf(td.getHeader()), props.getProperty("td." + i + "." + j + ".header"));
-                assertEquals(examining + "td." + i + j + ".id", String.valueOf(td.getId()), props.getProperty("td." + i + "." + j + ".id"));
-                assertEquals(examining + "td." + i + j + ".name", String.valueOf(td.getName()), props.getProperty("td." + i + "." + j + ".name"));
-                assertEquals(examining + "td." + i + j + ".isBlocked", String.valueOf(td.isBlocked()), props.getProperty("td." + i + "." + j + ".isBlocked"));
-                assertEquals(examining + "td." + i + j + ".isDaemon", String.valueOf(td.isDaemon()), props.getProperty("td." + i + "." + j + ".isDaemon"));
-                assertEquals(examining + "td." + i + j + ".isDeadLocked", String.valueOf(td.isDeadLocked()), props.getProperty("td." + i + "." + j + ".isDeadLocked"));
-                assertEquals(examining + "td." + i + j + ".isIdle", String.valueOf(td.isIdle()), props.getProperty("td." + i + "." + j + ".isIdle"));
+                assertEquals(examining + "td." + i + "." + j + ".blockedObjectId", props.getProperty("td." + i + "." + j + ".blockedObjectId"), String.valueOf(td.getBlockedObjectId()));
+                assertEquals(examining + "td." + i + "." + j + ".blockerId", props.getProperty("td." + i + "." + j + ".blockerId"), String.valueOf(td.getBlockerId()));
+                assertEquals(examining + "td." + i + "." + j + ".condition", props.getProperty("td." + i + "." + j + ".condition"), String.valueOf(td.getCondition()));
+                assertEquals(examining + "td." + i + "." + j + ".header", props.getProperty("td." + i + "." + j + ".header"), String.valueOf(td.getHeader()));
+                assertEquals(examining + "td." + i + "." + j + ".id", props.getProperty("td." + i + "." + j + ".id"), String.valueOf(td.getId()));
+                assertEquals(examining + "td." + i + "." + j + ".name", props.getProperty("td." + i + "." + j + ".name"), String.valueOf(td.getName()));
+                assertEquals(examining + "td." + i + "." + j + ".isBlocked", props.getProperty("td." + i + "." + j + ".isBlocked"), String.valueOf(td.isBlocked()));
+                assertEquals(examining + "td." + i + "." + j + ".isDaemon", props.getProperty("td." + i + "." + j + ".isDaemon"), String.valueOf(td.isDaemon()));
+                assertEquals(examining + "td." + i + "." + j + ".isDeadLocked", props.getProperty("td." + i + "." + j + ".isDeadLocked"), String.valueOf(td.isDeadLocked()));
+                assertEquals(examining + "td." + i + "." + j + ".isIdle", props.getProperty("td." + i + "." + j + ".isIdle"), String.valueOf(td.isIdle()));
             }
         }
     }

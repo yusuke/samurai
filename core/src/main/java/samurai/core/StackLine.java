@@ -14,11 +14,82 @@ import java.io.Serializable;
 public abstract class StackLine implements Serializable {
     protected String line;
     private static final long serialVersionUID = -4322785746927805891L;
+    private final boolean IS_LINE;
+    private final boolean IS_NATIVE_METHOD;
+    private final String METHOD_NAME;
+    private final String SOURCE;
+    private final String LINE_NUMBER;
+    private final String CLASS_NAME;
+
+    private final boolean IS_TRYING_TO_GET_LOCK;
+    private final boolean IS_HOLDING_LOCK;
+    private final String LOCKED_OBJECT_ID;
+    private final String LOCKED_CLASS_NAME;
 
     //  private List stateList;
     public StackLine(String line) {
         this.line = line;
+        IS_LINE = line.trim().startsWith("at");
+        if (IS_LINE) {
+            int methodIndexBegin = line.lastIndexOf(".", line.indexOf("(")) + 1;
+            int methodIndexEnd = line.indexOf("(");
+            METHOD_NAME = line.substring(methodIndexBegin, methodIndexEnd);
+        } else {
+            METHOD_NAME = "n/a";
+        }
+
+        IS_NATIVE_METHOD = -1 != line.indexOf("(Native Method");
+
+        if (IS_LINE) {
+            if (IS_NATIVE_METHOD) {
+                SOURCE = "Native Method";
+            } else {
+                int sourceIndexBegin = line.indexOf("(") + 1;
+                int sourceIndexEnd = line.indexOf(":");
+                if (-1 != sourceIndexEnd) {
+                    SOURCE = line.substring(sourceIndexBegin, sourceIndexEnd);
+                } else {
+                    SOURCE = "Unknown Source";
+                }
+            }
+        } else {
+            SOURCE = "n/a";
+        }
+
+        if (IS_NATIVE_METHOD) {
+            LINE_NUMBER = "Native Method";
+        } else {
+            int lineIndexBegin = line.lastIndexOf(":") + 1;
+            int lineIndexEnd = line.lastIndexOf(")");
+            if (-1 != lineIndexBegin && -1 != lineIndexEnd) {
+//                System.out.println("line:"+line);
+//                System.out.println("begin:"+lineIndexBegin);
+//                System.out.println("end:"+lineIndexEnd);
+                LINE_NUMBER = line.substring(lineIndexBegin, lineIndexEnd);
+            } else {
+                LINE_NUMBER = "Unknown Source";
+            }
+        }
+
+        if (IS_LINE) {
+            int classIndexBegin = line.indexOf("at ") + 3;
+            int classIndexEnd = line.lastIndexOf(".", line.indexOf("("));
+            CLASS_NAME = line.substring(classIndexBegin, classIndexEnd);
+        } else {
+            CLASS_NAME = "n/a";
+        }
+
+        IS_TRYING_TO_GET_LOCK = -1 != line.indexOf("- waiting to lock");
+        IS_HOLDING_LOCK = -1 != line.indexOf("- locked");
+        if (IS_HOLDING_LOCK || IS_TRYING_TO_GET_LOCK) {
+            LOCKED_OBJECT_ID = line.substring(line.indexOf("<") + 1, line.indexOf(">"));
+            LOCKED_CLASS_NAME = line.substring(line.indexOf("(a ") + 3, line.indexOf(")"));
+        }else{
+            LOCKED_OBJECT_ID = "n/a";
+            LOCKED_CLASS_NAME = "n/a";
+        }
     }
+
 
     /**
      * tests the StackLine is represents a java source line
@@ -27,45 +98,19 @@ public abstract class StackLine implements Serializable {
      */
 
     public boolean isLine() {
-        return getLine().trim().startsWith("at");
+        return IS_LINE;
     }
 
     public String getMethodName() {
-        if (isLine()) {
-            int methodIndexBegin = line.lastIndexOf(".", line.indexOf("(")) + 1;
-            int methodIndexEnd = line.indexOf("(");
-            return line.substring(methodIndexBegin, methodIndexEnd);
-        } else {
-            return "n/a";
-        }
+        return METHOD_NAME;
     }
 
     public String getSource() {
-        if (isLine()) {
-            if (isNativeMethod()) {
-                return "Native Method";
-            } else {
-                int sourceIndexBegin = line.indexOf("(") + 1;
-                int sourceIndexEnd = line.indexOf(":");
-                if (-1 != sourceIndexEnd) {
-                    return line.substring(sourceIndexBegin, sourceIndexEnd);
-                } else {
-                    return "Unknown Source";
-                }
-            }
-        } else {
-            return "n/a";
-        }
+        return SOURCE;
     }
 
     public String getClassName() {
-        if (isLine()) {
-            int classIndexBegin = line.indexOf("at ") + 3;
-            int classIndexEnd = line.lastIndexOf(".", line.indexOf("("));
-            return line.substring(classIndexBegin, classIndexEnd);
-        } else {
-            return "n/a";
-        }
+        return CLASS_NAME;
     }
 
 
@@ -74,21 +119,11 @@ public abstract class StackLine implements Serializable {
     }
 
     public String getLineNumber() {
-        if (isNativeMethod()) {
-            return "Native Method";
-        } else {
-            int lineIndexBegin = line.indexOf(":") + 1;
-            int lineIndexEnd = line.indexOf(")");
-            if (0 != lineIndexBegin) {
-                return line.substring(lineIndexBegin, lineIndexEnd);
-            } else {
-                return "Unknown Source";
-            }
-        }
+        return LINE_NUMBER;
     }
 
     public boolean isNativeMethod() {
-        return -1 != line.indexOf("(Native Method");
+        return IS_NATIVE_METHOD;
     }
 
     public String toString() {
@@ -104,11 +139,11 @@ public abstract class StackLine implements Serializable {
     }
 
     public boolean isTryingToGetLock() {
-        return -1 != line.indexOf("- waiting to lock");
+        return IS_TRYING_TO_GET_LOCK;
     }
 
     public boolean isHoldingLock() {
-        return -1 != line.indexOf("- locked");
+        return IS_HOLDING_LOCK;
     }
 
     private String blockerId = null;
@@ -121,64 +156,11 @@ public abstract class StackLine implements Serializable {
         return this.blockerId;
     }
 
-    //  public abstract boolean isTryingToGetLock();
     public String getLockedObjectId() {
-        return line.substring(line.indexOf("<") + 1, line.indexOf(">"));
+        return LOCKED_OBJECT_ID;
     }
 
     public String getLockedClassName() {
-        return line.substring(line.indexOf("(a ") + 3, line.indexOf(")"));
+        return LOCKED_CLASS_NAME;
     }
-
-//    public String asHTML(int index, boolean shrink) {
-//        if (isHoldingLock()) {
-//            String objId = getLockedObjectId();
-//            int objIdBegin = line.indexOf(objId);
-//            StringBuffer html = new StringBuffer();
-//            html.append(escape(line.substring(0, objIdBegin)));
-//            if (-1 != index) {
-//                html.append("<a name=\"").append(objId).append("_").append(index).append("\"></a>");
-//            } else {
-//                html.append("<a name=\"").append(objId).append("\"></a>");
-//            }
-//            html.append(objId);
-//            html.append(escape(line.substring(objIdBegin + objId.length())));
-//            return html.toString();
-//        } else if (isTryingToGetLock() && null != getLockedObjectId()) {
-//            String objId = getLockedObjectId();
-//            int objIdBegin = line.indexOf(objId);
-//            StringBuffer html = new StringBuffer();
-//            html.append(escape(line.substring(0, objIdBegin)));
-//            if (-1 != index) {
-//                html.append("<a href=\"../sequence/threadId-").append(this.getBlockerId()).append("_shrink-").append(shrink).append(".html#").append(objId).append("_").append(index).append("\">");
-//            } else {
-//                html.append("<a href=\"#").append(objId).append("\">");
-//            }
-//            html.append(objId);
-//            html.append("</a>");
-//            html.append(escape(line.substring(objIdBegin + objId.length())));
-//            return html.toString();
-//        } else {
-//            return escape(line);
-//        }
-//    }
-//
-//    public String asHTML() {
-//        return asHTML(-1, false);
-//    }
-//
-//    public String escape(String from) {
-//        StringBuffer to = new StringBuffer(from.length());
-//        for (int i = 0; i < from.length(); i++) {
-//            char theChar = from.charAt(i);
-//            if ('<' == theChar) {
-//                to.append("&lt;");
-//            } else if ('>' == theChar) {
-//                to.append("&gt;");
-//            } else {
-//                to.append(theChar);
-//            }
-//        }
-//        return to.toString();
-//    }
 }

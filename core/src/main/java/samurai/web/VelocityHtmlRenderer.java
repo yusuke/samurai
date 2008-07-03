@@ -214,16 +214,22 @@ public class VelocityHtmlRenderer implements Constants {
         }
 
         public String escape(String from) {
-            StringBuffer to = new StringBuffer(from.length());
-            for (int i = 0; i < from.length(); i++) {
-                char theChar = from.charAt(i);
-                if ('<' == theChar) {
-                    to.append("&lt;");
-                } else if ('>' == theChar) {
-                    to.append("&gt;");
-                } else {
-                    to.append(theChar);
+            int lessThanIndex = from.indexOf("<");
+            int greaterThanIndex = from.indexOf(">");
+            if(-1 == lessThanIndex && -1 == greaterThanIndex){
+                return from;
+            }
+            StringBuffer to = new StringBuffer(from);
+            while (-1 != lessThanIndex) {
+                to.replace(lessThanIndex, lessThanIndex + 1, "&lt;");
+                lessThanIndex = to.indexOf("<", lessThanIndex + 4);
+                if(greaterThanIndex != -1){
+                    greaterThanIndex += 3;
                 }
+            }
+            while (-1 != greaterThanIndex) {
+                to.replace(greaterThanIndex, greaterThanIndex + 1, "&gt;");
+                greaterThanIndex = to.indexOf(">", greaterThanIndex + 4);
             }
             return to.toString();
         }

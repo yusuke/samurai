@@ -18,9 +18,14 @@ public abstract class ThreadDump implements Serializable {
     private final List<StackLine> stackLines = new ArrayList<StackLine>();
     private final String header;
     private static final long serialVersionUID = -7984606567041592064L;
+    private final String NAME;
 
     public ThreadDump(String header) {
         this.header = header;
+        //extract thread name
+        int headerBeginIndex = getHeader().indexOf("\"") + 1;
+        int headerEndIndex = getHeader().indexOf("\"", headerBeginIndex);
+        NAME = getHeader().substring(headerBeginIndex, headerEndIndex);
     }
 
     public final String getHeader() {
@@ -96,10 +101,7 @@ public abstract class ThreadDump implements Serializable {
      * @return name
      */
     public final String getName() {
-        //extract thread name
-        int headerBeginIndex = getHeader().indexOf("\"") + 1;
-        int headerEndIndex = getHeader().indexOf("\"", headerBeginIndex);
-        return getHeader().substring(headerBeginIndex, headerEndIndex);
+        return NAME;
     }
 
     public final StackLine getLine(int i) {

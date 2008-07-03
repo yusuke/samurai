@@ -64,5 +64,6 @@ $resource.getString("web.view"):&nbsp;
         <td nowrap colspan="3">$resource.getString("web.deadlocked")</td>
         <td class="back-stacked"><img border="0" src="${baseurl}deadlocked.gif"></td>
     </tr>
+</table>
 </body>
 </html>
