@@ -27,7 +27,6 @@ import java.awt.event.AdjustmentEvent;
 import java.awt.event.ComponentEvent;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
-import java.text.DecimalFormat;
 
 
 public class LineGraphPanel extends JPanel implements ClipBoardOperationListener, LineGraph{
@@ -42,14 +41,6 @@ public class LineGraphPanel extends JPanel implements ClipBoardOperationListener
     private static final boolean isMac = (-1 != System.getProperty("os.name").toLowerCase().indexOf("mac"));
 
     public LineGraphPanel() {
-        try {
-            jbInit();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-    }
-
-    void jbInit() throws Exception {
         this.setInputVerifier(null);
         this.addMouseListener(new LineGraphPanel_this_mouseAdapter(this));
         this.addMouseMotionListener(new LineGraphPanel_this_mouseMotionAdapter(this));
@@ -127,88 +118,12 @@ public class LineGraphPanel extends JPanel implements ClipBoardOperationListener
         return splitted;
     }
 
-    private Color background = Color.BLACK;
-    private Color gridColor = new Color(0, 70, 0);
-    private DecimalFormat format = new DecimalFormat("####0.0#############################");
     private void draw(Graphics g1, Rectangle bounds) {
         GraphCanvas c = new LineGraphCanvas(g1);
 
         plotData.drawGraph(c,bounds.x,bounds.y,bounds.width,bounds.height,scrollBar.getValue());
-//        drawGraph(c,bounds.x,bounds.y,bounds.width,bounds.height,scrollBar.getValue());
         adjustScrollBar();
 
-    }
-
-    private void drawGraph(GraphCanvas c, int x, int y, int width, int height,int scroll) {
-        int maxY = y + height - 1;
-        int maxX = x + width - 2;
-        c.setColor(background);
-        c.fillRect(x, y, width, height);
-        c.setColor(gridColor);
-        if (plotData.isInitialized()) {
-            //draw grid
-            //vertical lines
-            for (int i = maxY - 9; i > y; i -= 10) {
-                c.drawLine(x, i, maxX, i);
-            }
-
-            //horizontal lines
-            int gridx;
-            if (width >= plotData.size()) {
-                gridx = 10 - ((plotData.size() - width) % 10);
-            } else {
-                gridx = 10 - ((plotData.size() - width + scroll) % 10);
-            }
-            for (int i = gridx; i < maxX; i += 10) {
-                c.drawLine(i, y, i, maxY);
-            }
-            if (plotData.size() > 0) {
-                int fontHeight = c.getFontHeight() + 2;
-                for (int i = 0; i < plotData.getLabelCount(); i++) {
-                    c.setColor(plotData.getColorAt(i));
-                    c.drawString(plotData.getLabelAt(i) + ":" + format.format(plotData.getMaxAt(i)), 5,
-                            fontHeight * (i + 1));
-                    c.drawString(format.format(plotData.getMinAt(i)), 5,
-                            height - 5 - fontHeight * (plotData.getLabelCount() - 1) +
-                                    fontHeight * i);
-                    if (plotData.isVisibleAt(i)) {
-                        //draw latest value
-                        String currentValue = format.format(plotData.getValueAt(i,
-                                plotData.size() - 1));
-                        int currentValueY = maxY -
-                                (int) ((double) height / plotData.getMaxAt(i) *
-                                        plotData.getValueAt(i, plotData.size() - 1));
-                        currentValueY = fontHeight > currentValueY ? fontHeight :
-                                currentValueY;
-                        c.drawString(currentValue,
-                                width - c.getStringWidth(currentValue) - 5,
-                                currentValueY);
-                        int drawX = maxX;
-
-                        int index;
-                        if(width >= plotData.size()){
-                            index = plotData.size() - 1;
-                        }else{
-                            index = scroll + width - 1;
-                            if(index > plotData.size()){
-                                index = plotData.size() - 1;
-                            }
-                        }
-                        int lastY = maxY -
-                                (int) ((double) height / plotData.getMaxAt(i) *
-                                        plotData.getValueAt(i, index));
-                        for (int j = --index; j >= 0; j--) {
-                            int drawY = maxY -
-                                    (int) ((double) height / plotData.getMaxAt(i) *
-                                            plotData.getValueAt(i, j));
-                            c.drawLine(drawX, lastY, drawX - 1, drawY);
-                            lastY = drawY;
-                            drawX--;
-                        }
-                    }
-                }
-            }
-        }
     }
 
     class LineGraphCanvas implements GraphCanvas {
@@ -236,7 +151,6 @@ public class LineGraphPanel extends JPanel implements ClipBoardOperationListener
 
         public int getFontHeight(){
             return getFontMetrics(g.getFont()).getHeight();
-//            return g.getFont().getSize();
         }
 
         public int getStringWidth(String str){
@@ -288,7 +202,7 @@ public class LineGraphPanel extends JPanel implements ClipBoardOperationListener
                                 try {
                                     plotData.setMaxAt(i, Double.parseDouble(plotSetting.getMax()));
 
-                                } catch (NumberFormatException nfe) {
+                                } catch (NumberFormatException ignore) {
                                 }
                                 plotData.setVisibleAt(i, plotSetting.isPlotVisible());
                                 this.repaint();

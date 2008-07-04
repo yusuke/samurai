@@ -168,4 +168,32 @@ public class TestSunGCParser extends AbstractGraphTest{
 
     }
 
+    /**
+     [GC [DefNew: 512K->64K(576K), 0.0023976 secs] 512K->316K(1984K), 0.0024659 secs]
+     [GC [DefNew: 572K->64K(576K), 0.0019750 secs] 825K->472K(1984K), 0.0020216 secs]
+     [GC [DefNew: 576K->64K(576K), 0.0015165 secs] 984K->687K(1984K), 0.0015580 secs]
+     [GC [DefNew: 545K->64K(576K), 0.0017274 secs] 1169K->899K(1984K), 0.0017770 secs]
+     [GC [DefNew: 576K->63K(576K), 0.0010807 secs] 1411K->1012K(1984K), 0.0011258 secs]
+     [GC [DefNew: 575K->64K(576K), 0.0025559 secs] 1524K->1182K(1984K), 0.0026065 secs]
+     [GC [DefNew: 544K->63K(576K), 0.0030917 secs] 1663K->1375K(1984K), 0.0031511 secs]
+     [GC [DefNew: 538K->64K(576K), 0.0014637 secs][Tenured: 1427K->1074K(1536K), 0.0200039 secs] 1849K->1074K(2112K), 0.0215485 secs]
+     [Full GC [DefNew: 1107K->128K(1152K), 0.0034856 secs] 13000K->12163K(15636K), 0.0035686 secs]
+
+     */
+    public void testPrintGCDetails2() throws Exception {
+        SunGCParser parser = new SunGCParser();
+        expected.add(new double[]{0.0023976d, 512d, 64d});
+        expectedMax.add(576d);
+        expectedMax.add(576d);
+        assertTrue(parser.parse("[GC [DefNew: 512K->64K(576K), 0.0023976 secs] 512K->316K(1984K), 0.0024659 secs]", this));
+        expected.add(new double[]{0.0014637d, 538d, 64d});
+        expected.add(new double[]{0.0215485d, 1427d, 1074d});
+        expectedMax.add(1536d);
+        expectedMax.add(1536d);
+        assertTrue(parser.parse("[GC [DefNew: 538K->64K(576K), 0.0014637 secs][Tenured: 1427K->1074K(1536K), 0.0200039 secs] 1849K->1074K(2112K), 0.0215485 secs]", this));
+        expected.add(new double[]{0.0034856d, 1107d, 128d});
+        expectedMax.add(1152d);
+        expectedMax.add(1152d);
+        assertTrue(parser.parse("[Full GC [DefNew: 1107K->128K(1152K), 0.0034856 secs] 13000K->12163K(15636K), 0.0035686 secs]", this));
+    }
 }

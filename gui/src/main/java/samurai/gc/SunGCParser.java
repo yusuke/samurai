@@ -107,6 +107,8 @@ public class SunGCParser implements LineGraphDataSourceParser {
                     if (-1 != line.indexOf("[GC ")) {
                         // minor GC
                         newGraph.parse(line);
+                        // rarely and strangely old gc happens with "[GC"
+                        oldGraph.parse(line);
                         return true;
                     } else {
                         // Full GC

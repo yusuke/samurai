@@ -239,16 +239,18 @@ import java.text.DecimalFormat;
                         height - 5 - fontHeight * (getLabelCount() - 1) +
                                 fontHeight * i);
                 //draw latest value
-                String currentValue = format.format(getValueAt(i,
-                        size() - 1));
-                int currentValueY = maxY -
-                        (int) ((double) height / getMaxAt(i) *
-                                getValueAt(i, size() - 1));
-                currentValueY = fontHeight > currentValueY ? fontHeight :
-                        currentValueY;
-                c.drawString(currentValue,
-                        width - c.getStringWidth(currentValue) - 5,
-                        currentValueY);
+                if (size() > 0) {
+                    String currentValue = format.format(getValueAt(i,
+                            size() - 1));
+                    int currentValueY = maxY -
+                            (int) ((double) height / getMaxAt(i) *
+                                    getValueAt(i, size() - 1));
+                    currentValueY = fontHeight > currentValueY ? fontHeight :
+                            currentValueY;
+                    c.drawString(currentValue,
+                            width - c.getStringWidth(currentValue) - 5,
+                            currentValueY);
+                }
             }
         }
     }
