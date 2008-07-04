@@ -14,8 +14,11 @@
         text-decoration: underline;
     }
 
-    .stacked {
+    .blocked {
         color: #FF0000;
+    }
+    .blocking {
+        color: #FF9900;
     }
 
     .normal {
@@ -26,8 +29,13 @@
         color: #777777;
     }
 
-    .back-stacked {
+    .back-blocked {
         background-color: #FF0000;
+        width: 16px;
+    }
+
+    .back-blocking {
+        background-color: #FF9900;
         width: 16px;
     }
 
@@ -45,4 +53,5 @@
         background-color: #000000;
         width: 16px;
     }
+
 </style>

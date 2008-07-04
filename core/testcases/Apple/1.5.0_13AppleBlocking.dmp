@@ -1,0 +1,117 @@
+Full thread dump Java HotSpot(TM) Client VM (1.5.0_13-119 mixed mode, sharing):
+
+"DestroyJavaVM" prio=5 tid=0x010012f0 nid=0xb0801000 waiting on condition [0x00000000..0xb0800060]
+
+"Thread-1" prio=5 tid=0x0100b520 nid=0x855600 waiting for monitor entry [0xb0d0b000..0xb0d0bd90]
+	at samurai.core.AThread.run(BlockerExample.java:30)
+	- waiting to lock <0x255ecd28> (a [Ljava.lang.String;)
+
+"Thread-0" prio=5 tid=0x0100b230 nid=0x854800 waiting on condition [0xb0c8a000..0xb0c8ad90]
+	at java.lang.Thread.sleep(Native Method)
+	at samurai.core.AThread.run(BlockerExample.java:30)
+	- locked <0x255ecd28> (a [Ljava.lang.String;)
+
+"Low Memory Detector" daemon prio=5 tid=0x01008f80 nid=0x806c00 runnable [0x00000000..0x00000000]
+
+"CompilerThread0" daemon prio=9 tid=0x010084b0 nid=0x805e00 waiting on condition [0x00000000..0xb0b077d8]
+
+"Signal Dispatcher" daemon prio=9 tid=0x01008050 nid=0x809c00 waiting on condition [0x00000000..0x00000000]
+
+"Finalizer" daemon prio=8 tid=0x01007880 nid=0x818000 in Object.wait() [0xb0a05000..0xb0a05d90]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x25580ad8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x25580ad8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x010074a0 nid=0x816800 in Object.wait() [0xb0984000..0xb0984d90]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x255809e8> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:474)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+	- locked <0x255809e8> (a java.lang.ref.Reference$Lock)
+
+"VM Thread" prio=9 tid=0x01006bf0 nid=0x815a00 runnable 
+
+"VM Periodic Task Thread" prio=9 tid=0x01009b80 nid=0x807a00 waiting on condition 
+
+"Exception Catcher Thread" prio=10 tid=0x010015a0 nid=0x80ae00 runnable 
+Full thread dump Java HotSpot(TM) Client VM (1.5.0_13-119 mixed mode, sharing):
+
+"DestroyJavaVM" prio=5 tid=0x010012f0 nid=0xb0801000 waiting on condition [0x00000000..0xb0800060]
+
+"Thread-1" prio=5 tid=0x0100b520 nid=0x855600 waiting for monitor entry [0xb0d0b000..0xb0d0bd90]
+	at samurai.core.AThread.run(BlockerExample.java:30)
+	- waiting to lock <0x255ecd28> (a [Ljava.lang.String;)
+
+"Thread-0" prio=5 tid=0x0100b230 nid=0x854800 waiting on condition [0xb0c8a000..0xb0c8ad90]
+	at java.lang.Thread.sleep(Native Method)
+	at samurai.core.AThread.run(BlockerExample.java:30)
+	- locked <0x255ecd28> (a [Ljava.lang.String;)
+
+"Low Memory Detector" daemon prio=5 tid=0x01008f80 nid=0x806c00 runnable [0x00000000..0x00000000]
+
+"CompilerThread0" daemon prio=9 tid=0x010084b0 nid=0x805e00 waiting on condition [0x00000000..0xb0b077d8]
+
+"Signal Dispatcher" daemon prio=9 tid=0x01008050 nid=0x809c00 waiting on condition [0x00000000..0x00000000]
+
+"Finalizer" daemon prio=8 tid=0x01007880 nid=0x818000 in Object.wait() [0xb0a05000..0xb0a05d90]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x25580ad8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x25580ad8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x010074a0 nid=0x816800 in Object.wait() [0xb0984000..0xb0984d90]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x255809e8> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:474)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+	- locked <0x255809e8> (a java.lang.ref.Reference$Lock)
+
+"VM Thread" prio=9 tid=0x01006bf0 nid=0x815a00 runnable 
+
+"VM Periodic Task Thread" prio=9 tid=0x01009b80 nid=0x807a00 waiting on condition 
+
+"Exception Catcher Thread" prio=10 tid=0x010015a0 nid=0x80ae00 runnable 
+Full thread dump Java HotSpot(TM) Client VM (1.5.0_13-119 mixed mode, sharing):
+
+"DestroyJavaVM" prio=5 tid=0x010012f0 nid=0xb0801000 waiting on condition [0x00000000..0xb0800060]
+
+"Thread-1" prio=5 tid=0x0100b520 nid=0x855600 waiting for monitor entry [0xb0d0b000..0xb0d0bd90]
+	at samurai.core.AThread.run(BlockerExample.java:30)
+	- waiting to lock <0x255ecd28> (a [Ljava.lang.String;)
+
+"Thread-0" prio=5 tid=0x0100b230 nid=0x854800 waiting on condition [0xb0c8a000..0xb0c8ad90]
+	at java.lang.Thread.sleep(Native Method)
+	at samurai.core.AThread.run(BlockerExample.java:30)
+	- locked <0x255ecd28> (a [Ljava.lang.String;)
+
+"Low Memory Detector" daemon prio=5 tid=0x01008f80 nid=0x806c00 runnable [0x00000000..0x00000000]
+
+"CompilerThread0" daemon prio=9 tid=0x010084b0 nid=0x805e00 waiting on condition [0x00000000..0xb0b077d8]
+
+"Signal Dispatcher" daemon prio=9 tid=0x01008050 nid=0x809c00 waiting on condition [0x00000000..0x00000000]
+
+"Finalizer" daemon prio=8 tid=0x01007880 nid=0x818000 in Object.wait() [0xb0a05000..0xb0a05d90]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x25580ad8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+	- locked <0x25580ad8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+"Reference Handler" daemon prio=10 tid=0x010074a0 nid=0x816800 in Object.wait() [0xb0984000..0xb0984d90]
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x255809e8> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:474)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+	- locked <0x255809e8> (a java.lang.ref.Reference$Lock)
+
+"VM Thread" prio=9 tid=0x01006bf0 nid=0x815a00 runnable 
+
+"VM Periodic Task Thread" prio=9 tid=0x01009b80 nid=0x807a00 waiting on condition 
+
+"Exception Catcher Thread" prio=10 tid=0x010015a0 nid=0x80ae00 runnable 

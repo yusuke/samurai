@@ -8,6 +8,7 @@ td.0.0.header="DestroyJavaVM" prio=5 tid=0x00285c40 nid=0x2f4 waiting on conditi
 td.0.0.id=0x00285c40
 td.0.0.name=DestroyJavaVM
 td.0.0.isBlocked=false
+td.0.0.isBlocking=false
 td.0.0.isDaemon=false
 td.0.0.isDeadLocked=false
 td.0.0.isIdle=false
@@ -23,6 +24,7 @@ td.0.1.header="Thread-1" prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor ent
 td.0.1.id=0x0028ea18
 td.0.1.name=Thread-1
 td.0.1.isBlocked=true
+td.0.1.isBlocking=true
 td.0.1.isDaemon=false
 td.0.1.isDeadLocked=true
 td.0.1.isIdle=false
@@ -38,6 +40,7 @@ td.0.2.header="Thread-0" prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor ent
 td.0.2.id=0x0028e8b0
 td.0.2.name=Thread-0
 td.0.2.isBlocked=true
+td.0.2.isBlocking=true
 td.0.2.isDaemon=false
 td.0.2.isDeadLocked=true
 td.0.2.isIdle=false
@@ -50,6 +53,7 @@ td.0.3.header="Signal Dispatcher" daemon prio=10 tid=0x0097a740 nid=0x238 waitin
 td.0.3.id=0x0097a740
 td.0.3.name=Signal Dispatcher
 td.0.3.isBlocked=false
+td.0.3.isBlocking=false
 td.0.3.isDaemon=true
 td.0.3.isDeadLocked=false
 td.0.3.isIdle=false
@@ -68,6 +72,7 @@ td.0.4.header="Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait(
 td.0.4.id=0x0091a500
 td.0.4.name=Finalizer
 td.0.4.isBlocked=false
+td.0.4.isBlocking=false
 td.0.4.isDaemon=true
 td.0.4.isDeadLocked=false
 td.0.4.isIdle=true
@@ -85,6 +90,7 @@ td.0.5.header="Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Obj
 td.0.5.id=0x00919078
 td.0.5.name=Reference Handler
 td.0.5.isBlocked=false
+td.0.5.isBlocking=false
 td.0.5.isDaemon=true
 td.0.5.isDeadLocked=false
 td.0.5.isIdle=true
@@ -97,6 +103,7 @@ td.0.6.header="VM Thread" prio=5 tid=0x00959360 nid=0x4d0 runnable
 td.0.6.id=0x00959360
 td.0.6.name=VM Thread
 td.0.6.isBlocked=false
+td.0.6.isBlocking=false
 td.0.6.isDaemon=false
 td.0.6.isDeadLocked=false
 td.0.6.isIdle=false
@@ -109,6 +116,7 @@ td.0.7.header="VM Periodic Task Thread" prio=10 tid=0x00973000 nid=0x570 waiting
 td.0.7.id=0x00973000
 td.0.7.name=VM Periodic Task Thread
 td.0.7.isBlocked=false
+td.0.7.isBlocking=false
 td.0.7.isDaemon=false
 td.0.7.isDeadLocked=false
 td.0.7.isIdle=false
@@ -121,6 +129,7 @@ td.0.8.header="Suspend Checker Thread" prio=10 tid=0x0097a008 nid=0x1d8 runnable
 td.0.8.id=0x0097a008
 td.0.8.name=Suspend Checker Thread
 td.0.8.isBlocked=false
+td.0.8.isBlocking=false
 td.0.8.isDaemon=false
 td.0.8.isDeadLocked=false
 td.0.8.isIdle=false
@@ -135,6 +144,7 @@ td.1.0.header="DestroyJavaVM" prio=5 tid=0x00285c40 nid=0x2f4 waiting on conditi
 td.1.0.id=0x00285c40
 td.1.0.name=DestroyJavaVM
 td.1.0.isBlocked=false
+td.1.0.isBlocking=false
 td.1.0.isDaemon=false
 td.1.0.isDeadLocked=false
 td.1.0.isIdle=false
@@ -150,6 +160,7 @@ td.1.1.header="Thread-1" prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor ent
 td.1.1.id=0x0028ea18
 td.1.1.name=Thread-1
 td.1.1.isBlocked=true
+td.1.1.isBlocking=true
 td.1.1.isDaemon=false
 td.1.1.isDeadLocked=true
 td.1.1.isIdle=false
@@ -165,6 +176,7 @@ td.1.2.header="Thread-0" prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor ent
 td.1.2.id=0x0028e8b0
 td.1.2.name=Thread-0
 td.1.2.isBlocked=true
+td.1.2.isBlocking=true
 td.1.2.isDaemon=false
 td.1.2.isDeadLocked=true
 td.1.2.isIdle=false
@@ -177,6 +189,7 @@ td.1.3.header="Signal Dispatcher" daemon prio=10 tid=0x0097a740 nid=0x238 waitin
 td.1.3.id=0x0097a740
 td.1.3.name=Signal Dispatcher
 td.1.3.isBlocked=false
+td.1.3.isBlocking=false
 td.1.3.isDaemon=true
 td.1.3.isDeadLocked=false
 td.1.3.isIdle=false
@@ -195,6 +208,7 @@ td.1.4.header="Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait(
 td.1.4.id=0x0091a500
 td.1.4.name=Finalizer
 td.1.4.isBlocked=false
+td.1.4.isBlocking=false
 td.1.4.isDaemon=true
 td.1.4.isDeadLocked=false
 td.1.4.isIdle=true
@@ -212,6 +226,7 @@ td.1.5.header="Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Obj
 td.1.5.id=0x00919078
 td.1.5.name=Reference Handler
 td.1.5.isBlocked=false
+td.1.5.isBlocking=false
 td.1.5.isDaemon=true
 td.1.5.isDeadLocked=false
 td.1.5.isIdle=true
@@ -224,6 +239,7 @@ td.1.6.header="VM Thread" prio=5 tid=0x00959360 nid=0x4d0 runnable
 td.1.6.id=0x00959360
 td.1.6.name=VM Thread
 td.1.6.isBlocked=false
+td.1.6.isBlocking=false
 td.1.6.isDaemon=false
 td.1.6.isDeadLocked=false
 td.1.6.isIdle=false
@@ -236,6 +252,7 @@ td.1.7.header="VM Periodic Task Thread" prio=10 tid=0x00973000 nid=0x570 waiting
 td.1.7.id=0x00973000
 td.1.7.name=VM Periodic Task Thread
 td.1.7.isBlocked=false
+td.1.7.isBlocking=false
 td.1.7.isDaemon=false
 td.1.7.isDeadLocked=false
 td.1.7.isIdle=false
@@ -248,6 +265,7 @@ td.1.8.header="Suspend Checker Thread" prio=10 tid=0x0097a008 nid=0x1d8 runnable
 td.1.8.id=0x0097a008
 td.1.8.name=Suspend Checker Thread
 td.1.8.isBlocked=false
+td.1.8.isBlocking=false
 td.1.8.isDaemon=false
 td.1.8.isDeadLocked=false
 td.1.8.isIdle=false
@@ -262,6 +280,7 @@ td.2.0.header="DestroyJavaVM" prio=5 tid=0x00285c40 nid=0x2f4 waiting on conditi
 td.2.0.id=0x00285c40
 td.2.0.name=DestroyJavaVM
 td.2.0.isBlocked=false
+td.2.0.isBlocking=false
 td.2.0.isDaemon=false
 td.2.0.isDeadLocked=false
 td.2.0.isIdle=false
@@ -277,6 +296,7 @@ td.2.1.header="Thread-1" prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor ent
 td.2.1.id=0x0028ea18
 td.2.1.name=Thread-1
 td.2.1.isBlocked=true
+td.2.1.isBlocking=true
 td.2.1.isDaemon=false
 td.2.1.isDeadLocked=true
 td.2.1.isIdle=false
@@ -292,6 +312,7 @@ td.2.2.header="Thread-0" prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor ent
 td.2.2.id=0x0028e8b0
 td.2.2.name=Thread-0
 td.2.2.isBlocked=true
+td.2.2.isBlocking=true
 td.2.2.isDaemon=false
 td.2.2.isDeadLocked=true
 td.2.2.isIdle=false
@@ -304,6 +325,7 @@ td.2.3.header="Signal Dispatcher" daemon prio=10 tid=0x0097a740 nid=0x238 waitin
 td.2.3.id=0x0097a740
 td.2.3.name=Signal Dispatcher
 td.2.3.isBlocked=false
+td.2.3.isBlocking=false
 td.2.3.isDaemon=true
 td.2.3.isDeadLocked=false
 td.2.3.isIdle=false
@@ -322,6 +344,7 @@ td.2.4.header="Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait(
 td.2.4.id=0x0091a500
 td.2.4.name=Finalizer
 td.2.4.isBlocked=false
+td.2.4.isBlocking=false
 td.2.4.isDaemon=true
 td.2.4.isDeadLocked=false
 td.2.4.isIdle=true
@@ -339,6 +362,7 @@ td.2.5.header="Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Obj
 td.2.5.id=0x00919078
 td.2.5.name=Reference Handler
 td.2.5.isBlocked=false
+td.2.5.isBlocking=false
 td.2.5.isDaemon=true
 td.2.5.isDeadLocked=false
 td.2.5.isIdle=true
@@ -351,6 +375,7 @@ td.2.6.header="VM Thread" prio=5 tid=0x00959360 nid=0x4d0 runnable
 td.2.6.id=0x00959360
 td.2.6.name=VM Thread
 td.2.6.isBlocked=false
+td.2.6.isBlocking=false
 td.2.6.isDaemon=false
 td.2.6.isDeadLocked=false
 td.2.6.isIdle=false
@@ -363,6 +388,7 @@ td.2.7.header="VM Periodic Task Thread" prio=10 tid=0x00973000 nid=0x570 waiting
 td.2.7.id=0x00973000
 td.2.7.name=VM Periodic Task Thread
 td.2.7.isBlocked=false
+td.2.7.isBlocking=false
 td.2.7.isDaemon=false
 td.2.7.isDeadLocked=false
 td.2.7.isIdle=false
@@ -375,6 +401,7 @@ td.2.8.header="Suspend Checker Thread" prio=10 tid=0x0097a008 nid=0x1d8 runnable
 td.2.8.id=0x0097a008
 td.2.8.name=Suspend Checker Thread
 td.2.8.isBlocked=false
+td.2.8.isBlocking=false
 td.2.8.isDaemon=false
 td.2.8.isDeadLocked=false
 td.2.8.isIdle=false
@@ -389,6 +416,7 @@ td.3.0.header="DestroyJavaVM" prio=5 tid=0x00285c40 nid=0x2f4 waiting on conditi
 td.3.0.id=0x00285c40
 td.3.0.name=DestroyJavaVM
 td.3.0.isBlocked=false
+td.3.0.isBlocking=false
 td.3.0.isDaemon=false
 td.3.0.isDeadLocked=false
 td.3.0.isIdle=false
@@ -404,6 +432,7 @@ td.3.1.header="Thread-1" prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor ent
 td.3.1.id=0x0028ea18
 td.3.1.name=Thread-1
 td.3.1.isBlocked=true
+td.3.1.isBlocking=true
 td.3.1.isDaemon=false
 td.3.1.isDeadLocked=true
 td.3.1.isIdle=false
@@ -419,6 +448,7 @@ td.3.2.header="Thread-0" prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor ent
 td.3.2.id=0x0028e8b0
 td.3.2.name=Thread-0
 td.3.2.isBlocked=true
+td.3.2.isBlocking=true
 td.3.2.isDaemon=false
 td.3.2.isDeadLocked=true
 td.3.2.isIdle=false
@@ -431,6 +461,7 @@ td.3.3.header="Signal Dispatcher" daemon prio=10 tid=0x0097a740 nid=0x238 waitin
 td.3.3.id=0x0097a740
 td.3.3.name=Signal Dispatcher
 td.3.3.isBlocked=false
+td.3.3.isBlocking=false
 td.3.3.isDaemon=true
 td.3.3.isDeadLocked=false
 td.3.3.isIdle=false
@@ -449,6 +480,7 @@ td.3.4.header="Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait(
 td.3.4.id=0x0091a500
 td.3.4.name=Finalizer
 td.3.4.isBlocked=false
+td.3.4.isBlocking=false
 td.3.4.isDaemon=true
 td.3.4.isDeadLocked=false
 td.3.4.isIdle=true
@@ -466,6 +498,7 @@ td.3.5.header="Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Obj
 td.3.5.id=0x00919078
 td.3.5.name=Reference Handler
 td.3.5.isBlocked=false
+td.3.5.isBlocking=false
 td.3.5.isDaemon=true
 td.3.5.isDeadLocked=false
 td.3.5.isIdle=true
@@ -478,6 +511,7 @@ td.3.6.header="VM Thread" prio=5 tid=0x00959360 nid=0x4d0 runnable
 td.3.6.id=0x00959360
 td.3.6.name=VM Thread
 td.3.6.isBlocked=false
+td.3.6.isBlocking=false
 td.3.6.isDaemon=false
 td.3.6.isDeadLocked=false
 td.3.6.isIdle=false
@@ -490,6 +524,7 @@ td.3.7.header="VM Periodic Task Thread" prio=10 tid=0x00973000 nid=0x570 waiting
 td.3.7.id=0x00973000
 td.3.7.name=VM Periodic Task Thread
 td.3.7.isBlocked=false
+td.3.7.isBlocking=false
 td.3.7.isDaemon=false
 td.3.7.isDeadLocked=false
 td.3.7.isIdle=false
@@ -502,6 +537,7 @@ td.3.8.header="Suspend Checker Thread" prio=10 tid=0x0097a008 nid=0x1d8 runnable
 td.3.8.id=0x0097a008
 td.3.8.name=Suspend Checker Thread
 td.3.8.isBlocked=false
+td.3.8.isBlocking=false
 td.3.8.isDaemon=false
 td.3.8.isDeadLocked=false
 td.3.8.isIdle=false
@@ -516,6 +552,7 @@ td.4.0.header="DestroyJavaVM" prio=5 tid=0x00285c40 nid=0x2f4 waiting on conditi
 td.4.0.id=0x00285c40
 td.4.0.name=DestroyJavaVM
 td.4.0.isBlocked=false
+td.4.0.isBlocking=false
 td.4.0.isDaemon=false
 td.4.0.isDeadLocked=false
 td.4.0.isIdle=false
@@ -531,6 +568,7 @@ td.4.1.header="Thread-1" prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor ent
 td.4.1.id=0x0028ea18
 td.4.1.name=Thread-1
 td.4.1.isBlocked=true
+td.4.1.isBlocking=true
 td.4.1.isDaemon=false
 td.4.1.isDeadLocked=true
 td.4.1.isIdle=false
@@ -546,6 +584,7 @@ td.4.2.header="Thread-0" prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor ent
 td.4.2.id=0x0028e8b0
 td.4.2.name=Thread-0
 td.4.2.isBlocked=true
+td.4.2.isBlocking=true
 td.4.2.isDaemon=false
 td.4.2.isDeadLocked=true
 td.4.2.isIdle=false
@@ -558,6 +597,7 @@ td.4.3.header="Signal Dispatcher" daemon prio=10 tid=0x0097a740 nid=0x238 waitin
 td.4.3.id=0x0097a740
 td.4.3.name=Signal Dispatcher
 td.4.3.isBlocked=false
+td.4.3.isBlocking=false
 td.4.3.isDaemon=true
 td.4.3.isDeadLocked=false
 td.4.3.isIdle=false
@@ -576,6 +616,7 @@ td.4.4.header="Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait(
 td.4.4.id=0x0091a500
 td.4.4.name=Finalizer
 td.4.4.isBlocked=false
+td.4.4.isBlocking=false
 td.4.4.isDaemon=true
 td.4.4.isDeadLocked=false
 td.4.4.isIdle=true
@@ -593,6 +634,7 @@ td.4.5.header="Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Obj
 td.4.5.id=0x00919078
 td.4.5.name=Reference Handler
 td.4.5.isBlocked=false
+td.4.5.isBlocking=false
 td.4.5.isDaemon=true
 td.4.5.isDeadLocked=false
 td.4.5.isIdle=true
@@ -605,6 +647,7 @@ td.4.6.header="VM Thread" prio=5 tid=0x00959360 nid=0x4d0 runnable
 td.4.6.id=0x00959360
 td.4.6.name=VM Thread
 td.4.6.isBlocked=false
+td.4.6.isBlocking=false
 td.4.6.isDaemon=false
 td.4.6.isDeadLocked=false
 td.4.6.isIdle=false
@@ -617,6 +660,7 @@ td.4.7.header="VM Periodic Task Thread" prio=10 tid=0x00973000 nid=0x570 waiting
 td.4.7.id=0x00973000
 td.4.7.name=VM Periodic Task Thread
 td.4.7.isBlocked=false
+td.4.7.isBlocking=false
 td.4.7.isDaemon=false
 td.4.7.isDeadLocked=false
 td.4.7.isIdle=false
@@ -629,6 +673,7 @@ td.4.8.header="Suspend Checker Thread" prio=10 tid=0x0097a008 nid=0x1d8 runnable
 td.4.8.id=0x0097a008
 td.4.8.name=Suspend Checker Thread
 td.4.8.isBlocked=false
+td.4.8.isBlocking=false
 td.4.8.isDaemon=false
 td.4.8.isDeadLocked=false
 td.4.8.isIdle=false
@@ -643,6 +688,7 @@ td.5.0.header="DestroyJavaVM" prio=5 tid=0x00285c40 nid=0x2f4 waiting on conditi
 td.5.0.id=0x00285c40
 td.5.0.name=DestroyJavaVM
 td.5.0.isBlocked=false
+td.5.0.isBlocking=false
 td.5.0.isDaemon=false
 td.5.0.isDeadLocked=false
 td.5.0.isIdle=false
@@ -658,6 +704,7 @@ td.5.1.header="Thread-1" prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor ent
 td.5.1.id=0x0028ea18
 td.5.1.name=Thread-1
 td.5.1.isBlocked=true
+td.5.1.isBlocking=true
 td.5.1.isDaemon=false
 td.5.1.isDeadLocked=true
 td.5.1.isIdle=false
@@ -673,6 +720,7 @@ td.5.2.header="Thread-0" prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor ent
 td.5.2.id=0x0028e8b0
 td.5.2.name=Thread-0
 td.5.2.isBlocked=true
+td.5.2.isBlocking=true
 td.5.2.isDaemon=false
 td.5.2.isDeadLocked=true
 td.5.2.isIdle=false
@@ -685,6 +733,7 @@ td.5.3.header="Signal Dispatcher" daemon prio=10 tid=0x0097a740 nid=0x238 waitin
 td.5.3.id=0x0097a740
 td.5.3.name=Signal Dispatcher
 td.5.3.isBlocked=false
+td.5.3.isBlocking=false
 td.5.3.isDaemon=true
 td.5.3.isDeadLocked=false
 td.5.3.isIdle=false
@@ -703,6 +752,7 @@ td.5.4.header="Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait(
 td.5.4.id=0x0091a500
 td.5.4.name=Finalizer
 td.5.4.isBlocked=false
+td.5.4.isBlocking=false
 td.5.4.isDaemon=true
 td.5.4.isDeadLocked=false
 td.5.4.isIdle=true
@@ -720,6 +770,7 @@ td.5.5.header="Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Obj
 td.5.5.id=0x00919078
 td.5.5.name=Reference Handler
 td.5.5.isBlocked=false
+td.5.5.isBlocking=false
 td.5.5.isDaemon=true
 td.5.5.isDeadLocked=false
 td.5.5.isIdle=true
@@ -732,6 +783,7 @@ td.5.6.header="VM Thread" prio=5 tid=0x00959360 nid=0x4d0 runnable
 td.5.6.id=0x00959360
 td.5.6.name=VM Thread
 td.5.6.isBlocked=false
+td.5.6.isBlocking=false
 td.5.6.isDaemon=false
 td.5.6.isDeadLocked=false
 td.5.6.isIdle=false
@@ -744,6 +796,7 @@ td.5.7.header="VM Periodic Task Thread" prio=10 tid=0x00973000 nid=0x570 waiting
 td.5.7.id=0x00973000
 td.5.7.name=VM Periodic Task Thread
 td.5.7.isBlocked=false
+td.5.7.isBlocking=false
 td.5.7.isDaemon=false
 td.5.7.isDeadLocked=false
 td.5.7.isIdle=false
@@ -756,6 +809,7 @@ td.5.8.header="Suspend Checker Thread" prio=10 tid=0x0097a008 nid=0x1d8 runnable
 td.5.8.id=0x0097a008
 td.5.8.name=Suspend Checker Thread
 td.5.8.isBlocked=false
+td.5.8.isBlocking=false
 td.5.8.isDaemon=false
 td.5.8.isDeadLocked=false
 td.5.8.isIdle=false
@@ -770,6 +824,7 @@ td.6.0.header="DestroyJavaVM" prio=5 tid=0x00285c40 nid=0x2f4 waiting on conditi
 td.6.0.id=0x00285c40
 td.6.0.name=DestroyJavaVM
 td.6.0.isBlocked=false
+td.6.0.isBlocking=false
 td.6.0.isDaemon=false
 td.6.0.isDeadLocked=false
 td.6.0.isIdle=false
@@ -785,6 +840,7 @@ td.6.1.header="Thread-1" prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor ent
 td.6.1.id=0x0028ea18
 td.6.1.name=Thread-1
 td.6.1.isBlocked=true
+td.6.1.isBlocking=true
 td.6.1.isDaemon=false
 td.6.1.isDeadLocked=true
 td.6.1.isIdle=false
@@ -800,6 +856,7 @@ td.6.2.header="Thread-0" prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor ent
 td.6.2.id=0x0028e8b0
 td.6.2.name=Thread-0
 td.6.2.isBlocked=true
+td.6.2.isBlocking=true
 td.6.2.isDaemon=false
 td.6.2.isDeadLocked=true
 td.6.2.isIdle=false
@@ -812,6 +869,7 @@ td.6.3.header="Signal Dispatcher" daemon prio=10 tid=0x0097a740 nid=0x238 waitin
 td.6.3.id=0x0097a740
 td.6.3.name=Signal Dispatcher
 td.6.3.isBlocked=false
+td.6.3.isBlocking=false
 td.6.3.isDaemon=true
 td.6.3.isDeadLocked=false
 td.6.3.isIdle=false
@@ -830,6 +888,7 @@ td.6.4.header="Finalizer" daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait(
 td.6.4.id=0x0091a500
 td.6.4.name=Finalizer
 td.6.4.isBlocked=false
+td.6.4.isBlocking=false
 td.6.4.isDaemon=true
 td.6.4.isDeadLocked=false
 td.6.4.isIdle=true
@@ -847,6 +906,7 @@ td.6.5.header="Reference Handler" daemon prio=10 tid=0x00919078 nid=0x490 in Obj
 td.6.5.id=0x00919078
 td.6.5.name=Reference Handler
 td.6.5.isBlocked=false
+td.6.5.isBlocking=false
 td.6.5.isDaemon=true
 td.6.5.isDeadLocked=false
 td.6.5.isIdle=true
@@ -859,6 +919,7 @@ td.6.6.header="VM Thread" prio=5 tid=0x00959360 nid=0x4d0 runnable
 td.6.6.id=0x00959360
 td.6.6.name=VM Thread
 td.6.6.isBlocked=false
+td.6.6.isBlocking=false
 td.6.6.isDaemon=false
 td.6.6.isDeadLocked=false
 td.6.6.isIdle=false
@@ -871,6 +932,7 @@ td.6.7.header="VM Periodic Task Thread" prio=10 tid=0x00973000 nid=0x570 waiting
 td.6.7.id=0x00973000
 td.6.7.name=VM Periodic Task Thread
 td.6.7.isBlocked=false
+td.6.7.isBlocking=false
 td.6.7.isDaemon=false
 td.6.7.isDeadLocked=false
 td.6.7.isIdle=false
@@ -883,6 +945,7 @@ td.6.8.header="Suspend Checker Thread" prio=10 tid=0x0097a008 nid=0x1d8 runnable
 td.6.8.id=0x0097a008
 td.6.8.name=Suspend Checker Thread
 td.6.8.isBlocked=false
+td.6.8.isBlocking=false
 td.6.8.isDaemon=false
 td.6.8.isDeadLocked=false
 td.6.8.isIdle=false

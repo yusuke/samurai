@@ -8,6 +8,7 @@ td.0.0.header="Thread-2" id=12 idx=0x2 tid=5428 prio=5 alive, in native, daemon
 td.0.0.id=12
 td.0.0.name=Thread-2
 td.0.0.isBlocked=false
+td.0.0.isBlocking=false
 td.0.0.isDaemon=true
 td.0.0.isDeadLocked=false
 td.0.0.isIdle=false
@@ -20,6 +21,7 @@ td.0.1.header="(Signal Handler)" id=2 idx=0x4 tid=4980 prio=5 alive, in native, 
 td.0.1.id=2
 td.0.1.name=(Signal Handler)
 td.0.1.isBlocked=false
+td.0.1.isBlocking=false
 td.0.1.isDaemon=true
 td.0.1.isDeadLocked=false
 td.0.1.isIdle=false
@@ -32,6 +34,7 @@ td.0.2.header="(Code Generation Thread 1)" id=3 idx=0x6 tid=4924 prio=5 alive, i
 td.0.2.id=3
 td.0.2.name=(Code Generation Thread 1)
 td.0.2.isBlocked=false
+td.0.2.isBlocking=false
 td.0.2.isDaemon=true
 td.0.2.isDeadLocked=false
 td.0.2.isIdle=true
@@ -44,6 +47,7 @@ td.0.3.header="(Code Optimization Thread 1)" id=4 idx=0x8 tid=5612 prio=5 alive,
 td.0.3.id=4
 td.0.3.name=(Code Optimization Thread 1)
 td.0.3.isBlocked=false
+td.0.3.isBlocking=false
 td.0.3.isDaemon=true
 td.0.3.isDeadLocked=false
 td.0.3.isIdle=true
@@ -56,6 +60,7 @@ td.0.4.header="(GC Main Thread)" id=5 idx=0xa tid=1964 prio=5 alive, in native, 
 td.0.4.id=5
 td.0.4.name=(GC Main Thread)
 td.0.4.isBlocked=false
+td.0.4.isBlocking=false
 td.0.4.isDaemon=true
 td.0.4.isDeadLocked=false
 td.0.4.isIdle=false
@@ -68,6 +73,7 @@ td.0.5.header="(GC Worker Thread 1)" id=6 idx=0xc tid=5432 prio=5 alive, in nati
 td.0.5.id=6
 td.0.5.name=(GC Worker Thread 1)
 td.0.5.isBlocked=false
+td.0.5.isBlocking=false
 td.0.5.isDaemon=true
 td.0.5.isDeadLocked=false
 td.0.5.isIdle=true
@@ -80,6 +86,7 @@ td.0.6.header="(Hotspot Detector)" id=7 idx=0xe tid=1720 prio=10 alive, in nativ
 td.0.6.id=7
 td.0.6.name=(Hotspot Detector)
 td.0.6.isBlocked=false
+td.0.6.isBlocking=false
 td.0.6.isDaemon=true
 td.0.6.isDeadLocked=false
 td.0.6.isIdle=false
@@ -98,6 +105,7 @@ td.0.7.header="Finalizer" id=8 idx=0x10 tid=4128 prio=8 alive, in native, native
 td.0.7.id=8
 td.0.7.name=Finalizer
 td.0.7.isBlocked=false
+td.0.7.isBlocking=false
 td.0.7.isDaemon=true
 td.0.7.isDeadLocked=false
 td.0.7.isIdle=true
@@ -115,6 +123,7 @@ td.0.8.header="Reference Handler" id=9 idx=0x12 tid=1012 prio=10 alive, in nativ
 td.0.8.id=9
 td.0.8.name=Reference Handler
 td.0.8.isBlocked=false
+td.0.8.isBlocking=false
 td.0.8.isDaemon=true
 td.0.8.isDeadLocked=false
 td.0.8.isIdle=true
@@ -136,6 +145,7 @@ td.0.9.header="Thread-0" id=10 idx=0x14 tid=5628 prio=5 alive, in native, blocke
 td.0.9.id=10
 td.0.9.name=Thread-0
 td.0.9.isBlocked=true
+td.0.9.isBlocking=true
 td.0.9.isDaemon=false
 td.0.9.isDeadLocked=true
 td.0.9.isIdle=false
@@ -157,6 +167,7 @@ td.0.10.header="Thread-1" id=11 idx=0x16 tid=3264 prio=5 alive, in native, block
 td.0.10.id=11
 td.0.10.name=Thread-1
 td.0.10.isBlocked=true
+td.0.10.isBlocking=true
 td.0.10.isDaemon=false
 td.0.10.isDeadLocked=true
 td.0.10.isIdle=false
@@ -171,6 +182,7 @@ td.1.0.header="Thread-2" id=12 idx=0x2 tid=5428 prio=5 alive, in native, daemon
 td.1.0.id=12
 td.1.0.name=Thread-2
 td.1.0.isBlocked=false
+td.1.0.isBlocking=false
 td.1.0.isDaemon=true
 td.1.0.isDeadLocked=false
 td.1.0.isIdle=false
@@ -183,6 +195,7 @@ td.1.1.header="(Signal Handler)" id=2 idx=0x4 tid=4980 prio=5 alive, in native, 
 td.1.1.id=2
 td.1.1.name=(Signal Handler)
 td.1.1.isBlocked=false
+td.1.1.isBlocking=false
 td.1.1.isDaemon=true
 td.1.1.isDeadLocked=false
 td.1.1.isIdle=false
@@ -195,6 +208,7 @@ td.1.2.header="(Code Generation Thread 1)" id=3 idx=0x6 tid=4924 prio=5 alive, i
 td.1.2.id=3
 td.1.2.name=(Code Generation Thread 1)
 td.1.2.isBlocked=false
+td.1.2.isBlocking=false
 td.1.2.isDaemon=true
 td.1.2.isDeadLocked=false
 td.1.2.isIdle=true
@@ -207,6 +221,7 @@ td.1.3.header="(Code Optimization Thread 1)" id=4 idx=0x8 tid=5612 prio=5 alive,
 td.1.3.id=4
 td.1.3.name=(Code Optimization Thread 1)
 td.1.3.isBlocked=false
+td.1.3.isBlocking=false
 td.1.3.isDaemon=true
 td.1.3.isDeadLocked=false
 td.1.3.isIdle=true
@@ -219,6 +234,7 @@ td.1.4.header="(GC Main Thread)" id=5 idx=0xa tid=1964 prio=5 alive, in native, 
 td.1.4.id=5
 td.1.4.name=(GC Main Thread)
 td.1.4.isBlocked=false
+td.1.4.isBlocking=false
 td.1.4.isDaemon=true
 td.1.4.isDeadLocked=false
 td.1.4.isIdle=false
@@ -231,6 +247,7 @@ td.1.5.header="(GC Worker Thread 1)" id=6 idx=0xc tid=5432 prio=5 alive, in nati
 td.1.5.id=6
 td.1.5.name=(GC Worker Thread 1)
 td.1.5.isBlocked=false
+td.1.5.isBlocking=false
 td.1.5.isDaemon=true
 td.1.5.isDeadLocked=false
 td.1.5.isIdle=true
@@ -243,6 +260,7 @@ td.1.6.header="(Hotspot Detector)" id=7 idx=0xe tid=1720 prio=10 alive, in nativ
 td.1.6.id=7
 td.1.6.name=(Hotspot Detector)
 td.1.6.isBlocked=false
+td.1.6.isBlocking=false
 td.1.6.isDaemon=true
 td.1.6.isDeadLocked=false
 td.1.6.isIdle=false
@@ -261,6 +279,7 @@ td.1.7.header="Finalizer" id=8 idx=0x10 tid=4128 prio=8 alive, in native, native
 td.1.7.id=8
 td.1.7.name=Finalizer
 td.1.7.isBlocked=false
+td.1.7.isBlocking=false
 td.1.7.isDaemon=true
 td.1.7.isDeadLocked=false
 td.1.7.isIdle=true
@@ -278,6 +297,7 @@ td.1.8.header="Reference Handler" id=9 idx=0x12 tid=1012 prio=10 alive, in nativ
 td.1.8.id=9
 td.1.8.name=Reference Handler
 td.1.8.isBlocked=false
+td.1.8.isBlocking=false
 td.1.8.isDaemon=true
 td.1.8.isDeadLocked=false
 td.1.8.isIdle=true
@@ -299,6 +319,7 @@ td.1.9.header="Thread-0" id=10 idx=0x14 tid=5628 prio=5 alive, in native, blocke
 td.1.9.id=10
 td.1.9.name=Thread-0
 td.1.9.isBlocked=true
+td.1.9.isBlocking=true
 td.1.9.isDaemon=false
 td.1.9.isDeadLocked=true
 td.1.9.isIdle=false
@@ -320,6 +341,7 @@ td.1.10.header="Thread-1" id=11 idx=0x16 tid=3264 prio=5 alive, in native, block
 td.1.10.id=11
 td.1.10.name=Thread-1
 td.1.10.isBlocked=true
+td.1.10.isBlocking=true
 td.1.10.isDaemon=false
 td.1.10.isDeadLocked=true
 td.1.10.isIdle=false
@@ -334,6 +356,7 @@ td.2.0.header="Thread-2" id=12 idx=0x2 tid=5428 prio=5 alive, in native, daemon
 td.2.0.id=12
 td.2.0.name=Thread-2
 td.2.0.isBlocked=false
+td.2.0.isBlocking=false
 td.2.0.isDaemon=true
 td.2.0.isDeadLocked=false
 td.2.0.isIdle=false
@@ -346,6 +369,7 @@ td.2.1.header="(Signal Handler)" id=2 idx=0x4 tid=4980 prio=5 alive, in native, 
 td.2.1.id=2
 td.2.1.name=(Signal Handler)
 td.2.1.isBlocked=false
+td.2.1.isBlocking=false
 td.2.1.isDaemon=true
 td.2.1.isDeadLocked=false
 td.2.1.isIdle=false
@@ -358,6 +382,7 @@ td.2.2.header="(Code Generation Thread 1)" id=3 idx=0x6 tid=4924 prio=5 alive, i
 td.2.2.id=3
 td.2.2.name=(Code Generation Thread 1)
 td.2.2.isBlocked=false
+td.2.2.isBlocking=false
 td.2.2.isDaemon=true
 td.2.2.isDeadLocked=false
 td.2.2.isIdle=true
@@ -370,6 +395,7 @@ td.2.3.header="(Code Optimization Thread 1)" id=4 idx=0x8 tid=5612 prio=5 alive,
 td.2.3.id=4
 td.2.3.name=(Code Optimization Thread 1)
 td.2.3.isBlocked=false
+td.2.3.isBlocking=false
 td.2.3.isDaemon=true
 td.2.3.isDeadLocked=false
 td.2.3.isIdle=true
@@ -382,6 +408,7 @@ td.2.4.header="(GC Main Thread)" id=5 idx=0xa tid=1964 prio=5 alive, in native, 
 td.2.4.id=5
 td.2.4.name=(GC Main Thread)
 td.2.4.isBlocked=false
+td.2.4.isBlocking=false
 td.2.4.isDaemon=true
 td.2.4.isDeadLocked=false
 td.2.4.isIdle=false
@@ -394,6 +421,7 @@ td.2.5.header="(GC Worker Thread 1)" id=6 idx=0xc tid=5432 prio=5 alive, in nati
 td.2.5.id=6
 td.2.5.name=(GC Worker Thread 1)
 td.2.5.isBlocked=false
+td.2.5.isBlocking=false
 td.2.5.isDaemon=true
 td.2.5.isDeadLocked=false
 td.2.5.isIdle=true
@@ -406,6 +434,7 @@ td.2.6.header="(Hotspot Detector)" id=7 idx=0xe tid=1720 prio=10 alive, in nativ
 td.2.6.id=7
 td.2.6.name=(Hotspot Detector)
 td.2.6.isBlocked=false
+td.2.6.isBlocking=false
 td.2.6.isDaemon=true
 td.2.6.isDeadLocked=false
 td.2.6.isIdle=false
@@ -424,6 +453,7 @@ td.2.7.header="Finalizer" id=8 idx=0x10 tid=4128 prio=8 alive, in native, native
 td.2.7.id=8
 td.2.7.name=Finalizer
 td.2.7.isBlocked=false
+td.2.7.isBlocking=false
 td.2.7.isDaemon=true
 td.2.7.isDeadLocked=false
 td.2.7.isIdle=true
@@ -441,6 +471,7 @@ td.2.8.header="Reference Handler" id=9 idx=0x12 tid=1012 prio=10 alive, in nativ
 td.2.8.id=9
 td.2.8.name=Reference Handler
 td.2.8.isBlocked=false
+td.2.8.isBlocking=false
 td.2.8.isDaemon=true
 td.2.8.isDeadLocked=false
 td.2.8.isIdle=true
@@ -462,6 +493,7 @@ td.2.9.header="Thread-0" id=10 idx=0x14 tid=5628 prio=5 alive, in native, blocke
 td.2.9.id=10
 td.2.9.name=Thread-0
 td.2.9.isBlocked=true
+td.2.9.isBlocking=true
 td.2.9.isDaemon=false
 td.2.9.isDeadLocked=true
 td.2.9.isIdle=false
@@ -483,6 +515,7 @@ td.2.10.header="Thread-1" id=11 idx=0x16 tid=3264 prio=5 alive, in native, block
 td.2.10.id=11
 td.2.10.name=Thread-1
 td.2.10.isBlocked=true
+td.2.10.isBlocking=true
 td.2.10.isDaemon=false
 td.2.10.isDeadLocked=true
 td.2.10.isIdle=false

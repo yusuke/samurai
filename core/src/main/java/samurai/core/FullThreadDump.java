@@ -129,6 +129,7 @@ public abstract class FullThreadDump implements Serializable {
                 ThreadDump blocker = blockers.get(threadDump.getBlockedObjectId());
                 if (null != blocker) {
                     threadDump.setBlockerId(blocker.getId());
+                    this.getThreadDumpById(blocker.getId()).setBlocking(true);
                 }
             }
         }

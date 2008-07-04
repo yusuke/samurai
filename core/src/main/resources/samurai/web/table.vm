@@ -29,8 +29,9 @@ $resource.getString("web.view"):&nbsp;
         ##evaluate the thread's status
         #foreach($threadDump in $stackTraces.asArray())
         #if($threadDump)
-        #if($threadDump.isIdle()) #set($stateClass = "back-idle")
-        #elseif($threadDump.isBlocked()) #set($stateClass = "back-stacked")
+        #if($threadDump.isBlocked()) #set($stateClass = "back-blocked")
+        #elseif($threadDump.isBlocking()) #set($stateClass = "back-blocking")
+        #elseif($threadDump.isIdle()) #set($stateClass = "back-idle")
         #else #set($stateClass = "back-normal")
         #end
         #else #set($stateClass = "back-notexist")
@@ -48,7 +49,9 @@ $resource.getString("web.view"):&nbsp;
         <td nowrap>$resource.getString("web.running")</td>
         <td class="back-normal">&nbsp;</td>
         <td nowrap>$resource.getString("web.blocked")</td>
-        <td class="back-stacked">&nbsp;</td>
+        <td class="back-blocked">&nbsp;</td>
+        <td nowrap>$resource.getString("web.blocking")</td>
+        <td class="back-blocking">&nbsp;</td>
         <td nowrap>$resource.getString("web.idle")</td>
         <td class="back-idle">&nbsp;</td>
         <td nowrap title="hoge">$resource.getString("web.absent")</td>
@@ -58,7 +61,8 @@ $resource.getString("web.view"):&nbsp;
         <td nowrap colspan="3">$resource.getString("web.same")</td>
         <td class="back-normal"><img border="0" src="${baseurl}same-h.gif"></td>
         <td nowrap colspan="3">$resource.getString("web.deadlocked")</td>
-        <td class="back-stacked"><img border="0" src="${baseurl}deadlocked.gif"></td>
+        <td class="back-blocked"><img border="0" src="${baseurl}deadlocked.gif"></td>
+        <td colspan="2"></td>
     </tr>
 </table>
 </body>

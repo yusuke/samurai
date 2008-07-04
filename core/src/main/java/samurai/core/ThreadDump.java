@@ -16,7 +16,7 @@ public abstract class ThreadDump implements Serializable {
     private StackLine blockedLine = null;
 
     private final List<StackLine> stackLines = new ArrayList<StackLine>();
-    private final String header;
+    private final String HEADER;
     private static final long serialVersionUID = -7984606567041592064L;
     private final String NAME;
 
@@ -24,32 +24,28 @@ public abstract class ThreadDump implements Serializable {
     protected boolean IS_BLOCKED;
     protected boolean IS_IDLE;
     protected boolean IS_DAEMON;
+    protected boolean IS_BLOCKING;
+    private Pattern conditionCatchPtn = Pattern.compile("(?<= *)[^\"]+$");
+    private final String CONDITION;
 
     public ThreadDump(String header) {
-        this.header = header;
+        this.HEADER = header;
         //extract thread name
         int headerBeginIndex = getHeader().indexOf("\"") + 1;
         int headerEndIndex = getHeader().indexOf("\"", headerBeginIndex);
         NAME = getHeader().substring(headerBeginIndex, headerEndIndex);
+        Matcher m = conditionCatchPtn.matcher(this.HEADER);
+        m.find();
+        this.CONDITION = m.group();
     }
 
     public final String getHeader() {
-        return this.header;
+        return this.HEADER;
     }
 
-    private String condition = null;
 
-    Pattern p = Pattern.compile("(?<= *)[^\"]+$");
     public String getCondition() {
-        if (null == this.condition) {
-            Matcher m = p.matcher(this.header);
-            m.find();
-            this.condition = m.group();
-//            int lastQuote = this.header.lastIndexOf("\"");
-//
-//            this.condition = this.header.substring(this.header.);
-        }
-        return this.condition;
+        return this.CONDITION;
     }
 
     public final List<StackLine> getStackLines() {
@@ -69,6 +65,7 @@ public abstract class ThreadDump implements Serializable {
             blockedLine = stackLine;
         }
         if (stackLine.isHoldingLock()) {
+//            this.IS_BLOCKING = true;
             if (null == lockList) {
                 lockList = new ArrayList<StackLine>();
             }
@@ -203,8 +200,14 @@ public abstract class ThreadDump implements Serializable {
     public boolean isDeadLocked() {
         return this.deadLocked;
     }
+    public boolean isBlocking() {
+        return this.IS_BLOCKING;
+    }
 
     /*package*/ void setDeadLocked(boolean deadLocked) {
         this.deadLocked = deadLocked;
+    }
+    /*package*/ void setBlocking(boolean blocking) {
+        this.IS_BLOCKING = blocking;
     }
 }

@@ -34,8 +34,9 @@ $resource.getString("web.view"):
 "$util.escape($sequence.getName())"<br><br>
 #foreach($threadDump in $sequence.asArray())
 #if($threadDump)
-#if($threadDump.isIdle()) #set($stateClass = "idle")
-#elseif($threadDump.isBlocked()) #set($stateClass = "stacked")
+#if($threadDump.isBlocked()) #set($stateClass = "blocked")
+#elseif($threadDump.isBlocking()) #set($stateClass = "blocking")
+#elseif($threadDump.isIdle()) #set($stateClass = "idle")
 #else #set($stateClass = "normal")
 #end
 #else #set($stateClass = "notexist")

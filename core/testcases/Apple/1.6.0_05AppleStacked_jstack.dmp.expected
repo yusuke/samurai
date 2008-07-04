@@ -9,6 +9,7 @@ td.0.0.header="Attach Listener" daemon prio=9 tid=0x0000000101854800 nid=0x11071
 td.0.0.id=0x0000000101854800
 td.0.0.name=Attach Listener
 td.0.0.isBlocked=false
+td.0.0.isBlocking=false
 td.0.0.isDaemon=true
 td.0.0.isDeadLocked=false
 td.0.0.isIdle=false
@@ -24,6 +25,7 @@ td.0.1.header="DeadLockThread3" prio=5 tid=0x0000000101853000 nid=0x110613000 wa
 td.0.1.id=0x0000000101853000
 td.0.1.name=DeadLockThread3
 td.0.1.isBlocked=true
+td.0.1.isBlocking=false
 td.0.1.isDaemon=false
 td.0.1.isDeadLocked=false
 td.0.1.isIdle=false
@@ -40,6 +42,7 @@ td.0.2.header="DeadLockThread2" prio=5 tid=0x0000000101852800 nid=0x110510000 wa
 td.0.2.id=0x0000000101852800
 td.0.2.name=DeadLockThread2
 td.0.2.isBlocked=true
+td.0.2.isBlocking=true
 td.0.2.isDaemon=false
 td.0.2.isDeadLocked=true
 td.0.2.isIdle=false
@@ -56,6 +59,7 @@ td.0.3.header="DeadLockThread1" prio=5 tid=0x0000000101851000 nid=0x1103fa000 wa
 td.0.3.id=0x0000000101851000
 td.0.3.name=DeadLockThread1
 td.0.3.isBlocked=true
+td.0.3.isBlocking=true
 td.0.3.isDaemon=false
 td.0.3.isDeadLocked=true
 td.0.3.isIdle=false
@@ -69,6 +73,7 @@ td.0.4.header="Low Memory Detector" daemon prio=5 tid=0x0000000101844800 nid=0x1
 td.0.4.id=0x0000000101844800
 td.0.4.name=Low Memory Detector
 td.0.4.isBlocked=false
+td.0.4.isBlocking=false
 td.0.4.isDaemon=true
 td.0.4.isDeadLocked=false
 td.0.4.isIdle=false
@@ -82,6 +87,7 @@ td.0.5.header="CompilerThread1" daemon prio=9 tid=0x0000000101843000 nid=0x10fef
 td.0.5.id=0x0000000101843000
 td.0.5.name=CompilerThread1
 td.0.5.isBlocked=false
+td.0.5.isBlocking=false
 td.0.5.isDaemon=true
 td.0.5.isDeadLocked=false
 td.0.5.isIdle=false
@@ -95,6 +101,7 @@ td.0.6.header="CompilerThread0" daemon prio=9 tid=0x0000000101841800 nid=0x10fde
 td.0.6.id=0x0000000101841800
 td.0.6.name=CompilerThread0
 td.0.6.isBlocked=false
+td.0.6.isBlocking=false
 td.0.6.isDaemon=true
 td.0.6.isDeadLocked=false
 td.0.6.isIdle=false
@@ -108,6 +115,7 @@ td.0.7.header="Signal Dispatcher" daemon prio=9 tid=0x0000000101841000 nid=0x10f
 td.0.7.id=0x0000000101841000
 td.0.7.name=Signal Dispatcher
 td.0.7.isBlocked=false
+td.0.7.isBlocking=false
 td.0.7.isDaemon=true
 td.0.7.isDeadLocked=false
 td.0.7.isIdle=false
@@ -127,6 +135,7 @@ td.0.8.header="Finalizer" daemon prio=8 tid=0x0000000101829800 nid=0x10fbe8000 i
 td.0.8.id=0x0000000101829800
 td.0.8.name=Finalizer
 td.0.8.isBlocked=false
+td.0.8.isBlocking=false
 td.0.8.isDaemon=true
 td.0.8.isDeadLocked=false
 td.0.8.isIdle=true
@@ -145,6 +154,7 @@ td.0.9.header="Reference Handler" daemon prio=10 tid=0x0000000101828800 nid=0x10
 td.0.9.id=0x0000000101828800
 td.0.9.name=Reference Handler
 td.0.9.isBlocked=false
+td.0.9.isBlocking=false
 td.0.9.isDaemon=true
 td.0.9.isDeadLocked=false
 td.0.9.isIdle=true
@@ -160,6 +170,7 @@ td.0.10.header="main" prio=5 tid=0x0000000101801000 nid=0x100401000 waiting on c
 td.0.10.id=0x0000000101801000
 td.0.10.name=main
 td.0.10.isBlocked=false
+td.0.10.isBlocking=false
 td.0.10.isDaemon=false
 td.0.10.isDeadLocked=false
 td.0.10.isIdle=false
@@ -172,6 +183,7 @@ td.0.11.header="VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnabl
 td.0.11.id=0x0000000101820800
 td.0.11.name=VM Thread
 td.0.11.isBlocked=false
+td.0.11.isBlocking=false
 td.0.11.isDaemon=false
 td.0.11.isDeadLocked=false
 td.0.11.isIdle=false
@@ -184,6 +196,7 @@ td.0.12.header="VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x11
 td.0.12.id=0x0000000101846000
 td.0.12.name=VM Periodic Task Thread
 td.0.12.isBlocked=false
+td.0.12.isBlocking=false
 td.0.12.isDaemon=false
 td.0.12.isDeadLocked=false
 td.0.12.isIdle=false
@@ -197,6 +210,7 @@ td.0.13.header="Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x1
 td.0.13.id=0x0000000101802000
 td.0.13.name=Exception Catcher Thread
 td.0.13.isBlocked=false
+td.0.13.isBlocking=false
 td.0.13.isDaemon=false
 td.0.13.isDeadLocked=false
 td.0.13.isIdle=false
@@ -212,6 +226,7 @@ td.1.0.header="Attach Listener" daemon prio=9 tid=0x0000000101854800 nid=0x11071
 td.1.0.id=0x0000000101854800
 td.1.0.name=Attach Listener
 td.1.0.isBlocked=false
+td.1.0.isBlocking=false
 td.1.0.isDaemon=true
 td.1.0.isDeadLocked=false
 td.1.0.isIdle=false
@@ -227,6 +242,7 @@ td.1.1.header="DeadLockThread3" prio=5 tid=0x0000000101853000 nid=0x110613000 wa
 td.1.1.id=0x0000000101853000
 td.1.1.name=DeadLockThread3
 td.1.1.isBlocked=true
+td.1.1.isBlocking=false
 td.1.1.isDaemon=false
 td.1.1.isDeadLocked=false
 td.1.1.isIdle=false
@@ -243,6 +259,7 @@ td.1.2.header="DeadLockThread2" prio=5 tid=0x0000000101852800 nid=0x110510000 wa
 td.1.2.id=0x0000000101852800
 td.1.2.name=DeadLockThread2
 td.1.2.isBlocked=true
+td.1.2.isBlocking=true
 td.1.2.isDaemon=false
 td.1.2.isDeadLocked=true
 td.1.2.isIdle=false
@@ -259,6 +276,7 @@ td.1.3.header="DeadLockThread1" prio=5 tid=0x0000000101851000 nid=0x1103fa000 wa
 td.1.3.id=0x0000000101851000
 td.1.3.name=DeadLockThread1
 td.1.3.isBlocked=true
+td.1.3.isBlocking=true
 td.1.3.isDaemon=false
 td.1.3.isDeadLocked=true
 td.1.3.isIdle=false
@@ -272,6 +290,7 @@ td.1.4.header="Low Memory Detector" daemon prio=5 tid=0x0000000101844800 nid=0x1
 td.1.4.id=0x0000000101844800
 td.1.4.name=Low Memory Detector
 td.1.4.isBlocked=false
+td.1.4.isBlocking=false
 td.1.4.isDaemon=true
 td.1.4.isDeadLocked=false
 td.1.4.isIdle=false
@@ -285,6 +304,7 @@ td.1.5.header="CompilerThread1" daemon prio=9 tid=0x0000000101843000 nid=0x10fef
 td.1.5.id=0x0000000101843000
 td.1.5.name=CompilerThread1
 td.1.5.isBlocked=false
+td.1.5.isBlocking=false
 td.1.5.isDaemon=true
 td.1.5.isDeadLocked=false
 td.1.5.isIdle=false
@@ -298,6 +318,7 @@ td.1.6.header="CompilerThread0" daemon prio=9 tid=0x0000000101841800 nid=0x10fde
 td.1.6.id=0x0000000101841800
 td.1.6.name=CompilerThread0
 td.1.6.isBlocked=false
+td.1.6.isBlocking=false
 td.1.6.isDaemon=true
 td.1.6.isDeadLocked=false
 td.1.6.isIdle=false
@@ -311,6 +332,7 @@ td.1.7.header="Signal Dispatcher" daemon prio=9 tid=0x0000000101841000 nid=0x10f
 td.1.7.id=0x0000000101841000
 td.1.7.name=Signal Dispatcher
 td.1.7.isBlocked=false
+td.1.7.isBlocking=false
 td.1.7.isDaemon=true
 td.1.7.isDeadLocked=false
 td.1.7.isIdle=false
@@ -330,6 +352,7 @@ td.1.8.header="Finalizer" daemon prio=8 tid=0x0000000101829800 nid=0x10fbe8000 i
 td.1.8.id=0x0000000101829800
 td.1.8.name=Finalizer
 td.1.8.isBlocked=false
+td.1.8.isBlocking=false
 td.1.8.isDaemon=true
 td.1.8.isDeadLocked=false
 td.1.8.isIdle=true
@@ -348,6 +371,7 @@ td.1.9.header="Reference Handler" daemon prio=10 tid=0x0000000101828800 nid=0x10
 td.1.9.id=0x0000000101828800
 td.1.9.name=Reference Handler
 td.1.9.isBlocked=false
+td.1.9.isBlocking=false
 td.1.9.isDaemon=true
 td.1.9.isDeadLocked=false
 td.1.9.isIdle=true
@@ -363,6 +387,7 @@ td.1.10.header="main" prio=5 tid=0x0000000101801000 nid=0x100401000 waiting on c
 td.1.10.id=0x0000000101801000
 td.1.10.name=main
 td.1.10.isBlocked=false
+td.1.10.isBlocking=false
 td.1.10.isDaemon=false
 td.1.10.isDeadLocked=false
 td.1.10.isIdle=false
@@ -375,6 +400,7 @@ td.1.11.header="VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnabl
 td.1.11.id=0x0000000101820800
 td.1.11.name=VM Thread
 td.1.11.isBlocked=false
+td.1.11.isBlocking=false
 td.1.11.isDaemon=false
 td.1.11.isDeadLocked=false
 td.1.11.isIdle=false
@@ -387,6 +413,7 @@ td.1.12.header="VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x11
 td.1.12.id=0x0000000101846000
 td.1.12.name=VM Periodic Task Thread
 td.1.12.isBlocked=false
+td.1.12.isBlocking=false
 td.1.12.isDaemon=false
 td.1.12.isDeadLocked=false
 td.1.12.isIdle=false
@@ -400,6 +427,7 @@ td.1.13.header="Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x1
 td.1.13.id=0x0000000101802000
 td.1.13.name=Exception Catcher Thread
 td.1.13.isBlocked=false
+td.1.13.isBlocking=false
 td.1.13.isDaemon=false
 td.1.13.isDeadLocked=false
 td.1.13.isIdle=false
@@ -415,6 +443,7 @@ td.2.0.header="Attach Listener" daemon prio=9 tid=0x0000000101854800 nid=0x11071
 td.2.0.id=0x0000000101854800
 td.2.0.name=Attach Listener
 td.2.0.isBlocked=false
+td.2.0.isBlocking=false
 td.2.0.isDaemon=true
 td.2.0.isDeadLocked=false
 td.2.0.isIdle=false
@@ -430,6 +459,7 @@ td.2.1.header="DeadLockThread3" prio=5 tid=0x0000000101853000 nid=0x110613000 wa
 td.2.1.id=0x0000000101853000
 td.2.1.name=DeadLockThread3
 td.2.1.isBlocked=true
+td.2.1.isBlocking=false
 td.2.1.isDaemon=false
 td.2.1.isDeadLocked=false
 td.2.1.isIdle=false
@@ -446,6 +476,7 @@ td.2.2.header="DeadLockThread2" prio=5 tid=0x0000000101852800 nid=0x110510000 wa
 td.2.2.id=0x0000000101852800
 td.2.2.name=DeadLockThread2
 td.2.2.isBlocked=true
+td.2.2.isBlocking=true
 td.2.2.isDaemon=false
 td.2.2.isDeadLocked=true
 td.2.2.isIdle=false
@@ -462,6 +493,7 @@ td.2.3.header="DeadLockThread1" prio=5 tid=0x0000000101851000 nid=0x1103fa000 wa
 td.2.3.id=0x0000000101851000
 td.2.3.name=DeadLockThread1
 td.2.3.isBlocked=true
+td.2.3.isBlocking=true
 td.2.3.isDaemon=false
 td.2.3.isDeadLocked=true
 td.2.3.isIdle=false
@@ -475,6 +507,7 @@ td.2.4.header="Low Memory Detector" daemon prio=5 tid=0x0000000101844800 nid=0x1
 td.2.4.id=0x0000000101844800
 td.2.4.name=Low Memory Detector
 td.2.4.isBlocked=false
+td.2.4.isBlocking=false
 td.2.4.isDaemon=true
 td.2.4.isDeadLocked=false
 td.2.4.isIdle=false
@@ -488,6 +521,7 @@ td.2.5.header="CompilerThread1" daemon prio=9 tid=0x0000000101843000 nid=0x10fef
 td.2.5.id=0x0000000101843000
 td.2.5.name=CompilerThread1
 td.2.5.isBlocked=false
+td.2.5.isBlocking=false
 td.2.5.isDaemon=true
 td.2.5.isDeadLocked=false
 td.2.5.isIdle=false
@@ -501,6 +535,7 @@ td.2.6.header="CompilerThread0" daemon prio=9 tid=0x0000000101841800 nid=0x10fde
 td.2.6.id=0x0000000101841800
 td.2.6.name=CompilerThread0
 td.2.6.isBlocked=false
+td.2.6.isBlocking=false
 td.2.6.isDaemon=true
 td.2.6.isDeadLocked=false
 td.2.6.isIdle=false
@@ -514,6 +549,7 @@ td.2.7.header="Signal Dispatcher" daemon prio=9 tid=0x0000000101841000 nid=0x10f
 td.2.7.id=0x0000000101841000
 td.2.7.name=Signal Dispatcher
 td.2.7.isBlocked=false
+td.2.7.isBlocking=false
 td.2.7.isDaemon=true
 td.2.7.isDeadLocked=false
 td.2.7.isIdle=false
@@ -533,6 +569,7 @@ td.2.8.header="Finalizer" daemon prio=8 tid=0x0000000101829800 nid=0x10fbe8000 i
 td.2.8.id=0x0000000101829800
 td.2.8.name=Finalizer
 td.2.8.isBlocked=false
+td.2.8.isBlocking=false
 td.2.8.isDaemon=true
 td.2.8.isDeadLocked=false
 td.2.8.isIdle=true
@@ -551,6 +588,7 @@ td.2.9.header="Reference Handler" daemon prio=10 tid=0x0000000101828800 nid=0x10
 td.2.9.id=0x0000000101828800
 td.2.9.name=Reference Handler
 td.2.9.isBlocked=false
+td.2.9.isBlocking=false
 td.2.9.isDaemon=true
 td.2.9.isDeadLocked=false
 td.2.9.isIdle=true
@@ -566,6 +604,7 @@ td.2.10.header="main" prio=5 tid=0x0000000101801000 nid=0x100401000 waiting on c
 td.2.10.id=0x0000000101801000
 td.2.10.name=main
 td.2.10.isBlocked=false
+td.2.10.isBlocking=false
 td.2.10.isDaemon=false
 td.2.10.isDeadLocked=false
 td.2.10.isIdle=false
@@ -578,6 +617,7 @@ td.2.11.header="VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnabl
 td.2.11.id=0x0000000101820800
 td.2.11.name=VM Thread
 td.2.11.isBlocked=false
+td.2.11.isBlocking=false
 td.2.11.isDaemon=false
 td.2.11.isDeadLocked=false
 td.2.11.isIdle=false
@@ -590,6 +630,7 @@ td.2.12.header="VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x11
 td.2.12.id=0x0000000101846000
 td.2.12.name=VM Periodic Task Thread
 td.2.12.isBlocked=false
+td.2.12.isBlocking=false
 td.2.12.isDaemon=false
 td.2.12.isDeadLocked=false
 td.2.12.isIdle=false
@@ -603,6 +644,7 @@ td.2.13.header="Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x1
 td.2.13.id=0x0000000101802000
 td.2.13.name=Exception Catcher Thread
 td.2.13.isBlocked=false
+td.2.13.isBlocking=false
 td.2.13.isDaemon=false
 td.2.13.isDeadLocked=false
 td.2.13.isIdle=false

@@ -16,6 +16,7 @@ td.0.0.header="Main Thread" prio=5 id=0x80 tid=0xc10 waiting
 td.0.0.id=0x80
 td.0.0.name=Main Thread
 td.0.0.isBlocked=false
+td.0.0.isBlocking=false
 td.0.0.isDaemon=false
 td.0.0.isDeadLocked=false
 td.0.0.isIdle=true
@@ -28,6 +29,7 @@ td.0.1.header="(Signal Handler)" prio=5 id=0x100 tid=0x17fc active, daemon
 td.0.1.id=0x100
 td.0.1.name=(Signal Handler)
 td.0.1.isBlocked=false
+td.0.1.isBlocking=false
 td.0.1.isDaemon=true
 td.0.1.isDeadLocked=false
 td.0.1.isIdle=false
@@ -40,6 +42,7 @@ td.0.2.header="(Code Generation Thread 1)" prio=5 id=0x180 tid=0x1190 active, na
 td.0.2.id=0x180
 td.0.2.name=(Code Generation Thread 1)
 td.0.2.isBlocked=false
+td.0.2.isBlocking=false
 td.0.2.isDaemon=true
 td.0.2.isDeadLocked=false
 td.0.2.isIdle=true
@@ -52,6 +55,7 @@ td.0.3.header="(Code Optimization Thread 1)" prio=5 id=0x200 tid=0x1570 active, 
 td.0.3.id=0x200
 td.0.3.name=(Code Optimization Thread 1)
 td.0.3.isBlocked=false
+td.0.3.isBlocking=false
 td.0.3.isDaemon=true
 td.0.3.isDeadLocked=false
 td.0.3.isIdle=true
@@ -64,6 +68,7 @@ td.0.4.header="(GC Main Thread)" prio=5 id=0x280 tid=0x4cc active, daemon
 td.0.4.id=0x280
 td.0.4.name=(GC Main Thread)
 td.0.4.isBlocked=false
+td.0.4.isBlocking=false
 td.0.4.isDaemon=true
 td.0.4.isDeadLocked=false
 td.0.4.isIdle=false
@@ -76,6 +81,7 @@ td.0.5.header="(GC Worker Thread 1)" prio=5 id=0x300 tid=0x17f8 active, native_w
 td.0.5.id=0x300
 td.0.5.name=(GC Worker Thread 1)
 td.0.5.isBlocked=false
+td.0.5.isBlocking=false
 td.0.5.isDaemon=true
 td.0.5.isDeadLocked=false
 td.0.5.isIdle=true
@@ -98,6 +104,7 @@ td.0.6.header="Finalizer" prio=8 id=0x380 tid=0xe0 waiting, daemon
 td.0.6.id=0x380
 td.0.6.name=Finalizer
 td.0.6.isBlocked=false
+td.0.6.isBlocking=false
 td.0.6.isDaemon=true
 td.0.6.isDeadLocked=false
 td.0.6.isIdle=true
@@ -115,6 +122,7 @@ td.0.7.header="Reference Handler" prio=10 id=0x400 tid=0x50c waiting for pending
 td.0.7.id=0x400
 td.0.7.name=Reference Handler
 td.0.7.isBlocked=false
+td.0.7.isBlocking=false
 td.0.7.isDaemon=true
 td.0.7.isDeadLocked=false
 td.0.7.isIdle=false
@@ -127,6 +135,7 @@ td.0.8.header="(Hotspot Detector)" prio=10 id=0x480 tid=0x1774 active, daemon
 td.0.8.id=0x480
 td.0.8.name=(Hotspot Detector)
 td.0.8.isBlocked=false
+td.0.8.isBlocking=false
 td.0.8.isDaemon=true
 td.0.8.isDeadLocked=false
 td.0.8.isIdle=false
@@ -147,6 +156,7 @@ td.0.9.header="Thread-1" prio=5 id=0x500 tid=0x15c4 waiting, daemon
 td.0.9.id=0x500
 td.0.9.name=Thread-1
 td.0.9.isBlocked=false
+td.0.9.isBlocking=false
 td.0.9.isDaemon=true
 td.0.9.isDeadLocked=false
 td.0.9.isIdle=true
@@ -167,6 +177,7 @@ td.0.10.header="ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" prio=5 
 td.0.10.id=0x580
 td.0.10.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
 td.0.10.isBlocked=false
+td.0.10.isBlocking=false
 td.0.10.isDaemon=true
 td.0.10.isDeadLocked=false
 td.0.10.isIdle=true
@@ -187,6 +198,7 @@ td.0.11.header="ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" prio=5 
 td.0.11.id=0x600
 td.0.11.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
 td.0.11.isBlocked=false
+td.0.11.isBlocking=false
 td.0.11.isDaemon=true
 td.0.11.isDeadLocked=false
 td.0.11.isIdle=true
@@ -207,6 +219,7 @@ td.0.12.header="ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" prio=5 
 td.0.12.id=0x680
 td.0.12.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
 td.0.12.isBlocked=false
+td.0.12.isBlocking=false
 td.0.12.isDaemon=true
 td.0.12.isDeadLocked=false
 td.0.12.isIdle=true
@@ -227,6 +240,7 @@ td.0.13.header="ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" prio=5 
 td.0.13.id=0x700
 td.0.13.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
 td.0.13.isBlocked=false
+td.0.13.isBlocking=false
 td.0.13.isDaemon=true
 td.0.13.isDeadLocked=false
 td.0.13.isIdle=true
@@ -247,6 +261,7 @@ td.0.14.header="ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" prio=5 
 td.0.14.id=0x780
 td.0.14.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
 td.0.14.isBlocked=false
+td.0.14.isBlocking=false
 td.0.14.isDaemon=true
 td.0.14.isDeadLocked=false
 td.0.14.isIdle=true
@@ -267,6 +282,7 @@ td.0.15.header="ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" prio=5 
 td.0.15.id=0x800
 td.0.15.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
 td.0.15.isBlocked=false
+td.0.15.isBlocking=false
 td.0.15.isDaemon=true
 td.0.15.isDeadLocked=false
 td.0.15.isIdle=true
@@ -287,6 +303,7 @@ td.0.16.header="ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" prio=5 
 td.0.16.id=0x880
 td.0.16.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
 td.0.16.isBlocked=false
+td.0.16.isBlocking=false
 td.0.16.isDaemon=true
 td.0.16.isDeadLocked=false
 td.0.16.isIdle=true
@@ -307,6 +324,7 @@ td.0.17.header="ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" prio=5 
 td.0.17.id=0x900
 td.0.17.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
 td.0.17.isBlocked=false
+td.0.17.isBlocking=false
 td.0.17.isDaemon=true
 td.0.17.isDeadLocked=false
 td.0.17.isIdle=true
@@ -327,6 +345,7 @@ td.0.18.header="ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" prio=5 
 td.0.18.id=0x980
 td.0.18.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
 td.0.18.isBlocked=false
+td.0.18.isBlocking=false
 td.0.18.isDaemon=true
 td.0.18.isDeadLocked=false
 td.0.18.isIdle=true
@@ -347,6 +366,7 @@ td.0.19.header="ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" prio=5 
 td.0.19.id=0xa00
 td.0.19.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
 td.0.19.isBlocked=false
+td.0.19.isBlocking=false
 td.0.19.isDaemon=true
 td.0.19.isDeadLocked=false
 td.0.19.isIdle=true
@@ -378,6 +398,7 @@ td.0.20.header="ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" prio=5
 td.0.20.id=0xa80
 td.0.20.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
 td.0.20.isBlocked=true
+td.0.20.isBlocking=false
 td.0.20.isDaemon=true
 td.0.20.isDeadLocked=false
 td.0.20.isIdle=false
@@ -409,6 +430,7 @@ td.0.21.header="ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" prio=5
 td.0.21.id=0xb00
 td.0.21.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
 td.0.21.isBlocked=true
+td.0.21.isBlocking=false
 td.0.21.isDaemon=true
 td.0.21.isDeadLocked=false
 td.0.21.isIdle=false
@@ -440,6 +462,7 @@ td.0.22.header="ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" prio=5
 td.0.22.id=0xb80
 td.0.22.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
 td.0.22.isBlocked=true
+td.0.22.isBlocking=false
 td.0.22.isDaemon=true
 td.0.22.isDeadLocked=false
 td.0.22.isIdle=false
@@ -472,6 +495,7 @@ td.0.23.header="ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" prio=5
 td.0.23.id=0xc00
 td.0.23.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
 td.0.23.isBlocked=true
+td.0.23.isBlocking=true
 td.0.23.isDaemon=true
 td.0.23.isDeadLocked=true
 td.0.23.isIdle=false
@@ -504,6 +528,7 @@ td.0.24.header="ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" prio=5
 td.0.24.id=0xc80
 td.0.24.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
 td.0.24.isBlocked=true
+td.0.24.isBlocking=true
 td.0.24.isDaemon=true
 td.0.24.isDeadLocked=true
 td.0.24.isIdle=false
@@ -524,6 +549,7 @@ td.0.25.header="ExecuteThread: '0' for queue: 'weblogic.kernel.System'" prio=5 i
 td.0.25.id=0xd00
 td.0.25.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
 td.0.25.isBlocked=false
+td.0.25.isBlocking=false
 td.0.25.isDaemon=true
 td.0.25.isDeadLocked=false
 td.0.25.isIdle=true
@@ -544,6 +570,7 @@ td.0.26.header="ExecuteThread: '1' for queue: 'weblogic.kernel.System'" prio=5 i
 td.0.26.id=0xd80
 td.0.26.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
 td.0.26.isBlocked=false
+td.0.26.isBlocking=false
 td.0.26.isDaemon=true
 td.0.26.isDeadLocked=false
 td.0.26.isIdle=true
@@ -564,6 +591,7 @@ td.0.27.header="ExecuteThread: '2' for queue: 'weblogic.kernel.System'" prio=5 i
 td.0.27.id=0xe00
 td.0.27.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
 td.0.27.isBlocked=false
+td.0.27.isBlocking=false
 td.0.27.isDaemon=true
 td.0.27.isDeadLocked=false
 td.0.27.isIdle=true
@@ -584,6 +612,7 @@ td.0.28.header="ExecuteThread: '3' for queue: 'weblogic.kernel.System'" prio=5 i
 td.0.28.id=0xe80
 td.0.28.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
 td.0.28.isBlocked=false
+td.0.28.isBlocking=false
 td.0.28.isDaemon=true
 td.0.28.isDeadLocked=false
 td.0.28.isIdle=true
@@ -604,6 +633,7 @@ td.0.29.header="ExecuteThread: '4' for queue: 'weblogic.kernel.System'" prio=5 i
 td.0.29.id=0xf00
 td.0.29.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
 td.0.29.isBlocked=false
+td.0.29.isBlocking=false
 td.0.29.isDaemon=true
 td.0.29.isDeadLocked=false
 td.0.29.isIdle=true
@@ -625,6 +655,7 @@ td.0.30.header="weblogic.time.TimeEventGenerator" prio=9 id=0xf80 tid=0xd00 wait
 td.0.30.id=0xf80
 td.0.30.name=weblogic.time.TimeEventGenerator
 td.0.30.isBlocked=false
+td.0.30.isBlocking=false
 td.0.30.isDaemon=true
 td.0.30.isDeadLocked=false
 td.0.30.isIdle=true
@@ -645,6 +676,7 @@ td.0.31.header="weblogic.security.SpinnerRandomSource" prio=5 id=0x1000 tid=0x12
 td.0.31.id=0x1000
 td.0.31.name=weblogic.security.SpinnerRandomSource
 td.0.31.isBlocked=false
+td.0.31.isBlocking=false
 td.0.31.isDaemon=true
 td.0.31.isDeadLocked=false
 td.0.31.isIdle=true
@@ -665,6 +697,7 @@ td.0.32.header="ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" prio=5 id=0
 td.0.32.id=0x1080
 td.0.32.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
 td.0.32.isBlocked=false
+td.0.32.isBlocking=false
 td.0.32.isDaemon=true
 td.0.32.isDeadLocked=false
 td.0.32.isIdle=true
@@ -685,6 +718,7 @@ td.0.33.header="ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" prio=5 id=0
 td.0.33.id=0x1100
 td.0.33.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
 td.0.33.isBlocked=false
+td.0.33.isBlocking=false
 td.0.33.isDaemon=true
 td.0.33.isDeadLocked=false
 td.0.33.isIdle=true
@@ -705,6 +739,7 @@ td.0.34.header="ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" prio=5 id=0x
 td.0.34.id=0x1180
 td.0.34.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
 td.0.34.isBlocked=false
+td.0.34.isBlocking=false
 td.0.34.isDaemon=true
 td.0.34.isDeadLocked=false
 td.0.34.isIdle=true
@@ -725,6 +760,7 @@ td.0.35.header="ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" prio=5 id=0x
 td.0.35.id=0x1200
 td.0.35.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
 td.0.35.isBlocked=false
+td.0.35.isBlocking=false
 td.0.35.isDaemon=true
 td.0.35.isDeadLocked=false
 td.0.35.isIdle=true
@@ -745,6 +781,7 @@ td.0.36.header="ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" prio=5 id=0x
 td.0.36.id=0x1280
 td.0.36.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
 td.0.36.isBlocked=false
+td.0.36.isBlocking=false
 td.0.36.isDaemon=true
 td.0.36.isDeadLocked=false
 td.0.36.isIdle=true
@@ -765,6 +802,7 @@ td.0.37.header="VDE Transaction Processor Thread" prio=2 id=0x1300 tid=0x1598 wa
 td.0.37.id=0x1300
 td.0.37.name=VDE Transaction Processor Thread
 td.0.37.isBlocked=false
+td.0.37.isBlocking=false
 td.0.37.isDaemon=false
 td.0.37.isDeadLocked=false
 td.0.37.isIdle=true
@@ -786,6 +824,7 @@ td.0.38.header="ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" prio=5 id=0x1
 td.0.38.id=0x1380
 td.0.38.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
 td.0.38.isBlocked=false
+td.0.38.isBlocking=false
 td.0.38.isDaemon=true
 td.0.38.isDeadLocked=false
 td.0.38.isIdle=true
@@ -806,6 +845,7 @@ td.0.39.header="Thread-4" prio=5 id=0x1400 tid=0x1220 waiting
 td.0.39.id=0x1400
 td.0.39.name=Thread-4
 td.0.39.isBlocked=false
+td.0.39.isBlocking=false
 td.0.39.isDaemon=false
 td.0.39.isDeadLocked=false
 td.0.39.isIdle=true
@@ -824,6 +864,7 @@ td.0.40.header="[JRockit] GCEventThread" prio=5 id=0x1480 tid=0x11a4 active, nat
 td.0.40.id=0x1480
 td.0.40.name=[JRockit] GCEventThread
 td.0.40.isBlocked=false
+td.0.40.isBlocking=false
 td.0.40.isDaemon=true
 td.0.40.isDeadLocked=false
 td.0.40.isIdle=true
@@ -844,6 +885,7 @@ td.0.41.header="weblogic.health.CoreHealthMonitor" prio=5 id=0x1500 tid=0x1594 w
 td.0.41.id=0x1500
 td.0.41.name=weblogic.health.CoreHealthMonitor
 td.0.41.isBlocked=false
+td.0.41.isBlocking=false
 td.0.41.isDaemon=true
 td.0.41.isDeadLocked=false
 td.0.41.isIdle=true
@@ -867,6 +909,7 @@ td.0.42.header="ListenThread.Default" prio=5 id=0x1580 tid=0x1528 active
 td.0.42.id=0x1580
 td.0.42.name=ListenThread.Default
 td.0.42.isBlocked=false
+td.0.42.isBlocking=false
 td.0.42.isDaemon=false
 td.0.42.isDeadLocked=false
 td.0.42.isIdle=false
@@ -886,6 +929,7 @@ td.0.43.header="ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" prio=5 id
 td.0.43.id=0x1600
 td.0.43.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
 td.0.43.isBlocked=false
+td.0.43.isBlocking=false
 td.0.43.isDaemon=true
 td.0.43.isDeadLocked=false
 td.0.43.isIdle=false
@@ -905,6 +949,7 @@ td.0.44.header="ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" prio=5 id
 td.0.44.id=0x1680
 td.0.44.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
 td.0.44.isBlocked=false
+td.0.44.isBlocking=false
 td.0.44.isDaemon=true
 td.0.44.isDeadLocked=false
 td.0.44.isIdle=false
@@ -925,6 +970,7 @@ td.0.45.header="Thread-6" prio=5 id=0x1700 tid=0xe7c waiting, daemon
 td.0.45.id=0x1700
 td.0.45.name=Thread-6
 td.0.45.isBlocked=false
+td.0.45.isBlocking=false
 td.0.45.isDaemon=true
 td.0.45.isDeadLocked=false
 td.0.45.isIdle=true
@@ -947,6 +993,7 @@ td.1.0.header="Main Thread" prio=5 id=0x80 tid=0xc10 waiting
 td.1.0.id=0x80
 td.1.0.name=Main Thread
 td.1.0.isBlocked=false
+td.1.0.isBlocking=false
 td.1.0.isDaemon=false
 td.1.0.isDeadLocked=false
 td.1.0.isIdle=true
@@ -959,6 +1006,7 @@ td.1.1.header="(Signal Handler)" prio=5 id=0x100 tid=0x17fc active, daemon
 td.1.1.id=0x100
 td.1.1.name=(Signal Handler)
 td.1.1.isBlocked=false
+td.1.1.isBlocking=false
 td.1.1.isDaemon=true
 td.1.1.isDeadLocked=false
 td.1.1.isIdle=false
@@ -971,6 +1019,7 @@ td.1.2.header="(Code Generation Thread 1)" prio=5 id=0x180 tid=0x1190 active, na
 td.1.2.id=0x180
 td.1.2.name=(Code Generation Thread 1)
 td.1.2.isBlocked=false
+td.1.2.isBlocking=false
 td.1.2.isDaemon=true
 td.1.2.isDeadLocked=false
 td.1.2.isIdle=true
@@ -983,6 +1032,7 @@ td.1.3.header="(Code Optimization Thread 1)" prio=5 id=0x200 tid=0x1570 active, 
 td.1.3.id=0x200
 td.1.3.name=(Code Optimization Thread 1)
 td.1.3.isBlocked=false
+td.1.3.isBlocking=false
 td.1.3.isDaemon=true
 td.1.3.isDeadLocked=false
 td.1.3.isIdle=true
@@ -995,6 +1045,7 @@ td.1.4.header="(GC Main Thread)" prio=5 id=0x280 tid=0x4cc active, daemon
 td.1.4.id=0x280
 td.1.4.name=(GC Main Thread)
 td.1.4.isBlocked=false
+td.1.4.isBlocking=false
 td.1.4.isDaemon=true
 td.1.4.isDeadLocked=false
 td.1.4.isIdle=false
@@ -1007,6 +1058,7 @@ td.1.5.header="(GC Worker Thread 1)" prio=5 id=0x300 tid=0x17f8 active, native_w
 td.1.5.id=0x300
 td.1.5.name=(GC Worker Thread 1)
 td.1.5.isBlocked=false
+td.1.5.isBlocking=false
 td.1.5.isDaemon=true
 td.1.5.isDeadLocked=false
 td.1.5.isIdle=true
@@ -1029,6 +1081,7 @@ td.1.6.header="Finalizer" prio=8 id=0x380 tid=0xe0 waiting, daemon
 td.1.6.id=0x380
 td.1.6.name=Finalizer
 td.1.6.isBlocked=false
+td.1.6.isBlocking=false
 td.1.6.isDaemon=true
 td.1.6.isDeadLocked=false
 td.1.6.isIdle=true
@@ -1046,6 +1099,7 @@ td.1.7.header="Reference Handler" prio=10 id=0x400 tid=0x50c waiting for pending
 td.1.7.id=0x400
 td.1.7.name=Reference Handler
 td.1.7.isBlocked=false
+td.1.7.isBlocking=false
 td.1.7.isDaemon=true
 td.1.7.isDeadLocked=false
 td.1.7.isIdle=false
@@ -1058,6 +1112,7 @@ td.1.8.header="(Hotspot Detector)" prio=10 id=0x480 tid=0x1774 active, daemon
 td.1.8.id=0x480
 td.1.8.name=(Hotspot Detector)
 td.1.8.isBlocked=false
+td.1.8.isBlocking=false
 td.1.8.isDaemon=true
 td.1.8.isDeadLocked=false
 td.1.8.isIdle=false
@@ -1078,6 +1133,7 @@ td.1.9.header="Thread-1" prio=5 id=0x500 tid=0x15c4 waiting, daemon
 td.1.9.id=0x500
 td.1.9.name=Thread-1
 td.1.9.isBlocked=false
+td.1.9.isBlocking=false
 td.1.9.isDaemon=true
 td.1.9.isDeadLocked=false
 td.1.9.isIdle=true
@@ -1098,6 +1154,7 @@ td.1.10.header="ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" prio=5 
 td.1.10.id=0x580
 td.1.10.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
 td.1.10.isBlocked=false
+td.1.10.isBlocking=false
 td.1.10.isDaemon=true
 td.1.10.isDeadLocked=false
 td.1.10.isIdle=true
@@ -1118,6 +1175,7 @@ td.1.11.header="ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" prio=5 
 td.1.11.id=0x600
 td.1.11.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
 td.1.11.isBlocked=false
+td.1.11.isBlocking=false
 td.1.11.isDaemon=true
 td.1.11.isDeadLocked=false
 td.1.11.isIdle=true
@@ -1138,6 +1196,7 @@ td.1.12.header="ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" prio=5 
 td.1.12.id=0x680
 td.1.12.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
 td.1.12.isBlocked=false
+td.1.12.isBlocking=false
 td.1.12.isDaemon=true
 td.1.12.isDeadLocked=false
 td.1.12.isIdle=true
@@ -1158,6 +1217,7 @@ td.1.13.header="ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" prio=5 
 td.1.13.id=0x700
 td.1.13.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
 td.1.13.isBlocked=false
+td.1.13.isBlocking=false
 td.1.13.isDaemon=true
 td.1.13.isDeadLocked=false
 td.1.13.isIdle=true
@@ -1178,6 +1238,7 @@ td.1.14.header="ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" prio=5 
 td.1.14.id=0x780
 td.1.14.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
 td.1.14.isBlocked=false
+td.1.14.isBlocking=false
 td.1.14.isDaemon=true
 td.1.14.isDeadLocked=false
 td.1.14.isIdle=true
@@ -1198,6 +1259,7 @@ td.1.15.header="ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" prio=5 
 td.1.15.id=0x800
 td.1.15.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
 td.1.15.isBlocked=false
+td.1.15.isBlocking=false
 td.1.15.isDaemon=true
 td.1.15.isDeadLocked=false
 td.1.15.isIdle=true
@@ -1218,6 +1280,7 @@ td.1.16.header="ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" prio=5 
 td.1.16.id=0x880
 td.1.16.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
 td.1.16.isBlocked=false
+td.1.16.isBlocking=false
 td.1.16.isDaemon=true
 td.1.16.isDeadLocked=false
 td.1.16.isIdle=true
@@ -1238,6 +1301,7 @@ td.1.17.header="ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" prio=5 
 td.1.17.id=0x900
 td.1.17.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
 td.1.17.isBlocked=false
+td.1.17.isBlocking=false
 td.1.17.isDaemon=true
 td.1.17.isDeadLocked=false
 td.1.17.isIdle=true
@@ -1258,6 +1322,7 @@ td.1.18.header="ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" prio=5 
 td.1.18.id=0x980
 td.1.18.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
 td.1.18.isBlocked=false
+td.1.18.isBlocking=false
 td.1.18.isDaemon=true
 td.1.18.isDeadLocked=false
 td.1.18.isIdle=true
@@ -1278,6 +1343,7 @@ td.1.19.header="ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" prio=5 
 td.1.19.id=0xa00
 td.1.19.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
 td.1.19.isBlocked=false
+td.1.19.isBlocking=false
 td.1.19.isDaemon=true
 td.1.19.isDeadLocked=false
 td.1.19.isIdle=true
@@ -1309,6 +1375,7 @@ td.1.20.header="ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" prio=5
 td.1.20.id=0xa80
 td.1.20.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
 td.1.20.isBlocked=true
+td.1.20.isBlocking=false
 td.1.20.isDaemon=true
 td.1.20.isDeadLocked=false
 td.1.20.isIdle=false
@@ -1340,6 +1407,7 @@ td.1.21.header="ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" prio=5
 td.1.21.id=0xb00
 td.1.21.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
 td.1.21.isBlocked=true
+td.1.21.isBlocking=false
 td.1.21.isDaemon=true
 td.1.21.isDeadLocked=false
 td.1.21.isIdle=false
@@ -1371,6 +1439,7 @@ td.1.22.header="ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" prio=5
 td.1.22.id=0xb80
 td.1.22.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
 td.1.22.isBlocked=true
+td.1.22.isBlocking=false
 td.1.22.isDaemon=true
 td.1.22.isDeadLocked=false
 td.1.22.isIdle=false
@@ -1403,6 +1472,7 @@ td.1.23.header="ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" prio=5
 td.1.23.id=0xc00
 td.1.23.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
 td.1.23.isBlocked=true
+td.1.23.isBlocking=true
 td.1.23.isDaemon=true
 td.1.23.isDeadLocked=true
 td.1.23.isIdle=false
@@ -1435,6 +1505,7 @@ td.1.24.header="ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" prio=5
 td.1.24.id=0xc80
 td.1.24.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
 td.1.24.isBlocked=true
+td.1.24.isBlocking=true
 td.1.24.isDaemon=true
 td.1.24.isDeadLocked=true
 td.1.24.isIdle=false
@@ -1455,6 +1526,7 @@ td.1.25.header="ExecuteThread: '0' for queue: 'weblogic.kernel.System'" prio=5 i
 td.1.25.id=0xd00
 td.1.25.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
 td.1.25.isBlocked=false
+td.1.25.isBlocking=false
 td.1.25.isDaemon=true
 td.1.25.isDeadLocked=false
 td.1.25.isIdle=true
@@ -1475,6 +1547,7 @@ td.1.26.header="ExecuteThread: '1' for queue: 'weblogic.kernel.System'" prio=5 i
 td.1.26.id=0xd80
 td.1.26.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
 td.1.26.isBlocked=false
+td.1.26.isBlocking=false
 td.1.26.isDaemon=true
 td.1.26.isDeadLocked=false
 td.1.26.isIdle=true
@@ -1495,6 +1568,7 @@ td.1.27.header="ExecuteThread: '2' for queue: 'weblogic.kernel.System'" prio=5 i
 td.1.27.id=0xe00
 td.1.27.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
 td.1.27.isBlocked=false
+td.1.27.isBlocking=false
 td.1.27.isDaemon=true
 td.1.27.isDeadLocked=false
 td.1.27.isIdle=true
@@ -1515,6 +1589,7 @@ td.1.28.header="ExecuteThread: '3' for queue: 'weblogic.kernel.System'" prio=5 i
 td.1.28.id=0xe80
 td.1.28.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
 td.1.28.isBlocked=false
+td.1.28.isBlocking=false
 td.1.28.isDaemon=true
 td.1.28.isDeadLocked=false
 td.1.28.isIdle=true
@@ -1535,6 +1610,7 @@ td.1.29.header="ExecuteThread: '4' for queue: 'weblogic.kernel.System'" prio=5 i
 td.1.29.id=0xf00
 td.1.29.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
 td.1.29.isBlocked=false
+td.1.29.isBlocking=false
 td.1.29.isDaemon=true
 td.1.29.isDeadLocked=false
 td.1.29.isIdle=true
@@ -1556,6 +1632,7 @@ td.1.30.header="weblogic.time.TimeEventGenerator" prio=9 id=0xf80 tid=0xd00 wait
 td.1.30.id=0xf80
 td.1.30.name=weblogic.time.TimeEventGenerator
 td.1.30.isBlocked=false
+td.1.30.isBlocking=false
 td.1.30.isDaemon=true
 td.1.30.isDeadLocked=false
 td.1.30.isIdle=true
@@ -1576,6 +1653,7 @@ td.1.31.header="weblogic.security.SpinnerRandomSource" prio=5 id=0x1000 tid=0x12
 td.1.31.id=0x1000
 td.1.31.name=weblogic.security.SpinnerRandomSource
 td.1.31.isBlocked=false
+td.1.31.isBlocking=false
 td.1.31.isDaemon=true
 td.1.31.isDeadLocked=false
 td.1.31.isIdle=true
@@ -1596,6 +1674,7 @@ td.1.32.header="ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" prio=5 id=0
 td.1.32.id=0x1080
 td.1.32.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
 td.1.32.isBlocked=false
+td.1.32.isBlocking=false
 td.1.32.isDaemon=true
 td.1.32.isDeadLocked=false
 td.1.32.isIdle=true
@@ -1616,6 +1695,7 @@ td.1.33.header="ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" prio=5 id=0
 td.1.33.id=0x1100
 td.1.33.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
 td.1.33.isBlocked=false
+td.1.33.isBlocking=false
 td.1.33.isDaemon=true
 td.1.33.isDeadLocked=false
 td.1.33.isIdle=true
@@ -1636,6 +1716,7 @@ td.1.34.header="ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" prio=5 id=0x
 td.1.34.id=0x1180
 td.1.34.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
 td.1.34.isBlocked=false
+td.1.34.isBlocking=false
 td.1.34.isDaemon=true
 td.1.34.isDeadLocked=false
 td.1.34.isIdle=true
@@ -1656,6 +1737,7 @@ td.1.35.header="ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" prio=5 id=0x
 td.1.35.id=0x1200
 td.1.35.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
 td.1.35.isBlocked=false
+td.1.35.isBlocking=false
 td.1.35.isDaemon=true
 td.1.35.isDeadLocked=false
 td.1.35.isIdle=true
@@ -1676,6 +1758,7 @@ td.1.36.header="ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" prio=5 id=0x
 td.1.36.id=0x1280
 td.1.36.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
 td.1.36.isBlocked=false
+td.1.36.isBlocking=false
 td.1.36.isDaemon=true
 td.1.36.isDeadLocked=false
 td.1.36.isIdle=true
@@ -1696,6 +1779,7 @@ td.1.37.header="VDE Transaction Processor Thread" prio=2 id=0x1300 tid=0x1598 wa
 td.1.37.id=0x1300
 td.1.37.name=VDE Transaction Processor Thread
 td.1.37.isBlocked=false
+td.1.37.isBlocking=false
 td.1.37.isDaemon=false
 td.1.37.isDeadLocked=false
 td.1.37.isIdle=true
@@ -1717,6 +1801,7 @@ td.1.38.header="ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" prio=5 id=0x1
 td.1.38.id=0x1380
 td.1.38.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
 td.1.38.isBlocked=false
+td.1.38.isBlocking=false
 td.1.38.isDaemon=true
 td.1.38.isDeadLocked=false
 td.1.38.isIdle=true
@@ -1737,6 +1822,7 @@ td.1.39.header="Thread-4" prio=5 id=0x1400 tid=0x1220 waiting
 td.1.39.id=0x1400
 td.1.39.name=Thread-4
 td.1.39.isBlocked=false
+td.1.39.isBlocking=false
 td.1.39.isDaemon=false
 td.1.39.isDeadLocked=false
 td.1.39.isIdle=true
@@ -1755,6 +1841,7 @@ td.1.40.header="[JRockit] GCEventThread" prio=5 id=0x1480 tid=0x11a4 active, nat
 td.1.40.id=0x1480
 td.1.40.name=[JRockit] GCEventThread
 td.1.40.isBlocked=false
+td.1.40.isBlocking=false
 td.1.40.isDaemon=true
 td.1.40.isDeadLocked=false
 td.1.40.isIdle=true
@@ -1775,6 +1862,7 @@ td.1.41.header="weblogic.health.CoreHealthMonitor" prio=5 id=0x1500 tid=0x1594 w
 td.1.41.id=0x1500
 td.1.41.name=weblogic.health.CoreHealthMonitor
 td.1.41.isBlocked=false
+td.1.41.isBlocking=false
 td.1.41.isDaemon=true
 td.1.41.isDeadLocked=false
 td.1.41.isIdle=true
@@ -1798,6 +1886,7 @@ td.1.42.header="ListenThread.Default" prio=5 id=0x1580 tid=0x1528 active
 td.1.42.id=0x1580
 td.1.42.name=ListenThread.Default
 td.1.42.isBlocked=false
+td.1.42.isBlocking=false
 td.1.42.isDaemon=false
 td.1.42.isDeadLocked=false
 td.1.42.isIdle=false
@@ -1817,6 +1906,7 @@ td.1.43.header="ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" prio=5 id
 td.1.43.id=0x1600
 td.1.43.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
 td.1.43.isBlocked=false
+td.1.43.isBlocking=false
 td.1.43.isDaemon=true
 td.1.43.isDeadLocked=false
 td.1.43.isIdle=false
@@ -1836,6 +1926,7 @@ td.1.44.header="ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" prio=5 id
 td.1.44.id=0x1680
 td.1.44.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
 td.1.44.isBlocked=false
+td.1.44.isBlocking=false
 td.1.44.isDaemon=true
 td.1.44.isDeadLocked=false
 td.1.44.isIdle=false
@@ -1856,6 +1947,7 @@ td.1.45.header="Thread-6" prio=5 id=0x1700 tid=0xe7c waiting, daemon
 td.1.45.id=0x1700
 td.1.45.name=Thread-6
 td.1.45.isBlocked=false
+td.1.45.isBlocking=false
 td.1.45.isDaemon=true
 td.1.45.isDeadLocked=false
 td.1.45.isIdle=true
@@ -1878,6 +1970,7 @@ td.2.0.header="Main Thread" prio=5 id=0x80 tid=0xc10 waiting
 td.2.0.id=0x80
 td.2.0.name=Main Thread
 td.2.0.isBlocked=false
+td.2.0.isBlocking=false
 td.2.0.isDaemon=false
 td.2.0.isDeadLocked=false
 td.2.0.isIdle=true
@@ -1890,6 +1983,7 @@ td.2.1.header="(Signal Handler)" prio=5 id=0x100 tid=0x17fc active, daemon
 td.2.1.id=0x100
 td.2.1.name=(Signal Handler)
 td.2.1.isBlocked=false
+td.2.1.isBlocking=false
 td.2.1.isDaemon=true
 td.2.1.isDeadLocked=false
 td.2.1.isIdle=false
@@ -1902,6 +1996,7 @@ td.2.2.header="(Code Generation Thread 1)" prio=5 id=0x180 tid=0x1190 active, na
 td.2.2.id=0x180
 td.2.2.name=(Code Generation Thread 1)
 td.2.2.isBlocked=false
+td.2.2.isBlocking=false
 td.2.2.isDaemon=true
 td.2.2.isDeadLocked=false
 td.2.2.isIdle=true
@@ -1914,6 +2009,7 @@ td.2.3.header="(Code Optimization Thread 1)" prio=5 id=0x200 tid=0x1570 active, 
 td.2.3.id=0x200
 td.2.3.name=(Code Optimization Thread 1)
 td.2.3.isBlocked=false
+td.2.3.isBlocking=false
 td.2.3.isDaemon=true
 td.2.3.isDeadLocked=false
 td.2.3.isIdle=true
@@ -1926,6 +2022,7 @@ td.2.4.header="(GC Main Thread)" prio=5 id=0x280 tid=0x4cc active, daemon
 td.2.4.id=0x280
 td.2.4.name=(GC Main Thread)
 td.2.4.isBlocked=false
+td.2.4.isBlocking=false
 td.2.4.isDaemon=true
 td.2.4.isDeadLocked=false
 td.2.4.isIdle=false
@@ -1938,6 +2035,7 @@ td.2.5.header="(GC Worker Thread 1)" prio=5 id=0x300 tid=0x17f8 active, native_w
 td.2.5.id=0x300
 td.2.5.name=(GC Worker Thread 1)
 td.2.5.isBlocked=false
+td.2.5.isBlocking=false
 td.2.5.isDaemon=true
 td.2.5.isDeadLocked=false
 td.2.5.isIdle=true
@@ -1960,6 +2058,7 @@ td.2.6.header="Finalizer" prio=8 id=0x380 tid=0xe0 waiting, daemon
 td.2.6.id=0x380
 td.2.6.name=Finalizer
 td.2.6.isBlocked=false
+td.2.6.isBlocking=false
 td.2.6.isDaemon=true
 td.2.6.isDeadLocked=false
 td.2.6.isIdle=true
@@ -1977,6 +2076,7 @@ td.2.7.header="Reference Handler" prio=10 id=0x400 tid=0x50c waiting for pending
 td.2.7.id=0x400
 td.2.7.name=Reference Handler
 td.2.7.isBlocked=false
+td.2.7.isBlocking=false
 td.2.7.isDaemon=true
 td.2.7.isDeadLocked=false
 td.2.7.isIdle=false
@@ -1989,6 +2089,7 @@ td.2.8.header="(Hotspot Detector)" prio=10 id=0x480 tid=0x1774 active, daemon
 td.2.8.id=0x480
 td.2.8.name=(Hotspot Detector)
 td.2.8.isBlocked=false
+td.2.8.isBlocking=false
 td.2.8.isDaemon=true
 td.2.8.isDeadLocked=false
 td.2.8.isIdle=false
@@ -2009,6 +2110,7 @@ td.2.9.header="Thread-1" prio=5 id=0x500 tid=0x15c4 waiting, daemon
 td.2.9.id=0x500
 td.2.9.name=Thread-1
 td.2.9.isBlocked=false
+td.2.9.isBlocking=false
 td.2.9.isDaemon=true
 td.2.9.isDeadLocked=false
 td.2.9.isIdle=true
@@ -2029,6 +2131,7 @@ td.2.10.header="ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" prio=5 
 td.2.10.id=0x580
 td.2.10.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
 td.2.10.isBlocked=false
+td.2.10.isBlocking=false
 td.2.10.isDaemon=true
 td.2.10.isDeadLocked=false
 td.2.10.isIdle=true
@@ -2049,6 +2152,7 @@ td.2.11.header="ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" prio=5 
 td.2.11.id=0x600
 td.2.11.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
 td.2.11.isBlocked=false
+td.2.11.isBlocking=false
 td.2.11.isDaemon=true
 td.2.11.isDeadLocked=false
 td.2.11.isIdle=true
@@ -2069,6 +2173,7 @@ td.2.12.header="ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" prio=5 
 td.2.12.id=0x680
 td.2.12.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
 td.2.12.isBlocked=false
+td.2.12.isBlocking=false
 td.2.12.isDaemon=true
 td.2.12.isDeadLocked=false
 td.2.12.isIdle=true
@@ -2089,6 +2194,7 @@ td.2.13.header="ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" prio=5 
 td.2.13.id=0x700
 td.2.13.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
 td.2.13.isBlocked=false
+td.2.13.isBlocking=false
 td.2.13.isDaemon=true
 td.2.13.isDeadLocked=false
 td.2.13.isIdle=true
@@ -2109,6 +2215,7 @@ td.2.14.header="ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" prio=5 
 td.2.14.id=0x780
 td.2.14.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
 td.2.14.isBlocked=false
+td.2.14.isBlocking=false
 td.2.14.isDaemon=true
 td.2.14.isDeadLocked=false
 td.2.14.isIdle=true
@@ -2129,6 +2236,7 @@ td.2.15.header="ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" prio=5 
 td.2.15.id=0x800
 td.2.15.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
 td.2.15.isBlocked=false
+td.2.15.isBlocking=false
 td.2.15.isDaemon=true
 td.2.15.isDeadLocked=false
 td.2.15.isIdle=true
@@ -2149,6 +2257,7 @@ td.2.16.header="ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" prio=5 
 td.2.16.id=0x880
 td.2.16.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
 td.2.16.isBlocked=false
+td.2.16.isBlocking=false
 td.2.16.isDaemon=true
 td.2.16.isDeadLocked=false
 td.2.16.isIdle=true
@@ -2169,6 +2278,7 @@ td.2.17.header="ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" prio=5 
 td.2.17.id=0x900
 td.2.17.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
 td.2.17.isBlocked=false
+td.2.17.isBlocking=false
 td.2.17.isDaemon=true
 td.2.17.isDeadLocked=false
 td.2.17.isIdle=true
@@ -2189,6 +2299,7 @@ td.2.18.header="ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" prio=5 
 td.2.18.id=0x980
 td.2.18.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
 td.2.18.isBlocked=false
+td.2.18.isBlocking=false
 td.2.18.isDaemon=true
 td.2.18.isDeadLocked=false
 td.2.18.isIdle=true
@@ -2209,6 +2320,7 @@ td.2.19.header="ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" prio=5 
 td.2.19.id=0xa00
 td.2.19.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
 td.2.19.isBlocked=false
+td.2.19.isBlocking=false
 td.2.19.isDaemon=true
 td.2.19.isDeadLocked=false
 td.2.19.isIdle=true
@@ -2240,6 +2352,7 @@ td.2.20.header="ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" prio=5
 td.2.20.id=0xa80
 td.2.20.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
 td.2.20.isBlocked=true
+td.2.20.isBlocking=false
 td.2.20.isDaemon=true
 td.2.20.isDeadLocked=false
 td.2.20.isIdle=false
@@ -2271,6 +2384,7 @@ td.2.21.header="ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" prio=5
 td.2.21.id=0xb00
 td.2.21.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
 td.2.21.isBlocked=true
+td.2.21.isBlocking=false
 td.2.21.isDaemon=true
 td.2.21.isDeadLocked=false
 td.2.21.isIdle=false
@@ -2302,6 +2416,7 @@ td.2.22.header="ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" prio=5
 td.2.22.id=0xb80
 td.2.22.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
 td.2.22.isBlocked=true
+td.2.22.isBlocking=false
 td.2.22.isDaemon=true
 td.2.22.isDeadLocked=false
 td.2.22.isIdle=false
@@ -2334,6 +2449,7 @@ td.2.23.header="ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" prio=5
 td.2.23.id=0xc00
 td.2.23.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
 td.2.23.isBlocked=true
+td.2.23.isBlocking=true
 td.2.23.isDaemon=true
 td.2.23.isDeadLocked=true
 td.2.23.isIdle=false
@@ -2366,6 +2482,7 @@ td.2.24.header="ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" prio=5
 td.2.24.id=0xc80
 td.2.24.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
 td.2.24.isBlocked=true
+td.2.24.isBlocking=true
 td.2.24.isDaemon=true
 td.2.24.isDeadLocked=true
 td.2.24.isIdle=false
@@ -2386,6 +2503,7 @@ td.2.25.header="ExecuteThread: '0' for queue: 'weblogic.kernel.System'" prio=5 i
 td.2.25.id=0xd00
 td.2.25.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
 td.2.25.isBlocked=false
+td.2.25.isBlocking=false
 td.2.25.isDaemon=true
 td.2.25.isDeadLocked=false
 td.2.25.isIdle=true
@@ -2406,6 +2524,7 @@ td.2.26.header="ExecuteThread: '1' for queue: 'weblogic.kernel.System'" prio=5 i
 td.2.26.id=0xd80
 td.2.26.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
 td.2.26.isBlocked=false
+td.2.26.isBlocking=false
 td.2.26.isDaemon=true
 td.2.26.isDeadLocked=false
 td.2.26.isIdle=true
@@ -2426,6 +2545,7 @@ td.2.27.header="ExecuteThread: '2' for queue: 'weblogic.kernel.System'" prio=5 i
 td.2.27.id=0xe00
 td.2.27.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
 td.2.27.isBlocked=false
+td.2.27.isBlocking=false
 td.2.27.isDaemon=true
 td.2.27.isDeadLocked=false
 td.2.27.isIdle=true
@@ -2446,6 +2566,7 @@ td.2.28.header="ExecuteThread: '3' for queue: 'weblogic.kernel.System'" prio=5 i
 td.2.28.id=0xe80
 td.2.28.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
 td.2.28.isBlocked=false
+td.2.28.isBlocking=false
 td.2.28.isDaemon=true
 td.2.28.isDeadLocked=false
 td.2.28.isIdle=true
@@ -2466,6 +2587,7 @@ td.2.29.header="ExecuteThread: '4' for queue: 'weblogic.kernel.System'" prio=5 i
 td.2.29.id=0xf00
 td.2.29.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
 td.2.29.isBlocked=false
+td.2.29.isBlocking=false
 td.2.29.isDaemon=true
 td.2.29.isDeadLocked=false
 td.2.29.isIdle=true
@@ -2487,6 +2609,7 @@ td.2.30.header="weblogic.time.TimeEventGenerator" prio=9 id=0xf80 tid=0xd00 wait
 td.2.30.id=0xf80
 td.2.30.name=weblogic.time.TimeEventGenerator
 td.2.30.isBlocked=false
+td.2.30.isBlocking=false
 td.2.30.isDaemon=true
 td.2.30.isDeadLocked=false
 td.2.30.isIdle=true
@@ -2507,6 +2630,7 @@ td.2.31.header="weblogic.security.SpinnerRandomSource" prio=5 id=0x1000 tid=0x12
 td.2.31.id=0x1000
 td.2.31.name=weblogic.security.SpinnerRandomSource
 td.2.31.isBlocked=false
+td.2.31.isBlocking=false
 td.2.31.isDaemon=true
 td.2.31.isDeadLocked=false
 td.2.31.isIdle=true
@@ -2527,6 +2651,7 @@ td.2.32.header="ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" prio=5 id=0
 td.2.32.id=0x1080
 td.2.32.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
 td.2.32.isBlocked=false
+td.2.32.isBlocking=false
 td.2.32.isDaemon=true
 td.2.32.isDeadLocked=false
 td.2.32.isIdle=true
@@ -2547,6 +2672,7 @@ td.2.33.header="ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" prio=5 id=0
 td.2.33.id=0x1100
 td.2.33.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
 td.2.33.isBlocked=false
+td.2.33.isBlocking=false
 td.2.33.isDaemon=true
 td.2.33.isDeadLocked=false
 td.2.33.isIdle=true
@@ -2567,6 +2693,7 @@ td.2.34.header="ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" prio=5 id=0x
 td.2.34.id=0x1180
 td.2.34.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
 td.2.34.isBlocked=false
+td.2.34.isBlocking=false
 td.2.34.isDaemon=true
 td.2.34.isDeadLocked=false
 td.2.34.isIdle=true
@@ -2587,6 +2714,7 @@ td.2.35.header="ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" prio=5 id=0x
 td.2.35.id=0x1200
 td.2.35.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
 td.2.35.isBlocked=false
+td.2.35.isBlocking=false
 td.2.35.isDaemon=true
 td.2.35.isDeadLocked=false
 td.2.35.isIdle=true
@@ -2607,6 +2735,7 @@ td.2.36.header="ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" prio=5 id=0x
 td.2.36.id=0x1280
 td.2.36.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
 td.2.36.isBlocked=false
+td.2.36.isBlocking=false
 td.2.36.isDaemon=true
 td.2.36.isDeadLocked=false
 td.2.36.isIdle=true
@@ -2627,6 +2756,7 @@ td.2.37.header="VDE Transaction Processor Thread" prio=2 id=0x1300 tid=0x1598 wa
 td.2.37.id=0x1300
 td.2.37.name=VDE Transaction Processor Thread
 td.2.37.isBlocked=false
+td.2.37.isBlocking=false
 td.2.37.isDaemon=false
 td.2.37.isDeadLocked=false
 td.2.37.isIdle=true
@@ -2648,6 +2778,7 @@ td.2.38.header="ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" prio=5 id=0x1
 td.2.38.id=0x1380
 td.2.38.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
 td.2.38.isBlocked=false
+td.2.38.isBlocking=false
 td.2.38.isDaemon=true
 td.2.38.isDeadLocked=false
 td.2.38.isIdle=true
@@ -2668,6 +2799,7 @@ td.2.39.header="Thread-4" prio=5 id=0x1400 tid=0x1220 waiting
 td.2.39.id=0x1400
 td.2.39.name=Thread-4
 td.2.39.isBlocked=false
+td.2.39.isBlocking=false
 td.2.39.isDaemon=false
 td.2.39.isDeadLocked=false
 td.2.39.isIdle=true
@@ -2686,6 +2818,7 @@ td.2.40.header="[JRockit] GCEventThread" prio=5 id=0x1480 tid=0x11a4 active, nat
 td.2.40.id=0x1480
 td.2.40.name=[JRockit] GCEventThread
 td.2.40.isBlocked=false
+td.2.40.isBlocking=false
 td.2.40.isDaemon=true
 td.2.40.isDeadLocked=false
 td.2.40.isIdle=true
@@ -2706,6 +2839,7 @@ td.2.41.header="weblogic.health.CoreHealthMonitor" prio=5 id=0x1500 tid=0x1594 w
 td.2.41.id=0x1500
 td.2.41.name=weblogic.health.CoreHealthMonitor
 td.2.41.isBlocked=false
+td.2.41.isBlocking=false
 td.2.41.isDaemon=true
 td.2.41.isDeadLocked=false
 td.2.41.isIdle=true
@@ -2729,6 +2863,7 @@ td.2.42.header="ListenThread.Default" prio=5 id=0x1580 tid=0x1528 active
 td.2.42.id=0x1580
 td.2.42.name=ListenThread.Default
 td.2.42.isBlocked=false
+td.2.42.isBlocking=false
 td.2.42.isDaemon=false
 td.2.42.isDeadLocked=false
 td.2.42.isIdle=false
@@ -2748,6 +2883,7 @@ td.2.43.header="ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" prio=5 id
 td.2.43.id=0x1600
 td.2.43.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
 td.2.43.isBlocked=false
+td.2.43.isBlocking=false
 td.2.43.isDaemon=true
 td.2.43.isDeadLocked=false
 td.2.43.isIdle=false
@@ -2767,6 +2903,7 @@ td.2.44.header="ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" prio=5 id
 td.2.44.id=0x1680
 td.2.44.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
 td.2.44.isBlocked=false
+td.2.44.isBlocking=false
 td.2.44.isDaemon=true
 td.2.44.isDeadLocked=false
 td.2.44.isIdle=false
@@ -2787,6 +2924,7 @@ td.2.45.header="Thread-6" prio=5 id=0x1700 tid=0xe7c waiting, daemon
 td.2.45.id=0x1700
 td.2.45.name=Thread-6
 td.2.45.isBlocked=false
+td.2.45.isBlocking=false
 td.2.45.isDaemon=true
 td.2.45.isDeadLocked=false
 td.2.45.isIdle=true
@@ -2809,6 +2947,7 @@ td.3.0.header="Main Thread" prio=5 id=0x80 tid=0xc10 waiting
 td.3.0.id=0x80
 td.3.0.name=Main Thread
 td.3.0.isBlocked=false
+td.3.0.isBlocking=false
 td.3.0.isDaemon=false
 td.3.0.isDeadLocked=false
 td.3.0.isIdle=true
@@ -2821,6 +2960,7 @@ td.3.1.header="(Signal Handler)" prio=5 id=0x100 tid=0x17fc active, daemon
 td.3.1.id=0x100
 td.3.1.name=(Signal Handler)
 td.3.1.isBlocked=false
+td.3.1.isBlocking=false
 td.3.1.isDaemon=true
 td.3.1.isDeadLocked=false
 td.3.1.isIdle=false
@@ -2833,6 +2973,7 @@ td.3.2.header="(Code Generation Thread 1)" prio=5 id=0x180 tid=0x1190 active, na
 td.3.2.id=0x180
 td.3.2.name=(Code Generation Thread 1)
 td.3.2.isBlocked=false
+td.3.2.isBlocking=false
 td.3.2.isDaemon=true
 td.3.2.isDeadLocked=false
 td.3.2.isIdle=true
@@ -2845,6 +2986,7 @@ td.3.3.header="(Code Optimization Thread 1)" prio=5 id=0x200 tid=0x1570 active, 
 td.3.3.id=0x200
 td.3.3.name=(Code Optimization Thread 1)
 td.3.3.isBlocked=false
+td.3.3.isBlocking=false
 td.3.3.isDaemon=true
 td.3.3.isDeadLocked=false
 td.3.3.isIdle=true
@@ -2857,6 +2999,7 @@ td.3.4.header="(GC Main Thread)" prio=5 id=0x280 tid=0x4cc active, daemon
 td.3.4.id=0x280
 td.3.4.name=(GC Main Thread)
 td.3.4.isBlocked=false
+td.3.4.isBlocking=false
 td.3.4.isDaemon=true
 td.3.4.isDeadLocked=false
 td.3.4.isIdle=false
@@ -2869,6 +3012,7 @@ td.3.5.header="(GC Worker Thread 1)" prio=5 id=0x300 tid=0x17f8 active, native_w
 td.3.5.id=0x300
 td.3.5.name=(GC Worker Thread 1)
 td.3.5.isBlocked=false
+td.3.5.isBlocking=false
 td.3.5.isDaemon=true
 td.3.5.isDeadLocked=false
 td.3.5.isIdle=true
@@ -2891,6 +3035,7 @@ td.3.6.header="Finalizer" prio=8 id=0x380 tid=0xe0 waiting, daemon
 td.3.6.id=0x380
 td.3.6.name=Finalizer
 td.3.6.isBlocked=false
+td.3.6.isBlocking=false
 td.3.6.isDaemon=true
 td.3.6.isDeadLocked=false
 td.3.6.isIdle=true
@@ -2908,6 +3053,7 @@ td.3.7.header="Reference Handler" prio=10 id=0x400 tid=0x50c waiting for pending
 td.3.7.id=0x400
 td.3.7.name=Reference Handler
 td.3.7.isBlocked=false
+td.3.7.isBlocking=false
 td.3.7.isDaemon=true
 td.3.7.isDeadLocked=false
 td.3.7.isIdle=false
@@ -2920,6 +3066,7 @@ td.3.8.header="(Hotspot Detector)" prio=10 id=0x480 tid=0x1774 active, daemon
 td.3.8.id=0x480
 td.3.8.name=(Hotspot Detector)
 td.3.8.isBlocked=false
+td.3.8.isBlocking=false
 td.3.8.isDaemon=true
 td.3.8.isDeadLocked=false
 td.3.8.isIdle=false
@@ -2940,6 +3087,7 @@ td.3.9.header="Thread-1" prio=5 id=0x500 tid=0x15c4 waiting, daemon
 td.3.9.id=0x500
 td.3.9.name=Thread-1
 td.3.9.isBlocked=false
+td.3.9.isBlocking=false
 td.3.9.isDaemon=true
 td.3.9.isDeadLocked=false
 td.3.9.isIdle=true
@@ -2960,6 +3108,7 @@ td.3.10.header="ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" prio=5 
 td.3.10.id=0x580
 td.3.10.name=ExecuteThread: '0' for queue: 'weblogic.kernel.Default'
 td.3.10.isBlocked=false
+td.3.10.isBlocking=false
 td.3.10.isDaemon=true
 td.3.10.isDeadLocked=false
 td.3.10.isIdle=true
@@ -2980,6 +3129,7 @@ td.3.11.header="ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" prio=5 
 td.3.11.id=0x600
 td.3.11.name=ExecuteThread: '1' for queue: 'weblogic.kernel.Default'
 td.3.11.isBlocked=false
+td.3.11.isBlocking=false
 td.3.11.isDaemon=true
 td.3.11.isDeadLocked=false
 td.3.11.isIdle=true
@@ -3000,6 +3150,7 @@ td.3.12.header="ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" prio=5 
 td.3.12.id=0x680
 td.3.12.name=ExecuteThread: '2' for queue: 'weblogic.kernel.Default'
 td.3.12.isBlocked=false
+td.3.12.isBlocking=false
 td.3.12.isDaemon=true
 td.3.12.isDeadLocked=false
 td.3.12.isIdle=true
@@ -3020,6 +3171,7 @@ td.3.13.header="ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" prio=5 
 td.3.13.id=0x700
 td.3.13.name=ExecuteThread: '3' for queue: 'weblogic.kernel.Default'
 td.3.13.isBlocked=false
+td.3.13.isBlocking=false
 td.3.13.isDaemon=true
 td.3.13.isDeadLocked=false
 td.3.13.isIdle=true
@@ -3040,6 +3192,7 @@ td.3.14.header="ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" prio=5 
 td.3.14.id=0x780
 td.3.14.name=ExecuteThread: '4' for queue: 'weblogic.kernel.Default'
 td.3.14.isBlocked=false
+td.3.14.isBlocking=false
 td.3.14.isDaemon=true
 td.3.14.isDeadLocked=false
 td.3.14.isIdle=true
@@ -3060,6 +3213,7 @@ td.3.15.header="ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" prio=5 
 td.3.15.id=0x800
 td.3.15.name=ExecuteThread: '5' for queue: 'weblogic.kernel.Default'
 td.3.15.isBlocked=false
+td.3.15.isBlocking=false
 td.3.15.isDaemon=true
 td.3.15.isDeadLocked=false
 td.3.15.isIdle=true
@@ -3080,6 +3234,7 @@ td.3.16.header="ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" prio=5 
 td.3.16.id=0x880
 td.3.16.name=ExecuteThread: '6' for queue: 'weblogic.kernel.Default'
 td.3.16.isBlocked=false
+td.3.16.isBlocking=false
 td.3.16.isDaemon=true
 td.3.16.isDeadLocked=false
 td.3.16.isIdle=true
@@ -3100,6 +3255,7 @@ td.3.17.header="ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" prio=5 
 td.3.17.id=0x900
 td.3.17.name=ExecuteThread: '7' for queue: 'weblogic.kernel.Default'
 td.3.17.isBlocked=false
+td.3.17.isBlocking=false
 td.3.17.isDaemon=true
 td.3.17.isDeadLocked=false
 td.3.17.isIdle=true
@@ -3120,6 +3276,7 @@ td.3.18.header="ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" prio=5 
 td.3.18.id=0x980
 td.3.18.name=ExecuteThread: '8' for queue: 'weblogic.kernel.Default'
 td.3.18.isBlocked=false
+td.3.18.isBlocking=false
 td.3.18.isDaemon=true
 td.3.18.isDeadLocked=false
 td.3.18.isIdle=true
@@ -3140,6 +3297,7 @@ td.3.19.header="ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" prio=5 
 td.3.19.id=0xa00
 td.3.19.name=ExecuteThread: '9' for queue: 'weblogic.kernel.Default'
 td.3.19.isBlocked=false
+td.3.19.isBlocking=false
 td.3.19.isDaemon=true
 td.3.19.isDeadLocked=false
 td.3.19.isIdle=true
@@ -3171,6 +3329,7 @@ td.3.20.header="ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" prio=5
 td.3.20.id=0xa80
 td.3.20.name=ExecuteThread: '10' for queue: 'weblogic.kernel.Default'
 td.3.20.isBlocked=true
+td.3.20.isBlocking=false
 td.3.20.isDaemon=true
 td.3.20.isDeadLocked=false
 td.3.20.isIdle=false
@@ -3202,6 +3361,7 @@ td.3.21.header="ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" prio=5
 td.3.21.id=0xb00
 td.3.21.name=ExecuteThread: '11' for queue: 'weblogic.kernel.Default'
 td.3.21.isBlocked=true
+td.3.21.isBlocking=false
 td.3.21.isDaemon=true
 td.3.21.isDeadLocked=false
 td.3.21.isIdle=false
@@ -3233,6 +3393,7 @@ td.3.22.header="ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" prio=5
 td.3.22.id=0xb80
 td.3.22.name=ExecuteThread: '12' for queue: 'weblogic.kernel.Default'
 td.3.22.isBlocked=true
+td.3.22.isBlocking=false
 td.3.22.isDaemon=true
 td.3.22.isDeadLocked=false
 td.3.22.isIdle=false
@@ -3265,6 +3426,7 @@ td.3.23.header="ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" prio=5
 td.3.23.id=0xc00
 td.3.23.name=ExecuteThread: '13' for queue: 'weblogic.kernel.Default'
 td.3.23.isBlocked=true
+td.3.23.isBlocking=true
 td.3.23.isDaemon=true
 td.3.23.isDeadLocked=true
 td.3.23.isIdle=false
@@ -3297,6 +3459,7 @@ td.3.24.header="ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" prio=5
 td.3.24.id=0xc80
 td.3.24.name=ExecuteThread: '14' for queue: 'weblogic.kernel.Default'
 td.3.24.isBlocked=true
+td.3.24.isBlocking=true
 td.3.24.isDaemon=true
 td.3.24.isDeadLocked=true
 td.3.24.isIdle=false
@@ -3317,6 +3480,7 @@ td.3.25.header="ExecuteThread: '0' for queue: 'weblogic.kernel.System'" prio=5 i
 td.3.25.id=0xd00
 td.3.25.name=ExecuteThread: '0' for queue: 'weblogic.kernel.System'
 td.3.25.isBlocked=false
+td.3.25.isBlocking=false
 td.3.25.isDaemon=true
 td.3.25.isDeadLocked=false
 td.3.25.isIdle=true
@@ -3337,6 +3501,7 @@ td.3.26.header="ExecuteThread: '1' for queue: 'weblogic.kernel.System'" prio=5 i
 td.3.26.id=0xd80
 td.3.26.name=ExecuteThread: '1' for queue: 'weblogic.kernel.System'
 td.3.26.isBlocked=false
+td.3.26.isBlocking=false
 td.3.26.isDaemon=true
 td.3.26.isDeadLocked=false
 td.3.26.isIdle=true
@@ -3357,6 +3522,7 @@ td.3.27.header="ExecuteThread: '2' for queue: 'weblogic.kernel.System'" prio=5 i
 td.3.27.id=0xe00
 td.3.27.name=ExecuteThread: '2' for queue: 'weblogic.kernel.System'
 td.3.27.isBlocked=false
+td.3.27.isBlocking=false
 td.3.27.isDaemon=true
 td.3.27.isDeadLocked=false
 td.3.27.isIdle=true
@@ -3377,6 +3543,7 @@ td.3.28.header="ExecuteThread: '3' for queue: 'weblogic.kernel.System'" prio=5 i
 td.3.28.id=0xe80
 td.3.28.name=ExecuteThread: '3' for queue: 'weblogic.kernel.System'
 td.3.28.isBlocked=false
+td.3.28.isBlocking=false
 td.3.28.isDaemon=true
 td.3.28.isDeadLocked=false
 td.3.28.isIdle=true
@@ -3397,6 +3564,7 @@ td.3.29.header="ExecuteThread: '4' for queue: 'weblogic.kernel.System'" prio=5 i
 td.3.29.id=0xf00
 td.3.29.name=ExecuteThread: '4' for queue: 'weblogic.kernel.System'
 td.3.29.isBlocked=false
+td.3.29.isBlocking=false
 td.3.29.isDaemon=true
 td.3.29.isDeadLocked=false
 td.3.29.isIdle=true
@@ -3418,6 +3586,7 @@ td.3.30.header="weblogic.time.TimeEventGenerator" prio=9 id=0xf80 tid=0xd00 wait
 td.3.30.id=0xf80
 td.3.30.name=weblogic.time.TimeEventGenerator
 td.3.30.isBlocked=false
+td.3.30.isBlocking=false
 td.3.30.isDaemon=true
 td.3.30.isDeadLocked=false
 td.3.30.isIdle=true
@@ -3438,6 +3607,7 @@ td.3.31.header="weblogic.security.SpinnerRandomSource" prio=5 id=0x1000 tid=0x12
 td.3.31.id=0x1000
 td.3.31.name=weblogic.security.SpinnerRandomSource
 td.3.31.isBlocked=false
+td.3.31.isBlocking=false
 td.3.31.isDaemon=true
 td.3.31.isDeadLocked=false
 td.3.31.isIdle=true
@@ -3458,6 +3628,7 @@ td.3.32.header="ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" prio=5 id=0
 td.3.32.id=0x1080
 td.3.32.name=ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'
 td.3.32.isBlocked=false
+td.3.32.isBlocking=false
 td.3.32.isDaemon=true
 td.3.32.isDeadLocked=false
 td.3.32.isIdle=true
@@ -3478,6 +3649,7 @@ td.3.33.header="ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" prio=5 id=0
 td.3.33.id=0x1100
 td.3.33.name=ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'
 td.3.33.isBlocked=false
+td.3.33.isBlocking=false
 td.3.33.isDaemon=true
 td.3.33.isDeadLocked=false
 td.3.33.isIdle=true
@@ -3498,6 +3670,7 @@ td.3.34.header="ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" prio=5 id=0x
 td.3.34.id=0x1180
 td.3.34.name=ExecuteThread: '0' for queue: 'weblogic.admin.RMI'
 td.3.34.isBlocked=false
+td.3.34.isBlocking=false
 td.3.34.isDaemon=true
 td.3.34.isDeadLocked=false
 td.3.34.isIdle=true
@@ -3518,6 +3691,7 @@ td.3.35.header="ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" prio=5 id=0x
 td.3.35.id=0x1200
 td.3.35.name=ExecuteThread: '1' for queue: 'weblogic.admin.RMI'
 td.3.35.isBlocked=false
+td.3.35.isBlocking=false
 td.3.35.isDaemon=true
 td.3.35.isDeadLocked=false
 td.3.35.isIdle=true
@@ -3538,6 +3712,7 @@ td.3.36.header="ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" prio=5 id=0x
 td.3.36.id=0x1280
 td.3.36.name=ExecuteThread: '2' for queue: 'weblogic.admin.RMI'
 td.3.36.isBlocked=false
+td.3.36.isBlocking=false
 td.3.36.isDaemon=true
 td.3.36.isDeadLocked=false
 td.3.36.isIdle=true
@@ -3558,6 +3733,7 @@ td.3.37.header="VDE Transaction Processor Thread" prio=2 id=0x1300 tid=0x1598 wa
 td.3.37.id=0x1300
 td.3.37.name=VDE Transaction Processor Thread
 td.3.37.isBlocked=false
+td.3.37.isBlocking=false
 td.3.37.isDaemon=false
 td.3.37.isDeadLocked=false
 td.3.37.isIdle=true
@@ -3579,6 +3755,7 @@ td.3.38.header="ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" prio=5 id=0x1
 td.3.38.id=0x1380
 td.3.38.name=ExecuteThread: '0' for queue: 'JMS.TimerTreePool'
 td.3.38.isBlocked=false
+td.3.38.isBlocking=false
 td.3.38.isDaemon=true
 td.3.38.isDeadLocked=false
 td.3.38.isIdle=true
@@ -3599,6 +3776,7 @@ td.3.39.header="Thread-4" prio=5 id=0x1400 tid=0x1220 waiting
 td.3.39.id=0x1400
 td.3.39.name=Thread-4
 td.3.39.isBlocked=false
+td.3.39.isBlocking=false
 td.3.39.isDaemon=false
 td.3.39.isDeadLocked=false
 td.3.39.isIdle=true
@@ -3617,6 +3795,7 @@ td.3.40.header="[JRockit] GCEventThread" prio=5 id=0x1480 tid=0x11a4 active, nat
 td.3.40.id=0x1480
 td.3.40.name=[JRockit] GCEventThread
 td.3.40.isBlocked=false
+td.3.40.isBlocking=false
 td.3.40.isDaemon=true
 td.3.40.isDeadLocked=false
 td.3.40.isIdle=true
@@ -3637,6 +3816,7 @@ td.3.41.header="weblogic.health.CoreHealthMonitor" prio=5 id=0x1500 tid=0x1594 w
 td.3.41.id=0x1500
 td.3.41.name=weblogic.health.CoreHealthMonitor
 td.3.41.isBlocked=false
+td.3.41.isBlocking=false
 td.3.41.isDaemon=true
 td.3.41.isDeadLocked=false
 td.3.41.isIdle=true
@@ -3660,6 +3840,7 @@ td.3.42.header="ListenThread.Default" prio=5 id=0x1580 tid=0x1528 active
 td.3.42.id=0x1580
 td.3.42.name=ListenThread.Default
 td.3.42.isBlocked=false
+td.3.42.isBlocking=false
 td.3.42.isDaemon=false
 td.3.42.isDeadLocked=false
 td.3.42.isIdle=false
@@ -3679,6 +3860,7 @@ td.3.43.header="ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" prio=5 id
 td.3.43.id=0x1600
 td.3.43.name=ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'
 td.3.43.isBlocked=false
+td.3.43.isBlocking=false
 td.3.43.isDaemon=true
 td.3.43.isDeadLocked=false
 td.3.43.isIdle=false
@@ -3698,6 +3880,7 @@ td.3.44.header="ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" prio=5 id
 td.3.44.id=0x1680
 td.3.44.name=ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'
 td.3.44.isBlocked=false
+td.3.44.isBlocking=false
 td.3.44.isDaemon=true
 td.3.44.isDeadLocked=false
 td.3.44.isIdle=false
@@ -3718,6 +3901,7 @@ td.3.45.header="Thread-6" prio=5 id=0x1700 tid=0xe7c waiting, daemon
 td.3.45.id=0x1700
 td.3.45.name=Thread-6
 td.3.45.isBlocked=false
+td.3.45.isBlocking=false
 td.3.45.isDaemon=true
 td.3.45.isDeadLocked=false
 td.3.45.isIdle=true

@@ -89,6 +89,7 @@ public class TestThreadDump extends TestCase {
                 assertEquals(examining + "td." + i + "." + j + ".id", props.getProperty("td." + i + "." + j + ".id"), String.valueOf(td.getId()));
                 assertEquals(examining + "td." + i + "." + j + ".name", props.getProperty("td." + i + "." + j + ".name"), String.valueOf(td.getName()));
                 assertEquals(examining + "td." + i + "." + j + ".isBlocked", props.getProperty("td." + i + "." + j + ".isBlocked"), String.valueOf(td.isBlocked()));
+                assertEquals(examining + "td." + i + "." + j + ".isBlocking", props.getProperty("td." + i + "." + j + ".isBlocking"), String.valueOf(td.isBlocking()));
                 assertEquals(examining + "td." + i + "." + j + ".isDaemon", props.getProperty("td." + i + "." + j + ".isDaemon"), String.valueOf(td.isDaemon()));
                 assertEquals(examining + "td." + i + "." + j + ".isDeadLocked", props.getProperty("td." + i + "." + j + ".isDeadLocked"), String.valueOf(td.isDeadLocked()));
                 assertEquals(examining + "td." + i + "." + j + ".isIdle", props.getProperty("td." + i + "." + j + ".isIdle"), String.valueOf(td.isIdle()));
@@ -129,6 +130,7 @@ public class TestThreadDump extends TestCase {
                     pw.println("td." + i + "." + j + ".id=" + td.getId());
                     pw.println("td." + i + "." + j + ".name=" + td.getName());
                     pw.println("td." + i + "." + j + ".isBlocked=" + td.isBlocked());
+                    pw.println("td." + i + "." + j + ".isBlocking=" + td.isBlocking());
                     pw.println("td." + i + "." + j + ".isDaemon=" + td.isDaemon());
                     pw.println("td." + i + "." + j + ".isDeadLocked=" + td.isDeadLocked());
                     pw.println("td." + i + "." + j + ".isIdle=" + td.isIdle());

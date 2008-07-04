@@ -10,6 +10,7 @@ td.0.0.header="InactiveAgentCheckThread" daemon prio=8 tid=0x037cc188 nid=108 lw
 td.0.0.id=0x037cc188
 td.0.0.name=InactiveAgentCheckThread
 td.0.0.isBlocked=false
+td.0.0.isBlocking=false
 td.0.0.isDaemon=true
 td.0.0.isDeadLocked=false
 td.0.0.isIdle=true
@@ -24,6 +25,7 @@ td.0.1.header="ServletSessionCheckThread" daemon prio=8 tid=0x010e4af8 nid=104 l
 td.0.1.id=0x010e4af8
 td.0.1.name=ServletSessionCheckThread
 td.0.1.isBlocked=false
+td.0.1.isBlocking=false
 td.0.1.isDaemon=true
 td.0.1.isDeadLocked=false
 td.0.1.isIdle=true
@@ -38,6 +40,7 @@ td.0.2.header="ParseMultiManager" daemon prio=8 tid=0x010e4c30 nid=103 lwp_id=35
 td.0.2.id=0x010e4c30
 td.0.2.name=ParseMultiManager
 td.0.2.isBlocked=false
+td.0.2.isBlocking=false
 td.0.2.isDaemon=true
 td.0.2.isDeadLocked=false
 td.0.2.isIdle=true
@@ -57,6 +60,7 @@ td.0.3.header="ListenThread" prio=10 tid=0x0003fa38 nid=78 lwp_id=3573240 runnab
 td.0.3.id=0x0003fa38
 td.0.3.name=ListenThread
 td.0.3.isBlocked=false
+td.0.3.isBlocking=false
 td.0.3.isDaemon=false
 td.0.3.isDeadLocked=false
 td.0.3.isIdle=false
@@ -75,6 +79,7 @@ td.0.4.header="ExecuteThread: '14' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.0.4.id=0x0003f690
 td.0.4.name=ExecuteThread: '14' for queue: 'JmsDispatcher'
 td.0.4.isBlocked=false
+td.0.4.isBlocking=false
 td.0.4.isDaemon=true
 td.0.4.isDeadLocked=false
 td.0.4.isIdle=true
@@ -93,6 +98,7 @@ td.0.5.header="ExecuteThread: '13' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.0.5.id=0x0003f558
 td.0.5.name=ExecuteThread: '13' for queue: 'JmsDispatcher'
 td.0.5.isBlocked=false
+td.0.5.isBlocking=false
 td.0.5.isDaemon=true
 td.0.5.isDeadLocked=false
 td.0.5.isIdle=true
@@ -111,6 +117,7 @@ td.0.6.header="ExecuteThread: '12' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.0.6.id=0x0003f2e8
 td.0.6.name=ExecuteThread: '12' for queue: 'JmsDispatcher'
 td.0.6.isBlocked=false
+td.0.6.isBlocking=false
 td.0.6.isDaemon=true
 td.0.6.isDeadLocked=false
 td.0.6.isIdle=true
@@ -129,6 +136,7 @@ td.0.7.header="ExecuteThread: '11' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.0.7.id=0x0003f1b0
 td.0.7.name=ExecuteThread: '11' for queue: 'JmsDispatcher'
 td.0.7.isBlocked=false
+td.0.7.isBlocking=false
 td.0.7.isDaemon=true
 td.0.7.isDeadLocked=false
 td.0.7.isIdle=true
@@ -147,6 +155,7 @@ td.0.8.header="ExecuteThread: '10' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.0.8.id=0x0003f078
 td.0.8.name=ExecuteThread: '10' for queue: 'JmsDispatcher'
 td.0.8.isBlocked=false
+td.0.8.isBlocking=false
 td.0.8.isDaemon=true
 td.0.8.isDeadLocked=false
 td.0.8.isIdle=true
@@ -165,6 +174,7 @@ td.0.9.header="ExecuteThread: '9' for queue: 'JmsDispatcher'" daemon prio=10 tid
 td.0.9.id=0x0003ef40
 td.0.9.name=ExecuteThread: '9' for queue: 'JmsDispatcher'
 td.0.9.isBlocked=false
+td.0.9.isBlocking=false
 td.0.9.isDaemon=true
 td.0.9.isDeadLocked=false
 td.0.9.isIdle=true
@@ -183,6 +193,7 @@ td.0.10.header="ExecuteThread: '8' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.0.10.id=0x0003ee08
 td.0.10.name=ExecuteThread: '8' for queue: 'JmsDispatcher'
 td.0.10.isBlocked=false
+td.0.10.isBlocking=false
 td.0.10.isDaemon=true
 td.0.10.isDeadLocked=false
 td.0.10.isIdle=true
@@ -201,6 +212,7 @@ td.0.11.header="ExecuteThread: '7' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.0.11.id=0x0003ecd0
 td.0.11.name=ExecuteThread: '7' for queue: 'JmsDispatcher'
 td.0.11.isBlocked=false
+td.0.11.isBlocking=false
 td.0.11.isDaemon=true
 td.0.11.isDeadLocked=false
 td.0.11.isIdle=true
@@ -219,6 +231,7 @@ td.0.12.header="ExecuteThread: '6' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.0.12.id=0x0003eb98
 td.0.12.name=ExecuteThread: '6' for queue: 'JmsDispatcher'
 td.0.12.isBlocked=false
+td.0.12.isBlocking=false
 td.0.12.isDaemon=true
 td.0.12.isDeadLocked=false
 td.0.12.isIdle=true
@@ -237,6 +250,7 @@ td.0.13.header="ExecuteThread: '5' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.0.13.id=0x0003ea60
 td.0.13.name=ExecuteThread: '5' for queue: 'JmsDispatcher'
 td.0.13.isBlocked=false
+td.0.13.isBlocking=false
 td.0.13.isDaemon=true
 td.0.13.isDeadLocked=false
 td.0.13.isIdle=true
@@ -255,6 +269,7 @@ td.0.14.header="ExecuteThread: '4' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.0.14.id=0x0003e928
 td.0.14.name=ExecuteThread: '4' for queue: 'JmsDispatcher'
 td.0.14.isBlocked=false
+td.0.14.isBlocking=false
 td.0.14.isDaemon=true
 td.0.14.isDeadLocked=false
 td.0.14.isIdle=true
@@ -273,6 +288,7 @@ td.0.15.header="ExecuteThread: '3' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.0.15.id=0x0003e7f0
 td.0.15.name=ExecuteThread: '3' for queue: 'JmsDispatcher'
 td.0.15.isBlocked=false
+td.0.15.isBlocking=false
 td.0.15.isDaemon=true
 td.0.15.isDeadLocked=false
 td.0.15.isIdle=true
@@ -291,6 +307,7 @@ td.0.16.header="ExecuteThread: '2' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.0.16.id=0x0003e6b8
 td.0.16.name=ExecuteThread: '2' for queue: 'JmsDispatcher'
 td.0.16.isBlocked=false
+td.0.16.isBlocking=false
 td.0.16.isDaemon=true
 td.0.16.isDeadLocked=false
 td.0.16.isIdle=true
@@ -309,6 +326,7 @@ td.0.17.header="ExecuteThread: '1' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.0.17.id=0x0003e580
 td.0.17.name=ExecuteThread: '1' for queue: 'JmsDispatcher'
 td.0.17.isBlocked=false
+td.0.17.isBlocking=false
 td.0.17.isDaemon=true
 td.0.17.isDeadLocked=false
 td.0.17.isIdle=true
@@ -327,6 +345,7 @@ td.0.18.header="ExecuteThread: '0' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.0.18.id=0x0003e448
 td.0.18.name=ExecuteThread: '0' for queue: 'JmsDispatcher'
 td.0.18.isBlocked=false
+td.0.18.isBlocking=false
 td.0.18.isDaemon=true
 td.0.18.isDeadLocked=false
 td.0.18.isIdle=true
@@ -345,6 +364,7 @@ td.0.19.header="ExecuteThread: '2' for queue: 'weblogic.transaction.AsyncQueue'"
 td.0.19.id=0x0003e310
 td.0.19.name=ExecuteThread: '2' for queue: 'weblogic.transaction.AsyncQueue'
 td.0.19.isBlocked=false
+td.0.19.isBlocking=false
 td.0.19.isDaemon=true
 td.0.19.isDeadLocked=false
 td.0.19.isIdle=true
@@ -363,6 +383,7 @@ td.0.20.header="ExecuteThread: '1' for queue: 'weblogic.transaction.AsyncQueue'"
 td.0.20.id=0x0003e1d8
 td.0.20.name=ExecuteThread: '1' for queue: 'weblogic.transaction.AsyncQueue'
 td.0.20.isBlocked=false
+td.0.20.isBlocking=false
 td.0.20.isDaemon=true
 td.0.20.isDeadLocked=false
 td.0.20.isIdle=true
@@ -381,6 +402,7 @@ td.0.21.header="ExecuteThread: '0' for queue: 'weblogic.transaction.AsyncQueue'"
 td.0.21.id=0x0003e0a0
 td.0.21.name=ExecuteThread: '0' for queue: 'weblogic.transaction.AsyncQueue'
 td.0.21.isBlocked=false
+td.0.21.isBlocking=false
 td.0.21.isDaemon=true
 td.0.21.isDeadLocked=false
 td.0.21.isIdle=true
@@ -398,6 +420,7 @@ td.0.22.header="ExecuteThread: '1' for queue: '__weblogic_admin_rmi_queue'" daem
 td.0.22.id=0x0003d950
 td.0.22.name=ExecuteThread: '1' for queue: '__weblogic_admin_rmi_queue'
 td.0.22.isBlocked=false
+td.0.22.isBlocking=false
 td.0.22.isDaemon=true
 td.0.22.isDeadLocked=false
 td.0.22.isIdle=true
@@ -415,6 +438,7 @@ td.0.23.header="ExecuteThread: '0' for queue: '__weblogic_admin_rmi_queue'" daem
 td.0.23.id=0x0003d818
 td.0.23.name=ExecuteThread: '0' for queue: '__weblogic_admin_rmi_queue'
 td.0.23.isBlocked=false
+td.0.23.isBlocking=false
 td.0.23.isDaemon=true
 td.0.23.isDeadLocked=false
 td.0.23.isIdle=true
@@ -433,6 +457,7 @@ td.0.24.header="HighPriority TimeEventGenerator" daemon prio=10 tid=0x00eb9be8 n
 td.0.24.id=0x00eb9be8
 td.0.24.name=HighPriority TimeEventGenerator
 td.0.24.isBlocked=false
+td.0.24.isBlocking=false
 td.0.24.isDaemon=true
 td.0.24.isDeadLocked=false
 td.0.24.isIdle=true
@@ -451,6 +476,7 @@ td.0.25.header="ExecuteThread: '1' for queue: '__weblogic_admin_html_queue'" dae
 td.0.25.id=0x0003d6e0
 td.0.25.name=ExecuteThread: '1' for queue: '__weblogic_admin_html_queue'
 td.0.25.isBlocked=false
+td.0.25.isBlocking=false
 td.0.25.isDaemon=true
 td.0.25.isDeadLocked=false
 td.0.25.isIdle=true
@@ -469,6 +495,7 @@ td.0.26.header="ExecuteThread: '0' for queue: '__weblogic_admin_html_queue'" dae
 td.0.26.id=0x0003d5a8
 td.0.26.name=ExecuteThread: '0' for queue: '__weblogic_admin_html_queue'
 td.0.26.isBlocked=false
+td.0.26.isBlocking=false
 td.0.26.isDaemon=true
 td.0.26.isDeadLocked=false
 td.0.26.isIdle=true
@@ -487,6 +514,7 @@ td.0.27.header="TimeEventGenerator" daemon prio=10 tid=0x0003d470 nid=51 lwp_id=
 td.0.27.id=0x0003d470
 td.0.27.name=TimeEventGenerator
 td.0.27.isBlocked=false
+td.0.27.isBlocking=false
 td.0.27.isDaemon=true
 td.0.27.isDeadLocked=false
 td.0.27.isIdle=true
@@ -504,6 +532,7 @@ td.0.28.header="ExecuteThread: '1' for queue: '_weblogic_dgc_queue'" daemon prio
 td.0.28.id=0x0003d338
 td.0.28.name=ExecuteThread: '1' for queue: '_weblogic_dgc_queue'
 td.0.28.isBlocked=false
+td.0.28.isBlocking=false
 td.0.28.isDaemon=true
 td.0.28.isDeadLocked=false
 td.0.28.isIdle=true
@@ -521,6 +550,7 @@ td.0.29.header="ExecuteThread: '0' for queue: '_weblogic_dgc_queue'" daemon prio
 td.0.29.id=0x0003d200
 td.0.29.name=ExecuteThread: '0' for queue: '_weblogic_dgc_queue'
 td.0.29.isBlocked=false
+td.0.29.isBlocking=false
 td.0.29.isDaemon=true
 td.0.29.isDeadLocked=false
 td.0.29.isIdle=true
@@ -539,6 +569,7 @@ td.0.30.header="TimeEventGenerator" daemon prio=10 tid=0x0003d0c8 nid=48 lwp_id=
 td.0.30.id=0x0003d0c8
 td.0.30.name=TimeEventGenerator
 td.0.30.isBlocked=false
+td.0.30.isBlocking=false
 td.0.30.isDaemon=true
 td.0.30.isDeadLocked=false
 td.0.30.isIdle=true
@@ -557,6 +588,7 @@ td.0.31.header="SpinnerRandomSource" daemon prio=10 tid=0x0003cf90 nid=47 lwp_id
 td.0.31.id=0x0003cf90
 td.0.31.name=SpinnerRandomSource
 td.0.31.isBlocked=false
+td.0.31.isBlocking=false
 td.0.31.isDaemon=true
 td.0.31.isDeadLocked=false
 td.0.31.isIdle=true
@@ -575,6 +607,7 @@ td.0.32.header="ExecuteThread: '34' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.32.id=0x0003ce58
 td.0.32.name=ExecuteThread: '34' for queue: 'default'
 td.0.32.isBlocked=false
+td.0.32.isBlocking=true
 td.0.32.isDaemon=true
 td.0.32.isDeadLocked=false
 td.0.32.isIdle=false
@@ -592,6 +625,7 @@ td.0.33.header="ExecuteThread: '33' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.33.id=0x0003cd20
 td.0.33.name=ExecuteThread: '33' for queue: 'default'
 td.0.33.isBlocked=true
+td.0.33.isBlocking=false
 td.0.33.isDaemon=true
 td.0.33.isDeadLocked=false
 td.0.33.isIdle=false
@@ -609,6 +643,7 @@ td.0.34.header="ExecuteThread: '32' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.34.id=0x0003cbe8
 td.0.34.name=ExecuteThread: '32' for queue: 'default'
 td.0.34.isBlocked=true
+td.0.34.isBlocking=false
 td.0.34.isDaemon=true
 td.0.34.isDeadLocked=false
 td.0.34.isIdle=false
@@ -626,6 +661,7 @@ td.0.35.header="ExecuteThread: '31' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.35.id=0x0003cab0
 td.0.35.name=ExecuteThread: '31' for queue: 'default'
 td.0.35.isBlocked=false
+td.0.35.isBlocking=false
 td.0.35.isDaemon=true
 td.0.35.isDeadLocked=false
 td.0.35.isIdle=true
@@ -643,6 +679,7 @@ td.0.36.header="ExecuteThread: '30' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.36.id=0x0003c978
 td.0.36.name=ExecuteThread: '30' for queue: 'default'
 td.0.36.isBlocked=false
+td.0.36.isBlocking=false
 td.0.36.isDaemon=true
 td.0.36.isDeadLocked=false
 td.0.36.isIdle=true
@@ -660,6 +697,7 @@ td.0.37.header="ExecuteThread: '29' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.37.id=0x0003c840
 td.0.37.name=ExecuteThread: '29' for queue: 'default'
 td.0.37.isBlocked=false
+td.0.37.isBlocking=false
 td.0.37.isDaemon=true
 td.0.37.isDeadLocked=false
 td.0.37.isIdle=true
@@ -677,6 +715,7 @@ td.0.38.header="ExecuteThread: '28' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.38.id=0x0003c708
 td.0.38.name=ExecuteThread: '28' for queue: 'default'
 td.0.38.isBlocked=false
+td.0.38.isBlocking=false
 td.0.38.isDaemon=true
 td.0.38.isDeadLocked=false
 td.0.38.isIdle=true
@@ -694,6 +733,7 @@ td.0.39.header="ExecuteThread: '27' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.39.id=0x0003c5d0
 td.0.39.name=ExecuteThread: '27' for queue: 'default'
 td.0.39.isBlocked=false
+td.0.39.isBlocking=false
 td.0.39.isDaemon=true
 td.0.39.isDeadLocked=false
 td.0.39.isIdle=true
@@ -711,6 +751,7 @@ td.0.40.header="ExecuteThread: '26' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.40.id=0x0003c498
 td.0.40.name=ExecuteThread: '26' for queue: 'default'
 td.0.40.isBlocked=false
+td.0.40.isBlocking=false
 td.0.40.isDaemon=true
 td.0.40.isDeadLocked=false
 td.0.40.isIdle=true
@@ -728,6 +769,7 @@ td.0.41.header="ExecuteThread: '25' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.41.id=0x0003c360
 td.0.41.name=ExecuteThread: '25' for queue: 'default'
 td.0.41.isBlocked=false
+td.0.41.isBlocking=false
 td.0.41.isDaemon=true
 td.0.41.isDeadLocked=false
 td.0.41.isIdle=true
@@ -745,6 +787,7 @@ td.0.42.header="ExecuteThread: '24' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.42.id=0x0003c228
 td.0.42.name=ExecuteThread: '24' for queue: 'default'
 td.0.42.isBlocked=false
+td.0.42.isBlocking=false
 td.0.42.isDaemon=true
 td.0.42.isDeadLocked=false
 td.0.42.isIdle=true
@@ -762,6 +805,7 @@ td.0.43.header="ExecuteThread: '23' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.43.id=0x0003c0f0
 td.0.43.name=ExecuteThread: '23' for queue: 'default'
 td.0.43.isBlocked=false
+td.0.43.isBlocking=false
 td.0.43.isDaemon=true
 td.0.43.isDeadLocked=false
 td.0.43.isIdle=true
@@ -779,6 +823,7 @@ td.0.44.header="ExecuteThread: '22' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.44.id=0x0003bfb8
 td.0.44.name=ExecuteThread: '22' for queue: 'default'
 td.0.44.isBlocked=false
+td.0.44.isBlocking=false
 td.0.44.isDaemon=true
 td.0.44.isDeadLocked=false
 td.0.44.isIdle=true
@@ -796,6 +841,7 @@ td.0.45.header="ExecuteThread: '21' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.45.id=0x0003be80
 td.0.45.name=ExecuteThread: '21' for queue: 'default'
 td.0.45.isBlocked=false
+td.0.45.isBlocking=false
 td.0.45.isDaemon=true
 td.0.45.isDeadLocked=false
 td.0.45.isIdle=true
@@ -813,6 +859,7 @@ td.0.46.header="ExecuteThread: '20' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.46.id=0x0003bd48
 td.0.46.name=ExecuteThread: '20' for queue: 'default'
 td.0.46.isBlocked=false
+td.0.46.isBlocking=false
 td.0.46.isDaemon=true
 td.0.46.isDeadLocked=false
 td.0.46.isIdle=true
@@ -830,6 +877,7 @@ td.0.47.header="ExecuteThread: '19' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.47.id=0x0003bc10
 td.0.47.name=ExecuteThread: '19' for queue: 'default'
 td.0.47.isBlocked=false
+td.0.47.isBlocking=false
 td.0.47.isDaemon=true
 td.0.47.isDeadLocked=false
 td.0.47.isIdle=true
@@ -847,6 +895,7 @@ td.0.48.header="ExecuteThread: '18' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.48.id=0x0003bad8
 td.0.48.name=ExecuteThread: '18' for queue: 'default'
 td.0.48.isBlocked=false
+td.0.48.isBlocking=false
 td.0.48.isDaemon=true
 td.0.48.isDeadLocked=false
 td.0.48.isIdle=true
@@ -864,6 +913,7 @@ td.0.49.header="ExecuteThread: '17' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.49.id=0x0003b9a0
 td.0.49.name=ExecuteThread: '17' for queue: 'default'
 td.0.49.isBlocked=false
+td.0.49.isBlocking=false
 td.0.49.isDaemon=true
 td.0.49.isDeadLocked=false
 td.0.49.isIdle=true
@@ -881,6 +931,7 @@ td.0.50.header="ExecuteThread: '16' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.50.id=0x0003b868
 td.0.50.name=ExecuteThread: '16' for queue: 'default'
 td.0.50.isBlocked=false
+td.0.50.isBlocking=false
 td.0.50.isDaemon=true
 td.0.50.isDeadLocked=false
 td.0.50.isIdle=true
@@ -898,6 +949,7 @@ td.0.51.header="ExecuteThread: '15' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.51.id=0x0003b730
 td.0.51.name=ExecuteThread: '15' for queue: 'default'
 td.0.51.isBlocked=false
+td.0.51.isBlocking=false
 td.0.51.isDaemon=true
 td.0.51.isDeadLocked=false
 td.0.51.isIdle=true
@@ -915,6 +967,7 @@ td.0.52.header="ExecuteThread: '14' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.52.id=0x0003b5f8
 td.0.52.name=ExecuteThread: '14' for queue: 'default'
 td.0.52.isBlocked=false
+td.0.52.isBlocking=false
 td.0.52.isDaemon=true
 td.0.52.isDeadLocked=false
 td.0.52.isIdle=true
@@ -932,6 +985,7 @@ td.0.53.header="ExecuteThread: '13' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.53.id=0x0003b4c0
 td.0.53.name=ExecuteThread: '13' for queue: 'default'
 td.0.53.isBlocked=false
+td.0.53.isBlocking=false
 td.0.53.isDaemon=true
 td.0.53.isDeadLocked=false
 td.0.53.isIdle=true
@@ -949,6 +1003,7 @@ td.0.54.header="ExecuteThread: '12' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.54.id=0x0003b388
 td.0.54.name=ExecuteThread: '12' for queue: 'default'
 td.0.54.isBlocked=false
+td.0.54.isBlocking=false
 td.0.54.isDaemon=true
 td.0.54.isDeadLocked=false
 td.0.54.isIdle=true
@@ -966,6 +1021,7 @@ td.0.55.header="ExecuteThread: '11' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.55.id=0x0003b250
 td.0.55.name=ExecuteThread: '11' for queue: 'default'
 td.0.55.isBlocked=false
+td.0.55.isBlocking=false
 td.0.55.isDaemon=true
 td.0.55.isDeadLocked=false
 td.0.55.isIdle=true
@@ -983,6 +1039,7 @@ td.0.56.header="ExecuteThread: '10' for queue: 'default'" daemon prio=10 tid=0x0
 td.0.56.id=0x0003b118
 td.0.56.name=ExecuteThread: '10' for queue: 'default'
 td.0.56.isBlocked=false
+td.0.56.isBlocking=false
 td.0.56.isDaemon=true
 td.0.56.isDeadLocked=false
 td.0.56.isIdle=true
@@ -1000,6 +1057,7 @@ td.0.57.header="ExecuteThread: '9' for queue: 'default'" daemon prio=10 tid=0x00
 td.0.57.id=0x0003afe0
 td.0.57.name=ExecuteThread: '9' for queue: 'default'
 td.0.57.isBlocked=false
+td.0.57.isBlocking=false
 td.0.57.isDaemon=true
 td.0.57.isDeadLocked=false
 td.0.57.isIdle=true
@@ -1017,6 +1075,7 @@ td.0.58.header="ExecuteThread: '8' for queue: 'default'" daemon prio=10 tid=0x00
 td.0.58.id=0x0003aea8
 td.0.58.name=ExecuteThread: '8' for queue: 'default'
 td.0.58.isBlocked=false
+td.0.58.isBlocking=false
 td.0.58.isDaemon=true
 td.0.58.isDeadLocked=false
 td.0.58.isIdle=true
@@ -1034,6 +1093,7 @@ td.0.59.header="ExecuteThread: '7' for queue: 'default'" daemon prio=10 tid=0x00
 td.0.59.id=0x0003ad70
 td.0.59.name=ExecuteThread: '7' for queue: 'default'
 td.0.59.isBlocked=false
+td.0.59.isBlocking=false
 td.0.59.isDaemon=true
 td.0.59.isDeadLocked=false
 td.0.59.isIdle=true
@@ -1051,6 +1111,7 @@ td.0.60.header="ExecuteThread: '6' for queue: 'default'" daemon prio=10 tid=0x00
 td.0.60.id=0x0003ac38
 td.0.60.name=ExecuteThread: '6' for queue: 'default'
 td.0.60.isBlocked=false
+td.0.60.isBlocking=false
 td.0.60.isDaemon=true
 td.0.60.isDeadLocked=false
 td.0.60.isIdle=true
@@ -1068,6 +1129,7 @@ td.0.61.header="ExecuteThread: '5' for queue: 'default'" daemon prio=10 tid=0x00
 td.0.61.id=0x0003ab00
 td.0.61.name=ExecuteThread: '5' for queue: 'default'
 td.0.61.isBlocked=false
+td.0.61.isBlocking=false
 td.0.61.isDaemon=true
 td.0.61.isDeadLocked=false
 td.0.61.isIdle=true
@@ -1085,6 +1147,7 @@ td.0.62.header="ExecuteThread: '4' for queue: 'default'" daemon prio=10 tid=0x00
 td.0.62.id=0x0003a9c8
 td.0.62.name=ExecuteThread: '4' for queue: 'default'
 td.0.62.isBlocked=false
+td.0.62.isBlocking=false
 td.0.62.isDaemon=true
 td.0.62.isDeadLocked=false
 td.0.62.isIdle=true
@@ -1102,6 +1165,7 @@ td.0.63.header="ExecuteThread: '3' for queue: 'default'" daemon prio=10 tid=0x00
 td.0.63.id=0x0003a890
 td.0.63.name=ExecuteThread: '3' for queue: 'default'
 td.0.63.isBlocked=false
+td.0.63.isBlocking=false
 td.0.63.isDaemon=true
 td.0.63.isDeadLocked=false
 td.0.63.isIdle=true
@@ -1119,6 +1183,7 @@ td.0.64.header="ExecuteThread: '2' for queue: 'default'" daemon prio=10 tid=0x00
 td.0.64.id=0x0003a758
 td.0.64.name=ExecuteThread: '2' for queue: 'default'
 td.0.64.isBlocked=false
+td.0.64.isBlocking=false
 td.0.64.isDaemon=true
 td.0.64.isDeadLocked=false
 td.0.64.isIdle=true
@@ -1136,6 +1201,7 @@ td.0.65.header="ExecuteThread: '1' for queue: 'default'" daemon prio=10 tid=0x00
 td.0.65.id=0x0003a620
 td.0.65.name=ExecuteThread: '1' for queue: 'default'
 td.0.65.isBlocked=false
+td.0.65.isBlocking=false
 td.0.65.isDaemon=true
 td.0.65.isDeadLocked=false
 td.0.65.isIdle=true
@@ -1153,6 +1219,7 @@ td.0.66.header="ExecuteThread: '0' for queue: 'default'" daemon prio=10 tid=0x00
 td.0.66.id=0x0003a4e8
 td.0.66.name=ExecuteThread: '0' for queue: 'default'
 td.0.66.isBlocked=false
+td.0.66.isBlocking=false
 td.0.66.isDaemon=true
 td.0.66.isDeadLocked=false
 td.0.66.isIdle=true
@@ -1168,6 +1235,7 @@ td.0.67.header="Thread-0" daemon prio=8 tid=0x0003a3b0 nid=11 lwp_id=3573061 wai
 td.0.67.id=0x0003a3b0
 td.0.67.name=Thread-0
 td.0.67.isBlocked=false
+td.0.67.isBlocking=false
 td.0.67.isDaemon=true
 td.0.67.isDeadLocked=false
 td.0.67.isIdle=true
@@ -1180,6 +1248,7 @@ td.0.68.header="Signal Dispatcher" daemon prio=10 tid=0x00039c60 nid=8 lwp_id=35
 td.0.68.id=0x00039c60
 td.0.68.name=Signal Dispatcher
 td.0.68.isBlocked=false
+td.0.68.isBlocking=false
 td.0.68.isDaemon=true
 td.0.68.isDeadLocked=false
 td.0.68.isIdle=false
@@ -1197,6 +1266,7 @@ td.0.69.header="Finalizer" daemon prio=10 tid=0x00039b28 nid=5 lwp_id=3573009 wa
 td.0.69.id=0x00039b28
 td.0.69.name=Finalizer
 td.0.69.isBlocked=false
+td.0.69.isBlocking=false
 td.0.69.isDaemon=true
 td.0.69.isDeadLocked=false
 td.0.69.isIdle=true
@@ -1214,6 +1284,7 @@ td.0.70.header="Reference Handler" daemon prio=10 tid=0x000399f0 nid=4 lwp_id=35
 td.0.70.id=0x000399f0
 td.0.70.name=Reference Handler
 td.0.70.isBlocked=false
+td.0.70.isBlocking=false
 td.0.70.isDaemon=true
 td.0.70.isDeadLocked=false
 td.0.70.isIdle=true
@@ -1233,6 +1304,7 @@ td.0.71.header="main" prio=10 tid=0x000398b8 nid=1 lwp_id=3572964 waiting on mon
 td.0.71.id=0x000398b8
 td.0.71.name=main
 td.0.71.isBlocked=false
+td.0.71.isBlocking=false
 td.0.71.isDaemon=false
 td.0.71.isDeadLocked=false
 td.0.71.isIdle=true
@@ -1245,6 +1317,7 @@ td.0.72.header="VM Thread" prio=7 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable
 td.0.72.id=0x0018cdb8
 td.0.72.name=VM Thread
 td.0.72.isBlocked=false
+td.0.72.isBlocking=false
 td.0.72.isDaemon=false
 td.0.72.isDeadLocked=false
 td.0.72.isIdle=false
@@ -1257,6 +1330,7 @@ td.0.73.header="VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573
 td.0.73.id=0x0018ce38
 td.0.73.name=VM Periodic Task Thread
 td.0.73.isBlocked=false
+td.0.73.isBlocking=false
 td.0.73.isDaemon=false
 td.0.73.isDeadLocked=false
 td.0.73.isIdle=false
@@ -1269,6 +1343,7 @@ td.0.74.header="Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573
 td.0.74.id=0x0018ceb8
 td.0.74.name=Suspend Checker Thread
 td.0.74.isBlocked=false
+td.0.74.isBlocking=false
 td.0.74.isDaemon=false
 td.0.74.isDeadLocked=false
 td.0.74.isIdle=false
@@ -1285,6 +1360,7 @@ td.1.0.header="InactiveAgentCheckThread" daemon prio=8 tid=0x037cc188 nid=108 lw
 td.1.0.id=0x037cc188
 td.1.0.name=InactiveAgentCheckThread
 td.1.0.isBlocked=false
+td.1.0.isBlocking=false
 td.1.0.isDaemon=true
 td.1.0.isDeadLocked=false
 td.1.0.isIdle=true
@@ -1299,6 +1375,7 @@ td.1.1.header="ServletSessionCheckThread" daemon prio=8 tid=0x010e4af8 nid=104 l
 td.1.1.id=0x010e4af8
 td.1.1.name=ServletSessionCheckThread
 td.1.1.isBlocked=false
+td.1.1.isBlocking=false
 td.1.1.isDaemon=true
 td.1.1.isDeadLocked=false
 td.1.1.isIdle=true
@@ -1313,6 +1390,7 @@ td.1.2.header="ParseMultiManager" daemon prio=8 tid=0x010e4c30 nid=103 lwp_id=35
 td.1.2.id=0x010e4c30
 td.1.2.name=ParseMultiManager
 td.1.2.isBlocked=false
+td.1.2.isBlocking=false
 td.1.2.isDaemon=true
 td.1.2.isDeadLocked=false
 td.1.2.isIdle=true
@@ -1332,6 +1410,7 @@ td.1.3.header="ListenThread" prio=10 tid=0x0003fa38 nid=78 lwp_id=3573240 runnab
 td.1.3.id=0x0003fa38
 td.1.3.name=ListenThread
 td.1.3.isBlocked=false
+td.1.3.isBlocking=false
 td.1.3.isDaemon=false
 td.1.3.isDeadLocked=false
 td.1.3.isIdle=false
@@ -1350,6 +1429,7 @@ td.1.4.header="ExecuteThread: '14' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.1.4.id=0x0003f690
 td.1.4.name=ExecuteThread: '14' for queue: 'JmsDispatcher'
 td.1.4.isBlocked=false
+td.1.4.isBlocking=false
 td.1.4.isDaemon=true
 td.1.4.isDeadLocked=false
 td.1.4.isIdle=true
@@ -1368,6 +1448,7 @@ td.1.5.header="ExecuteThread: '13' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.1.5.id=0x0003f558
 td.1.5.name=ExecuteThread: '13' for queue: 'JmsDispatcher'
 td.1.5.isBlocked=false
+td.1.5.isBlocking=false
 td.1.5.isDaemon=true
 td.1.5.isDeadLocked=false
 td.1.5.isIdle=true
@@ -1386,6 +1467,7 @@ td.1.6.header="ExecuteThread: '12' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.1.6.id=0x0003f2e8
 td.1.6.name=ExecuteThread: '12' for queue: 'JmsDispatcher'
 td.1.6.isBlocked=false
+td.1.6.isBlocking=false
 td.1.6.isDaemon=true
 td.1.6.isDeadLocked=false
 td.1.6.isIdle=true
@@ -1404,6 +1486,7 @@ td.1.7.header="ExecuteThread: '11' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.1.7.id=0x0003f1b0
 td.1.7.name=ExecuteThread: '11' for queue: 'JmsDispatcher'
 td.1.7.isBlocked=false
+td.1.7.isBlocking=false
 td.1.7.isDaemon=true
 td.1.7.isDeadLocked=false
 td.1.7.isIdle=true
@@ -1422,6 +1505,7 @@ td.1.8.header="ExecuteThread: '10' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.1.8.id=0x0003f078
 td.1.8.name=ExecuteThread: '10' for queue: 'JmsDispatcher'
 td.1.8.isBlocked=false
+td.1.8.isBlocking=false
 td.1.8.isDaemon=true
 td.1.8.isDeadLocked=false
 td.1.8.isIdle=true
@@ -1440,6 +1524,7 @@ td.1.9.header="ExecuteThread: '9' for queue: 'JmsDispatcher'" daemon prio=10 tid
 td.1.9.id=0x0003ef40
 td.1.9.name=ExecuteThread: '9' for queue: 'JmsDispatcher'
 td.1.9.isBlocked=false
+td.1.9.isBlocking=false
 td.1.9.isDaemon=true
 td.1.9.isDeadLocked=false
 td.1.9.isIdle=true
@@ -1458,6 +1543,7 @@ td.1.10.header="ExecuteThread: '8' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.1.10.id=0x0003ee08
 td.1.10.name=ExecuteThread: '8' for queue: 'JmsDispatcher'
 td.1.10.isBlocked=false
+td.1.10.isBlocking=false
 td.1.10.isDaemon=true
 td.1.10.isDeadLocked=false
 td.1.10.isIdle=true
@@ -1476,6 +1562,7 @@ td.1.11.header="ExecuteThread: '7' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.1.11.id=0x0003ecd0
 td.1.11.name=ExecuteThread: '7' for queue: 'JmsDispatcher'
 td.1.11.isBlocked=false
+td.1.11.isBlocking=false
 td.1.11.isDaemon=true
 td.1.11.isDeadLocked=false
 td.1.11.isIdle=true
@@ -1494,6 +1581,7 @@ td.1.12.header="ExecuteThread: '6' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.1.12.id=0x0003eb98
 td.1.12.name=ExecuteThread: '6' for queue: 'JmsDispatcher'
 td.1.12.isBlocked=false
+td.1.12.isBlocking=false
 td.1.12.isDaemon=true
 td.1.12.isDeadLocked=false
 td.1.12.isIdle=true
@@ -1512,6 +1600,7 @@ td.1.13.header="ExecuteThread: '5' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.1.13.id=0x0003ea60
 td.1.13.name=ExecuteThread: '5' for queue: 'JmsDispatcher'
 td.1.13.isBlocked=false
+td.1.13.isBlocking=false
 td.1.13.isDaemon=true
 td.1.13.isDeadLocked=false
 td.1.13.isIdle=true
@@ -1530,6 +1619,7 @@ td.1.14.header="ExecuteThread: '4' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.1.14.id=0x0003e928
 td.1.14.name=ExecuteThread: '4' for queue: 'JmsDispatcher'
 td.1.14.isBlocked=false
+td.1.14.isBlocking=false
 td.1.14.isDaemon=true
 td.1.14.isDeadLocked=false
 td.1.14.isIdle=true
@@ -1548,6 +1638,7 @@ td.1.15.header="ExecuteThread: '3' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.1.15.id=0x0003e7f0
 td.1.15.name=ExecuteThread: '3' for queue: 'JmsDispatcher'
 td.1.15.isBlocked=false
+td.1.15.isBlocking=false
 td.1.15.isDaemon=true
 td.1.15.isDeadLocked=false
 td.1.15.isIdle=true
@@ -1566,6 +1657,7 @@ td.1.16.header="ExecuteThread: '2' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.1.16.id=0x0003e6b8
 td.1.16.name=ExecuteThread: '2' for queue: 'JmsDispatcher'
 td.1.16.isBlocked=false
+td.1.16.isBlocking=false
 td.1.16.isDaemon=true
 td.1.16.isDeadLocked=false
 td.1.16.isIdle=true
@@ -1584,6 +1676,7 @@ td.1.17.header="ExecuteThread: '1' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.1.17.id=0x0003e580
 td.1.17.name=ExecuteThread: '1' for queue: 'JmsDispatcher'
 td.1.17.isBlocked=false
+td.1.17.isBlocking=false
 td.1.17.isDaemon=true
 td.1.17.isDeadLocked=false
 td.1.17.isIdle=true
@@ -1602,6 +1695,7 @@ td.1.18.header="ExecuteThread: '0' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.1.18.id=0x0003e448
 td.1.18.name=ExecuteThread: '0' for queue: 'JmsDispatcher'
 td.1.18.isBlocked=false
+td.1.18.isBlocking=false
 td.1.18.isDaemon=true
 td.1.18.isDeadLocked=false
 td.1.18.isIdle=true
@@ -1620,6 +1714,7 @@ td.1.19.header="ExecuteThread: '2' for queue: 'weblogic.transaction.AsyncQueue'"
 td.1.19.id=0x0003e310
 td.1.19.name=ExecuteThread: '2' for queue: 'weblogic.transaction.AsyncQueue'
 td.1.19.isBlocked=false
+td.1.19.isBlocking=false
 td.1.19.isDaemon=true
 td.1.19.isDeadLocked=false
 td.1.19.isIdle=true
@@ -1638,6 +1733,7 @@ td.1.20.header="ExecuteThread: '1' for queue: 'weblogic.transaction.AsyncQueue'"
 td.1.20.id=0x0003e1d8
 td.1.20.name=ExecuteThread: '1' for queue: 'weblogic.transaction.AsyncQueue'
 td.1.20.isBlocked=false
+td.1.20.isBlocking=false
 td.1.20.isDaemon=true
 td.1.20.isDeadLocked=false
 td.1.20.isIdle=true
@@ -1656,6 +1752,7 @@ td.1.21.header="ExecuteThread: '0' for queue: 'weblogic.transaction.AsyncQueue'"
 td.1.21.id=0x0003e0a0
 td.1.21.name=ExecuteThread: '0' for queue: 'weblogic.transaction.AsyncQueue'
 td.1.21.isBlocked=false
+td.1.21.isBlocking=false
 td.1.21.isDaemon=true
 td.1.21.isDeadLocked=false
 td.1.21.isIdle=true
@@ -1673,6 +1770,7 @@ td.1.22.header="ExecuteThread: '1' for queue: '__weblogic_admin_rmi_queue'" daem
 td.1.22.id=0x0003d950
 td.1.22.name=ExecuteThread: '1' for queue: '__weblogic_admin_rmi_queue'
 td.1.22.isBlocked=false
+td.1.22.isBlocking=false
 td.1.22.isDaemon=true
 td.1.22.isDeadLocked=false
 td.1.22.isIdle=true
@@ -1690,6 +1788,7 @@ td.1.23.header="ExecuteThread: '0' for queue: '__weblogic_admin_rmi_queue'" daem
 td.1.23.id=0x0003d818
 td.1.23.name=ExecuteThread: '0' for queue: '__weblogic_admin_rmi_queue'
 td.1.23.isBlocked=false
+td.1.23.isBlocking=false
 td.1.23.isDaemon=true
 td.1.23.isDeadLocked=false
 td.1.23.isIdle=true
@@ -1708,6 +1807,7 @@ td.1.24.header="HighPriority TimeEventGenerator" daemon prio=10 tid=0x00eb9be8 n
 td.1.24.id=0x00eb9be8
 td.1.24.name=HighPriority TimeEventGenerator
 td.1.24.isBlocked=false
+td.1.24.isBlocking=false
 td.1.24.isDaemon=true
 td.1.24.isDeadLocked=false
 td.1.24.isIdle=true
@@ -1726,6 +1826,7 @@ td.1.25.header="ExecuteThread: '1' for queue: '__weblogic_admin_html_queue'" dae
 td.1.25.id=0x0003d6e0
 td.1.25.name=ExecuteThread: '1' for queue: '__weblogic_admin_html_queue'
 td.1.25.isBlocked=false
+td.1.25.isBlocking=false
 td.1.25.isDaemon=true
 td.1.25.isDeadLocked=false
 td.1.25.isIdle=true
@@ -1744,6 +1845,7 @@ td.1.26.header="ExecuteThread: '0' for queue: '__weblogic_admin_html_queue'" dae
 td.1.26.id=0x0003d5a8
 td.1.26.name=ExecuteThread: '0' for queue: '__weblogic_admin_html_queue'
 td.1.26.isBlocked=false
+td.1.26.isBlocking=false
 td.1.26.isDaemon=true
 td.1.26.isDeadLocked=false
 td.1.26.isIdle=true
@@ -1762,6 +1864,7 @@ td.1.27.header="TimeEventGenerator" daemon prio=10 tid=0x0003d470 nid=51 lwp_id=
 td.1.27.id=0x0003d470
 td.1.27.name=TimeEventGenerator
 td.1.27.isBlocked=false
+td.1.27.isBlocking=false
 td.1.27.isDaemon=true
 td.1.27.isDeadLocked=false
 td.1.27.isIdle=true
@@ -1779,6 +1882,7 @@ td.1.28.header="ExecuteThread: '1' for queue: '_weblogic_dgc_queue'" daemon prio
 td.1.28.id=0x0003d338
 td.1.28.name=ExecuteThread: '1' for queue: '_weblogic_dgc_queue'
 td.1.28.isBlocked=false
+td.1.28.isBlocking=false
 td.1.28.isDaemon=true
 td.1.28.isDeadLocked=false
 td.1.28.isIdle=true
@@ -1796,6 +1900,7 @@ td.1.29.header="ExecuteThread: '0' for queue: '_weblogic_dgc_queue'" daemon prio
 td.1.29.id=0x0003d200
 td.1.29.name=ExecuteThread: '0' for queue: '_weblogic_dgc_queue'
 td.1.29.isBlocked=false
+td.1.29.isBlocking=false
 td.1.29.isDaemon=true
 td.1.29.isDeadLocked=false
 td.1.29.isIdle=true
@@ -1814,6 +1919,7 @@ td.1.30.header="TimeEventGenerator" daemon prio=10 tid=0x0003d0c8 nid=48 lwp_id=
 td.1.30.id=0x0003d0c8
 td.1.30.name=TimeEventGenerator
 td.1.30.isBlocked=false
+td.1.30.isBlocking=false
 td.1.30.isDaemon=true
 td.1.30.isDeadLocked=false
 td.1.30.isIdle=true
@@ -1832,6 +1938,7 @@ td.1.31.header="SpinnerRandomSource" daemon prio=10 tid=0x0003cf90 nid=47 lwp_id
 td.1.31.id=0x0003cf90
 td.1.31.name=SpinnerRandomSource
 td.1.31.isBlocked=false
+td.1.31.isBlocking=false
 td.1.31.isDaemon=true
 td.1.31.isDeadLocked=false
 td.1.31.isIdle=true
@@ -1849,6 +1956,7 @@ td.1.32.header="ExecuteThread: '34' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.32.id=0x0003ce58
 td.1.32.name=ExecuteThread: '34' for queue: 'default'
 td.1.32.isBlocked=true
+td.1.32.isBlocking=false
 td.1.32.isDaemon=true
 td.1.32.isDeadLocked=false
 td.1.32.isIdle=false
@@ -1867,6 +1975,7 @@ td.1.33.header="ExecuteThread: '33' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.33.id=0x0003cd20
 td.1.33.name=ExecuteThread: '33' for queue: 'default'
 td.1.33.isBlocked=false
+td.1.33.isBlocking=true
 td.1.33.isDaemon=true
 td.1.33.isDeadLocked=false
 td.1.33.isIdle=false
@@ -1884,6 +1993,7 @@ td.1.34.header="ExecuteThread: '32' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.34.id=0x0003cbe8
 td.1.34.name=ExecuteThread: '32' for queue: 'default'
 td.1.34.isBlocked=true
+td.1.34.isBlocking=false
 td.1.34.isDaemon=true
 td.1.34.isDeadLocked=false
 td.1.34.isIdle=false
@@ -1901,6 +2011,7 @@ td.1.35.header="ExecuteThread: '31' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.35.id=0x0003cab0
 td.1.35.name=ExecuteThread: '31' for queue: 'default'
 td.1.35.isBlocked=false
+td.1.35.isBlocking=false
 td.1.35.isDaemon=true
 td.1.35.isDeadLocked=false
 td.1.35.isIdle=true
@@ -1918,6 +2029,7 @@ td.1.36.header="ExecuteThread: '30' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.36.id=0x0003c978
 td.1.36.name=ExecuteThread: '30' for queue: 'default'
 td.1.36.isBlocked=false
+td.1.36.isBlocking=false
 td.1.36.isDaemon=true
 td.1.36.isDeadLocked=false
 td.1.36.isIdle=true
@@ -1935,6 +2047,7 @@ td.1.37.header="ExecuteThread: '29' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.37.id=0x0003c840
 td.1.37.name=ExecuteThread: '29' for queue: 'default'
 td.1.37.isBlocked=false
+td.1.37.isBlocking=false
 td.1.37.isDaemon=true
 td.1.37.isDeadLocked=false
 td.1.37.isIdle=true
@@ -1952,6 +2065,7 @@ td.1.38.header="ExecuteThread: '28' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.38.id=0x0003c708
 td.1.38.name=ExecuteThread: '28' for queue: 'default'
 td.1.38.isBlocked=false
+td.1.38.isBlocking=false
 td.1.38.isDaemon=true
 td.1.38.isDeadLocked=false
 td.1.38.isIdle=true
@@ -1969,6 +2083,7 @@ td.1.39.header="ExecuteThread: '27' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.39.id=0x0003c5d0
 td.1.39.name=ExecuteThread: '27' for queue: 'default'
 td.1.39.isBlocked=false
+td.1.39.isBlocking=false
 td.1.39.isDaemon=true
 td.1.39.isDeadLocked=false
 td.1.39.isIdle=true
@@ -1986,6 +2101,7 @@ td.1.40.header="ExecuteThread: '26' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.40.id=0x0003c498
 td.1.40.name=ExecuteThread: '26' for queue: 'default'
 td.1.40.isBlocked=false
+td.1.40.isBlocking=false
 td.1.40.isDaemon=true
 td.1.40.isDeadLocked=false
 td.1.40.isIdle=true
@@ -2003,6 +2119,7 @@ td.1.41.header="ExecuteThread: '25' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.41.id=0x0003c360
 td.1.41.name=ExecuteThread: '25' for queue: 'default'
 td.1.41.isBlocked=false
+td.1.41.isBlocking=false
 td.1.41.isDaemon=true
 td.1.41.isDeadLocked=false
 td.1.41.isIdle=true
@@ -2020,6 +2137,7 @@ td.1.42.header="ExecuteThread: '24' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.42.id=0x0003c228
 td.1.42.name=ExecuteThread: '24' for queue: 'default'
 td.1.42.isBlocked=false
+td.1.42.isBlocking=false
 td.1.42.isDaemon=true
 td.1.42.isDeadLocked=false
 td.1.42.isIdle=true
@@ -2037,6 +2155,7 @@ td.1.43.header="ExecuteThread: '23' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.43.id=0x0003c0f0
 td.1.43.name=ExecuteThread: '23' for queue: 'default'
 td.1.43.isBlocked=false
+td.1.43.isBlocking=false
 td.1.43.isDaemon=true
 td.1.43.isDeadLocked=false
 td.1.43.isIdle=true
@@ -2054,6 +2173,7 @@ td.1.44.header="ExecuteThread: '22' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.44.id=0x0003bfb8
 td.1.44.name=ExecuteThread: '22' for queue: 'default'
 td.1.44.isBlocked=false
+td.1.44.isBlocking=false
 td.1.44.isDaemon=true
 td.1.44.isDeadLocked=false
 td.1.44.isIdle=true
@@ -2071,6 +2191,7 @@ td.1.45.header="ExecuteThread: '21' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.45.id=0x0003be80
 td.1.45.name=ExecuteThread: '21' for queue: 'default'
 td.1.45.isBlocked=false
+td.1.45.isBlocking=false
 td.1.45.isDaemon=true
 td.1.45.isDeadLocked=false
 td.1.45.isIdle=true
@@ -2088,6 +2209,7 @@ td.1.46.header="ExecuteThread: '20' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.46.id=0x0003bd48
 td.1.46.name=ExecuteThread: '20' for queue: 'default'
 td.1.46.isBlocked=false
+td.1.46.isBlocking=false
 td.1.46.isDaemon=true
 td.1.46.isDeadLocked=false
 td.1.46.isIdle=true
@@ -2105,6 +2227,7 @@ td.1.47.header="ExecuteThread: '19' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.47.id=0x0003bc10
 td.1.47.name=ExecuteThread: '19' for queue: 'default'
 td.1.47.isBlocked=false
+td.1.47.isBlocking=false
 td.1.47.isDaemon=true
 td.1.47.isDeadLocked=false
 td.1.47.isIdle=true
@@ -2122,6 +2245,7 @@ td.1.48.header="ExecuteThread: '18' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.48.id=0x0003bad8
 td.1.48.name=ExecuteThread: '18' for queue: 'default'
 td.1.48.isBlocked=false
+td.1.48.isBlocking=false
 td.1.48.isDaemon=true
 td.1.48.isDeadLocked=false
 td.1.48.isIdle=true
@@ -2139,6 +2263,7 @@ td.1.49.header="ExecuteThread: '17' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.49.id=0x0003b9a0
 td.1.49.name=ExecuteThread: '17' for queue: 'default'
 td.1.49.isBlocked=false
+td.1.49.isBlocking=false
 td.1.49.isDaemon=true
 td.1.49.isDeadLocked=false
 td.1.49.isIdle=true
@@ -2156,6 +2281,7 @@ td.1.50.header="ExecuteThread: '16' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.50.id=0x0003b868
 td.1.50.name=ExecuteThread: '16' for queue: 'default'
 td.1.50.isBlocked=false
+td.1.50.isBlocking=false
 td.1.50.isDaemon=true
 td.1.50.isDeadLocked=false
 td.1.50.isIdle=true
@@ -2173,6 +2299,7 @@ td.1.51.header="ExecuteThread: '15' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.51.id=0x0003b730
 td.1.51.name=ExecuteThread: '15' for queue: 'default'
 td.1.51.isBlocked=false
+td.1.51.isBlocking=false
 td.1.51.isDaemon=true
 td.1.51.isDeadLocked=false
 td.1.51.isIdle=true
@@ -2190,6 +2317,7 @@ td.1.52.header="ExecuteThread: '14' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.52.id=0x0003b5f8
 td.1.52.name=ExecuteThread: '14' for queue: 'default'
 td.1.52.isBlocked=false
+td.1.52.isBlocking=false
 td.1.52.isDaemon=true
 td.1.52.isDeadLocked=false
 td.1.52.isIdle=true
@@ -2207,6 +2335,7 @@ td.1.53.header="ExecuteThread: '13' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.53.id=0x0003b4c0
 td.1.53.name=ExecuteThread: '13' for queue: 'default'
 td.1.53.isBlocked=false
+td.1.53.isBlocking=false
 td.1.53.isDaemon=true
 td.1.53.isDeadLocked=false
 td.1.53.isIdle=true
@@ -2224,6 +2353,7 @@ td.1.54.header="ExecuteThread: '12' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.54.id=0x0003b388
 td.1.54.name=ExecuteThread: '12' for queue: 'default'
 td.1.54.isBlocked=false
+td.1.54.isBlocking=false
 td.1.54.isDaemon=true
 td.1.54.isDeadLocked=false
 td.1.54.isIdle=true
@@ -2241,6 +2371,7 @@ td.1.55.header="ExecuteThread: '11' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.55.id=0x0003b250
 td.1.55.name=ExecuteThread: '11' for queue: 'default'
 td.1.55.isBlocked=false
+td.1.55.isBlocking=false
 td.1.55.isDaemon=true
 td.1.55.isDeadLocked=false
 td.1.55.isIdle=true
@@ -2258,6 +2389,7 @@ td.1.56.header="ExecuteThread: '10' for queue: 'default'" daemon prio=10 tid=0x0
 td.1.56.id=0x0003b118
 td.1.56.name=ExecuteThread: '10' for queue: 'default'
 td.1.56.isBlocked=false
+td.1.56.isBlocking=false
 td.1.56.isDaemon=true
 td.1.56.isDeadLocked=false
 td.1.56.isIdle=true
@@ -2275,6 +2407,7 @@ td.1.57.header="ExecuteThread: '9' for queue: 'default'" daemon prio=10 tid=0x00
 td.1.57.id=0x0003afe0
 td.1.57.name=ExecuteThread: '9' for queue: 'default'
 td.1.57.isBlocked=false
+td.1.57.isBlocking=false
 td.1.57.isDaemon=true
 td.1.57.isDeadLocked=false
 td.1.57.isIdle=true
@@ -2292,6 +2425,7 @@ td.1.58.header="ExecuteThread: '8' for queue: 'default'" daemon prio=10 tid=0x00
 td.1.58.id=0x0003aea8
 td.1.58.name=ExecuteThread: '8' for queue: 'default'
 td.1.58.isBlocked=false
+td.1.58.isBlocking=false
 td.1.58.isDaemon=true
 td.1.58.isDeadLocked=false
 td.1.58.isIdle=true
@@ -2309,6 +2443,7 @@ td.1.59.header="ExecuteThread: '7' for queue: 'default'" daemon prio=10 tid=0x00
 td.1.59.id=0x0003ad70
 td.1.59.name=ExecuteThread: '7' for queue: 'default'
 td.1.59.isBlocked=false
+td.1.59.isBlocking=false
 td.1.59.isDaemon=true
 td.1.59.isDeadLocked=false
 td.1.59.isIdle=true
@@ -2326,6 +2461,7 @@ td.1.60.header="ExecuteThread: '6' for queue: 'default'" daemon prio=10 tid=0x00
 td.1.60.id=0x0003ac38
 td.1.60.name=ExecuteThread: '6' for queue: 'default'
 td.1.60.isBlocked=false
+td.1.60.isBlocking=false
 td.1.60.isDaemon=true
 td.1.60.isDeadLocked=false
 td.1.60.isIdle=true
@@ -2343,6 +2479,7 @@ td.1.61.header="ExecuteThread: '5' for queue: 'default'" daemon prio=10 tid=0x00
 td.1.61.id=0x0003ab00
 td.1.61.name=ExecuteThread: '5' for queue: 'default'
 td.1.61.isBlocked=false
+td.1.61.isBlocking=false
 td.1.61.isDaemon=true
 td.1.61.isDeadLocked=false
 td.1.61.isIdle=true
@@ -2360,6 +2497,7 @@ td.1.62.header="ExecuteThread: '4' for queue: 'default'" daemon prio=10 tid=0x00
 td.1.62.id=0x0003a9c8
 td.1.62.name=ExecuteThread: '4' for queue: 'default'
 td.1.62.isBlocked=false
+td.1.62.isBlocking=false
 td.1.62.isDaemon=true
 td.1.62.isDeadLocked=false
 td.1.62.isIdle=true
@@ -2377,6 +2515,7 @@ td.1.63.header="ExecuteThread: '3' for queue: 'default'" daemon prio=10 tid=0x00
 td.1.63.id=0x0003a890
 td.1.63.name=ExecuteThread: '3' for queue: 'default'
 td.1.63.isBlocked=false
+td.1.63.isBlocking=false
 td.1.63.isDaemon=true
 td.1.63.isDeadLocked=false
 td.1.63.isIdle=true
@@ -2394,6 +2533,7 @@ td.1.64.header="ExecuteThread: '2' for queue: 'default'" daemon prio=10 tid=0x00
 td.1.64.id=0x0003a758
 td.1.64.name=ExecuteThread: '2' for queue: 'default'
 td.1.64.isBlocked=false
+td.1.64.isBlocking=false
 td.1.64.isDaemon=true
 td.1.64.isDeadLocked=false
 td.1.64.isIdle=true
@@ -2411,6 +2551,7 @@ td.1.65.header="ExecuteThread: '1' for queue: 'default'" daemon prio=10 tid=0x00
 td.1.65.id=0x0003a620
 td.1.65.name=ExecuteThread: '1' for queue: 'default'
 td.1.65.isBlocked=false
+td.1.65.isBlocking=false
 td.1.65.isDaemon=true
 td.1.65.isDeadLocked=false
 td.1.65.isIdle=true
@@ -2428,6 +2569,7 @@ td.1.66.header="ExecuteThread: '0' for queue: 'default'" daemon prio=10 tid=0x00
 td.1.66.id=0x0003a4e8
 td.1.66.name=ExecuteThread: '0' for queue: 'default'
 td.1.66.isBlocked=false
+td.1.66.isBlocking=false
 td.1.66.isDaemon=true
 td.1.66.isDeadLocked=false
 td.1.66.isIdle=true
@@ -2443,6 +2585,7 @@ td.1.67.header="Thread-0" daemon prio=8 tid=0x0003a3b0 nid=11 lwp_id=3573061 wai
 td.1.67.id=0x0003a3b0
 td.1.67.name=Thread-0
 td.1.67.isBlocked=false
+td.1.67.isBlocking=false
 td.1.67.isDaemon=true
 td.1.67.isDeadLocked=false
 td.1.67.isIdle=true
@@ -2455,6 +2598,7 @@ td.1.68.header="Signal Dispatcher" daemon prio=10 tid=0x00039c60 nid=8 lwp_id=35
 td.1.68.id=0x00039c60
 td.1.68.name=Signal Dispatcher
 td.1.68.isBlocked=false
+td.1.68.isBlocking=false
 td.1.68.isDaemon=true
 td.1.68.isDeadLocked=false
 td.1.68.isIdle=false
@@ -2472,6 +2616,7 @@ td.1.69.header="Finalizer" daemon prio=10 tid=0x00039b28 nid=5 lwp_id=3573009 wa
 td.1.69.id=0x00039b28
 td.1.69.name=Finalizer
 td.1.69.isBlocked=false
+td.1.69.isBlocking=false
 td.1.69.isDaemon=true
 td.1.69.isDeadLocked=false
 td.1.69.isIdle=true
@@ -2489,6 +2634,7 @@ td.1.70.header="Reference Handler" daemon prio=10 tid=0x000399f0 nid=4 lwp_id=35
 td.1.70.id=0x000399f0
 td.1.70.name=Reference Handler
 td.1.70.isBlocked=false
+td.1.70.isBlocking=false
 td.1.70.isDaemon=true
 td.1.70.isDeadLocked=false
 td.1.70.isIdle=true
@@ -2508,6 +2654,7 @@ td.1.71.header="main" prio=10 tid=0x000398b8 nid=1 lwp_id=3572964 waiting on mon
 td.1.71.id=0x000398b8
 td.1.71.name=main
 td.1.71.isBlocked=false
+td.1.71.isBlocking=false
 td.1.71.isDaemon=false
 td.1.71.isDeadLocked=false
 td.1.71.isIdle=true
@@ -2520,6 +2667,7 @@ td.1.72.header="VM Thread" prio=8 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable
 td.1.72.id=0x0018cdb8
 td.1.72.name=VM Thread
 td.1.72.isBlocked=false
+td.1.72.isBlocking=false
 td.1.72.isDaemon=false
 td.1.72.isDeadLocked=false
 td.1.72.isIdle=false
@@ -2532,6 +2680,7 @@ td.1.73.header="VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573
 td.1.73.id=0x0018ce38
 td.1.73.name=VM Periodic Task Thread
 td.1.73.isBlocked=false
+td.1.73.isBlocking=false
 td.1.73.isDaemon=false
 td.1.73.isDeadLocked=false
 td.1.73.isIdle=false
@@ -2544,6 +2693,7 @@ td.1.74.header="Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573
 td.1.74.id=0x0018ceb8
 td.1.74.name=Suspend Checker Thread
 td.1.74.isBlocked=false
+td.1.74.isBlocking=false
 td.1.74.isDaemon=false
 td.1.74.isDeadLocked=false
 td.1.74.isIdle=false
@@ -2560,6 +2710,7 @@ td.2.0.header="InactiveAgentCheckThread" daemon prio=8 tid=0x037cc188 nid=108 lw
 td.2.0.id=0x037cc188
 td.2.0.name=InactiveAgentCheckThread
 td.2.0.isBlocked=false
+td.2.0.isBlocking=false
 td.2.0.isDaemon=true
 td.2.0.isDeadLocked=false
 td.2.0.isIdle=true
@@ -2574,6 +2725,7 @@ td.2.1.header="ServletSessionCheckThread" daemon prio=8 tid=0x010e4af8 nid=104 l
 td.2.1.id=0x010e4af8
 td.2.1.name=ServletSessionCheckThread
 td.2.1.isBlocked=false
+td.2.1.isBlocking=false
 td.2.1.isDaemon=true
 td.2.1.isDeadLocked=false
 td.2.1.isIdle=true
@@ -2588,6 +2740,7 @@ td.2.2.header="ParseMultiManager" daemon prio=8 tid=0x010e4c30 nid=103 lwp_id=35
 td.2.2.id=0x010e4c30
 td.2.2.name=ParseMultiManager
 td.2.2.isBlocked=false
+td.2.2.isBlocking=false
 td.2.2.isDaemon=true
 td.2.2.isDeadLocked=false
 td.2.2.isIdle=true
@@ -2607,6 +2760,7 @@ td.2.3.header="ListenThread" prio=10 tid=0x0003fa38 nid=78 lwp_id=3573240 runnab
 td.2.3.id=0x0003fa38
 td.2.3.name=ListenThread
 td.2.3.isBlocked=false
+td.2.3.isBlocking=false
 td.2.3.isDaemon=false
 td.2.3.isDeadLocked=false
 td.2.3.isIdle=false
@@ -2625,6 +2779,7 @@ td.2.4.header="ExecuteThread: '14' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.2.4.id=0x0003f690
 td.2.4.name=ExecuteThread: '14' for queue: 'JmsDispatcher'
 td.2.4.isBlocked=false
+td.2.4.isBlocking=false
 td.2.4.isDaemon=true
 td.2.4.isDeadLocked=false
 td.2.4.isIdle=true
@@ -2643,6 +2798,7 @@ td.2.5.header="ExecuteThread: '13' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.2.5.id=0x0003f558
 td.2.5.name=ExecuteThread: '13' for queue: 'JmsDispatcher'
 td.2.5.isBlocked=false
+td.2.5.isBlocking=false
 td.2.5.isDaemon=true
 td.2.5.isDeadLocked=false
 td.2.5.isIdle=true
@@ -2661,6 +2817,7 @@ td.2.6.header="ExecuteThread: '12' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.2.6.id=0x0003f2e8
 td.2.6.name=ExecuteThread: '12' for queue: 'JmsDispatcher'
 td.2.6.isBlocked=false
+td.2.6.isBlocking=false
 td.2.6.isDaemon=true
 td.2.6.isDeadLocked=false
 td.2.6.isIdle=true
@@ -2679,6 +2836,7 @@ td.2.7.header="ExecuteThread: '11' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.2.7.id=0x0003f1b0
 td.2.7.name=ExecuteThread: '11' for queue: 'JmsDispatcher'
 td.2.7.isBlocked=false
+td.2.7.isBlocking=false
 td.2.7.isDaemon=true
 td.2.7.isDeadLocked=false
 td.2.7.isIdle=true
@@ -2697,6 +2855,7 @@ td.2.8.header="ExecuteThread: '10' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.2.8.id=0x0003f078
 td.2.8.name=ExecuteThread: '10' for queue: 'JmsDispatcher'
 td.2.8.isBlocked=false
+td.2.8.isBlocking=false
 td.2.8.isDaemon=true
 td.2.8.isDeadLocked=false
 td.2.8.isIdle=true
@@ -2715,6 +2874,7 @@ td.2.9.header="ExecuteThread: '9' for queue: 'JmsDispatcher'" daemon prio=10 tid
 td.2.9.id=0x0003ef40
 td.2.9.name=ExecuteThread: '9' for queue: 'JmsDispatcher'
 td.2.9.isBlocked=false
+td.2.9.isBlocking=false
 td.2.9.isDaemon=true
 td.2.9.isDeadLocked=false
 td.2.9.isIdle=true
@@ -2733,6 +2893,7 @@ td.2.10.header="ExecuteThread: '8' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.2.10.id=0x0003ee08
 td.2.10.name=ExecuteThread: '8' for queue: 'JmsDispatcher'
 td.2.10.isBlocked=false
+td.2.10.isBlocking=false
 td.2.10.isDaemon=true
 td.2.10.isDeadLocked=false
 td.2.10.isIdle=true
@@ -2751,6 +2912,7 @@ td.2.11.header="ExecuteThread: '7' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.2.11.id=0x0003ecd0
 td.2.11.name=ExecuteThread: '7' for queue: 'JmsDispatcher'
 td.2.11.isBlocked=false
+td.2.11.isBlocking=false
 td.2.11.isDaemon=true
 td.2.11.isDeadLocked=false
 td.2.11.isIdle=true
@@ -2769,6 +2931,7 @@ td.2.12.header="ExecuteThread: '6' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.2.12.id=0x0003eb98
 td.2.12.name=ExecuteThread: '6' for queue: 'JmsDispatcher'
 td.2.12.isBlocked=false
+td.2.12.isBlocking=false
 td.2.12.isDaemon=true
 td.2.12.isDeadLocked=false
 td.2.12.isIdle=true
@@ -2787,6 +2950,7 @@ td.2.13.header="ExecuteThread: '5' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.2.13.id=0x0003ea60
 td.2.13.name=ExecuteThread: '5' for queue: 'JmsDispatcher'
 td.2.13.isBlocked=false
+td.2.13.isBlocking=false
 td.2.13.isDaemon=true
 td.2.13.isDeadLocked=false
 td.2.13.isIdle=true
@@ -2805,6 +2969,7 @@ td.2.14.header="ExecuteThread: '4' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.2.14.id=0x0003e928
 td.2.14.name=ExecuteThread: '4' for queue: 'JmsDispatcher'
 td.2.14.isBlocked=false
+td.2.14.isBlocking=false
 td.2.14.isDaemon=true
 td.2.14.isDeadLocked=false
 td.2.14.isIdle=true
@@ -2823,6 +2988,7 @@ td.2.15.header="ExecuteThread: '3' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.2.15.id=0x0003e7f0
 td.2.15.name=ExecuteThread: '3' for queue: 'JmsDispatcher'
 td.2.15.isBlocked=false
+td.2.15.isBlocking=false
 td.2.15.isDaemon=true
 td.2.15.isDeadLocked=false
 td.2.15.isIdle=true
@@ -2841,6 +3007,7 @@ td.2.16.header="ExecuteThread: '2' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.2.16.id=0x0003e6b8
 td.2.16.name=ExecuteThread: '2' for queue: 'JmsDispatcher'
 td.2.16.isBlocked=false
+td.2.16.isBlocking=false
 td.2.16.isDaemon=true
 td.2.16.isDeadLocked=false
 td.2.16.isIdle=true
@@ -2859,6 +3026,7 @@ td.2.17.header="ExecuteThread: '1' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.2.17.id=0x0003e580
 td.2.17.name=ExecuteThread: '1' for queue: 'JmsDispatcher'
 td.2.17.isBlocked=false
+td.2.17.isBlocking=false
 td.2.17.isDaemon=true
 td.2.17.isDeadLocked=false
 td.2.17.isIdle=true
@@ -2877,6 +3045,7 @@ td.2.18.header="ExecuteThread: '0' for queue: 'JmsDispatcher'" daemon prio=10 ti
 td.2.18.id=0x0003e448
 td.2.18.name=ExecuteThread: '0' for queue: 'JmsDispatcher'
 td.2.18.isBlocked=false
+td.2.18.isBlocking=false
 td.2.18.isDaemon=true
 td.2.18.isDeadLocked=false
 td.2.18.isIdle=true
@@ -2895,6 +3064,7 @@ td.2.19.header="ExecuteThread: '2' for queue: 'weblogic.transaction.AsyncQueue'"
 td.2.19.id=0x0003e310
 td.2.19.name=ExecuteThread: '2' for queue: 'weblogic.transaction.AsyncQueue'
 td.2.19.isBlocked=false
+td.2.19.isBlocking=false
 td.2.19.isDaemon=true
 td.2.19.isDeadLocked=false
 td.2.19.isIdle=true
@@ -2913,6 +3083,7 @@ td.2.20.header="ExecuteThread: '1' for queue: 'weblogic.transaction.AsyncQueue'"
 td.2.20.id=0x0003e1d8
 td.2.20.name=ExecuteThread: '1' for queue: 'weblogic.transaction.AsyncQueue'
 td.2.20.isBlocked=false
+td.2.20.isBlocking=false
 td.2.20.isDaemon=true
 td.2.20.isDeadLocked=false
 td.2.20.isIdle=true
@@ -2931,6 +3102,7 @@ td.2.21.header="ExecuteThread: '0' for queue: 'weblogic.transaction.AsyncQueue'"
 td.2.21.id=0x0003e0a0
 td.2.21.name=ExecuteThread: '0' for queue: 'weblogic.transaction.AsyncQueue'
 td.2.21.isBlocked=false
+td.2.21.isBlocking=false
 td.2.21.isDaemon=true
 td.2.21.isDeadLocked=false
 td.2.21.isIdle=true
@@ -2948,6 +3120,7 @@ td.2.22.header="ExecuteThread: '1' for queue: '__weblogic_admin_rmi_queue'" daem
 td.2.22.id=0x0003d950
 td.2.22.name=ExecuteThread: '1' for queue: '__weblogic_admin_rmi_queue'
 td.2.22.isBlocked=false
+td.2.22.isBlocking=false
 td.2.22.isDaemon=true
 td.2.22.isDeadLocked=false
 td.2.22.isIdle=true
@@ -2965,6 +3138,7 @@ td.2.23.header="ExecuteThread: '0' for queue: '__weblogic_admin_rmi_queue'" daem
 td.2.23.id=0x0003d818
 td.2.23.name=ExecuteThread: '0' for queue: '__weblogic_admin_rmi_queue'
 td.2.23.isBlocked=false
+td.2.23.isBlocking=false
 td.2.23.isDaemon=true
 td.2.23.isDeadLocked=false
 td.2.23.isIdle=true
@@ -2983,6 +3157,7 @@ td.2.24.header="HighPriority TimeEventGenerator" daemon prio=10 tid=0x00eb9be8 n
 td.2.24.id=0x00eb9be8
 td.2.24.name=HighPriority TimeEventGenerator
 td.2.24.isBlocked=false
+td.2.24.isBlocking=false
 td.2.24.isDaemon=true
 td.2.24.isDeadLocked=false
 td.2.24.isIdle=true
@@ -3001,6 +3176,7 @@ td.2.25.header="ExecuteThread: '1' for queue: '__weblogic_admin_html_queue'" dae
 td.2.25.id=0x0003d6e0
 td.2.25.name=ExecuteThread: '1' for queue: '__weblogic_admin_html_queue'
 td.2.25.isBlocked=false
+td.2.25.isBlocking=false
 td.2.25.isDaemon=true
 td.2.25.isDeadLocked=false
 td.2.25.isIdle=true
@@ -3019,6 +3195,7 @@ td.2.26.header="ExecuteThread: '0' for queue: '__weblogic_admin_html_queue'" dae
 td.2.26.id=0x0003d5a8
 td.2.26.name=ExecuteThread: '0' for queue: '__weblogic_admin_html_queue'
 td.2.26.isBlocked=false
+td.2.26.isBlocking=false
 td.2.26.isDaemon=true
 td.2.26.isDeadLocked=false
 td.2.26.isIdle=true
@@ -3037,6 +3214,7 @@ td.2.27.header="TimeEventGenerator" daemon prio=10 tid=0x0003d470 nid=51 lwp_id=
 td.2.27.id=0x0003d470
 td.2.27.name=TimeEventGenerator
 td.2.27.isBlocked=false
+td.2.27.isBlocking=false
 td.2.27.isDaemon=true
 td.2.27.isDeadLocked=false
 td.2.27.isIdle=true
@@ -3054,6 +3232,7 @@ td.2.28.header="ExecuteThread: '1' for queue: '_weblogic_dgc_queue'" daemon prio
 td.2.28.id=0x0003d338
 td.2.28.name=ExecuteThread: '1' for queue: '_weblogic_dgc_queue'
 td.2.28.isBlocked=false
+td.2.28.isBlocking=false
 td.2.28.isDaemon=true
 td.2.28.isDeadLocked=false
 td.2.28.isIdle=true
@@ -3071,6 +3250,7 @@ td.2.29.header="ExecuteThread: '0' for queue: '_weblogic_dgc_queue'" daemon prio
 td.2.29.id=0x0003d200
 td.2.29.name=ExecuteThread: '0' for queue: '_weblogic_dgc_queue'
 td.2.29.isBlocked=false
+td.2.29.isBlocking=false
 td.2.29.isDaemon=true
 td.2.29.isDeadLocked=false
 td.2.29.isIdle=true
@@ -3089,6 +3269,7 @@ td.2.30.header="TimeEventGenerator" daemon prio=10 tid=0x0003d0c8 nid=48 lwp_id=
 td.2.30.id=0x0003d0c8
 td.2.30.name=TimeEventGenerator
 td.2.30.isBlocked=false
+td.2.30.isBlocking=false
 td.2.30.isDaemon=true
 td.2.30.isDeadLocked=false
 td.2.30.isIdle=true
@@ -3107,6 +3288,7 @@ td.2.31.header="SpinnerRandomSource" daemon prio=10 tid=0x0003cf90 nid=47 lwp_id
 td.2.31.id=0x0003cf90
 td.2.31.name=SpinnerRandomSource
 td.2.31.isBlocked=false
+td.2.31.isBlocking=false
 td.2.31.isDaemon=true
 td.2.31.isDeadLocked=false
 td.2.31.isIdle=true
@@ -3124,6 +3306,7 @@ td.2.32.header="ExecuteThread: '34' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.32.id=0x0003ce58
 td.2.32.name=ExecuteThread: '34' for queue: 'default'
 td.2.32.isBlocked=true
+td.2.32.isBlocking=false
 td.2.32.isDaemon=true
 td.2.32.isDeadLocked=false
 td.2.32.isIdle=false
@@ -3142,6 +3325,7 @@ td.2.33.header="ExecuteThread: '33' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.33.id=0x0003cd20
 td.2.33.name=ExecuteThread: '33' for queue: 'default'
 td.2.33.isBlocked=false
+td.2.33.isBlocking=true
 td.2.33.isDaemon=true
 td.2.33.isDeadLocked=false
 td.2.33.isIdle=false
@@ -3159,6 +3343,7 @@ td.2.34.header="ExecuteThread: '32' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.34.id=0x0003cbe8
 td.2.34.name=ExecuteThread: '32' for queue: 'default'
 td.2.34.isBlocked=true
+td.2.34.isBlocking=false
 td.2.34.isDaemon=true
 td.2.34.isDeadLocked=false
 td.2.34.isIdle=false
@@ -3176,6 +3361,7 @@ td.2.35.header="ExecuteThread: '31' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.35.id=0x0003cab0
 td.2.35.name=ExecuteThread: '31' for queue: 'default'
 td.2.35.isBlocked=false
+td.2.35.isBlocking=false
 td.2.35.isDaemon=true
 td.2.35.isDeadLocked=false
 td.2.35.isIdle=true
@@ -3193,6 +3379,7 @@ td.2.36.header="ExecuteThread: '30' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.36.id=0x0003c978
 td.2.36.name=ExecuteThread: '30' for queue: 'default'
 td.2.36.isBlocked=false
+td.2.36.isBlocking=false
 td.2.36.isDaemon=true
 td.2.36.isDeadLocked=false
 td.2.36.isIdle=true
@@ -3210,6 +3397,7 @@ td.2.37.header="ExecuteThread: '29' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.37.id=0x0003c840
 td.2.37.name=ExecuteThread: '29' for queue: 'default'
 td.2.37.isBlocked=false
+td.2.37.isBlocking=false
 td.2.37.isDaemon=true
 td.2.37.isDeadLocked=false
 td.2.37.isIdle=true
@@ -3227,6 +3415,7 @@ td.2.38.header="ExecuteThread: '28' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.38.id=0x0003c708
 td.2.38.name=ExecuteThread: '28' for queue: 'default'
 td.2.38.isBlocked=false
+td.2.38.isBlocking=false
 td.2.38.isDaemon=true
 td.2.38.isDeadLocked=false
 td.2.38.isIdle=true
@@ -3244,6 +3433,7 @@ td.2.39.header="ExecuteThread: '27' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.39.id=0x0003c5d0
 td.2.39.name=ExecuteThread: '27' for queue: 'default'
 td.2.39.isBlocked=false
+td.2.39.isBlocking=false
 td.2.39.isDaemon=true
 td.2.39.isDeadLocked=false
 td.2.39.isIdle=true
@@ -3261,6 +3451,7 @@ td.2.40.header="ExecuteThread: '26' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.40.id=0x0003c498
 td.2.40.name=ExecuteThread: '26' for queue: 'default'
 td.2.40.isBlocked=false
+td.2.40.isBlocking=false
 td.2.40.isDaemon=true
 td.2.40.isDeadLocked=false
 td.2.40.isIdle=true
@@ -3278,6 +3469,7 @@ td.2.41.header="ExecuteThread: '25' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.41.id=0x0003c360
 td.2.41.name=ExecuteThread: '25' for queue: 'default'
 td.2.41.isBlocked=false
+td.2.41.isBlocking=false
 td.2.41.isDaemon=true
 td.2.41.isDeadLocked=false
 td.2.41.isIdle=true
@@ -3295,6 +3487,7 @@ td.2.42.header="ExecuteThread: '24' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.42.id=0x0003c228
 td.2.42.name=ExecuteThread: '24' for queue: 'default'
 td.2.42.isBlocked=false
+td.2.42.isBlocking=false
 td.2.42.isDaemon=true
 td.2.42.isDeadLocked=false
 td.2.42.isIdle=true
@@ -3312,6 +3505,7 @@ td.2.43.header="ExecuteThread: '23' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.43.id=0x0003c0f0
 td.2.43.name=ExecuteThread: '23' for queue: 'default'
 td.2.43.isBlocked=false
+td.2.43.isBlocking=false
 td.2.43.isDaemon=true
 td.2.43.isDeadLocked=false
 td.2.43.isIdle=true
@@ -3329,6 +3523,7 @@ td.2.44.header="ExecuteThread: '22' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.44.id=0x0003bfb8
 td.2.44.name=ExecuteThread: '22' for queue: 'default'
 td.2.44.isBlocked=false
+td.2.44.isBlocking=false
 td.2.44.isDaemon=true
 td.2.44.isDeadLocked=false
 td.2.44.isIdle=true
@@ -3346,6 +3541,7 @@ td.2.45.header="ExecuteThread: '21' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.45.id=0x0003be80
 td.2.45.name=ExecuteThread: '21' for queue: 'default'
 td.2.45.isBlocked=false
+td.2.45.isBlocking=false
 td.2.45.isDaemon=true
 td.2.45.isDeadLocked=false
 td.2.45.isIdle=true
@@ -3363,6 +3559,7 @@ td.2.46.header="ExecuteThread: '20' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.46.id=0x0003bd48
 td.2.46.name=ExecuteThread: '20' for queue: 'default'
 td.2.46.isBlocked=false
+td.2.46.isBlocking=false
 td.2.46.isDaemon=true
 td.2.46.isDeadLocked=false
 td.2.46.isIdle=true
@@ -3380,6 +3577,7 @@ td.2.47.header="ExecuteThread: '19' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.47.id=0x0003bc10
 td.2.47.name=ExecuteThread: '19' for queue: 'default'
 td.2.47.isBlocked=false
+td.2.47.isBlocking=false
 td.2.47.isDaemon=true
 td.2.47.isDeadLocked=false
 td.2.47.isIdle=true
@@ -3397,6 +3595,7 @@ td.2.48.header="ExecuteThread: '18' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.48.id=0x0003bad8
 td.2.48.name=ExecuteThread: '18' for queue: 'default'
 td.2.48.isBlocked=false
+td.2.48.isBlocking=false
 td.2.48.isDaemon=true
 td.2.48.isDeadLocked=false
 td.2.48.isIdle=true
@@ -3414,6 +3613,7 @@ td.2.49.header="ExecuteThread: '17' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.49.id=0x0003b9a0
 td.2.49.name=ExecuteThread: '17' for queue: 'default'
 td.2.49.isBlocked=false
+td.2.49.isBlocking=false
 td.2.49.isDaemon=true
 td.2.49.isDeadLocked=false
 td.2.49.isIdle=true
@@ -3431,6 +3631,7 @@ td.2.50.header="ExecuteThread: '16' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.50.id=0x0003b868
 td.2.50.name=ExecuteThread: '16' for queue: 'default'
 td.2.50.isBlocked=false
+td.2.50.isBlocking=false
 td.2.50.isDaemon=true
 td.2.50.isDeadLocked=false
 td.2.50.isIdle=true
@@ -3448,6 +3649,7 @@ td.2.51.header="ExecuteThread: '15' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.51.id=0x0003b730
 td.2.51.name=ExecuteThread: '15' for queue: 'default'
 td.2.51.isBlocked=false
+td.2.51.isBlocking=false
 td.2.51.isDaemon=true
 td.2.51.isDeadLocked=false
 td.2.51.isIdle=true
@@ -3465,6 +3667,7 @@ td.2.52.header="ExecuteThread: '14' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.52.id=0x0003b5f8
 td.2.52.name=ExecuteThread: '14' for queue: 'default'
 td.2.52.isBlocked=false
+td.2.52.isBlocking=false
 td.2.52.isDaemon=true
 td.2.52.isDeadLocked=false
 td.2.52.isIdle=true
@@ -3482,6 +3685,7 @@ td.2.53.header="ExecuteThread: '13' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.53.id=0x0003b4c0
 td.2.53.name=ExecuteThread: '13' for queue: 'default'
 td.2.53.isBlocked=false
+td.2.53.isBlocking=false
 td.2.53.isDaemon=true
 td.2.53.isDeadLocked=false
 td.2.53.isIdle=true
@@ -3499,6 +3703,7 @@ td.2.54.header="ExecuteThread: '12' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.54.id=0x0003b388
 td.2.54.name=ExecuteThread: '12' for queue: 'default'
 td.2.54.isBlocked=false
+td.2.54.isBlocking=false
 td.2.54.isDaemon=true
 td.2.54.isDeadLocked=false
 td.2.54.isIdle=true
@@ -3516,6 +3721,7 @@ td.2.55.header="ExecuteThread: '11' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.55.id=0x0003b250
 td.2.55.name=ExecuteThread: '11' for queue: 'default'
 td.2.55.isBlocked=false
+td.2.55.isBlocking=false
 td.2.55.isDaemon=true
 td.2.55.isDeadLocked=false
 td.2.55.isIdle=true
@@ -3533,6 +3739,7 @@ td.2.56.header="ExecuteThread: '10' for queue: 'default'" daemon prio=10 tid=0x0
 td.2.56.id=0x0003b118
 td.2.56.name=ExecuteThread: '10' for queue: 'default'
 td.2.56.isBlocked=false
+td.2.56.isBlocking=false
 td.2.56.isDaemon=true
 td.2.56.isDeadLocked=false
 td.2.56.isIdle=true
@@ -3550,6 +3757,7 @@ td.2.57.header="ExecuteThread: '9' for queue: 'default'" daemon prio=10 tid=0x00
 td.2.57.id=0x0003afe0
 td.2.57.name=ExecuteThread: '9' for queue: 'default'
 td.2.57.isBlocked=false
+td.2.57.isBlocking=false
 td.2.57.isDaemon=true
 td.2.57.isDeadLocked=false
 td.2.57.isIdle=true
@@ -3567,6 +3775,7 @@ td.2.58.header="ExecuteThread: '8' for queue: 'default'" daemon prio=10 tid=0x00
 td.2.58.id=0x0003aea8
 td.2.58.name=ExecuteThread: '8' for queue: 'default'
 td.2.58.isBlocked=false
+td.2.58.isBlocking=false
 td.2.58.isDaemon=true
 td.2.58.isDeadLocked=false
 td.2.58.isIdle=true
@@ -3584,6 +3793,7 @@ td.2.59.header="ExecuteThread: '7' for queue: 'default'" daemon prio=10 tid=0x00
 td.2.59.id=0x0003ad70
 td.2.59.name=ExecuteThread: '7' for queue: 'default'
 td.2.59.isBlocked=false
+td.2.59.isBlocking=false
 td.2.59.isDaemon=true
 td.2.59.isDeadLocked=false
 td.2.59.isIdle=true
@@ -3601,6 +3811,7 @@ td.2.60.header="ExecuteThread: '6' for queue: 'default'" daemon prio=10 tid=0x00
 td.2.60.id=0x0003ac38
 td.2.60.name=ExecuteThread: '6' for queue: 'default'
 td.2.60.isBlocked=false
+td.2.60.isBlocking=false
 td.2.60.isDaemon=true
 td.2.60.isDeadLocked=false
 td.2.60.isIdle=true
@@ -3618,6 +3829,7 @@ td.2.61.header="ExecuteThread: '5' for queue: 'default'" daemon prio=10 tid=0x00
 td.2.61.id=0x0003ab00
 td.2.61.name=ExecuteThread: '5' for queue: 'default'
 td.2.61.isBlocked=false
+td.2.61.isBlocking=false
 td.2.61.isDaemon=true
 td.2.61.isDeadLocked=false
 td.2.61.isIdle=true
@@ -3635,6 +3847,7 @@ td.2.62.header="ExecuteThread: '4' for queue: 'default'" daemon prio=10 tid=0x00
 td.2.62.id=0x0003a9c8
 td.2.62.name=ExecuteThread: '4' for queue: 'default'
 td.2.62.isBlocked=false
+td.2.62.isBlocking=false
 td.2.62.isDaemon=true
 td.2.62.isDeadLocked=false
 td.2.62.isIdle=true
@@ -3652,6 +3865,7 @@ td.2.63.header="ExecuteThread: '3' for queue: 'default'" daemon prio=10 tid=0x00
 td.2.63.id=0x0003a890
 td.2.63.name=ExecuteThread: '3' for queue: 'default'
 td.2.63.isBlocked=false
+td.2.63.isBlocking=false
 td.2.63.isDaemon=true
 td.2.63.isDeadLocked=false
 td.2.63.isIdle=true
@@ -3669,6 +3883,7 @@ td.2.64.header="ExecuteThread: '2' for queue: 'default'" daemon prio=10 tid=0x00
 td.2.64.id=0x0003a758
 td.2.64.name=ExecuteThread: '2' for queue: 'default'
 td.2.64.isBlocked=false
+td.2.64.isBlocking=false
 td.2.64.isDaemon=true
 td.2.64.isDeadLocked=false
 td.2.64.isIdle=true
@@ -3686,6 +3901,7 @@ td.2.65.header="ExecuteThread: '1' for queue: 'default'" daemon prio=10 tid=0x00
 td.2.65.id=0x0003a620
 td.2.65.name=ExecuteThread: '1' for queue: 'default'
 td.2.65.isBlocked=false
+td.2.65.isBlocking=false
 td.2.65.isDaemon=true
 td.2.65.isDeadLocked=false
 td.2.65.isIdle=true
@@ -3703,6 +3919,7 @@ td.2.66.header="ExecuteThread: '0' for queue: 'default'" daemon prio=10 tid=0x00
 td.2.66.id=0x0003a4e8
 td.2.66.name=ExecuteThread: '0' for queue: 'default'
 td.2.66.isBlocked=false
+td.2.66.isBlocking=false
 td.2.66.isDaemon=true
 td.2.66.isDeadLocked=false
 td.2.66.isIdle=true
@@ -3718,6 +3935,7 @@ td.2.67.header="Thread-0" daemon prio=8 tid=0x0003a3b0 nid=11 lwp_id=3573061 wai
 td.2.67.id=0x0003a3b0
 td.2.67.name=Thread-0
 td.2.67.isBlocked=false
+td.2.67.isBlocking=false
 td.2.67.isDaemon=true
 td.2.67.isDeadLocked=false
 td.2.67.isIdle=true
@@ -3730,6 +3948,7 @@ td.2.68.header="Signal Dispatcher" daemon prio=10 tid=0x00039c60 nid=8 lwp_id=35
 td.2.68.id=0x00039c60
 td.2.68.name=Signal Dispatcher
 td.2.68.isBlocked=false
+td.2.68.isBlocking=false
 td.2.68.isDaemon=true
 td.2.68.isDeadLocked=false
 td.2.68.isIdle=false
@@ -3747,6 +3966,7 @@ td.2.69.header="Finalizer" daemon prio=10 tid=0x00039b28 nid=5 lwp_id=3573009 wa
 td.2.69.id=0x00039b28
 td.2.69.name=Finalizer
 td.2.69.isBlocked=false
+td.2.69.isBlocking=false
 td.2.69.isDaemon=true
 td.2.69.isDeadLocked=false
 td.2.69.isIdle=true
@@ -3764,6 +3984,7 @@ td.2.70.header="Reference Handler" daemon prio=10 tid=0x000399f0 nid=4 lwp_id=35
 td.2.70.id=0x000399f0
 td.2.70.name=Reference Handler
 td.2.70.isBlocked=false
+td.2.70.isBlocking=false
 td.2.70.isDaemon=true
 td.2.70.isDeadLocked=false
 td.2.70.isIdle=true
@@ -3783,6 +4004,7 @@ td.2.71.header="main" prio=10 tid=0x000398b8 nid=1 lwp_id=3572964 waiting on mon
 td.2.71.id=0x000398b8
 td.2.71.name=main
 td.2.71.isBlocked=false
+td.2.71.isBlocking=false
 td.2.71.isDaemon=false
 td.2.71.isDeadLocked=false
 td.2.71.isIdle=true
@@ -3795,6 +4017,7 @@ td.2.72.header="VM Thread" prio=7 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable
 td.2.72.id=0x0018cdb8
 td.2.72.name=VM Thread
 td.2.72.isBlocked=false
+td.2.72.isBlocking=false
 td.2.72.isDaemon=false
 td.2.72.isDeadLocked=false
 td.2.72.isIdle=false
@@ -3807,6 +4030,7 @@ td.2.73.header="VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573
 td.2.73.id=0x0018ce38
 td.2.73.name=VM Periodic Task Thread
 td.2.73.isBlocked=false
+td.2.73.isBlocking=false
 td.2.73.isDaemon=false
 td.2.73.isDeadLocked=false
 td.2.73.isIdle=false
@@ -3819,6 +4043,7 @@ td.2.74.header="Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573
 td.2.74.id=0x0018ceb8
 td.2.74.name=Suspend Checker Thread
 td.2.74.isBlocked=false
+td.2.74.isBlocking=false
 td.2.74.isDaemon=false
 td.2.74.isDeadLocked=false
 td.2.74.isIdle=false
