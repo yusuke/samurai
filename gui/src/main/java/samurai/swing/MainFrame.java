@@ -54,31 +54,31 @@ import java.util.List;
 
 public class MainFrame extends JFrame implements KeyListener, FileHistoryListener, CloseListener {
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    public JMenuItem menuEditPreferences = new JMenuItem("menu.edit.preferences");
+    private JMenuItem menuEditPreferences = new JMenuItem("menu.edit.preferences");
     public ConfigDialog configDialog;
-    public JMenuBar menuBar = new JMenuBar();
-    public JMenu menuFile = new JMenu("menu.file");
-    public JMenuItem menuFileNewTab = new JMenuItem("menu.file.newTab");
-    public JMenuItem menuFileOpen;
-    public JMenu menuFileRecent;
-    public JMenuItem menuFileClose = new JMenuItem("menu.file.close");
+    private JMenuBar menuBar = new JMenuBar();
+    private JMenu menuFile = new JMenu("menu.file");
+    private JMenuItem menuFileNewTab = new JMenuItem("menu.file.newTab");
+    private JMenuItem menuFileOpen;
+    private JMenu menuFileRecent;
+    private JMenuItem menuFileClose = new JMenuItem("menu.file.close");
 
-    public JMenuItem menuFileExit = new JMenuItem("menu.file.exit");
-    public JMenu menuEdit = new JMenu("menu.edit");
-    public JMenuItem menuEditCopy = new JMenuItem("menu.edit.copy");
-    public JMenuItem menuEditFind = new JMenuItem("menu.edit.find");
-    public JMenuItem menuEditFindPrevious = new JMenuItem("menu.edit.findPrevious");
-    public JMenuItem menuEditFindNext = new JMenuItem("menu.edit.findNext");
+    private JMenuItem menuFileExit = new JMenuItem("menu.file.exit");
+    private JMenu menuEdit = new JMenu("menu.edit");
+    private JMenuItem menuEditCopy = new JMenuItem("menu.edit.copy");
+    private JMenuItem menuEditFind = new JMenuItem("menu.edit.find");
+    private JMenuItem menuEditFindPrevious = new JMenuItem("menu.edit.findPrevious");
+    private JMenuItem menuEditFindNext = new JMenuItem("menu.edit.findNext");
 
-    public JMenu menuView = new JMenu("menu.view");
-    public JMenuItem menuViewReload = new JMenuItem("menu.view.reload");
-    public JMenuItem menuViewNext = new JMenuItem("menu.view.next");
-    public JMenuItem menuViewPrevious = new JMenuItem("menu.view.previous");
-    public JMenuItem menuViewStatusBar = new JCheckBoxMenuItem("menu.view.statusBar");
-    public JMenu menuViewEncoding = new JMenu("menu.view.encoding");
+    private JMenu menuView = new JMenu("menu.view");
+    private JMenuItem menuViewReload = new JMenuItem("menu.view.reload");
+    private JMenuItem menuViewNext = new JMenuItem("menu.view.next");
+    private JMenuItem menuViewPrevious = new JMenuItem("menu.view.previous");
+    private JMenuItem menuViewStatusBar = new JCheckBoxMenuItem("menu.view.statusBar");
+    private JMenu menuViewEncoding = new JMenu("menu.view.encoding");
 
-    public JMenu menuHelp = new JMenu("menu.help");
-    public JMenuItem menuHelpAbout = new JMenuItem("menu.help.about");
+    private JMenu menuHelp = new JMenu("menu.help");
+    private JMenuItem menuHelpAbout = new JMenuItem("menu.help.about");
     public AboutSamuraiDialog dialog = new AboutSamuraiDialog(this);
     private TileTabPanel<SamuraiPanel> tab = new TileTabPanel<SamuraiPanel>(true){
         protected void selectedIndexChanged(int index){

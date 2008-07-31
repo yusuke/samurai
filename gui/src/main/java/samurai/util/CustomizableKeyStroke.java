@@ -8,8 +8,12 @@
 package samurai.util;
 
 
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
+import java.awt.Component;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.io.InputStream;
@@ -100,20 +104,21 @@ public class CustomizableKeyStroke {
     }
 
     public void apply(Object obj) {
-        java.lang.reflect.Field[] fields = obj.getClass().getDeclaredFields();
-        for (int i = 0; i < fields.length; i++) {
-            String fieldName = fields[i].getName();
-            Class type = fields[i].getType();
-            try {
-                Object theObject = fields[i].get(obj);
-                if (theObject instanceof JMenuItem) {
-                    JMenuItem menuItem = (JMenuItem) theObject;
-                    String key = menuItem.getText();
-                    menuItem.setText(resources.getMessage(key));
-                    this.setKeyStroke(menuItem, key);
-                }
-            } catch (IllegalAccessException iae) {
-//        throw new AssertionError(iae.getMessage());
+        if (obj instanceof JMenuItem) {
+            JMenuItem menuItem = (JMenuItem) obj;
+            String key = menuItem.getText();
+            menuItem.setText(resources.getMessage(key));
+            this.setKeyStroke(menuItem, key);
+        }
+        if (obj instanceof JFrame) {
+            JMenuBar menuBar = ((JFrame) obj).getJMenuBar();
+            for (int i = 0; i < menuBar.getMenuCount(); i++) {
+                apply(menuBar.getMenu(i));
+            }
+        } else if (obj instanceof JMenu) {
+            JMenu menu = (JMenu) obj;
+            for (Component menuItem : menu.getMenuComponents()) {
+                apply(menuItem);
             }
         }
     }

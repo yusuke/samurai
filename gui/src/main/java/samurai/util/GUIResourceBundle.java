@@ -16,6 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
+import java.awt.Component;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -247,6 +248,9 @@ public class GUIResourceBundle extends ResourceBundle {
                     inject(theObject);
                 } else if (theObject instanceof JComponent) {
                     JComponent component = (JComponent) theObject;
+                    for(Component innerComponent : component.getComponents()){
+                        inject(innerComponent);
+                    }
                     if (null != component.getToolTipText() && !"".equals(component.getToolTipText())) {
                         component.setToolTipText(getLocalizedMessage(component.getToolTipText()));
                     }

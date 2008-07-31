@@ -34,15 +34,15 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
 
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private static CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
-    public JPopupMenu popupMenu = new JPopupMenu();
-    public JMenuItem menuCloseTab = new JMenuItem("TileTabPanel.closeTab");
-    public JMenuItem menuTab = new JMenuItem("TileTabPanel.tab");
-    public JMenuItem menuHorizontal = new JMenuItem("TileTabPanel.splitHorizontal");
-    public JMenuItem menuVertical = new JMenuItem("TileTabPanel.splitVertical");
+    private JPopupMenu popupMenu = new JPopupMenu();
+    private JMenuItem menuCloseTab = new JMenuItem("TileTabPanel.closeTab");
+    private JMenuItem menuTab = new JMenuItem("TileTabPanel.tab");
+    private JMenuItem menuHorizontal = new JMenuItem("TileTabPanel.splitHorizontal");
+    private JMenuItem menuVertical = new JMenuItem("TileTabPanel.splitVertical");
 
-    public JMenuItem jMenuViewTab = new JMenuItem("TileTabPanel.tab");
-    public JMenuItem jMenuViewSplitHorizontal = new JMenuItem("TileTabPanel.splitHorizontal");
-    public JMenuItem jMenuViewSplitVertical = new JMenuItem("TileTabPanel.splitVertical");
+    JMenuItem jMenuViewTab = new JMenuItem("TileTabPanel.tab");
+    JMenuItem jMenuViewSplitHorizontal = new JMenuItem("TileTabPanel.splitHorizontal");
+    JMenuItem jMenuViewSplitVertical = new JMenuItem("TileTabPanel.splitVertical");
 
     private static ImageIcon closeIcon;
     private static ImageIcon closePushedIcon;
@@ -193,7 +193,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         jMenuViewTab.setEnabled(false);
         jMenuViewSplitHorizontal.addActionListener(new OrientationChangeAction(TILE_HORIZONTAL));
         jMenuViewSplitVertical.addActionListener(new OrientationChangeAction(TILE_VERTICAL));
-        keyStroke.apply(this);
+//        keyStroke.apply(this);
     }
 
     public int getComponentSize() {
