@@ -45,8 +45,9 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
 
     private Context context = null;
 
-    public SamuraiPanel(Context context, KeyListener listener) {
+    public SamuraiPanel(Context context, KeyListener listener, String encoding) {
         this.context = context;
+        setEncoding(encoding);
         this.setLayout(borderLayout1);
         tab.setShowTitleWithSingleComponent(false);
         logRenderers.add(new ThreadDumpPanel(this, context));
@@ -159,13 +160,33 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
         if (0 < files.length) {
             List<File> fileList = new ArrayList<File>(files.length);
             for (int i = 0; i < files.length; i++) {
-                if (files[i].isFile()) {
+                if (!files[i].isDirectory()) {
                     fileList.add(files[i]);
                 }
             }
             java.util.Collections.sort(fileList);
             openFiles(fileList);
         }
+    }
+
+    private String encoding;
+    private String actualEncoding;
+    public void setEncoding(String encoding) {
+        if (!encoding.equals(this.encoding)) {
+            this.encoding = encoding;
+            if (encoding.equals("SYSTEM_DEFAULT")) {
+                this.actualEncoding = System.getProperty("file.encoding");
+            } else {
+                this.actualEncoding = encoding;
+            }
+
+            if (null != logWatcher) {
+                reload();
+            }
+        }
+    }
+    public String getEncoding(){
+        return encoding;
     }
 
     private void openFiles(List<File> files) {
@@ -187,7 +208,7 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
             empty = true;
         }
 
-        logWatcher = new MultipleLogWatcher((File[]) files.toArray(new File[]{}));
+        logWatcher = new MultipleLogWatcher(files.toArray(new File[]{}), actualEncoding);
         logWatcher.addLogMonitor(this);
         for (LogRenderer renderer : logRenderers) {
             logWatcher.addLogMonitor(renderer);

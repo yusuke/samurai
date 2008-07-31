@@ -75,12 +75,19 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     public JMenuItem menuViewNext = new JMenuItem("menu.view.next");
     public JMenuItem menuViewPrevious = new JMenuItem("menu.view.previous");
     public JMenuItem menuViewStatusBar = new JCheckBoxMenuItem("menu.view.statusBar");
+    public JMenu menuViewEncoding = new JMenu("menu.view.encoding");
 
     public JMenu menuHelp = new JMenu("menu.help");
     public JMenuItem menuHelpAbout = new JMenuItem("menu.help.about");
     public AboutSamuraiDialog dialog = new AboutSamuraiDialog(this);
-    private TileTabPanel<SamuraiPanel> tab = new TileTabPanel<SamuraiPanel>(true);
+    private TileTabPanel<SamuraiPanel> tab = new TileTabPanel<SamuraiPanel>(true){
+        protected void selectedIndexChanged(int index){
+            setSelectedEncoding(getSelectedComponent().getEncoding());
+        }
+    };
     private Context context;
+
+    private EncodingMenuItem selectedEncoding;
 
     JPanel contentPane;
     JPanel southPane = new JPanel();
@@ -88,21 +95,11 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     BorderLayout borderLayout1 = new BorderLayout();
     BorderLayout borderLayout2 = new BorderLayout();
     SearchPanel searcher;
+    private boolean searchPanelAdded = false;
 
     //Construct the frame
     public MainFrame() {
         enableEvents(AWTEvent.WINDOW_EVENT_MASK);
-        try {
-            jbInit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private boolean searchPanelAdded = false;
-
-    //Component initialization
-    private void jbInit() throws Exception {
         context = new Context(statusBar, this.tab);
         searcher = context.getSearchPanel();
         configDialog = new ConfigDialog(context);
@@ -263,6 +260,18 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         menuView.add(tab.jMenuViewSplitVertical);
         menuView.addSeparator();
         menuView.add(menuViewStatusBar);
+        menuView.addSeparator();
+        menuView.add(menuViewEncoding);
+        String[] encodings = context.getConfig().getString("encodings").split(",");
+        for(String encoding : encodings){
+            if("-".equals(encoding)){
+                menuViewEncoding.addSeparator();
+            }else{
+                EncodingMenuItem item = new EncodingMenuItem(encoding);
+                menuViewEncoding.add(item);
+                item.addActionListener(new EncodingMenuItemActionListener());
+            }
+        }
 
         if (!OSDetector.isMac()) {
             menuHelp.add(menuHelpAbout);
@@ -587,12 +596,34 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     public void keyReleased(KeyEvent e) {
     }
 
+    private void setSelectedEncoding(String encoding) {
+        if (null != selectedEncoding) {
+            selectedEncoding.setSelected(false);
+        }
+        tab.getSelectedComponent().setEncoding(encoding);
+
+        for (int i = menuViewEncoding.getItemCount() - 1; i >= 0; i--) {
+            Component component = menuViewEncoding.getItem(i);
+            if (component instanceof EncodingMenuItem) {
+                EncodingMenuItem encodingMenuItem = (EncodingMenuItem) component;
+                if (encoding.equals(encodingMenuItem.getEncoding())) {
+                    encodingMenuItem.setSelected(true);
+                    selectedEncoding = encodingMenuItem;
+                    break;
+                }
+            }
+        }
+    }
+
     public void openNewTab() {
-        SamuraiPanel samuraiPanel = new SamuraiPanel(context, this);
+        String defaultEncoding = context.getConfig().getString("defaultEncoding");
+
+        SamuraiPanel samuraiPanel = new SamuraiPanel(context, this, defaultEncoding);
         samuraiPanel.setDroptargetListener(new SamuraiDropTargetListener(samuraiPanel));
         tab.addComponent(resources.getMessage("MainFrame.untitled"), samuraiPanel,
                 SamuraiPanel.stoppedIcon);
         tab.setSelectedIndex(tab.getComponentSize() - 1);
+        setSelectedEncoding(defaultEncoding);
         setAvailability();
     }
 
@@ -854,6 +885,29 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         }
     }
 
-    ;
+    static GUIResourceBundle resource = GUIResourceBundle.getInstance("encoding-display-names");
+    class EncodingMenuItem extends JCheckBoxMenuItem {
+        String encoding;
 
+        EncodingMenuItem(String encoding) {
+            super(resource.getMessage(encoding));
+            this.encoding = encoding;
+        }
+        public String getEncoding(){
+            return encoding;
+        }
+        public String toString(){
+           return resource.getMessage(encoding);
+        }
+    }
+    class EncodingMenuItemActionListener implements ActionListener{
+        public void actionPerformed(ActionEvent e) {
+            EncodingMenuItem item = (EncodingMenuItem) e.getSource();
+            item.setSelected(true);
+            if (selectedEncoding != item) {
+                // selected encoding has been changed
+                setSelectedEncoding(item.getEncoding());
+            }
+        }
+    }
 }

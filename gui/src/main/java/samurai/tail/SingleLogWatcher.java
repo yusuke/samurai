@@ -21,12 +21,15 @@ public class SingleLogWatcher {
     private boolean debug = false;
     private String encoding = System.getProperty("file.encoding");
 
-    public SingleLogWatcher(File file) {
+    public SingleLogWatcher(File file,String encoding) {
         this.file = file;
-        encoding = System.getProperty("file.encoding");
+        this.encoding = encoding;
         if (null != file && file.exists()) {
             openFile();
         }
+    }
+    public SingleLogWatcher(File file) {
+        this(file,System.getProperty("file.encoding"));
     }
 
     public synchronized void setEncoding(String encoding) {

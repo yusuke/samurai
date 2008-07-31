@@ -16,12 +16,14 @@ public class MultipleLogWatcher implements LogMonitor {
     private SingleLogWatcher currentLogWatcher = null;
     private List<File> files;
     private List<LogMonitor> logMonitors = new ArrayList<LogMonitor>();
+    private String encoding;
 
-    public MultipleLogWatcher(File[] files) {
+    public MultipleLogWatcher(File[] files,String encoding) {
         this.files = new ArrayList<File>(files.length);
         for (int i = 0; i < files.length; i++) {
             this.files.add(files[i]);
         }
+        this.encoding = encoding;
     }
 
     boolean ticket = true;
@@ -42,7 +44,7 @@ public class MultipleLogWatcher implements LogMonitor {
             if (null != currentLogWatcher) {
                 currentLogWatcher.kill();
             }
-            currentLogWatcher = new SingleLogWatcher(this.files.remove(0));
+            currentLogWatcher = new SingleLogWatcher(this.files.remove(0), encoding);
             currentLogWatcher.addLogMonitor(this);
             currentLogWatcher.setDebug(debug);
             currentLogWatcher.start();

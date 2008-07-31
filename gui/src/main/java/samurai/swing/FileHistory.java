@@ -37,9 +37,6 @@ public final class FileHistory {
     public FileHistory(Configuration config) {
         this.config = config;
         config.apply(this);
-//    if(numberToRemember < 0){
-//      numberToRemember = 10;
-//    }
         load();
         openRecentMenu = new JMenu();
         updateChildMenuItems();
@@ -96,11 +93,9 @@ public final class FileHistory {
 
     public void addHistory(File file) {
         delete(file);
-        if (file.exists() && file.isFile()) {
-            files.add(0, file);
-            if (files.size() > numberToRemember) {
-                files.remove(files.size() - 1);
-            }
+        files.add(0, file);
+        if (files.size() > numberToRemember) {
+            files.remove(files.size() - 1);
         }
         save();
         updateChildMenuItems();
@@ -108,8 +103,6 @@ public final class FileHistory {
 
     public void open(File file) {
         addHistory(file);
-        updateChildMenuItems();
-        save();
         if (null != listener) {
             listener.fileOpened(file);
         }
@@ -152,7 +145,7 @@ public final class FileHistory {
     public void disableCleaningOrphans(){
         this.cleanOrphans = false;
     }
-
+ 
     private void cleanOrphans() {
         if (cleanOrphans) {
             for (int i = 0; i < files.size(); i++) {

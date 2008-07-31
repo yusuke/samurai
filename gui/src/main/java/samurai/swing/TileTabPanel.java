@@ -348,9 +348,12 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
             } else {
                 tilePanel.setSelectedIndex(index);
             }
+            selectedIndexChanged(index);
         } else {
             // do nothing
         }
+    }
+    protected void selectedIndexChanged(int index){
     }
 
     public int getSelectedIndex() {

@@ -20,7 +20,7 @@ public class LogWatcher extends Thread {
     private boolean debug = false;
     private List<File> pendingFiles = new ArrayList<File>(0);
     private List<File> newPendingFiles = null;
-    private String encoding = System.getProperty("file.encoding");
+    private String encoding;
 
     public void setFiles(File[] files) {
         newPendingFiles = new ArrayList<File>();
@@ -34,42 +34,14 @@ public class LogWatcher extends Thread {
     }
 
     public LogWatcher() {
-        init();
+        this(System.getProperty("file.encoding"));
     }
-
-    private void init() {
-//    file = pendingFiles.remove(0);
+    public LogWatcher(String encoding) {
         super.setName("LogWatcher Thread");
         this.setDaemon(true);
         this.setPriority(Thread.MIN_PRIORITY);
-        encoding = System.getProperty("file.encoding");
+        this.encoding = encoding;
     }
-//  public LogWatcher(File file) {
-//    this(new File[]{file});
-//  }
-//  public LogWatcher(File file,String encoding) {
-//    this(new File[]{file});
-//    this.encoding = encoding;
-//  }
-//  public LogWatcher(File[] files) {
-//    pendingFiles = new ArrayList<File>();
-//    for (int i = 0; i < files.length; i++) {
-//      pendingFiles.add(files[i]);
-//    }
-//    init();
-//  }
-//  public LogWatcher(File[] files,String encoding) {
-//    this(files);
-//    this.encoding = encoding;
-//  }
-//  public LogWatcher(List<File> files){
-//    pendingFiles = files;
-//    init();
-//  }
-//  public LogWatcher(List<File> files,String encoding){
-//    this(files);
-//    this.encoding = encoding;
-//  }
 
     public void setDebug(boolean debug) {
         this.debug = debug;
@@ -118,9 +90,6 @@ public class LogWatcher extends Thread {
         }
 
     }
-//  private final OPENED = 0;
-//  private final
-//  int status
 
     public void checkUpdate() {
         if (debug)
@@ -148,7 +117,6 @@ public class LogWatcher extends Thread {
                         }
                         onLine(line.toByteArray());
                         line.reset();
-//              line = new ByteArrayOutputStream(128);
                     }
                     filePointer = raf.getFilePointer();
                     raf.close();
