@@ -7,7 +7,6 @@
  */
 package samurai.swing;
 
-import samurai.util.CustomizableKeyStroke;
 import samurai.util.GUIResourceBundle;
 import samurai.util.OSDetector;
 
@@ -33,8 +32,7 @@ import java.util.List;
 public class TileTabPanel<T extends JComponent> extends JPanel implements MouseListener, MouseMotionListener {
 
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    private static CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
-    private JPopupMenu popupMenu = new JPopupMenu();
+    JPopupMenu popupMenu = new JPopupMenu();
     private JMenuItem menuCloseTab = new JMenuItem("TileTabPanel.closeTab");
     private JMenuItem menuTab = new JMenuItem("TileTabPanel.tab");
     private JMenuItem menuHorizontal = new JMenuItem("TileTabPanel.splitHorizontal");
@@ -193,7 +191,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         jMenuViewTab.setEnabled(false);
         jMenuViewSplitHorizontal.addActionListener(new OrientationChangeAction(TILE_HORIZONTAL));
         jMenuViewSplitVertical.addActionListener(new OrientationChangeAction(TILE_VERTICAL));
-//        keyStroke.apply(this);
+//        keyStroke.apply(popupMenu);
     }
 
     public int getComponentSize() {

@@ -294,6 +294,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         context.getConfig().applyRectangle("MainFrame.bounds", this);
         context.getConfig().applyLocation("ConfigDialog.location", configDialog);
         context.getKeyStroke().apply(this);
+        context.getKeyStroke().apply(tab.popupMenu);
         resources.inject(this);
         if (OSDetector.isMac()) {
             macApp = new MacApplicationWrapper(this);
@@ -885,19 +886,19 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         }
     }
 
-    static GUIResourceBundle resource = GUIResourceBundle.getInstance("encoding-display-names");
+//    static GUIResourceBundle resource = GUIResourceBundle.getInstance("encoding-display-names");
     class EncodingMenuItem extends JCheckBoxMenuItem {
         String encoding;
 
         EncodingMenuItem(String encoding) {
-            super(resource.getMessage(encoding));
+            super(encoding);
             this.encoding = encoding;
         }
         public String getEncoding(){
             return encoding;
         }
         public String toString(){
-           return resource.getMessage(encoding);
+           return encoding;
         }
     }
     class EncodingMenuItemActionListener implements ActionListener{

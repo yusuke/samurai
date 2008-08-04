@@ -12,6 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JPopupMenu;
 import javax.swing.KeyStroke;
 import java.awt.Component;
 import java.awt.event.KeyEvent;
@@ -107,7 +108,9 @@ public class CustomizableKeyStroke {
         if (obj instanceof JMenuItem) {
             JMenuItem menuItem = (JMenuItem) obj;
             String key = menuItem.getText();
-            menuItem.setText(resources.getMessage(key));
+            if (null != resources.getMessage(key)) {
+                menuItem.setText(resources.getMessage(key));
+            }
             this.setKeyStroke(menuItem, key);
         }
         if (obj instanceof JFrame) {
@@ -118,6 +121,11 @@ public class CustomizableKeyStroke {
         } else if (obj instanceof JMenu) {
             JMenu menu = (JMenu) obj;
             for (Component menuItem : menu.getMenuComponents()) {
+                apply(menuItem);
+            }
+        } else if (obj instanceof JPopupMenu) {
+            JPopupMenu menu = (JPopupMenu) obj;
+            for (Component menuItem : menu.getComponents()) {
                 apply(menuItem);
             }
         }
