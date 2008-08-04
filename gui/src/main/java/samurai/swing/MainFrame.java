@@ -76,6 +76,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     private JMenuItem menuViewPrevious = new JMenuItem("menu.view.previous");
     private JMenuItem menuViewStatusBar = new JCheckBoxMenuItem("menu.view.statusBar");
     private JMenu menuViewEncoding = new JMenu("menu.view.encoding");
+    private JMenuItem menuViewClearBuffer = new JMenuItem("menu.view.clearBuffer");
 
     private JMenu menuHelp = new JMenu("menu.help");
     private JMenuItem menuHelpAbout = new JMenuItem("menu.help.about");
@@ -213,6 +214,11 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                 nextTab();
             }
         });
+        menuViewClearBuffer.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                clearBuffer();
+            }
+        });
 
         menuViewStatusBar.setSelected(true);
 
@@ -272,6 +278,9 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                 item.addActionListener(new EncodingMenuItemActionListener());
             }
         }
+
+        menuView.addSeparator();
+        menuView.add(menuViewClearBuffer);
 
         if (!OSDetector.isMac()) {
             menuHelp.add(menuHelpAbout);
@@ -459,6 +468,13 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             selected = 0;
         }
         tab.setSelectedIndex(selected);
+    }
+    private void clearBuffer() {
+        SamuraiPanel selected = tab.getSelectedComponent();
+        if(!selected.isEmpty()){
+            selected.clearBuffer();
+        }
+
     }
 
     private void previousTab() {

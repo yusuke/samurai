@@ -63,6 +63,12 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
             gcParser.parse(line, this);
         }
     }
+    public void clearBuffer(){
+        while(tileTabPanel.getComponentSize() > 0){
+            tileTabPanel.removeComponentAt(0);
+        }
+        hideMe();
+    }
 
     public void logStarted(File file, long filePointer) {
         super.logStarted(file, filePointer);

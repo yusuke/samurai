@@ -688,12 +688,15 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         analyzer.finish();
     }
 
-    public synchronized void close() {
-        super.close();
+    public synchronized void clearBuffer(){
         init();
         analyzer = new ThreadDumpExtractor(statistic);
+        hideMe();
+    }
 
-//    this.analyzer.finish();
+    public synchronized void close() {
+        super.close();
+        clearBuffer();
     }
 
     private void init() {

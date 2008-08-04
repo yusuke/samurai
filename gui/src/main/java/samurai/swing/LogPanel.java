@@ -77,6 +77,9 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
 //    buffer.delete(0, buffer.length());
         initBuffer();
     }
+     public void clearBuffer(){
+        textArea.setText("");
+    }
 
     //  StringBuffer buffer = new StringBuffer(1024);
     String[] buffer;

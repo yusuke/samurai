@@ -39,6 +39,11 @@ public abstract class LogRenderer extends JPanel implements LogMonitor {
             added = true;
         }
     }
+    protected void hideMe(){
+        if(added){
+            samuraiPanel.removePane(this);
+        }
+    }
 
     public void onLine(File file, String line, long filepointer) {
     }
@@ -50,6 +55,10 @@ public abstract class LogRenderer extends JPanel implements LogMonitor {
             close();
         }
         currentVersion++;
+    }
+
+    public void clearBuffer(){
+        
     }
 
     public void logEnded(File file, long filepointer) {

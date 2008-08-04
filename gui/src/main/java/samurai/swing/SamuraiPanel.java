@@ -106,6 +106,14 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
         return empty;
     }
 
+    public void clearBuffer(){
+        if(!empty){
+            for (LogRenderer renderer : logRenderers) {
+                renderer.clearBuffer();
+            }
+        }
+    }
+
     public synchronized void close() {
 //    if (null != logWatcher) {
 //      this.logWatcher.kill();
