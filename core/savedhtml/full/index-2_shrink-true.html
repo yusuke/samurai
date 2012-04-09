@@ -1,0 +1,164 @@
+<html>
+<head>
+    <title>Thread Dump
+        View</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+    a.visited {
+        color: blue;
+    }
+
+    a {
+        color: blue; /* text-decoration:none;*/
+        text-decoration: underline;
+    }
+
+    a.hover {
+        color: blue;
+        text-decoration: underline;
+    }
+
+    .blocked {
+        color: #FF0000;
+    }
+    .blocking {
+        color: #FF9900;
+    }
+
+    .normal {
+        color: black;
+    }
+
+    .idle {
+        color: #777777;
+    }
+
+    .back-blocked {
+        background-color: #FF0000;
+        width: 16px;
+    }
+
+    .back-blocking {
+        background-color: #FF9900;
+        width: 16px;
+    }
+
+    .back-normal {
+        background-color: #33FF33;
+        width: 16px;
+    }
+
+    .back-idle {
+        background-color: #777777;
+        width: 16px;
+    }
+
+    .back-notexist {
+        background-color: #000000;
+        width: 16px;
+    }
+
+</style>
+</head>
+<body>
+View:&nbsp;
+<a href="../table/index.html">
+    <img border="0" src="file:/Users/yusuke/samurai/core/target/classes/samurai/web/images/tableButton.gif">Table</a>
+
+&nbsp;&nbsp;<img border="0" src="file:/Users/yusuke/samurai/core/target/classes/samurai/web/images/fullButton.gif">Thread Dump&nbsp;&nbsp;
+
+<a href="../sequence/threadId-0x00285c40_shrink-true.html">
+    <img border="0" src="file:/Users/yusuke/samurai/core/target/classes/samurai/web/images/sequenceButton.gif">Sequence</a><br>
+<br>
+<a href="../full/index-1_shrink-true.html">&lt;&lt;Prev</a>
+
+ Next&gt;&gt;
+3/3<br><br>
+
+Full thread dump Java HotSpot(TM) Client VM (1.4.2_03-b02 mixed mode):<br><br>
+
+<font class="normal">
+    "<a name="$threadDump.getId()"
+        href="../sequence/threadId-$threadDump.getId()_shrink-true.html#1">DestroyJavaVM</a>"  prio=5 tid=0x00285c40 nid=0x2f4 waiting on condition [0..6fad8]<br>
+
+
+            
+</font><br>
+<font class="blocked">
+    "<a name="$threadDump.getId()"
+        href="../sequence/threadId-$threadDump.getId()_shrink-true.html#2">Thread-1</a>"    <img border="0" src="file:/Users/yusuke/samurai/core/target/classes/samurai/web/images/deadlocked.gif">  prio=5 tid=0x0028ea18 nid=0x604 waiting for monitor entry [182ef000..182efd88]<br>
+
+
+                &nbsp;&nbsp;&nbsp;&nbsp;	at net.homeip.yusuke.samurai.test.AThread.run(StackSample.java:26)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;	- waiting to lock &lt;<a href="#0x100309e0">0x100309e0</a>&gt; (a java.lang.Object)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;	- locked &lt;<a name="0x100309e8"></a>0x100309e8&gt; (a java.lang.Object)<br>
+            
+</font><br>
+<font class="blocked">
+    "<a name="$threadDump.getId()"
+        href="../sequence/threadId-$threadDump.getId()_shrink-true.html#3">Thread-0</a>"    <img border="0" src="file:/Users/yusuke/samurai/core/target/classes/samurai/web/images/deadlocked.gif">  prio=5 tid=0x0028e8b0 nid=0x4a4 waiting for monitor entry [182af000..182afd88]<br>
+
+
+                &nbsp;&nbsp;&nbsp;&nbsp;	at net.homeip.yusuke.samurai.test.AThread.run(StackSample.java:26)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;	- waiting to lock &lt;<a href="#0x100309e8">0x100309e8</a>&gt; (a java.lang.Object)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;	- locked &lt;<a name="0x100309e0"></a>0x100309e0&gt; (a java.lang.Object)<br>
+            
+</font><br>
+<font class="normal">
+    "<a name="$threadDump.getId()"
+        href="../sequence/threadId-$threadDump.getId()_shrink-true.html#4">Signal Dispatcher</a>"  daemon prio=10 tid=0x0097a740 nid=0x238 waiting on condition [0..0]<br>
+
+
+            
+</font><br>
+<font class="idle">
+    "<a name="$threadDump.getId()"
+        href="../sequence/threadId-$threadDump.getId()_shrink-true.html#5">Finalizer</a>"  daemon prio=9 tid=0x0091a500 nid=0x4bc in Object.wait() [1816f000..1816fd88]<br>
+
+
+                &nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.Object.wait(Native Method)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;	- waiting on &lt;0x10010498&gt; (a java.lang.ref.ReferenceQueue$Lock)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.ref.ReferenceQueue.remove(Unknown Source)<br>
+                    &nbsp;&nbsp;&nbsp;<a href="../full/index-2_shrink-false.html#$threadDump.getId()"><img
+        border="0" src="file:/Users/yusuke/samurai/core/target/classes/samurai/web/images/expandable_win.gif"></a>	- locked &lt;<a name="0x10010498"></a>0x10010498&gt; (a java.lang.ref.ReferenceQueue$Lock)<br>
+                                            
+
+    
+</font><br>
+<font class="idle">
+    "<a name="$threadDump.getId()"
+        href="../sequence/threadId-$threadDump.getId()_shrink-true.html#6">Reference Handler</a>"  daemon prio=10 tid=0x00919078 nid=0x490 in Object.wait() [1812f000..1812fd88]<br>
+
+
+                &nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.Object.wait(Native Method)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;	- waiting on &lt;0x10010388&gt; (a java.lang.ref.Reference$Lock)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;	at java.lang.Object.wait(Unknown Source)<br>
+                    &nbsp;&nbsp;&nbsp;<a href="../full/index-2_shrink-false.html#$threadDump.getId()"><img
+        border="0" src="file:/Users/yusuke/samurai/core/target/classes/samurai/web/images/expandable_win.gif"></a>	at java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)<br>
+                            
+
+    
+</font><br>
+<font class="normal">
+    "<a name="$threadDump.getId()"
+        href="../sequence/threadId-$threadDump.getId()_shrink-true.html#7">VM Thread</a>"  prio=5 tid=0x00959360 nid=0x4d0 runnable <br>
+
+
+            
+</font><br>
+<font class="normal">
+    "<a name="$threadDump.getId()"
+        href="../sequence/threadId-$threadDump.getId()_shrink-true.html#8">VM Periodic Task Thread</a>"  prio=10 tid=0x00973000 nid=0x570 waiting on condition <br>
+
+
+            
+</font><br>
+<font class="normal">
+    "<a name="$threadDump.getId()"
+        href="../sequence/threadId-$threadDump.getId()_shrink-true.html#9">Suspend Checker Thread</a>"  prio=10 tid=0x0097a008 nid=0x1d8 runnable <br>
+
+
+            
+</font><br>
+</body>
+</html>
