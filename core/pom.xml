@@ -27,6 +27,11 @@
             <artifactId>velocity</artifactId>
             <version>1.5</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.14.8</version>
+        </dependency>
     </dependencies>
     <build>
         <defaultGoal>install</defaultGoal>

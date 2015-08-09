@@ -30,6 +30,8 @@ public class Context {
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private final Configuration config = new Configuration("samurai");
     private final FileHistory fileHistory = new FileHistory(config);
+
+    private final LocalProcesses localProcesses = new LocalProcesses(config, fileHistory);
     private final CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
     ExecuteThread executeThread = new ExecuteThread();
     private final JLabel statusBar;
@@ -51,6 +53,10 @@ public class Context {
 
     public Configuration getConfig() {
         return this.config;
+    }
+
+    public LocalProcesses getLocalProcesses() {
+        return this.localProcesses;
     }
 
     public FileHistory getFileHistory() {

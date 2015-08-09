@@ -69,6 +69,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     private JMenuItem menuFileNewTab = new JMenuItem("menu.file.newTab");
     private JMenuItem menuFileOpen;
     private JMenu menuFileRecent;
+    private JMenu menuFileLocalProcesses;
     private JMenuItem menuFileClose = new JMenuItem("menu.file.close");
 
     private JMenuItem menuFileExit = new JMenuItem("menu.file.exit");
@@ -129,6 +130,9 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         context.getFileHistory().setFileHistoryListener(this);
         menuFileRecent = context.getFileHistory().getOpenRecentMenu();
         menuFileRecent.setText("menu.file.openRecent");
+        menuFileLocalProcesses = context.getLocalProcesses().getLocalProcessesMenu();
+        menuFileLocalProcesses.setText("menu.file.processes");
+        menuFileLocalProcesses.setEnabled(true);
 
         menuFileClose
                 .addActionListener(new ActionListener() {
@@ -251,6 +255,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         menuFile.add(menuFileNewTab);
         menuFile.add(menuFileOpen);
         menuFile.add(menuFileRecent);
+        menuFile.add(menuFileLocalProcesses);
         menuFile.addSeparator();
         menuFile.add(menuFileClose);
         if (!OSDetector.isMac()) {
