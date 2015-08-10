@@ -13,4 +13,3 @@ target/*
 core/target/*
 gui/target/*
 savedhtml
-core/savedhtml

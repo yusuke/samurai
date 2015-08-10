@@ -67,15 +67,15 @@ public class LocalProcesses {
             List<VM> currentVms = ProcessUtil.getVMs("localhost");
 
             for (int i = 0; i < localProcessesMenu.getItemCount(); i++) {
-                LocalProcessMenuItem item = (LocalProcessMenuItem)localProcessesMenu.getItem(i);
+                LocalProcessMenuItem item = (LocalProcessMenuItem) localProcessesMenu.getItem(i);
                 boolean found = false;
                 for (VM vm : currentVms) {
-                    if(item.getVm().getPid() == vm.getPid()){
+                    if (item.getVm().getPid() == vm.getPid()) {
                         found = true;
                         break;
                     }
                 }
-                if(!found){
+                if (!found) {
                     localProcessesMenu.remove(item);
                 }
 
@@ -84,13 +84,13 @@ public class LocalProcesses {
             for (VM vm : currentVms) {
                 boolean found = false;
                 for (int i = 0; i < localProcessesMenu.getItemCount(); i++) {
-                    LocalProcessMenuItem item = (LocalProcessMenuItem)localProcessesMenu.getItem(i);
+                    LocalProcessMenuItem item = (LocalProcessMenuItem) localProcessesMenu.getItem(i);
                     if (item.getVm().getPid() == vm.getPid()) {
                         found = true;
                         break;
                     }
                 }
-                if(!found){
+                if (!found) {
                     JMenuItem localProcess = new LocalProcessMenuItem(vm);
                     localProcess.setToolTipText(vm.getFullCommandLine());
                     localProcessesMenu.add(localProcess);
@@ -109,15 +109,24 @@ public class LocalProcesses {
             this.vm = vm;
             addActionListener(e -> {
                 try {
-                    Path path = Paths.get(String.valueOf(vm.getPid()));
-                    Files.write(path, ThreadDumpUtil.getThreadDump(vm.getPid()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                    fileHistory.open(path.toFile());
+                    try {
+                        for (int i = 0; i < 3; i++) {
+                            Path path = Paths.get(String.valueOf(vm.getPid()));
+                            Files.write(path, ThreadDumpUtil.getThreadDump(vm.getPid()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                            fileHistory.open(path.toFile());
+                            Thread.sleep(1000);
+                        }
+
+                    } catch (InterruptedException ignore) {
+
+                    }
                 } catch (AttachNotSupportedException | IOException e1) {
                     e1.printStackTrace();
                 }
             });
         }
-        public VM getVm(){
+
+        public VM getVm() {
             return vm;
         }
 
