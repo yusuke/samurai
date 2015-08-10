@@ -29,6 +29,7 @@ public class VM {
         this.pid = pid;
         if (fullCommandLine != null) {
             this.fullCommandLine = fullCommandLine;
+            fullCommandLine = fullCommandLine.replaceFirst("^com\\.intellij\\.rt\\.execution\\.application\\.AppMain ", "");
             this.fqcn = fullCommandLine.replaceFirst(" .*$", "");
         }
     }
