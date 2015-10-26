@@ -130,9 +130,12 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         context.getFileHistory().setFileHistoryListener(this);
         menuFileRecent = context.getFileHistory().getOpenRecentMenu();
         menuFileRecent.setText("menu.file.openRecent");
-        menuFileLocalProcesses = context.getLocalProcesses().getLocalProcessesMenu();
-        menuFileLocalProcesses.setText("menu.file.processes");
-        menuFileLocalProcesses.setEnabled(true);
+        LocalProcesses localProcesses = context.getLocalProcesses();
+        if(localProcesses != null) {
+            menuFileLocalProcesses = localProcesses.getLocalProcessesMenu();
+            menuFileLocalProcesses.setText("menu.file.processes");
+            menuFileLocalProcesses.setEnabled(true);
+        }
 
         menuFileClose
                 .addActionListener(new ActionListener() {
@@ -255,7 +258,9 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         menuFile.add(menuFileNewTab);
         menuFile.add(menuFileOpen);
         menuFile.add(menuFileRecent);
-        menuFile.add(menuFileLocalProcesses);
+        if(localProcesses != null) {
+            menuFile.add(menuFileLocalProcesses);
+        }
         menuFile.addSeparator();
         menuFile.add(menuFileClose);
         if (!OSDetector.isMac()) {

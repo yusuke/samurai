@@ -31,7 +31,7 @@ public class Context {
     private final Configuration config = new Configuration("samurai");
     private final FileHistory fileHistory = new FileHistory(config);
 
-    private final LocalProcesses localProcesses = new LocalProcesses(config, fileHistory);
+    private  LocalProcesses localProcesses = null;
     private final CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
     ExecuteThread executeThread = new ExecuteThread();
     private final JLabel statusBar;
@@ -44,6 +44,12 @@ public class Context {
         this.searchPanel = new SearchPanel(this);
         this.resources.inject(searchPanel);
         this.config.apply(searchPanel);
+        try {
+
+            this.localProcesses = new LocalProcesses(config, fileHistory);
+        }catch(java.lang.NoClassDefFoundError toolsJarNotFound){
+        }
+
         executeThread.start();
     }
 
