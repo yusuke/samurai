@@ -143,15 +143,23 @@ package samurai.core;
                     STATE.equals("in Object.wait()")) {
                 IS_IDLE = true;
             }else if (size() > 0) {
-                IS_IDLE= (getLine(0).getClassName().equals("java.lang.Object")
-                        && getLine(0).getMethodName().equals("wait")) ||
-                        (getLine(0).getClassName().equals("java.lang.Thread")
-                                && getLine(0).getMethodName().equals("sleep"));
+                StackLine line = getLine(0);
+                if(line.getLine().endsWith("TIMED_WAITING (sleeping)") && size() > 1){
+                    line = getLine(1);
+                }
+                IS_IDLE = isIdle(line);
             }else{
                 IS_IDLE = false;
             }
             isIdleAnalyzed = true;
         }
         return IS_IDLE;
+    }
+
+    private boolean isIdle(StackLine line){
+        return (line.getClassName().equals("java.lang.Object")
+            && line.getMethodName().equals("wait")) ||
+            (line.getClassName().equals("java.lang.Thread")
+                && line.getMethodName().equals("sleep"));
     }
 }
