@@ -124,7 +124,7 @@ public class Todos {
 
          @todo graph grid issue when scrolling
          @todo show thread id with JRockit + weblogic.Admin
-         @todo filcker on thread dump pane
+         @todo flicker on thread dump pane
          @todo execute thread doesn't sort schedules by time
 
          bugs done

@@ -129,7 +129,7 @@ $[ja:画面3　スレッドダンプタブの表示]$[en:fig. 3 &quot;Thread dum
 <p>$[ja:スレッドダンプタブをクリックすると、解析結果が表示されます。
 アイドル状態のスレッドは灰色で、ブロック(同期待ち)状態のスレッドは赤で表示されます。
 解析結果にはテーブル表示(画面4)/全スレッド表示(画面5)/時系列表示(画面6)の３通りの表示があります。  多くの場合はテーブル表示でスレッドの使用状況を確認し、時系列表示でスレッドの動きを確認することで解析を進めます。
-常に赤く表示されているスレッドや、全てのスレッドダンプにおいて同じ個所で停止しているスレッドは問題を抱えている可能性があります。]$[en:You can just click &quot;Thread dumps&quot; tab to see the analisys result.<br />
+常に赤く表示されているスレッドや、全てのスレッドダンプにおいて同じ個所で停止しているスレッドは問題を抱えている可能性があります。]$[en:You can just click &quot;Thread dumps&quot; tab to see the analysis result.<br />
 Samurai colors idle threads in gray, blocked threds in red and running threds in green.<br />
 There are three result views and Samurai shows &quot;Table view&quot; by default.<br>In many case you are just interested in the table view and the sequence view. Use the table view to decide which thread needs be inspected, the sequence view to understand the thread's behavior.<br />
 You should take care especially threds always in red.</li></ul>]</p>
@@ -145,7 +145,7 @@ $[ja:画面6　時系列表示]$[en:fig. 6 Sequence view]</p>
 
     <a name="gcAnalysis"><h2>$[ja:ヒープ使用状況の解析]$[en:Heap analysis View]</h2></a>
 <p>$[ja:Java は起動時に -verbose:gc というオプションをつけるとガベージコレクションを行った際にメッセージが標準エラー出力に記録されます。 メモリリークしていないか、ヒープが十分に確保されているかなどがこのメッセージからわかるのですが、文字で表現されているため解析が困難です。 侍にこのログを渡すと「メモリ」というタブが現れます。赤い線がガベージコレクション前の使用量、黄色い線がガベージコレクション後の使用量、グレーの線がコレクションに要した時間を表します。
-表示中のグラフは Ctrl+C (Macでは Cmd+C) でコピーすることができます。]$[en:Every JVM implimentation accepts &quot;-verbose:gc&quot; option which will show you the internal GC activity.<br />
+表示中のグラフは Ctrl+C (Macでは Cmd+C) でコピーすることができます。]$[en:Every JVM implementation accepts &quot;-verbose:gc&quot; option which will show you the internal GC activity.<br />
 This is necessary when you check memory leaks, or decide if heap is allocated enough although the plain gc log is very hard to analyze.<br />
 Samurai gives you a nice and understandable view of the GC logs.<br />
 Red line stands for the heap usage before a GC.<br />
