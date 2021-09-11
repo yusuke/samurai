@@ -18,7 +18,7 @@
 package samurai.remotedump;
 
 public class VM {
-    private int pid;
+    private final int pid;
     private String fqcn = "";
     private String fullCommandLine = "";
 

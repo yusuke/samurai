@@ -23,11 +23,11 @@ public class BEAFullThreadDump extends FullThreadDump {
     }
 
     /*package*/ boolean isThreadHeader(String line) {
-        return (line.startsWith("\"") || line.startsWith("Thread-")) && -1 != line.indexOf("prio");
+        return (line.startsWith("\"") || line.startsWith("Thread-")) && line.contains("prio");
     }
 
     /*package*/ boolean isThreadFooter(String line) {
-        return "".equals(line) || -1 != line.indexOf("}");
+        return "".equals(line) || line.contains("}");
     }
 
     /*package*/ boolean isThreadDumpContinuing(String line) {

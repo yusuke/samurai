@@ -31,8 +31,8 @@ public class SunStackLine extends StackLine {
 
     /*package*/ SunStackLine(String line) {
         super(line);
-        IS_WAITING_ON = -1 != getLine().indexOf("waiting on");
-        if (isLine() || -1 == getLine().indexOf("<")) {
+        IS_WAITING_ON = getLine().contains("waiting on");
+        if (isLine() || !getLine().contains("<")) {
             TARGET = "n/a";
         } else {
             TARGET = getLine().substring(getLine().indexOf("<"));

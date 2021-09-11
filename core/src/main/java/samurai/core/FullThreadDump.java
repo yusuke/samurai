@@ -18,18 +18,17 @@ package samurai.core;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 public abstract class FullThreadDump implements Serializable {
-    private List<ThreadDump> threadDumps;
-    private String header;
+    private final List<ThreadDump> threadDumps;
+    private final String header;
     private static final long serialVersionUID = 3698912680951716481L;
 
     public FullThreadDump(String header) {
         this.header = header;
-        threadDumps = new ArrayList<ThreadDump>();
+        threadDumps = new ArrayList<>();
     }
 
     /*package*/ void addThreadDump(ThreadDump threadDump) {
@@ -45,7 +44,7 @@ public abstract class FullThreadDump implements Serializable {
     }
 
     public String toString() {
-        StringBuffer toStringed = new StringBuffer(256);
+        StringBuilder toStringed = new StringBuilder(256);
         toStringed.append(this.header);
         for (ThreadDump threadDump :  threadDumps) {
             toStringed.append("\n").append(threadDump.toString());
@@ -57,10 +56,10 @@ public abstract class FullThreadDump implements Serializable {
 
     public ObjectLock[] getObjectLocks() {
         if(this.objectLocks == null){
-            List<ObjectLock> objectLockList = new ArrayList<ObjectLock>();
-            for (Iterator iter = threadDumps.iterator(); iter.hasNext();) {
-                SunThreadDump threadDump = (SunThreadDump) iter.next();
-                List theLockList = threadDump.getLockedLines();
+            List<ObjectLock> objectLockList = new ArrayList<>();
+            for (ThreadDump dump : threadDumps) {
+                SunThreadDump threadDump = (SunThreadDump) dump;
+                List<StackLine> theLockList = threadDump.getLockedLines();
                 if (0 != theLockList.size()) {
                     objectLockList.add(new ObjectLock(threadDump,
                             threadDump.getLockedLines()));
@@ -98,7 +97,7 @@ public abstract class FullThreadDump implements Serializable {
     /*package*/
     abstract boolean isThreadDumpContinuing(String line);
 
-    List<List<ThreadDump>> deadLockChains = new ArrayList<List<ThreadDump>>();
+    List<List<ThreadDump>> deadLockChains = new ArrayList<>();
     private boolean deadLocked = false;
 
     public boolean isDeadLocked() {
@@ -114,7 +113,7 @@ public abstract class FullThreadDump implements Serializable {
     }
 
     /*package*/ void finish() {
-        Map<String, ThreadDump> blockers = new HashMap<String, ThreadDump>();
+        Map<String, ThreadDump> blockers = new HashMap<>();
         for (ThreadDump threadDump : threadDumps) {
             List<StackLine> locked = threadDump.getLockedLines();
             if (null != locked) {
@@ -125,12 +124,12 @@ public abstract class FullThreadDump implements Serializable {
         }
 
 
-        Map<String, List<ThreadDump>> locked = new HashMap<String, List<ThreadDump>>();
+        Map<String, List<ThreadDump>> locked = new HashMap<>();
         for (ThreadDump threadDump : threadDumps) {
             if (threadDump.isBlocked()) {
                 List<ThreadDump> list = locked.get(threadDump.getBlockedObjectId());
                 if (null == list) {
-                    list = new ArrayList<ThreadDump>();
+                    list = new ArrayList<>();
                 }
                 list.add(threadDump);
                 locked.put(threadDump.getBlockedObjectId(), list);
@@ -142,7 +141,7 @@ public abstract class FullThreadDump implements Serializable {
             }
         }
 
-        List<ThreadDump> deadLockChain = new ArrayList<ThreadDump>();
+        List<ThreadDump> deadLockChain = new ArrayList<>();
         for (ThreadDump threadDump:this.threadDumps) {
             if (!threadDump.isDeadLocked() && threadDump.isBlocked()) {
                 deadLockChain.clear();
@@ -160,8 +159,8 @@ public abstract class FullThreadDump implements Serializable {
                         //deadLockDetected
                         deadLocked = true;
                         int deadLockBegin = deadLockChain.indexOf(threadDump);
-                        for (int j = 0; j < deadLockBegin; j++) {
-                            deadLockChain.remove(0);
+                        if (deadLockBegin > 0) {
+                            deadLockChain.subList(0, deadLockBegin).clear();
                         }
                         deadLockChains.add(deadLockChain);
                         for (ThreadDump deadLocked : deadLockChain) {

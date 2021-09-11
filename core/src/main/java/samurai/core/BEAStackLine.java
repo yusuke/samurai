@@ -24,8 +24,8 @@ public class BEAStackLine extends StackLine {
 
     /*package*/ BEAStackLine(String line) {
         super(line);
-        this.IS_TRYING_TO_GET_LOCK = super.isTryingToGetLock() || -1 != line.indexOf("-- Blocked trying to get lock");
-        this.IS_HOLDING_LOCK = super.isHoldingLock() || -1 != line.indexOf("^-- Holding lock:");
+        this.IS_TRYING_TO_GET_LOCK = super.isTryingToGetLock() || line.contains("-- Blocked trying to get lock");
+        this.IS_HOLDING_LOCK = super.isHoldingLock() || line.contains("^-- Holding lock:");
 
         if (super.isTryingToGetLock() || super.isHoldingLock()) {
             LOCKED_OBJECT_ID = super.getLockedObjectId();

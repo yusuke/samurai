@@ -20,9 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ThreadStatistic implements ThreadDumpRenderer, Serializable {
-    private List<FullThreadDump> fullThreadDumps = new ArrayList<FullThreadDump>();
+    private final List<FullThreadDump> fullThreadDumps = new ArrayList<>();
 
-    private List<ThreadDumpSequence> threadDumpsList = new ArrayList<ThreadDumpSequence>();
+    private List<ThreadDumpSequence> threadDumpsList = new ArrayList<>();
     private static final long serialVersionUID = 871320558326468787L;
 
     public ThreadStatistic() {
@@ -39,7 +39,7 @@ public class ThreadStatistic implements ThreadDumpRenderer, Serializable {
 
     public void onFullThreadDump(FullThreadDump fullThreadDump) {
         this.fullThreadDumps.add(fullThreadDump);
-        List<ThreadDumpSequence> newThreadDumpsList = new ArrayList<ThreadDumpSequence>(threadDumpsList.size());
+        List<ThreadDumpSequence> newThreadDumpsList = new ArrayList<>(threadDumpsList.size());
         for (int i = 0; i < fullThreadDump.getThreadCount(); i++) {
             for (ThreadDumpSequence sequence :  threadDumpsList) {
                 if (fullThreadDump.getThreadDump(i).getId().equals(sequence.getId())) {
@@ -52,10 +52,8 @@ public class ThreadStatistic implements ThreadDumpRenderer, Serializable {
     }
 
     public void onThreadDump(ThreadDump threadDump) {
-        int size = threadDumpsList.size();
         boolean found = false;
-        for (int i = 0; i < size; i++) {
-            ThreadDumpSequence dumps = threadDumpsList.get(i);
+        for (ThreadDumpSequence dumps : threadDumpsList) {
             if (dumps.getId().equals(threadDump.getId())) {
                 found = true;
                 dumps.addThreadDump(threadDump);
@@ -94,7 +92,7 @@ public class ThreadStatistic implements ThreadDumpRenderer, Serializable {
     }
 
     public ThreadDumpSequence[] getStackTracesAsArray() {
-        return threadDumpsList.toArray(new ThreadDumpSequence[threadDumpsList.size()]);
+        return threadDumpsList.toArray(new ThreadDumpSequence[0]);
     }
 
     public int getFullThreadDumpCount() {

@@ -19,10 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LockInfo implements java.io.Serializable{
-    private String className;
+    private final String className;
     private String owner;
     private String hash;
-    private List<String> waitingList = new ArrayList<String>();
+    private final List<String> waitingList = new ArrayList<>();
     private static final long serialVersionUID = 1110522952428062892L;
 
     public LockInfo(String className, String owner) {

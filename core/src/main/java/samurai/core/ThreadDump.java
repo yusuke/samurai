@@ -33,7 +33,6 @@ public abstract class ThreadDump implements Serializable {
     protected boolean IS_IDLE;
     protected boolean IS_DAEMON;
     protected boolean IS_BLOCKING;
-    private Pattern conditionCatchPtn = Pattern.compile("(?<= *)[^\"]+$");
     private final String CONDITION;
 
     public ThreadDump(String header) {
@@ -42,6 +41,7 @@ public abstract class ThreadDump implements Serializable {
         int headerBeginIndex = getHeader().indexOf("\"") + 1;
         int headerEndIndex = getHeader().indexOf("\"", headerBeginIndex);
         NAME = getHeader().substring(headerBeginIndex, headerEndIndex);
+        Pattern conditionCatchPtn = Pattern.compile("(?<= *)[^\"]+$");
         Matcher m = conditionCatchPtn.matcher(this.HEADER);
         //noinspection ResultOfMethodCallIgnored
         m.find();
@@ -149,14 +149,14 @@ public abstract class ThreadDump implements Serializable {
 
     public final boolean equals(Object obj) {
         boolean isEqual = false;
-        if (null != obj && obj instanceof ThreadDump) {
+        if (obj instanceof ThreadDump) {
             ThreadDump that = (ThreadDump) obj;
             if (that == this) {
                 isEqual = true;
             } else {
                 if (that.size() == this.size()) {
-                    List thatList = that.getStackLines();
-                    List thisList = this.getStackLines();
+                    List<StackLine> thatList = that.getStackLines();
+                    List<StackLine> thisList = this.getStackLines();
                     isEqual = true;
                     for (int i = 0; i < this.size(); i++) {
                         if (!thisList.get(i).equals(thatList.get(i))) {

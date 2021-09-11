@@ -25,7 +25,7 @@ import java.util.StringTokenizer;
 
 
 public class ThreadDumpExtractor {
-    private ThreadDumpRenderer renderer;
+    private final ThreadDumpRenderer renderer;
 
     public ThreadDumpExtractor(ThreadDumpRenderer renderer) {
         this.renderer = renderer;
@@ -50,19 +50,10 @@ public class ThreadDumpExtractor {
      * @throws IOException - If an I/O error occurs
      */
     public void analyze(InputStream is) throws IOException {
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new InputStreamReader(is));
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(is))) {
             String line;
             while (null != (line = reader.readLine())) {
                 analyzeLine(line);
-            }
-        } finally {
-            if (null != reader) {
-                try {
-                    reader.close();
-                } catch (IOException ignore) {
-                }
             }
         }
         finish();

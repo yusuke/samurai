@@ -53,7 +53,7 @@ public abstract class StackLine implements Serializable {
             METHOD_NAME = "n/a";
         }
 
-        IS_NATIVE_METHOD = -1 != line.indexOf("(Native Method");
+        IS_NATIVE_METHOD = line.contains("(Native Method");
 
         if (IS_LINE) {
             if (IS_NATIVE_METHOD) {
@@ -76,10 +76,7 @@ public abstract class StackLine implements Serializable {
         } else {
             int lineIndexBegin = line.lastIndexOf(":") + 1;
             int lineIndexEnd = line.lastIndexOf(")");
-            if (-1 != lineIndexBegin && -1 != lineIndexEnd) {
-//                System.out.println("line:"+line);
-//                System.out.println("begin:"+lineIndexBegin);
-//                System.out.println("end:"+lineIndexEnd);
+            if (-1 != lineIndexEnd) {
                 LINE_NUMBER = line.substring(lineIndexBegin, lineIndexEnd);
             } else {
                 LINE_NUMBER = "Unknown Source";
@@ -94,8 +91,8 @@ public abstract class StackLine implements Serializable {
             CLASS_NAME = "n/a";
         }
 
-        IS_TRYING_TO_GET_LOCK = -1 != line.indexOf("- waiting to lock");
-        IS_HOLDING_LOCK = -1 != line.indexOf("- locked");
+        IS_TRYING_TO_GET_LOCK = line.contains("- waiting to lock");
+        IS_HOLDING_LOCK = line.contains("- locked");
         if (IS_HOLDING_LOCK || IS_TRYING_TO_GET_LOCK) {
             LOCKED_OBJECT_ID = line.substring(line.indexOf("<") + 1, line.indexOf(">"));
             LOCKED_CLASS_NAME = line.substring(line.indexOf("(a ") + 3, line.indexOf(")"));
@@ -146,7 +143,7 @@ public abstract class StackLine implements Serializable {
     }
 
     public boolean equals(Object obj) {
-        if (null == obj || !(obj instanceof StackLine)) {
+        if (!(obj instanceof StackLine)) {
             return false;
         }
         StackLine that = (StackLine) obj;

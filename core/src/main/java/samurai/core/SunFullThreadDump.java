@@ -35,7 +35,7 @@ public class SunFullThreadDump extends FullThreadDump {
     }
 
     /*package*/ boolean isThreadHeader(String line) {
-        return line.startsWith("\"") && -1 != line.indexOf("prio");
+        return line.startsWith("\"") && line.contains("prio");
     }
 
     /*package*/ boolean isThreadFooter(String line) {

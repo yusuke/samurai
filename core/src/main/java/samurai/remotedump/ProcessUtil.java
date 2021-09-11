@@ -30,10 +30,10 @@ public class ProcessUtil {
         List<VM> vms = new ArrayList<>();
         HostIdentifier hi = new HostIdentifier(host);
         MonitoredHost mh = MonitoredHost.getMonitoredHost(hi);
-        Set jvms = mh.activeVms();
-        for (Object pidInteger : jvms) {
+        Set<Integer> jvms = mh.activeVms();
+        for (Integer pidInteger : jvms) {
             try {
-                int pid = (Integer) pidInteger;
+                int pid = pidInteger;
                 MonitoredVm mv = mh.getMonitoredVm(new VmIdentifier("//" + pid + "?mode=r"), 0);
                 StringMonitor sm = (StringMonitor) mv.findByName("sun.rt.javaCommand");
                 String fullCommandLine = "";
@@ -50,7 +50,7 @@ public class ProcessUtil {
 
     public static void main(String... args) throws URISyntaxException, MonitorException {
         List<VM> vms = getVMs("localhost");
-        vms.forEach(e -> System.out.println(String.format("%s %s", e.getPid(), e.getFqcn())));
+        vms.forEach(e -> System.out.printf("%s %s%n", e.getPid(), e.getFqcn()));
     }
 
 }

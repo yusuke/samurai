@@ -52,7 +52,7 @@ public class IBMThreadDump extends ThreadDump {
         return this.getHeaderParameter("sys_thread_t");
     }
     @Override public boolean isIdle(){
-        return !isBlocked() && -1 != getHeader().indexOf("state:CW");
+        return !isBlocked() && getHeader().contains("state:CW");
     }
 
 }

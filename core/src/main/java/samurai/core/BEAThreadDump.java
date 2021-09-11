@@ -47,11 +47,11 @@ public class BEAThreadDump extends ThreadDump {
 
         if (IS_WEBLOGIC_ADMIN) {
             //Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
-            List<String> statusList = new ArrayList<String>();
+            List<String> statusList = new ArrayList<>();
             String[] statusArray = getCondition().split(",");
             for (int i = 0; i < statusArray.length; i++) {
                 statusArray[i] = statusArray[i].trim();
-                if (-1 == statusArray[i].indexOf("=")) {
+                if (!statusArray[i].contains("=")) {
                     statusList.add(statusArray[i]);
                 }
             }
@@ -107,7 +107,7 @@ public class BEAThreadDump extends ThreadDump {
 
 
     private boolean isAriane() {
-        return !IS_WEBLOGIC_ADMIN && -1 != getCondition().indexOf("=");
+        return !IS_WEBLOGIC_ADMIN && getCondition().contains("=");
     }
 
     public boolean isDaemon() {

@@ -44,19 +44,26 @@ package samurai.core;
             state = getHeader().substring(stateBeginIndex).trim();
         }
 
-        if (state.equals("runnable")) {
-            this.STATE = RUNNABLE;
-        } else if (state.equals("waiting on monitor")) {
-            this.STATE = WAITING_ON_MONITOR;
-        } else if (state.equals("waiting for monitor entry")) {
-            this.STATE = WAITING_FOR_MONITOR_ENTRY;
-        } else if (state.equals("waiting on condition")) {
-            this.STATE = WAITING_ON_CONDITION;
-        } else if (state.equals("suspended")) {
-            this.STATE = SUSPENDED;
+        switch (state) {
+            case "runnable":
+                this.STATE = RUNNABLE;
+                break;
+            case "waiting on monitor":
+                this.STATE = WAITING_ON_MONITOR;
+                break;
+            case "waiting for monitor entry":
+                this.STATE = WAITING_FOR_MONITOR_ENTRY;
+                break;
+            case "waiting on condition":
+                this.STATE = WAITING_ON_CONDITION;
+                break;
+            case "suspended":
+                this.STATE = SUSPENDED;
 
-        } else {
-            this.STATE = state;
+                break;
+            default:
+                this.STATE = state;
+                break;
         }
 
         //calculate thread stack range
@@ -81,7 +88,7 @@ package samurai.core;
     }
 
     public String toString() {
-        StringBuffer toStringed = new StringBuffer(128);
+        StringBuilder toStringed = new StringBuilder(128);
         toStringed.append(getHeader());
         if (debug)
             System.out.println("sizetostring1:" + getStackLines().size());
@@ -93,7 +100,7 @@ package samurai.core;
             toStringed.append('\n').append(getStackLines().get(i));
         }
         if (debug)
-            System.out.println("sizetostring3:" + toStringed.toString());
+            System.out.println("sizetostring3:" + toStringed);
         return toStringed.toString();
     }
 

@@ -22,7 +22,7 @@ public class IBMLockInfos implements java.io.Serializable {
     public static final String HEADER = "1LKPOOLINFO    Monitor pool info:";
     public static final String FOOTER = "1LKOBJMONDUMP";
 
-    private List<LockInfo> lockInfoList = new ArrayList<LockInfo>();
+    private final List<LockInfo> lockInfoList = new ArrayList<>();
     private static final long serialVersionUID = -1934815474658577019L;
 
     /*package*/ IBMLockInfos(String header) {
@@ -38,7 +38,7 @@ public class IBMLockInfos implements java.io.Serializable {
     private LockInfo lastLockInfo = null;
 
     public void addLine(String line) {
-        if (-1 != line.indexOf(LOCK_INDICATOR)) {
+        if (line.contains(LOCK_INDICATOR)) {
             String className = line.substring(19, line.indexOf("@"));
             String hash = line.substring(line.indexOf("@") + 1, line.indexOf(":"));
             String owner = line.substring(line.indexOf(LOCK_INDICATOR) + LOCK_INDICATOR.length(), line.lastIndexOf(","));
@@ -46,7 +46,7 @@ public class IBMLockInfos implements java.io.Serializable {
             lastLockInfo.setHash(hash);
             lockInfoList.add(lastLockInfo);
         } else
-        if (line.startsWith(LOCK_INDICATOR0) && -1 != line.indexOf(": owner \"")) {
+        if (line.startsWith(LOCK_INDICATOR0) && line.contains(": owner \"")) {
             String className = line.substring(19, line.indexOf("@"));
             String hash = line.substring(line.indexOf("@") + 1, line.indexOf(":"));
             String owner = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
@@ -58,14 +58,13 @@ public class IBMLockInfos implements java.io.Serializable {
         } else
         if ((line.startsWith(WAITING_INDICATOR) || line.startsWith(WAITING_INDICATOR2)) && null != lastLockInfo) {
             lastLockInfo.addWaiter(line.substring(line.indexOf("(") + 1, line.indexOf(")")));
-        } else if (-1 != line.indexOf(MAPPING_INDICATOR)) {
+        } else if (line.contains(MAPPING_INDICATOR)) {
 //      2LKFLATMON         ident 0x02 "Thread-3" (0x284E48) ee 0x00284CC0
             String temporaryId = line.substring(MAPPING_INDICATOR.length(), line.indexOf(" ", MAPPING_INDICATOR.length()));
-            for (int i = 0; i < lockInfoList.size(); i++) {
-                LockInfo lockInfo = lockInfoList.get(i);
+            for (LockInfo lockInfo : lockInfoList) {
                 if (lockInfo.getOwner().equals(temporaryId)) {
                     String actualId = line.substring(line.indexOf("(") + 1, line.indexOf(")"));//)  line.lastIndexOf(" ")+1);
-                    lockInfoList.get(i).setOwner(actualId);
+                    lockInfo.setOwner(actualId);
                     break;
                 }
             }
@@ -99,7 +98,7 @@ public class IBMLockInfos implements java.io.Serializable {
     }
 
     public List<LockInfo> getLockedInfoListByThreadId(String threadId) {
-        List<LockInfo> found = new ArrayList<LockInfo>();
+        List<LockInfo> found = new ArrayList<>();
         for (LockInfo info : lockInfoList) {
             if (info.getOwner().equals(threadId)) {
                 found.add(info);
