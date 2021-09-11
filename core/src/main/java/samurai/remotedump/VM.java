@@ -17,13 +17,22 @@
  */
 package samurai.remotedump;
 
-import lombok.Data;
-
-@Data
 public class VM {
     private int pid;
     private String fqcn = "";
     private String fullCommandLine = "";
+
+    public int getPid() {
+        return pid;
+    }
+
+    public String getFqcn() {
+        return fqcn;
+    }
+
+    public String getFullCommandLine() {
+        return fullCommandLine;
+    }
 
     public VM(int pid, String fullCommandLine) {
         this.pid = pid;
