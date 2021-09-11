@@ -17,10 +17,10 @@ package samurai.core;
 
 public class BlockerExample {
     public static void main(String[] args) {
-        Thread thread1 = new AThread(args);
-        thread1.start();
-        Thread thread2 = new AThread(args);
-        thread2.start();
+        for (int i = 0; i < 10; i++) {
+            Thread thread = new AThread(args);
+            thread.start();
+        }
     }
 }
 
@@ -35,7 +35,7 @@ class AThread extends Thread {
         while (true) {
             synchronized (OBJECT) {
                 try {
-                    Thread.sleep(100000);
+                    Thread.sleep(100);
                 } catch (InterruptedException ignore) {
                 }
             }

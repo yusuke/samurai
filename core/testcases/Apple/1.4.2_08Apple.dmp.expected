@@ -112,11 +112,11 @@ td.0.6.isDaemon=false
 td.0.6.isDeadLocked=false
 td.0.6.isIdle=true
 
-#"VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable 
+#"VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable
 td.0.7.blockedObjectId=null
 td.0.7.blockerId=null
-td.0.7.condition=prio=5 tid=0x00506070 nid=0x1805400 runnable 
-td.0.7.header="VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable 
+td.0.7.condition=prio=5 tid=0x00506070 nid=0x1805400 runnable
+td.0.7.header="VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable
 td.0.7.id=0x00506070
 td.0.7.name=VM Thread
 td.0.7.isBlocked=false
@@ -125,11 +125,11 @@ td.0.7.isDaemon=false
 td.0.7.isDeadLocked=false
 td.0.7.isIdle=false
 
-#"VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition 
+#"VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition
 td.0.8.blockedObjectId=null
 td.0.8.blockerId=null
-td.0.8.condition=prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition 
-td.0.8.header="VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition 
+td.0.8.condition=prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition
+td.0.8.header="VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition
 td.0.8.id=0x005080b0
 td.0.8.name=VM Periodic Task Thread
 td.0.8.isBlocked=false
@@ -138,11 +138,11 @@ td.0.8.isDaemon=false
 td.0.8.isDeadLocked=false
 td.0.8.isIdle=false
 
-#"Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable 
+#"Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable
 td.0.9.blockedObjectId=null
 td.0.9.blockerId=null
-td.0.9.condition=prio=10 tid=0x00500e00 nid=0x1805000 runnable 
-td.0.9.header="Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable 
+td.0.9.condition=prio=10 tid=0x00500e00 nid=0x1805000 runnable
+td.0.9.header="Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable
 td.0.9.id=0x00500e00
 td.0.9.name=Exception Catcher Thread
 td.0.9.isBlocked=false
@@ -265,11 +265,11 @@ td.1.6.isDaemon=false
 td.1.6.isDeadLocked=false
 td.1.6.isIdle=true
 
-#"VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable 
+#"VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable
 td.1.7.blockedObjectId=null
 td.1.7.blockerId=null
-td.1.7.condition=prio=5 tid=0x00506070 nid=0x1805400 runnable 
-td.1.7.header="VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable 
+td.1.7.condition=prio=5 tid=0x00506070 nid=0x1805400 runnable
+td.1.7.header="VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable
 td.1.7.id=0x00506070
 td.1.7.name=VM Thread
 td.1.7.isBlocked=false
@@ -278,11 +278,11 @@ td.1.7.isDaemon=false
 td.1.7.isDeadLocked=false
 td.1.7.isIdle=false
 
-#"VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition 
+#"VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition
 td.1.8.blockedObjectId=null
 td.1.8.blockerId=null
-td.1.8.condition=prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition 
-td.1.8.header="VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition 
+td.1.8.condition=prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition
+td.1.8.header="VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition
 td.1.8.id=0x005080b0
 td.1.8.name=VM Periodic Task Thread
 td.1.8.isBlocked=false
@@ -291,11 +291,11 @@ td.1.8.isDaemon=false
 td.1.8.isDeadLocked=false
 td.1.8.isIdle=false
 
-#"Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable 
+#"Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable
 td.1.9.blockedObjectId=null
 td.1.9.blockerId=null
-td.1.9.condition=prio=10 tid=0x00500e00 nid=0x1805000 runnable 
-td.1.9.header="Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable 
+td.1.9.condition=prio=10 tid=0x00500e00 nid=0x1805000 runnable
+td.1.9.header="Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable
 td.1.9.id=0x00500e00
 td.1.9.name=Exception Catcher Thread
 td.1.9.isBlocked=false
@@ -418,11 +418,11 @@ td.2.6.isDaemon=false
 td.2.6.isDeadLocked=false
 td.2.6.isIdle=true
 
-#"VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable 
+#"VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable
 td.2.7.blockedObjectId=null
 td.2.7.blockerId=null
-td.2.7.condition=prio=5 tid=0x00506070 nid=0x1805400 runnable 
-td.2.7.header="VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable 
+td.2.7.condition=prio=5 tid=0x00506070 nid=0x1805400 runnable
+td.2.7.header="VM Thread" prio=5 tid=0x00506070 nid=0x1805400 runnable
 td.2.7.id=0x00506070
 td.2.7.name=VM Thread
 td.2.7.isBlocked=false
@@ -431,11 +431,11 @@ td.2.7.isDaemon=false
 td.2.7.isDeadLocked=false
 td.2.7.isIdle=false
 
-#"VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition 
+#"VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition
 td.2.8.blockedObjectId=null
 td.2.8.blockerId=null
-td.2.8.condition=prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition 
-td.2.8.header="VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition 
+td.2.8.condition=prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition
+td.2.8.header="VM Periodic Task Thread" prio=10 tid=0x005080b0 nid=0x1817000 waiting on condition
 td.2.8.id=0x005080b0
 td.2.8.name=VM Periodic Task Thread
 td.2.8.isBlocked=false
@@ -444,11 +444,11 @@ td.2.8.isDaemon=false
 td.2.8.isDeadLocked=false
 td.2.8.isIdle=false
 
-#"Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable 
+#"Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable
 td.2.9.blockedObjectId=null
 td.2.9.blockerId=null
-td.2.9.condition=prio=10 tid=0x00500e00 nid=0x1805000 runnable 
-td.2.9.header="Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable 
+td.2.9.condition=prio=10 tid=0x00500e00 nid=0x1805000 runnable
+td.2.9.header="Exception Catcher Thread" prio=10 tid=0x00500e00 nid=0x1805000 runnable
 td.2.9.id=0x00500e00
 td.2.9.name=Exception Catcher Thread
 td.2.9.isBlocked=false

@@ -446,11 +446,11 @@ td.0.22.isDaemon=false
 td.0.22.isDeadLocked=false
 td.0.22.isIdle=true
 
-#"VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+#"VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable
 td.0.23.blockedObjectId=null
 td.0.23.blockerId=null
-td.0.23.condition=prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
-td.0.23.header="VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+td.0.23.condition=prio=10 tid=0x00aa65c8 nid=0x17a8 runnable
+td.0.23.header="VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable
 td.0.23.id=0x00aa65c8
 td.0.23.name=VM Thread
 td.0.23.isBlocked=false
@@ -459,11 +459,11 @@ td.0.23.isDaemon=false
 td.0.23.isDeadLocked=false
 td.0.23.isIdle=false
 
-#"VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+#"VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition
 td.0.24.blockedObjectId=null
 td.0.24.blockerId=null
-td.0.24.condition=prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
-td.0.24.header="VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+td.0.24.condition=prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition
+td.0.24.header="VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition
 td.0.24.id=0x00aba0a8
 td.0.24.name=VM Periodic Task Thread
 td.0.24.isBlocked=false
@@ -920,11 +920,11 @@ td.1.22.isDaemon=false
 td.1.22.isDeadLocked=false
 td.1.22.isIdle=true
 
-#"VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+#"VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable
 td.1.23.blockedObjectId=null
 td.1.23.blockerId=null
-td.1.23.condition=prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
-td.1.23.header="VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+td.1.23.condition=prio=10 tid=0x00aa65c8 nid=0x17a8 runnable
+td.1.23.header="VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable
 td.1.23.id=0x00aa65c8
 td.1.23.name=VM Thread
 td.1.23.isBlocked=false
@@ -933,11 +933,11 @@ td.1.23.isDaemon=false
 td.1.23.isDeadLocked=false
 td.1.23.isIdle=false
 
-#"VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+#"VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition
 td.1.24.blockedObjectId=null
 td.1.24.blockerId=null
-td.1.24.condition=prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
-td.1.24.header="VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+td.1.24.condition=prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition
+td.1.24.header="VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition
 td.1.24.id=0x00aba0a8
 td.1.24.name=VM Periodic Task Thread
 td.1.24.isBlocked=false
@@ -1403,11 +1403,11 @@ td.2.22.isDaemon=false
 td.2.22.isDeadLocked=false
 td.2.22.isIdle=true
 
-#"VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+#"VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable
 td.2.23.blockedObjectId=null
 td.2.23.blockerId=null
-td.2.23.condition=prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
-td.2.23.header="VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable 
+td.2.23.condition=prio=10 tid=0x00aa65c8 nid=0x17a8 runnable
+td.2.23.header="VM Thread" prio=10 tid=0x00aa65c8 nid=0x17a8 runnable
 td.2.23.id=0x00aa65c8
 td.2.23.name=VM Thread
 td.2.23.isBlocked=false
@@ -1416,11 +1416,11 @@ td.2.23.isDaemon=false
 td.2.23.isDeadLocked=false
 td.2.23.isIdle=false
 
-#"VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+#"VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition
 td.2.24.blockedObjectId=null
 td.2.24.blockerId=null
-td.2.24.condition=prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
-td.2.24.header="VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition 
+td.2.24.condition=prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition
+td.2.24.header="VM Periodic Task Thread" prio=10 tid=0x00aba0a8 nid=0x16ac waiting on condition
 td.2.24.id=0x00aba0a8
 td.2.24.name=VM Periodic Task Thread
 td.2.24.isBlocked=false

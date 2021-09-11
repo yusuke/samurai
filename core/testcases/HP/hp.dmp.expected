@@ -1309,11 +1309,11 @@ td.0.71.isDaemon=false
 td.0.71.isDeadLocked=false
 td.0.71.isIdle=true
 
-#"VM Thread" prio=7 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable 
+#"VM Thread" prio=7 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable
 td.0.72.blockedObjectId=null
 td.0.72.blockerId=null
-td.0.72.condition=prio=7 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable 
-td.0.72.header="VM Thread" prio=7 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable 
+td.0.72.condition=prio=7 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable
+td.0.72.header="VM Thread" prio=7 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable
 td.0.72.id=0x0018cdb8
 td.0.72.name=VM Thread
 td.0.72.isBlocked=false
@@ -1322,11 +1322,11 @@ td.0.72.isDaemon=false
 td.0.72.isDeadLocked=false
 td.0.72.isIdle=false
 
-#"VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor 
+#"VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor
 td.0.73.blockedObjectId=null
 td.0.73.blockerId=null
-td.0.73.condition=prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor 
-td.0.73.header="VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor 
+td.0.73.condition=prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor
+td.0.73.header="VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor
 td.0.73.id=0x0018ce38
 td.0.73.name=VM Periodic Task Thread
 td.0.73.isBlocked=false
@@ -1335,11 +1335,11 @@ td.0.73.isDaemon=false
 td.0.73.isDeadLocked=false
 td.0.73.isIdle=false
 
-#"Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable 
+#"Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable
 td.0.74.blockedObjectId=null
 td.0.74.blockerId=null
-td.0.74.condition=prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable 
-td.0.74.header="Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable 
+td.0.74.condition=prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable
+td.0.74.header="Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable
 td.0.74.id=0x0018ceb8
 td.0.74.name=Suspend Checker Thread
 td.0.74.isBlocked=false
@@ -2659,11 +2659,11 @@ td.1.71.isDaemon=false
 td.1.71.isDeadLocked=false
 td.1.71.isIdle=true
 
-#"VM Thread" prio=8 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable 
+#"VM Thread" prio=8 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable
 td.1.72.blockedObjectId=null
 td.1.72.blockerId=null
-td.1.72.condition=prio=8 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable 
-td.1.72.header="VM Thread" prio=8 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable 
+td.1.72.condition=prio=8 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable
+td.1.72.header="VM Thread" prio=8 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable
 td.1.72.id=0x0018cdb8
 td.1.72.name=VM Thread
 td.1.72.isBlocked=false
@@ -2672,11 +2672,11 @@ td.1.72.isDaemon=false
 td.1.72.isDeadLocked=false
 td.1.72.isIdle=false
 
-#"VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor 
+#"VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor
 td.1.73.blockedObjectId=null
 td.1.73.blockerId=null
-td.1.73.condition=prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor 
-td.1.73.header="VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor 
+td.1.73.condition=prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor
+td.1.73.header="VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor
 td.1.73.id=0x0018ce38
 td.1.73.name=VM Periodic Task Thread
 td.1.73.isBlocked=false
@@ -2685,11 +2685,11 @@ td.1.73.isDaemon=false
 td.1.73.isDeadLocked=false
 td.1.73.isIdle=false
 
-#"Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable 
+#"Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable
 td.1.74.blockedObjectId=null
 td.1.74.blockerId=null
-td.1.74.condition=prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable 
-td.1.74.header="Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable 
+td.1.74.condition=prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable
+td.1.74.header="Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable
 td.1.74.id=0x0018ceb8
 td.1.74.name=Suspend Checker Thread
 td.1.74.isBlocked=false
@@ -4009,11 +4009,11 @@ td.2.71.isDaemon=false
 td.2.71.isDeadLocked=false
 td.2.71.isIdle=true
 
-#"VM Thread" prio=7 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable 
+#"VM Thread" prio=7 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable
 td.2.72.blockedObjectId=null
 td.2.72.blockerId=null
-td.2.72.condition=prio=7 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable 
-td.2.72.header="VM Thread" prio=7 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable 
+td.2.72.condition=prio=7 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable
+td.2.72.header="VM Thread" prio=7 tid=0x0018cdb8 nid=3 lwp_id=3573007 runnable
 td.2.72.id=0x0018cdb8
 td.2.72.name=VM Thread
 td.2.72.isBlocked=false
@@ -4022,11 +4022,11 @@ td.2.72.isDaemon=false
 td.2.72.isDeadLocked=false
 td.2.72.isIdle=false
 
-#"VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor 
+#"VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor
 td.2.73.blockedObjectId=null
 td.2.73.blockerId=null
-td.2.73.condition=prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor 
-td.2.73.header="VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor 
+td.2.73.condition=prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor
+td.2.73.header="VM Periodic Task Thread" prio=8 tid=0x0018ce38 nid=6 lwp_id=3573010 waiting on monitor
 td.2.73.id=0x0018ce38
 td.2.73.name=VM Periodic Task Thread
 td.2.73.isBlocked=false
@@ -4035,11 +4035,11 @@ td.2.73.isDaemon=false
 td.2.73.isDeadLocked=false
 td.2.73.isIdle=false
 
-#"Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable 
+#"Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable
 td.2.74.blockedObjectId=null
 td.2.74.blockerId=null
-td.2.74.condition=prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable 
-td.2.74.header="Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable 
+td.2.74.condition=prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable
+td.2.74.header="Suspend Checker Thread" prio=10 tid=0x0018ceb8 nid=7 lwp_id=3573011 runnable
 td.2.74.id=0x0018ceb8
 td.2.74.name=Suspend Checker Thread
 td.2.74.isBlocked=false

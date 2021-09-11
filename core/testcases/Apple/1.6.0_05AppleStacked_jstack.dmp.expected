@@ -173,13 +173,13 @@ td.0.10.isBlocked=false
 td.0.10.isBlocking=false
 td.0.10.isDaemon=false
 td.0.10.isDeadLocked=false
-td.0.10.isIdle=false
+td.0.10.isIdle=true
 
-#"VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable 
+#"VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable
 td.0.11.blockedObjectId=null
 td.0.11.blockerId=null
-td.0.11.condition=prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable 
-td.0.11.header="VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable 
+td.0.11.condition=prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable
+td.0.11.header="VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable
 td.0.11.id=0x0000000101820800
 td.0.11.name=VM Thread
 td.0.11.isBlocked=false
@@ -188,11 +188,11 @@ td.0.11.isDaemon=false
 td.0.11.isDeadLocked=false
 td.0.11.isIdle=false
 
-#"VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition 
+#"VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition
 td.0.12.blockedObjectId=null
 td.0.12.blockerId=null
-td.0.12.condition=prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition 
-td.0.12.header="VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition 
+td.0.12.condition=prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition
+td.0.12.header="VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition
 td.0.12.id=0x0000000101846000
 td.0.12.name=VM Periodic Task Thread
 td.0.12.isBlocked=false
@@ -201,12 +201,12 @@ td.0.12.isDaemon=false
 td.0.12.isDeadLocked=false
 td.0.12.isIdle=false
 
-#"Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable 
+#"Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable
 #JNI global references: 588
 td.0.13.blockedObjectId=null
 td.0.13.blockerId=null
-td.0.13.condition=prio=10 tid=0x0000000101802000 nid=0x100504000 runnable 
-td.0.13.header="Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable 
+td.0.13.condition=prio=10 tid=0x0000000101802000 nid=0x100504000 runnable
+td.0.13.header="Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable
 td.0.13.id=0x0000000101802000
 td.0.13.name=Exception Catcher Thread
 td.0.13.isBlocked=false
@@ -390,13 +390,13 @@ td.1.10.isBlocked=false
 td.1.10.isBlocking=false
 td.1.10.isDaemon=false
 td.1.10.isDeadLocked=false
-td.1.10.isIdle=false
+td.1.10.isIdle=true
 
-#"VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable 
+#"VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable
 td.1.11.blockedObjectId=null
 td.1.11.blockerId=null
-td.1.11.condition=prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable 
-td.1.11.header="VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable 
+td.1.11.condition=prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable
+td.1.11.header="VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable
 td.1.11.id=0x0000000101820800
 td.1.11.name=VM Thread
 td.1.11.isBlocked=false
@@ -405,11 +405,11 @@ td.1.11.isDaemon=false
 td.1.11.isDeadLocked=false
 td.1.11.isIdle=false
 
-#"VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition 
+#"VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition
 td.1.12.blockedObjectId=null
 td.1.12.blockerId=null
-td.1.12.condition=prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition 
-td.1.12.header="VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition 
+td.1.12.condition=prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition
+td.1.12.header="VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition
 td.1.12.id=0x0000000101846000
 td.1.12.name=VM Periodic Task Thread
 td.1.12.isBlocked=false
@@ -418,12 +418,12 @@ td.1.12.isDaemon=false
 td.1.12.isDeadLocked=false
 td.1.12.isIdle=false
 
-#"Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable 
+#"Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable
 #JNI global references: 588
 td.1.13.blockedObjectId=null
 td.1.13.blockerId=null
-td.1.13.condition=prio=10 tid=0x0000000101802000 nid=0x100504000 runnable 
-td.1.13.header="Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable 
+td.1.13.condition=prio=10 tid=0x0000000101802000 nid=0x100504000 runnable
+td.1.13.header="Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable
 td.1.13.id=0x0000000101802000
 td.1.13.name=Exception Catcher Thread
 td.1.13.isBlocked=false
@@ -607,13 +607,13 @@ td.2.10.isBlocked=false
 td.2.10.isBlocking=false
 td.2.10.isDaemon=false
 td.2.10.isDeadLocked=false
-td.2.10.isIdle=false
+td.2.10.isIdle=true
 
-#"VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable 
+#"VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable
 td.2.11.blockedObjectId=null
 td.2.11.blockerId=null
-td.2.11.condition=prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable 
-td.2.11.header="VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable 
+td.2.11.condition=prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable
+td.2.11.header="VM Thread" prio=9 tid=0x0000000101820800 nid=0x1007a7000 runnable
 td.2.11.id=0x0000000101820800
 td.2.11.name=VM Thread
 td.2.11.isBlocked=false
@@ -622,11 +622,11 @@ td.2.11.isDaemon=false
 td.2.11.isDeadLocked=false
 td.2.11.isIdle=false
 
-#"VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition 
+#"VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition
 td.2.12.blockedObjectId=null
 td.2.12.blockerId=null
-td.2.12.condition=prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition 
-td.2.12.header="VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition 
+td.2.12.condition=prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition
+td.2.12.header="VM Periodic Task Thread" prio=10 tid=0x0000000101846000 nid=0x1100f7000 waiting on condition
 td.2.12.id=0x0000000101846000
 td.2.12.name=VM Periodic Task Thread
 td.2.12.isBlocked=false
@@ -635,12 +635,12 @@ td.2.12.isDaemon=false
 td.2.12.isDeadLocked=false
 td.2.12.isIdle=false
 
-#"Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable 
+#"Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable
 #JNI global references: 588
 td.2.13.blockedObjectId=null
 td.2.13.blockerId=null
-td.2.13.condition=prio=10 tid=0x0000000101802000 nid=0x100504000 runnable 
-td.2.13.header="Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable 
+td.2.13.condition=prio=10 tid=0x0000000101802000 nid=0x100504000 runnable
+td.2.13.header="Exception Catcher Thread" prio=10 tid=0x0000000101802000 nid=0x100504000 runnable
 td.2.13.id=0x0000000101802000
 td.2.13.name=Exception Catcher Thread
 td.2.13.isBlocked=false

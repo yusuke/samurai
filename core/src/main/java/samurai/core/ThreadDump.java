@@ -23,7 +23,7 @@ public abstract class ThreadDump implements Serializable {
     private List<StackLine> lockList = null;
     private StackLine blockedLine = null;
 
-    private final List<StackLine> stackLines = new ArrayList<StackLine>();
+    private final List<StackLine> stackLines = new ArrayList<>();
     private final String HEADER;
     private static final long serialVersionUID = -7984606567041592064L;
     private final String NAME;
@@ -37,14 +37,15 @@ public abstract class ThreadDump implements Serializable {
     private final String CONDITION;
 
     public ThreadDump(String header) {
-        this.HEADER = header;
+        this.HEADER = header.trim();
         //extract thread name
         int headerBeginIndex = getHeader().indexOf("\"") + 1;
         int headerEndIndex = getHeader().indexOf("\"", headerBeginIndex);
         NAME = getHeader().substring(headerBeginIndex, headerEndIndex);
         Matcher m = conditionCatchPtn.matcher(this.HEADER);
+        //noinspection ResultOfMethodCallIgnored
         m.find();
-        this.CONDITION = m.group();
+        this.CONDITION = m.group().trim();
     }
 
     public final String getHeader() {
@@ -75,7 +76,7 @@ public abstract class ThreadDump implements Serializable {
         if (stackLine.isHoldingLock()) {
 //            this.IS_BLOCKING = true;
             if (null == lockList) {
-                lockList = new ArrayList<StackLine>();
+                lockList = new ArrayList<>();
             }
             lockList.add(stackLine);
         }

@@ -790,11 +790,11 @@ td.0.39.isDaemon=false
 td.0.39.isDeadLocked=false
 td.0.39.isIdle=true
 
-#"VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable 
+#"VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable
 td.0.40.blockedObjectId=null
 td.0.40.blockerId=null
-td.0.40.condition=prio=5 tid=0x00a3b730 nid=0x146c runnable 
-td.0.40.header="VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable 
+td.0.40.condition=prio=5 tid=0x00a3b730 nid=0x146c runnable
+td.0.40.header="VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable
 td.0.40.id=0x00a3b730
 td.0.40.name=VM Thread
 td.0.40.isBlocked=false
@@ -803,11 +803,11 @@ td.0.40.isDaemon=false
 td.0.40.isDeadLocked=false
 td.0.40.isIdle=false
 
-#"VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
+#"VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
 td.0.41.blockedObjectId=null
 td.0.41.blockerId=null
-td.0.41.condition=prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
-td.0.41.header="VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
+td.0.41.condition=prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
+td.0.41.header="VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
 td.0.41.id=0x00a3ef60
 td.0.41.name=VM Periodic Task Thread
 td.0.41.isBlocked=false
@@ -816,12 +816,12 @@ td.0.41.isDaemon=false
 td.0.41.isDeadLocked=false
 td.0.41.isIdle=false
 
-#"Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable 
+#"Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable
 #THREAD DUMP from JVM taken at 'Thu May 04 22:27:36 2006'
 td.0.42.blockedObjectId=null
 td.0.42.blockerId=null
-td.0.42.condition=prio=10 tid=0x00a4cd90 nid=0x72c runnable 
-td.0.42.header="Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable 
+td.0.42.condition=prio=10 tid=0x00a4cd90 nid=0x72c runnable
+td.0.42.header="Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable
 td.0.42.id=0x00a4cd90
 td.0.42.name=Suspend Checker Thread
 td.0.42.isBlocked=false
@@ -1698,11 +1698,11 @@ td.1.43.isDaemon=false
 td.1.43.isDeadLocked=false
 td.1.43.isIdle=true
 
-#"VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable 
+#"VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable
 td.1.44.blockedObjectId=null
 td.1.44.blockerId=null
-td.1.44.condition=prio=5 tid=0x00a3b730 nid=0x146c runnable 
-td.1.44.header="VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable 
+td.1.44.condition=prio=5 tid=0x00a3b730 nid=0x146c runnable
+td.1.44.header="VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable
 td.1.44.id=0x00a3b730
 td.1.44.name=VM Thread
 td.1.44.isBlocked=false
@@ -1711,11 +1711,11 @@ td.1.44.isDaemon=false
 td.1.44.isDeadLocked=false
 td.1.44.isIdle=false
 
-#"VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
+#"VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
 td.1.45.blockedObjectId=null
 td.1.45.blockerId=null
-td.1.45.condition=prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
-td.1.45.header="VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
+td.1.45.condition=prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
+td.1.45.header="VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
 td.1.45.id=0x00a3ef60
 td.1.45.name=VM Periodic Task Thread
 td.1.45.isBlocked=false
@@ -1724,12 +1724,12 @@ td.1.45.isDaemon=false
 td.1.45.isDeadLocked=false
 td.1.45.isIdle=false
 
-#"Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable 
+#"Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable
 #THREAD DUMP from JVM taken at 'Thu May 04 22:27:40 2006'
 td.1.46.blockedObjectId=null
 td.1.46.blockerId=null
-td.1.46.condition=prio=10 tid=0x00a4cd90 nid=0x72c runnable 
-td.1.46.header="Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable 
+td.1.46.condition=prio=10 tid=0x00a4cd90 nid=0x72c runnable
+td.1.46.header="Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable
 td.1.46.id=0x00a4cd90
 td.1.46.name=Suspend Checker Thread
 td.1.46.isBlocked=false
@@ -2606,11 +2606,11 @@ td.2.43.isDaemon=false
 td.2.43.isDeadLocked=false
 td.2.43.isIdle=true
 
-#"VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable 
+#"VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable
 td.2.44.blockedObjectId=null
 td.2.44.blockerId=null
-td.2.44.condition=prio=5 tid=0x00a3b730 nid=0x146c runnable 
-td.2.44.header="VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable 
+td.2.44.condition=prio=5 tid=0x00a3b730 nid=0x146c runnable
+td.2.44.header="VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable
 td.2.44.id=0x00a3b730
 td.2.44.name=VM Thread
 td.2.44.isBlocked=false
@@ -2619,11 +2619,11 @@ td.2.44.isDaemon=false
 td.2.44.isDeadLocked=false
 td.2.44.isIdle=false
 
-#"VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
+#"VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
 td.2.45.blockedObjectId=null
 td.2.45.blockerId=null
-td.2.45.condition=prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
-td.2.45.header="VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
+td.2.45.condition=prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
+td.2.45.header="VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
 td.2.45.id=0x00a3ef60
 td.2.45.name=VM Periodic Task Thread
 td.2.45.isBlocked=false
@@ -2632,12 +2632,12 @@ td.2.45.isDaemon=false
 td.2.45.isDeadLocked=false
 td.2.45.isIdle=false
 
-#"Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable 
+#"Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable
 #THREAD DUMP from JVM taken at 'Thu May 04 22:27:44 2006'
 td.2.46.blockedObjectId=null
 td.2.46.blockerId=null
-td.2.46.condition=prio=10 tid=0x00a4cd90 nid=0x72c runnable 
-td.2.46.header="Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable 
+td.2.46.condition=prio=10 tid=0x00a4cd90 nid=0x72c runnable
+td.2.46.header="Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable
 td.2.46.id=0x00a4cd90
 td.2.46.name=Suspend Checker Thread
 td.2.46.isBlocked=false
@@ -3514,11 +3514,11 @@ td.3.43.isDaemon=false
 td.3.43.isDeadLocked=false
 td.3.43.isIdle=true
 
-#"VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable 
+#"VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable
 td.3.44.blockedObjectId=null
 td.3.44.blockerId=null
-td.3.44.condition=prio=5 tid=0x00a3b730 nid=0x146c runnable 
-td.3.44.header="VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable 
+td.3.44.condition=prio=5 tid=0x00a3b730 nid=0x146c runnable
+td.3.44.header="VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable
 td.3.44.id=0x00a3b730
 td.3.44.name=VM Thread
 td.3.44.isBlocked=false
@@ -3527,11 +3527,11 @@ td.3.44.isDaemon=false
 td.3.44.isDeadLocked=false
 td.3.44.isIdle=false
 
-#"VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
+#"VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
 td.3.45.blockedObjectId=null
 td.3.45.blockerId=null
-td.3.45.condition=prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
-td.3.45.header="VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
+td.3.45.condition=prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
+td.3.45.header="VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
 td.3.45.id=0x00a3ef60
 td.3.45.name=VM Periodic Task Thread
 td.3.45.isBlocked=false
@@ -3540,12 +3540,12 @@ td.3.45.isDaemon=false
 td.3.45.isDeadLocked=false
 td.3.45.isIdle=false
 
-#"Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable 
+#"Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable
 #THREAD DUMP from JVM taken at 'Thu May 04 22:27:47 2006'
 td.3.46.blockedObjectId=null
 td.3.46.blockerId=null
-td.3.46.condition=prio=10 tid=0x00a4cd90 nid=0x72c runnable 
-td.3.46.header="Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable 
+td.3.46.condition=prio=10 tid=0x00a4cd90 nid=0x72c runnable
+td.3.46.header="Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable
 td.3.46.id=0x00a4cd90
 td.3.46.name=Suspend Checker Thread
 td.3.46.isBlocked=false
@@ -4422,11 +4422,11 @@ td.4.43.isDaemon=false
 td.4.43.isDeadLocked=false
 td.4.43.isIdle=true
 
-#"VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable 
+#"VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable
 td.4.44.blockedObjectId=null
 td.4.44.blockerId=null
-td.4.44.condition=prio=5 tid=0x00a3b730 nid=0x146c runnable 
-td.4.44.header="VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable 
+td.4.44.condition=prio=5 tid=0x00a3b730 nid=0x146c runnable
+td.4.44.header="VM Thread" prio=5 tid=0x00a3b730 nid=0x146c runnable
 td.4.44.id=0x00a3b730
 td.4.44.name=VM Thread
 td.4.44.isBlocked=false
@@ -4435,11 +4435,11 @@ td.4.44.isDaemon=false
 td.4.44.isDeadLocked=false
 td.4.44.isIdle=false
 
-#"VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
+#"VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
 td.4.45.blockedObjectId=null
 td.4.45.blockerId=null
-td.4.45.condition=prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
-td.4.45.header="VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition 
+td.4.45.condition=prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
+td.4.45.header="VM Periodic Task Thread" prio=10 tid=0x00a3ef60 nid=0x14d8 waiting on condition
 td.4.45.id=0x00a3ef60
 td.4.45.name=VM Periodic Task Thread
 td.4.45.isBlocked=false
@@ -4448,12 +4448,12 @@ td.4.45.isDaemon=false
 td.4.45.isDeadLocked=false
 td.4.45.isIdle=false
 
-#"Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable 
+#"Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable
 #�o�b�` �W���u��I�����܂��� (Y/N)? ^C
 td.4.46.blockedObjectId=null
 td.4.46.blockerId=null
-td.4.46.condition=prio=10 tid=0x00a4cd90 nid=0x72c runnable 
-td.4.46.header="Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable 
+td.4.46.condition=prio=10 tid=0x00a4cd90 nid=0x72c runnable
+td.4.46.header="Suspend Checker Thread" prio=10 tid=0x00a4cd90 nid=0x72c runnable
 td.4.46.id=0x00a4cd90
 td.4.46.name=Suspend Checker Thread
 td.4.46.isBlocked=false
