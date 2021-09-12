@@ -32,7 +32,7 @@ public class CSVParser implements LineGraphDataSourceParser {
         if (null == lineGraphs) {
             labels = line.split(",");
             lineGraphs = new ArrayList<LineGraph>(labels.length);
-            for(String label:labels){
+            for (String label : labels) {
                 lineGraphs.add(renderer.addLineGraph(label, new String[]{label}));
             }
         } else {
@@ -47,7 +47,7 @@ public class CSVParser implements LineGraphDataSourceParser {
                     datas[i] = 0d;
                 }
             }
-            for(int i=0;i<labels.length;i++){
+            for (int i = 0; i < labels.length; i++) {
                 lineGraphs.get(i).addValues(new double[]{datas[i]});
             }
         }

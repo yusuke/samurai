@@ -82,8 +82,8 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     private JMenu menuHelp = new JMenu("menu.help");
     private JMenuItem menuHelpAbout = new JMenuItem("menu.help.about");
     public AboutSamuraiDialog dialog = new AboutSamuraiDialog(this);
-    private TileTabPanel<SamuraiPanel> tab = new TileTabPanel<SamuraiPanel>(true){
-        protected void selectedIndexChanged(int index){
+    private TileTabPanel<SamuraiPanel> tab = new TileTabPanel<SamuraiPanel>(true) {
+        protected void selectedIndexChanged(int index) {
             setSelectedEncoding(getSelectedComponent().getEncoding());
         }
     };
@@ -123,7 +123,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         menuFileRecent = context.getFileHistory().getOpenRecentMenu();
         menuFileRecent.setText("menu.file.openRecent");
         LocalProcesses localProcesses = context.getLocalProcesses();
-        if(localProcesses != null) {
+        if (localProcesses != null) {
             menuFileLocalProcesses = localProcesses.getLocalProcessesMenu();
             menuFileLocalProcesses.setText("menu.file.processes");
             menuFileLocalProcesses.setEnabled(true);
@@ -250,7 +250,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         menuFile.add(menuFileNewTab);
         menuFile.add(menuFileOpen);
         menuFile.add(menuFileRecent);
-        if(localProcesses != null) {
+        if (localProcesses != null) {
             menuFile.add(menuFileLocalProcesses);
         }
         menuFile.addSeparator();
@@ -279,10 +279,10 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         menuView.addSeparator();
         menuView.add(menuViewEncoding);
         String[] encodings = context.getConfig().getString("encodings").split(",");
-        for(String encoding : encodings){
-            if("-".equals(encoding)){
+        for (String encoding : encodings) {
+            if ("-".equals(encoding)) {
                 menuViewEncoding.addSeparator();
-            }else{
+            } else {
                 EncodingMenuItem item = new EncodingMenuItem(encoding);
                 menuViewEncoding.add(item);
                 item.addActionListener(new EncodingMenuItemActionListener());
@@ -480,9 +480,10 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         }
         tab.setSelectedIndex(selected);
     }
+
     private void clearBuffer() {
         SamuraiPanel selected = tab.getSelectedComponent();
-        if(!selected.isEmpty()){
+        if (!selected.isEmpty()) {
             selected.clearBuffer();
         }
 
@@ -913,7 +914,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         }
     }
 
-//    static GUIResourceBundle resource = GUIResourceBundle.getInstance("encoding-display-names");
+    //    static GUIResourceBundle resource = GUIResourceBundle.getInstance("encoding-display-names");
     class EncodingMenuItem extends JCheckBoxMenuItem {
         String encoding;
 
@@ -921,14 +922,17 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             super(encoding);
             this.encoding = encoding;
         }
-        public String getEncoding(){
+
+        public String getEncoding() {
             return encoding;
         }
-        public String toString(){
-           return encoding;
+
+        public String toString() {
+            return encoding;
         }
     }
-    class EncodingMenuItemActionListener implements ActionListener{
+
+    class EncodingMenuItemActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             EncodingMenuItem item = (EncodingMenuItem) e.getSource();
             item.setSelected(true);

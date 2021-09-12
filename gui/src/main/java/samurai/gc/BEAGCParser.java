@@ -44,7 +44,7 @@ public class BEAGCParser implements LineGraphDataSourceParser {
         if (line.startsWith("[memory ] ")) {
             try {
                 if (null == lineGraph) {
-                    lineGraph = renderer.addLineGraph(resources.getMessage("GraphPanel.memory"),new String[]{resources.getMessage("GraphPanel.time") + "(ms)",
+                    lineGraph = renderer.addLineGraph(resources.getMessage("GraphPanel.memory"), new String[]{resources.getMessage("GraphPanel.time") + "(ms)",
                             resources.getMessage("GraphPanel.memoryBeforeGC"),
                             resources.getMessage("GraphPanel.memoryAfterGC")});
                     lineGraph.setColorAt(0, Color.GRAY);

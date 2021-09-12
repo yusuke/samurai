@@ -44,6 +44,7 @@ public class LogWatcher extends Thread {
     public LogWatcher() {
         this(System.getProperty("file.encoding"));
     }
+
     public LogWatcher(String encoding) {
         super.setName("LogWatcher Thread");
         this.setDaemon(true);

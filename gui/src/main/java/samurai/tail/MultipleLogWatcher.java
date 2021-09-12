@@ -26,7 +26,7 @@ public class MultipleLogWatcher implements LogMonitor {
     private List<LogMonitor> logMonitors = new ArrayList<LogMonitor>();
     private String encoding;
 
-    public MultipleLogWatcher(File[] files,String encoding) {
+    public MultipleLogWatcher(File[] files, String encoding) {
         this.files = new ArrayList<File>(files.length);
         for (int i = 0; i < files.length; i++) {
             this.files.add(files[i]);

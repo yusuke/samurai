@@ -39,7 +39,7 @@ public class IBMGCParser implements LineGraphDataSourceParser {
         try {
             if (line.startsWith("  <GC(") && -1 != (freedIndex = line.indexOf("): freed"))) {
                 if (!labelSet) {
-                    lineGraph = renderer.addLineGraph(resources.getMessage("GraphPanel.memory"),new String[]{resources.getMessage("GraphPanel.time") + "(ms)",
+                    lineGraph = renderer.addLineGraph(resources.getMessage("GraphPanel.memory"), new String[]{resources.getMessage("GraphPanel.time") + "(ms)",
                             resources.getMessage("GraphPanel.heapFreed"),
                             resources.getMessage("GraphPanel.heapAfterGCbytes")});
                     labelSet = true;

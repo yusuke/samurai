@@ -16,6 +16,7 @@
 package samurai.gc;
 
 import samurai.util.LineGraphDataSourceParser;
+
 public class GCParser implements LineGraphDataSourceParser {
     private LineGraphDataSourceParser[] gcParsers = new LineGraphDataSourceParser[]{new BEAGCParser(), new SunGCParser(), new IBMGCParser()};
     private LineGraphDataSourceParser finalParser = null;

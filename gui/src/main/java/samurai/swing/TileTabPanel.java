@@ -359,7 +359,8 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
             // do nothing
         }
     }
-    protected void selectedIndexChanged(int index){
+
+    protected void selectedIndexChanged(int index) {
     }
 
     public int getSelectedIndex() {
@@ -467,7 +468,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         menuHorizontal.setEnabled(layout != TILE_HORIZONTAL);
     }
 
-    public void setDividerSize(int size){
+    public void setDividerSize(int size) {
         this.tilePanel.setDeviderSize(size);
     }
 

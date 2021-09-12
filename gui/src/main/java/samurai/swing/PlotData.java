@@ -139,7 +139,7 @@ import java.text.DecimalFormat;
         this.labels[index] = label;
     }
 
-    /*package*/ void addValues(double x,double[] newDatas) {
+    /*package*/ void addValues(double x, double[] newDatas) {
         if (!initialized) {
             throw new IllegalStateException("not yet initialized");
         }
@@ -158,13 +158,14 @@ import java.text.DecimalFormat;
             if (minY[i] > newDatas[i]) {
                 minY[i] = newDatas[i];
             }
-            this.datas[i].get(chunkIndex) [leftover] = newDatas[i];
+            this.datas[i].get(chunkIndex)[leftover] = newDatas[i];
         }
-        this.datas[xDataIndex].get(chunkIndex) [leftover] = x;
+        this.datas[xDataIndex].get(chunkIndex)[leftover] = x;
         size++;
     }
+
     /*package*/ void addValues(double[] newDatas) {
-        addValues(size,newDatas);
+        addValues(size, newDatas);
     }
 
     private final Color[] DEFAULT_COLORS = new Color[]{
@@ -191,12 +192,13 @@ import java.text.DecimalFormat;
         }
         this.visible[index] = newVisible;
     }
+
     private Color background = Color.BLACK;
     private Color gridColor = new Color(0, 70, 0);
     private final int GRID_INTERVAL = 10;
     private DecimalFormat format = new DecimalFormat("####0.0#############################");
 
-    public void drawGraph(GraphCanvas c, int x, int y, int width, int height,int scroll) {
+    public void drawGraph(GraphCanvas c, int x, int y, int width, int height, int scroll) {
         int maxY = y + height;
         int maxX = x + width;
         c.setColor(background);
@@ -211,19 +213,19 @@ import java.text.DecimalFormat;
                         c.setColor(getColorAt(i));
                         int index;
                         int drawWidth;
-                        if(width >= size()){
+                        if (width >= size()) {
                             drawWidth = size();
                             index = size() - 1;
-                        }else{
+                        } else {
                             drawWidth = width;
                             index = scroll + width - 1;
-                            if(index > size()){
+                            if (index > size()) {
                                 index = size() - 1;
                             }
                         }
                         int drawX = width - drawWidth;
-                        int lastY = maxY - (int) ((double) height / getMaxAt(i) * getValueAt(i, index - drawWidth+1));
-                        for (int j = index - drawWidth+2; j < index; j++) {
+                        int lastY = maxY - (int) ((double) height / getMaxAt(i) * getValueAt(i, index - drawWidth + 1));
+                        for (int j = index - drawWidth + 2; j < index; j++) {
 //                        for (int j = --index; j >= 0; j--) {
                             int drawY = maxY - (int) ((double) height / getMaxAt(i) * getValueAt(i, j));
                             c.drawLine(drawX, lastY, drawX + 1, drawY);

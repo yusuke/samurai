@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class GraphPanel extends LogRenderer implements ClipBoardOperationListener , LineGraphRenderer{
+public class GraphPanel extends LogRenderer implements ClipBoardOperationListener, LineGraphRenderer {
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
     List<LineGraphPanel> graphs = new ArrayList<LineGraphPanel>(1);
     private Context context;
@@ -43,16 +43,16 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
         this.add(tileTabPanel, BorderLayout.CENTER);
     }
 
-    public LineGraph addLineGraph(String title,String[] labels){
+    public LineGraph addLineGraph(String title, String[] labels) {
         LineGraphPanel lineGraphPanel = new LineGraphPanel();
         lineGraphPanel.setLabels(labels);
         context.getConfig().applyLocation("PlotSettingDialog.location", lineGraphPanel.plotSetting);
         context.getConfig().apply(lineGraphPanel.plotSetting);
         resources.inject(lineGraphPanel.plotSetting);
-        tileTabPanel.addComponent(title,lineGraphPanel);
-        if(isCSV){
+        tileTabPanel.addComponent(title, lineGraphPanel);
+        if (isCSV) {
             showMe(resources.getMessage("GraphPanel.csv"));
-        }else{
+        } else {
             showMe(resources.getMessage("GraphPanel.memory"));
         }
 
@@ -71,8 +71,9 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
             gcParser.parse(line, this);
         }
     }
-    public void clearBuffer(){
-        while(tileTabPanel.getComponentSize() > 0){
+
+    public void clearBuffer() {
+        while (tileTabPanel.getComponentSize() > 0) {
             tileTabPanel.removeComponentAt(0);
         }
         hideMe();
@@ -87,9 +88,9 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
             isCSV = false;
             gcParser = new GCParser();
         }
-        invokeLater(new Runnable(){
-            public void run(){
-                while(tileTabPanel.getComponentSize() > 0){
+        invokeLater(new Runnable() {
+            public void run() {
+                while (tileTabPanel.getComponentSize() > 0) {
                     tileTabPanel.removeComponentAt(0);
                 }
                 for (LineGraphPanel graphPanel : graphs) {

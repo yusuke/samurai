@@ -451,7 +451,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                                         ioe.printStackTrace();
                                         SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum(), progressBar.getMaximum()));
                                         context.setTemporaryStatus(ioe.getMessage());
-                                    }finally{
+                                    } finally {
                                         context.invokeLater(new Task() {
                                             public void execute() {
                                                 progressBar.setVisible(false);
@@ -582,54 +582,54 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
 
     public void changeBunttonFeel() {
         invokeLater(new Runnable() {
-            public void run() {
-                int selected = filter.getFullThreadIndex();
-                if (0 == statistic.getFullThreadDumpCount()) {
-                    showThreadList.setEnabled(false);
-                    buttonPrevious.setEnabled(false);
-                    buttonNext.setEnabled(false);
-                } else {
-                    showThreadList.setEnabled(true);
-                    if (filter.getMode().equals(Constants.MODE_FULL)) {
-                        buttonPrevious.setEnabled(!(selected == 0));
-                        buttonNext.setEnabled(!(statistic.getFullThreadDumpCount() - 1 == selected));
-                    } else {
-                        buttonPrevious.setEnabled(Constants.MODE_SEQUENCE.equals(filter.getMode()));
-                        buttonNext.setEnabled(Constants.MODE_SEQUENCE.equals(filter.getMode()));
-                    }
-                }
-                if (null != threadList && threadList.length != 0) {
-                    if (filter.getMode().equals(Constants.MODE_FULL)) {
-                    } else if (filter.getMode().equals(Constants.MODE_SEQUENCE)) {
-                        for (int i = 0; i < threadList.length; i++) {
-                            if (filter.getThreadId().equals(threadList[i].getId())) {
-                                showThreadList.setSelectedIndex(i);
-                                break;
+                        public void run() {
+                            int selected = filter.getFullThreadIndex();
+                            if (0 == statistic.getFullThreadDumpCount()) {
+                                showThreadList.setEnabled(false);
+                                buttonPrevious.setEnabled(false);
+                                buttonNext.setEnabled(false);
+                            } else {
+                                showThreadList.setEnabled(true);
+                                if (filter.getMode().equals(Constants.MODE_FULL)) {
+                                    buttonPrevious.setEnabled(!(selected == 0));
+                                    buttonNext.setEnabled(!(statistic.getFullThreadDumpCount() - 1 == selected));
+                                } else {
+                                    buttonPrevious.setEnabled(Constants.MODE_SEQUENCE.equals(filter.getMode()));
+                                    buttonNext.setEnabled(Constants.MODE_SEQUENCE.equals(filter.getMode()));
+                                }
                             }
+                            if (null != threadList && threadList.length != 0) {
+                                if (filter.getMode().equals(Constants.MODE_FULL)) {
+                                } else if (filter.getMode().equals(Constants.MODE_SEQUENCE)) {
+                                    for (int i = 0; i < threadList.length; i++) {
+                                        if (filter.getThreadId().equals(threadList[i].getId())) {
+                                            showThreadList.setSelectedIndex(i);
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                            if (Constants.MODE_FULL.equals(filter.getMode())) {
+                                showThreadList.setSelectedIndices(new int[0]);
+                                threadDumpStatus.setText(filter.getFullThreadIndex() + 1 + "/" + statistic.getFullThreadDumpCount());
+                                tableButton.setSelected(false);
+                                fullButton.setSelected(true);
+                                sequenceButton.setSelected(false);
+                            } else if (Constants.MODE_TABLE.equals(filter.getMode())) {
+                                showThreadList.setSelectedIndices(new int[0]);
+                                threadDumpStatus.setText("");
+                                tableButton.setSelected(true);
+                                fullButton.setSelected(false);
+                                sequenceButton.setSelected(false);
+                            } else if (Constants.MODE_SEQUENCE.equals(filter.getMode())) {
+                                threadDumpStatus.setText(statistic.getStackTracesById(filter.getThreadId()).getName());
+                                tableButton.setSelected(false);
+                                fullButton.setSelected(false);
+                                sequenceButton.setSelected(true);
+                            }
+                            showThreadList.repaint();
                         }
                     }
-                }
-                if (Constants.MODE_FULL.equals(filter.getMode())) {
-                    showThreadList.setSelectedIndices(new int[0]);
-                    threadDumpStatus.setText(filter.getFullThreadIndex() + 1 + "/" + statistic.getFullThreadDumpCount());
-                    tableButton.setSelected(false);
-                    fullButton.setSelected(true);
-                    sequenceButton.setSelected(false);
-                } else if (Constants.MODE_TABLE.equals(filter.getMode())) {
-                    showThreadList.setSelectedIndices(new int[0]);
-                    threadDumpStatus.setText("");
-                    tableButton.setSelected(true);
-                    fullButton.setSelected(false);
-                    sequenceButton.setSelected(false);
-                } else if (Constants.MODE_SEQUENCE.equals(filter.getMode())) {
-                    threadDumpStatus.setText(statistic.getStackTracesById(filter.getThreadId()).getName());
-                    tableButton.setSelected(false);
-                    fullButton.setSelected(false);
-                    sequenceButton.setSelected(true);
-                }
-                showThreadList.repaint();
-            }
-        }
         );
     }
 
@@ -696,7 +696,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         analyzer.finish();
     }
 
-    public synchronized void clearBuffer(){
+    public synchronized void clearBuffer() {
         init();
         analyzer = new ThreadDumpExtractor(statistic);
         hideMe();

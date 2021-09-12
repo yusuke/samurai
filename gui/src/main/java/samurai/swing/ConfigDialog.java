@@ -16,7 +16,7 @@
 package samurai.swing;
 
 public class ConfigDialog extends javax.swing.JDialog {
-//    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
+    //    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
     public javax.swing.JButton okButton = new javax.swing.JButton();
     public javax.swing.JButton cancelButton = new javax.swing.JButton();
     public javax.swing.JTabbedPane jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -41,7 +41,7 @@ public class ConfigDialog extends javax.swing.JDialog {
     public javax.swing.JComboBox config_dumpFontFamily = new javax.swing.JComboBox();
     public javax.swing.JComboBox config_dumpFontSize = new javax.swing.JComboBox();
 
-//  public JPanel searchConfigPanel = new JPanel();
+    //  public JPanel searchConfigPanel = new JPanel();
 //  public JCheckBox config_useRegexp = new JCheckBox();
     //  public JCheckBox config_ignoreCase = new JCheckBox();
     public javax.swing.JLabel jLabel1 = new javax.swing.JLabel();

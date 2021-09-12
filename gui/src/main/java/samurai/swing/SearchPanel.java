@@ -62,20 +62,20 @@ public class SearchPanel extends JPanel {
         config_searchText.setPreferredSize(new Dimension(150, 20));
         config_searchText.setMaximumSize(new Dimension(1500, 20));
         config_searchText.addFocusListener(new FocusListener() {
-            public void focusLost(FocusEvent e) {
-                JRootPane rootPane = getRootPane();
-                if (null != rootPane) {
-                    rootPane.setDefaultButton(null);
-                }
-            }
+                                               public void focusLost(FocusEvent e) {
+                                                   JRootPane rootPane = getRootPane();
+                                                   if (null != rootPane) {
+                                                       rootPane.setDefaultButton(null);
+                                                   }
+                                               }
 
-            public void focusGained(FocusEvent e) {
-                JRootPane rootPane = getRootPane();
-                if (null != rootPane) {
-                    rootPane.setDefaultButton(btnNext);
-                }
-            }
-        }
+                                               public void focusGained(FocusEvent e) {
+                                                   JRootPane rootPane = getRootPane();
+                                                   if (null != rootPane) {
+                                                       rootPane.setDefaultButton(btnNext);
+                                                   }
+                                               }
+                                           }
         );
         this.setLayout(new javax.swing.BoxLayout(this, javax.swing.BoxLayout.X_AXIS));
         btnHide.setBorder(new EmptyBorder(0, 0, 0, 0));

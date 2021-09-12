@@ -97,7 +97,7 @@ import java.util.List;
             } else {
                 divider.setCursor(Cursor.getPredefinedCursor(Cursor.N_RESIZE_CURSOR));
             }
-            add(divider, getDividerConstraints(i*2+1));
+            add(divider, getDividerConstraints(i * 2 + 1));
         }
 
         validate();
@@ -203,14 +203,14 @@ import java.util.List;
 
     private List<GridBagConstraints> constraints = new ArrayList<GridBagConstraints>(3);
 
-    private GridBagConstraints getDividerConstraints(int grid){
+    private GridBagConstraints getDividerConstraints(int grid) {
         GridBagConstraints dividerConstraint = new GridBagConstraints();
         dividerConstraint.weightx = 0;
         dividerConstraint.weighty = 0;
-        if(horizontal){
+        if (horizontal) {
             dividerConstraint.gridx = grid;
             dividerConstraint.fill = GridBagConstraints.VERTICAL;
-        }else{
+        } else {
             dividerConstraint.gridy = grid;
             dividerConstraint.fill = GridBagConstraints.HORIZONTAL;
         }
@@ -363,25 +363,25 @@ import java.util.List;
     public void removeTileAt(int index) {
         //remove the divider next to the specified component
         if (components.size() > 1) {
-            if(index == 0){
+            if (index == 0) {
                 remove(dividers.remove(0));
-            }else{
-                remove(dividers.remove(index -1));
+            } else {
+                remove(dividers.remove(index - 1));
             }
         }
         remove(tiles.remove(index));
         constraints.remove(index);
         components.remove(index);
-        for(int i=index;i<components.size();i++){
+        for (int i = index; i < components.size(); i++) {
             GridBagConstraints gbc = constraints.get(i);
-            if(horizontal){
+            if (horizontal) {
                 gbc.gridx = i * 2;
-            }else{
+            } else {
                 gbc.gridy = i * 2;
             }
             add(tiles.get(i), gbc);
             if (i > 0) {
-                add(dividers.get(i-1), getDividerConstraints(i * 2 - 1));
+                add(dividers.get(i - 1), getDividerConstraints(i * 2 - 1));
             }
         }
         if (this.selectedIndex >= this.getTileCount()) {

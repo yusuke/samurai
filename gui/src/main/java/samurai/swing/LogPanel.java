@@ -36,7 +36,7 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
     private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
     JScrollPane jScrollPane1 = new JScrollPane();
     public JTextArea textArea = new JTextArea();
-//    public UnlimitedTextArea textArea = new UnlimitedTextArea();
+    //    public UnlimitedTextArea textArea = new UnlimitedTextArea();
     JScrollBar verticalScrollBar = jScrollPane1.getVerticalScrollBar();
 
     public LogPanel(SamuraiPanel samuraiPanel) {
@@ -85,7 +85,8 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
 //    buffer.delete(0, buffer.length());
         initBuffer();
     }
-     public void clearBuffer(){
+
+    public void clearBuffer() {
         textArea.setText("");
     }
 

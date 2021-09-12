@@ -95,7 +95,8 @@ public final class FileHistory {
             addHistory(files[i]);
         }
     }
-    public void clearHistory(){
+
+    public void clearHistory() {
         files.clear();
     }
 
@@ -147,13 +148,15 @@ public final class FileHistory {
     }
 
     private boolean cleanOrphans = false;
-    public void enableCleaningOrphans(){
+
+    public void enableCleaningOrphans() {
         this.cleanOrphans = true;
     }
-    public void disableCleaningOrphans(){
+
+    public void disableCleaningOrphans() {
         this.cleanOrphans = false;
     }
- 
+
     private void cleanOrphans() {
         if (cleanOrphans) {
             for (int i = 0; i < files.size(); i++) {

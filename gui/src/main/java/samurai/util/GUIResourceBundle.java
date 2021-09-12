@@ -89,7 +89,7 @@ public class GUIResourceBundle extends ResourceBundle {
     private static String getCallerPackage() {
         String callerClass = new Throwable().getStackTrace()[2].getClassName();
         return callerClass.substring(0,
-                callerClass.lastIndexOf(".")).replaceAll("\\.","/");
+                callerClass.lastIndexOf(".")).replaceAll("\\.", "/");
     }
 
     /*package*/ GUIResourceBundle(String resourceName, String packageName) {
@@ -105,15 +105,16 @@ public class GUIResourceBundle extends ResourceBundle {
         try {
             props.load(is);
         } catch (NullPointerException npe) {
-            throw new MissingResourceException("Message resource not foundn:"+location,packageName,resourceName);
+            throw new MissingResourceException("Message resource not foundn:" + location, packageName, resourceName);
         } catch (IOException ioe) {
-            throw new MissingResourceException("Message resource not found:"+location,packageName,resourceName);
-        }finally{
-            try{
+            throw new MissingResourceException("Message resource not found:" + location, packageName, resourceName);
+        } finally {
+            try {
                 if (null != is) {
                     is.close();
                 }
-            }catch(IOException ignore){}
+            } catch (IOException ignore) {
+            }
         }
     }
 
@@ -166,10 +167,10 @@ public class GUIResourceBundle extends ResourceBundle {
             System.exit(-1);
         }
         File[] javaFiles = specifiedDir.listFiles(new FileFilter() {
-            public boolean accept(File file) {
-                return file.getName().endsWith(".java");
-            }
-        }
+                                                      public boolean accept(File file) {
+                                                          return file.getName().endsWith(".java");
+                                                      }
+                                                  }
         );
         for (File javaFile : javaFiles) {
             System.out.println("processing:" + javaFile);
@@ -202,8 +203,7 @@ public class GUIResourceBundle extends ResourceBundle {
                             line = line.replaceFirst("\"\\)", "*\"");
 
 //              line = line.replaceAll("resources.getMessage(\"\"", "(\"*");
-                        } else
-                        if (commaIndex > parenthesIndex && -1 != parenthesIndex) {
+                        } else if (commaIndex > parenthesIndex && -1 != parenthesIndex) {
 //              line = line.replaceFirst("resources.getMessage\\(\"","\"*");
 //              line = line.replaceFirst("\"\\)","\"");
                             line = line.replaceFirst("resources.getMessage\\(\"", "\"*");
@@ -232,8 +232,10 @@ public class GUIResourceBundle extends ResourceBundle {
        import javax.swing.JCheckBox;
        import javax.swing.JComponent;
     */
+
     /**
      * Inject localized message resources.<br>
+     *
      * @param obj Object to be injected.
      */
     public void inject(Object obj) {
@@ -256,7 +258,7 @@ public class GUIResourceBundle extends ResourceBundle {
                     inject(theObject);
                 } else if (theObject instanceof JComponent) {
                     JComponent component = (JComponent) theObject;
-                    for(Component innerComponent : component.getComponents()){
+                    for (Component innerComponent : component.getComponents()) {
                         inject(innerComponent);
                     }
                     if (null != component.getToolTipText() && !"".equals(component.getToolTipText())) {
@@ -288,6 +290,7 @@ public class GUIResourceBundle extends ResourceBundle {
             }
         }
     }
+
     private String getLocalizedMessage(String key) {
         if (null != key && key.length() > 2 && key.startsWith("*") && key.endsWith("*")) {
             return getMessage(key.substring(1, key.length() - 1));

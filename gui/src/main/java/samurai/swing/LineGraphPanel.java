@@ -37,7 +37,7 @@ import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 
-public class LineGraphPanel extends JPanel implements ClipBoardOperationListener, LineGraph{
+public class LineGraphPanel extends JPanel implements ClipBoardOperationListener, LineGraph {
     BorderLayout borderLayout1 = new BorderLayout();
     JScrollBar scrollBar = new JScrollBar();
     JPanel panel = new JPanel() {
@@ -74,8 +74,9 @@ public class LineGraphPanel extends JPanel implements ClipBoardOperationListener
         rightMost();
         repaint();
     }
-    public void addValues(double x,double[] values) {
-        this.plotData.addValues(x,values);
+
+    public void addValues(double x, double[] values) {
+        this.plotData.addValues(x, values);
         adjustScrollBar();
         rightMost();
         repaint();
@@ -129,7 +130,7 @@ public class LineGraphPanel extends JPanel implements ClipBoardOperationListener
     private void draw(Graphics g1, Rectangle bounds) {
         GraphCanvas c = new LineGraphCanvas(g1);
 
-        plotData.drawGraph(c,bounds.x,bounds.y,bounds.width,bounds.height,scrollBar.getValue());
+        plotData.drawGraph(c, bounds.x, bounds.y, bounds.width, bounds.height, scrollBar.getValue());
         adjustScrollBar();
 
     }
@@ -157,11 +158,11 @@ public class LineGraphPanel extends JPanel implements ClipBoardOperationListener
             g.drawString(str, x, y);
         }
 
-        public int getFontHeight(){
+        public int getFontHeight() {
             return getFontMetrics(g.getFont()).getHeight();
         }
 
-        public int getStringWidth(String str){
+        public int getStringWidth(String str) {
             return getFontMetrics(g.getFont()).stringWidth(str) - 5;
         }
     }

@@ -139,37 +139,40 @@ public class SunGCParser implements LineGraphDataSourceParser {
         }
         return false;
     }
-    private class HeapGraph{
+
+    private class HeapGraph {
         double maxSize = 0;
         Pattern pattern;
         LineGraph lineGraph;
         boolean parseGCtime;
-        HeapGraph(Pattern pattern,LineGraph lineGraph,boolean parseGCtime){
+
+        HeapGraph(Pattern pattern, LineGraph lineGraph, boolean parseGCtime) {
             this.pattern = pattern;
             this.lineGraph = lineGraph;
             this.parseGCtime = parseGCtime;
-            if(parseGCtime){
+            if (parseGCtime) {
                 lineGraph.setColorAt(0, Color.GRAY);
                 lineGraph.setColorAt(1, Color.RED);
                 lineGraph.setColorAt(2, Color.YELLOW);
-            }else{
+            } else {
                 lineGraph.setColorAt(0, Color.RED);
                 lineGraph.setColorAt(1, Color.YELLOW);
             }
         }
-        void parse(String line){
+
+        void parse(String line) {
             Matcher matcher = pattern.matcher(line);
-            if(matcher.find()){
+            if (matcher.find()) {
                 String found = matcher.group();
 
                 double currentSize = extract(found, heapSizePtn);
                 if (maxSize < currentSize) {
                     maxSize = currentSize;
-                    if(pattern == permGCPtn){
+                    if (pattern == permGCPtn) {
                         lineGraph.setYMax(0, maxSize);
                         lineGraph.setYMax(1, maxSize);
 
-                    }else{
+                    } else {
                         lineGraph.setYMax(1, maxSize);
                         lineGraph.setYMax(2, maxSize);
                     }
@@ -179,7 +182,7 @@ public class SunGCParser implements LineGraphDataSourceParser {
                 if (parseGCtime) {
                     double timeSpent;
                     Matcher timeSpentMatcher = timeSpentPtn.matcher(found);
-                    if(pattern == oldGCPtn || !timeSpentMatcher.find()){
+                    if (pattern == oldGCPtn || !timeSpentMatcher.find()) {
                         timeSpentMatcher = timeSpentPtn.matcher(line);
                         timeSpentMatcher.find();
                         timeSpent = Double.parseDouble(timeSpentMatcher.group());
@@ -205,19 +208,19 @@ public class SunGCParser implements LineGraphDataSourceParser {
 
     private void initializeGraphs(LineGraphRenderer renderer) {
         if (printGCDetails) {
-            newGraph = new HeapGraph(newGCPtn,renderer.addLineGraph(resources.getMessage("GraphPanel.new"), new String[]{resources.getMessage("GraphPanel.time") + "(secs)",
+            newGraph = new HeapGraph(newGCPtn, renderer.addLineGraph(resources.getMessage("GraphPanel.new"), new String[]{resources.getMessage("GraphPanel.time") + "(secs)",
                     resources.getMessage("GraphPanel.newBeforeGC"),
-                    resources.getMessage("GraphPanel.newAfterGC")}),true);
-            oldGraph = new HeapGraph(oldGCPtn,renderer.addLineGraph(resources.getMessage("GraphPanel.old"), new String[]{resources.getMessage("GraphPanel.time") + "(secs)",
+                    resources.getMessage("GraphPanel.newAfterGC")}), true);
+            oldGraph = new HeapGraph(oldGCPtn, renderer.addLineGraph(resources.getMessage("GraphPanel.old"), new String[]{resources.getMessage("GraphPanel.time") + "(secs)",
                     resources.getMessage("GraphPanel.oldBeforeGC"),
-                    resources.getMessage("GraphPanel.oldAfterGC")}),true);
-            permGraph = new HeapGraph(permGCPtn,renderer.addLineGraph(resources.getMessage("GraphPanel.permanent"), new String[]{
+                    resources.getMessage("GraphPanel.oldAfterGC")}), true);
+            permGraph = new HeapGraph(permGCPtn, renderer.addLineGraph(resources.getMessage("GraphPanel.permanent"), new String[]{
                     resources.getMessage("GraphPanel.permBeforeGC"),
-                    resources.getMessage("GraphPanel.permAfterGC")}),false);
+                    resources.getMessage("GraphPanel.permAfterGC")}), false);
         } else {
-            newGraph = new HeapGraph(verboseGCPtn,renderer.addLineGraph(resources.getMessage("GraphPanel.memory"), new String[]{resources.getMessage("GraphPanel.time") + "(secs)",
+            newGraph = new HeapGraph(verboseGCPtn, renderer.addLineGraph(resources.getMessage("GraphPanel.memory"), new String[]{resources.getMessage("GraphPanel.time") + "(secs)",
                     resources.getMessage("GraphPanel.heapBeforeGC"),
-                    resources.getMessage("GraphPanel.heapAfterGC")}),true);
+                    resources.getMessage("GraphPanel.heapAfterGC")}), true);
         }
     }
 }

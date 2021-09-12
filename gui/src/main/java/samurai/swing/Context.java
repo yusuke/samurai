@@ -31,7 +31,7 @@ public class Context {
     private final Configuration config = new Configuration("samurai");
     private final FileHistory fileHistory = new FileHistory(config);
 
-    private  LocalProcesses localProcesses = null;
+    private LocalProcesses localProcesses = null;
     private final CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
     ExecuteThread executeThread = new ExecuteThread();
     private final JLabel statusBar;
@@ -47,7 +47,7 @@ public class Context {
         try {
 
             this.localProcesses = new LocalProcesses(config, fileHistory);
-        }catch(java.lang.NoClassDefFoundError toolsJarNotFound){
+        } catch (java.lang.NoClassDefFoundError toolsJarNotFound) {
         }
 
         executeThread.start();

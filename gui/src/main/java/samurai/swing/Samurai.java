@@ -30,7 +30,7 @@ public class Samurai {
             System.setProperty("apple.awt.textantialiasing", "true");
             System.setProperty("com.apple.mrj.application.live-resize", "false");
             System.setProperty("com.apple.mrj.application.apple.menu.about.name",
-                resources.getMessage("Samurai"));
+                    resources.getMessage("Samurai"));
         }
         try {
             javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());

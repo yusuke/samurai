@@ -114,8 +114,8 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
         return empty;
     }
 
-    public void clearBuffer(){
-        if(!empty){
+    public void clearBuffer() {
+        if (!empty) {
             for (LogRenderer renderer : logRenderers) {
                 renderer.clearBuffer();
             }
@@ -187,6 +187,7 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
 
     private String encoding;
     private String actualEncoding;
+
     public void setEncoding(String encoding) {
         if (!encoding.equals(this.encoding)) {
             this.encoding = encoding;
@@ -201,7 +202,8 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
             }
         }
     }
-    public String getEncoding(){
+
+    public String getEncoding() {
         return encoding;
     }
 

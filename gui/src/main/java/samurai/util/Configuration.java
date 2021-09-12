@@ -59,10 +59,10 @@ public final class Configuration implements Runnable {
 
     public void run() {
         for (String key : watchRectangles.keySet()) {
-            storeRectangle(key,  watchRectangles.get(key));
+            storeRectangle(key, watchRectangles.get(key));
         }
         for (String key : watchLocations.keySet()) {
-            storeLocation(key,  watchLocations.get(key));
+            storeLocation(key, watchLocations.get(key));
         }
         try {
             this.save();
