@@ -35,6 +35,7 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 public class TileTabPanel<T extends JComponent> extends JPanel implements MouseListener, MouseMotionListener {
@@ -53,25 +54,25 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     private static final ImageIcon closeIcon;
     private static final ImageIcon closePushedIcon;
     private static final ImageIcon closeHoverIcon;
-    private static final ImageIcon nullIcon = new ImageIcon(TileTabPanel.class.getResource(
-            "null.gif"));
+    private static final ImageIcon nullIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
+            "null.gif")));
 
     static {
         if (OSDetector.isMac()) {
-            closeIcon = new ImageIcon(TileTabPanel.class.getResource(
-                    "close.gif"));
+            closeIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
+                    "close.gif")));
             closeHoverIcon = closeIcon;
 //      closeHoverIcon = new ImageIcon(TileTabPanel.class.getResource(
 //          "close_hover.gif"));
-            closePushedIcon = new ImageIcon(TileTabPanel.class.getResource(
-                    "close_push.gif"));
+            closePushedIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
+                    "close_push.gif")));
         } else {
-            closeIcon = new ImageIcon(TileTabPanel.class.getResource(
-                    "winclose.gif"));
-            closeHoverIcon = new ImageIcon(TileTabPanel.class.getResource(
-                    "winclose_hover.gif"));
-            closePushedIcon = new ImageIcon(TileTabPanel.class.getResource(
-                    "winclose_push.gif"));
+            closeIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
+                    "winclose.gif")));
+            closeHoverIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
+                    "winclose_hover.gif")));
+            closePushedIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
+                    "winclose_push.gif")));
         }
     }
 
@@ -175,7 +176,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         }
     }
 
-    private void jbInit() throws Exception {
+    private void jbInit() {
         setDoubleBuffered(true);
         borderLayout1 = new BorderLayout();
         setLayout(borderLayout1);
@@ -424,9 +425,9 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
                         remove(tilePanel);
                         add(tab, BorderLayout.CENTER);
                         tab.removeAll();
-                        for (int i = 0; i < components.size(); i++) {
-                            tab.addTab(components.get(i).getName(), components.get(i).getIcon(),
-                                    components.get(i).getComponent());
+                        for (ComponentInfo<T> component : components) {
+                            tab.addTab(component.getName(), component.getIcon(),
+                                    component.getComponent());
                         }
                         tab.setSelectedIndex(this.currentSelectedIndex);
                         validate();
@@ -438,9 +439,9 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
                             add(tilePanel, BorderLayout.CENTER);
                             tilePanel.removeAll();
                             validate();
-                            for (int i = 0; i < components.size(); i++) {
-                                tilePanel.addComponent(components.get(i).getName(), components.get(i).getIcon(),
-                                        components.get(i).getComponent());
+                            for (ComponentInfo<T> component : components) {
+                                tilePanel.addComponent(component.getName(), component.getIcon(),
+                                        component.getComponent());
                             }
                             tilePanel.setSelectedIndex(this.currentSelectedIndex);
                         }
@@ -506,14 +507,14 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
 
     private int draggingPaneIndex = -1;
 
+    boolean pressedOnButton = false;
+    int pressedIndex = -1;
+
     /**
      * method for MouseMotionListener
      *
      * @param event MouseEvent
      */
-    boolean pressedOnButton = false;
-    int pressedIndex = -1;
-
     public void mousePressed(MouseEvent event) {
         this.draggingPaneIndex = indexAtLocation(event);
         if (isClosable()) {
@@ -677,8 +678,8 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
                     isForwardDrag ? destination + 1 : destination);
             draggingPaneIndex = destination;
             tab.setSelectedIndex(draggingPaneIndex);
-            ComponentInfo ci1 = components.get(draggingPaneIndex);
-            ComponentInfo ci2 = components.get(destination);
+            ComponentInfo<T> ci1 = components.get(draggingPaneIndex);
+            ComponentInfo<T> ci2 = components.get(destination);
             components.set(draggingPaneIndex, ci2);
             components.set(destination, ci1);
         }
