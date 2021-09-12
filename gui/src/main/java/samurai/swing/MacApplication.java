@@ -15,35 +15,33 @@
  */
 package samurai.swing;
 
-import com.apple.eawt.Application;
-import com.apple.eawt.ApplicationAdapter;
-import com.apple.eawt.ApplicationEvent;
+import java.awt.*;
+import java.awt.desktop.*;
 
-public class MacApplication extends ApplicationAdapter {
+public class MacApplication implements AboutHandler, PreferencesHandler, QuitHandler {
     MainFrame frame;
 
     public MacApplication(MainFrame frame) {
         this.frame = frame;
-        Application application = Application.getApplication();
-        application.addApplicationListener(this);
-        application.addAboutMenuItem();
-        application.setEnabledAboutMenu(true);
-        application.addPreferencesMenuItem();
-        application.setEnabledPreferencesMenu(true);
+        Desktop desktop = Desktop.getDesktop();
+
+        desktop.setAboutHandler(this);
+        desktop.setPreferencesHandler(this);
+        desktop.setQuitHandler(this);
     }
 
-    public void handleAbout(ApplicationEvent event) {
-        event.setHandled(true);
+    @Override
+    public void handleAbout(AboutEvent e) {
         frame.handleAbout();
     }
 
-    public void handleQuit(ApplicationEvent event) {
-        event.setHandled(true);
-        frame.handleQuit();
+    @Override
+    public void handlePreferences(PreferencesEvent e) {
+        frame.handlePreferences();
     }
 
-    public void handlePreferences(ApplicationEvent event) {
-        event.setHandled(true);
-        frame.handlePreferences();
+    @Override
+    public void handleQuitRequestWith(QuitEvent e, QuitResponse response) {
+        frame.handleQuit();
     }
 }
