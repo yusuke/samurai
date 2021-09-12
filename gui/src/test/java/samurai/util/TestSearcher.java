@@ -15,23 +15,14 @@
  */
 package samurai.util;
 
-import junit.framework.TestCase;
-public class TestSearcher extends TestCase {
-    public static void main(String[] args) {
-        junit.textui.TestRunner.run(TestSearcher.class);
-    }
+import org.junit.jupiter.api.Test;
 
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
-
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
-
+class TestSearcher  {
+ 
     String target = "a b c a";
 
-    public void testSearchNext() {
+    @Test
+    void testSearchNext() {
 //    SearchPanel searcher = new SearchPanel();
 //    SearchResult result;
 //    result = searcher.searchNextRegexp(target,"a",0);
@@ -44,7 +35,7 @@ public class TestSearcher extends TestCase {
 //    assertEquals(7,result.getEnd());
     }
 
-    public void testSearchPrevious() {
+    @Test void testSearchPrevious() {
 //    SearchPanel searcher = new SearchPanel();
 //    SearchResult result;
 //    result = searcher.searchPreviousRegexp(target,"a",10);

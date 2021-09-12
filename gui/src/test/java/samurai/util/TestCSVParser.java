@@ -15,24 +15,25 @@
  */
 package samurai.util;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import samurai.gc.LineGraphRenderer;
 import samurai.gc.LineGraph;
 
 import java.awt.Color;
 
-public class TestCSVParser extends TestCase  implements LineGraph,LineGraphRenderer {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class TestCSVParser implements LineGraph, LineGraphRenderer {
 
 
-    protected void setUp() throws Exception {
-        super.setUp();
+    @BeforeEach
+    void setUp() {
         columnCount = 0;
         count = 0;
     }
 
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
 
     private int count = 0;
 
@@ -41,7 +42,7 @@ public class TestCSVParser extends TestCase  implements LineGraph,LineGraphRende
 
     public LineGraph addLineGraph(String line, String[] labels) {
         this.setLabels(labels);
-        columnCount+=labels.length;
+        columnCount += labels.length;
         return this;
     }
 
@@ -51,13 +52,14 @@ public class TestCSVParser extends TestCase  implements LineGraph,LineGraphRende
         for (int i = 0; i < values.length; i++) {
             assertEquals(expected[i + index], values[i]);
         }
-        index+=values.length;
-        if(index == columnCount){
+        index += values.length;
+        if (index == columnCount) {
             index = 0;
             count++;
         }
     }
-    public void addValues(double x,double[] values) {
+
+    public void addValues(double x, double[] values) {
         addValues(values);
     }
 
@@ -72,7 +74,8 @@ public class TestCSVParser extends TestCase  implements LineGraph,LineGraphRende
 
     }
 
-    public void testCSVParser() throws Exception {
+    @Test
+    void testCSVParser() {
         CSVParser parser = new CSVParser();
         parser.parse("column1,column2,column3", this);
         expected = new double[]{1d, 2d, 3d};

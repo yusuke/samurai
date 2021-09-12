@@ -15,17 +15,15 @@
  */
 package samurai.gc;
 
-public class TestBEAGCParser extends AbstractGraphTest{
+import org.junit.jupiter.api.Test;
 
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
+class TestBEAGCParser extends AbstractGraphTest{
 
-    public void testOldLog() throws Exception {
+
+    @Test
+    void testOldLog() {
         BEAGCParser parser = new BEAGCParser();
         expected.add(new double[]{197.487d, 34347d, 26260d});
         expectedMax.add(141312d);
@@ -38,7 +36,8 @@ public class TestBEAGCParser extends AbstractGraphTest{
         assertEquals(3, count);
     }
 
-    public void testNewLog() throws Exception {
+    @Test
+    void testNewLog() {
         BEAGCParser parser = new BEAGCParser();
         expected.add(new double[]{58.556d, 97781d, 37613d});
         expectedMax.add(98304d);

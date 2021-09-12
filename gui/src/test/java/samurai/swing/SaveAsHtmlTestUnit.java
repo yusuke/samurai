@@ -15,33 +15,19 @@
  */
 package samurai.swing;
 
-import junit.framework.TestCase;
-import junit.textui.TestRunner;
+import org.junit.jupiter.api.Test;
 import samurai.core.ThreadStatistic;
 
 import java.io.File;
 
-public class SaveAsHtmlTestUnit extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class SaveAsHtmlTestUnit  {
     ThreadStatistic statistic = new ThreadStatistic();
 
-    public SaveAsHtmlTestUnit(String name) {
-        super(name);
-    }
 
-    public static void main(String[] args) {
-        TestRunner.run(SaveAsHtmlTestUnit.class);
-    }
-
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
-
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
-
-
-    public void testFileName() {
+    @Test
+    void testFileName() {
         File file = new File("index.html");
         File target = ThreadDumpPanel.getTargetDirectory(file);
         assertEquals("index", target.getName());

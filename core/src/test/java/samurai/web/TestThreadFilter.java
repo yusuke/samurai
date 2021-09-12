@@ -15,7 +15,7 @@
  */
 package samurai.web;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 import samurai.core.ThreadDumpExtractor;
 import samurai.core.ThreadDumpSequence;
 import samurai.core.ThreadStatistic;
@@ -23,17 +23,13 @@ import samurai.core.ThreadStatistic;
 import java.io.File;
 import java.io.IOException;
 
-public class TestThreadFilter  extends TestCase {
+import static org.junit.jupiter.api.Assertions.*;
+
+class TestThreadFilter   {
     final ThreadStatistic statistic = new ThreadStatistic();
 
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
-
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
-    public void testThreadFilter() throws IOException {
+    @Test
+    void testThreadFilter() throws IOException {
 
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
         dumpExtractor.analyze(new File("testcases/Apple/1.4.2_08Apple.dmp"));

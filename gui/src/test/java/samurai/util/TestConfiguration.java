@@ -15,46 +15,45 @@
  */
 package samurai.util;
 
-import junit.framework.TestCase;
-import junit.textui.TestRunner;
+
+import org.junit.jupiter.api.*;
 
 import javax.swing.JCheckBox;
 import java.awt.Rectangle;
+import java.io.IOException;
 
-public class TestConfiguration extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+class TestConfiguration {
     private Configuration configuration = null;
 
-    public static void main(String[] args) {
-        TestRunner.run(TestConfiguration.class);
-    }
 
-    public TestConfiguration(String name) {
-        super(name);
-    }
-
-    protected void setUp() throws Exception {
-        super.setUp();
-        /**@todo verify the constructors*/
+    @BeforeEach
+    void setUp() {
+        /*@todo verify the constructors*/
         configuration = new Configuration("samuraitest");
     }
 
-    protected void tearDown() throws Exception {
+    @AfterEach
+    void tearDown() {
         configuration = null;
-        super.tearDown();
     }
 
-    public void testGetInt() throws Exception {
+    @Test
+    void testGetInt() throws IOException {
         int expectedReturn = 10;
         int actualReturn = configuration.getInt("intvalue");
-        assertEquals("return value", expectedReturn, actualReturn);
+        assertEquals(expectedReturn, actualReturn, "return value");
         configuration.save();
 
     }
 
-    public void testGetRectangle() throws Exception {
+    @Test
+    void testGetRectangle() throws IOException {
         Rectangle expectedReturn = new Rectangle(1, 2, 3, 4);
         Rectangle actualReturn = configuration.getRectangle("rectangle");
-        assertEquals("return value", expectedReturn, actualReturn);
+        assertEquals(expectedReturn, actualReturn, "return value");
         configuration.save();
 
     }
@@ -64,13 +63,14 @@ public class TestConfiguration extends TestCase {
     public final String config_string = null;
     public final JCheckBox config_checkbox = new JCheckBox();
 
-    public void testApply() {
+    @Test
+    void testApply() {
         config_checkbox.setSelected(false);
         configuration.apply(this);
-        assertEquals("return value", true, config_ignoreCase);
-        assertEquals("return value", 10, config_intvalue);
-        assertEquals("return value", "string", config_string);
-        assertEquals("return value", true, config_checkbox.isSelected());
+        assertTrue(config_ignoreCase, "return value");
+        assertEquals(10, config_intvalue, "return value");
+        assertEquals("string", config_string, "return value");
+        assertTrue(config_checkbox.isSelected(), "return value");
     }
 
 }

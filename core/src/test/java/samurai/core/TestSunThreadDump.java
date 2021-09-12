@@ -15,28 +15,20 @@
  */
 package samurai.core;
 
-import junit.framework.TestCase;
+
+import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
 
-
-public class TestSunThreadDump extends TestCase {
-
-    public TestSunThreadDump(String name) {
-        super(name);
-    }
+import static org.junit.jupiter.api.Assertions.*;
 
 
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
+class TestSunThreadDump {
 
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
 
-    public void testSun142_03stacked() throws IOException {
+    @Test
+    void testSun142_03stacked() throws IOException {
         ThreadStatistic statistic = new ThreadStatistic();
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
         dumpExtractor.analyze(new File("testcases/Sun/1.4.2_03Sunstacked.dmp"));
@@ -56,7 +48,8 @@ public class TestSunThreadDump extends TestCase {
         assertFalse(dump.isIdle());
     }
 
-    public void testSun142_03idle() throws IOException {
+    @Test
+    void testSun142_03idle() throws IOException {
         ThreadStatistic statistic = new ThreadStatistic();
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
         dumpExtractor.analyze(new File("testcases/Sun/1.4.2_03Sunidle.dmp"));
@@ -73,7 +66,8 @@ public class TestSunThreadDump extends TestCase {
 
     }
 
-    public void testHPUX() throws IOException {
+    @Test
+    void testHPUX() throws IOException {
         ThreadStatistic statistic = new ThreadStatistic();
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
         dumpExtractor.analyze(new File("testcases/HP/hp.dmp"));
@@ -101,8 +95,8 @@ public class TestSunThreadDump extends TestCase {
         assertTrue(dump.isIdle());
     }
 
-    public void testSunStackLine() {
-        ThreadStatistic statistic = new ThreadStatistic();
+    @Test
+    void testSunStackLine() {
         SunStackLine line = new SunStackLine("	at java.lang.Object.wait(Native Method)");
         assertTrue(line.isNativeMethod());
         assertEquals("java.lang.Object", line.getClassName());
@@ -127,9 +121,11 @@ public class TestSunThreadDump extends TestCase {
         assertEquals("n/a", line.getSource());
         assertEquals("<0x67c76938> (a com.octetstring.vde.backend.standard.TransactionProcessor)", line.getTarget());
     }
+
     private SunThreadDump threadDump = null;
 
-    public void testDaemonThread() {
+    @Test
+    void testDaemonThread() {
         threadDump = new SunThreadDump("\"Reference Handler\" daemon prio=10 tid=0x000915d0 nid=0x51c60 in Object.wait() [f0203000..f0203b70]");
         threadDump.addStackLine("\tat java.lang.Object.wait(Native Method)");
         threadDump.addStackLine(
@@ -139,44 +135,43 @@ public class TestSunThreadDump extends TestCase {
                 "\tat java.lang.ref.Reference$ReferenceHandler.run(Reference.java:113)");
         threadDump.addStackLine(
                 "\t- locked <0x67090190> (a java.lang.ref.Reference$Lock)");
-        assertEquals("tid", "0x000915d0", threadDump.getTid());
-        assertEquals("nid", "0x51c60", threadDump.getNid());
-        assertEquals("priority", 10, threadDump.getPriority());
-        assertEquals("isDaemon", true, threadDump.isDaemon());
-        assertEquals("thread name", "Reference Handler", threadDump.getName());
-        assertEquals("stack range", "[f0203000..f0203b70]",
-                threadDump.getStackRange());
+        assertEquals("0x000915d0", threadDump.getTid(), "tid");
+        assertEquals("0x51c60", threadDump.getNid(), "nid");
+        assertEquals(10, threadDump.getPriority(), "priority");
+        assertTrue(threadDump.isDaemon(), "isDaemon");
+        assertEquals("Reference Handler", threadDump.getName(), "thread name");
+        assertEquals("[f0203000..f0203b70]", threadDump.getStackRange(), "stack range");
 //        assertEquals("state", "in Object.wait()",
 //                threadDump.getState());
-        assertEquals("size", 5, threadDump.size());
+        assertEquals(5, threadDump.size(), "size");
 
         samurai.core.SunStackLine line0 = (samurai.core.SunStackLine) threadDump.getLine(0);
-        assertEquals("className", "java.lang.Object", line0.getClassName());
+        assertEquals("java.lang.Object", line0.getClassName(), "className");
         System.out.println(line0.getMethodName());
-        assertEquals("methodName", "wait", line0.getMethodName());
-        assertEquals("line", "Native Method", line0.getLineNumber());
-        assertEquals("line", "Native Method", line0.getSource());
+        assertEquals("wait", line0.getMethodName(), "methodName");
+        assertEquals("Native Method", line0.getLineNumber(), "line");
+        assertEquals("Native Method", line0.getSource(), "line");
 //    assertEquals("waiting on", true,threadDump.isWaitingOn());
-        assertEquals("waiting to lock", false, line0.isTryingToGetLock());
-        assertEquals("lock", 1, threadDump.getLockedLines().size());
+        assertFalse(line0.isTryingToGetLock(), "waiting to lock");
+        assertEquals(1, threadDump.getLockedLines().size(), "lock");
 
         samurai.core.SunStackLine line1 = (samurai.core.SunStackLine) threadDump.getLine(1);
-        assertEquals("waiting on", "<0x67090190> (a java.lang.ref.Reference$Lock)", line1.getTarget());
+        assertEquals("<0x67090190> (a java.lang.ref.Reference$Lock)", line1.getTarget(), "waiting on");
 
         samurai.core.StackLine line2 = threadDump.getLine(2);
-        assertEquals("className", "java.lang.Object", line2.getClassName());
+        assertEquals("java.lang.Object", line2.getClassName(), "className");
         System.out.println(line2.getMethodName());
-        assertEquals("methodName", "wait", line2.getMethodName());
-        assertEquals("line", "426", line2.getLineNumber());
-        assertEquals("line", "Object.java", line2.getSource());
-        assertEquals("line", 1, threadDump.getLockedLines().size());
+        assertEquals("wait", line2.getMethodName(), "methodName");
+        assertEquals("426", line2.getLineNumber(), "line");
+        assertEquals("Object.java", line2.getSource(), "line");
+        assertEquals(1, threadDump.getLockedLines().size(), "line");
     }
 
-    public void testNonDaemonThread() {
+    @Test
+    void testNonDaemonThread() {
         threadDump = new SunThreadDump("\"Reference Handler daemon\" prio=10 tid=0x000915d0 nid=0x51c60 in Object.wait() ");
-        assertEquals("isDaemon", false, threadDump.isDaemon());
-        assertEquals("stack range", "",
-                threadDump.getStackRange());
+        assertFalse(threadDump.isDaemon(), "isDaemon");
+        assertEquals("", threadDump.getStackRange(), "stack range");
 
 //        assertEquals("state", "in Object.wait()",
 //                threadDump.getState());

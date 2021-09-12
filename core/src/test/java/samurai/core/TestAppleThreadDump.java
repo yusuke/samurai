@@ -15,32 +15,19 @@
  */
 package samurai.core;
 
-import junit.framework.TestCase;
-import junit.textui.TestRunner;
+
+import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
 
-public class TestAppleThreadDump extends TestCase {
+import static org.junit.jupiter.api.Assertions.*;
+
+class TestAppleThreadDump  {
     final samurai.core.ThreadStatistic statistic = new samurai.core.ThreadStatistic();
 
-    public TestAppleThreadDump(String name) {
-        super(name);
-    }
-
-    public static void main(String[] args) {
-        TestRunner.run(TestAppleThreadDump.class);
-    }
-
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
-
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
-
-    public void testApple142_08() throws IOException {
+    @Test
+    void testApple142_08() throws IOException {
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
         dumpExtractor.analyze(new File("testcases/Apple/1.4.2_08Apple.dmp"));
         assertEquals(3, statistic.getFullThreadDumpCount());
@@ -82,7 +69,8 @@ public class TestAppleThreadDump extends TestCase {
         assertFalse(dump.isBlocked());
         assertTrue(dump.isIdle());
     }
-    public void testWLS81SP1() throws IOException {
+    @Test
+    void testWLS81SP1() throws IOException {
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
         dumpExtractor.analyze(new File("testcases/Apple/wls81sp1-1.4.2-34apple.dmp"));
         assertEquals(3, statistic.getFullThreadDumpCount());

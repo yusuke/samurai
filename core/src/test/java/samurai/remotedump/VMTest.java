@@ -1,11 +1,13 @@
 package samurai.remotedump;
 
-import junit.framework.TestCase;
-import org.junit.Test;
 
-public class VMTest extends TestCase{
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class VMTest {
     @Test
-    public void test(){
+    void test(){
         VM vm = new VM(1111, "com.intellij.rt.execution.application.AppMain gridgrid.GridgridApplication");
         assertEquals("gridgrid.GridgridApplication", vm.getFqcn());
     }

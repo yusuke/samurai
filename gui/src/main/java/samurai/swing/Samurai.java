@@ -22,7 +22,7 @@ import samurai.util.OSDetector;
 public class Samurai {
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         if (OSDetector.isMac()) {
             System.setProperty("apple.laf.useScreenMenuBar", "true");
 //    System.setProperty("apple.awt.brushMetalLook", "true");

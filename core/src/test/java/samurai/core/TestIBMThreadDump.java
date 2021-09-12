@@ -15,32 +15,17 @@
  */
 package samurai.core;
 
-import junit.framework.TestCase;
-import junit.textui.TestRunner;
+
+import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
 
-public class TestIBMThreadDump extends TestCase {
+import static org.junit.jupiter.api.Assertions.*;
+
+class TestIBMThreadDump {
     ThreadStatistic statistic = new samurai.core.ThreadStatistic();
-
-    public TestIBMThreadDump(String name) {
-        super(name);
-    }
-
-    public static void main(String[] args) {
-        TestRunner.run(TestIBMThreadDump.class);
-    }
-
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
-
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
-
-//    public void testIBM140idle() throws IOException {
+//    @Test\nvoid testIBM140idle() throws IOException {
 //      statistic = new ThreadStatistic();
 //        ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
 //        analyzer.analyze(new File("testcases/1.4.0IBMidle.dmp"), false);
@@ -71,7 +56,7 @@ public class TestIBMThreadDump extends TestCase {
 //
 //    }
 
-    /*      public void testIBM140stacked() throws IOException {
+    /*      @Test\nvoid testIBM140stacked() throws IOException {
       statistic = new ThreadStatistic();
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/1.4.0IBMstacked.dmp"), false);
@@ -97,7 +82,8 @@ public class TestIBMThreadDump extends TestCase {
         ThreadDumpSequence traces =  statistic.getStackTracesById("0x880E28");
         assertEquals(1,traces.size());
     }*/
-    public void testIBM142racing() throws IOException {
+    @Test
+    void testIBM142racing() throws IOException {
         statistic = new ThreadStatistic();
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
         dumpExtractor.analyze(new File("testcases/IBM/1.4.2IBM/javacore.20060511.172914.516.txt"));
@@ -115,7 +101,7 @@ public class TestIBMThreadDump extends TestCase {
         assertTrue(dump.isIdle());
 
     }
-//    public void testIBMLockInfos(){
+//    @Test\nvoid testIBMLockInfos(){
 //      IBMLockInfos lockInfos = new IBMLockInfos(lockInfoLine[0]);
 //      for (int i = 01; i < lockInfoLine.length; i++) {
 //        lockInfos.addLine(lockInfoLine[i]);

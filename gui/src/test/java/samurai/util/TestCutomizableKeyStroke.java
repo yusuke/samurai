@@ -15,25 +15,29 @@
  */
 package samurai.util;
 
-import junit.framework.TestCase;
+
+import org.junit.jupiter.api.*;
 
 import javax.swing.KeyStroke;
 import java.awt.event.KeyEvent;
 
-public class TestCutomizableKeyStroke extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class TestCutomizableKeyStroke {
     private CustomizableKeyStroke cutomizableKeyStroke = null;
 
-    protected void setUp() throws Exception {
-        super.setUp();
+    @BeforeEach
+    void setUp() {
         cutomizableKeyStroke = new CustomizableKeyStroke(GUIResourceBundle.getInstance());
     }
 
-    protected void tearDown() throws Exception {
+    @AfterEach
+    void tearDown() {
         cutomizableKeyStroke = null;
-        super.tearDown();
     }
 
-    public void testGetKeyStroke() {
+    @Test
+    void testGetKeyStroke() {
         String key = "menu.edit.copy";
         KeyStroke expectedReturn = null;
         if (samurai.util.OSDetector.isWindows()) {
@@ -43,7 +47,7 @@ public class TestCutomizableKeyStroke extends TestCase {
             expectedReturn = KeyStroke.getKeyStroke(KeyEvent.VK_C, KeyEvent.META_MASK);
         }
         KeyStroke actualReturn = cutomizableKeyStroke.getKeyStroke(key);
-        assertEquals("return value", expectedReturn, actualReturn);
+        assertEquals(expectedReturn, actualReturn, "return value");
     }
 
 }

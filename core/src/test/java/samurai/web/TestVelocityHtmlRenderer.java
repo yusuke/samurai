@@ -15,19 +15,19 @@
  */
 package samurai.web;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Test;
 import samurai.core.ThreadDumpExtractor;
 import samurai.core.ThreadStatistic;
 
 import java.io.File;
 import java.io.IOException;
 
-public class TestVelocityHtmlRenderer extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+class TestVelocityHtmlRenderer  {
     final ThreadStatistic statistic = new samurai.core.ThreadStatistic();
 
-    public TestVelocityHtmlRenderer(String name) {
-        super(name);
-    }
 
     public static void main(String[] args) throws IOException {
         //do a performance test
@@ -58,23 +58,18 @@ public class TestVelocityHtmlRenderer extends TestCase {
         System.out.println("Time spent " + vendor + ":" + (timeSpent / 1000d) + " secs");
     }
 
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
 
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
-
-
-    public void testEscape() {
+    @Test
+    void testEscape() {
         VelocityHtmlRenderer.Util util = new VelocityHtmlRenderer.Util();
         assertEquals("foo&lt;bar",util.escape("foo<bar"));
         assertEquals("foo&gt;bar",util.escape("foo>bar"));
         assertEquals("foo&lt;&gt;bar",util.escape("foo<>bar"));
         assertEquals("&lt;foo&lt;&lt;foo&gt;&gt;bar&gt;",util.escape("<foo<<foo>>bar>"));
     }
-    public void testSaveTo() throws IOException {
+
+    @Test
+    void testSaveTo() throws IOException {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/Sun/1.4.2_03Sunstacked.dmp"));
         VelocityHtmlRenderer renderer = new VelocityHtmlRenderer("samurai/web/outcss.vm");

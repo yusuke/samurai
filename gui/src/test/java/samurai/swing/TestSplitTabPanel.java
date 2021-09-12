@@ -16,29 +16,16 @@
 
 package samurai.swing;
 
-import junit.framework.TestCase;
-import junit.textui.TestRunner;
+
+import org.junit.jupiter.api.Test;
 
 import javax.swing.JTextArea;
 import java.awt.Dimension;
-public class TestSplitTabPanel extends TestCase {
-    public TestSplitTabPanel(String name) {
-        super(name);
-    }
 
-    public static void main(String[] args) {
-        TestRunner.run(TestSplitTabPanel.class);
-    }
+class TestSplitTabPanel {
 
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
-
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
-
-    public void testIt() throws Exception {
+    @Test
+    void testIt() {
         SplitTabPanelTest test = new SplitTabPanelTest();
         test.setSize(new Dimension(400, 400));
         test.setVisible(true);

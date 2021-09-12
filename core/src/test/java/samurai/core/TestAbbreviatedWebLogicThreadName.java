@@ -15,22 +15,15 @@
  */
 package samurai.core;
 
-import junit.framework.TestCase;
 
-public class TestAbbreviatedWebLogicThreadName extends TestCase {
-    public static void main(String[] args) {
-        junit.textui.TestRunner.run(TestAbbreviatedWebLogicThreadName.class);
-    }
+import org.junit.jupiter.api.Test;
 
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
+class TestAbbreviatedWebLogicThreadName  {
 
-    public void testAbbreviateWebLogicThreadName() {
+    @Test
+    void testAbbreviateWebLogicThreadName() {
         assertEquals("default[0]", ThreadDumpSequence.abbreviateWebLogicThreadName("ExecuteThread: '0' for queue: 'default'"));
         assertEquals("weblogic.kernel.Default[3]", ThreadDumpSequence.abbreviateWebLogicThreadName("[STANDBY] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'"));
         assertEquals("weblogic.kernel.Default[2]", ThreadDumpSequence.abbreviateWebLogicThreadName("[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'"));

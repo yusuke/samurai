@@ -15,13 +15,14 @@
  */
 package samurai.gc;
 
-import junit.framework.TestCase;
 
 import java.awt.Color;
 import java.util.List;
 import java.util.ArrayList;
 
-public abstract class AbstractGraphTest extends TestCase implements LineGraph,LineGraphRenderer{
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public abstract class AbstractGraphTest implements LineGraph, LineGraphRenderer {
     protected int count = 0;
 
     final List<double[]> expected = new ArrayList<>();
@@ -40,7 +41,7 @@ public abstract class AbstractGraphTest extends TestCase implements LineGraph,Li
         count++;
     }
 
-    public void addValues(double x,double[] values) {
+    public void addValues(double x, double[] values) {
         addValues(values);
     }
 

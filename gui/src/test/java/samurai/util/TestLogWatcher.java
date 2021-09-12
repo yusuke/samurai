@@ -15,30 +15,18 @@
  */
 package samurai.util;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 import samurai.tail.LogMonitor;
 import samurai.tail.LogWatcher;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 
-public class TestLogWatcher extends TestCase implements LogMonitor {
+import static org.junit.jupiter.api.Assertions.*;
+
+class TestLogWatcher implements LogMonitor {
     LogWatcher logWatcher;
     final boolean DEBUG = false;
-
-    public static void main(String[] args) {
-        junit.textui.TestRunner.run(TestLogWatcher.class);
-    }
-
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
-
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
 
     StringBuffer buf;
     int logStartedCount = 0;
@@ -46,7 +34,9 @@ public class TestLogWatcher extends TestCase implements LogMonitor {
     int logContinuedCount = 0;
     int logWillEndCount = 0;
 
-    public void notestMultiFile() throws Exception {
+    @Disabled
+    @Test
+    void notestMultiFile() throws InterruptedException {
         logWatcher = new LogWatcher();
         logWatcher.setFiles(new File[]{new File("testcases/1.txt"), new File("testcases/2.txt"), new File("testcases/3.txt")});
         buf = new StringBuffer();
@@ -88,16 +78,19 @@ public class TestLogWatcher extends TestCase implements LogMonitor {
         assertEquals(1, logEndedCount);
         logWatcher.kill();
     }
-    public void debug(String message){
-        if(DEBUG){
+
+    public void debug(String message) {
+        if (DEBUG) {
             System.out.println(message);
         }
 
     }
 
-    public void testSingleFile() throws Exception {
+    @Test
+    void testSingleFile() throws IOException, InterruptedException {
         resetFlags();
         File file = new File("hogehogehoge.txt");
+        //noinspection ResultOfMethodCallIgnored
         file.delete();
         logWatcher = new LogWatcher();
         logWatcher.setFile(file);
@@ -166,6 +159,7 @@ public class TestLogWatcher extends TestCase implements LogMonitor {
     private boolean logStartedCalled = false;
     private boolean logEndedCalled = false;
     private boolean logContinuedCalled = false;
+    @SuppressWarnings("unused")
     private IOException ioe;
 
     private void resetFlags() {

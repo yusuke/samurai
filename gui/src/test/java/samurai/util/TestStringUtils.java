@@ -15,41 +15,33 @@
  */
 package samurai.util;
 
-import junit.framework.TestCase;
+
+import org.junit.jupiter.api.Test;
 
 import javax.swing.JTextArea;
 
-public class TestStringUtils extends TestCase {
-    public TestStringUtils() {
-    }
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-    public static void main(String[] args) {
-        junit.textui.TestRunner.run(TestStringUtils.class);
-    }
+class TestStringUtils {
 
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
-
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
-
-    public void testIndexOfIgnoreCase() {
+    @Test
+    void testIndexOfIgnoreCase() {
         assertEquals(2, "abcdef".indexOf("cde"));
         assertEquals(2, StringUtil.indexOfIgnoreCase("abcdef", "CdE", 0));
         assertEquals(2, StringUtil.indexOfIgnoreCase("abcdef", "CDE", 0));
         assertEquals(-1, StringUtil.indexOfIgnoreCase("abcdef", "CaE", 0));
     }
 
-    public void testLastIndexOfIgnoreCase() {
+    @Test
+    void testLastIndexOfIgnoreCase() {
         assertEquals(2, "abcdef".lastIndexOf("cde"));
         assertEquals(-1, StringUtil.lastIndexOfIgnoreCase("abcdef", "CdE", 0));
         assertEquals(2, StringUtil.lastIndexOfIgnoreCase("abcdef", "CDE", 9));
         assertEquals(2, StringUtil.lastIndexOfIgnoreCase("abcdef", "CdE", 3));
     }
 
-    public void testLastIndexOfIgnoreCaseTextArea() {
+    @Test
+    void testLastIndexOfIgnoreCaseTextArea() {
         JTextArea ta = new JTextArea();
         ta.setText("abcdef");
 //    assertEquals(-1,StringUtil.lastIndexOf(ta.getDocument(),"CdE",0,true));

@@ -15,33 +15,18 @@
  */
 package samurai.core;
 
-import junit.framework.TestCase;
-import junit.textui.TestRunner;
+import org.junit.jupiter.api.Test;
 import samurai.web.VelocityHtmlRenderer;
 
 import java.io.File;
 import java.io.IOException;
 
-public class TestBEAThreadDump extends TestCase {
+import static org.junit.jupiter.api.Assertions.*;
+
+class TestBEAThreadDump  {
     final samurai.core.ThreadStatistic statistic = new ThreadStatistic();
 
-    public TestBEAThreadDump(String name) {
-        super(name);
-    }
-
-    public static void main(String[] args) {
-        TestRunner.run(TestBEAThreadDump.class);
-    }
-
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
-
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
-
-    /*    public void testJRockit142_03stacked() throws IOException {
+    /*    @Test\nvoid testJRockit142_03stacked() throws IOException {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/1.4.2_03BEAstacked.dmp"), false);
         assertEquals(3, statistic.getFullThreadDumpCount());
@@ -55,7 +40,7 @@ public class TestBEAThreadDump extends TestCase {
         assertTrue(dump.isBlocked());
         assertFalse(dump.isIdle());
     }
-    public void testJRockit142_03idle() throws IOException {
+    @Test\nvoid testJRockit142_03idle() throws IOException {
 
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/1.4.2_03BEAidle.dmp"), false);
@@ -66,7 +51,7 @@ public class TestBEAThreadDump extends TestCase {
         assertFalse(dump.isBlocked());
         assertTrue(dump.isIdle());
     }
-    public void testJRockit142_05stacked() throws IOException {
+    @Test\nvoid testJRockit142_05stacked() throws IOException {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/1.4.2_05BEAstacked.dmp"), false);
         assertEquals(3, statistic.getFullThreadDumpCount());
@@ -80,7 +65,7 @@ public class TestBEAThreadDump extends TestCase {
         assertTrue(dump.isBlocked());
         assertFalse(dump.isIdle());
     }
-    public void testJRockit142_05idle() throws IOException {
+    @Test\nvoid testJRockit142_05idle() throws IOException {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/1.4.2_05BEAidle.dmp"), false);
         assertEquals(3, statistic.getFullThreadDumpCount());
@@ -90,7 +75,7 @@ public class TestBEAThreadDump extends TestCase {
         assertFalse(dump.isBlocked());
         assertTrue(dump.isIdle());
     }
-    public void testJRockit150_03stacked() throws IOException {
+    @Test\nvoid testJRockit150_03stacked() throws IOException {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/1.5.0_03BEAstacked.dmp"), false);
         assertEquals(3, statistic.getFullThreadDumpCount());
@@ -104,7 +89,7 @@ public class TestBEAThreadDump extends TestCase {
         assertTrue(dump.isBlocked());
         assertFalse(dump.isIdle());
     }
-    public void testJRockit150_03idle() throws IOException {
+    @Test\nvoid testJRockit150_03idle() throws IOException {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/1.5.0_03BEAidle.dmp"), false);
         assertEquals(3, statistic.getFullThreadDumpCount());
@@ -115,7 +100,7 @@ public class TestBEAThreadDump extends TestCase {
         assertTrue(dump.isIdle());
     }
 
-    public void testBEAStacked() throws IOException {
+    @Test\nvoid testBEAStacked() throws IOException {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/jrockit81sp2_141_05stack.dmp"), false);
         assertEquals(1, statistic.getFullThreadDumpCount());
@@ -130,7 +115,7 @@ public class TestBEAThreadDump extends TestCase {
         assertTrue(statistic.getFullThreadDump(0).getThreadDump(3).isIdle());
     }
 
-    public void testBEAStackLine(){
+    @Test\nvoid testBEAStackLine(){
         BEAStackLine line = new BEAStackLine("    at java.lang.Thread.doYield(Native Method)@116C0A68");
         assertTrue(line.isNativeMethod());
         assertEquals("java.lang.Thread",line.getClassName());
@@ -156,7 +141,7 @@ public class TestBEAThreadDump extends TestCase {
 
     }
 
-    public void test811JRockitweblogicadmin() throws IOException {
+    @Test\nvoid test811JRockitweblogicadmin() throws IOException {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/weblogic.admin/weblogic.admin811JRockit.dmp"), false);
         assertEquals(4, statistic.getFullThreadDumpCount());
@@ -167,7 +152,7 @@ public class TestBEAThreadDump extends TestCase {
         assertFalse(dump.isBlocked());
         assertTrue(dump.isIdle());
     }
-//    public void test812JRockitweblogicadmin() throws IOException {
+//    @Test\nvoid test812JRockitweblogicadmin() throws IOException {
 //        ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
 //        analyzer.analyze(new File("testcases/weblogic.admin/weblogic.admin812JRockit.dmp"), false);
 //        assertEquals(4, statistic.getFullThreadDumpCount());
@@ -178,7 +163,8 @@ public class TestBEAThreadDump extends TestCase {
 //        assertFalse(dump.isStacked());
 //        assertTrue(dump.isIdle());
 //    }*/
-    public void test813JRockitweblogicadmin() throws IOException {
+    @Test 
+    void test813JRockitweblogicadmin() throws IOException {
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
         dumpExtractor.analyze(new File("testcases/BEA/weblogic.admin813JRockit.dmp"));
         assertEquals(5, statistic.getFullThreadDumpCount());
@@ -200,9 +186,9 @@ public class TestBEAThreadDump extends TestCase {
         assertEquals("0xb80", dump.getBlockerId());
         line = dump.getLine(6);
         assertTrue(line.isHoldingLock());
-        assertTrue(-1 != new VelocityHtmlRenderer.Util().asHTML(line).indexOf("<a name"));
+        assertTrue(new VelocityHtmlRenderer.Util().asHTML(line).contains("<a name"));
         assertEquals("java/lang/Object", line.getLockedClassName());
-        assertTrue(-1 != new VelocityHtmlRenderer.Util().asHTML(line).indexOf("<a name"));
+        assertTrue(new VelocityHtmlRenderer.Util().asHTML(line).contains("<a name"));
         assertEquals("13a92718", line.getLockedObjectId());
         System.out.println("[" + new VelocityHtmlRenderer.Util().asHTML(line) + "]");
         assertEquals("   ^-- Holding lock: java/lang/Object@<a name=\"13a92718\"></a>13a92718[thin lock]", new VelocityHtmlRenderer.Util().asHTML(line));
@@ -222,7 +208,7 @@ public class TestBEAThreadDump extends TestCase {
         assertFalse(dump.isIdle());
 
     }/*
-    public void test814JRockitweblogicadmin() throws IOException {
+    @Test\nvoid test814JRockitweblogicadmin() throws IOException {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/weblogic.admin/weblogic.admin814JRockit.dmp"), false);
         assertEquals(6, statistic.getFullThreadDumpCount());
@@ -243,7 +229,7 @@ public class TestBEAThreadDump extends TestCase {
         assertEquals("java/lang/Object",line.getLockedClassName());
         assertEquals("43d07d0",line.getLockedObjectId());
     }
-    public void test815JRockitweblogicadmin() throws IOException {
+    @Test\nvoid test815JRockitweblogicadmin() throws IOException {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/weblogic.admin/weblogic.admin815JRockit.dmp"), false);
         assertEquals(3, statistic.getFullThreadDumpCount());
@@ -262,7 +248,7 @@ public class TestBEAThreadDump extends TestCase {
         assertEquals("java/lang/Object",line.getLockedClassName());
         assertEquals("60ef828",line.getLockedObjectId());
     }
-    public void test900JRockitweblogicadmin() throws IOException {
+    @Test\nvoid test900JRockitweblogicadmin() throws IOException {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/weblogic.admin/weblogic.admin900JRockit.dmp"), false);
         assertEquals(6, statistic.getFullThreadDumpCount());
@@ -288,7 +274,7 @@ public class TestBEAThreadDump extends TestCase {
         assertEquals("847a41",line.getLockedObjectId());
 
     }
-    public void test910JRockitweblogicadmin() throws IOException {
+    @Test\nvoid test910JRockitweblogicadmin() throws IOException {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/weblogic.admin/weblogic.admin910JRockit.dmp"), false);
         assertEquals(1, statistic.getFullThreadDumpCount());

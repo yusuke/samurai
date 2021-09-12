@@ -16,29 +16,29 @@
 
 package samurai.util;
 
-import junit.framework.TestCase;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import samurai.swing.FileHistory;
 
 import java.io.File;
-public class TestFileHistory extends TestCase {
 
-    public TestFileHistory(String name) {
-        super(name);
-    }
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-    protected void setUp() throws Exception {
-        super.setUp();
+class TestFileHistory {
+
+    @BeforeEach
+    void setUp() {
         String name = "samuraitest";
         String fileName = System.getProperty("user.home") + File.separator + "." +
                 name + ".properties";
+        //noinspection ResultOfMethodCallIgnored
         new File(fileName).delete();
     }
 
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
-
-    public void testOpenFIFO() throws Exception {
+    @Test
+    void testOpenFIFO() {
         String name = "samuraitest";
         Configuration configuration = new Configuration(name);
         configuration.setInt("RecentlyUsedNumber", 4);
@@ -63,7 +63,8 @@ public class TestFileHistory extends TestCase {
         assertEquals(file1, history.getList().get(4));
     }
 
-    public void testValidation() throws Exception {
+    @Test
+    void testValidation() {
         Configuration configuration = new Configuration("samuraitest");
         configuration.setInt("RecentlyUsedNumber", 4);
         FileHistory history = new FileHistory(configuration);

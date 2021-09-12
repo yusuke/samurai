@@ -15,17 +15,14 @@
  */
 package samurai.gc;
 
-public class TestIBMGCParser extends AbstractGraphTest{
+import org.junit.jupiter.api.Test;
 
-    protected void setUp() throws Exception {
-        super.setUp();
-    }
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-    protected void tearDown() throws Exception {
-        super.tearDown();
-    }
+class TestIBMGCParser extends AbstractGraphTest{
 
-    public void testOldLog() throws Exception {
+    @Test
+    void testOldLog() {
         IBMGCParser parser = new IBMGCParser();
         expected.add(new double[]{88d, 38304336d, 38821800d});
         expectedMax.add(73923072d);
