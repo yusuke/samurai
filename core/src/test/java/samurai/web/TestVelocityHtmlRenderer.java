@@ -23,7 +23,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class TestVelocityHtmlRenderer extends TestCase {
-    ThreadStatistic statistic = new samurai.core.ThreadStatistic();
+    final ThreadStatistic statistic = new samurai.core.ThreadStatistic();
 
     public TestVelocityHtmlRenderer(String name) {
         super(name);

@@ -30,17 +30,18 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.util.Objects;
 
 public class AboutSamuraiDialog extends JDialog implements ActionListener {
 
-    public JButton button1 = new JButton();
-    JLabel imageLabel = new JLabel();
-    public JLabel versionLabel = new JLabel();
-    public JLabel copyrightLabel = new JLabel();
+    public final JButton button1 = new JButton();
+    final JLabel imageLabel = new JLabel();
+    public final JLabel versionLabel = new JLabel();
+    public final JLabel copyrightLabel = new JLabel();
     ImageIcon image1 = new ImageIcon();
-    GridBagLayout gridBagLayout1 = new GridBagLayout();
-    JScrollPane jScrollPane1 = new JScrollPane();
-    public JTextArea releaseNote = new JTextArea();
+    final GridBagLayout gridBagLayout1 = new GridBagLayout();
+    final JScrollPane jScrollPane1 = new JScrollPane();
+    public final JTextArea releaseNote = new JTextArea();
 
     public AboutSamuraiDialog(Frame parent) {
         super(parent);
@@ -53,8 +54,8 @@ public class AboutSamuraiDialog extends JDialog implements ActionListener {
     }
 
     //Component initialization
-    private void jbInit() throws Exception {
-        image1 = new ImageIcon(MainFrame.class.getResource("images/samurai64.gif"));
+    private void jbInit() {
+        image1 = new ImageIcon(Objects.requireNonNull(MainFrame.class.getResource("images/samurai64.gif")));
         imageLabel.setMaximumSize(new Dimension(64, 64));
         imageLabel.setMinimumSize(new Dimension(64, 64));
         imageLabel.setPreferredSize(new Dimension(64, 64));

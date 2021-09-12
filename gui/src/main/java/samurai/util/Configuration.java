@@ -35,9 +35,9 @@ import java.util.Map;
 import java.util.Properties;
 
 public final class Configuration implements Runnable {
-    private Properties props;
-    private String fileName;
-    private String name;
+    private final Properties props;
+    private final String fileName;
+    private final String name;
 
     public Configuration(String name) {
         this.name = name;
@@ -174,7 +174,7 @@ public final class Configuration implements Runnable {
                         value.getHeight());
     }
 
-    private final Map<String, Component> watchRectangles = new HashMap<String, Component>();
+    private final Map<String, Component> watchRectangles = new HashMap<>();
 
     public void applyRectangle(String key, Component component) {
         component.setBounds(getRectangle(key));
@@ -184,7 +184,7 @@ public final class Configuration implements Runnable {
         watchRectangles.put(key, component);
     }
 
-    private final Map<String, Component> watchLocations = new HashMap<String, Component>();
+    private final Map<String, Component> watchLocations = new HashMap<>();
 
     public void applyLocation(String key, Component component) {
         component.setLocation(getLocation(key));
@@ -272,7 +272,7 @@ public final class Configuration implements Runnable {
 
     }
 
-    private List<Object> listenerList = new ArrayList<Object>();
+    private final List<Object> listenerList = new ArrayList<>();
 
     public void addTarget(Object listener) {
         listenerList.add(listener);

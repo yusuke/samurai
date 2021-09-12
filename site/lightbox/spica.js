@@ -51,7 +51,7 @@ function Browser()
 }
 var Browser = new Browser();
 // === event ===
-if (!window.Event) var Event = new Object;
+if (!window.Event) var Event = {};
 Event = {
     cache : false,
     getEvent : function(evnt)
@@ -69,13 +69,13 @@ Event = {
             evnt.stopPropagation()
         } catch(err) {
         }
-        ;
+        
         evnt.cancelBubble = true;
         try {
             evnt.preventDefault()
         } catch(err) {
         }
-        ;
+        
         return (evnt.returnValue = false);
     },
     register : function(object, type, handler)

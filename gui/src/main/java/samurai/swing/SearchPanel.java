@@ -36,13 +36,13 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 
 public class SearchPanel extends JPanel {
-    public JTextField config_searchText = new JTextField();
-    public JCheckBox config_matchCase = new JCheckBox("*SearchPanel.matchCase*");
-    public JLabel find = new JLabel("*SearchPanel.find*");
+    public final JTextField config_searchText = new JTextField();
+    public final JCheckBox config_matchCase = new JCheckBox("*SearchPanel.matchCase*");
+    public final JLabel find = new JLabel("*SearchPanel.find*");
     public boolean useRegexp = false;
-    public JButton btnPrevious = new JButton("*SearchPanel.previous*");
-    public JButton btnNext = new JButton("*SearchPanel.next*");
-    public JButton btnHide = new JButton();
+    public final JButton btnPrevious = new JButton("*SearchPanel.previous*");
+    public final JButton btnNext = new JButton("*SearchPanel.next*");
+    public final JButton btnHide = new JButton();
 
     public SearchPanel() {
         try {
@@ -145,9 +145,9 @@ public class SearchPanel extends JPanel {
         }
     }
 
-    private static ImageIcon closeIcon;
-    private static ImageIcon closePushedIcon;
-    private static ImageIcon closeHoverIcon;
+    private static final ImageIcon closeIcon;
+    private static final ImageIcon closePushedIcon;
+    private static final ImageIcon closeHoverIcon;
 
     static {
         if (OSDetector.isMac()) {

@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SingleLogWatcher {
-    private List<LogMonitor> logMonitors = new ArrayList<LogMonitor>(0);
+    private final List<LogMonitor> logMonitors = new ArrayList<>(0);
     private boolean killed = false;
     private boolean debug = false;
     private String encoding = System.getProperty("file.encoding");
@@ -68,7 +68,7 @@ public class SingleLogWatcher {
     private boolean hasEnded = false;
     private boolean hasStarted = false;
     private File file = null;
-    private ByteArrayOutputStream line = new ByteArrayOutputStream(128);
+    private final ByteArrayOutputStream line = new ByteArrayOutputStream(128);
     private RandomAccessFile raf;
 
     private boolean checking = true;

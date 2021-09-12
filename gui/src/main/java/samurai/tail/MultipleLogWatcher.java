@@ -22,12 +22,12 @@ import java.util.List;
 
 public class MultipleLogWatcher implements LogMonitor {
     private SingleLogWatcher currentLogWatcher = null;
-    private List<File> files;
-    private List<LogMonitor> logMonitors = new ArrayList<LogMonitor>();
-    private String encoding;
+    private final List<File> files;
+    private final List<LogMonitor> logMonitors = new ArrayList<>();
+    private final String encoding;
 
     public MultipleLogWatcher(File[] files, String encoding) {
-        this.files = new ArrayList<File>(files.length);
+        this.files = new ArrayList<>(files.length);
         for (int i = 0; i < files.length; i++) {
             this.files.add(files[i]);
         }

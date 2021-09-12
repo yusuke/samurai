@@ -40,63 +40,56 @@ import java.awt.dnd.DropTargetDropEvent;
 import java.awt.dnd.DropTargetEvent;
 import java.awt.dnd.DropTargetListener;
 import java.awt.dnd.InvalidDnDOperationException;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
 public class MainFrame extends JFrame implements KeyListener, FileHistoryListener, CloseListener {
-    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    private JMenuItem menuEditPreferences = new JMenuItem("menu.edit.preferences");
-    public ConfigDialog configDialog;
-    private JMenuBar menuBar = new JMenuBar();
-    private JMenu menuFile = new JMenu("menu.file");
-    private JMenuItem menuFileNewTab = new JMenuItem("menu.file.newTab");
-    private JMenuItem menuFileOpen;
-    private JMenu menuFileRecent;
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
+    private final JMenuItem menuEditPreferences = new JMenuItem("menu.edit.preferences");
+    public final ConfigDialog configDialog;
+    private final JMenuBar menuBar = new JMenuBar();
+    private final JMenu menuFile = new JMenu("menu.file");
+    private final JMenuItem menuFileNewTab = new JMenuItem("menu.file.newTab");
+    private final JMenuItem menuFileOpen;
+    private final JMenu menuFileRecent;
     private JMenu menuFileLocalProcesses;
-    private JMenuItem menuFileClose = new JMenuItem("menu.file.close");
+    private final JMenuItem menuFileClose = new JMenuItem("menu.file.close");
 
-    private JMenuItem menuFileExit = new JMenuItem("menu.file.exit");
-    private JMenu menuEdit = new JMenu("menu.edit");
-    private JMenuItem menuEditCopy = new JMenuItem("menu.edit.copy");
-    private JMenuItem menuEditFind = new JMenuItem("menu.edit.find");
-    private JMenuItem menuEditFindPrevious = new JMenuItem("menu.edit.findPrevious");
-    private JMenuItem menuEditFindNext = new JMenuItem("menu.edit.findNext");
+    private final JMenuItem menuFileExit = new JMenuItem("menu.file.exit");
+    private final JMenu menuEdit = new JMenu("menu.edit");
+    private final JMenuItem menuEditCopy = new JMenuItem("menu.edit.copy");
+    private final JMenuItem menuEditFind = new JMenuItem("menu.edit.find");
+    private final JMenuItem menuEditFindPrevious = new JMenuItem("menu.edit.findPrevious");
+    private final JMenuItem menuEditFindNext = new JMenuItem("menu.edit.findNext");
 
-    private JMenu menuView = new JMenu("menu.view");
-    private JMenuItem menuViewReload = new JMenuItem("menu.view.reload");
-    private JMenuItem menuViewNext = new JMenuItem("menu.view.next");
-    private JMenuItem menuViewPrevious = new JMenuItem("menu.view.previous");
-    private JMenuItem menuViewStatusBar = new JCheckBoxMenuItem("menu.view.statusBar");
-    private JMenu menuViewEncoding = new JMenu("menu.view.encoding");
-    private JMenuItem menuViewClearBuffer = new JMenuItem("menu.view.clearBuffer");
+    private final JMenu menuView = new JMenu("menu.view");
+    private final JMenuItem menuViewReload = new JMenuItem("menu.view.reload");
+    private final JMenuItem menuViewNext = new JMenuItem("menu.view.next");
+    private final JMenuItem menuViewPrevious = new JMenuItem("menu.view.previous");
+    private final JMenuItem menuViewStatusBar = new JCheckBoxMenuItem("menu.view.statusBar");
+    private final JMenu menuViewEncoding = new JMenu("menu.view.encoding");
+    private final JMenuItem menuViewClearBuffer = new JMenuItem("menu.view.clearBuffer");
 
-    private JMenu menuHelp = new JMenu("menu.help");
-    private JMenuItem menuHelpAbout = new JMenuItem("menu.help.about");
-    public AboutSamuraiDialog dialog = new AboutSamuraiDialog(this);
-    private TileTabPanel<SamuraiPanel> tab = new TileTabPanel<SamuraiPanel>(true) {
+    private final JMenu menuHelp = new JMenu("menu.help");
+    private final JMenuItem menuHelpAbout = new JMenuItem("menu.help.about");
+    public final AboutSamuraiDialog dialog = new AboutSamuraiDialog(this);
+    private final TileTabPanel<SamuraiPanel> tab = new TileTabPanel<>(true) {
         protected void selectedIndexChanged(int index) {
             setSelectedEncoding(getSelectedComponent().getEncoding());
         }
     };
-    private Context context;
+    private final Context context;
 
     private EncodingMenuItem selectedEncoding;
 
-    JPanel contentPane;
-    JPanel southPane = new JPanel();
-    JLabel statusBar = new JLabel();
-    BorderLayout borderLayout1 = new BorderLayout();
-    BorderLayout borderLayout2 = new BorderLayout();
-    SearchPanel searcher;
+    final JPanel contentPane;
+    final JPanel southPane = new JPanel();
+    final JLabel statusBar = new JLabel();
+    final BorderLayout borderLayout1 = new BorderLayout();
+    final BorderLayout borderLayout2 = new BorderLayout();
+    final SearchPanel searcher;
     private boolean searchPanelAdded = false;
 
     //Construct the frame
@@ -377,23 +370,23 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                     }
                 }
                 //easter eggs
-                if (searcher.config_searchText.getText().toLowerCase().equals("kill bill")) {
+                if (searcher.config_searchText.getText().equalsIgnoreCase("kill bill")) {
                     activeComponent.setBackground(Color.YELLOW);
                     activeComponent.setForeground(Color.BLACK);
                 }
-                if (searcher.config_searchText.getText().toLowerCase().equals("kill bill2")) {
+                if (searcher.config_searchText.getText().equalsIgnoreCase("kill bill2")) {
                     activeComponent.setBackground(Color.BLACK);
                     activeComponent.setForeground(Color.PINK);
                 }
-                if (searcher.config_searchText.getText().toLowerCase().equals("what is the matrix")) {
+                if (searcher.config_searchText.getText().equalsIgnoreCase("what is the matrix")) {
                     activeComponent.setBackground(Color.BLACK);
                     activeComponent.setForeground(new Color(40, 250, 120));
                 }
-                if (searcher.config_searchText.getText().toLowerCase().equals("killed bill")) {
+                if (searcher.config_searchText.getText().equalsIgnoreCase("killed bill")) {
                     activeComponent.setBackground(Color.WHITE);
                     activeComponent.setForeground(Color.BLACK);
                 }
-                if (searcher.config_searchText.getText().toLowerCase().equals("there is no spoon")) {
+                if (searcher.config_searchText.getText().equalsIgnoreCase("there is no spoon")) {
                     activeComponent.setBackground(Color.WHITE);
                     activeComponent.setForeground(Color.BLACK);
                 }
@@ -534,7 +527,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             return;
         }
 
-        if (searcher.isDisplayable() && e.getKeyChar() != e.CHAR_UNDEFINED && ((e.getModifiers() & e.SHIFT_DOWN_MASK) == e.getModifiers())) {
+        if (searcher.isDisplayable() && e.getKeyChar() != KeyEvent.CHAR_UNDEFINED && ((e.getModifiers() & InputEvent.SHIFT_DOWN_MASK) == e.getModifiers())) {
             switch (e.getKeyChar()) {
                 case KeyEvent.VK_ENTER:
                     searchNext();
@@ -546,7 +539,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                     break;
                 case KeyEvent.VK_BACK_SPACE:
                     String beforeCaret = searcher.config_searchText.getText().substring(0, searcher.config_searchText.getSelectionStart());
-                    String afterCaret = searcher.config_searchText.getText().substring(searcher.config_searchText.getSelectionEnd(), searcher.config_searchText.getText().length());
+                    String afterCaret = searcher.config_searchText.getText().substring(searcher.config_searchText.getSelectionEnd());
                     if (null != searcher.config_searchText.getSelectedText()) {
                         searcher.config_searchText.setText(beforeCaret + afterCaret);
                     } else {
@@ -569,7 +562,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         } else {
             textCom = getActiveComponent();
         }
-        if (searcher.isDisplayable() && e.getKeyChar() != e.CHAR_UNDEFINED) {
+        if (searcher.isDisplayable() && e.getKeyChar() != KeyEvent.CHAR_UNDEFINED) {
             switch (e.getKeyChar()) {
                 case KeyEvent.VK_ENTER:
                     searchNext();
@@ -583,7 +576,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                     searcher.config_searchText.grabFocus();
             }
         } else if (null != textCom) {
-            if (e.getKeyChar() != e.CHAR_UNDEFINED && ((e.getModifiers() & e.SHIFT_MASK) == e.getModifiers())) {
+            if (e.getKeyChar() != KeyEvent.CHAR_UNDEFINED && ((e.getModifiers() & InputEvent.SHIFT_MASK) == e.getModifiers())) {
                 switch (e.getKeyChar()) {
                     case KeyEvent.VK_BACK_SPACE:
                         //delete one character from the search text
@@ -671,8 +664,8 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     }
 
     JFrame THIS = this;
-    Border border = new LineBorder(SystemColor.textHighlight, 2, true);
-    Border emptyBorder = new EmptyBorder(2, 2, 2, 2);
+    final Border border = new LineBorder(SystemColor.textHighlight, 2, true);
+    final Border emptyBorder = new EmptyBorder(2, 2, 2, 2);
 
     private void setDragAccepting() {
         contentPane.setBorder(border);
@@ -728,7 +721,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         }
     }
 
-    private DropTargetListener tabDropTargetListener = new DropTargetListener() {
+    private final DropTargetListener tabDropTargetListener = new DropTargetListener() {
         public void dragEnter(DropTargetDragEvent event) {
             int index;
             if (-1 != (index = tab.indexAtLocation(event.getLocation().x, event.getLocation().y))) {
@@ -789,7 +782,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         }
     };
 
-    private DropTargetListener mainFrameDropTargetListener = new DropTargetListener() {
+    private final DropTargetListener mainFrameDropTargetListener = new DropTargetListener() {
         public void dragEnter(DropTargetDragEvent event) {
             setDragAccepting();
         }
@@ -864,7 +857,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     }
 
     class SamuraiDropTargetListener implements DropTargetListener {
-        SamuraiPanel samuraiPanel;
+        final SamuraiPanel samuraiPanel;
 
         SamuraiDropTargetListener(SamuraiPanel samuraiPanel) {
             this.samuraiPanel = samuraiPanel;
@@ -916,7 +909,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
 
     //    static GUIResourceBundle resource = GUIResourceBundle.getInstance("encoding-display-names");
     class EncodingMenuItem extends JCheckBoxMenuItem {
-        String encoding;
+        final String encoding;
 
         EncodingMenuItem(String encoding) {
             super(encoding);

@@ -59,10 +59,10 @@ public class TestConfiguration extends TestCase {
 
     }
 
-    public boolean config_ignoreCase = false;
-    public int config_intvalue = 0;
-    public String config_string = null;
-    public JCheckBox config_checkbox = new JCheckBox();
+    public final boolean config_ignoreCase = false;
+    public final int config_intvalue = 0;
+    public final String config_string = null;
+    public final JCheckBox config_checkbox = new JCheckBox();
 
     public void testApply() {
         config_checkbox.setSelected(false);

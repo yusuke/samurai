@@ -97,7 +97,7 @@ public class TestPlotData extends TestCase implements GraphCanvas {
         expectedColor = color;
     }
 
-    List<int[]> expected = new ArrayList<int[]>();
+    final List<int[]> expected = new ArrayList<>();
     boolean assertLines = false;
     int count = 0;
 

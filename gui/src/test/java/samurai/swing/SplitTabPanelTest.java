@@ -28,9 +28,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class SplitTabPanelTest extends JFrame {
-    GridBagLayout gbl = new GridBagLayout();
-    BorderLayout borderLayout1 = new BorderLayout();
-    TilePanel splitTabPanel = new TilePanel(true);
+    final GridBagLayout gbl = new GridBagLayout();
+    final BorderLayout borderLayout1 = new BorderLayout();
+    final TilePanel splitTabPanel = new TilePanel(true);
     int orientation = 1;
 
     public SplitTabPanelTest() {
@@ -38,7 +38,7 @@ public class SplitTabPanelTest extends JFrame {
 //        useGBL();
     }
 
-    private Dimension dividerSize = new Dimension(3,3);
+    private final Dimension dividerSize = new Dimension(3,3);
     private JPanel getPanel(){
         JPanel divider = new JPanel();
         divider.setMinimumSize(dividerSize);
@@ -48,9 +48,9 @@ public class SplitTabPanelTest extends JFrame {
         return divider;
     }
 
-    JTextArea ta1 = new JTextArea("1");
-    JTextArea ta2 = new JTextArea("2");
-    JButton ta3 = new JButton("switch");
+    final JTextArea ta1 = new JTextArea("1");
+    final JTextArea ta2 = new JTextArea("2");
+    final JButton ta3 = new JButton("switch");
     private void useGBL(){
 //        JTextArea ta3 = new JTextArea("3");
         ta3.addActionListener(new ActionListener(){
@@ -69,7 +69,7 @@ public class SplitTabPanelTest extends JFrame {
         ta1.setPreferredSize(new Dimension(0,0));
         ta2.setPreferredSize(new Dimension(0,0));
         ta3.setPreferredSize(new Dimension(0,0));
-           c.fill = c.BOTH;
+           c.fill = GridBagConstraints.BOTH;
         c.gridy = 0;
         c.weighty = 100;
 

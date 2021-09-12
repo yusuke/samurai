@@ -38,9 +38,9 @@ import java.awt.image.BufferedImage;
 
 
 public class LineGraphPanel extends JPanel implements ClipBoardOperationListener, LineGraph {
-    BorderLayout borderLayout1 = new BorderLayout();
-    JScrollBar scrollBar = new JScrollBar();
-    JPanel panel = new JPanel() {
+    final BorderLayout borderLayout1 = new BorderLayout();
+    final JScrollBar scrollBar = new JScrollBar();
+    final JPanel panel = new JPanel() {
         public void paint(Graphics g) {
             super.paint(g);
             draw(g, this.getBounds());
@@ -115,7 +115,7 @@ public class LineGraphPanel extends JPanel implements ClipBoardOperationListener
         }
     }
 
-    PlotData plotData = new PlotData();
+    final PlotData plotData = new PlotData();
 
     private boolean splitted = false;
 
@@ -136,7 +136,7 @@ public class LineGraphPanel extends JPanel implements ClipBoardOperationListener
     }
 
     class LineGraphCanvas implements GraphCanvas {
-        Graphics g;
+        final Graphics g;
 
         LineGraphCanvas(Graphics g) {
             this.g = g;
@@ -223,7 +223,7 @@ public class LineGraphPanel extends JPanel implements ClipBoardOperationListener
         }
     }
 
-    public PlotSettingDialog plotSetting = new PlotSettingDialog();
+    public final PlotSettingDialog plotSetting = new PlotSettingDialog();
 
     public void cut() {
     }
@@ -252,7 +252,7 @@ public class LineGraphPanel extends JPanel implements ClipBoardOperationListener
 
     // This class is used to hold an image while on the clipboard.
     public static class ImageSelection implements Transferable {
-        private Image image;
+        private final Image image;
 
         public ImageSelection(Image image) {
             this.image = image;
@@ -280,7 +280,7 @@ public class LineGraphPanel extends JPanel implements ClipBoardOperationListener
 }
 
 class LineGraphPanel_this_componentAdapter extends java.awt.event.ComponentAdapter {
-    LineGraphPanel adaptee;
+    final LineGraphPanel adaptee;
 
     LineGraphPanel_this_componentAdapter(LineGraphPanel adaptee) {
         this.adaptee = adaptee;
@@ -292,7 +292,7 @@ class LineGraphPanel_this_componentAdapter extends java.awt.event.ComponentAdapt
 }
 
 class LineGraphPanel_scrollBar_adjustmentAdapter implements java.awt.event.AdjustmentListener {
-    LineGraphPanel adaptee;
+    final LineGraphPanel adaptee;
 
     LineGraphPanel_scrollBar_adjustmentAdapter(LineGraphPanel adaptee) {
         this.adaptee = adaptee;
@@ -304,7 +304,7 @@ class LineGraphPanel_scrollBar_adjustmentAdapter implements java.awt.event.Adjus
 }
 
 class LineGraphPanel_this_mouseMotionAdapter extends java.awt.event.MouseMotionAdapter {
-    LineGraphPanel adaptee;
+    final LineGraphPanel adaptee;
 
     LineGraphPanel_this_mouseMotionAdapter(LineGraphPanel adaptee) {
         this.adaptee = adaptee;
@@ -316,7 +316,7 @@ class LineGraphPanel_this_mouseMotionAdapter extends java.awt.event.MouseMotionA
 }
 
 class LineGraphPanel_this_mouseAdapter extends java.awt.event.MouseAdapter {
-    LineGraphPanel adaptee;
+    final LineGraphPanel adaptee;
 
     LineGraphPanel_this_mouseAdapter(LineGraphPanel adaptee) {
         this.adaptee = adaptee;

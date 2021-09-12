@@ -24,7 +24,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class TestThreadFilter  extends TestCase {
-    ThreadStatistic statistic = new ThreadStatistic();
+    final ThreadStatistic statistic = new ThreadStatistic();
 
     protected void setUp() throws Exception {
         super.setUp();

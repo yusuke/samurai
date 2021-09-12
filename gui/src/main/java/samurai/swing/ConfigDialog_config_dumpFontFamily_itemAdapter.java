@@ -17,7 +17,7 @@ package samurai.swing;
 
 class ConfigDialog_config_dumpFontFamily_itemAdapter implements java.awt.event.
         ItemListener {
-    ConfigDialog adaptee;
+    final ConfigDialog adaptee;
 
     ConfigDialog_config_dumpFontFamily_itemAdapter(ConfigDialog adaptee) {
         this.adaptee = adaptee;

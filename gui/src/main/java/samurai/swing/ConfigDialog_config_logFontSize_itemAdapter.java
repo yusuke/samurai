@@ -17,7 +17,7 @@ package samurai.swing;
 
 class ConfigDialog_config_logFontSize_itemAdapter implements java.awt.event.
         ItemListener {
-    ConfigDialog adaptee;
+    final ConfigDialog adaptee;
 
     ConfigDialog_config_logFontSize_itemAdapter(ConfigDialog adaptee) {
         this.adaptee = adaptee;

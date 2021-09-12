@@ -24,10 +24,10 @@ import java.util.ArrayList;
 public abstract class AbstractGraphTest extends TestCase implements LineGraph,LineGraphRenderer{
     protected int count = 0;
 
-    List<double[]> expected = new ArrayList<double[]>();
-    protected List<Double> expectedMax = new ArrayList<Double>();
+    final List<double[]> expected = new ArrayList<>();
+    protected final List<Double> expectedMax = new ArrayList<>();
 
-    public LineGraph addLineGraph(String line, String labels[]) {
+    public LineGraph addLineGraph(String line, String[] labels) {
         this.setLabels(labels);
         return this;
     }

@@ -23,7 +23,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class TestBEAThreadDump extends TestCase {
-    samurai.core.ThreadStatistic statistic = new ThreadStatistic();
+    final samurai.core.ThreadStatistic statistic = new ThreadStatistic();
 
     public TestBEAThreadDump(String name) {
         super(name);

@@ -26,7 +26,7 @@ import java.io.PrintWriter;
 
 public class TestLogWatcher extends TestCase implements LogMonitor {
     LogWatcher logWatcher;
-    boolean DEBUG = false;
+    final boolean DEBUG = false;
 
     public static void main(String[] args) {
         junit.textui.TestRunner.run(TestLogWatcher.class);

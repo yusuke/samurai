@@ -29,19 +29,20 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
 public class VelocityHtmlRenderer implements Constants {
-    private ResourceBundle resource = ResourceBundle.getBundle("samurai.web.messages");
+    private final ResourceBundle resource = ResourceBundle.getBundle("samurai.web.messages");
     public String config_wrapDump = "true";
-    public String style;
+    public final String style;
     private Template tableView;
     private Template threaddumpView;
     private Template sequenceView;
     private String baseurl;
-    private Util util = new Util();
+    private final Util util = new Util();
 
     public VelocityHtmlRenderer(String style) {
         this(style, VelocityHtmlRenderer.class.getProtectionDomain().getCodeSource().getLocation().toString());
@@ -168,7 +169,7 @@ public class VelocityHtmlRenderer implements Constants {
             BufferedWriter writer = null;
             try {
                 fos = new FileOutputStream(dir + File.separator + fileName);
-                writer = new BufferedWriter(new OutputStreamWriter(fos, "UTF-8"));
+                writer = new BufferedWriter(new OutputStreamWriter(fos, StandardCharsets.UTF_8));
                 writer.write(utf8Content);
                 writer.close();
             } finally {

@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExecuteThread extends Thread {
-    private List<Schedule> tasks = new ArrayList<Schedule>();
+    private final List<Schedule> tasks = new ArrayList<>();
 
     public ExecuteThread() {
         super("Execute Thread");
@@ -131,8 +131,8 @@ public class ExecuteThread extends Thread {
 }
 
 class Schedule {
-    private Task task;
-    private long timeToExecute;
+    private final Task task;
+    private final long timeToExecute;
 
     Schedule(Task task, long timeToExecute) {
         this.task = task;

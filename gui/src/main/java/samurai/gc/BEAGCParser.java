@@ -24,7 +24,7 @@ public class BEAGCParser implements LineGraphDataSourceParser {
     public BEAGCParser() {
     }
 
-    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private LineGraph lineGraph = null;
     private double memoryMax = 0;
     private double currentMemoryMax = 0;

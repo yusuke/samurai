@@ -17,39 +17,39 @@ package samurai.swing;
 
 public class ConfigDialog extends javax.swing.JDialog {
     //    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    public javax.swing.JButton okButton = new javax.swing.JButton();
-    public javax.swing.JButton cancelButton = new javax.swing.JButton();
-    public javax.swing.JTabbedPane jTabbedPane1 = new javax.swing.JTabbedPane();
+    public final javax.swing.JButton okButton = new javax.swing.JButton();
+    public final javax.swing.JButton cancelButton = new javax.swing.JButton();
+    public final javax.swing.JTabbedPane jTabbedPane1 = new javax.swing.JTabbedPane();
 
-    java.awt.GridBagLayout gridBagLayout1 = new java.awt.GridBagLayout();
+    final java.awt.GridBagLayout gridBagLayout1 = new java.awt.GridBagLayout();
 
-    javax.swing.JPanel logConfigPanel = new javax.swing.JPanel();
-    java.awt.GridBagLayout logConfigLayout = new java.awt.GridBagLayout();
-    public javax.swing.JLabel labelFontSize = new javax.swing.JLabel();
-    public javax.swing.JLabel dumpFontSize = new javax.swing.JLabel();
-    public javax.swing.JLabel logFontSample = new javax.swing.JLabel();
-    public javax.swing.JLabel encoding = new javax.swing.JLabel();
-    public javax.swing.JCheckBox config_wrapLog = new javax.swing.JCheckBox();
-    public javax.swing.JComboBox config_logFontFamily = new javax.swing.JComboBox();
-    public javax.swing.JComboBox config_logFontSize = new javax.swing.JComboBox();
-    public javax.swing.JComboBox config_encoding = new javax.swing.JComboBox();
+    final javax.swing.JPanel logConfigPanel = new javax.swing.JPanel();
+    final java.awt.GridBagLayout logConfigLayout = new java.awt.GridBagLayout();
+    public final javax.swing.JLabel labelFontSize = new javax.swing.JLabel();
+    public final javax.swing.JLabel dumpFontSize = new javax.swing.JLabel();
+    public final javax.swing.JLabel logFontSample = new javax.swing.JLabel();
+    public final javax.swing.JLabel encoding = new javax.swing.JLabel();
+    public final javax.swing.JCheckBox config_wrapLog = new javax.swing.JCheckBox();
+    public final javax.swing.JComboBox config_logFontFamily = new javax.swing.JComboBox();
+    public final javax.swing.JComboBox config_logFontSize = new javax.swing.JComboBox();
+    public final javax.swing.JComboBox config_encoding = new javax.swing.JComboBox();
 
-    javax.swing.JPanel dumpConfigPanel = new javax.swing.JPanel();
-    public javax.swing.JLabel dumpFontSample = new javax.swing.JLabel();
-    java.awt.GridBagLayout dumpConfigLayout = new java.awt.GridBagLayout();
-    public javax.swing.JCheckBox config_wrapDump = new javax.swing.JCheckBox();
-    public javax.swing.JComboBox config_dumpFontFamily = new javax.swing.JComboBox();
-    public javax.swing.JComboBox config_dumpFontSize = new javax.swing.JComboBox();
+    final javax.swing.JPanel dumpConfigPanel = new javax.swing.JPanel();
+    public final javax.swing.JLabel dumpFontSample = new javax.swing.JLabel();
+    final java.awt.GridBagLayout dumpConfigLayout = new java.awt.GridBagLayout();
+    public final javax.swing.JCheckBox config_wrapDump = new javax.swing.JCheckBox();
+    public final javax.swing.JComboBox config_dumpFontFamily = new javax.swing.JComboBox();
+    public final javax.swing.JComboBox config_dumpFontSize = new javax.swing.JComboBox();
 
     //  public JPanel searchConfigPanel = new JPanel();
 //  public JCheckBox config_useRegexp = new JCheckBox();
     //  public JCheckBox config_ignoreCase = new JCheckBox();
-    public javax.swing.JLabel jLabel1 = new javax.swing.JLabel();
+    public final javax.swing.JLabel jLabel1 = new javax.swing.JLabel();
     java.awt.GridBagLayout gridBagLayout2 = new java.awt.GridBagLayout();
     //  JPanel jPanel1 = new JPanel();
     java.awt.GridBagLayout gridBagLayout3 = new java.awt.GridBagLayout();
-    public javax.swing.JCheckBox config_shrinkIdleThreads = new javax.swing.JCheckBox();
-    public javax.swing.JLabel labelFontFamily = new javax.swing.JLabel();
+    public final javax.swing.JCheckBox config_shrinkIdleThreads = new javax.swing.JCheckBox();
+    public final javax.swing.JLabel labelFontFamily = new javax.swing.JLabel();
     javax.swing.ButtonGroup buttonGroup1 = new javax.swing.ButtonGroup();
 
     public ConfigDialog(java.awt.Frame frame, String title, boolean modal, Context context) {
@@ -69,7 +69,7 @@ public class ConfigDialog extends javax.swing.JDialog {
         this(null, "*ConfigDialog.title*", false, context);
     }
 
-    ConfigDialog THIS = this;
+    final ConfigDialog THIS = this;
 
     private void jbInit() throws Exception {
         //panel root
@@ -279,7 +279,7 @@ public class ConfigDialog extends javax.swing.JDialog {
 }
 
 class ConfigDialog_this_windowAdapter extends java.awt.event.WindowAdapter {
-    ConfigDialog adaptee;
+    final ConfigDialog adaptee;
 
     ConfigDialog_this_windowAdapter(ConfigDialog adaptee) {
         this.adaptee = adaptee;

@@ -31,7 +31,7 @@ public class CSVParser implements LineGraphDataSourceParser {
     public boolean parse(String line, LineGraphRenderer renderer) {
         if (null == lineGraphs) {
             labels = line.split(",");
-            lineGraphs = new ArrayList<LineGraph>(labels.length);
+            lineGraphs = new ArrayList<>(labels.length);
             for (String label : labels) {
                 lineGraphs.add(renderer.addLineGraph(label, new String[]{label}));
             }

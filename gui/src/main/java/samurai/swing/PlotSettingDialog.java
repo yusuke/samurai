@@ -38,16 +38,16 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 public class PlotSettingDialog extends JDialog {
-    JPanel panel1 = new JPanel();
-    GridBagLayout gridBagLayout1 = new GridBagLayout();
-    public JButton okButton = new JButton();
-    public JButton cancelButton = new JButton();
-    public JTextField label = new JTextField();
-    public JLabel jLabel1 = new JLabel();
-    JColorChooser colorChooser = new JColorChooser();
-    public JLabel jLabel2 = new JLabel();
-    JTextField max = new JTextField();
-    public JCheckBox plotVisible = new JCheckBox();
+    final JPanel panel1 = new JPanel();
+    final GridBagLayout gridBagLayout1 = new GridBagLayout();
+    public final JButton okButton = new JButton();
+    public final JButton cancelButton = new JButton();
+    public final JTextField label = new JTextField();
+    public final JLabel jLabel1 = new JLabel();
+    final JColorChooser colorChooser = new JColorChooser();
+    public final JLabel jLabel2 = new JLabel();
+    final JTextField max = new JTextField();
+    public final JCheckBox plotVisible = new JCheckBox();
 
     private boolean okPressed = false;
     private boolean cancelPressed = false;

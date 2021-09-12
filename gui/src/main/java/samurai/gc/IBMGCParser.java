@@ -21,7 +21,7 @@ import samurai.util.LineGraphDataSourceParser;
 import java.awt.Color;
 
 public class IBMGCParser implements LineGraphDataSourceParser {
-    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private boolean labelSet = false;
     private LineGraph lineGraph;
     private double memoryMax = 0;

@@ -102,7 +102,7 @@ public class LocalProcesses {
     }
 
     class LocalProcessMenuItem extends JMenuItem {
-        VM vm;
+        final VM vm;
 
         public LocalProcessMenuItem(VM vm) {
             super(String.format("%s %s", vm.getPid(), vm.getFqcn()));

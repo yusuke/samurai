@@ -23,15 +23,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LogWatcher extends Thread {
-    private List<LogMonitor> logMonitors = new ArrayList<LogMonitor>(3);
+    private final List<LogMonitor> logMonitors = new ArrayList<>(3);
     private boolean killed = false;
     private boolean debug = false;
-    private List<File> pendingFiles = new ArrayList<File>(0);
+    private List<File> pendingFiles = new ArrayList<>(0);
     private List<File> newPendingFiles = null;
-    private String encoding;
+    private final String encoding;
 
     public void setFiles(File[] files) {
-        newPendingFiles = new ArrayList<File>();
+        newPendingFiles = new ArrayList<>();
         for (int i = 0; i < files.length; i++) {
             newPendingFiles.add(files[i]);
         }

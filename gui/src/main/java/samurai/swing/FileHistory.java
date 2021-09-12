@@ -28,10 +28,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class FileHistory {
-    private List<File> files = new ArrayList<File>();
+    private final List<File> files = new ArrayList<>();
     private final int numberToRemember = 10;
     public String config_RecentlyUsedFiles = "";
-    private Configuration config;
+    private final Configuration config;
     private FileHistoryListener listener = null;
     private final JMenu openRecentMenu;
     private JMenuItem openMenu = null;
@@ -178,7 +178,7 @@ public final class FileHistory {
     }
 
     class HistoryMenu extends JMenuItem implements ActionListener {
-        private File file;
+        private final File file;
 
         public HistoryMenu(File file) {
             super(file.getName() + " - " + file.getAbsolutePath());

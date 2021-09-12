@@ -27,8 +27,8 @@ public class DottedBorder extends EmptyBorder {
         super(borderWidth, borderWidth, borderWidth, borderWidth);
     }
 
-    private int dotlength = 2;
-    private int inset = 2;
+    private final int dotlength = 2;
+    private final int inset = 2;
 
     public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
         super.paintBorder(c, g, x, y, width, height);

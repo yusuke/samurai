@@ -24,8 +24,8 @@ import java.io.File;
 import java.io.IOException;
 
 public abstract class LogRenderer extends JPanel implements LogMonitor {
-    private boolean hideOnClose;
-    private SamuraiPanel samuraiPanel;
+    private final boolean hideOnClose;
+    private final SamuraiPanel samuraiPanel;
     private boolean added = false;
 
     public LogRenderer(boolean hideOnClose, SamuraiPanel samuraiPanel) {
@@ -91,8 +91,8 @@ public abstract class LogRenderer extends JPanel implements LogMonitor {
     }
 
     class VersionAwareTask implements Runnable {
-        int version;
-        Runnable target;
+        final int version;
+        final Runnable target;
 
         VersionAwareTask(Runnable target, int version) {
             this.target = target;

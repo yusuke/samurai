@@ -39,21 +39,21 @@ import java.util.List;
 
 public class TileTabPanel<T extends JComponent> extends JPanel implements MouseListener, MouseMotionListener {
 
-    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    JPopupMenu popupMenu = new JPopupMenu();
-    private JMenuItem menuCloseTab = new JMenuItem("TileTabPanel.closeTab");
-    private JMenuItem menuTab = new JMenuItem("TileTabPanel.tab");
-    private JMenuItem menuHorizontal = new JMenuItem("TileTabPanel.splitHorizontal");
-    private JMenuItem menuVertical = new JMenuItem("TileTabPanel.splitVertical");
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
+    final JPopupMenu popupMenu = new JPopupMenu();
+    private final JMenuItem menuCloseTab = new JMenuItem("TileTabPanel.closeTab");
+    private final JMenuItem menuTab = new JMenuItem("TileTabPanel.tab");
+    private final JMenuItem menuHorizontal = new JMenuItem("TileTabPanel.splitHorizontal");
+    private final JMenuItem menuVertical = new JMenuItem("TileTabPanel.splitVertical");
 
-    JMenuItem jMenuViewTab = new JMenuItem("TileTabPanel.tab");
-    JMenuItem jMenuViewSplitHorizontal = new JMenuItem("TileTabPanel.splitHorizontal");
-    JMenuItem jMenuViewSplitVertical = new JMenuItem("TileTabPanel.splitVertical");
+    final JMenuItem jMenuViewTab = new JMenuItem("TileTabPanel.tab");
+    final JMenuItem jMenuViewSplitHorizontal = new JMenuItem("TileTabPanel.splitHorizontal");
+    final JMenuItem jMenuViewSplitVertical = new JMenuItem("TileTabPanel.splitVertical");
 
-    private static ImageIcon closeIcon;
-    private static ImageIcon closePushedIcon;
-    private static ImageIcon closeHoverIcon;
-    private static ImageIcon nullIcon = new ImageIcon(TileTabPanel.class.getResource(
+    private static final ImageIcon closeIcon;
+    private static final ImageIcon closePushedIcon;
+    private static final ImageIcon closeHoverIcon;
+    private static final ImageIcon nullIcon = new ImageIcon(TileTabPanel.class.getResource(
             "null.gif"));
 
     static {
@@ -100,10 +100,10 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         return this.closable;
     }
 
-    private List<ComponentInfo<T>> components = new ArrayList<ComponentInfo<T>>(3);
+    private final List<ComponentInfo<T>> components = new ArrayList<>(3);
 
-    private TilePanel tilePanel;
-    JTabbedPane tab = new JTabbedPane();
+    private final TilePanel tilePanel;
+    final JTabbedPane tab = new JTabbedPane();
     BorderLayout borderLayout1;
     private int layout = TAB;
     public static final int TAB = 0;
@@ -145,7 +145,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         }
     }
 
-    private CloseAction closeAction = new CloseAction(-1);
+    private final CloseAction closeAction = new CloseAction(-1);
 
     class CloseAction implements ActionListener {
         private int index;
@@ -163,10 +163,8 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         }
     }
 
-    ;
-
     class OrientationChangeAction implements ActionListener {
-        private int orientation;
+        private final int orientation;
 
         OrientationChangeAction(int orientation) {
             this.orientation = orientation;
@@ -211,7 +209,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     }
 
     public void addComponent(String name, T component, ImageIcon icon) {
-        ComponentInfo<T> componentInfo = new ComponentInfo<T>(component, name, icon);
+        ComponentInfo<T> componentInfo = new ComponentInfo<>(component, name, icon);
         if (null == icon && closable) {
             componentInfo.setIcon(nullIcon);
         }
@@ -219,7 +217,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         switch (this.components.size()) {
             case 1:
                 if (!this.showTitleWithSingleComponent) {
-                    add((Component) this.components.get(0).getComponent(), BorderLayout.CENTER);
+                    add(this.components.get(0).getComponent(), BorderLayout.CENTER);
                     validate();
                 } else {
                     if (this.layout == TAB) {

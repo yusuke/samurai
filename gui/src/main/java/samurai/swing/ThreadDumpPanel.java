@@ -70,27 +70,27 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         ConfigurationListener, ClipBoardOperationListener {
     public String config_dumpFontFamily = "Monospace";
     public String config_dumpFontSize = "12";
-    private Properties velocityContext = new Properties();
+    private final Properties velocityContext = new Properties();
 
-    private JProgressBar progressBar = new JProgressBar();
+    private final JProgressBar progressBar = new JProgressBar();
 
-    ImageIcon forwardIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/forward.gif"));
-    ImageIcon backwardIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/backward.gif"));
+    final ImageIcon forwardIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/forward.gif"));
+    final ImageIcon backwardIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/backward.gif"));
     final public JButton saveButton = new JButton();
-    public JButton openButton = new JButton();
-    public JButton trashButton = new JButton();
-    public JToggleButton tableButton = new JToggleButton();
-    public JToggleButton fullButton = new JToggleButton();
-    public JToggleButton sequenceButton = new JToggleButton();
-    ImageIcon saveButtonIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/save.gif"));
+    public final JButton openButton = new JButton();
+    public final JButton trashButton = new JButton();
+    public final JToggleButton tableButton = new JToggleButton();
+    public final JToggleButton fullButton = new JToggleButton();
+    public final JToggleButton sequenceButton = new JToggleButton();
+    final ImageIcon saveButtonIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/save.gif"));
     ImageIcon openButtonIcon;
-    ImageIcon trashButtonIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/trash.gif"));
-    ImageIcon tableIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/tableButton.gif"));
-    ImageIcon fullButtonIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/fullButton.gif"));
-    ImageIcon sequenceButtonIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/sequenceButton.gif"));
-    BorderLayout borderLayout1 = new BorderLayout();
+    final ImageIcon trashButtonIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/trash.gif"));
+    final ImageIcon tableIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/tableButton.gif"));
+    final ImageIcon fullButtonIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/fullButton.gif"));
+    final ImageIcon sequenceButtonIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/sequenceButton.gif"));
+    final BorderLayout borderLayout1 = new BorderLayout();
     private String referer = null;
-    JEditorPane threadDumpPanel = new JEditorPane() {
+    final JEditorPane threadDumpPanel = new JEditorPane() {
         public void paint(Graphics g) {
             super.paint(g);
             if (referer != null) {
@@ -103,9 +103,9 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
             }
         }
     };
-    JPanel settingPanel = new JPanel();
-    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    private VelocityHtmlRenderer renderer = new VelocityHtmlRenderer("samurai/swing/css.vm");
+    final JPanel settingPanel = new JPanel();
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
+    private final VelocityHtmlRenderer renderer = new VelocityHtmlRenderer("samurai/swing/css.vm");
 
     public boolean config_wrapDump = false;
 
@@ -358,7 +358,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     }
 
     class RolloverBorder extends MouseAdapter {
-        private JButton button;
+        private final JButton button;
 
         RolloverBorder(JButton button) {
             this.button = button;
@@ -399,9 +399,9 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     }
 
     File savedLocation = null;
-    JPanel THIS = this;
+    final JPanel THIS = this;
 
-    ActionListener buttonListener = new ActionListener() {
+    final ActionListener buttonListener = new ActionListener() {
         public void actionPerformed(ActionEvent e) {
             Component source = (Component) e.getSource();
             if (source == saveButton) {
@@ -490,13 +490,9 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                 if (!button.isSelected()) {
                     button.setSelected(true);
                 } else {
-                    tableButton.setSelected(tableButton == button ? button.isSelected() :
-                            !button.isSelected());
-                    fullButton.setSelected(fullButton == button ?
-                            button.isSelected() : !button.isSelected());
-                    sequenceButton.setSelected(sequenceButton == button ?
-                            button.isSelected() :
-                            !button.isSelected());
+                    tableButton.setSelected((tableButton == button) == button.isSelected());
+                    fullButton.setSelected((fullButton == button) == button.isSelected());
+                    sequenceButton.setSelected((sequenceButton == button) == button.isSelected());
                     if (tableButton == button) {
                         filter.setMode(Constants.MODE_TABLE);
                     } else if (fullButton == button) {
@@ -538,7 +534,8 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     }
 
     class ProgressTask implements Runnable {
-        int finished, all;
+        final int finished;
+        final int all;
 
         ProgressTask(int finished, int all) {
             this.finished = finished;
@@ -572,11 +569,11 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         }
     }
 
-    GridBagLayout gridBagLayout1 = new GridBagLayout();
-    JButton buttonPrevious = new JButton();
-    JButton buttonNext = new JButton();
+    final GridBagLayout gridBagLayout1 = new GridBagLayout();
+    final JButton buttonPrevious = new JButton();
+    final JButton buttonNext = new JButton();
 
-    private ThreadFilter filter = new ThreadFilter();
+    private final ThreadFilter filter = new ThreadFilter();
 
     private ThreadDumpSequence[] threadList = null;
 
@@ -674,11 +671,11 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         }
     };
     private ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
-    JSplitPane jSplitPane1 = new JSplitPane();
-    JScrollPane jScrollPane2 = new JScrollPane();
-    JScrollPane jScrollPane3 = new JScrollPane();
-    JList showThreadList = new JList();
-    JLabel threadDumpStatus = new JLabel();
+    final JSplitPane jSplitPane1 = new JSplitPane();
+    final JScrollPane jScrollPane2 = new JScrollPane();
+    final JScrollPane jScrollPane3 = new JScrollPane();
+    final JList showThreadList = new JList();
+    final JLabel threadDumpStatus = new JLabel();
     File currentFile;
 
     public void onLine(File file, String line, long filePointer) {

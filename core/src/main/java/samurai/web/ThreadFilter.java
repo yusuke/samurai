@@ -21,6 +21,7 @@ import samurai.core.ThreadStatistic;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 
 public class ThreadFilter implements Serializable {
     private String mode;
@@ -161,17 +162,9 @@ public class ThreadFilter implements Serializable {
             }
 //      System.out.println(parambegin+":"+paramend);
             if (-1 != valueend) {
-                try {
-                    return URLDecoder.decode(query.substring(valuebegin, valueend), "UTF-8");
-                } catch (UnsupportedEncodingException uee) {
-                    throw new AssertionError("UTF-8 must be supported.");
-                }
+                return URLDecoder.decode(query.substring(valuebegin, valueend), StandardCharsets.UTF_8);
             } else {
-                try {
-                    return URLDecoder.decode(query.substring(valuebegin), "UTF-8");
-                } catch (UnsupportedEncodingException uee) {
-                    throw new AssertionError("UTF-8 must be supported.");
-                }
+                return URLDecoder.decode(query.substring(valuebegin), StandardCharsets.UTF_8);
             }
         }
     }

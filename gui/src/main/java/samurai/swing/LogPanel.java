@@ -33,11 +33,11 @@ import java.io.File;
 
 public class LogPanel extends LogRenderer implements AdjustmentListener,
         ConfigurationListener, ClipBoardOperationListener {
-    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    JScrollPane jScrollPane1 = new JScrollPane();
-    public JTextArea textArea = new JTextArea();
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
+    final JScrollPane jScrollPane1 = new JScrollPane();
+    public final JTextArea textArea = new JTextArea();
     //    public UnlimitedTextArea textArea = new UnlimitedTextArea();
-    JScrollBar verticalScrollBar = jScrollPane1.getVerticalScrollBar();
+    final JScrollBar verticalScrollBar = jScrollPane1.getVerticalScrollBar();
 
     public LogPanel(SamuraiPanel samuraiPanel) {
         super(false, samuraiPanel);
@@ -108,12 +108,12 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
         }
     }
 
-    Runnable clearTask = new Runnable() {
+    final Runnable clearTask = new Runnable() {
         public void run() {
             textArea.setText("");
         }
     };
-    Runnable clearTask2 = new Runnable() {
+    final Runnable clearTask2 = new Runnable() {
         public void run() {
             textArea.setText(resources.getMessage("LogPanel.dropFileHere") + "\n");
         }
@@ -146,9 +146,9 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
     }
 
     class FlushTask implements Runnable {
-        String[] buf;
-        long[] pointers;
-        int counter;
+        final String[] buf;
+        final long[] pointers;
+        final int counter;
 
         FlushTask(String[] buf, long[] pointers, int counter) {
             this.buf = buf;
@@ -184,7 +184,7 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
     //  private boolean fitlast = true;
     //  int lastValue = 0;
     int lastMax = 0;
-    BorderLayout borderLayout1 = new BorderLayout();
+    final BorderLayout borderLayout1 = new BorderLayout();
 
     public void adjustmentValueChanged(AdjustmentEvent event) {
         int max = verticalScrollBar.getMaximum();

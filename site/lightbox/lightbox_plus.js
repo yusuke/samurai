@@ -92,8 +92,8 @@ PagePos.prototype.update = function()
 function LightBox(option)
 {
     var self = this;
-    self._imgs = new Array();
-    self._sets = new Array();
+    self._imgs = [];
+    self._sets = [];
     self._wrap = null;
     self._box = null;
     self._img = null;
@@ -154,7 +154,7 @@ LightBox.prototype = {
             // set closure to onclick event
             if (rel != 'lightbox')
             {
-                if (!self._sets[rel]) self._sets[rel] = new Array();
+                if (!self._sets[rel]) self._sets[rel] = [];
                 self._sets[rel].push(num);
             }
         }

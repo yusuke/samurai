@@ -22,7 +22,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class TestAppleThreadDump extends TestCase {
-    samurai.core.ThreadStatistic statistic = new samurai.core.ThreadStatistic();
+    final samurai.core.ThreadStatistic statistic = new samurai.core.ThreadStatistic();
 
     public TestAppleThreadDump(String name) {
         super(name);

@@ -19,10 +19,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tailer extends Thread {
-    List<SingleLogWatcher> activeWatchers = new ArrayList<SingleLogWatcher>(0);
-    List<SingleLogWatcher> inactiveWatchers = new ArrayList<SingleLogWatcher>(0);
-    private long lastCheck;
-    private static Tailer tailer = new Tailer();
+    final List<SingleLogWatcher> activeWatchers = new ArrayList<>(0);
+    final List<SingleLogWatcher> inactiveWatchers = new ArrayList<>(0);
+    private static final Tailer tailer = new Tailer();
 
     /*package*/
     static Tailer getTailer() {
@@ -42,7 +41,7 @@ public class Tailer extends Thread {
     }
 
     public void run() {
-        lastCheck = System.currentTimeMillis();
+        long lastCheck = System.currentTimeMillis();
         while (true) {
             for (int i = 0; i < activeWatchers.size(); i++) {
                 SingleLogWatcher watcher = activeWatchers.get(i);
@@ -73,10 +72,10 @@ public class Tailer extends Thread {
                 lastCheck = System.currentTimeMillis();
             }
             if (activeWatchers.size() == 0) {
-//        System.out.println("sleep");
                 try {
+                    //noinspection BusyWait
                     Thread.sleep(50);
-                } catch (InterruptedException ie) {
+                } catch (InterruptedException ignored) {
                 }
             }
         }

@@ -27,6 +27,7 @@ import java.io.InputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 public class ThreadDumpUtil {
@@ -55,6 +56,6 @@ public class ThreadDumpUtil {
 
     }
     public static String getThreadDumpAsString(int pid) throws AttachNotSupportedException, IOException {
-        return new String(getThreadDump(pid), Charset.forName("UTF-8"));
+        return new String(getThreadDump(pid), StandardCharsets.UTF_8);
     }
 }

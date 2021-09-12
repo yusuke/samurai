@@ -38,20 +38,21 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
-    private static ImageIcon monitoringIcon = new ImageIcon(SamuraiPanel.class.getResource("images/monitoring.gif"));
-    private static ImageIcon readingIcon = new ImageIcon(SamuraiPanel.class.getResource("images/reading.gif"));
-    /*package*/static ImageIcon stoppedIcon = new ImageIcon(SamuraiPanel.class.getResource("images/stopped.gif"));
-    private List<LogRenderer> logRenderers = new ArrayList<LogRenderer>(3);
+    private static final ImageIcon monitoringIcon = new ImageIcon(Objects.requireNonNull(SamuraiPanel.class.getResource("images/monitoring.gif")));
+    private static final ImageIcon readingIcon = new ImageIcon(Objects.requireNonNull(SamuraiPanel.class.getResource("images/reading.gif")));
+    /*package*/static final ImageIcon stoppedIcon = new ImageIcon(Objects.requireNonNull(SamuraiPanel.class.getResource("images/stopped.gif")));
+    private final List<LogRenderer> logRenderers = new ArrayList<>(3);
 
-    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    BorderLayout borderLayout1 = new BorderLayout();
-    public TileTabPanel<JPanel> tab = new TileTabPanel<JPanel>(true);
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
+    final BorderLayout borderLayout1 = new BorderLayout();
+    public final TileTabPanel<JPanel> tab = new TileTabPanel<>(true);
     //  private LogWatcher logWatcher = new LogWatcher();
     private MultipleLogWatcher logWatcher;// = new MultipleLogWatcher();
 
-    private Context context = null;
+    private Context context;
 
     public SamuraiPanel(Context context, KeyListener listener, String encoding) {
         this.context = context;
@@ -62,7 +63,7 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
         logRenderers.add(new GraphPanel(this, context));
         logRenderers.add(new LogPanel(this));
         this.add(tab, BorderLayout.CENTER);
-        context.setIcon(this.stoppedIcon, this);
+        context.setIcon(stoppedIcon, this);
         addKeyListener(listener);
         tab.addKeyListener(listener);
         for (LogRenderer renderer : logRenderers) {
@@ -137,7 +138,7 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
         for (LogRenderer renderer : logRenderers) {
             renderer.close();
         }
-        context.setIcon(this.stoppedIcon, this);
+        context.setIcon(stoppedIcon, this);
         empty = true;
         this.currentFile = null;
     }
@@ -174,7 +175,7 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
 
     public synchronized void openFiles(File[] files) {
         if (0 < files.length) {
-            List<File> fileList = new ArrayList<File>(files.length);
+            List<File> fileList = new ArrayList<>(files.length);
             for (int i = 0; i < files.length; i++) {
                 if (!files[i].isDirectory()) {
                     fileList.add(files[i]);
@@ -255,19 +256,19 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
     }
 
     public void logStarted(File file, long filepointer) {
-        context.setIcon(this.readingIcon, this);
+        context.setIcon(readingIcon, this);
     }
 
     public void logEnded(File file, long filepointer) {
-        context.setIcon(this.stoppedIcon, this);
+        context.setIcon(stoppedIcon, this);
     }
 
     public void logWillEnd(File file, long filepointer) {
-        context.setIcon(this.monitoringIcon, this);
+        context.setIcon(monitoringIcon, this);
     }
 
     public void logContinued(File file, long filepointer) {
-        context.setIcon(this.readingIcon, this);
+        context.setIcon(readingIcon, this);
     }
 
     public void onException(File file, IOException ioe) {
@@ -281,8 +282,8 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
         close();
     }
 
-    Border lineBorder = new LineBorder(SystemColor.textHighlight, 2, true);
-    Border emptyBorder = new EmptyBorder(2, 2, 2, 2);
+    final Border lineBorder = new LineBorder(SystemColor.textHighlight, 2, true);
+    final Border emptyBorder = new EmptyBorder(2, 2, 2, 2);
 
     /*package*/void setDragAccepting() {
         setBorder(lineBorder);

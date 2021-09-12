@@ -35,12 +35,12 @@ import java.util.List;
 
 /*package*/class TilePanel extends JPanel implements AncestorListener {
 
-    GridBagLayout gridBagLayout = new GridBagLayout();
-    private List<ComponentInfo> components;
+    final GridBagLayout gridBagLayout = new GridBagLayout();
+    private final List<ComponentInfo> components;
     /**
      *
      */
-    private boolean supportsFocusable;
+    private final boolean supportsFocusable;
     /**
      * flag for tiling orientation
      */
@@ -48,12 +48,12 @@ import java.util.List;
 
     private int selectedIndex = 0;
 
-    private List<Tile> tiles = new ArrayList<Tile>(3);
-    private List<JPanel> dividers = new ArrayList<JPanel>(2);
+    private final List<Tile> tiles = new ArrayList<>(3);
+    private final List<JPanel> dividers = new ArrayList<>(2);
 
     public TilePanel(boolean supportsFocusable) {
         this.supportsFocusable = supportsFocusable;
-        this.components = new ArrayList<ComponentInfo>(3);
+        this.components = new ArrayList<>(3);
         this.setLayout(gridBagLayout);
         ensureOrientation();
     }
@@ -105,8 +105,8 @@ import java.util.List;
     }
 
 
-    private List<MouseListener> titleMouseListeners = new ArrayList<MouseListener>(1);
-    private List<MouseMotionListener> titleMouseMotionListeners = new ArrayList<MouseMotionListener>(1);
+    private final List<MouseListener> titleMouseListeners = new ArrayList<>(1);
+    private final List<MouseMotionListener> titleMouseMotionListeners = new ArrayList<>(1);
 
     public int getSelectedIndex() {
         return this.selectedIndex;
@@ -127,11 +127,7 @@ import java.util.List;
                 tiles.get(0).enableTitleWithoutFocus();
             } else {
                 for (int i = 0; i < tiles.size(); i++) {
-                    if (i == index) {
-                        tiles.get(i).setFocused(true);
-                    } else {
-                        tiles.get(i).setFocused(false);
-                    }
+                    tiles.get(i).setFocused(i == index);
                 }
             }
         }
@@ -161,7 +157,7 @@ import java.util.List;
         }
     }
 
-    MouseAdapter mouseAdapter = new MouseAdapter() {
+    final MouseAdapter mouseAdapter = new MouseAdapter() {
         public void mousePressed(MouseEvent mouseEvent) {
             this_mousePressed(mouseEvent);
         }
@@ -201,7 +197,7 @@ import java.util.List;
         }
     }
 
-    private List<GridBagConstraints> constraints = new ArrayList<GridBagConstraints>(3);
+    private final List<GridBagConstraints> constraints = new ArrayList<>(3);
 
     private GridBagConstraints getDividerConstraints(int grid) {
         GridBagConstraints dividerConstraint = new GridBagConstraints();
@@ -260,7 +256,7 @@ import java.util.List;
         add(splittedPanel, gbc);
 
         constraints.add(gbc);
-        ComponentInfo<JComponent> cf = new ComponentInfo<JComponent>(component, title, icon);
+        ComponentInfo<JComponent> cf = new ComponentInfo<>(component, title, icon);
         components.add(cf);
         tiles.add(splittedPanel);
         setMouseListners();
@@ -268,10 +264,10 @@ import java.util.List;
         validate();
     }
 
-    DividerMouseListener dividerMouseListener = new DividerMouseListener();
+    final DividerMouseListener dividerMouseListener = new DividerMouseListener();
 
     class DividerMouseListener extends MouseAdapter implements MouseMotionListener {
-        private int originalWidths[];
+        private int[] originalWidths;
         private int draggingDividerIndex;
         private int dragRangeMin;
         private int dragRangeMax;

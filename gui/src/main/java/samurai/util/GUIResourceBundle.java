@@ -44,15 +44,15 @@ import java.util.Properties;
 import java.util.ResourceBundle;
 
 public class GUIResourceBundle extends ResourceBundle {
-    private static Map<String, Map<String, GUIResourceBundle>> resourceses = new HashMap<String, Map<String, GUIResourceBundle>>();
+    private static final Map<String, Map<String, GUIResourceBundle>> resourceses = new HashMap<>();
     private static final String DEFAULT_RESOURCE_NAME = "messages";
 
-    private Properties props = new Properties();
+    private final Properties props = new Properties();
 
     public static synchronized GUIResourceBundle getInstance() {
         Map<String, GUIResourceBundle> defaultResource = resourceses.get(DEFAULT_RESOURCE_NAME);
         if (null == defaultResource) {
-            resourceses.put(DEFAULT_RESOURCE_NAME, defaultResource = new HashMap<String, GUIResourceBundle>());
+            resourceses.put(DEFAULT_RESOURCE_NAME, defaultResource = new HashMap<>());
         }
         String packageName = getCallerPackage();
         GUIResourceBundle theResources = defaultResource.get(
@@ -73,7 +73,7 @@ public class GUIResourceBundle extends ResourceBundle {
     public static synchronized GUIResourceBundle getInstance(String resourceName) {
         Map<String, GUIResourceBundle> defaultResource = resourceses.get(resourceName);
         if (null == defaultResource) {
-            resourceses.put(resourceName, defaultResource = new HashMap<String, GUIResourceBundle>());
+            resourceses.put(resourceName, defaultResource = new HashMap<>());
         }
         String packageName = getCallerPackage();
         GUIResourceBundle theResources = defaultResource.get(

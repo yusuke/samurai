@@ -15,8 +15,9 @@
  */
 package samurai.core;
 
+@SuppressWarnings({"InfiniteLoopStatement", "BusyWait"})
 public class DeadLockingThreads {
-    public static void main(String args[]) throws Exception {
+    public static void main(String[] args) throws Exception {
         Object obj1 = new Object();
         Object obj2 = new Object();
         Thread athread1 = new DeadLockingThread(obj1, obj2);
@@ -38,8 +39,8 @@ public class DeadLockingThreads {
 }
 
 class DeadLockingThread extends Thread {
-    Object lock1;
-    Object lock2;
+    final Object lock1;
+    final Object lock2;
 
     public DeadLockingThread(Object arg1, Object arg2) {
         lock1 = arg1;

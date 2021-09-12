@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LogWatcherThread extends Thread {
-    private List<LogMonitor> logMonitors = new ArrayList<LogMonitor>(0);
+    private final List<LogMonitor> logMonitors = new ArrayList<>(0);
     private boolean killed = false;
     private boolean debug = false;
     private List<File> pendingFiles;
@@ -34,7 +34,7 @@ public class LogWatcherThread extends Thread {
     }
 
     public void setFiles(File[] files) {
-        pendingFiles = new ArrayList<File>(files.length);
+        pendingFiles = new ArrayList<>(files.length);
         for (int i = 0; i < files.length; i++) {
             pendingFiles.add(files[i]);
         }
@@ -84,7 +84,7 @@ public class LogWatcherThread extends Thread {
     private boolean hasEnded = false;
     private boolean hasStarted = false;
     private File file = null;
-    private ByteArrayOutputStream line = new ByteArrayOutputStream(128);
+    private final ByteArrayOutputStream line = new ByteArrayOutputStream(128);
     private RandomAccessFile raf;
 
     public void run() {

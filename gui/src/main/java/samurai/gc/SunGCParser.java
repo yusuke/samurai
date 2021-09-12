@@ -23,7 +23,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SunGCParser implements LineGraphDataSourceParser {
-    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private HeapGraph newGraph = null;
     private HeapGraph oldGraph = null;
     private HeapGraph permGraph = null;
@@ -31,34 +31,34 @@ public class SunGCParser implements LineGraphDataSourceParser {
     /*
     [GC 115008K->103309K("129664K"), 0.0254331 secs]
     */
-    private Pattern heapSizePtn = Pattern.compile("(?<=K\\()[0-9]+");
+    private final Pattern heapSizePtn = Pattern.compile("(?<=K\\()[0-9]+");
     /*
     [GC "115008K"->103309K(129664K), 0.0254331 secs]
     */
-    private Pattern heapBeforeGCPtn = Pattern.compile("(?<= )[0-9]+(?=K->)");
+    private final Pattern heapBeforeGCPtn = Pattern.compile("(?<= )[0-9]+(?=K->)");
     /*
     [GC 115008K->"103309K"(129664K), 0.0254331 secs]
     */
-    private Pattern heapAfterGCPtn = Pattern.compile("(?<=K->)[0-9]*(?=K\\()");
+    private final Pattern heapAfterGCPtn = Pattern.compile("(?<=K->)[0-9]*(?=K\\()");
     /*
     [GC 115008K->103309K(129664K), [0.0254331] secs]
     */
-    private Pattern timeSpentPtn = Pattern.compile("(?<=, )[0-9\\.]*(?= secs\\]$)");
+    private final Pattern timeSpentPtn = Pattern.compile("(?<=, )[0-9\\.]*(?= secs\\]$)");
 
     /*
    a pattern catches -verbosegc log
 [GC 115008K->103309K(129664K), 0.0254331 secs]
 [Full GC 61365K->51414K(129664K), 1.0320474 secs]
     */
-    private Pattern verboseGCPtn = Pattern.compile("\\[(ParNew|GC|Full GC) [0-9]+K->[0-9]+K\\([0-9]+K\\), [0-9\\.]+ secs\\]");
-    private Pattern printGCDetailsPtn = Pattern.compile("\\[(GC|Full GC) ([0-9\\.]+: )?\\[");
+    private final Pattern verboseGCPtn = Pattern.compile("\\[(ParNew|GC|Full GC) [0-9]+K->[0-9]+K\\([0-9]+K\\), [0-9\\.]+ secs\\]");
+    private final Pattern printGCDetailsPtn = Pattern.compile("\\[(GC|Full GC) ([0-9\\.]+: )?\\[");
     /*
     a pattern catches new area gc log
 [ParNew 226778K->33381K(1022400K), 0.3251635 secs]
 [DefNew: 209792K->12630K(235968K), 0.1971975 secs]
 [PSYoungGen: 2715K->0K(33344K)]
      */
-    private Pattern newGCPtn = Pattern.compile("\\[(ParNew|DefNew|PSYoungGen):? [0-9]+K->[0-9]+K\\([0-9]+K\\)(, [0-9\\.]+ secs)?\\]");
+    private final Pattern newGCPtn = Pattern.compile("\\[(ParNew|DefNew|PSYoungGen):? [0-9]+K->[0-9]+K\\([0-9]+K\\)(, [0-9\\.]+ secs)?\\]");
 
     /*
     a pattern catches old area gc log
@@ -67,7 +67,7 @@ public class SunGCParser implements LineGraphDataSourceParser {
 [ParOldGen: 65738K->36992K(99072K)]
 [PSOldGen: 43812K->28039K(67968K)]
      */
-    private Pattern oldGCPtn = Pattern.compile("\\[(Tenured|CMS( \\(concurrent mode failure\\))?|ParOldGen|PSOldGen): [0-9]+K->[0-9]+K\\([0-9]+K\\)(, [0-9\\.]+ secs)?\\]");
+    private final Pattern oldGCPtn = Pattern.compile("\\[(Tenured|CMS( \\(concurrent mode failure\\))?|ParOldGen|PSOldGen): [0-9]+K->[0-9]+K\\([0-9]+K\\)(, [0-9\\.]+ secs)?\\]");
 
     /*
     a pattern catches permanent area gc log
@@ -75,7 +75,7 @@ public class SunGCParser implements LineGraphDataSourceParser {
 [CMS Perm : 9993K->9982K(131072K)]
 [PSPermGen: 11772K->11755K(23552K)]
      */
-    private Pattern permGCPtn = Pattern.compile("\\[(Perm |CMS Perm |PSPermGen): [0-9]+K->[0-9]+K\\([0-9]+K\\)\\]");
+    private final Pattern permGCPtn = Pattern.compile("\\[(Perm |CMS Perm |PSPermGen): [0-9]+K->[0-9]+K\\([0-9]+K\\)\\]");
 
 
     private boolean gcTypeDetected = false;
@@ -142,9 +142,9 @@ public class SunGCParser implements LineGraphDataSourceParser {
 
     private class HeapGraph {
         double maxSize = 0;
-        Pattern pattern;
-        LineGraph lineGraph;
-        boolean parseGCtime;
+        final Pattern pattern;
+        final LineGraph lineGraph;
+        final boolean parseGCtime;
 
         HeapGraph(Pattern pattern, LineGraph lineGraph, boolean parseGCtime) {
             this.pattern = pattern;

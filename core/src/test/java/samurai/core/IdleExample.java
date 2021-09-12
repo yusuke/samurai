@@ -16,7 +16,7 @@
 package samurai.core;
 
 public class IdleExample {
-    public static void main(String args[]) throws Exception {
+    public static void main(String[] args) throws Exception {
         Thread.sleep(1000000);
     }
 }

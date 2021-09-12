@@ -39,7 +39,7 @@ public class TestCSVParser extends TestCase  implements LineGraph,LineGraphRende
     double[] expected;
     private int columnCount = 0;
 
-    public LineGraph addLineGraph(String line, String labels[]) {
+    public LineGraph addLineGraph(String line, String[] labels) {
         this.setLabels(labels);
         columnCount+=labels.length;
         return this;

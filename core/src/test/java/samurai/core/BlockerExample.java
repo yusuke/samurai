@@ -25,7 +25,7 @@ public class BlockerExample {
 }
 
 class AThread extends Thread {
-    Object OBJECT;
+    final Object OBJECT;
 
     AThread(Object obj) {
         this.OBJECT = obj;

@@ -22,8 +22,8 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class NestedSplitPanes extends JFrame {
-    JButton[] arrB = new JButton[16];
-    JSplitPane[] arrS = new JSplitPane[15];
+    final JButton[] arrB = new JButton[16];
+    final JSplitPane[] arrS = new JSplitPane[15];
 
     public NestedSplitPanes() {
         super("Nested JSplitPanes");
@@ -71,7 +71,7 @@ public class NestedSplitPanes extends JFrame {
         this.setVisible(true);
     }
 
-    static public void main(String args[]) {
+    static public void main(String[] args) {
         new NestedSplitPanes();
     }
 }

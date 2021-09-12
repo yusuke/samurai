@@ -20,7 +20,7 @@ import samurai.util.OSDetector;
 
 
 public class Samurai {
-    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
 
     public static void main(String[] args) throws Exception {
         if (OSDetector.isMac()) {

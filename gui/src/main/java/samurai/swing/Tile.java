@@ -36,14 +36,14 @@ import java.awt.event.MouseMotionListener;
 
 /*package*/class Tile extends JPanel {
 
-    private BorderLayout borderLayout1 = new BorderLayout();
-    private BorderLayout borderLayout2 = new BorderLayout();
-    /*package*/ JLabel title = new JLabel();
+    private final BorderLayout borderLayout1 = new BorderLayout();
+    private final BorderLayout borderLayout2 = new BorderLayout();
+    /*package*/ final JLabel title = new JLabel();
     JComponent component;
-    /*package*/ JPanel centerPanel = new JPanel();
-    /*package*/ JPanel northPanel = new JPanel();
-    private BorderLayout northPanelLayout = new BorderLayout();
-    /*package*/ JLabel rightLabel = new JLabel();
+    /*package*/ final JPanel centerPanel = new JPanel();
+    /*package*/ final JPanel northPanel = new JPanel();
+    private final BorderLayout northPanelLayout = new BorderLayout();
+    /*package*/ final JLabel rightLabel = new JLabel();
 
     /*package*/ Tile(JComponent component, String title, ImageIcon icon) {
         setLayout(borderLayout1);
@@ -125,8 +125,8 @@ import java.awt.event.MouseMotionListener;
         return this.component;
     }
 
-    Border focuedBorder = new LineBorder(SystemColor.textHighlight, 2, true);
-    Border emptyBorder = new EmptyBorder(2, 2, 2, 2);
+    final Border focuedBorder = new LineBorder(SystemColor.textHighlight, 2, true);
+    final Border emptyBorder = new EmptyBorder(2, 2, 2, 2);
 
     /*package*/ void setFocused(boolean focused) {
         if (focused) {

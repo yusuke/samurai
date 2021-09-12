@@ -27,22 +27,22 @@ import javax.swing.JLabel;
 import java.awt.Component;
 
 public class Context {
-    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private final Configuration config = new Configuration("samurai");
     private final FileHistory fileHistory = new FileHistory(config);
 
     private LocalProcesses localProcesses = null;
     private final CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
-    ExecuteThread executeThread = new ExecuteThread();
+    final ExecuteThread executeThread = new ExecuteThread();
     private final JLabel statusBar;
-    private TileTabPanel<SamuraiPanel> tab;
-    private SearchPanel searchPanel;
+    private final TileTabPanel<SamuraiPanel> tab;
+    private final SearchPanel searchPanel;
 
     public Context(JLabel statusBar, TileTabPanel<SamuraiPanel> tab) {
         this.statusBar = statusBar;
         this.tab = tab;
         this.searchPanel = new SearchPanel(this);
-        this.resources.inject(searchPanel);
+        resources.inject(searchPanel);
         this.config.apply(searchPanel);
         try {
 

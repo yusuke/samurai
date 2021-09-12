@@ -97,7 +97,7 @@ public abstract class FullThreadDump implements Serializable {
     /*package*/
     abstract boolean isThreadDumpContinuing(String line);
 
-    List<List<ThreadDump>> deadLockChains = new ArrayList<>();
+    final List<List<ThreadDump>> deadLockChains = new ArrayList<>();
     private boolean deadLocked = false;
 
     public boolean isDeadLocked() {

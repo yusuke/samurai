@@ -57,9 +57,9 @@ import java.text.DecimalFormat;
             this.maxY[i] = 0;
             this.minY[i] = 0;
             this.colors[i] = DEFAULT_COLORS[i % DEFAULT_COLORS.length];
-            this.datas[i] = new ArrayList<double[]>(1);
+            this.datas[i] = new ArrayList<>(1);
         }
-        this.datas[xDataIndex] = new ArrayList<double[]>(1);
+        this.datas[xDataIndex] = new ArrayList<>(1);
     }
 
     /*package*/ double getMaxAt(int index) {
@@ -193,10 +193,10 @@ import java.text.DecimalFormat;
         this.visible[index] = newVisible;
     }
 
-    private Color background = Color.BLACK;
-    private Color gridColor = new Color(0, 70, 0);
+    private final Color background = Color.BLACK;
+    private final Color gridColor = new Color(0, 70, 0);
     private final int GRID_INTERVAL = 10;
-    private DecimalFormat format = new DecimalFormat("####0.0#############################");
+    private final DecimalFormat format = new DecimalFormat("####0.0#############################");
 
     public void drawGraph(GraphCanvas c, int x, int y, int width, int height, int scroll) {
         int maxY = y + height;
