@@ -122,6 +122,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
 
     public TileTabPanel(boolean supportsFocusable) {
         tilePanel = new TilePanel(supportsFocusable);
+        tab.setForeground(Color.black);
 
         try {
             jbInit();
