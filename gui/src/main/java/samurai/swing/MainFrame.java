@@ -104,11 +104,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         this.setTitle("*MainFrame.title*");
         statusBar.setPreferredSize(new Dimension(3, 14));
         menuFileNewTab
-                .addActionListener(new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        openNewTab();
-                    }
-                });
+                .addActionListener(e -> openNewTab());
 
         menuFileOpen = context.getFileHistory().getOpenMenu(this);
         menuFileOpen.setText("menu.file.open");
@@ -123,122 +119,60 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         }
 
         menuFileClose
-                .addActionListener(new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        closeSamuraiPanel(tab.getSelectedIndex());
-                    }
-                });
+                .addActionListener(e -> closeSamuraiPanel(tab.getSelectedIndex()));
         if (!OSDetector.isMac()) {
-            menuFileExit.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-                    handleQuit();
-                }
-            });
+            menuFileExit.addActionListener(e -> handleQuit());
         }
         if (!OSDetector.isMac()) {
             menuEditPreferences.setActionCommand("menu.edit.preferences");
-            menuEditPreferences.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-                    handlePreferences();
-                }
-            });
+            menuEditPreferences.addActionListener(e -> handlePreferences());
         }
 
-        menuEditCopy.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                Component component = tab.getSelectedComponent().getSelectedComponent();
-                if (component instanceof ClipBoardOperationListener) {
-                    ((ClipBoardOperationListener) component).copy();
-                }
+        menuEditCopy.addActionListener(e -> {
+            Component component = tab.getSelectedComponent().getSelectedComponent();
+            if (component instanceof ClipBoardOperationListener) {
+                ((ClipBoardOperationListener) component).copy();
             }
         });
-        menuEditFind.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                addSearchPanel();
-            }
+        menuEditFind.addActionListener(e -> addSearchPanel());
+        menuEditFindNext.addActionListener(e -> searchNext());
+        menuEditFindPrevious.addActionListener(e -> searchPrevious());
+        searcher.btnHide.addActionListener(e -> {
+            removeSearchPanel();
+            validate();
         });
-        menuEditFindNext.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                searchNext();
-            }
-        });
-        menuEditFindPrevious.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                searchPrevious();
-            }
-        });
-        searcher.btnHide.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                removeSearchPanel();
-                validate();
-            }
-        });
-        searcher.btnNext.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                searchNext();
-            }
-        });
-        searcher.btnPrevious.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                searchPrevious();
-            }
-        });
+        searcher.btnNext.addActionListener(e -> searchNext());
+        searcher.btnPrevious.addActionListener(e -> searchPrevious());
         searcher.config_searchText.addKeyListener(new KeyAdapter() {
             public void keyReleased(KeyEvent e) {
             }
 
             public void keyPressed(KeyEvent e) {
-                switch (e.getKeyCode()) {
-                    case KeyEvent.VK_ESCAPE:
-                        removeSearchPanel();
-                        e.consume();
-                        break;
-                    default:
-
+                if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+                    removeSearchPanel();
+                    e.consume();
                 }
             }
         });
 
-        menuViewReload.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                tab.getSelectedComponent().reload();
-            }
-        });
-        menuViewPrevious.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                previousTab();
-            }
-        });
-        menuViewNext.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                nextTab();
-            }
-        });
-        menuViewClearBuffer.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                clearBuffer();
-            }
-        });
+        menuViewReload.addActionListener(e -> tab.getSelectedComponent().reload());
+        menuViewPrevious.addActionListener(e -> previousTab());
+        menuViewNext.addActionListener(e -> nextTab());
+        menuViewClearBuffer.addActionListener(e -> clearBuffer());
 
         menuViewStatusBar.setSelected(true);
 
-        menuViewStatusBar.addItemListener(new ItemListener() {
-            public void itemStateChanged(ItemEvent e) {
-                if (menuViewStatusBar.isSelected()) {
-                    southPane.add(statusBar, BorderLayout.SOUTH);
-                } else {
-                    southPane.remove(statusBar);
-                }
-                validate();
+        menuViewStatusBar.addItemListener(e -> {
+            if (menuViewStatusBar.isSelected()) {
+                southPane.add(statusBar, BorderLayout.SOUTH);
+            } else {
+                southPane.remove(statusBar);
             }
+            validate();
         });
 
         menuHelpAbout
-                .addActionListener(new ActionListener() {
-                    public void actionPerformed(ActionEvent e) {
-                        handleAbout();
-                    }
-                });
+                .addActionListener(e -> handleAbout());
 
         menuFile.add(menuFileNewTab);
         menuFile.add(menuFileOpen);
@@ -527,7 +461,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             return;
         }
 
-        if (searcher.isDisplayable() && e.getKeyChar() != KeyEvent.CHAR_UNDEFINED && ((e.getModifiers() & InputEvent.SHIFT_DOWN_MASK) == e.getModifiers())) {
+        if (searcher.isDisplayable() && e.getKeyChar() != KeyEvent.CHAR_UNDEFINED && ((e.getModifiersEx() & InputEvent.SHIFT_DOWN_MASK) == e.getModifiersEx())) {
             switch (e.getKeyChar()) {
                 case KeyEvent.VK_ENTER:
                     searchNext();
@@ -681,11 +615,11 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             if (transfer
                     .isDataFlavorSupported(DataFlavor.javaFileListFlavor)) {
 //dropped file(s)
-                List filelist = (List) transfer.getTransferData(DataFlavor.
+                var filelist = (List<File>) transfer.getTransferData(DataFlavor.
                         javaFileListFlavor);
                 File[] files = (File[]) filelist.toArray(new File[0]);
-                for (int i = 0; i < files.length; i++) {
-                    if (files[i].isDirectory()) {
+                for (File file : files) {
+                    if (file.isDirectory()) {
                         //
                         return null;
                     }
@@ -693,9 +627,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                 return files;
             }
             return null;
-        } catch (IOException ex) {
-            return null;
-        } catch (UnsupportedFlavorException ex) {
+        } catch (IOException | UnsupportedFlavorException ex) {
             return null;
         }
     }

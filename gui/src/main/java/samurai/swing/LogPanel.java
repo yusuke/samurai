@@ -54,7 +54,7 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
             // follow Apple UI guideline
             jScrollPane1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         }
-        this.setFont(new java.awt.Font("Dialog", 0, 12));
+        this.setFont(new java.awt.Font("Dialog", Font.PLAIN, 12));
         this.add(jScrollPane1, BorderLayout.CENTER);
 
         verticalScrollBar.setAutoscrolls(true);
@@ -108,16 +108,8 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
         }
     }
 
-    final Runnable clearTask = new Runnable() {
-        public void run() {
-            textArea.setText("");
-        }
-    };
-    final Runnable clearTask2 = new Runnable() {
-        public void run() {
-            textArea.setText(resources.getMessage("LogPanel.dropFileHere") + "\n");
-        }
-    };
+    final Runnable clearTask = () -> textArea.setText("");
+    final Runnable clearTask2 = () -> textArea.setText(resources.getMessage("LogPanel.dropFileHere") + "\n");
 
     public void logStarted(File file, long filePointer) {
         super.logStarted(file, filePointer);
@@ -220,7 +212,7 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
         } else {
             jScrollPane1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         }
-        this.textArea.setFont(new Font(this.config_logFontFamily, 0, config_logFontSize));
+        this.textArea.setFont(new Font(this.config_logFontFamily, Font.PLAIN, config_logFontSize));
     }
 
     public boolean config_wrapLog = true;

@@ -94,11 +94,9 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         public void paint(Graphics g) {
             super.paint(g);
             if (referer != null) {
-                SwingUtilities.invokeLater(new Runnable() {
-                    public void run() {
-                        threadDumpPanel.scrollToReference(referer);
-                        referer = null;
-                    }
+                SwingUtilities.invokeLater(() -> {
+                    threadDumpPanel.scrollToReference(referer);
+                    referer = null;
                 });
             }
         }
@@ -123,7 +121,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         resources.inject(this);
     }
 
-    void jbInit() throws Exception {
+    void jbInit() {
         this.setLayout(borderLayout1);
         this.setMaximumSize(new Dimension(2147483647, 2147483647));
         this.setMinimumSize(new Dimension(0, 0));
@@ -145,30 +143,28 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         buttonPrevious.setPreferredSize(new Dimension(20, 20));
         buttonPrevious.addMouseListener(new RolloverBorder(buttonPrevious));
         buttonPrevious.setIcon(backwardIcon);
-        buttonPrevious.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                if (Constants.MODE_FULL.equals(filter.getMode())) {
-                    int selected = filter.getFullThreadIndex();
-                    if (selected > 0) {
-                        selected--;
-                        filter.setFullThreadIndex(selected);
-                    }
-                } else if (Constants.MODE_SEQUENCE.equals(filter.getMode())) {
-                    ThreadDumpSequence[] sequences = statistic.getStackTracesAsArray();
-                    for (int i = 0; i < sequences.length; i++) {
-                        if (sequences[i].getId().equals(filter.getThreadId())) {
-                            if (i != 0) {
-                                filter.setThreadId(sequences[i - 1].getId());
-                            } else {
-                                //looping
-                                filter.setThreadId(sequences[sequences.length - 1].getId());
-                            }
-                            break;
+        buttonPrevious.addActionListener(e -> {
+            if (Constants.MODE_FULL.equals(filter.getMode())) {
+                int selected = filter.getFullThreadIndex();
+                if (selected > 0) {
+                    selected--;
+                    filter.setFullThreadIndex(selected);
+                }
+            } else if (Constants.MODE_SEQUENCE.equals(filter.getMode())) {
+                ThreadDumpSequence[] sequences = statistic.getStackTracesAsArray();
+                for (int i = 0; i < sequences.length; i++) {
+                    if (sequences[i].getId().equals(filter.getThreadId())) {
+                        if (i != 0) {
+                            filter.setThreadId(sequences[i - 1].getId());
+                        } else {
+                            //looping
+                            filter.setThreadId(sequences[sequences.length - 1].getId());
                         }
+                        break;
                     }
                 }
-                updateHtml();
             }
+            updateHtml();
         });
 
 
@@ -179,30 +175,28 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         buttonNext.setIcon(forwardIcon);
         buttonNext.addMouseListener(new RolloverBorder(buttonNext));
 
-        buttonNext.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                if (Constants.MODE_FULL.equals(filter.getMode())) {
-                    int selected = filter.getFullThreadIndex();
-                    if (selected < statistic.getFullThreadDumpCount() - 1) {
-                        selected++;
-                        filter.setFullThreadIndex(selected);
-                    }
-                } else if (Constants.MODE_SEQUENCE.equals(filter.getMode())) {
-                    ThreadDumpSequence[] sequences = statistic.getStackTracesAsArray();
-                    for (int i = 0; i < sequences.length; i++) {
-                        if (sequences[i].getId().equals(filter.getThreadId())) {
-                            if (i != (sequences.length - 1)) {
-                                filter.setThreadId(sequences[i + 1].getId());
-                            } else {
-                                //looping
-                                filter.setThreadId(sequences[0].getId());
-                            }
-                            break;
+        buttonNext.addActionListener(e -> {
+            if (Constants.MODE_FULL.equals(filter.getMode())) {
+                int selected = filter.getFullThreadIndex();
+                if (selected < statistic.getFullThreadDumpCount() - 1) {
+                    selected++;
+                    filter.setFullThreadIndex(selected);
+                }
+            } else if (Constants.MODE_SEQUENCE.equals(filter.getMode())) {
+                ThreadDumpSequence[] sequences = statistic.getStackTracesAsArray();
+                for (int i = 0; i < sequences.length; i++) {
+                    if (sequences[i].getId().equals(filter.getThreadId())) {
+                        if (i != (sequences.length - 1)) {
+                            filter.setThreadId(sequences[i + 1].getId());
+                        } else {
+                            //looping
+                            filter.setThreadId(sequences[0].getId());
                         }
+                        break;
                     }
                 }
-                updateHtml();
             }
+            updateHtml();
         });
 
 
@@ -216,29 +210,27 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         showThreadList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 //    showThreadList.addMouseListener(new
 //      FullThreadDumpPanel_showThreadList_mouseAdapter(this));
-        showThreadList.addListSelectionListener(new ListSelectionListener() {
-            public void valueChanged(ListSelectionEvent event) {
+        showThreadList.addListSelectionListener(event -> {
 //        ( (StackTraces) showThreadList.getSelectedValue()).getId().equals(filter.getThreadId())
 //        showThreadList.getSelectedIndex()
-                if (-1 != showThreadList.getSelectedIndex()) {
-                    if (Constants.MODE_FULL.equals(filter.getMode())) {
-                        //ensure that selected thread comes to the top of the pane
+            if (-1 != showThreadList.getSelectedIndex()) {
+                if (Constants.MODE_FULL.equals(filter.getMode())) {
+                    //ensure that selected thread comes to the top of the pane
 //            JScrollBar scrollBar = jScrollPane3.getVerticalScrollBar();
 //            scrollBar.setValue(scrollBar.getMaximum());
-                        threadDumpPanel.scrollToReference(((ThreadDumpSequence) showThreadList.getSelectedValue()).getId());
+                    threadDumpPanel.scrollToReference(((ThreadDumpSequence) showThreadList.getSelectedValue()).getId());
 //            context.getSearchPanel().searchNext(threadDumpPanel, ( (StackTraces) showThreadList.getSelectedValue()).getId(), 0);
 //            threadDumpPanel.grabFocus();
-                    } else if (Constants.MODE_SEQUENCE.equals(filter.getMode())) {
-                        if (!((ThreadDumpSequence) showThreadList.getSelectedValue()).getId().equals(
-                                filter.getThreadId())) {
-                            filter.setThreadId(((ThreadDumpSequence) showThreadList.getSelectedValue()).getId());
-                            updateHtml();
-                        }
-                    } else if (Constants.MODE_TABLE.equals(filter.getMode())) {
-                        filter.setMode(Constants.MODE_SEQUENCE);
+                } else if (Constants.MODE_SEQUENCE.equals(filter.getMode())) {
+                    if (!((ThreadDumpSequence) showThreadList.getSelectedValue()).getId().equals(
+                            filter.getThreadId())) {
                         filter.setThreadId(((ThreadDumpSequence) showThreadList.getSelectedValue()).getId());
                         updateHtml();
                     }
+                } else if (Constants.MODE_TABLE.equals(filter.getMode())) {
+                    filter.setMode(Constants.MODE_SEQUENCE);
+                    filter.setThreadId(((ThreadDumpSequence) showThreadList.getSelectedValue()).getId());
+                    updateHtml();
                 }
             }
         });
@@ -411,55 +403,47 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                             saveButton.setEnabled(false);
                             progressBar.setString("");
                             progressBar.setVisible(true);
-                            context.invokeLater(new Task() {
-                                public void execute() {
-                                    VelocityHtmlRenderer renderer = new VelocityHtmlRenderer("samurai/web/outcss.vm", "../images/");
-                                    try {
-                                        synchronized (statistic) {
-                                            savedLocation = getTargetDirectory(currentFile);
-                                            renderer.saveTo(statistic, savedLocation, new ProgressListener() {
-                                                public void notifyProgress(int finished, int all) {
-                                                    SwingUtilities.invokeLater(new ProgressTask(finished, all + 9));
-                                                }
-                                            });
-                                            File imageDir = new File(savedLocation.getAbsolutePath() + "/images/");
-                                            imageDir.mkdir();
+                            context.invokeLater(() -> {
+                                VelocityHtmlRenderer renderer = new VelocityHtmlRenderer("samurai/web/outcss.vm", "../images/");
+                                try {
+                                    synchronized (statistic) {
+                                        savedLocation = getTargetDirectory(currentFile);
+                                        renderer.saveTo(statistic, savedLocation, (finished, all) -> SwingUtilities.invokeLater(new ProgressTask(finished, all + 9)));
+                                        File imageDir = new File(savedLocation.getAbsolutePath() + "/images/");
+                                        imageDir.mkdir();
 
-                                            saveStreamAsFile(imageDir, "space.gif");
-                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 8, progressBar.getMaximum()));
-                                            saveStreamAsFile(imageDir, "same-v.gif");
-                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 7, progressBar.getMaximum()));
-                                            saveStreamAsFile(imageDir, "same-h.gif");
-                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 6, progressBar.getMaximum()));
-                                            saveStreamAsFile(imageDir, "deadlocked.gif");
-                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 5, progressBar.getMaximum()));
-                                            saveStreamAsFile(imageDir, "expandable_win.gif");
-                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 4, progressBar.getMaximum()));
-                                            saveStreamAsFile(imageDir, "shrinkable_win.gif");
-                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 3, progressBar.getMaximum()));
+                                        saveStreamAsFile(imageDir, "space.gif");
+                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 8, progressBar.getMaximum()));
+                                        saveStreamAsFile(imageDir, "same-v.gif");
+                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 7, progressBar.getMaximum()));
+                                        saveStreamAsFile(imageDir, "same-h.gif");
+                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 6, progressBar.getMaximum()));
+                                        saveStreamAsFile(imageDir, "deadlocked.gif");
+                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 5, progressBar.getMaximum()));
+                                        saveStreamAsFile(imageDir, "expandable_win.gif");
+                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 4, progressBar.getMaximum()));
+                                        saveStreamAsFile(imageDir, "shrinkable_win.gif");
+                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 3, progressBar.getMaximum()));
 
-                                            saveStreamAsFile(imageDir, "tableButton.gif");
-                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 2, progressBar.getMaximum()));
-                                            saveStreamAsFile(imageDir, "fullButton.gif");
-                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 1, progressBar.getMaximum()));
-                                            saveStreamAsFile(imageDir, "sequenceButton.gif");
-                                            SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum(), progressBar.getMaximum()));
-
-                                        }
-                                        context.setTemporaryStatus(resources.getMessage("ThreadDumpPanel.saved", savedLocation.getAbsolutePath()));
-                                    } catch (Exception ioe) {
-                                        ioe.printStackTrace();
+                                        saveStreamAsFile(imageDir, "tableButton.gif");
+                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 2, progressBar.getMaximum()));
+                                        saveStreamAsFile(imageDir, "fullButton.gif");
+                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 1, progressBar.getMaximum()));
+                                        saveStreamAsFile(imageDir, "sequenceButton.gif");
                                         SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum(), progressBar.getMaximum()));
-                                        context.setTemporaryStatus(ioe.getMessage());
-                                    } finally {
-                                        context.invokeLater(new Task() {
-                                            public void execute() {
-                                                progressBar.setVisible(false);
-                                                progressBar.setValue(0);
-                                                saveButton.setEnabled(true);
-                                            }
-                                        }, 2);
+
                                     }
+                                    context.setTemporaryStatus(resources.getMessage("ThreadDumpPanel.saved", savedLocation.getAbsolutePath()));
+                                } catch (Exception ioe) {
+                                    ioe.printStackTrace();
+                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum(), progressBar.getMaximum()));
+                                    context.setTemporaryStatus(ioe.getMessage());
+                                } finally {
+                                    context.invokeLater(() -> {
+                                        progressBar.setVisible(false);
+                                        progressBar.setValue(0);
+                                        saveButton.setEnabled(true);
+                                    }, 2);
                                 }
                             });
                         }
@@ -578,79 +562,75 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     private ThreadDumpSequence[] threadList = null;
 
     public void changeBunttonFeel() {
-        invokeLater(new Runnable() {
-                        public void run() {
-                            int selected = filter.getFullThreadIndex();
-                            if (0 == statistic.getFullThreadDumpCount()) {
-                                showThreadList.setEnabled(false);
-                                buttonPrevious.setEnabled(false);
-                                buttonNext.setEnabled(false);
-                            } else {
-                                showThreadList.setEnabled(true);
-                                if (filter.getMode().equals(Constants.MODE_FULL)) {
-                                    buttonPrevious.setEnabled(!(selected == 0));
-                                    buttonNext.setEnabled(!(statistic.getFullThreadDumpCount() - 1 == selected));
-                                } else {
-                                    buttonPrevious.setEnabled(Constants.MODE_SEQUENCE.equals(filter.getMode()));
-                                    buttonNext.setEnabled(Constants.MODE_SEQUENCE.equals(filter.getMode()));
-                                }
-                            }
-                            if (null != threadList && threadList.length != 0) {
-                                if (filter.getMode().equals(Constants.MODE_FULL)) {
-                                } else if (filter.getMode().equals(Constants.MODE_SEQUENCE)) {
-                                    for (int i = 0; i < threadList.length; i++) {
-                                        if (filter.getThreadId().equals(threadList[i].getId())) {
-                                            showThreadList.setSelectedIndex(i);
-                                            break;
-                                        }
-                                    }
-                                }
-                            }
-                            if (Constants.MODE_FULL.equals(filter.getMode())) {
-                                showThreadList.setSelectedIndices(new int[0]);
-                                threadDumpStatus.setText(filter.getFullThreadIndex() + 1 + "/" + statistic.getFullThreadDumpCount());
-                                tableButton.setSelected(false);
-                                fullButton.setSelected(true);
-                                sequenceButton.setSelected(false);
-                            } else if (Constants.MODE_TABLE.equals(filter.getMode())) {
-                                showThreadList.setSelectedIndices(new int[0]);
-                                threadDumpStatus.setText("");
-                                tableButton.setSelected(true);
-                                fullButton.setSelected(false);
-                                sequenceButton.setSelected(false);
-                            } else if (Constants.MODE_SEQUENCE.equals(filter.getMode())) {
-                                threadDumpStatus.setText(statistic.getStackTracesById(filter.getThreadId()).getName());
-                                tableButton.setSelected(false);
-                                fullButton.setSelected(false);
-                                sequenceButton.setSelected(true);
-                            }
-                            showThreadList.repaint();
+        invokeLater(() -> {
+            int selected = filter.getFullThreadIndex();
+            if (0 == statistic.getFullThreadDumpCount()) {
+                showThreadList.setEnabled(false);
+                buttonPrevious.setEnabled(false);
+                buttonNext.setEnabled(false);
+            } else {
+                showThreadList.setEnabled(true);
+                if (filter.getMode().equals(Constants.MODE_FULL)) {
+                    buttonPrevious.setEnabled(!(selected == 0));
+                    buttonNext.setEnabled(!(statistic.getFullThreadDumpCount() - 1 == selected));
+                } else {
+                    buttonPrevious.setEnabled(Constants.MODE_SEQUENCE.equals(filter.getMode()));
+                    buttonNext.setEnabled(Constants.MODE_SEQUENCE.equals(filter.getMode()));
+                }
+            }
+            if (null != threadList && threadList.length != 0) {
+                if (filter.getMode().equals(Constants.MODE_FULL)) {
+                } else if (filter.getMode().equals(Constants.MODE_SEQUENCE)) {
+                    for (int i = 0; i < threadList.length; i++) {
+                        if (filter.getThreadId().equals(threadList[i].getId())) {
+                            showThreadList.setSelectedIndex(i);
+                            break;
                         }
                     }
+                }
+            }
+            if (Constants.MODE_FULL.equals(filter.getMode())) {
+                showThreadList.setSelectedIndices(new int[0]);
+                threadDumpStatus.setText(filter.getFullThreadIndex() + 1 + "/" + statistic.getFullThreadDumpCount());
+                tableButton.setSelected(false);
+                fullButton.setSelected(true);
+                sequenceButton.setSelected(false);
+            } else if (Constants.MODE_TABLE.equals(filter.getMode())) {
+                showThreadList.setSelectedIndices(new int[0]);
+                threadDumpStatus.setText("");
+                tableButton.setSelected(true);
+                fullButton.setSelected(false);
+                sequenceButton.setSelected(false);
+            } else if (Constants.MODE_SEQUENCE.equals(filter.getMode())) {
+                threadDumpStatus.setText(statistic.getStackTracesById(filter.getThreadId()).getName());
+                tableButton.setSelected(false);
+                fullButton.setSelected(false);
+                sequenceButton.setSelected(true);
+            }
+            showThreadList.repaint();
+        }
         );
     }
 
     private void updateHtml() {
-        invokeLater(new Runnable() {
-            public void run() {
-                synchronized (statistic) {
-                    if (statistic.getFullThreadDumpCount() > 0) {
-                        if ("".equals(filter.getThreadId())) {
-                            filter.setThreadId(statistic.getStackTracesAsArray()[0].getId());
-                        }
-                        threadDumpPanel.setText(renderer.render(filter, statistic, velocityContext));
-                        threadDumpPanel.select(0, 0);
-                        if (-1 != uri.indexOf("#")) {
-                            referer = uri.substring(uri.indexOf("#") + 1);
-                        }
-                        changeBunttonFeel();
-                        for (int i = 0; i < threadList.length; i++) {
-                            if ((threadList[i]).getName().equals(filter.getThreadId())) {
-                                showThreadList.setSelectedIndex(i);
-                            }
-                        }
-
+        invokeLater(() -> {
+            synchronized (statistic) {
+                if (statistic.getFullThreadDumpCount() > 0) {
+                    if ("".equals(filter.getThreadId())) {
+                        filter.setThreadId(statistic.getStackTracesAsArray()[0].getId());
                     }
+                    threadDumpPanel.setText(renderer.render(filter, statistic, velocityContext));
+                    threadDumpPanel.select(0, 0);
+                    if (-1 != uri.indexOf("#")) {
+                        referer = uri.substring(uri.indexOf("#") + 1);
+                    }
+                    changeBunttonFeel();
+                    for (int i = 0; i < threadList.length; i++) {
+                        if ((threadList[i]).getName().equals(filter.getThreadId())) {
+                            showThreadList.setSelectedIndex(i);
+                        }
+                    }
+
                 }
             }
         });
@@ -659,13 +639,11 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     final ThreadStatistic statistic = new ThreadStatistic() {
         public synchronized void onFullThreadDump(FullThreadDump fullThreadDump) {
             super.onFullThreadDump(fullThreadDump);
-            invokeLater(new Runnable() {
-                public void run() {
-                    showMe(resources.getMessage("ThreadDumpPanel.threadDump"));
-                    threadList = statistic.getStackTracesAsArray();
-                    showThreadList.setListData(threadList);
-                    showThreadList.clearSelection();
-                }
+            invokeLater(() -> {
+                showMe(resources.getMessage("ThreadDumpPanel.threadDump"));
+                threadList = statistic.getStackTracesAsArray();
+                showThreadList.setListData(threadList);
+                showThreadList.clearSelection();
             });
             updateHtml();
         }

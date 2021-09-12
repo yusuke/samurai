@@ -15,6 +15,8 @@
  */
 package samurai.swing;
 
+import java.awt.*;
+
 public class ConfigDialog extends javax.swing.JDialog {
     //    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
     public final javax.swing.JButton okButton = new javax.swing.JButton();
@@ -30,16 +32,16 @@ public class ConfigDialog extends javax.swing.JDialog {
     public final javax.swing.JLabel logFontSample = new javax.swing.JLabel();
     public final javax.swing.JLabel encoding = new javax.swing.JLabel();
     public final javax.swing.JCheckBox config_wrapLog = new javax.swing.JCheckBox();
-    public final javax.swing.JComboBox config_logFontFamily = new javax.swing.JComboBox();
-    public final javax.swing.JComboBox config_logFontSize = new javax.swing.JComboBox();
-    public final javax.swing.JComboBox config_encoding = new javax.swing.JComboBox();
+    public final javax.swing.JComboBox<String> config_logFontFamily = new javax.swing.JComboBox<>();
+    public final javax.swing.JComboBox<String> config_logFontSize = new javax.swing.JComboBox<>();
+    public final javax.swing.JComboBox<String> config_encoding = new javax.swing.JComboBox<>();
 
     final javax.swing.JPanel dumpConfigPanel = new javax.swing.JPanel();
     public final javax.swing.JLabel dumpFontSample = new javax.swing.JLabel();
     final java.awt.GridBagLayout dumpConfigLayout = new java.awt.GridBagLayout();
     public final javax.swing.JCheckBox config_wrapDump = new javax.swing.JCheckBox();
-    public final javax.swing.JComboBox config_dumpFontFamily = new javax.swing.JComboBox();
-    public final javax.swing.JComboBox config_dumpFontSize = new javax.swing.JComboBox();
+    public final javax.swing.JComboBox<String> config_dumpFontFamily = new javax.swing.JComboBox<>();
+    public final javax.swing.JComboBox<String> config_dumpFontSize = new javax.swing.JComboBox<>();
 
     //  public JPanel searchConfigPanel = new JPanel();
 //  public JCheckBox config_useRegexp = new JCheckBox();
@@ -71,7 +73,7 @@ public class ConfigDialog extends javax.swing.JDialog {
 
     final ConfigDialog THIS = this;
 
-    private void jbInit() throws Exception {
+    private void jbInit() {
         //panel root
         this.getContentPane().setLayout(gridBagLayout1);
         config_wrapLog.setText("*ConfigDialog.wrapLine*");
@@ -101,22 +103,16 @@ public class ConfigDialog extends javax.swing.JDialog {
         okButton.setDefaultCapable(false);
         okButton.setActionCommand("okButton");
         okButton.setText("*ConfigDialog.ok*");
-        okButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent e) {
-                context.getConfig().store(THIS);
-                context.getConfig().notifyChange();
-                setVisible(false);
-            }
+        okButton.addActionListener(e -> {
+            context.getConfig().store(THIS);
+            context.getConfig().notifyChange();
+            setVisible(false);
         });
 
         cancelButton.setActionCommand("cancelButton");
 //    cancelButton.setSelected(true);
         cancelButton.setText("*ConfigDialog.cancel*");
-        cancelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent e) {
-                setVisible(false);
-            }
-        });
+        cancelButton.addActionListener(e -> setVisible(false));
         jTabbedPane1.setMinimumSize(new java.awt.Dimension(400, 200));
         jTabbedPane1.setOpaque(false);
         jTabbedPane1.setPreferredSize(new java.awt.Dimension(400, 200));
@@ -257,7 +253,7 @@ public class ConfigDialog extends javax.swing.JDialog {
         if (-1 != config_logFontSize.getSelectedIndex() &&
                 -1 != config_logFontFamily.getSelectedIndex()) {
             logFontSample.setFont(new java.awt.Font((String) config_logFontFamily.
-                    getSelectedItem(), 0,
+                    getSelectedItem(), Font.PLAIN,
                     Integer.parseInt((String) config_logFontSize.getSelectedItem())));
         }
     }

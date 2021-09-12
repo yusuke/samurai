@@ -28,7 +28,6 @@ import java.awt.Component;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileFilter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -50,10 +49,7 @@ public class GUIResourceBundle extends ResourceBundle {
     private final Properties props = new Properties();
 
     public static synchronized GUIResourceBundle getInstance() {
-        Map<String, GUIResourceBundle> defaultResource = resourceses.get(DEFAULT_RESOURCE_NAME);
-        if (null == defaultResource) {
-            resourceses.put(DEFAULT_RESOURCE_NAME, defaultResource = new HashMap<>());
-        }
+        Map<String, GUIResourceBundle> defaultResource = resourceses.computeIfAbsent(DEFAULT_RESOURCE_NAME, k -> new HashMap<>());
         String packageName = getCallerPackage();
         GUIResourceBundle theResources = defaultResource.get(
                 packageName);
@@ -71,10 +67,7 @@ public class GUIResourceBundle extends ResourceBundle {
     }
 
     public static synchronized GUIResourceBundle getInstance(String resourceName) {
-        Map<String, GUIResourceBundle> defaultResource = resourceses.get(resourceName);
-        if (null == defaultResource) {
-            resourceses.put(resourceName, defaultResource = new HashMap<>());
-        }
+        Map<String, GUIResourceBundle> defaultResource = resourceses.computeIfAbsent(resourceName, k -> new HashMap<>());
         String packageName = getCallerPackage();
         GUIResourceBundle theResources = defaultResource.get(
                 packageName);
@@ -166,11 +159,7 @@ public class GUIResourceBundle extends ResourceBundle {
             System.out.println("dir doesn't exist");
             System.exit(-1);
         }
-        File[] javaFiles = specifiedDir.listFiles(new FileFilter() {
-                                                      public boolean accept(File file) {
-                                                          return file.getName().endsWith(".java");
-                                                      }
-                                                  }
+        File[] javaFiles = specifiedDir.listFiles(file -> file.getName().endsWith(".java")
         );
         for (File javaFile : javaFiles) {
             System.out.println("processing:" + javaFile);
@@ -183,7 +172,7 @@ public class GUIResourceBundle extends ResourceBundle {
             while (null != (line = br.readLine())) {
                 int index;
                 if (reverse) {
-                    if (-1 != line.indexOf("(\"*")) {
+                    if (line.contains("(\"*")) {
 //          line = line.replaceAll("(\\\"*","resources.getMessage(\\\"");
 //            line = line.replaceFirst("\"\\*", "resources.getMessage(\"");
 //            line = line.replaceFirst("\"\\)", "\"))");
@@ -218,8 +207,11 @@ public class GUIResourceBundle extends ResourceBundle {
             br.close();
             bw.close();
             File renameTo = new File(javaFile + ".original");
+            //noinspection ResultOfMethodCallIgnored
             renameTo.delete();
+            //noinspection ResultOfMethodCallIgnored
             javaFile.renameTo(renameTo);
+            //noinspection ResultOfMethodCallIgnored
             modified.renameTo(javaFile);
         }
 
@@ -249,7 +241,7 @@ public class GUIResourceBundle extends ResourceBundle {
 
         Field[] fields = obj.getClass().getDeclaredFields();
         for (Field field : fields) {
-            Class type = field.getType();
+            Class<?> type = field.getType();
             try {
                 Object theObject = field.get(obj);
                 if (theObject instanceof JFrame) {

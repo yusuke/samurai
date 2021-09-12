@@ -88,16 +88,14 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
             isCSV = false;
             gcParser = new GCParser();
         }
-        invokeLater(new Runnable() {
-            public void run() {
-                while (tileTabPanel.getComponentSize() > 0) {
-                    tileTabPanel.removeComponentAt(0);
-                }
-                for (LineGraphPanel graphPanel : graphs) {
-                    graphPanel.adjustScrollBar();
-                }
-
+        invokeLater(() -> {
+            while (tileTabPanel.getComponentSize() > 0) {
+                tileTabPanel.removeComponentAt(0);
             }
+            for (LineGraphPanel graphPanel : graphs) {
+                graphPanel.adjustScrollBar();
+            }
+
         });
     }
 

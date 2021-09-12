@@ -66,18 +66,14 @@ public class PlotSettingDialog extends JDialog {
         this(null, "*PlotSettingDialog.title*", false);
     }
 
-    private void jbInit() throws Exception {
-        okButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                okPressed = true;
-                setVisible(false);
-            }
+    private void jbInit() {
+        okButton.addActionListener(e -> {
+            okPressed = true;
+            setVisible(false);
         });
-        cancelButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                cancelPressed = true;
-                setVisible(false);
-            }
+        cancelButton.addActionListener(e -> {
+            cancelPressed = true;
+            setVisible(false);
         });
         this.getContentPane().setBackground(SystemColor.control);
         this.setModal(true);

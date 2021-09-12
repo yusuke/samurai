@@ -147,11 +147,7 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
         if (SwingUtilities.isEventDispatchThread() || !this.isDisplayable()) {
             tab.addComponent(name, component);
         } else {
-            SwingUtilities.invokeLater(new Runnable() {
-                public void run() {
-                    tab.addComponent(name, component);
-                }
-            });
+            SwingUtilities.invokeLater(() -> tab.addComponent(name, component));
         }
     }
 
@@ -159,11 +155,7 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
         if (SwingUtilities.isEventDispatchThread()) {
             tab.removeComponent(component);
         } else {
-            javax.swing.SwingUtilities.invokeLater(new Runnable() {
-                public void run() {
-                    tab.removeComponent(component);
-                }
-            });
+            javax.swing.SwingUtilities.invokeLater(() -> tab.removeComponent(component));
         }
     }
 
@@ -176,9 +168,9 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
     public synchronized void openFiles(File[] files) {
         if (0 < files.length) {
             List<File> fileList = new ArrayList<>(files.length);
-            for (int i = 0; i < files.length; i++) {
-                if (!files[i].isDirectory()) {
-                    fileList.add(files[i]);
+            for (File file : files) {
+                if (!file.isDirectory()) {
+                    fileList.add(file);
                 }
             }
             java.util.Collections.sort(fileList);

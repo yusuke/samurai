@@ -53,11 +53,7 @@ public class SplitTabPanelTest extends JFrame {
     final JButton ta3 = new JButton("switch");
     private void useGBL(){
 //        JTextArea ta3 = new JTextArea("3");
-        ta3.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                dump();
-            }
-        });
+        ta3.addActionListener(e -> dump());
         ta3.setActionCommand("okButton");
 
 
@@ -115,11 +111,9 @@ public class SplitTabPanelTest extends JFrame {
         splitTabPanel.addComponent("2", ta2);
         splitTabPanel.addComponent("3", ta3);
         JButton btn = new JButton("switch");
-        btn.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e){
-                orientation++;
-                splitTabPanel.setOrientation(orientation %2);
-            }
+        btn.addActionListener(e -> {
+            orientation++;
+            splitTabPanel.setOrientation(orientation %2);
         });
         btn.setActionCommand("okButton");
         splitTabPanel.addComponent("2", btn);

@@ -45,9 +45,8 @@ public class Context {
         resources.inject(searchPanel);
         this.config.apply(searchPanel);
         try {
-
             this.localProcesses = new LocalProcesses(config, fileHistory);
-        } catch (java.lang.NoClassDefFoundError toolsJarNotFound) {
+        } catch (java.lang.NoClassDefFoundError ignored) {
         }
 
         executeThread.start();
@@ -91,11 +90,7 @@ public class Context {
 
     public void setTemporaryStatus(String temporaryStatus) {
         this.statusBar.setText(temporaryStatus);
-        executeThread.invokeLater(new Task() {
-            public void execute() {
-                setStatusBar();
-            }
-        }, 2);
+        executeThread.invokeLater(this::setStatusBar, 2);
     }
 
     private String statusText = "";

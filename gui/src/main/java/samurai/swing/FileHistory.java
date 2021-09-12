@@ -57,13 +57,11 @@ public final class FileHistory {
     public synchronized JMenuItem getOpenMenu(final Component component) {
         if (null == openMenu) {
             openMenu = new JMenuItem();
-            openMenu.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent e) {
-                    if (JFileChooser.APPROVE_OPTION == fileChooser
-                            .showOpenDialog(component)) {
-                        File file = fileChooser.getSelectedFile();
-                        open(file);
-                    }
+            openMenu.addActionListener(e -> {
+                if (JFileChooser.APPROVE_OPTION == fileChooser
+                        .showOpenDialog(component)) {
+                    File file = fileChooser.getSelectedFile();
+                    open(file);
                 }
             });
         }

@@ -34,6 +34,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.util.Objects;
 
 public class SearchPanel extends JPanel {
     public final JTextField config_searchText = new JTextField();
@@ -58,7 +59,7 @@ public class SearchPanel extends JPanel {
 
     FlowLayout layout = new FlowLayout(FlowLayout.LEFT);
 
-    private void jbInit() throws Exception {
+    private void jbInit() {
         config_searchText.setPreferredSize(new Dimension(150, 20));
         config_searchText.setMaximumSize(new Dimension(1500, 20));
         config_searchText.addFocusListener(new FocusListener() {
@@ -86,11 +87,7 @@ public class SearchPanel extends JPanel {
         btnHide.setRolloverEnabled(true);
         this.setPreferredSize(new Dimension(429, 30));
         btnNext.setDefaultCapable(true);
-        config_matchCase.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                storeConfig();
-            }
-        });
+        config_matchCase.addActionListener(e -> storeConfig());
         this.add(btnHide);
         this.add(find);
         this.add(config_searchText);
@@ -151,19 +148,19 @@ public class SearchPanel extends JPanel {
 
     static {
         if (OSDetector.isMac()) {
-            closeIcon = new ImageIcon(SearchPanel.class.getResource(
-                    "images/close.gif"));
-            closeHoverIcon = new ImageIcon(SearchPanel.class.getResource(
-                    "images/close_hover.gif"));
-            closePushedIcon = new ImageIcon(SearchPanel.class.getResource(
-                    "images/close_push.gif"));
+            closeIcon = new ImageIcon(Objects.requireNonNull(SearchPanel.class.getResource(
+                    "images/close.gif")));
+            closeHoverIcon = new ImageIcon(Objects.requireNonNull(SearchPanel.class.getResource(
+                    "images/close_hover.gif")));
+            closePushedIcon = new ImageIcon(Objects.requireNonNull(SearchPanel.class.getResource(
+                    "images/close_push.gif")));
         } else {
-            closeIcon = new ImageIcon(SearchPanel.class.getResource(
-                    "images/winclose.gif"));
-            closeHoverIcon = new ImageIcon(SearchPanel.class.getResource(
-                    "images/winclose_hover.gif"));
-            closePushedIcon = new ImageIcon(SearchPanel.class.getResource(
-                    "images/winclose_push.gif"));
+            closeIcon = new ImageIcon(Objects.requireNonNull(SearchPanel.class.getResource(
+                    "images/winclose.gif")));
+            closeHoverIcon = new ImageIcon(Objects.requireNonNull(SearchPanel.class.getResource(
+                    "images/winclose_hover.gif")));
+            closePushedIcon = new ImageIcon(Objects.requireNonNull(SearchPanel.class.getResource(
+                    "images/winclose_push.gif")));
         }
     }
 }

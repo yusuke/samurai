@@ -44,18 +44,14 @@ public class TestVelocityHtmlRenderer extends TestCase {
         //warm up
         System.out.println("Warming up " + vendor + "...");
         for (int i = 0; i < 100; i++) {
-            renderer.saveTo(stats, null, new ProgressListener() {
-                public void notifyProgress(int finished, int all) {
-                }
+            renderer.saveTo(stats, null, (finished, all) -> {
             });
         }
         System.gc();
         System.out.println("Running " + vendor + "...");
         long before = System.currentTimeMillis();
         for (int i = 0; i < count; i++) {
-            renderer.saveTo(stats, null, new ProgressListener() {
-                public void notifyProgress(int finished, int all) {
-                }
+            renderer.saveTo(stats, null, (finished, all) -> {
             });
         }
         long timeSpent = System.currentTimeMillis() - before;
@@ -71,7 +67,7 @@ public class TestVelocityHtmlRenderer extends TestCase {
     }
 
 
-    public void testEscape() throws IOException {
+    public void testEscape() {
         VelocityHtmlRenderer.Util util = new VelocityHtmlRenderer.Util();
         assertEquals("foo&lt;bar",util.escape("foo<bar"));
         assertEquals("foo&gt;bar",util.escape("foo>bar"));
@@ -82,11 +78,7 @@ public class TestVelocityHtmlRenderer extends TestCase {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
         analyzer.analyze(new File("testcases/Sun/1.4.2_03Sunstacked.dmp"));
         VelocityHtmlRenderer renderer = new VelocityHtmlRenderer("samurai/web/outcss.vm");
-        renderer.saveTo(statistic, new File("savedhtml"), new ProgressListener() {
-            public void notifyProgress(int finished, int all) {
-                assertTrue(finished <= all);
-            }
-        });
+        renderer.saveTo(statistic, new File("savedhtml"), (finished, all) -> assertTrue(finished <= all));
     }
 
 }

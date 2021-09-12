@@ -55,12 +55,9 @@ public class TestThreadDump extends TestCase {
         dig2(new File("testCases"+File.separator+"IBM"));
     }
     public void dig2(File dir) throws IOException {
-        File[] files = dir.listFiles(new FileFilter() {
-            public boolean accept(File file) {
-                return file.isDirectory() || file.getName().endsWith(".dmp") || file.getName().endsWith(".dump")|| file.getName().endsWith(".txt");
-            }
-        }
+        File[] files = dir.listFiles(file -> file.isDirectory() || file.getName().endsWith(".dmp") || file.getName().endsWith(".dump")|| file.getName().endsWith(".txt")
         );
+        assert files != null;
         for (File file : files) {
             if (file.isDirectory()) {
                 dig2(file);
