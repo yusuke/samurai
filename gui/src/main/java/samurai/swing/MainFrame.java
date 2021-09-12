@@ -29,15 +29,7 @@ import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.text.JTextComponent;
-import java.awt.AWTEvent;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.Point;
-import java.awt.SystemColor;
-import java.awt.Toolkit;
+import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
@@ -324,7 +316,10 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         context.getKeyStroke().apply(tab.popupMenu);
         resources.inject(this);
         if (OSDetector.isMac()) {
-            macApp = new MacApplicationWrapper(this);
+            Desktop desktop = Desktop.getDesktop();
+            desktop.setAboutHandler(e -> this.handleAbout());
+            desktop.setPreferencesHandler(e -> this.handlePreferences());
+            desktop.setQuitHandler((e1, e2) -> this.handleQuit());
         }
         DropTarget target = new DropTarget(this,
                 DnDConstants.ACTION_REFERENCE,
@@ -354,8 +349,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         }
         searcher.config_searchText.grabFocus();
     }
-
-    MacApplicationWrapper macApp = null;
 
     public void closePushed(int index) {
         closeSamuraiPanel(index);
