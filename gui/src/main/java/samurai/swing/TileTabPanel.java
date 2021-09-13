@@ -61,9 +61,8 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         if (OSDetector.isMac()) {
             closeIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
                     "close.gif")));
-            closeHoverIcon = closeIcon;
-//      closeHoverIcon = new ImageIcon(TileTabPanel.class.getResource(
-//          "close_hover.gif"));
+            closeHoverIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
+                    "close_hover.gif")));
             closePushedIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
                     "close_push.gif")));
         } else {
