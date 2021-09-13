@@ -133,7 +133,7 @@
                                 <argument>--vendor</argument>
                                 <argument>Yusuke Yamamoto</argument>
                                 <argument>--icon</argument>
-                                <argument>${project.basedir}/package/Shogun.icns</argument>
+                                <argument>${project.basedir}/package/samurai.icns</argument>
                                 <argument>--input</argument>
                                 <argument>${project.build.directory}/</argument>
                                 <argument>--main-class</argument>
