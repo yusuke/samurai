@@ -124,7 +124,9 @@
                             <arguments>
                                 <argument>--verbose</argument>
                                 <argument>--java-options</argument>
-                                <argument>-Xmx128m -Xms128m -XX:+UseSerialGC -Xverify:none
+                                <argument>-Xmx128m -Xms128m -XX:+UseSerialGC
+                                    --add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED
+                                    --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
                                     -XX:ErrorFile=$USER_HOME/java_error_in_idea_%p.log
                                     -XX:HeapDumpPath=$USER_HOME/java_error_in_idea.hprof
                                 </argument>
