@@ -5,7 +5,7 @@
     <groupId>samurai</groupId>
     <artifactId>gui</artifactId>
     <packaging>jar</packaging>
-    <version>3.0-SNAPSHOT</version>
+    <version>3.0</version>
     <name>Samurai</name>
     <url>http://samuraism.jp/samurai/</url>
     <properties>
@@ -144,6 +144,8 @@
                                 <argument>./${project.artifactId}-${project.version}.jar</argument>
                                 <argument>--dest</argument>
                                 <argument>./</argument>
+                                <argument>--app-version</argument>
+                                <argument>${project.version}</argument>
                                 <argument>--mac-package-identifier</argument>
                                 <argument>samurai.swing.Samurai</argument>
                                 <argument>--mac-signing-key-user-name</argument>
