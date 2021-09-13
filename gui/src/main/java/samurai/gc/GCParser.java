@@ -28,9 +28,9 @@ public class GCParser implements LineGraphDataSourceParser {
         if (null != finalParser) {
             return finalParser.parse(line, renderer);
         } else {
-            for (int i = 0; i < gcParsers.length; i++) {
-                if (gcParsers[i].parse(line, renderer)) {
-                    finalParser = gcParsers[i];
+            for (LineGraphDataSourceParser gcParser : gcParsers) {
+                if (gcParser.parse(line, renderer)) {
+                    finalParser = gcParser;
                     return true;
                 }
             }
