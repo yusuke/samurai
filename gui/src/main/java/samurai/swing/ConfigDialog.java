@@ -78,6 +78,7 @@ public class ConfigDialog extends javax.swing.JDialog {
         this.getContentPane().setLayout(gridBagLayout1);
         config_wrapLog.setText("*ConfigDialog.wrapLine*");
         jLabel1.setText("*ConfigDialog.fontFamily*");
+        jTabbedPane1.setForeground(Color.black);
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.TOP);
 //    jPanel1.setLayout(gridBagLayout3);
         config_shrinkIdleThreads.setText("*ConfigDialog.shrinkIdleThreads*");
