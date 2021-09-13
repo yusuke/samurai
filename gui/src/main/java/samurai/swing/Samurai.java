@@ -24,6 +24,7 @@ public class Samurai {
 
     public static void main(String[] args) {
         if (OSDetector.isMac()) {
+            System.setProperty("apple.awt.application.name",resources.getMessage("Samurai") );
             System.setProperty("apple.laf.useScreenMenuBar", "true");
 //    System.setProperty("apple.awt.brushMetalLook", "true");
             System.setProperty("com.apple.macos.useSmallTabs", "true");
