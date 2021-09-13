@@ -15,6 +15,8 @@
  */
 package samurai.swing;
 
+import samurai.util.ImageLoader;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -55,7 +57,7 @@ public class AboutSamuraiDialog extends JDialog implements ActionListener {
 
     //Component initialization
     private void jbInit() {
-        image1 = new ImageIcon(Objects.requireNonNull(MainFrame.class.getResource("images/samurai64.gif")));
+        image1 = ImageLoader.get("/samurai/swing/images/samurai64.gif");
         imageLabel.setMaximumSize(new Dimension(64, 64));
         imageLabel.setMinimumSize(new Dimension(64, 64));
         imageLabel.setPreferredSize(new Dimension(64, 64));

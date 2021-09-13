@@ -16,6 +16,7 @@
 package samurai.swing;
 
 import samurai.util.GUIResourceBundle;
+import samurai.util.ImageLoader;
 import samurai.util.OSDetector;
 
 import javax.swing.ImageIcon;
@@ -25,9 +26,7 @@ import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.JSeparator;
 import javax.swing.JTabbedPane;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -59,19 +58,13 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
 
     static {
         if (OSDetector.isMac()) {
-            closeIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
-                    "close.gif")));
-            closeHoverIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
-                    "close_hover.gif")));
-            closePushedIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
-                    "close_push.gif")));
+            closeIcon = ImageLoader.get("/samurai/swing/images/close.gif");
+            closeHoverIcon = ImageLoader.get("/samurai/swing/images/close_hover.gif");
+            closePushedIcon = ImageLoader.get("/samurai/swing/images/close_push.gif");
         } else {
-            closeIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
-                    "winclose.gif")));
-            closeHoverIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
-                    "winclose_hover.gif")));
-            closePushedIcon = new ImageIcon(Objects.requireNonNull(TileTabPanel.class.getResource(
-                    "winclose_push.gif")));
+            closeIcon = ImageLoader.get("/samurai/swing/images/winclose.gif");
+            closeHoverIcon = ImageLoader.get("/samurai/swing/images/winclose_hover.gif");
+            closePushedIcon = ImageLoader.get("/samurai/swing/images/winclose_push.gif");
         }
     }
 

@@ -16,6 +16,7 @@
 package samurai.swing;
 
 import samurai.util.GUIResourceBundle;
+import samurai.util.ImageLoader;
 import samurai.util.OSDetector;
 import samurai.util.StringUtil;
 
@@ -148,19 +149,13 @@ public class SearchPanel extends JPanel {
 
     static {
         if (OSDetector.isMac()) {
-            closeIcon = new ImageIcon(Objects.requireNonNull(SearchPanel.class.getResource(
-                    "images/close.gif")));
-            closeHoverIcon = new ImageIcon(Objects.requireNonNull(SearchPanel.class.getResource(
-                    "images/close_hover.gif")));
-            closePushedIcon = new ImageIcon(Objects.requireNonNull(SearchPanel.class.getResource(
-                    "images/close_push.gif")));
+            closeIcon = ImageLoader.get( "/samurai/swing/images/close.gif");
+            closeHoverIcon = ImageLoader.get("/samurai/swing/images/close_hover.gif");
+            closePushedIcon = ImageLoader.get("/samurai/swing/images/close_push.gif");
         } else {
-            closeIcon = new ImageIcon(Objects.requireNonNull(SearchPanel.class.getResource(
-                    "images/winclose.gif")));
-            closeHoverIcon = new ImageIcon(Objects.requireNonNull(SearchPanel.class.getResource(
-                    "images/winclose_hover.gif")));
-            closePushedIcon = new ImageIcon(Objects.requireNonNull(SearchPanel.class.getResource(
-                    "images/winclose_push.gif")));
+            closeIcon = ImageLoader.get("/samurai/swing/images/winclose.gif");
+            closeHoverIcon = ImageLoader.get("/samurai/swing/images/winclose_hover.gif");
+            closePushedIcon = ImageLoader.get("/samurai/swing/images/winclose_push.gif");
         }
     }
 }

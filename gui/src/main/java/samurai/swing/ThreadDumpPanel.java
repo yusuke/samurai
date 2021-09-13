@@ -20,11 +20,7 @@ import samurai.core.ThreadDump;
 import samurai.core.ThreadDumpExtractor;
 import samurai.core.ThreadDumpSequence;
 import samurai.core.ThreadStatistic;
-import samurai.util.Configuration;
-import samurai.util.ConfigurationListener;
-import samurai.util.GUIResourceBundle;
-import samurai.util.OSDetector;
-import samurai.util.Task;
+import samurai.util.*;
 import samurai.web.Constants;
 import samurai.web.ProgressListener;
 import samurai.web.ThreadFilter;
@@ -74,20 +70,20 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
 
     private final JProgressBar progressBar = new JProgressBar();
 
-    final ImageIcon forwardIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/forward.gif"));
-    final ImageIcon backwardIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/backward.gif"));
+    final ImageIcon forwardIcon = ImageLoader.get("/samurai/swing/images/forward.gif");
+    final ImageIcon backwardIcon = ImageLoader.get("/samurai/swing/images/backward.gif");
     final public JButton saveButton = new JButton();
     public final JButton openButton = new JButton();
     public final JButton trashButton = new JButton();
     public final JToggleButton tableButton = new JToggleButton();
     public final JToggleButton fullButton = new JToggleButton();
     public final JToggleButton sequenceButton = new JToggleButton();
-    final ImageIcon saveButtonIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/save.gif"));
+    final ImageIcon saveButtonIcon = ImageLoader.get("/samurai/swing/images/save.gif");
     ImageIcon openButtonIcon;
-    final ImageIcon trashButtonIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/trash.gif"));
-    final ImageIcon tableIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/tableButton.gif"));
-    final ImageIcon fullButtonIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/fullButton.gif"));
-    final ImageIcon sequenceButtonIcon = new ImageIcon(ThreadDumpPanel.class.getResource("images/sequenceButton.gif"));
+    final ImageIcon trashButtonIcon = ImageLoader.get("/samurai/swing/images/trash.gif");
+    final ImageIcon tableIcon = ImageLoader.get("/samurai/swing/images/tableButton.gif");
+    final ImageIcon fullButtonIcon = ImageLoader.get("/samurai/swing/images/fullButton.gif");
+    final ImageIcon sequenceButtonIcon = ImageLoader.get("/samurai/swing/images/sequenceButton.gif");
     final BorderLayout borderLayout1 = new BorderLayout();
     private String referer = null;
     final JEditorPane threadDumpPanel = new JEditorPane() {
@@ -248,10 +244,10 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         saveButton.addMouseListener(new RolloverBorder(saveButton));
 
         if (OSDetector.isMac()) {
-            openButtonIcon = new ImageIcon(MainFrame.class.getResource("images/folder_mac.gif"));
+            openButtonIcon = ImageLoader.get( "/samurai/swing/images/folder_mac.gif");
         }
         if (OSDetector.isWindows()) {
-            openButtonIcon = new ImageIcon(MainFrame.class.getResource("images/folder_win.gif"));
+            openButtonIcon = ImageLoader.get("i/samurai/swing/mages/folder_win.gif");
         }
 
         openButton.setBorderPainted(false);

@@ -18,6 +18,7 @@ package samurai.swing;
 import samurai.tail.LogMonitor;
 import samurai.tail.MultipleLogWatcher;
 import samurai.util.GUIResourceBundle;
+import samurai.util.ImageLoader;
 
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
@@ -38,12 +39,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
-    private static final ImageIcon monitoringIcon = new ImageIcon(Objects.requireNonNull(SamuraiPanel.class.getResource("images/monitoring.gif")));
-    private static final ImageIcon readingIcon = new ImageIcon(Objects.requireNonNull(SamuraiPanel.class.getResource("images/reading.gif")));
-    /*package*/static final ImageIcon stoppedIcon = new ImageIcon(Objects.requireNonNull(SamuraiPanel.class.getResource("images/stopped.gif")));
+    private static final ImageIcon monitoringIcon = ImageLoader.get("/samurai/swing/images/monitoring.png");
+    private static final ImageIcon readingIcon = ImageLoader.get("/samurai/swing/images/reading.png");
+    /*package*/static final ImageIcon stoppedIcon = ImageLoader.get("/samurai/swing/images/stopped.png");
     private final List<LogRenderer> logRenderers = new ArrayList<>(3);
 
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
