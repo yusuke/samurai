@@ -5,7 +5,7 @@
     <groupId>samurai</groupId>
     <artifactId>gui</artifactId>
     <packaging>jar</packaging>
-    <version>3.0</version>
+    <version>2021.1</version>
     <name>Samurai</name>
     <url>http://samuraism.jp/samurai/</url>
     <properties>
@@ -14,8 +14,6 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <java.version>11</java.version>
-        <!--        <jpackager.executable>${project.basedir}/jdk.packager/jpackager</jpackager.executable>-->
-        <jpackager.icon>${project.basedir}/package/Shogun.icns</jpackager.icon>
     </properties>
 
     <licenses>
@@ -41,7 +39,7 @@
         <dependency>
             <groupId>samurai</groupId>
             <artifactId>core</artifactId>
-            <version>3.0-SNAPSHOT</version>
+            <version>2021.1</version>
         </dependency>
     </dependencies>
     <build>
@@ -71,6 +69,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
                     <source>11</source>
@@ -83,6 +82,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
+                <version>3.2.1</version>
                 <executions>
                     <execution>
                         <goals>
@@ -94,6 +94,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
                 <configuration>
                     <archive>
                         <manifest>
