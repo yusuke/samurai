@@ -109,18 +109,13 @@ public class LocalProcesses {
             this.vm = vm;
             addActionListener(e -> {
                 try {
-                    try {
-                        for (int i = 0; i < 3; i++) {
-                            Path path = Paths.get(String.valueOf(vm.getPid()));
-                            Files.write(path, ThreadDumpUtil.getThreadDump(vm.getPid()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                            fileHistory.open(path.toFile());
-                            Thread.sleep(1000);
-                        }
-
-                    } catch (InterruptedException ignore) {
-
+                    for (int i = 0; i < 3; i++) {
+                        Path path = Paths.get(vm.getFqcn() + "-" + vm.getPid() + ".txt");
+                        Files.write(path, ThreadDumpUtil.getThreadDump(vm.getPid()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                        fileHistory.open(path.toFile());
+                        Thread.sleep(1000);
                     }
-                } catch (AttachNotSupportedException | IOException e1) {
+                } catch (InterruptedException | AttachNotSupportedException | IOException e1) {
                     e1.printStackTrace();
                 }
             });
