@@ -19,7 +19,6 @@ import samurai.core.ThreadDumpSequence;
 import samurai.core.ThreadStatistic;
 
 import java.io.Serializable;
-import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 
@@ -69,24 +68,9 @@ public class ThreadFilter implements Serializable {
                 } else {
                     sequence.addThreadDump(fullThreadDump.getThreadDump(i));
                 }
-//        threadDumps[i] = ;
             }
         } else {
             sequence = statistic.getStackTracesById(threadId);
-//      List threadList = new ArrayList();
-//      for (int i = 0; i < statistic.getFullThreadDumpCount(); i++) {
-//        FullThreadDump fullThreadDump = statistic.getFullThreadDump(i);
-//        for (int j = 0; j < fullThreadDump.getThreadCount(); j++) {
-//          StackTrace threadDump = fullThreadDump.getThreadDump(j);
-//          if (threadDump.getId().equals(this.threadId)) {
-//            threadList.add(threadDump);
-//          }
-//        }
-//      }
-//      threadDumps = new StackTrace[threadList.size()];
-//      for (int i = 0; i < threadDumps.length; i++) {
-//        threadDumps[i] = (StackTrace) threadList.get(i);
-//      }
         }
         return sequence;
     }
@@ -112,19 +96,13 @@ public class ThreadFilter implements Serializable {
     }
 
     public void setQuery(String query) {
-//    if (debug)
-//      System.out.println("query:" + query);
-//    String mode = getParameter(query,"mode");
-//    if(null != mode){
-//      setMode(mode);
-//    }
-        if (-1 != query.indexOf(Constants.MODE_TABLE)) {
+        if (query.contains(Constants.MODE_TABLE)) {
             mode = Constants.MODE_TABLE;
         }
-        if (-1 != query.indexOf(Constants.MODE_FULL)) {
+        if (query.contains(Constants.MODE_FULL)) {
             mode = Constants.MODE_FULL;
         }
-        if (-1 != query.indexOf(Constants.MODE_SEQUENCE)) {
+        if (query.contains(Constants.MODE_SEQUENCE)) {
             mode = Constants.MODE_SEQUENCE;
         }
         if (getMode().equals(Constants.MODE_FULL)) {
@@ -144,7 +122,7 @@ public class ThreadFilter implements Serializable {
 
         String shrinkIdle = getParameter(query, Constants.SHRINK_IDLE);
         if (null != shrinkIdle) {
-            setShrinkIdle(Boolean.valueOf(shrinkIdle));
+            setShrinkIdle(Boolean.parseBoolean(shrinkIdle));
         }
 
 
@@ -155,16 +133,15 @@ public class ThreadFilter implements Serializable {
         if (-1 == index) {
             return null;
         } else {
-            int valuebegin = query.indexOf("-", index) + 1;
-            int valueend = query.indexOf("_", index);
-            if (-1 == valueend) {
-                valueend = query.lastIndexOf(".");
+            int valueBegin = query.indexOf("-", index) + 1;
+            int valueEnd = query.indexOf("_", index);
+            if (-1 == valueEnd) {
+                valueEnd = query.lastIndexOf(".");
             }
-//      System.out.println(parambegin+":"+paramend);
-            if (-1 != valueend) {
-                return URLDecoder.decode(query.substring(valuebegin, valueend), StandardCharsets.UTF_8);
+            if (-1 != valueEnd) {
+                return URLDecoder.decode(query.substring(valueBegin, valueEnd), StandardCharsets.UTF_8);
             } else {
-                return URLDecoder.decode(query.substring(valuebegin), StandardCharsets.UTF_8);
+                return URLDecoder.decode(query.substring(valueBegin), StandardCharsets.UTF_8);
             }
         }
     }

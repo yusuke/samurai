@@ -31,11 +31,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.text.JTextComponent;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
-import java.util.Objects;
 
 public class SearchPanel extends JPanel {
     public final JTextField config_searchText = new JTextField();

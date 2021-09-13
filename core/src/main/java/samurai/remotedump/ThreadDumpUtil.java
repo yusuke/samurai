@@ -26,9 +26,7 @@ import sun.tools.attach.HotSpotVirtualMachine;
 import java.io.InputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.util.List;
 
 public class ThreadDumpUtil {
 

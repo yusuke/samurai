@@ -28,7 +28,6 @@ import javax.swing.event.MenuListener;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class LocalProcesses {

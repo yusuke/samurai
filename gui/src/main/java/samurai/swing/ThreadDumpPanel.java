@@ -22,7 +22,6 @@ import samurai.core.ThreadDumpSequence;
 import samurai.core.ThreadStatistic;
 import samurai.util.*;
 import samurai.web.Constants;
-import samurai.web.ProgressListener;
 import samurai.web.ThreadFilter;
 import samurai.web.VelocityHtmlRenderer;
 
@@ -42,8 +41,6 @@ import javax.swing.ListSelectionModel;
 import javax.swing.SwingUtilities;
 import javax.swing.event.HyperlinkEvent;
 import javax.swing.event.HyperlinkListener;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
