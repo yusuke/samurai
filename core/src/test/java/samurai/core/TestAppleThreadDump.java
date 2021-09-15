@@ -29,7 +29,7 @@ class TestAppleThreadDump  {
     @Test
     void testApple142_08() throws IOException {
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
-        dumpExtractor.analyze(new File("testcases/Apple/1.4.2_08Apple.dmp"));
+        dumpExtractor.analyze(TestAppleThreadDump.class.getResourceAsStream("/Apple/1.4.2_08Apple.dmp"));
         assertEquals(3, statistic.getFullThreadDumpCount());
         assertEquals(10, statistic.getFullThreadDump(0).getThreadCount());
         assertEquals(10, statistic.getStackTracesAsArray().length);
@@ -72,7 +72,7 @@ class TestAppleThreadDump  {
     @Test
     void testWLS81SP1() throws IOException {
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
-        dumpExtractor.analyze(new File("testcases/Apple/wls81sp1-1.4.2-34apple.dmp"));
+        dumpExtractor.analyze(TestAppleThreadDump.class.getResourceAsStream("/Apple/wls81sp1-1.4.2-34apple.dmp"));
         assertEquals(3, statistic.getFullThreadDumpCount());
         ThreadDump dump = statistic.getFullThreadDump(0).getThreadDump(0);
         assertTrue(dump.isIdle());

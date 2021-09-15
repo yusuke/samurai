@@ -1,0 +1,3123 @@
+.
+.
+JAVA Memory arguments: -Xms256m -Xmx512m
+.
+WLS Start Mode=Development
+.
+CLASSPATH=;C:\bea90\patch_weblogic901\profiles\default\sys_manifest_classpath\weblogic_patch.jar;C:\bea90\JROCKI~1\lib\tools.jar;C:\bea90\WEBLOG~1\server\lib\weblogic_sp.jar;C:\bea90\WEBLOG~1\server\lib\weblogic.jar;;C:\bea90\WEBLOG~1\common\eval\pointbase\lib\pbclient51.jar;C:\bea90\WEBLOG~1\server\lib\xqrl.jar;;C:\bea90\WEBLOG~1\integration\lib\util.jar;
+.
+PATH=C:\bea90\WEBLOG~1\server\native\win\32;C:\bea90\WEBLOG~1\server\bin;C:\bea90\JROCKI~1\jre\bin;C:\bea90\JROCKI~1\bin;C:\oracle\product\9.2\jre\1.4.2\bin\client;C:\oracle\product\9.2\jre\1.4.2\bin;C:\oracle\product\9.2\bin;C:\Program Files\Oracle\jre\1.3.1\bin;C:\Program Files\Oracle\jre\1.1.8\bin;C:\oracle\product\10.1.0\Db_2\bin;C:\oracle\product\10.1.0\Db_2\jre\1.4.2\bin\client;C:\oracle\product\10.1.0\Db_2\jre\1.4.2\bin;C:\ClarifyCRM12.5SR1.07\ClarifyClient;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\Perforce;C:\bea90\WEBLOG~1\server\native\win\32\oci920_8
+.
+***************************************************
+*  To start WebLogic Server, use a username and   *
+*  password assigned to an admin-level user.  For *
+*  server administration, use the WebLogic Server *
+*  console at http:\\hostname:port\console        *
+***************************************************
+starting weblogic with Java version:
+java version "1.5.0_03"
+Java(TM) 2 Runtime Environment, Standard Edition (build 1.5.0_03-b07)
+BEA JRockit(R) (build dra-45238-20050523-2021-win-ia32, R25.2.0-28)
+Starting WLS with line:
+C:\bea90\JROCKI~1\bin\java -jrockit   -Xms256m -Xmx512m  -Djrockit.codegen.optpriority=1 -Xverify:none  -da -Dplatform.home=C:\bea90\WEBLOG~1 -Dwls.home=C:\bea90\WEBLOG~1\server -Dwli.home=C:\bea90\WEBLOG~1\integration  -Dweblogic.management.discover=true -Dweblogic.ProductionModeEnabled=  -Dwlw.iterativeDev= -Dwlw.testConsole= -Dwlw.logErrorsToConsole= -Dweblogic.ext.dirs=C:\bea90\patch_weblogic901\profiles\default\sysext_manifest_classpath -Dweblogic.Name=AdminServer -Djava.security.policy=C:\bea90\WEBLOG~1\server\lib\weblogic.policy   weblogic.Server
+<2006/05/04 17時00分44秒 JST> <Info> <WebLogicServer> <BEA-000377> <WebLogic Server を BEA Systems, Inc. から BEA JRockit(R) バージョン dra-45238-20050523-2021-win-ia32 で起動しています。> 
+<2006/05/04 17時00分45秒 JST> <Info> <Management> <BEA-141107> <バージョン: WebLogic Server 9.0  Fri Jul 15 06:25:18 PDT 2005 605362 > 
+<2006/05/04 17時00分48秒 JST> <Info> <WebLogicServer> <BEA-000215> <ロードされたライセンス : C:\bea90\license.bea> 
+<2006/05/04 17時00分48秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が STARTING に変化しました。> 
+<2006/05/04 17時00分48秒 JST> <Info> <WorkManager> <BEA-002900> <自動チューニング スレッド プールを初期化しています。> 
+<2006/05/04 17時00分49秒 JST> <Notice> <Log Management> <BEA-170019> <サーバ ログ ファイル C:\bea90\user_projects\domains\ttj\servers\AdminServer\logs\AdminServer.log を開きました。すべてのサーバサイド ログ イベントはこのファイルに書き込まれます。> 
+<2006/05/04 17時00分50秒 JST> <Notice> <Security> <BEA-090082> <セキュリティはセキュリティ レルム myrealm を使用して初期化しています。> 
+<2006/05/04 17時00分52秒 JST> <Notice> <Log Management> <BEA-170027> <サーバはドメイン ログ ブロードキャスタを正常に初期化しました。ログ メッセージがドメイン ログにブロードキャストされます。> 
+<2006/05/04 17時00分53秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が STANDBY に変化しました。> 
+<2006/05/04 17時00分53秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が STARTING に変化しました。> 
+<2006/05/04 17時01分03秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が ADMIN に変化しました。> 
+<2006/05/04 17時01分03秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が RESUMING に変化しました。> 
+<2006/05/04 17時01分03秒 JST> <Notice> <Server> <BEA-002613> <チャネル "Default" は、現在 192.168.1.3:7001 でプロトコル iiop, t3, ldap, http をリスンしています。> 
+<2006/05/04 17時01分03秒 JST> <Notice> <Server> <BEA-002613> <チャネル "Default[1]" は、現在 127.0.0.1:7001 でプロトコル iiop, t3, ldap, http をリスンしています。> 
+<2006/05/04 17時01分03秒 JST> <Notice> <WebLogicServer> <BEA-000331> <ドメイン "ttj" で WebLogic 管理サーバ "AdminServer" を開発モードで起動しました。> 
+<2006/05/04 17時01分03秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が RUNNING に変化しました。> 
+<2006/05/04 17時01分03秒 JST> <Notice> <WebLogicServer> <BEA-000360> <サーバが RUNNING モードで起動しました。> 
+===== FULL THREAD DUMP ===============
+Thu May 04 17:01:29 JST 2006
+
+Thread-1 "Main Thread" <alive, in native, waiting, priority=5> {
+    -- Waiting for notification on: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:727)
+    ^-- Lock released while waiting: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:379)
+    weblogic.Server.main(Server.java:66)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-2 "(Signal Handler)" <alive, in native, priority=5, DAEMON> {
+}
+
+
+Thread-3 "(Code Generation Thread 1)" <alive, in native, native_waiting, priority=5, DAEMON> {
+}
+
+
+Thread-4 "(Code Optimization Thread 1)" <alive, in native, native_waiting, priority=1, DAEMON> {
+}
+
+
+Thread-5 "(GC Main Thread)" <alive, in native, priority=5, DAEMON> {
+}
+
+
+Thread-6 "(GC Worker Thread 1)" <alive, in native, native_waiting, priority=5, DAEMON> {
+}
+
+
+Thread-7 "(Hotspot Detector)" <alive, in native, priority=10, DAEMON> {
+}
+
+
+Thread-8 "Finalizer" <alive, in native, native_waiting, priority=8, DAEMON> {
+    jrockit.memory.Finalizer.getPendingFinalizee(Native Method)
+    jrockit.memory.Finalizer.access$100(Unknown Source)
+    jrockit.memory.Finalizer$4.run(Unknown Source)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-9 "Reference Handler" <alive, in native, native_waiting, priority=10, DAEMON> {
+    java.lang.ref.Reference.getPending(Native Method)
+    java.lang.ref.Reference.access$000(Unknown Source)
+    java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-12 "Timer-0" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.util.TaskQueue@1bc88a[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.util.TimerThread.mainLoop(Timer.java:483)
+    ^-- Lock released while waiting: java.util.TaskQueue@1bc88a[fat lock]
+    java.util.TimerThread.run(Timer.java:462)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-13 "Timer-1" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.util.TaskQueue@87830d[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.util.TimerThread.mainLoop(Timer.java:509)
+    ^-- Lock released while waiting: java.util.TaskQueue@87830d[fat lock]
+    java.util.TimerThread.run(Timer.java:462)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-14 "[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, priority=5, DAEMON> {
+    jrockit.vm.Threads.getThreadSnapShot0(Native Method)
+    jrockit.vm.Threads.dumpThreads(Unknown Source)
+    jrockit.vm.Threads.dumpThreads(Unknown Source)
+    jrockit.mapi.ThreadSnapshotImpl.getThreadSnapshot(Unknown Source)
+    jrockit.mapi.ThreadSystemImpl.getThreadSnapshots(Unknown Source)
+    jrockit.mapi.ThreadSystemImpl.getThreadStackDump(Unknown Source)
+    weblogic.platform.JRockitVM.threadDump(JRockitVM.java:35)
+    weblogic.common.internal.AdminProxy.execute(AdminProxy.java:203)
+    weblogic.t3.srvr.ClientRequest$1.run(ClientContext.java:711)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+    weblogic.t3.srvr.ClientRequest.run(ClientContext.java:708)
+    weblogic.work.ServerWorkManagerImpl$WorkAdapterImpl.run(ServerWorkManagerImpl.java:518)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-15 "weblogic.time.TimeEventGenerator" <alive, in native, waiting, priority=9, DAEMON> {
+    -- Waiting for notification on: weblogic.time.common.internal.TimeTable@8a1d20[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+    ^-- Lock released while waiting: weblogic.time.common.internal.TimeTable@8a1d20[fat lock]
+    weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-16 "weblogic.timers.TimerThread" <alive, in native, waiting, priority=9, DAEMON> {
+    -- Waiting for notification on: weblogic.timers.internal.TimerThread@8a3e4d[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:255)
+    ^-- Lock released while waiting: weblogic.timers.internal.TimerThread@8a3e4d[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-17 "[STANDBY] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: weblogic.work.ExecuteThread@d5d3647[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+    ^-- Lock released while waiting: weblogic.work.ExecuteThread@d5d3647[fat lock]
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-18 "GC event thread" <alive, in native, native_waiting, priority=5, DAEMON> {
+    jrockit.mapi.GarbageCollectorImpl.waitForEvent(Native Method)
+    jrockit.mapi.GarbageCollectorImpl.access$100(Unknown Source)
+    jrockit.mapi.GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)
+    jrockit.mapi.AsyncEventProvider$EventThread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-19 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <alive, in native, priority=5, DAEMON> {
+    weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+    weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+    weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+    weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+    weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+    weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-20 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <alive, in native, priority=5, DAEMON> {
+    weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+    weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+    weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+    weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+    weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+    weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-23 "VDE Transaction Processor Thread" <alive, in native, waiting, priority=2, DAEMON> {
+    -- Waiting for notification on: com.octetstring.vde.backend.standard.TransactionProcessor@aba202[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+    ^-- Lock released while waiting: com.octetstring.vde.backend.standard.TransactionProcessor@aba202[fat lock]
+    com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-25 "[STANDBY] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: weblogic.work.ExecuteThread@ffffffff9a97e7c8[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+    ^-- Lock released while waiting: weblogic.work.ExecuteThread@ffffffff9a97e7c8[fat lock]
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-26 "weblogic.store._WLS_AdminServer" <alive, in native, parked, priority=10, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@d57544[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.lang.Thread.whPark(Unknown Source)
+    ^-- Lock released while waiting: java.lang.Object@d57544[fat lock]
+    java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+    java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+    weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+    weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:520)
+    weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:556)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-27 "[STANDBY] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: weblogic.work.ExecuteThread@27d29949[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+    ^-- Lock released while waiting: weblogic.work.ExecuteThread@27d29949[fat lock]
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-28 "[STANDBY] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: weblogic.work.ExecuteThread@ffffffffb50d4aca[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+    ^-- Lock released while waiting: weblogic.work.ExecuteThread@ffffffffb50d4aca[fat lock]
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-30 "DynamicListenThread[Default[1]]" <alive, in native, priority=9, DAEMON> {
+    jrockit.net.SocketNativeIO.accept(Native Method)
+    jrockit.net.SocketNativeIO.accept(Unknown Source)
+    java.net.AbstractSocketImpl.accept(Unknown Source)
+    ^-- Holding lock: java.net.SocksSocketImpl@1a546bf[thin lock]
+    java.net.ServerSocket.implAccept(ServerSocket.java:450)
+    java.net.ServerSocket.accept(ServerSocket.java:421)
+    weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+    weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-31 "DynamicListenThread[Default]" <alive, in native, priority=9, DAEMON> {
+    jrockit.net.SocketNativeIO.accept(Native Method)
+    jrockit.net.SocketNativeIO.accept(Unknown Source)
+    java.net.AbstractSocketImpl.accept(Unknown Source)
+    ^-- Holding lock: java.net.SocksSocketImpl@1a33bcf[thin lock]
+    java.net.ServerSocket.implAccept(ServerSocket.java:450)
+    java.net.ServerSocket.accept(ServerSocket.java:421)
+    weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+    weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+======================================
+
+===== FULL THREAD DUMP ===============
+Thu May 04 17:03:55 JST 2006
+
+Thread-1 "Main Thread" <alive, in native, waiting, priority=5> {
+    -- Waiting for notification on: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:727)
+    ^-- Lock released while waiting: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:379)
+    weblogic.Server.main(Server.java:66)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-2 "(Signal Handler)" <alive, in native, priority=5, DAEMON> {
+}
+
+
+Thread-3 "(Code Generation Thread 1)" <alive, in native, native_waiting, priority=5, DAEMON> {
+}
+
+
+Thread-4 "(Code Optimization Thread 1)" <alive, in native, native_waiting, priority=1, DAEMON> {
+}
+
+
+Thread-5 "(GC Main Thread)" <alive, in native, priority=5, DAEMON> {
+}
+
+
+Thread-6 "(GC Worker Thread 1)" <alive, in native, native_waiting, priority=5, DAEMON> {
+}
+
+
+Thread-7 "(Hotspot Detector)" <alive, in native, priority=10, DAEMON> {
+}
+
+
+Thread-8 "Finalizer" <alive, in native, native_waiting, priority=8, DAEMON> {
+    jrockit.memory.Finalizer.getPendingFinalizee(Native Method)
+    jrockit.memory.Finalizer.access$100(Unknown Source)
+    jrockit.memory.Finalizer$4.run(Unknown Source)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-9 "Reference Handler" <alive, in native, native_waiting, priority=10, DAEMON> {
+    java.lang.ref.Reference.getPending(Native Method)
+    java.lang.ref.Reference.access$000(Unknown Source)
+    java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-12 "Timer-0" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.util.TaskQueue@1bc88a[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.util.TimerThread.mainLoop(Timer.java:483)
+    ^-- Lock released while waiting: java.util.TaskQueue@1bc88a[fat lock]
+    java.util.TimerThread.run(Timer.java:462)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-13 "Timer-1" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.util.TaskQueue@87830d[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.util.TimerThread.mainLoop(Timer.java:509)
+    ^-- Lock released while waiting: java.util.TaskQueue@87830d[fat lock]
+    java.util.TimerThread.run(Timer.java:462)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-14 "[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-15 "weblogic.time.TimeEventGenerator" <alive, in native, waiting, priority=9, DAEMON> {
+    -- Waiting for notification on: weblogic.time.common.internal.TimeTable@8a1d20[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+    ^-- Lock released while waiting: weblogic.time.common.internal.TimeTable@8a1d20[fat lock]
+    weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-16 "weblogic.timers.TimerThread" <alive, in native, waiting, priority=9, DAEMON> {
+    -- Waiting for notification on: weblogic.timers.internal.TimerThread@8a3e4d[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:255)
+    ^-- Lock released while waiting: weblogic.timers.internal.TimerThread@8a3e4d[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-17 "[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:103)
+    ^-- Holding lock: java.lang.Object@847a41[fat lock]
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-18 "GC event thread" <alive, in native, native_waiting, priority=5, DAEMON> {
+    jrockit.mapi.GarbageCollectorImpl.waitForEvent(Native Method)
+    jrockit.mapi.GarbageCollectorImpl.access$100(Unknown Source)
+    jrockit.mapi.GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)
+    jrockit.mapi.AsyncEventProvider$EventThread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-19 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <alive, in native, priority=5, DAEMON> {
+    weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+    weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+    weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+    weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+    weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+    weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-20 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <alive, in native, priority=5, DAEMON> {
+    weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+    weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+    weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+    weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+    weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+    weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-23 "VDE Transaction Processor Thread" <alive, in native, waiting, priority=2, DAEMON> {
+    -- Waiting for notification on: com.octetstring.vde.backend.standard.TransactionProcessor@aba202[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+    ^-- Lock released while waiting: com.octetstring.vde.backend.standard.TransactionProcessor@aba202[fat lock]
+    com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-25 "[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:101)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-26 "weblogic.store._WLS_AdminServer" <alive, in native, parked, priority=10, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@d57544[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.lang.Thread.whPark(Unknown Source)
+    ^-- Lock released while waiting: java.lang.Object@d57544[fat lock]
+    java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+    java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+    weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+    weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:520)
+    weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:556)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-27 "[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-28 "[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:112)
+    ^-- Holding lock: java.lang.Object@847a42[thin lock]
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-30 "DynamicListenThread[Default[1]]" <alive, in native, priority=9, DAEMON> {
+    jrockit.net.SocketNativeIO.accept(Native Method)
+    jrockit.net.SocketNativeIO.accept(Unknown Source)
+    java.net.AbstractSocketImpl.accept(Unknown Source)
+    ^-- Holding lock: java.net.SocksSocketImpl@1a546bf[thin lock]
+    java.net.ServerSocket.implAccept(ServerSocket.java:450)
+    java.net.ServerSocket.accept(ServerSocket.java:421)
+    weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+    weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-31 "DynamicListenThread[Default]" <alive, in native, priority=9, DAEMON> {
+    jrockit.net.SocketNativeIO.accept(Native Method)
+    jrockit.net.SocketNativeIO.accept(Unknown Source)
+    java.net.AbstractSocketImpl.accept(Unknown Source)
+    ^-- Holding lock: java.net.SocksSocketImpl@1a33bcf[thin lock]
+    java.net.ServerSocket.implAccept(ServerSocket.java:450)
+    java.net.ServerSocket.accept(ServerSocket.java:421)
+    weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+    weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-34 "FSCacheRefQueueThread" <alive, in native, waiting, priority=1, DAEMON> {
+    -- Waiting for notification on: java.lang.ref.ReferenceQueue$Lock@6b4012[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+    ^-- Lock released while waiting: java.lang.ref.ReferenceQueue$Lock@6b4012[fat lock]
+    java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+    workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-37 "cache-CommitThread" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@c10f4a[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.persist.TxIndexedFileImpl$CommitThread.run(TxIndexedFileImpl.java:591)
+    ^-- Lock released while waiting: java.lang.Object@c10f4a[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-38 "cache-PrepareThread" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@c10f5b[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.persist.TxIndexedFileImpl$PrepareThread.run(TxIndexedFileImpl.java:536)
+    ^-- Lock released while waiting: java.lang.Object@c10f5b[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-45 "[STANDBY] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, priority=5, DAEMON> {
+    jrockit.vm.Threads.getThreadSnapShot0(Native Method)
+    jrockit.vm.Threads.dumpThreads(Unknown Source)
+    jrockit.vm.Threads.dumpThreads(Unknown Source)
+    jrockit.mapi.ThreadSnapshotImpl.getThreadSnapshot(Unknown Source)
+    jrockit.mapi.ThreadSystemImpl.getThreadSnapshots(Unknown Source)
+    jrockit.mapi.ThreadSystemImpl.getThreadStackDump(Unknown Source)
+    weblogic.platform.JRockitVM.threadDump(JRockitVM.java:35)
+    weblogic.common.internal.AdminProxy.execute(AdminProxy.java:203)
+    weblogic.t3.srvr.ClientRequest$1.run(ClientContext.java:711)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+    weblogic.t3.srvr.ClientRequest.run(ClientContext.java:708)
+    weblogic.work.ServerWorkManagerImpl$WorkAdapterImpl.run(ServerWorkManagerImpl.java:518)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+======================================
+
+<2006/05/04 17時04分03秒 JST> <Critical> <WebLogicServer> <BEA-000394> <
+
+デッドロックが検出されました :
+==================
+
+[deadlocked thread] [ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)':
+-----------------------------------------------------------------
+Thread '[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'' is waiting to acquire lock 'java.lang.Object@847a42' that is held by thread '[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)''
+
+Stack trace:
+------------
+	jrockit.vm.Threads.shortNap(Native Method)
+	jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+	jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+	jrockit.vm.Locks.monitorEnter(Unknown Source)
+	jsp_servlet.__index._jspService(__index.java:103)
+	weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+	weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+	weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+	weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+	weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+	weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+	jrockit.vm.RNI.c2java(Native Method)
+
+[deadlocked thread] [ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)':
+-----------------------------------------------------------------
+Thread '[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'' is waiting to acquire lock 'java.lang.Object@847a41' that is held by thread '[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)''
+
+Stack trace:
+------------
+	jrockit.vm.Threads.waitForSignal(Native Method)
+	jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+	jrockit.vm.Locks.lockFat(Unknown Source)
+	jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+	jrockit.vm.Locks.monitorEnter(Unknown Source)
+	jsp_servlet.__index._jspService(__index.java:112)
+	weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+	weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+	weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+	weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+	weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+	weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+	weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+	weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+	weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+	weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+	weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+	jrockit.vm.RNI.c2java(Native Method)
+
+> 
+<2006/05/04 17時04分03秒 JST> <Critical> <Health> <BEA-310006> <重要なサブシステム core で障害が発生しました。サーバの状態を FAILED に設定しています。
+理由 : Thread deadlock detected> 
+<2006/05/04 17時04分03秒 JST> <Critical> <WebLogicServer> <BEA-000385> <サーバ ヘルスが障害状態です。理由 : health of critical service 'core' failed> 
+<2006/05/04 17時04分03秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が FAILED に変化しました。> 
+<2006/05/04 17時04分03秒 JST> <Error> <com.bea.weblogic.kernel> <000000> <===== FULL THREAD DUMP ===============
+Thu May 04 17:04:03 JST 2006
+
+Thread-1 "Main Thread" <alive, in native, waiting, priority=5> {
+    -- Waiting for notification on: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:727)
+    ^-- Lock released while waiting: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:379)
+    weblogic.Server.main(Server.java:66)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-2 "(Signal Handler)" <alive, in native, priority=5, DAEMON> {
+}
+
+
+Thread-3 "(Code Generation Thread 1)" <alive, in native, native_waiting, priority=5, DAEMON> {
+}
+
+
+Thread-4 "(Code Optimization Thread 1)" <alive, in native, native_waiting, priority=1, DAEMON> {
+}
+
+
+Thread-5 "(GC Main Thread)" <alive, in native, priority=5, DAEMON> {
+}
+
+
+Thread-6 "(GC Worker Thread 1)" <alive, in native, native_waiting, priority=5, DAEMON> {
+}
+
+
+Thread-7 "(Hotspot Detector)" <alive, in native, priority=10, DAEMON> {
+}
+
+
+Thread-8 "Finalizer" <alive, in native, native_waiting, priority=8, DAEMON> {
+    jrockit.memory.Finalizer.getPendingFinalizee(Native Method)
+    jrockit.memory.Finalizer.access$100(Unknown Source)
+    jrockit.memory.Finalizer$4.run(Unknown Source)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-9 "Reference Handler" <alive, in native, native_waiting, priority=10, DAEMON> {
+    java.lang.ref.Reference.getPending(Native Method)
+    java.lang.ref.Reference.access$000(Unknown Source)
+    java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-12 "Timer-0" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.util.TaskQueue@1bc88a[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.util.TimerThread.mainLoop(Timer.java:483)
+    ^-- Lock released while waiting: java.util.TaskQueue@1bc88a[fat lock]
+    java.util.TimerThread.run(Timer.java:462)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-13 "Timer-1" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.util.TaskQueue@87830d[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.util.TimerThread.mainLoop(Timer.java:509)
+    ^-- Lock released while waiting: java.util.TaskQueue@87830d[fat lock]
+    java.util.TimerThread.run(Timer.java:462)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-14 "[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-15 "weblogic.time.TimeEventGenerator" <alive, in native, waiting, priority=9, DAEMON> {
+    -- Waiting for notification on: weblogic.time.common.internal.TimeTable@8a1d20[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+    ^-- Lock released while waiting: weblogic.time.common.internal.TimeTable@8a1d20[fat lock]
+    weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-16 "weblogic.timers.TimerThread" <alive, in native, waiting, priority=9, DAEMON> {
+    -- Waiting for notification on: weblogic.timers.internal.TimerThread@8a3e4d[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:255)
+    ^-- Lock released while waiting: weblogic.timers.internal.TimerThread@8a3e4d[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-17 "[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:103)
+    ^-- Holding lock: java.lang.Object@847a41[fat lock]
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-18 "GC event thread" <alive, in native, native_waiting, priority=5, DAEMON> {
+    jrockit.mapi.GarbageCollectorImpl.waitForEvent(Native Method)
+    jrockit.mapi.GarbageCollectorImpl.access$100(Unknown Source)
+    jrockit.mapi.GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)
+    jrockit.mapi.AsyncEventProvider$EventThread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-19 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <alive, in native, priority=5, DAEMON> {
+    weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+    weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+    weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+    weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+    weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+    weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-20 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <alive, in native, priority=5, DAEMON> {
+    weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+    weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+    weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+    weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+    weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+    weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-23 "VDE Transaction Processor Thread" <alive, in native, waiting, priority=2, DAEMON> {
+    -- Waiting for notification on: com.octetstring.vde.backend.standard.TransactionProcessor@aba202[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+    ^-- Lock released while waiting: com.octetstring.vde.backend.standard.TransactionProcessor@aba202[fat lock]
+    com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-25 "[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:101)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-26 "weblogic.store._WLS_AdminServer" <alive, in native, parked, priority=10, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@d57544[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.lang.Thread.whPark(Unknown Source)
+    ^-- Lock released while waiting: java.lang.Object@d57544[fat lock]
+    java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+    java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+    weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+    weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:520)
+    weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:556)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-27 "[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-28 "[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:112)
+    ^-- Holding lock: java.lang.Object@847a42[thin lock]
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-30 "DynamicListenThread[Default[1]]" <alive, in native, priority=9, DAEMON> {
+    jrockit.net.SocketNativeIO.accept(Native Method)
+    jrockit.net.SocketNativeIO.accept(Unknown Source)
+    java.net.AbstractSocketImpl.accept(Unknown Source)
+    ^-- Holding lock: java.net.SocksSocketImpl@1a546bf[thin lock]
+    java.net.ServerSocket.implAccept(ServerSocket.java:450)
+    java.net.ServerSocket.accept(ServerSocket.java:421)
+    weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+    weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-31 "DynamicListenThread[Default]" <alive, in native, priority=9, DAEMON> {
+    jrockit.net.SocketNativeIO.accept(Native Method)
+    jrockit.net.SocketNativeIO.accept(Unknown Source)
+    java.net.AbstractSocketImpl.accept(Unknown Source)
+    ^-- Holding lock: java.net.SocksSocketImpl@1a33bcf[thin lock]
+    java.net.ServerSocket.implAccept(ServerSocket.java:450)
+    java.net.ServerSocket.accept(ServerSocket.java:421)
+    weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+    weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-34 "FSCacheRefQueueThread" <alive, in native, waiting, priority=1, DAEMON> {
+    -- Waiting for notification on: java.lang.ref.ReferenceQueue$Lock@6b4012[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+    ^-- Lock released while waiting: java.lang.ref.ReferenceQueue$Lock@6b4012[fat lock]
+    java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+    workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-37 "cache-CommitThread" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@c10f4a[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.persist.TxIndexedFileImpl$CommitThread.run(TxIndexedFileImpl.java:591)
+    ^-- Lock released while waiting: java.lang.Object@c10f4a[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-38 "cache-PrepareThread" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@c10f5b[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.persist.TxIndexedFileImpl$PrepareThread.run(TxIndexedFileImpl.java:536)
+    ^-- Lock released while waiting: java.lang.Object@c10f5b[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-45 "[STANDBY] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: weblogic.work.ExecuteThread@4247fc4b[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+    ^-- Lock released while waiting: weblogic.work.ExecuteThread@4247fc4b[fat lock]
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-46 "[STANDBY] ExecuteThread: '6' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: weblogic.work.ExecuteThread@ffffffffcf82adcc[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+    ^-- Lock released while waiting: weblogic.work.ExecuteThread@ffffffffcf82adcc[fat lock]
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-47 "[STANDBY] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, priority=5, DAEMON> {
+    jrockit.vm.Threads.getThreadSnapShot0(Native Method)
+    jrockit.vm.Threads.dumpThreads(Unknown Source)
+    jrockit.vm.Threads.dumpThreads(Unknown Source)
+    jrockit.mapi.ThreadSnapshotImpl.getThreadSnapshot(Unknown Source)
+    jrockit.mapi.ThreadSystemImpl.getThreadSnapshots(Unknown Source)
+    jrockit.mapi.ThreadSystemImpl.getThreadStackDump(Unknown Source)
+    weblogic.platform.JRockitVM.threadDump(JRockitVM.java:56)
+    weblogic.t3.srvr.T3Srvr.logThreadDump(T3Srvr.java:241)
+    weblogic.t3.srvr.T3Srvr.failed(T3Srvr.java:191)
+    ^-- Holding lock: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    weblogic.health.HealthMonitorService$1.run(HealthMonitorService.java:124)
+    weblogic.work.ServerWorkManagerImpl$WorkAdapterImpl.run(ServerWorkManagerImpl.java:518)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-48 "[STANDBY] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: weblogic.work.ExecuteThread@ffffffffe9f810ce[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+    ^-- Lock released while waiting: weblogic.work.ExecuteThread@ffffffffe9f810ce[fat lock]
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-49 "[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:110)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+======================================
+
+> 
+===== FULL THREAD DUMP ===============
+Thu May 04 17:04:07 JST 2006
+
+Thread-1 "Main Thread" <alive, in native, waiting, priority=5> {
+    -- Waiting for notification on: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:727)
+    ^-- Lock released while waiting: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:379)
+    weblogic.Server.main(Server.java:66)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-2 "(Signal Handler)" <alive, in native, priority=5, DAEMON> {
+}
+
+
+Thread-3 "(Code Generation Thread 1)" <alive, in native, native_waiting, priority=5, DAEMON> {
+}
+
+
+Thread-4 "(Code Optimization Thread 1)" <alive, in native, native_waiting, priority=1, DAEMON> {
+}
+
+
+Thread-5 "(GC Main Thread)" <alive, in native, priority=5, DAEMON> {
+}
+
+
+Thread-6 "(GC Worker Thread 1)" <alive, in native, native_waiting, priority=5, DAEMON> {
+}
+
+
+Thread-7 "(Hotspot Detector)" <alive, in native, priority=10, DAEMON> {
+}
+
+
+Thread-8 "Finalizer" <alive, in native, native_waiting, priority=8, DAEMON> {
+    jrockit.memory.Finalizer.getPendingFinalizee(Native Method)
+    jrockit.memory.Finalizer.access$100(Unknown Source)
+    jrockit.memory.Finalizer$4.run(Unknown Source)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-9 "Reference Handler" <alive, in native, native_waiting, priority=10, DAEMON> {
+    java.lang.ref.Reference.getPending(Native Method)
+    java.lang.ref.Reference.access$000(Unknown Source)
+    java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-12 "Timer-0" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.util.TaskQueue@1bc88a[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.util.TimerThread.mainLoop(Timer.java:483)
+    ^-- Lock released while waiting: java.util.TaskQueue@1bc88a[fat lock]
+    java.util.TimerThread.run(Timer.java:462)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-13 "Timer-1" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.util.TaskQueue@87830d[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.util.TimerThread.mainLoop(Timer.java:509)
+    ^-- Lock released while waiting: java.util.TaskQueue@87830d[fat lock]
+    java.util.TimerThread.run(Timer.java:462)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-14 "[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-15 "weblogic.time.TimeEventGenerator" <alive, in native, waiting, priority=9, DAEMON> {
+    -- Waiting for notification on: weblogic.time.common.internal.TimeTable@8a1d20[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+    ^-- Lock released while waiting: weblogic.time.common.internal.TimeTable@8a1d20[fat lock]
+    weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-16 "weblogic.timers.TimerThread" <alive, in native, waiting, priority=9, DAEMON> {
+    -- Waiting for notification on: weblogic.timers.internal.TimerThread@8a3e4d[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:255)
+    ^-- Lock released while waiting: weblogic.timers.internal.TimerThread@8a3e4d[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-17 "[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:103)
+    ^-- Holding lock: java.lang.Object@847a41[fat lock]
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-18 "GC event thread" <alive, in native, native_waiting, priority=5, DAEMON> {
+    jrockit.mapi.GarbageCollectorImpl.waitForEvent(Native Method)
+    jrockit.mapi.GarbageCollectorImpl.access$100(Unknown Source)
+    jrockit.mapi.GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)
+    jrockit.mapi.AsyncEventProvider$EventThread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-19 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <alive, in native, priority=5, DAEMON> {
+    weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+    weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+    weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+    weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+    weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+    weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-20 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <alive, in native, priority=5, DAEMON> {
+    weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+    weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+    weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+    weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+    weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+    weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-23 "VDE Transaction Processor Thread" <alive, in native, waiting, priority=2, DAEMON> {
+    -- Waiting for notification on: com.octetstring.vde.backend.standard.TransactionProcessor@aba202[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+    ^-- Lock released while waiting: com.octetstring.vde.backend.standard.TransactionProcessor@aba202[fat lock]
+    com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-25 "[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:101)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-26 "weblogic.store._WLS_AdminServer" <alive, in native, parked, priority=10, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@d57544[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.lang.Thread.whPark(Unknown Source)
+    ^-- Lock released while waiting: java.lang.Object@d57544[fat lock]
+    java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+    java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+    weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+    weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:520)
+    weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:556)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-27 "[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-28 "[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:112)
+    ^-- Holding lock: java.lang.Object@847a42[thin lock]
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-30 "DynamicListenThread[Default[1]]" <alive, in native, priority=9, DAEMON> {
+    jrockit.net.SocketNativeIO.accept(Native Method)
+    jrockit.net.SocketNativeIO.accept(Unknown Source)
+    java.net.AbstractSocketImpl.accept(Unknown Source)
+    ^-- Holding lock: java.net.SocksSocketImpl@1a546bf[thin lock]
+    java.net.ServerSocket.implAccept(ServerSocket.java:450)
+    java.net.ServerSocket.accept(ServerSocket.java:421)
+    weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+    weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-31 "DynamicListenThread[Default]" <alive, in native, priority=9, DAEMON> {
+    jrockit.net.SocketNativeIO.accept(Native Method)
+    jrockit.net.SocketNativeIO.accept(Unknown Source)
+    java.net.AbstractSocketImpl.accept(Unknown Source)
+    ^-- Holding lock: java.net.SocksSocketImpl@1a33bcf[thin lock]
+    java.net.ServerSocket.implAccept(ServerSocket.java:450)
+    java.net.ServerSocket.accept(ServerSocket.java:421)
+    weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+    weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-34 "FSCacheRefQueueThread" <alive, in native, waiting, priority=1, DAEMON> {
+    -- Waiting for notification on: java.lang.ref.ReferenceQueue$Lock@6b4012[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+    ^-- Lock released while waiting: java.lang.ref.ReferenceQueue$Lock@6b4012[fat lock]
+    java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+    workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-37 "cache-CommitThread" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@c10f4a[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.persist.TxIndexedFileImpl$CommitThread.run(TxIndexedFileImpl.java:591)
+    ^-- Lock released while waiting: java.lang.Object@c10f4a[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-38 "cache-PrepareThread" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@c10f5b[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.persist.TxIndexedFileImpl$PrepareThread.run(TxIndexedFileImpl.java:536)
+    ^-- Lock released while waiting: java.lang.Object@c10f5b[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-45 "[STANDBY] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: weblogic.work.ExecuteThread@4247fc4b[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+    ^-- Lock released while waiting: weblogic.work.ExecuteThread@4247fc4b[fat lock]
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-46 "[STANDBY] ExecuteThread: '6' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: weblogic.work.ExecuteThread@ffffffffcf82adcc[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+    ^-- Lock released while waiting: weblogic.work.ExecuteThread@ffffffffcf82adcc[fat lock]
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-47 "[ACTIVE] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-48 "[STANDBY] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, priority=5, DAEMON> {
+    jrockit.vm.Threads.getThreadSnapShot0(Native Method)
+    jrockit.vm.Threads.dumpThreads(Unknown Source)
+    jrockit.vm.Threads.dumpThreads(Unknown Source)
+    jrockit.mapi.ThreadSnapshotImpl.getThreadSnapshot(Unknown Source)
+    jrockit.mapi.ThreadSystemImpl.getThreadSnapshots(Unknown Source)
+    jrockit.mapi.ThreadSystemImpl.getThreadStackDump(Unknown Source)
+    weblogic.platform.JRockitVM.threadDump(JRockitVM.java:35)
+    weblogic.common.internal.AdminProxy.execute(AdminProxy.java:203)
+    weblogic.t3.srvr.ClientRequest$1.run(ClientContext.java:711)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+    weblogic.t3.srvr.ClientRequest.run(ClientContext.java:708)
+    weblogic.work.ServerWorkManagerImpl$WorkAdapterImpl.run(ServerWorkManagerImpl.java:518)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-49 "[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:110)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+======================================
+
+===== FULL THREAD DUMP ===============
+Thu May 04 17:04:19 JST 2006
+
+Thread-1 "Main Thread" <alive, in native, waiting, priority=5> {
+    -- Waiting for notification on: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:727)
+    ^-- Lock released while waiting: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:379)
+    weblogic.Server.main(Server.java:66)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-2 "(Signal Handler)" <alive, in native, priority=5, DAEMON> {
+}
+
+
+Thread-3 "(Code Generation Thread 1)" <alive, in native, native_waiting, priority=5, DAEMON> {
+}
+
+
+Thread-4 "(Code Optimization Thread 1)" <alive, in native, native_waiting, priority=1, DAEMON> {
+}
+
+
+Thread-5 "(GC Main Thread)" <alive, in native, priority=5, DAEMON> {
+}
+
+
+Thread-6 "(GC Worker Thread 1)" <alive, in native, native_waiting, priority=5, DAEMON> {
+}
+
+
+Thread-7 "(Hotspot Detector)" <alive, in native, priority=10, DAEMON> {
+}
+
+
+Thread-8 "Finalizer" <alive, in native, native_waiting, priority=8, DAEMON> {
+    jrockit.memory.Finalizer.getPendingFinalizee(Native Method)
+    jrockit.memory.Finalizer.access$100(Unknown Source)
+    jrockit.memory.Finalizer$4.run(Unknown Source)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-9 "Reference Handler" <alive, in native, native_waiting, priority=10, DAEMON> {
+    java.lang.ref.Reference.getPending(Native Method)
+    java.lang.ref.Reference.access$000(Unknown Source)
+    java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-12 "Timer-0" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.util.TaskQueue@1bc88a[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.util.TimerThread.mainLoop(Timer.java:483)
+    ^-- Lock released while waiting: java.util.TaskQueue@1bc88a[fat lock]
+    java.util.TimerThread.run(Timer.java:462)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-13 "Timer-1" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.util.TaskQueue@87830d[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.util.TimerThread.mainLoop(Timer.java:509)
+    ^-- Lock released while waiting: java.util.TaskQueue@87830d[fat lock]
+    java.util.TimerThread.run(Timer.java:462)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-14 "[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-15 "weblogic.time.TimeEventGenerator" <alive, in native, waiting, priority=9, DAEMON> {
+    -- Waiting for notification on: weblogic.time.common.internal.TimeTable@8a1d20[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+    ^-- Lock released while waiting: weblogic.time.common.internal.TimeTable@8a1d20[fat lock]
+    weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-16 "weblogic.timers.TimerThread" <alive, in native, waiting, priority=9, DAEMON> {
+    -- Waiting for notification on: weblogic.timers.internal.TimerThread@8a3e4d[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:255)
+    ^-- Lock released while waiting: weblogic.timers.internal.TimerThread@8a3e4d[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-17 "[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:103)
+    ^-- Holding lock: java.lang.Object@847a41[fat lock]
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-18 "GC event thread" <alive, in native, native_waiting, priority=5, DAEMON> {
+    jrockit.mapi.GarbageCollectorImpl.waitForEvent(Native Method)
+    jrockit.mapi.GarbageCollectorImpl.access$100(Unknown Source)
+    jrockit.mapi.GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)
+    jrockit.mapi.AsyncEventProvider$EventThread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-19 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <alive, in native, priority=5, DAEMON> {
+    weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+    weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+    weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+    weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+    weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+    weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-20 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <alive, in native, priority=5, DAEMON> {
+    weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+    weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+    weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+    weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+    weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+    weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-23 "VDE Transaction Processor Thread" <alive, in native, waiting, priority=2, DAEMON> {
+    -- Waiting for notification on: com.octetstring.vde.backend.standard.TransactionProcessor@aba202[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+    ^-- Lock released while waiting: com.octetstring.vde.backend.standard.TransactionProcessor@aba202[fat lock]
+    com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-25 "[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:101)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-26 "weblogic.store._WLS_AdminServer" <alive, in native, parked, priority=10, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@d57544[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.lang.Thread.whPark(Unknown Source)
+    ^-- Lock released while waiting: java.lang.Object@d57544[fat lock]
+    java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+    java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+    weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+    weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:520)
+    weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:556)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-27 "[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-28 "[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:112)
+    ^-- Holding lock: java.lang.Object@847a42[thin lock]
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-30 "DynamicListenThread[Default[1]]" <alive, in native, priority=9, DAEMON> {
+    jrockit.net.SocketNativeIO.accept(Native Method)
+    jrockit.net.SocketNativeIO.accept(Unknown Source)
+    java.net.AbstractSocketImpl.accept(Unknown Source)
+    ^-- Holding lock: java.net.SocksSocketImpl@1a546bf[thin lock]
+    java.net.ServerSocket.implAccept(ServerSocket.java:450)
+    java.net.ServerSocket.accept(ServerSocket.java:421)
+    weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+    weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-31 "DynamicListenThread[Default]" <alive, in native, priority=9, DAEMON> {
+    jrockit.net.SocketNativeIO.accept(Native Method)
+    jrockit.net.SocketNativeIO.accept(Unknown Source)
+    java.net.AbstractSocketImpl.accept(Unknown Source)
+    ^-- Holding lock: java.net.SocksSocketImpl@1a33bcf[thin lock]
+    java.net.ServerSocket.implAccept(ServerSocket.java:450)
+    java.net.ServerSocket.accept(ServerSocket.java:421)
+    weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+    weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-34 "FSCacheRefQueueThread" <alive, in native, waiting, priority=1, DAEMON> {
+    -- Waiting for notification on: java.lang.ref.ReferenceQueue$Lock@6b4012[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+    ^-- Lock released while waiting: java.lang.ref.ReferenceQueue$Lock@6b4012[fat lock]
+    java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+    workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-37 "cache-CommitThread" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@c10f4a[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.persist.TxIndexedFileImpl$CommitThread.run(TxIndexedFileImpl.java:591)
+    ^-- Lock released while waiting: java.lang.Object@c10f4a[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-38 "cache-PrepareThread" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@c10f5b[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.persist.TxIndexedFileImpl$PrepareThread.run(TxIndexedFileImpl.java:536)
+    ^-- Lock released while waiting: java.lang.Object@c10f5b[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-45 "[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:110)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-46 "[ACTIVE] ExecuteThread: '6' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:101)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-47 "[ACTIVE] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-48 "[STANDBY] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, priority=5, DAEMON> {
+    jrockit.vm.Threads.getThreadSnapShot0(Native Method)
+    jrockit.vm.Threads.dumpThreads(Unknown Source)
+    jrockit.vm.Threads.dumpThreads(Unknown Source)
+    jrockit.mapi.ThreadSnapshotImpl.getThreadSnapshot(Unknown Source)
+    jrockit.mapi.ThreadSystemImpl.getThreadSnapshots(Unknown Source)
+    jrockit.mapi.ThreadSystemImpl.getThreadStackDump(Unknown Source)
+    weblogic.platform.JRockitVM.threadDump(JRockitVM.java:35)
+    weblogic.common.internal.AdminProxy.execute(AdminProxy.java:203)
+    weblogic.t3.srvr.ClientRequest$1.run(ClientContext.java:711)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+    weblogic.t3.srvr.ClientRequest.run(ClientContext.java:708)
+    weblogic.work.ServerWorkManagerImpl$WorkAdapterImpl.run(ServerWorkManagerImpl.java:518)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-49 "[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:110)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+======================================
+
+===== FULL THREAD DUMP ===============
+Thu May 04 17:04:31 JST 2006
+
+Thread-1 "Main Thread" <alive, in native, waiting, priority=5> {
+    -- Waiting for notification on: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:727)
+    ^-- Lock released while waiting: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:379)
+    weblogic.Server.main(Server.java:66)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-2 "(Signal Handler)" <alive, in native, priority=5, DAEMON> {
+}
+
+
+Thread-3 "(Code Generation Thread 1)" <alive, in native, native_waiting, priority=5, DAEMON> {
+}
+
+
+Thread-4 "(Code Optimization Thread 1)" <alive, in native, native_waiting, priority=1, DAEMON> {
+}
+
+
+Thread-5 "(GC Main Thread)" <alive, in native, priority=5, DAEMON> {
+}
+
+
+Thread-6 "(GC Worker Thread 1)" <alive, in native, native_waiting, priority=5, DAEMON> {
+}
+
+
+Thread-7 "(Hotspot Detector)" <alive, in native, priority=10, DAEMON> {
+}
+
+
+Thread-8 "Finalizer" <alive, in native, native_waiting, priority=8, DAEMON> {
+    jrockit.memory.Finalizer.getPendingFinalizee(Native Method)
+    jrockit.memory.Finalizer.access$100(Unknown Source)
+    jrockit.memory.Finalizer$4.run(Unknown Source)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-9 "Reference Handler" <alive, in native, native_waiting, priority=10, DAEMON> {
+    java.lang.ref.Reference.getPending(Native Method)
+    java.lang.ref.Reference.access$000(Unknown Source)
+    java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-12 "Timer-0" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.util.TaskQueue@1bc88a[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.util.TimerThread.mainLoop(Timer.java:483)
+    ^-- Lock released while waiting: java.util.TaskQueue@1bc88a[fat lock]
+    java.util.TimerThread.run(Timer.java:462)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-13 "Timer-1" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.util.TaskQueue@87830d[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.util.TimerThread.mainLoop(Timer.java:509)
+    ^-- Lock released while waiting: java.util.TaskQueue@87830d[fat lock]
+    java.util.TimerThread.run(Timer.java:462)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-14 "[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-15 "weblogic.time.TimeEventGenerator" <alive, in native, waiting, priority=9, DAEMON> {
+    -- Waiting for notification on: weblogic.time.common.internal.TimeTable@8a1d20[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+    ^-- Lock released while waiting: weblogic.time.common.internal.TimeTable@8a1d20[fat lock]
+    weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-16 "weblogic.timers.TimerThread" <alive, in native, waiting, priority=9, DAEMON> {
+    -- Waiting for notification on: weblogic.timers.internal.TimerThread@8a3e4d[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:255)
+    ^-- Lock released while waiting: weblogic.timers.internal.TimerThread@8a3e4d[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-17 "[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:103)
+    ^-- Holding lock: java.lang.Object@847a41[fat lock]
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-18 "GC event thread" <alive, in native, native_waiting, priority=5, DAEMON> {
+    jrockit.mapi.GarbageCollectorImpl.waitForEvent(Native Method)
+    jrockit.mapi.GarbageCollectorImpl.access$100(Unknown Source)
+    jrockit.mapi.GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)
+    jrockit.mapi.AsyncEventProvider$EventThread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-19 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <alive, in native, priority=5, DAEMON> {
+    weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+    weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+    weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+    weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+    weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+    weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-20 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <alive, in native, priority=5, DAEMON> {
+    weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+    weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+    weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+    weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+    weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+    weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-23 "VDE Transaction Processor Thread" <alive, in native, waiting, priority=2, DAEMON> {
+    -- Waiting for notification on: com.octetstring.vde.backend.standard.TransactionProcessor@aba202[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+    ^-- Lock released while waiting: com.octetstring.vde.backend.standard.TransactionProcessor@aba202[fat lock]
+    com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-25 "[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:101)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-26 "weblogic.store._WLS_AdminServer" <alive, in native, parked, priority=10, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@d57544[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.lang.Thread.whPark(Unknown Source)
+    ^-- Lock released while waiting: java.lang.Object@d57544[fat lock]
+    java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+    java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+    weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+    weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:520)
+    weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:556)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-27 "[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-28 "[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:112)
+    ^-- Holding lock: java.lang.Object@847a42[thin lock]
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-30 "DynamicListenThread[Default[1]]" <alive, in native, priority=9, DAEMON> {
+    jrockit.net.SocketNativeIO.accept(Native Method)
+    jrockit.net.SocketNativeIO.accept(Unknown Source)
+    java.net.AbstractSocketImpl.accept(Unknown Source)
+    ^-- Holding lock: java.net.SocksSocketImpl@1a546bf[thin lock]
+    java.net.ServerSocket.implAccept(ServerSocket.java:450)
+    java.net.ServerSocket.accept(ServerSocket.java:421)
+    weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+    weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-31 "DynamicListenThread[Default]" <alive, in native, priority=9, DAEMON> {
+    jrockit.net.SocketNativeIO.accept(Native Method)
+    jrockit.net.SocketNativeIO.accept(Unknown Source)
+    java.net.AbstractSocketImpl.accept(Unknown Source)
+    ^-- Holding lock: java.net.SocksSocketImpl@1a33bcf[thin lock]
+    java.net.ServerSocket.implAccept(ServerSocket.java:450)
+    java.net.ServerSocket.accept(ServerSocket.java:421)
+    weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+    weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-34 "FSCacheRefQueueThread" <alive, in native, waiting, priority=1, DAEMON> {
+    -- Waiting for notification on: java.lang.ref.ReferenceQueue$Lock@6b4012[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+    ^-- Lock released while waiting: java.lang.ref.ReferenceQueue$Lock@6b4012[fat lock]
+    java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+    workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-37 "cache-CommitThread" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@c10f4a[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.persist.TxIndexedFileImpl$CommitThread.run(TxIndexedFileImpl.java:591)
+    ^-- Lock released while waiting: java.lang.Object@c10f4a[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-38 "cache-PrepareThread" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@c10f5b[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.persist.TxIndexedFileImpl$PrepareThread.run(TxIndexedFileImpl.java:536)
+    ^-- Lock released while waiting: java.lang.Object@c10f5b[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-45 "[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:110)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-46 "[ACTIVE] ExecuteThread: '6' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:101)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-47 "[ACTIVE] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-48 "[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:101)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-49 "[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:110)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-50 "[STANDBY] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, priority=5, DAEMON> {
+    jrockit.vm.Threads.getThreadSnapShot0(Native Method)
+    jrockit.vm.Threads.dumpThreads(Unknown Source)
+    jrockit.vm.Threads.dumpThreads(Unknown Source)
+    jrockit.mapi.ThreadSnapshotImpl.getThreadSnapshot(Unknown Source)
+    jrockit.mapi.ThreadSystemImpl.getThreadSnapshots(Unknown Source)
+    jrockit.mapi.ThreadSystemImpl.getThreadStackDump(Unknown Source)
+    weblogic.platform.JRockitVM.threadDump(JRockitVM.java:35)
+    weblogic.common.internal.AdminProxy.execute(AdminProxy.java:203)
+    weblogic.t3.srvr.ClientRequest$1.run(ClientContext.java:711)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+    weblogic.t3.srvr.ClientRequest.run(ClientContext.java:708)
+    weblogic.work.ServerWorkManagerImpl$WorkAdapterImpl.run(ServerWorkManagerImpl.java:518)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-51 "[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+======================================
+
+===== FULL THREAD DUMP ===============
+Thu May 04 17:04:37 JST 2006
+
+Thread-1 "Main Thread" <alive, in native, waiting, priority=5> {
+    -- Waiting for notification on: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.t3.srvr.T3Srvr.waitForDeath(T3Srvr.java:727)
+    ^-- Lock released while waiting: weblogic.t3.srvr.T3Srvr@cdaaa[fat lock]
+    weblogic.t3.srvr.T3Srvr.run(T3Srvr.java:379)
+    weblogic.Server.main(Server.java:66)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-2 "(Signal Handler)" <alive, in native, priority=5, DAEMON> {
+}
+
+
+Thread-3 "(Code Generation Thread 1)" <alive, in native, native_waiting, priority=5, DAEMON> {
+}
+
+
+Thread-4 "(Code Optimization Thread 1)" <alive, in native, native_waiting, priority=1, DAEMON> {
+}
+
+
+Thread-5 "(GC Main Thread)" <alive, in native, priority=5, DAEMON> {
+}
+
+
+Thread-6 "(GC Worker Thread 1)" <alive, in native, native_waiting, priority=5, DAEMON> {
+}
+
+
+Thread-7 "(Hotspot Detector)" <alive, in native, priority=10, DAEMON> {
+}
+
+
+Thread-8 "Finalizer" <alive, in native, native_waiting, priority=8, DAEMON> {
+    jrockit.memory.Finalizer.getPendingFinalizee(Native Method)
+    jrockit.memory.Finalizer.access$100(Unknown Source)
+    jrockit.memory.Finalizer$4.run(Unknown Source)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-9 "Reference Handler" <alive, in native, native_waiting, priority=10, DAEMON> {
+    java.lang.ref.Reference.getPending(Native Method)
+    java.lang.ref.Reference.access$000(Unknown Source)
+    java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-12 "Timer-0" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.util.TaskQueue@1bc88a[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.util.TimerThread.mainLoop(Timer.java:483)
+    ^-- Lock released while waiting: java.util.TaskQueue@1bc88a[fat lock]
+    java.util.TimerThread.run(Timer.java:462)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-13 "Timer-1" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.util.TaskQueue@87830d[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.util.TimerThread.mainLoop(Timer.java:509)
+    ^-- Lock released while waiting: java.util.TaskQueue@87830d[fat lock]
+    java.util.TimerThread.run(Timer.java:462)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-14 "[ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-15 "weblogic.time.TimeEventGenerator" <alive, in native, waiting, priority=9, DAEMON> {
+    -- Waiting for notification on: weblogic.time.common.internal.TimeTable@8a1d20[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.time.common.internal.TimeTable.snooze(TimeTable.java:286)
+    ^-- Lock released while waiting: weblogic.time.common.internal.TimeTable@8a1d20[fat lock]
+    weblogic.time.common.internal.TimeEventGenerator.run(TimeEventGenerator.java:117)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-16 "weblogic.timers.TimerThread" <alive, in native, waiting, priority=9, DAEMON> {
+    -- Waiting for notification on: weblogic.timers.internal.TimerThread@8a3e4d[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.timers.internal.TimerThread$Thread.run(TimerThread.java:255)
+    ^-- Lock released while waiting: weblogic.timers.internal.TimerThread@8a3e4d[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-17 "[ACTIVE] ExecuteThread: '1' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:103)
+    ^-- Holding lock: java.lang.Object@847a41[fat lock]
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-18 "GC event thread" <alive, in native, native_waiting, priority=5, DAEMON> {
+    jrockit.mapi.GarbageCollectorImpl.waitForEvent(Native Method)
+    jrockit.mapi.GarbageCollectorImpl.access$100(Unknown Source)
+    jrockit.mapi.GarbageCollectorImpl$GCEventThread.getNextEvent(Unknown Source)
+    jrockit.mapi.AsyncEventProvider$EventThread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-19 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <alive, in native, priority=5, DAEMON> {
+    weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+    weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+    weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+    weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+    weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+    weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-20 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <alive, in native, priority=5, DAEMON> {
+    weblogic.socket.NTSocketMuxer.getIoCompletionResult(Native Method)
+    weblogic.socket.NTSocketMuxer.processSockets(NTSocketMuxer.java:81)
+    weblogic.socket.SocketReaderRequest.run(SocketReaderRequest.java:29)
+    weblogic.socket.SocketReaderRequest.execute(SocketReaderRequest.java:42)
+    weblogic.kernel.ExecuteThread.execute(ExecuteThread.java:145)
+    weblogic.kernel.ExecuteThread.run(ExecuteThread.java:117)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-23 "VDE Transaction Processor Thread" <alive, in native, waiting, priority=2, DAEMON> {
+    -- Waiting for notification on: com.octetstring.vde.backend.standard.TransactionProcessor@aba202[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    com.octetstring.vde.backend.standard.TransactionProcessor.waitChange(TransactionProcessor.java:367)
+    ^-- Lock released while waiting: com.octetstring.vde.backend.standard.TransactionProcessor@aba202[fat lock]
+    com.octetstring.vde.backend.standard.TransactionProcessor.run(TransactionProcessor.java:212)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-25 "[ACTIVE] ExecuteThread: '2' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:101)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-26 "weblogic.store._WLS_AdminServer" <alive, in native, parked, priority=10, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@d57544[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.lang.Thread.whPark(Unknown Source)
+    ^-- Lock released while waiting: java.lang.Object@d57544[fat lock]
+    java.util.concurrent.locks.LockSupport.park(Unknown Source)
+    java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1772)
+    java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:359)
+    weblogic.utils.concurrent.JDK15ConcurrentBlockingQueue.take(JDK15ConcurrentBlockingQueue.java:89)
+    weblogic.store.internal.PersistentStoreImpl.getOutstandingWork(PersistentStoreImpl.java:520)
+    weblogic.store.internal.PersistentStoreImpl.run(PersistentStoreImpl.java:556)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-27 "[ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-28 "[ACTIVE] ExecuteThread: '4' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:112)
+    ^-- Holding lock: java.lang.Object@847a42[thin lock]
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-30 "DynamicListenThread[Default[1]]" <alive, in native, priority=9, DAEMON> {
+    jrockit.net.SocketNativeIO.accept(Native Method)
+    jrockit.net.SocketNativeIO.accept(Unknown Source)
+    java.net.AbstractSocketImpl.accept(Unknown Source)
+    ^-- Holding lock: java.net.SocksSocketImpl@1a546bf[thin lock]
+    java.net.ServerSocket.implAccept(ServerSocket.java:450)
+    java.net.ServerSocket.accept(ServerSocket.java:421)
+    weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+    weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-31 "DynamicListenThread[Default]" <alive, in native, priority=9, DAEMON> {
+    jrockit.net.SocketNativeIO.accept(Native Method)
+    jrockit.net.SocketNativeIO.accept(Unknown Source)
+    java.net.AbstractSocketImpl.accept(Unknown Source)
+    ^-- Holding lock: java.net.SocksSocketImpl@1a33bcf[thin lock]
+    java.net.ServerSocket.implAccept(ServerSocket.java:450)
+    java.net.ServerSocket.accept(ServerSocket.java:421)
+    weblogic.socket.WeblogicServerSocket.accept(WeblogicServerSocket.java:34)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.accept(DynamicListenThread.java:517)
+    weblogic.server.channels.DynamicListenThread$SocketAccepter.access$200(DynamicListenThread.java:418)
+    weblogic.server.channels.DynamicListenThread.run(DynamicListenThread.java:164)
+    java.lang.Thread.run(Unknown Source)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-34 "FSCacheRefQueueThread" <alive, in native, waiting, priority=1, DAEMON> {
+    -- Waiting for notification on: java.lang.ref.ReferenceQueue$Lock@6b4012[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    jrockit.vm.Locks.wait(Unknown Source)
+    java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:116)
+    ^-- Lock released while waiting: java.lang.ref.ReferenceQueue$Lock@6b4012[fat lock]
+    java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:132)
+    workshop.util.filesystem.FSCache$FSCacheRefQueueThread.run(FSCache.java:65)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-37 "cache-CommitThread" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@c10f4a[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.persist.TxIndexedFileImpl$CommitThread.run(TxIndexedFileImpl.java:591)
+    ^-- Lock released while waiting: java.lang.Object@c10f4a[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-38 "cache-PrepareThread" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: java.lang.Object@c10f5b[fat lock]
+    jrockit.vm.Threads.waitForSignalWithTimeout(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.persist.TxIndexedFileImpl$PrepareThread.run(TxIndexedFileImpl.java:536)
+    ^-- Lock released while waiting: java.lang.Object@c10f5b[fat lock]
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-45 "[ACTIVE] ExecuteThread: '5' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:110)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-46 "[ACTIVE] ExecuteThread: '6' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:101)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-47 "[ACTIVE] ExecuteThread: '7' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-48 "[ACTIVE] ExecuteThread: '8' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a41[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.fatLockBlockOrSpin(Unknown Source)
+    jrockit.vm.Locks.lockFat(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:101)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-49 "[ACTIVE] ExecuteThread: '9' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:110)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-50 "[STANDBY] ExecuteThread: '10' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: weblogic.work.ExecuteThread@fffffffff95ba9b9[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+    ^-- Lock released while waiting: weblogic.work.ExecuteThread@fffffffff95ba9b9[fat lock]
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-51 "[ACTIVE] ExecuteThread: '11' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, blocked, priority=5, DAEMON> {
+    -- Blocked trying to get lock: java.lang.Object@847a42[thin lock]
+    jrockit.vm.Threads.shortNap(Native Method)
+    jrockit.vm.Locks.waitForThinRelease(Unknown Source)
+    jrockit.vm.Locks.monitorEnterSecondStage(Unknown Source)
+    jrockit.vm.Locks.monitorEnter(Unknown Source)
+    jsp_servlet.__index._jspService(__index.java:119)
+    weblogic.servlet.jsp.JspBase.service(JspBase.java:34)
+    weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:214)
+    weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:120)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:272)
+    weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:165)
+    weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3022)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:321)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:121)
+    weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:1925)
+    weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:1848)
+    weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1288)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-52 "[STANDBY] ExecuteThread: '12' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, waiting, priority=5, DAEMON> {
+    -- Waiting for notification on: weblogic.work.ExecuteThread@13d10cbb[fat lock]
+    jrockit.vm.Threads.waitForSignal(Native Method)
+    jrockit.vm.Locks.wait(Unknown Source)
+    weblogic.work.ExecuteThread.waitForRequest(ExecuteThread.java:163)
+    ^-- Lock released while waiting: weblogic.work.ExecuteThread@13d10cbb[fat lock]
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:184)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+Thread-53 "[ACTIVE] ExecuteThread: '13' for queue: 'weblogic.kernel.Default (self-tuning)'" <alive, in native, priority=5, DAEMON> {
+    jrockit.vm.Threads.getThreadSnapShot0(Native Method)
+    jrockit.vm.Threads.dumpThreads(Unknown Source)
+    jrockit.vm.Threads.dumpThreads(Unknown Source)
+    jrockit.mapi.ThreadSnapshotImpl.getThreadSnapshot(Unknown Source)
+    jrockit.mapi.ThreadSystemImpl.getThreadSnapshots(Unknown Source)
+    jrockit.mapi.ThreadSystemImpl.getThreadStackDump(Unknown Source)
+    weblogic.platform.JRockitVM.threadDump(JRockitVM.java:35)
+    weblogic.common.internal.AdminProxy.execute(AdminProxy.java:203)
+    weblogic.t3.srvr.ClientRequest$1.run(ClientContext.java:711)
+    weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:363)
+    weblogic.security.service.SecurityManager.runAs(SecurityManager.java:147)
+    weblogic.t3.srvr.ClientRequest.run(ClientContext.java:708)
+    weblogic.work.ServerWorkManagerImpl$WorkAdapterImpl.run(ServerWorkManagerImpl.java:518)
+    weblogic.work.ExecuteThread.execute(ExecuteThread.java:207)
+    weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
+    jrockit.vm.RNI.c2java(Native Method)
+}
+
+
+======================================
+
+<2006/05/04 17時05分24秒 JST> <Notice> <WebLogicServer> <BEA-000388> <JVM により WLS の停止フックが呼び出されました。サーバは強制停止されます。> 
+<2006/05/04 17時05分24秒 JST> <Alert> <WebLogicServer> <BEA-000396> <<WLS Kernel> からサーバを shutdown するよう要求されました。> 
+<2006/05/04 17時05分24秒 JST> <Notice> <WebLogicServer> <BEA-000365> <サーバ状態が FORCE_SHUTTING_DOWN に変化しました。> 
+<2006/05/04 17時05分24秒 JST> <Notice> <Server> <BEA-002607> <192.168.1.3:7001 でリスン中のチャネル "Default" が停止されました。> 
+<2006/05/04 17時05分24秒 JST> <Notice> <Server> <BEA-002607> <127.0.0.1:7001 でリスン中のチャネル "Default[1]" が停止されました。> 
+バッチ ジョブを終了しますか (Y/N)? ^C

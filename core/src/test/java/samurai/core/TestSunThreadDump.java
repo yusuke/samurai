@@ -31,7 +31,7 @@ class TestSunThreadDump {
     void testSun142_03stacked() throws IOException {
         ThreadStatistic statistic = new ThreadStatistic();
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
-        dumpExtractor.analyze(new File("testcases/Sun/1.4.2_03Sunstacked.dmp"));
+        dumpExtractor.analyze(TestSunThreadDump.class.getResourceAsStream("/Sun/1.4.2_03Sunstacked.dmp"));
         assertEquals(3, statistic.getFullThreadDumpCount());
         assertEquals(9, statistic.getFullThreadDump(0).getThreadCount());
         ThreadDump dump = statistic.getFullThreadDump(0).getThreadDump(1);
@@ -52,7 +52,7 @@ class TestSunThreadDump {
     void testSun142_03idle() throws IOException {
         ThreadStatistic statistic = new ThreadStatistic();
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
-        dumpExtractor.analyze(new File("testcases/Sun/1.4.2_03Sunidle.dmp"));
+        dumpExtractor.analyze(TestSunThreadDump.class.getResourceAsStream("/Sun/1.4.2_03Sunidle.dmp"));
         assertEquals(3, statistic.getFullThreadDumpCount());
         assertEquals(7, statistic.getFullThreadDump(0).getThreadCount());
         ThreadDump dump = statistic.getFullThreadDump(0).getThreadDump(3);
@@ -70,7 +70,7 @@ class TestSunThreadDump {
     void testHPUX() throws IOException {
         ThreadStatistic statistic = new ThreadStatistic();
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
-        dumpExtractor.analyze(new File("testcases/HP/hp.dmp"));
+        dumpExtractor.analyze(TestSunThreadDump.class.getResourceAsStream("/HP/hp.dmp"));
         assertEquals(3, statistic.getFullThreadDumpCount());
         assertEquals(75, statistic.getFullThreadDump(0).getThreadCount());
         ThreadDump dump = statistic.getFullThreadDump(0).getThreadDump(0);

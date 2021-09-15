@@ -1,0 +1,540 @@
+NULL           ------------------------------------------------------------------------
+0SECTION       TITLE subcomponent dump routine
+NULL           ===============================
+1TISIGINFO     signal 21 received 
+1TIDATETIME    Date:                 2004/06/26 at 12:56:32
+1TIFILENAME    Javacore filename:    C:\tomac\samurai\javacore.20040626.125632.2336.txt
+NULL           ------------------------------------------------------------------------
+0SECTION       XHPI subcomponent dump routine
+NULL           ==============================
+1XHNOTIMPL     XHPI dump routine not implemented.
+NULL           ------------------------------------------------------------------------
+0SECTION       CI subcomponent dump routine
+NULL           ============================
+1CIJAVAVERSION J2RE 1.4.0 IBM Windows 32 build cn140-20020902
+1CIRUNNINGAS   Running as a standalone JVM
+1CICMDLINE     C:\Program Files\IBM\Java14\bin\java.exe -cp classes net.homeip.yusuke.samurai.test.IdleSample
+1CIJAVAHOMEDIR Java Home Dir:   C:\Program Files\IBM\Java14\jre
+1CIJAVADLLDIR  Java DLL Dir:    C:\Program Files\IBM\Java14\jre\bin
+1CISYSCP       Sys Classpath:   C:\Program Files\IBM\Java14\jre\lib\core.jar;C:\Program Files\IBM\Java14\jre\lib\graphics.jar;C:\Program Files\IBM\Java14\jre\lib\security.jar;C:\Program Files\IBM\Java14\jre\lib\server.jar;C:\Program Files\IBM\Java14\jre\lib\xml.jar;C:\Program Files\IBM\Java14\jre\lib\charsets.jar
+1CIUSERARGS    UserArgs:
+2CIUSERARG               -Dconsole.encoding=MS932
+2CIUSERARG               vfprintf 0x402CD0
+2CIUSERARG               -Dinvokedviajava
+2CIUSERARG               -Djava.class.path=classes
+2CIUSERARG               vfprintf
+NULL           
+1CIJVMMI       JVM Monitoring Interface (JVMMI)
+NULL           ------------------------
+2CIJVMMIOFF    No events are enabled.
+NULL           
+NULL           ------------------------------------------------------------------------
+0SECTION       DC subcomponent dump routine
+NULL           ============================
+1DCHEADEREYE   Header eye catcher  DCST^X
+1DCHEADERLEN   Header length       24
+1DCHEADERVER   Header version      1
+1DCHEADERMOD   Header modification 0
+1DCINTERFACE   DC Interface at 0x70AA4F4C with 15 entries
+2DCINTERFACE      1 - dcCString2JavaString           0x709C68C0
+2DCINTERFACE      2 - dcInt642CString                0x709C6A40
+2DCINTERFACE      3 - dcJavaString2NewCString        0x709C6C70
+2DCINTERFACE      4 - dcJavaString2CString           0x709C6B90
+2DCINTERFACE      5 - dcJavaString2NewPlatformString 0x709C6DA0
+2DCINTERFACE      6 - dcJavaString2UTF               0x709C70E0
+2DCINTERFACE      7 - dcPlatformString2JavaString    0x709C6EA0
+2DCINTERFACE      8 - dcUnicode2UTF                  0x709C7030
+2DCINTERFACE      9 - dcUnicode2UTFLength            0x709C6FA0
+2DCINTERFACE     10 - dcUTF2JavaString               0x709C74D0
+2DCINTERFACE     11 - dcUTFClassName2JavaString      0x709C7710
+2DCINTERFACE     12 - dcJavaString2ClassName         0x709C71C0
+2DCINTERFACE     13 - dcUTF2UnicodeNext              0x709C78C0
+2DCINTERFACE     14 - dcVerifyUTF8                   0x709C79B0
+2DCINTERFACE     15 - dcDumpRoutine                  0x709C8050
+1DCARRAYINFO   Array info at 0x70A61928 with 16 entries
+2DCARRAYINFO      1 - index  0 signature 0 name      N/A factor 0
+2DCARRAYINFO      2 - index  0 signature 0 name      N/A factor 0
+2DCARRAYINFO      3 - index  2 signature L name  class[] factor 4
+2DCARRAYINFO      4 - index  0 signature 0 name      N/A factor 0
+2DCARRAYINFO      5 - index  4 signature Z name   bool[] factor 1
+2DCARRAYINFO      6 - index  5 signature C name   char[] factor 2
+2DCARRAYINFO      7 - index  6 signature F name  float[] factor 4
+2DCARRAYINFO      8 - index  7 signature D name double[] factor 8
+2DCARRAYINFO      9 - index  8 signature B name   byte[] factor 1
+2DCARRAYINFO     10 - index  9 signature S name  short[] factor 2
+2DCARRAYINFO     11 - index 10 signature I name    int[] factor 4
+2DCARRAYINFO     12 - index 11 signature J name   long[] factor 8
+2DCARRAYINFO     13 - index  0 signature 0 name   uint[] factor 0
+2DCARRAYINFO     14 - index  0 signature 0 name  uint1[] factor 0
+2DCARRAYINFO     15 - index  0 signature 0 name  uint2[] factor 0
+2DCARRAYINFO     16 - index  0 signature 0 name  uint3[] factor 0
+NULL           ------------------------------------------------------------------------
+0SECTION       DG subcomponent dump routine
+NULL           ============================
+1DGTRCENABLED  Trace enabled: No
+1DGJDUMPBUFF   Javadump buffer size (allocated): 2621440
+NULL           ------------------------------------------------------------------------
+0SECTION       ST subcomponent dump routine
+NULL           ============================
+1STGCMODES     Resettable GC: No
+1STGCMODES     Concurrent GC: No
+1STCURHBASE    Current Heap Base: 8b01fc
+1STCURHLIM     Current Heap Limit: cafbfc
+1STMWHBASE     Middleware Heap Base: 8b01fc
+1STMWHLIM      Middleware Heap Limit: cafbfc
+1STGCHELPERS   Number of GC Helper Threads: 0
+1STJVMOPTS     -Xconcurrentlevel: 0 
+1STJVMOPTS     -Xconcurrentbackground: 0 
+1STGCCTR       GC Counter: 0 
+1STAFCTR       AF Counter: 0 
+1STHEAPFREE    Bytes of Heap Space Free: 2f7e30 
+1STHEAPALLOC   Bytes of Heap Space Allocated: 3ffa00 
+1STSMBASE      SM Base: 0 
+1STSMEND       SM End: 0 
+1STPAMSTART    PAM Start: 0 
+1STPAMEND      PAM End: 0 
+1STCOMACTION   Compact Action: 0 
+NULL           ------------------------------------------------------------------------
+0SECTION       XE subcomponent dump routine
+NULL           ============================
+1XETHRESHOLD   MMI threshold for java methods is set to 2000
+1XEJITINIT     JIT is initialized 
+1XEJVMPIOFF    JVMPI is not activated 
+1XEJNITHRESH   MMI threshold for JNI methods is set to 0
+1XETRCHIS      Trace history length is set to 4
+1XEJITDUMP     JIT dump routine is not yet implemented.
+NULL           ------------------------------------------------------------------------
+0SECTION       LK subcomponent dump routine
+NULL           ============================
+NULL           
+1LKPOOLINFO    Monitor pool info:
+2LKPOOLINIT      Initial monitor count: 32
+2LKPOOLEXPNUM    Minimum number of free monitors before expansion: 5
+2LKPOOLEXPBY     Pool will next be expanded by: 16
+2LKPOOLTOTAL     Current total number of monitors: 32
+2LKPOOLFREE      Current number of free monitors: 28
+NULL           
+1LKMONPOOLDUMP Monitor Pool Dump (flat & inflated object-monitors):
+2LKMONINUSE      sys_mon_t:0x0028E7F8 infl_mon_t: 0x0028E2D0:
+3LKMONOBJECT       java.lang.ref.Reference$Lock@920900/920908: <unowned>
+3LKNOTIFYQ            Waiting to be notified:
+3LKWAITNOTIFY            "Reference Handler" (0x2292BF28)
+2LKMONINUSE      sys_mon_t:0x0028E888 infl_mon_t: 0x0028E320:
+3LKMONOBJECT       java.lang.ref.ReferenceQueue$Lock@920638/920640: <unowned>
+3LKNOTIFYQ            Waiting to be notified:
+3LKWAITNOTIFY            "Finalizer" (0x22943A20)
+NULL           
+1LKREGMONDUMP  JVM System Monitor Dump (registered monitors):
+2LKREGMON          JITC CHA lock: <unowned>
+2LKREGMON          JITC Global_Compile lock: <unowned>
+2LKREGMON          Evacuation Region lock: <unowned>
+2LKREGMON          Heap Promotion lock: <unowned>
+2LKREGMON          Sleep lock: <unowned>
+3LKNOTIFYQ            Waiting to be notified:
+3LKWAITNOTIFY            "main" (0x284E48)
+2LKREGMON          Method trace lock: <unowned>
+2LKREGMON          Heap lock: owner "Signal dispatcher" (0x880E28), entry count 1
+2LKREGMON          Monitor Cache lock: owner "Signal dispatcher" (0x880E28), entry count 1
+2LKREGMON          JNI Pinning lock: <unowned>
+2LKREGMON          JNI Global Reference lock: <unowned>
+2LKREGMON          Classloader lock: <unowned>
+2LKREGMON          Binclass lock: <unowned>
+2LKREGMON          Thread queue lock: owner "Signal dispatcher" (0x880E28), entry count 1
+2LKREGMON          Monitor Registry lock: owner "Signal dispatcher" (0x880E28), entry count 1
+NULL           
+1LKFLATMONDUMP Thread identifiers (as used in flat monitors):
+2LKFLATMON         ident 0x06 "JIT PProfiler thread" (0x22A572C8) ee 0x22A57140
+2LKFLATMON         ident 0x05 "Finalizer" (0x22943A20) ee 0x22943898
+2LKFLATMON         ident 0x04 "Reference Handler" (0x2292BF28) ee 0x2292BDA0
+2LKFLATMON         ident 0x03 "Signal dispatcher" (0x880E28) ee 0x00880CA0
+2LKFLATMON         ident 0x02 "main" (0x284E48) ee 0x00284CC0
+NULL           
+1LKOBJMONDUMP  Java Object Monitor Dump (flat & inflated object-monitors):
+2LKINFLATEDMON     java.lang.ref.ReferenceQueue$Lock@920638/920640
+3LKINFLDETAILS         locknflags 80000400 Monitor inflated infl_mon 0x0028E320
+2LKINFLATEDMON     java.lang.ref.Reference$Lock@920900/920908
+3LKINFLDETAILS         locknflags 80000200 Monitor inflated infl_mon 0x0028E2D0
+NULL           ------------------------------------------------------------------------
+0SECTION       XM subcomponent dump routine
+NULL           ============================
+NULL            
+1XMEXCPINFO    Exception Info
+NULL           --------------
+2XMDUMPINFONA  Not available
+1XMTHDINFO     Thread Info
+NULL           -----------
+NULL           
+2XMFULLTHDDUMP Full thread dump Classic VM (J2RE 1.4.0 IBM Windows 32 build cn140-20020902, native threads):
+3XMTHREADINFO      "JIT PProfiler thread" (TID:0x910720, sys_thread_t:0x22A572C8, state:R, native ID:0x7EC) prio=5
+3XMTHREADINFO      "Finalizer" (TID:0x9108C0, sys_thread_t:0x22943A20, state:CW, native ID:0x9B8) prio=8
+4XESTACKTRACE          at java.lang.Object.wait(Native Method)
+4XESTACKTRACE          at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:142)
+4XESTACKTRACE          at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:158)
+4XESTACKTRACE          at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+3XMTHREADINFO      "Reference Handler" (TID:0x910918, sys_thread_t:0x2292BF28, state:CW, native ID:0x9C8) prio=10
+4XESTACKTRACE          at java.lang.Object.wait(Native Method)
+4XESTACKTRACE          at java.lang.Object.wait(Object.java:437)
+4XESTACKTRACE          at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:124)
+3XMTHREADINFO      "Signal dispatcher" (TID:0x910970, sys_thread_t:0x880E28, state:R, native ID:0x9D4) prio=5
+3XMTHREADINFO      "main" (TID:0x9109C8, sys_thread_t:0x284E48, state:CW, native ID:0x990) prio=5
+4XESTACKTRACE          at java.lang.Thread.sleep(Native Method)
+4XESTACKTRACE          at net.homeip.yusuke.samurai.test.IdleSample.main(IdleSample.java:5)
+NULL           ------------------------------------------------------------------------
+0SECTION       CL subcomponent dump routine
+NULL           ============================
+1CLCLASSPATH   	Classpath Z(C:\Program Files\IBM\Java14\jre\lib\core.jar),Z(C:\Program Files\IBM\Java14\jre\lib\graphics.jar),Z(C:\Program Files\IBM\Java14\jre\lib\security.jar),Z(C:\Program Files\IBM\Java14\jre\lib\server.jar),Z(C:\Program Files\IBM\Java14\jre\lib\xml.jar),Z(C:\Program Files\IBM\Java14\jre\lib\charsets.jar)
+1CLFLAGOLDJAVA 	Oldjava mode false
+1CLFLAGBOOTSTRP	Bootstrapping false
+1CLFLAGVERBOSE 	Verbose class dependencies false
+1CLENUMVERIFY  	Class verification VERIFY_REMOTE
+1CLPNTRNAMECLLO	Namespace to classloader 0x00000000
+1CLPNTRCHAINLO 	Start of cache entry pool 0x00000000
+1CLPNTRCHFREE  	Start of free cache entries 0x22A5386C
+1CLPNTRMETHODTB	Location of method table 0x00878C40
+1CLPNTRANCHRGLN	Global namespace anchor 0x00285C5C
+1CLPNTRCLSLOADS	System classloader shadow 0x00819B08
+1CLPNTRSYSLOADS	Classloader shadows 0x22A50478
+1CLPNTRCLSEXT  	Extension loader 0x009107E8
+1CLPNTRSYSLOADR	System classloader 0x00910778
+1CLTEXTCLLOS   	Classloader summaries
+1CLTEXTCLLSS   		12345678: 1=primordial,2=extension,3=shareable,4=middleware,5=system,6=trusted,7=application,8=delegating
+2CLTEXTCLLOADER		-----ta- Loader sun/misc/Launcher$AppClassLoader(0x22A50478), Shadow 0x00910778, Parent sun/misc/Launcher$ExtClassLoader(0x009107E8)
+3CLNMBRLOADEDCL			Number of loaded classes 1
+3CLNMBRCACHECLS			Number of cached classes 267
+3CLHEXDALLOCTIO			Allocation used for loaded classes 1
+3CLHEXDPCKGEOWN			Package owner 0x00910778
+2CLTEXTCLLOADER		-xh-st-- Loader sun/misc/Launcher$ExtClassLoader(0x22A34070), Shadow 0x009107E8, Parent *none*(0x00000000)
+3CLNMBRLOADEDCL			Number of loaded classes 0
+3CLNMBRCACHECLS			Number of cached classes 0
+3CLHEXDALLOCTIO			Allocation used for loaded classes 3
+3CLHEXDPCKGEOWN			Package owner 0x009107E8
+2CLTEXTCLLOADER		p-h-st-- Loader *System*(0x00819B08), Shadow 0x00000000
+3CLNMBRLOADEDCL			Number of loaded classes 313
+3CLNMBRCACHECLS			Number of cached classes 313
+3CLHEXDALLOCTIO			Allocation used for loaded classes 3
+3CLHEXDPCKGEOWN			Package owner 0x00000000
+1CLTEXTCLLOD   	ClassLoader loaded classes
+2CLTEXTCLLOAD  		Loader sun/misc/Launcher$AppClassLoader(0x22A50478)
+3CLTEXTCLASS   			net/homeip/yusuke/samurai/test/IdleSample(0x0090C8E8)
+2CLTEXTCLLOAD  		Loader sun/misc/Launcher$ExtClassLoader(0x22A34070)
+2CLTEXTCLLOAD  		Loader *System*(0x00819B08)
+3CLTEXTCLASS   			java/security/UnresolvedPermissionCollection(0x22A06F18)
+3CLTEXTCLASS   			java/util/Collections$UnmodifiableMap(0x007DAFD8)
+3CLTEXTCLASS   			java/security/BasicPermissionCollection(0x22A07290)
+3CLTEXTCLASS   			[Ljava/security/cert/Certificate;(0x22A030A8)
+3CLTEXTCLASS   			java/io/FilenameFilter(0x22A01E28)
+3CLTEXTCLASS   			java/util/Collections$EmptyMap(0x007DAD88)
+3CLTEXTCLASS   			java/lang/Short(0x007D7E20)
+3CLTEXTCLASS   			java/util/AbstractMap(0x007D6BA0)
+3CLTEXTCLASS   			java/lang/Runnable(0x007D2768)
+3CLTEXTCLASS   			sun/nio/cs/StreamEncoder$ConverterSE(0x007DD728)
+3CLTEXTCLASS   			sun/misc/JarIndex(0x22A046A0)
+3CLTEXTCLASS   			sun/misc/Launcher$2(0x22A03B10)
+3CLTEXTCLASS   			java/util/Hashtable$Entry(0x007D83E8)
+3CLTEXTCLASS   			java/io/FilePermissionCollection(0x22A07040)
+3CLTEXTCLASS   			java/lang/StringIndexOutOfBoundsException(0x22A05B70)
+3CLTEXTCLASS   			java/util/logging/LogManager$Cleaner(0x007DE880)
+3CLTEXTCLASS   			sun/io/ByteToCharSingleByte(0x007DC258)
+3CLTEXTCLASS   			java/io/ByteArrayOutputStream(0x22A057F8)
+3CLTEXTCLASS   			java/lang/Double(0x007D8198)
+3CLTEXTCLASS   			java/util/AbstractCollection(0x007D2C08)
+3CLTEXTCLASS   			sun/reflect/UnsafeFieldAccessorImpl(0x007D0A80)
+3CLTEXTCLASS   			java/lang/ClassLoader$Finalizer(0x22A029B8)
+3CLTEXTCLASS   			java/net/URL(0x22A02518)
+3CLTEXTCLASS   			java/util/EventObject(0x22A01170)
+3CLTEXTCLASS   			sun/security/action/GetPropertyAction(0x007DA320)
+3CLTEXTCLASS   			[Z(0x007D14E8)
+3CLTEXTCLASS   			java/util/jar/JarFile$JarFileEntry(0x22A04B40)
+3CLTEXTCLASS   			com/ibm/jvm/io/LocalizedInputStream(0x007DFD50)
+3CLTEXTCLASS   			java/io/BufferedWriter(0x007DDF40)
+3CLTEXTCLASS   			com/ibm/jvm/ExtendedSystem(0x007D8638)
+3CLTEXTCLASS   			java/util/jar/Manifest$FastInputStream(0x22A055A8)
+3CLTEXTCLASS   			java/io/FileInputStream(0x007DC4A8)
+3CLTEXTCLASS   			java/lang/ThreadLocal$ThreadLocalMap$Entry(0x007D9C30)
+3CLTEXTCLASS   			sun/reflect/LangReflectAccess(0x007DBA40)
+3CLTEXTCLASS   			sun/reflect/FieldAccessorImpl(0x007D0BA8)
+3CLTEXTCLASS   			java/util/zip/ZipEntry(0x22A048F0)
+3CLTEXTCLASS   			sun/reflect/UnsafeObjectFieldAccessorImpl(0x22A038C0)
+3CLTEXTCLASS   			sun/reflect/NativeConstructorAccessorImpl(0x007DBEE0)
+3CLTEXTCLASS   			java/lang/ref/WeakReference(0x007D90A0)
+3CLTEXTCLASS   			sun/reflect/ConstructorAccessorImpl(0x007D5480)
+3CLTEXTCLASS   			java/lang/ClassLoader(0x007D2890)
+3CLTEXTCLASS   			sun/reflect/UnsafeStaticFieldAccessorImpl(0x007D0958)
+3CLTEXTCLASS   			java/lang/reflect/Field(0x007D65D8)
+3CLTEXTCLASS   			[F(0x007D22C8)
+3CLTEXTCLASS   			java/util/zip/ZipFile$1(0x22A04EB8)
+3CLTEXTCLASS   			sun/misc/JarFilter(0x22A01D00)
+3CLTEXTCLASS   			java/security/PrivilegedAction(0x007D6010)
+3CLTEXTCLASS   			java/io/FileOutputStream(0x007DC948)
+3CLTEXTCLASS   			sun/io/ByteToCharMS932DB(0x007DB478)
+3CLTEXTCLASS   			java/lang/StringCoding$1(0x007D9FA8)
+3CLTEXTCLASS   			sun/reflect/DelegatingClassLoader(0x007D5108)
+3CLTEXTCLASS   			java/lang/ThreadDeath(0x007D32F8)
+3CLTEXTCLASS   			java/lang/Compiler(0x22A03E88)
+3CLTEXTCLASS   			sun/misc/Launcher$AppClassLoader(0x22A039E8)
+3CLTEXTCLASS   			java/util/Hashtable$Enumerator(0x007DFC28)
+3CLTEXTCLASS   			java/util/Locale(0x007DB100)
+3CLTEXTCLASS   			java/lang/String$CaseInsensitiveComparator(0x007D1048)
+3CLTEXTCLASS   			java/security/AllPermission(0x22A07168)
+3CLTEXTCLASS   			java/lang/Math(0x22A05920)
+3CLTEXTCLASS   			sun/misc/Launcher(0x22A013C0)
+3CLTEXTCLASS   			java/lang/ClassLoader$NativeLibrary(0x22A00268)
+3CLTEXTCLASS   			java/security/AccessController(0x007D6138)
+3CLTEXTCLASS   			java/lang/Error(0x007D3420)
+3CLTEXTCLASS   			java/lang/StringCoding$4(0x22A004B8)
+3CLTEXTCLASS   			java/io/File(0x007DF788)
+3CLTEXTCLASS   			java/util/logging/LogManager$RootLogger(0x007DF1C0)
+3CLTEXTCLASS   			com/ibm/jvm/io/FileOutputStream(0x007DC820)
+3CLTEXTCLASS   			java/lang/StringBuffer(0x007DB228)
+3CLTEXTCLASS   			java/lang/NoClassDefFoundError(0x007D0018)
+3CLTEXTCLASS   			com/ibm/jvm/io/LocalizedPrintStream(0x007DD160)
+3CLTEXTCLASS   			java/util/jar/Attributes$Name(0x007D8760)
+3CLTEXTCLASS   			java/lang/Integer(0x007D7F48)
+3CLTEXTCLASS   			java/lang/Number(0x007D7290)
+3CLTEXTCLASS   			[I(0x007D1E28)
+3CLTEXTCLASS   			java/io/DataInputStream(0x22A04C68)
+3CLTEXTCLASS   			sun/net/www/protocol/jar/Handler(0x22A02D30)
+3CLTEXTCLASS   			com/ibm/jvm/classloader/TransientAllocation(0x007D4EB8)
+3CLTEXTCLASS   			sun/reflect/MagicAccessorImpl(0x007D0CD0)
+3CLTEXTCLASS   			java/io/BufferedReader(0x22A00958)
+3CLTEXTCLASS   			java/net/URLConnection(0x22A06828)
+3CLTEXTCLASS   			java/lang/Terminator$1(0x007DEF70)
+3CLTEXTCLASS   			java/lang/reflect/AccessibleObject(0x007D57F8)
+3CLTEXTCLASS   			sun/misc/Resource(0x22A06010)
+3CLTEXTCLASS   			java/lang/String(0x007D05E0)
+3CLTEXTCLASS   			java/security/CodeSource(0x22A06388)
+3CLTEXTCLASS   			sun/reflect/UnsafeBooleanFieldAccessorImpl(0x22A03548)
+3CLTEXTCLASS   			sun/reflect/ReflectionFactory$GetReflectionFactoryAction(0x007D5EE8)
+3CLTEXTCLASS   			java/util/Collection(0x007D2D30)
+3CLTEXTCLASS   			java/util/zip/InflaterInputStream(0x22A04FE0)
+3CLTEXTCLASS   			java/util/zip/ZipConstants(0x22A00018)
+3CLTEXTCLASS   			sun/io/CharToByteMS932DB(0x007DDAA0)
+3CLTEXTCLASS   			java/util/HashMap$Entry(0x007D73B8)
+3CLTEXTCLASS   			java/util/Collections$EmptyList(0x007DAC60)
+3CLTEXTCLASS   			java/lang/Compiler$1(0x22A03FB0)
+3CLTEXTCLASS   			sun/io/ByteToCharMS932(0x007DB350)
+3CLTEXTCLASS   			sun/misc/SoftCache(0x007D6A78)
+3CLTEXTCLASS   			java/security/BasicPermission(0x007D5B70)
+3CLTEXTCLASS   			java/util/Dictionary(0x007D40D8)
+3CLTEXTCLASS   			java/io/FilterInputStream(0x007DCCC0)
+3CLTEXTCLASS   			java/lang/reflect/ReflectAccess(0x007DB918)
+3CLTEXTCLASS   			java/lang/IndexOutOfBoundsException(0x22A05C98)
+3CLTEXTCLASS   			sun/nio/cs/StreamDecoder(0x22A00CD0)
+3CLTEXTCLASS   			java/lang/Shutdown$Lock(0x007DEAD0)
+3CLTEXTCLASS   			sun/io/CharToByteConverter(0x007DD850)
+3CLTEXTCLASS   			java/lang/Class$1(0x007DBB68)
+3CLTEXTCLASS   			java/lang/Float(0x007D7168)
+3CLTEXTCLASS   			java/io/ObjectStreamClass(0x007D6950)
+3CLTEXTCLASS   			java/io/ByteArrayInputStream(0x22A05358)
+3CLTEXTCLASS   			java/net/URLStreamHandlerFactory(0x22A01610)
+3CLTEXTCLASS   			java/util/HashMap(0x007D7040)
+3CLTEXTCLASS   			java/util/List(0x007D2E58)
+3CLTEXTCLASS   			java/lang/Thread(0x007D2640)
+3CLTEXTCLASS   			java/util/zip/Inflater(0x22A05108)
+3CLTEXTCLASS   			java/lang/Boolean(0x007D7980)
+3CLTEXTCLASS   			java/security/Principal(0x22A073B8)
+3CLTEXTCLASS   			java/util/jar/JarEntry(0x22A047C8)
+3CLTEXTCLASS   			java/io/WinNTFileSystem(0x007DF9D8)
+3CLTEXTCLASS   			java/lang/Shutdown(0x007DE9A8)
+3CLTEXTCLASS   			java/lang/NullPointerException(0x007D39E8)
+3CLTEXTCLASS   			java/beans/PropertyChangeSupport(0x007DE508)
+3CLTEXTCLASS   			[Ljava/lang/String;(0x22A01F50)
+3CLTEXTCLASS   			sun/nio/cs/StreamDecoder$ConverterSD(0x22A00DF8)
+3CLTEXTCLASS   			java/util/zip/ZipFile(0x007DFE78)
+3CLTEXTCLASS   			java/lang/Shutdown$WrappedHook(0x007DED20)
+3CLTEXTCLASS   			sun/io/ByteToCharConverter(0x007DA448)
+3CLTEXTCLASS   			java/lang/ref/SoftReference(0x007D8F78)
+3CLTEXTCLASS   			java/security/AccessControlContext(0x007D89B0)
+3CLTEXTCLASS   			java/lang/IncompatibleClassChangeError(0x007D7730)
+3CLTEXTCLASS   			java/lang/OutOfMemoryError(0x007D3D60)
+3CLTEXTCLASS   			sun/net/www/protocol/file/FileURLConnection(0x22A065D8)
+3CLTEXTCLASS   			java/util/jar/Attributes(0x22A05480)
+3CLTEXTCLASS   			java/security/PermissionCollection(0x22A032F8)
+3CLTEXTCLASS   			java/net/URLStreamHandler(0x22A02768)
+3CLTEXTCLASS   			java/lang/reflect/Array(0x22A02078)
+3CLTEXTCLASS   			java/beans/PropertyChangeEvent(0x22A01048)
+3CLTEXTCLASS   			java/util/HashSet(0x007DEBF8)
+3CLTEXTCLASS   			java/util/logging/Level(0x007DE2B8)
+3CLTEXTCLASS   			sun/net/www/protocol/file/Handler(0x22A02890)
+3CLTEXTCLASS   			java/util/BitSet(0x22A023F0)
+3CLTEXTCLASS   			java/util/HashMap$HashIterator(0x007DF660)
+3CLTEXTCLASS   			sun/io/ByteToCharJIS0201(0x007DC130)
+3CLTEXTCLASS   			java/lang/Byte(0x007D7CF8)
+3CLTEXTCLASS   			sun/security/util/Debug(0x22A01988)
+3CLTEXTCLASS   			[Ljava/lang/Thread;(0x007D8AD8)
+3CLTEXTCLASS   			java/io/FileNotFoundException(0x007D4A18)
+3CLTEXTCLASS   			sun/io/ByteToCharDoubleByte(0x007DB5A0)
+3CLTEXTCLASS   			java/io/ObjectStreamField(0x007D0F20)
+3CLTEXTCLASS   			java/security/Permissions(0x22A064B0)
+3CLTEXTCLASS   			java/security/PrivilegedActionException(0x007D4B40)
+3CLTEXTCLASS   			java/util/RandomAccess(0x007D2F80)
+3CLTEXTCLASS   			java/io/Serializable(0x007D04B8)
+3CLTEXTCLASS   			com/ibm/jvm/Trace(0x22A040D8)
+3CLTEXTCLASS   			java/util/zip/ZipFile$ZipFileInputStream(0x22A00708)
+3CLTEXTCLASS   			java/lang/StringCoding$EncoderCache(0x22A00390)
+3CLTEXTCLASS   			com/ibm/jvm/io/FileInputStream(0x007DC380)
+3CLTEXTCLASS   			java/lang/Class$3(0x007DB6C8)
+3CLTEXTCLASS   			java/util/Iterator(0x007D46A0)
+3CLTEXTCLASS   			java/lang/ClassNotFoundException(0x007D3798)
+3CLTEXTCLASS   			sun/misc/URLClassPath$2(0x22A04200)
+3CLTEXTCLASS   			sun/io/ByteToCharISO8859_1(0x22A00F20)
+3CLTEXTCLASS   			java/util/HashMap$ValueIterator(0x007DF538)
+3CLTEXTCLASS   			java/lang/InterruptedException(0x007D3B10)
+3CLTEXTCLASS   			java/lang/ThreadGroup(0x007D8510)
+3CLTEXTCLASS   			sun/net/www/MessageHeader(0x22A06BA0)
+3CLTEXTCLASS   			java/io/PrintStream(0x007DD288)
+3CLTEXTCLASS   			java/util/Map$Entry(0x007D74E0)
+3CLTEXTCLASS   			sun/nio/cs/StreamEncoder(0x007DD600)
+3CLTEXTCLASS   			java/security/ProtectionDomain(0x22A031D0)
+3CLTEXTCLASS   			java/lang/ref/Finalizer(0x007D92F0)
+3CLTEXTCLASS   			java/lang/Object(0x007D0268)
+3CLTEXTCLASS   			java/io/Reader(0x22A00A80)
+3CLTEXTCLASS   			java/lang/ref/ReferenceQueue$Lock(0x007D6F18)
+3CLTEXTCLASS   			sun/misc/URLClassPath$6(0x22A05EE8)
+3CLTEXTCLASS   			sun/net/www/ParseUtil(0x22A022C8)
+3CLTEXTCLASS   			sun/io/CharToByteJIS0201(0x007DDCF0)
+3CLTEXTCLASS   			java/io/FileDescriptor(0x007DC6F8)
+3CLTEXTCLASS   			[B(0x007D1738)
+3CLTEXTCLASS   			sun/io/CharToByteDoubleByte(0x007DDBC8)
+3CLTEXTCLASS   			java/util/Collections$EmptySet(0x007DA8E8)
+3CLTEXTCLASS   			java/lang/ref/ReferenceQueue(0x007D6CC8)
+3CLTEXTCLASS   			sun/misc/URLClassPath$JarLoader(0x22A04328)
+3CLTEXTCLASS   			java/io/Win32FileSystem(0x007DFB00)
+3CLTEXTCLASS   			java/io/IOException(0x007D48F0)
+3CLTEXTCLASS   			java/util/Hashtable$EmptyIterator(0x007D4578)
+3CLTEXTCLASS   			java/net/URLClassLoader(0x22A01860)
+3CLTEXTCLASS   			[[C(0x007D7BD0)
+3CLTEXTCLASS   			java/util/logging/LoggingPermission(0x007DE758)
+3CLTEXTCLASS   			[Ljava/net/URL;(0x22A03C38)
+3CLTEXTCLASS   			sun/reflect/ReflectionFactory$1(0x007DBDB8)
+3CLTEXTCLASS   			sun/io/CharacterEncoding(0x007DA570)
+3CLTEXTCLASS   			java/lang/StringCoding(0x007D98B8)
+3CLTEXTCLASS   			java/lang/ref/PhantomReference(0x007D9540)
+3CLTEXTCLASS   			java/lang/System(0x007D64B0)
+3CLTEXTCLASS   			sun/reflect/ConstructorAccessor(0x007D55A8)
+3CLTEXTCLASS   			java/net/URLClassLoader$ClassFinder(0x22A02AE0)
+3CLTEXTCLASS   			sun/misc/VM(0x22A01298)
+3CLTEXTCLASS   			java/lang/reflect/Constructor(0x007D6700)
+3CLTEXTCLASS   			java/util/Vector(0x007D29B8)
+3CLTEXTCLASS   			[D(0x007D2518)
+3CLTEXTCLASS   			java/lang/Runtime(0x007D9668)
+3CLTEXTCLASS   			sun/reflect/MethodAccessorImpl(0x007D5230)
+3CLTEXTCLASS   			java/lang/Exception(0x007D3548)
+3CLTEXTCLASS   			java/util/jar/JarVerifier(0x22A056D0)
+3CLTEXTCLASS   			java/io/FilterOutputStream(0x007DD038)
+3CLTEXTCLASS   			[Ljava/lang/ThreadGroup;(0x007D8888)
+3CLTEXTCLASS   			java/util/jar/JarFile(0x22A04578)
+3CLTEXTCLASS   			[Ljava/util/Hashtable$Entry;(0x007D9790)
+3CLTEXTCLASS   			java/lang/IllegalArgumentException(0x007D3C38)
+3CLTEXTCLASS   			java/lang/CharSequence(0x007D0830)
+3CLTEXTCLASS   			sun/io/CharToByteSingleByte(0x007DDE18)
+3CLTEXTCLASS   			java/util/Comparator(0x007D1170)
+3CLTEXTCLASS   			java/lang/Package(0x22A06138)
+3CLTEXTCLASS   			com/ibm/jvm/io/LocalizedInputStream$1(0x22A00830)
+3CLTEXTCLASS   			java/io/BufferedOutputStream(0x007DCF10)
+3CLTEXTCLASS   			java/lang/ref/Reference$ReferenceHandler(0x007D8E50)
+3CLTEXTCLASS   			java/lang/ref/Reference(0x007D8C00)
+3CLTEXTCLASS   			sun/reflect/MethodAccessor(0x007D5358)
+3CLTEXTCLASS   			java/lang/LinkageError(0x007D38C0)
+3CLTEXTCLASS   			sun/misc/URLClassPath$FileLoader(0x22A05DC0)
+3CLTEXTCLASS   			java/util/HashMap$Values(0x007DF410)
+3CLTEXTCLASS   			java/util/ArrayList(0x007DE3E0)
+3CLTEXTCLASS   			java/util/logging/LogManager(0x007DE068)
+3CLTEXTCLASS   			java/util/Properties(0x007D47C8)
+3CLTEXTCLASS   			[J(0x007D2078)
+3CLTEXTCLASS   			java/lang/ThreadLocal(0x007D99E0)
+3CLTEXTCLASS   			java/lang/StackOverflowError(0x007D4FE0)
+3CLTEXTCLASS   			java/util/jar/Manifest(0x22A05230)
+3CLTEXTCLASS   			java/util/StringTokenizer(0x22A01AB0)
+3CLTEXTCLASS   			sun/misc/Signal(0x007D82C0)
+3CLTEXTCLASS   			java/lang/SystemClassLoaderAction(0x22A03D60)
+3CLTEXTCLASS   			java/lang/StringCoding$2(0x22A005E0)
+3CLTEXTCLASS   			java/lang/RuntimePermission(0x007D6388)
+3CLTEXTCLASS   			java/lang/Cloneable(0x007D30A8)
+3CLTEXTCLASS   			java/util/AbstractList(0x007D2AE0)
+3CLTEXTCLASS   			java/lang/StringCoding$3(0x007D9E80)
+3CLTEXTCLASS   			sun/reflect/ReflectionFactory(0x007D6260)
+3CLTEXTCLASS   			java/security/UnresolvedPermission(0x22A06DF0)
+3CLTEXTCLASS   			sun/misc/URLClassPath$Loader(0x22A04450)
+3CLTEXTCLASS   			com/ibm/jvm/ExtendedSystem$1(0x22A02E58)
+3CLTEXTCLASS   			sun/misc/Launcher$1(0x22A01BD8)
+3CLTEXTCLASS   			com/ibm/jvm/io/ConsoleInputStream(0x007DCDE8)
+3CLTEXTCLASS   			[S(0x007D1BD8)
+3CLTEXTCLASS   			java/util/Collections$ReverseComparator(0x007DAEB0)
+3CLTEXTCLASS   			java/lang/ThreadLocal$ThreadLocalMap(0x007D9B08)
+3CLTEXTCLASS   			java/security/Permission(0x007D5C98)
+3CLTEXTCLASS   			java/io/FileSystem(0x007DF8B0)
+3CLTEXTCLASS   			java/util/logging/Logger(0x007DF2E8)
+3CLTEXTCLASS   			java/io/Writer(0x007DD4D8)
+3CLTEXTCLASS   			java/lang/Void(0x007D7858)
+3CLTEXTCLASS   			[Ljava/util/HashMap$Entry;(0x22A05A48)
+3CLTEXTCLASS   			sun/reflect/UnsafeFieldAccessorFactory(0x22A03420)
+3CLTEXTCLASS   			java/security/cert/Certificate(0x22A02F80)
+3CLTEXTCLASS   			sun/misc/URLClassPath(0x22A02C08)
+3CLTEXTCLASS   			java/lang/Terminator(0x007DEE48)
+3CLTEXTCLASS   			sun/io/Converters(0x007DA1F8)
+3CLTEXTCLASS   			java/util/Enumeration(0x007D4450)
+3CLTEXTCLASS   			java/lang/Class(0x007D0140)
+3CLTEXTCLASS   			sun/misc/Unsafe(0x22A03670)
+3CLTEXTCLASS   			java/lang/reflect/Method(0x007D56D0)
+3CLTEXTCLASS   			com/ibm/jvm/classloader/Shareable(0x007D4C68)
+3CLTEXTCLASS   			java/util/Map(0x007D4200)
+3CLTEXTCLASS   			java/lang/RuntimeException(0x007D3670)
+3CLTEXTCLASS   			sun/security/action/LoadLibraryAction(0x22A00140)
+3CLTEXTCLASS   			sun/misc/SignalHandler(0x007DF098)
+3CLTEXTCLASS   			java/io/OutputStream(0x007DCA70)
+3CLTEXTCLASS   			java/util/Random(0x007DA7C0)
+3CLTEXTCLASS   			java/io/OutputStreamWriter(0x007DD3B0)
+3CLTEXTCLASS   			java/util/Hashtable$EmptyEnumerator(0x007D4328)
+3CLTEXTCLASS   			java/util/logging/LogManager$LogNode(0x007DE630)
+3CLTEXTCLASS   			java/lang/Character(0x007D7AA8)
+3CLTEXTCLASS   			[Ljava/lang/Object;(0x22A021A0)
+3CLTEXTCLASS   			sun/reflect/DelegatingConstructorAccessorImpl(0x007DC008)
+3CLTEXTCLASS   			java/lang/ref/FinalReference(0x007D91C8)
+3CLTEXTCLASS   			java/lang/Long(0x007D8070)
+3CLTEXTCLASS   			java/lang/VirtualMachineError(0x007D3E88)
+3CLTEXTCLASS   			java/io/InputStream(0x007DC5D0)
+3CLTEXTCLASS   			java/util/Set(0x007DAB38)
+3CLTEXTCLASS   			java/util/Collections(0x007DA698)
+3CLTEXTCLASS   			java/security/PrivilegedExceptionAction(0x007DA0D0)
+3CLTEXTCLASS   			java/io/DataInput(0x22A04D90)
+3CLTEXTCLASS   			java/net/Parts(0x22A02640)
+3CLTEXTCLASS   			sun/io/CharToByteMS932(0x007DD978)
+3CLTEXTCLASS   			[C(0x007D1988)
+3CLTEXTCLASS   			java/lang/NoSuchMethodError(0x007D7608)
+3CLTEXTCLASS   			java/net/UnknownContentHandler(0x22A06950)
+3CLTEXTCLASS   			sun/net/www/URLConnection(0x22A06700)
+3CLTEXTCLASS   			sun/misc/ExtensionDependency(0x22A04A18)
+3CLTEXTCLASS   			sun/misc/Launcher$ExtClassLoader(0x22A01738)
+3CLTEXTCLASS   			java/lang/reflect/ReflectPermission(0x007D5A48)
+3CLTEXTCLASS   			java/io/FilePermission(0x22A06CC8)
+3CLTEXTCLASS   			java/net/ContentHandler(0x22A06A78)
+3CLTEXTCLASS   			java/util/AbstractSet(0x007DAA10)
+3CLTEXTCLASS   			java/lang/Comparable(0x007D0708)
+3CLTEXTCLASS   			java/util/Hashtable(0x007D3FB0)
+3CLTEXTCLASS   			java/io/BufferedInputStream(0x007DCB98)
+3CLTEXTCLASS   			java/lang/reflect/Modifier(0x007DB7F0)
+3CLTEXTCLASS   			java/lang/ref/Reference$Lock(0x007D8D28)
+3CLTEXTCLASS   			[Ljava/lang/reflect/Field;(0x22A03798)
+3CLTEXTCLASS   			sun/reflect/Reflection(0x007DBC90)
+3CLTEXTCLASS   			java/lang/ref/Finalizer$FinalizerThread(0x007D9418)
+3CLTEXTCLASS   			java/security/SecureClassLoader(0x007D6828)
+3CLTEXTCLASS   			java/security/Guard(0x007D5DC0)
+3CLTEXTCLASS   			sun/reflect/FieldAccessor(0x007D0DF8)
+3CLTEXTCLASS   			sun/misc/Launcher$Factory(0x22A014E8)
+3CLTEXTCLASS   			java/io/InputStreamReader(0x22A00BA8)
+3CLTEXTCLASS   			java/net/URLClassLoader$1(0x22A06260)
+3CLTEXTCLASS   			java/lang/reflect/Member(0x007D5920)
+3CLTEXTCLASS   			java/util/Stack(0x007D31D0)
+3CLTEXTCLASS   			java/lang/Throwable(0x007D0390)
+3CLTEXTCLASS   			java/util/logging/Handler(0x007DE190)
+3CLTEXTCLASS   			java/lang/StringCoding$DecoderCache(0x007D9D58)
+3CLTEXTCLASS   			java/lang/ref/ReferenceQueue$Null(0x007D6DF0)
+3CLTEXTCLASS   			com/ibm/jvm/classloader/Middleware(0x007D4D90)
+NULL           ------------------------------------------------------------------------
+0SECTION       Javadump End section
+1DGJDUMP       Javadump Buffer Usage Information
+NULL           =================================
+2DGJDUMPALLOC  Javadump buffer size (allocated): 2621440
+2DGJDUMPUSED   Javadump buffer size (used)     : 30820
+NULL           ---------------------- END OF DUMP -------------------------------------

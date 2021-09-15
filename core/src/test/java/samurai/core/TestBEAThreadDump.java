@@ -166,7 +166,7 @@ class TestBEAThreadDump  {
     @Test 
     void test813JRockitweblogicadmin() throws IOException {
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
-        dumpExtractor.analyze(new File("testcases/BEA/weblogic.admin813JRockit.dmp"));
+        dumpExtractor.analyze(TestBEAThreadDump.class.getResourceAsStream("/BEA/weblogic.admin813JRockit.dmp"));
         assertEquals(5, statistic.getFullThreadDumpCount());
         assertEquals(46, statistic.getFullThreadDump(0).getThreadCount());
 
@@ -182,6 +182,7 @@ class TestBEAThreadDump  {
         assertTrue(line.isTryingToGetLock());
         assertEquals("java/lang/Object", line.getLockedClassName());
         assertEquals("13a92710", line.getLockedObjectId());
+        //noinspection HtmlUnknownAnchorTarget
         assertEquals("   -- Blocked trying to get lock: java/lang/Object@<a href=\"#13a92710\">13a92710</a>[thin lock]",new VelocityHtmlRenderer.Util().asHTML(line));
         assertEquals("0xb80", dump.getBlockerId());
         line = dump.getLine(6);
@@ -191,6 +192,7 @@ class TestBEAThreadDump  {
         assertTrue(new VelocityHtmlRenderer.Util().asHTML(line).contains("<a name"));
         assertEquals("13a92718", line.getLockedObjectId());
         System.out.println("[" + new VelocityHtmlRenderer.Util().asHTML(line) + "]");
+        //noinspection HtmlDeprecatedAttribute
         assertEquals("   ^-- Holding lock: java/lang/Object@<a name=\"13a92718\"></a>13a92718[thin lock]", new VelocityHtmlRenderer.Util().asHTML(line));
 
         dump = statistic.getFullThreadDump(0).getThreadDumpById("0xb80");

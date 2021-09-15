@@ -1,0 +1,2029 @@
+
+C:\bea81sp1\user_projects\domains\tt>ECHO OFF 
+.
+CLASSPATH=C:\bea81sp1\JROCKI~1\lib\tools.jar;C:\bea81sp1\WEBLOG~1\server\lib\weblogic_sp.jar;C:\bea81sp1\WEBLOG~1\server\lib\weblogic.jar;C:\bea81sp1\WEBLOG~1\server\lib\ojdbc14.jar;C:\bea81sp1\WEBLOG~1\common\eval\pointbase\lib\pbserver44.jar;C:\bea81sp1\WEBLOG~1\common\eval\pointbase\lib\pbclient44.jar;C:\bea81sp1\JROCKI~1\jre\lib\rt.jar;C:\bea81sp1\WEBLOG~1\server\lib\webservices.jar;C:\Program Files\Java\jre1.5.0_05\lib\ext\QTJava.zip
+.
+PATH=C:\bea81sp1\WEBLOG~1\server\bin;C:\bea81sp1\JROCKI~1\jre\bin;C:\bea81sp1\JROCKI~1\bin;C:\oracle\product\9.2\jre\1.4.2\bin\client;C:\oracle\product\9.2\jre\1.4.2\bin;C:\oracle\product\9.2\bin;C:\Program Files\Oracle\jre\1.3.1\bin;C:\Program Files\Oracle\jre\1.1.8\bin;C:\oracle\product\10.1.0\Db_2\bin;C:\oracle\product\10.1.0\Db_2\jre\1.4.2\bin\client;C:\oracle\product\10.1.0\Db_2\jre\1.4.2\bin;C:\ClarifyCRM12.5SR1.07\ClarifyClient;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\Perforce;C:\bea81sp1\WEBLOG~1\server\bin\oci920_8
+.
+***************************************************
+*  To start WebLogic Server, use a username and   *
+*  password assigned to an admin-level user.  For *
+*  server administration, use the WebLogic Server *
+*  console at http:\\[hostname]:[port]\console    *
+***************************************************
+<2006/05/04 22時19分31秒 JST> <Info> <WebLogicServer> <BEA-000377> <WebLogic Server を BEA Systems, Inc. から BEA WebLogic JRockit(R) Virtual Machine バージョン 8.1sp1-1.4.1_03-viking-Load7-win32-sthqa28-20030619-1312 で起動しています。> 
+<2006/05/04 22時19分31秒 JST> <Info> <Configuration Management> <BEA-150016> <このサーバは管理サーバとして起動されています。> 
+<2006/05/04 22時19分31秒 JST> <Info> <Management> <BEA-141107> <バージョン: WebLogic Server 8.1 SP1  Fri Jun 20 23:06:40 PDT 2003 271009
+WebLogic XMLX Module 8.1 SP1  Fri Jun 20 23:06:40 PDT 2003 271009> 
+<2006/05/04 22時19分32秒 JST> <Notice> <Management> <BEA-140005> <C:\bea81sp1\user_projects\domains\tt\.\config.xml のコンフィグレーション リポジトリからドメイン コンフィグレーションをロードしています。> 
+<2006/05/04 22時19分33秒 JST> <Notice> <Log Management> <BEA-170019> <サーバ ログ ファイル C:\bea81sp1\user_projects\domains\tt\myserver\myserver.log を開きました。すべてのサーバサイド ログ イベントはこのファイルに書き込まれます。> 
+<2006/05/04 22時19分36秒 JST> <Notice> <Security> <BEA-090082> <セキュリティはセキュリティ レルム myrealm を使用して初期化しています。> 
+<2006/05/04 22時19分36秒 JST> <Notice> <WebLogicServer> <BEA-000327> <ドメイン "tt" で WebLogic 管理サーバ "myserver" を起動しています。> 
+<2006/05/04 22時19分47秒 JST> <Notice> <WebLogicServer> <BEA-000331> <ドメイン "tt" で WebLogic 管理サーバ "myserver" を開発モードで起動しました。> 
+<2006/05/04 22時19分47秒 JST> <Notice> <WebLogicServer> <BEA-000360> <サーバが RUNNING モードで起動しました。> 
+<2006/05/04 22時19分47秒 JST> <Notice> <WebLogicServer> <BEA-000355> <スレッド "ListenThread.Default" は IP アドレス *.* のポート 7001 をリスンしています。> 
+===== FULL THREAD DUMP ===============
+Thu May 04 22:20:10 JST 2006
+
+Thread-0x80 "ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x100 "ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x180 "Finalizer" <Waiting, priority=8, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.lang.ref.ReferenceQueue.remove(J)Ljava.lang.ref.Reference;(ReferenceQueue.java:127)
+	java.lang.ref.ReferenceQueue.remove()Ljava.lang.ref.Reference;(ReferenceQueue.java:159)
+	java.lang.ref.Finalizer$FinalizerThread.run()V(Finalizer.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x200 "SignalHandler" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.SignalHandler.waitForSignals()V(Native Method)
+	COM.jrockit.vm.SignalHandler$1.run()V(Unknown Source)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x280 "Hotspot Detector" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.HotspotDetector.findHotSpotCandidate()V(Native Method)
+	COM.jrockit.vm.HotspotDetector.run()V(Unknown Source)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x300 "Reference Handler" <Waiting, priority=10, DAEMON> {
+	java.lang.ref.Reference.getPending()Ljava.lang.ref.Reference;(Native Method)
+	java.lang.ref.Reference.access$000()Ljava.lang.ref.Reference;(Unknown Source)
+	java.lang.ref.Reference$ReferenceHandler.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x380 "Thread-1" <Waiting, priority=5> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.t3.srvr.T3Srvr.waitForDeath()V(T3Srvr.java:384)
+	weblogic.t3.srvr.T3Srvr.run([Ljava.lang.String;)I(T3Srvr.java:32)
+	weblogic.Server.main([Ljava.lang.String;)V(Server.java:???)
+}
+
+
+Thread-0x400 "" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.MemSystem.mcGenConEP()V(Native Method)
+}
+
+
+Thread-0x480 "ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x500 "ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x580 "ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x600 "ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x680 "ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x700 "ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x780 "ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x800 "ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x880 "ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x900 "ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x980 "ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xa00 "ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xa80 "ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xb00 "ExecuteThread: '0' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xb80 "ExecuteThread: '1' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xc00 "ExecuteThread: '2' for queue: 'weblogic.kernel.System'" <Active, priority=5, DAEMON> {
+	COM.jrockit.management.jvm.ThreadSnapshotImpl.getThreadSnapShot0([Ljava.lang.Thread;)I(Native Method)
+	COM.jrockit.management.jvm.ThreadSnapshotImpl.getThreadSnapshot([Ljava.lang.Thread;)Ljava.util.List;(Unknown Source)
+	COM.jrockit.management.jvm.ThreadSystemImpl.getThreadSnapshots()Ljava.util.Collection;(Unknown Source)
+	COM.jrockit.management.jvm.ThreadSystemImpl.getThreadStackDump()Ljava.lang.String;(Unknown Source)
+	weblogic.platform.JRockitVM.threadDump()V(JRockitVM.java:214)
+	weblogic.common.internal.AdminProxy.execute(Lweblogic.t3.srvr.ExecutionContext;Ljava.lang.Object;)Ljava.lang.Object;(AdminProxy.java:699)
+	weblogic.t3.srvr.ClientRequest$1.run()Ljava.lang.Object;(ClientContext.java:353)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(AuthenticatedSubject.java:144)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(SecurityManager.java:696)
+	weblogic.t3.srvr.ClientRequest.execute(Lweblogic.kernel.ExecuteThread;)V(ClientContext.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xc80 "ExecuteThread: '3' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xd00 "ExecuteThread: '4' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xd80 "weblogic.time.TimeEventGenerator" <Waiting, priority=9, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	weblogic.time.common.internal.TimeTable.snooze()V(TimeTable.java:118)
+	weblogic.time.common.internal.TimeEventGenerator.run()V(TimeEventGenerator.java:???)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xe00 "weblogic.security.SpinnerRandomSource" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.security.SpinnerRandomBitsSource.run()V(SpinnerRandomBitsSource.java:???)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xe80 "ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xf00 "ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1000 "ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1080 "ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1100 "VDE Transaction Processor Thread" <Waiting, priority=2> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	com.octetstring.vde.backend.standard.TransactionProcessor.waitChange()V(TransactionProcessor.java:215)
+	com.octetstring.vde.backend.standard.TransactionProcessor.run()V(TransactionProcessor.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1180 "ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	weblogic.jms.backend.BETimerTree.execute(Lweblogic.kernel.ExecuteThread;)V(BETimerTree.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1200 "Thread-4" <Waiting, priority=5> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.util.TimerThread.mainLoop()V(Timer.java:382)
+	java.util.TimerThread.run()V(Timer.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1280 "[JRockit] GCEventThread" <Waiting, priority=5, DAEMON> {
+	COM.jrockit.management.jvm.GarbageCollectorImpl.waitForEvent()I(Native Method)
+	COM.jrockit.management.jvm.GarbageCollectorImpl.access$000()I(Unknown Source)
+	COM.jrockit.management.jvm.GarbageCollectorImpl$GCEventThread.getNextEvent()Ljava.util.EventObject;(Unknown Source)
+	COM.jrockit.management.jvm.AsyncEventProvider$EventThread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1300 "weblogic.health.CoreHealthMonitor" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.lang.Thread.sleep(J)V(Unknown Source)
+	weblogic.t3.srvr.CoreHealthMonitorThread.run()V(CoreHealthMonitorThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1380 "Thread-6" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.util.TimerThread.mainLoop()V(Timer.java:382)
+	java.util.TimerThread.run()V(Timer.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1400 "ListenThread.Default" <Active, priority=5> {
+	COM.jrockit.net.SocketNativeIO.accept(ILjava.io.FileDescriptor;IZ)[B(Native Method)
+	COM.jrockit.net.SocketNativeIO.accept(Ljava.io.FileDescriptor;Ljava.io.FileDescriptor;I)LCOM.jrockit.net.InetAddressCache;(Unknown Source)
+	java.net.AbstractSocketImpl.accept(Ljava.net.SocketImpl;)V(Unknown Source)
+	java.net.ServerSocket.implAccept(Ljava.net.Socket;)V(ServerSocket.java:419)
+	java.net.ServerSocket.accept()Ljava.net.Socket;(ServerSocket.java:24)
+	weblogic.socket.WeblogicServerSocket.accept()Ljava.net.Socket;(WeblogicServerSocket.java:715)
+	weblogic.t3.srvr.ListenThread.accept()Ljava.net.Socket;(ListenThread.java:291)
+	weblogic.t3.srvr.ListenThread.run()V(ListenThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1480 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+	java.lang.Thread.addToTodoList(Ljava.lang.Thread;)V(Native Method)
+	java.lang.Object.unlockFatReal0(Ljava.lang.Object;Ljava.lang.Thread;I)V(Unknown Source)
+	java.lang.Object.unlockFat(Ljava.lang.Object;Ljava.lang.Thread;I)V(Unknown Source)
+	java.lang.Object.stage2Unlock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorExit(Ljava.lang.Object;)V(Native Method)
+	weblogic.kernel.ExecuteThread.notifyRequest(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:362)
+	weblogic.kernel.ExecuteThreadManager.execute(Lweblogic.kernel.ExecuteRequest;Z)V(ExecuteThreadManager.java:338)
+	weblogic.kernel.Kernel.execute(Lweblogic.kernel.ExecuteRequest;IZ)V(Kernel.java:360)
+	weblogic.kernel.Kernel.execute(Lweblogic.kernel.ExecuteRequest;Ljava.lang.String;Z)V(Kernel.java:348)
+	weblogic.kernel.Kernel.execute(Lweblogic.kernel.ExecuteRequest;Ljava.lang.String;)V(Kernel.java:319)
+	weblogic.t3.srvr.ClientContext.enqueueWork(Lweblogic.kernel.ExecuteRequest;)V(ClientContext.java:369)
+	weblogic.t3.srvr.ClientContext.invoke(Lweblogic.rjvm.RemoteRequest;)V(ClientContext.java:929)
+	weblogic.rjvm.RJVMImpl.dispatchRequest(Lweblogic.rjvm.MsgAbbrevInputStream;)V(RJVMImpl.java:841)
+	weblogic.rjvm.RJVMImpl.dispatch(Lweblogic.rjvm.MsgAbbrevInputStream;)V(RJVMImpl.java:222)
+	weblogic.rjvm.ConnectionManagerServer.handleRJVM(Lweblogic.rjvm.MsgAbbrevJVMConnection;Lweblogic.rjvm.MsgAbbrevInputStream;)V(ConnectionManagerServer.java:794)
+	weblogic.rjvm.ConnectionManager.dispatch(Lweblogic.rjvm.MsgAbbrevJVMConnection;Lweblogic.utils.io.Chunk;)V(ConnectionManager.java:570)
+	weblogic.rjvm.t3.T3JVMConnection.dispatch()V(T3JVMConnection.java:105)
+	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1500 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+	weblogic.socket.NTSocketMuxer.getIoCompletionResult(Lweblogic.socket.NTSocketMuxer$IoCompletionData;)Z(Native Method)
+	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+======================================
+
+===== FULL THREAD DUMP ===============
+Thu May 04 22:20:14 JST 2006
+
+Thread-0x80 "ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x100 "ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x180 "Finalizer" <Waiting, priority=8, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.lang.ref.ReferenceQueue.remove(J)Ljava.lang.ref.Reference;(ReferenceQueue.java:127)
+	java.lang.ref.ReferenceQueue.remove()Ljava.lang.ref.Reference;(ReferenceQueue.java:159)
+	java.lang.ref.Finalizer$FinalizerThread.run()V(Finalizer.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x200 "SignalHandler" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.SignalHandler.waitForSignals()V(Native Method)
+	COM.jrockit.vm.SignalHandler$1.run()V(Unknown Source)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x280 "Hotspot Detector" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.HotspotDetector.findHotSpotCandidate()V(Native Method)
+	COM.jrockit.vm.HotspotDetector.run()V(Unknown Source)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x300 "Reference Handler" <Waiting, priority=10, DAEMON> {
+	java.lang.ref.Reference.getPending()Ljava.lang.ref.Reference;(Native Method)
+	java.lang.ref.Reference.access$000()Ljava.lang.ref.Reference;(Unknown Source)
+	java.lang.ref.Reference$ReferenceHandler.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x380 "Thread-1" <Waiting, priority=5> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.t3.srvr.T3Srvr.waitForDeath()V(T3Srvr.java:384)
+	weblogic.t3.srvr.T3Srvr.run([Ljava.lang.String;)I(T3Srvr.java:32)
+	weblogic.Server.main([Ljava.lang.String;)V(Server.java:???)
+}
+
+
+Thread-0x400 "" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.MemSystem.mcGenConEP()V(Native Method)
+}
+
+
+Thread-0x480 "ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x500 "ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x580 "ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x600 "ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x680 "ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x700 "ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x780 "ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x800 "ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x880 "ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x900 "ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x980 "ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xa00 "ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xa80 "ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xb00 "ExecuteThread: '0' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xb80 "ExecuteThread: '1' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xc00 "ExecuteThread: '2' for queue: 'weblogic.kernel.System'" <Active, priority=5, DAEMON> {
+	COM.jrockit.management.jvm.ThreadSnapshotImpl.getThreadSnapShot0([Ljava.lang.Thread;)I(Native Method)
+	COM.jrockit.management.jvm.ThreadSnapshotImpl.getThreadSnapshot([Ljava.lang.Thread;)Ljava.util.List;(Unknown Source)
+	COM.jrockit.management.jvm.ThreadSystemImpl.getThreadSnapshots()Ljava.util.Collection;(Unknown Source)
+	COM.jrockit.management.jvm.ThreadSystemImpl.getThreadStackDump()Ljava.lang.String;(Unknown Source)
+	weblogic.platform.JRockitVM.threadDump()V(JRockitVM.java:214)
+	weblogic.common.internal.AdminProxy.execute(Lweblogic.t3.srvr.ExecutionContext;Ljava.lang.Object;)Ljava.lang.Object;(AdminProxy.java:699)
+	weblogic.t3.srvr.ClientRequest$1.run()Ljava.lang.Object;(ClientContext.java:353)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(AuthenticatedSubject.java:144)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(SecurityManager.java:696)
+	weblogic.t3.srvr.ClientRequest.execute(Lweblogic.kernel.ExecuteThread;)V(ClientContext.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xc80 "ExecuteThread: '3' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xd00 "ExecuteThread: '4' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xd80 "weblogic.time.TimeEventGenerator" <Waiting, priority=9, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	weblogic.time.common.internal.TimeTable.snooze()V(TimeTable.java:118)
+	weblogic.time.common.internal.TimeEventGenerator.run()V(TimeEventGenerator.java:???)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xe00 "weblogic.security.SpinnerRandomSource" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.security.SpinnerRandomBitsSource.run()V(SpinnerRandomBitsSource.java:???)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xe80 "ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xf00 "ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1000 "ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1080 "ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1100 "VDE Transaction Processor Thread" <Waiting, priority=2> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	com.octetstring.vde.backend.standard.TransactionProcessor.waitChange()V(TransactionProcessor.java:215)
+	com.octetstring.vde.backend.standard.TransactionProcessor.run()V(TransactionProcessor.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1180 "ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	weblogic.jms.backend.BETimerTree.execute(Lweblogic.kernel.ExecuteThread;)V(BETimerTree.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1200 "Thread-4" <Waiting, priority=5> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.util.TimerThread.mainLoop()V(Timer.java:382)
+	java.util.TimerThread.run()V(Timer.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1280 "[JRockit] GCEventThread" <Waiting, priority=5, DAEMON> {
+	COM.jrockit.management.jvm.GarbageCollectorImpl.waitForEvent()I(Native Method)
+	COM.jrockit.management.jvm.GarbageCollectorImpl.access$000()I(Unknown Source)
+	COM.jrockit.management.jvm.GarbageCollectorImpl$GCEventThread.getNextEvent()Ljava.util.EventObject;(Unknown Source)
+	COM.jrockit.management.jvm.AsyncEventProvider$EventThread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1300 "weblogic.health.CoreHealthMonitor" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.lang.Thread.sleep(J)V(Unknown Source)
+	weblogic.t3.srvr.CoreHealthMonitorThread.run()V(CoreHealthMonitorThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1380 "Thread-6" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.util.TimerThread.mainLoop()V(Timer.java:382)
+	java.util.TimerThread.run()V(Timer.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1400 "ListenThread.Default" <Active, priority=5> {
+	COM.jrockit.net.SocketNativeIO.accept(ILjava.io.FileDescriptor;IZ)[B(Native Method)
+	COM.jrockit.net.SocketNativeIO.accept(Ljava.io.FileDescriptor;Ljava.io.FileDescriptor;I)LCOM.jrockit.net.InetAddressCache;(Unknown Source)
+	java.net.AbstractSocketImpl.accept(Ljava.net.SocketImpl;)V(Unknown Source)
+	java.net.ServerSocket.implAccept(Ljava.net.Socket;)V(ServerSocket.java:419)
+	java.net.ServerSocket.accept()Ljava.net.Socket;(ServerSocket.java:24)
+	weblogic.socket.WeblogicServerSocket.accept()Ljava.net.Socket;(WeblogicServerSocket.java:715)
+	weblogic.t3.srvr.ListenThread.accept()Ljava.net.Socket;(ListenThread.java:291)
+	weblogic.t3.srvr.ListenThread.run()V(ListenThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1480 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+	weblogic.socket.NTSocketMuxer.getIoCompletionResult(Lweblogic.socket.NTSocketMuxer$IoCompletionData;)Z(Native Method)
+	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1500 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+	java.lang.Thread.addToTodoList(Ljava.lang.Thread;)V(Native Method)
+	java.lang.Object.unlockFatReal0(Ljava.lang.Object;Ljava.lang.Thread;I)V(Unknown Source)
+	java.lang.Object.unlockFat(Ljava.lang.Object;Ljava.lang.Thread;I)V(Unknown Source)
+	java.lang.Object.stage2Unlock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorExit(Ljava.lang.Object;)V(Native Method)
+	weblogic.kernel.ExecuteThread.notifyRequest(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:362)
+	weblogic.kernel.ExecuteThreadManager.execute(Lweblogic.kernel.ExecuteRequest;Z)V(ExecuteThreadManager.java:338)
+	weblogic.kernel.Kernel.execute(Lweblogic.kernel.ExecuteRequest;IZ)V(Kernel.java:360)
+	weblogic.kernel.Kernel.execute(Lweblogic.kernel.ExecuteRequest;Ljava.lang.String;Z)V(Kernel.java:348)
+	weblogic.kernel.Kernel.execute(Lweblogic.kernel.ExecuteRequest;Ljava.lang.String;)V(Kernel.java:319)
+	weblogic.t3.srvr.ClientContext.enqueueWork(Lweblogic.kernel.ExecuteRequest;)V(ClientContext.java:369)
+	weblogic.t3.srvr.ClientContext.invoke(Lweblogic.rjvm.RemoteRequest;)V(ClientContext.java:929)
+	weblogic.rjvm.RJVMImpl.dispatchRequest(Lweblogic.rjvm.MsgAbbrevInputStream;)V(RJVMImpl.java:841)
+	weblogic.rjvm.RJVMImpl.dispatch(Lweblogic.rjvm.MsgAbbrevInputStream;)V(RJVMImpl.java:222)
+	weblogic.rjvm.ConnectionManagerServer.handleRJVM(Lweblogic.rjvm.MsgAbbrevJVMConnection;Lweblogic.rjvm.MsgAbbrevInputStream;)V(ConnectionManagerServer.java:794)
+	weblogic.rjvm.ConnectionManager.dispatch(Lweblogic.rjvm.MsgAbbrevJVMConnection;Lweblogic.utils.io.Chunk;)V(ConnectionManager.java:570)
+	weblogic.rjvm.t3.T3JVMConnection.dispatch()V(T3JVMConnection.java:105)
+	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1580 "ExecuteThread: '0' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1600 "ExecuteThread: '1' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1680 "ExecuteThread: '2' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1700 "ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+======================================
+
+===== FULL THREAD DUMP ===============
+Thu May 04 22:20:17 JST 2006
+
+Thread-0x80 "ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x100 "ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x180 "Finalizer" <Waiting, priority=8, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.lang.ref.ReferenceQueue.remove(J)Ljava.lang.ref.Reference;(ReferenceQueue.java:127)
+	java.lang.ref.ReferenceQueue.remove()Ljava.lang.ref.Reference;(ReferenceQueue.java:159)
+	java.lang.ref.Finalizer$FinalizerThread.run()V(Finalizer.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x200 "SignalHandler" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.SignalHandler.waitForSignals()V(Native Method)
+	COM.jrockit.vm.SignalHandler$1.run()V(Unknown Source)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x280 "Hotspot Detector" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.HotspotDetector.findHotSpotCandidate()V(Native Method)
+	COM.jrockit.vm.HotspotDetector.run()V(Unknown Source)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x300 "Reference Handler" <Waiting, priority=10, DAEMON> {
+	java.lang.ref.Reference.getPending()Ljava.lang.ref.Reference;(Native Method)
+	java.lang.ref.Reference.access$000()Ljava.lang.ref.Reference;(Unknown Source)
+	java.lang.ref.Reference$ReferenceHandler.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x380 "Thread-1" <Waiting, priority=5> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.t3.srvr.T3Srvr.waitForDeath()V(T3Srvr.java:384)
+	weblogic.t3.srvr.T3Srvr.run([Ljava.lang.String;)I(T3Srvr.java:32)
+	weblogic.Server.main([Ljava.lang.String;)V(Server.java:???)
+}
+
+
+Thread-0x400 "" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.MemSystem.mcGenConEP()V(Native Method)
+}
+
+
+Thread-0x480 "ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x500 "ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x580 "ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x600 "ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x680 "ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x700 "ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x780 "ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x800 "ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x880 "ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x900 "ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x980 "ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xa00 "ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xa80 "ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xb00 "ExecuteThread: '0' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xb80 "ExecuteThread: '1' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xc00 "ExecuteThread: '2' for queue: 'weblogic.kernel.System'" <Active, priority=5, DAEMON> {
+	COM.jrockit.management.jvm.ThreadSnapshotImpl.getThreadSnapShot0([Ljava.lang.Thread;)I(Native Method)
+	COM.jrockit.management.jvm.ThreadSnapshotImpl.getThreadSnapshot([Ljava.lang.Thread;)Ljava.util.List;(Unknown Source)
+	COM.jrockit.management.jvm.ThreadSystemImpl.getThreadSnapshots()Ljava.util.Collection;(Unknown Source)
+	COM.jrockit.management.jvm.ThreadSystemImpl.getThreadStackDump()Ljava.lang.String;(Unknown Source)
+	weblogic.platform.JRockitVM.threadDump()V(JRockitVM.java:214)
+	weblogic.common.internal.AdminProxy.execute(Lweblogic.t3.srvr.ExecutionContext;Ljava.lang.Object;)Ljava.lang.Object;(AdminProxy.java:699)
+	weblogic.t3.srvr.ClientRequest$1.run()Ljava.lang.Object;(ClientContext.java:353)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(AuthenticatedSubject.java:144)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(SecurityManager.java:696)
+	weblogic.t3.srvr.ClientRequest.execute(Lweblogic.kernel.ExecuteThread;)V(ClientContext.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xc80 "ExecuteThread: '3' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xd00 "ExecuteThread: '4' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xd80 "weblogic.time.TimeEventGenerator" <Waiting, priority=9, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	weblogic.time.common.internal.TimeTable.snooze()V(TimeTable.java:118)
+	weblogic.time.common.internal.TimeEventGenerator.run()V(TimeEventGenerator.java:???)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xe00 "weblogic.security.SpinnerRandomSource" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.security.SpinnerRandomBitsSource.run()V(SpinnerRandomBitsSource.java:???)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xe80 "ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xf00 "ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1000 "ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1080 "ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1100 "VDE Transaction Processor Thread" <Waiting, priority=2> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	com.octetstring.vde.backend.standard.TransactionProcessor.waitChange()V(TransactionProcessor.java:215)
+	com.octetstring.vde.backend.standard.TransactionProcessor.run()V(TransactionProcessor.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1180 "ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	weblogic.jms.backend.BETimerTree.execute(Lweblogic.kernel.ExecuteThread;)V(BETimerTree.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1200 "Thread-4" <Waiting, priority=5> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.util.TimerThread.mainLoop()V(Timer.java:382)
+	java.util.TimerThread.run()V(Timer.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1280 "[JRockit] GCEventThread" <Waiting, priority=5, DAEMON> {
+	COM.jrockit.management.jvm.GarbageCollectorImpl.waitForEvent()I(Native Method)
+	COM.jrockit.management.jvm.GarbageCollectorImpl.access$000()I(Unknown Source)
+	COM.jrockit.management.jvm.GarbageCollectorImpl$GCEventThread.getNextEvent()Ljava.util.EventObject;(Unknown Source)
+	COM.jrockit.management.jvm.AsyncEventProvider$EventThread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1300 "weblogic.health.CoreHealthMonitor" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.lang.Thread.sleep(J)V(Unknown Source)
+	weblogic.t3.srvr.CoreHealthMonitorThread.run()V(CoreHealthMonitorThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1380 "Thread-6" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.util.TimerThread.mainLoop()V(Timer.java:382)
+	java.util.TimerThread.run()V(Timer.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1400 "ListenThread.Default" <Active, priority=5> {
+	COM.jrockit.net.SocketNativeIO.accept(ILjava.io.FileDescriptor;IZ)[B(Native Method)
+	COM.jrockit.net.SocketNativeIO.accept(Ljava.io.FileDescriptor;Ljava.io.FileDescriptor;I)LCOM.jrockit.net.InetAddressCache;(Unknown Source)
+	java.net.AbstractSocketImpl.accept(Ljava.net.SocketImpl;)V(Unknown Source)
+	java.net.ServerSocket.implAccept(Ljava.net.Socket;)V(ServerSocket.java:419)
+	java.net.ServerSocket.accept()Ljava.net.Socket;(ServerSocket.java:24)
+	weblogic.socket.WeblogicServerSocket.accept()Ljava.net.Socket;(WeblogicServerSocket.java:715)
+	weblogic.t3.srvr.ListenThread.accept()Ljava.net.Socket;(ListenThread.java:291)
+	weblogic.t3.srvr.ListenThread.run()V(ListenThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1480 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+	weblogic.socket.NTSocketMuxer.getIoCompletionResult(Lweblogic.socket.NTSocketMuxer$IoCompletionData;)Z(Native Method)
+	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1500 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+	weblogic.socket.NTSocketMuxer.getIoCompletionResult(Lweblogic.socket.NTSocketMuxer$IoCompletionData;)Z(Native Method)
+	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1580 "ExecuteThread: '0' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1600 "ExecuteThread: '1' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1680 "ExecuteThread: '2' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1700 "ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+======================================
+
+===== FULL THREAD DUMP ===============
+Thu May 04 22:20:21 JST 2006
+
+Thread-0x80 "ExecuteThread: '0' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x100 "ExecuteThread: '1' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x180 "Finalizer" <Waiting, priority=8, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.lang.ref.ReferenceQueue.remove(J)Ljava.lang.ref.Reference;(ReferenceQueue.java:127)
+	java.lang.ref.ReferenceQueue.remove()Ljava.lang.ref.Reference;(ReferenceQueue.java:159)
+	java.lang.ref.Finalizer$FinalizerThread.run()V(Finalizer.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x200 "SignalHandler" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.SignalHandler.waitForSignals()V(Native Method)
+	COM.jrockit.vm.SignalHandler$1.run()V(Unknown Source)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x280 "Hotspot Detector" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.HotspotDetector.findHotSpotCandidate()V(Native Method)
+	COM.jrockit.vm.HotspotDetector.run()V(Unknown Source)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x300 "Reference Handler" <Waiting, priority=10, DAEMON> {
+	java.lang.ref.Reference.getPending()Ljava.lang.ref.Reference;(Native Method)
+	java.lang.ref.Reference.access$000()Ljava.lang.ref.Reference;(Unknown Source)
+	java.lang.ref.Reference$ReferenceHandler.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x380 "Thread-1" <Waiting, priority=5> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.t3.srvr.T3Srvr.waitForDeath()V(T3Srvr.java:384)
+	weblogic.t3.srvr.T3Srvr.run([Ljava.lang.String;)I(T3Srvr.java:32)
+	weblogic.Server.main([Ljava.lang.String;)V(Server.java:???)
+}
+
+
+Thread-0x400 "" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.MemSystem.mcGenConEP()V(Native Method)
+}
+
+
+Thread-0x480 "ExecuteThread: '2' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x500 "ExecuteThread: '3' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x580 "ExecuteThread: '4' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x600 "ExecuteThread: '5' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x680 "ExecuteThread: '6' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x700 "ExecuteThread: '7' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x780 "ExecuteThread: '8' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x800 "ExecuteThread: '9' for queue: 'weblogic.kernel.Default'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x880 "ExecuteThread: '10' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x900 "ExecuteThread: '11' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x980 "ExecuteThread: '12' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xa00 "ExecuteThread: '13' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xa80 "ExecuteThread: '14' for queue: 'weblogic.kernel.Default'" <Active, priority=5, DAEMON> {
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;Ljava.lang.Object;)V(Native Method)
+	COM.jrockit.vm.RNI.waitOnThinLocker(Ljava.lang.Object;)Ljava.lang.Object;(Native Method)
+	java.lang.Object.stage2Lock(Ljava.lang.Object;)V(Native Method)
+	java.lang.Object.monitorEnter(Ljava.lang.Object;)V(Native Method)
+	jsp_servlet.__index._jspService(Ljavax.servlet.http.HttpServletRequest;Ljavax.servlet.http.HttpServletResponse;)V(__index.java:33)
+	weblogic.servlet.jsp.JspBase.service(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(JspBase.java:1053)
+	weblogic.servlet.internal.ServletStubImpl$ServletInvocationAction.run()Ljava.lang.Object;(ServletStubImpl.java:387)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;Lweblogic.servlet.internal.FilterChainImpl;)V(ServletStubImpl.java:305)
+	weblogic.servlet.internal.ServletStubImpl.invokeServlet(Ljavax.servlet.ServletRequest;Ljavax.servlet.ServletResponse;)V(ServletStubImpl.java:6310)
+	weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run()Ljava.lang.Object;(WebAppServletContext.java:317)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(AuthenticatedSubject.java:118)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedAction;)Ljava.lang.Object;(SecurityManager.java:3622)
+	weblogic.servlet.internal.WebAppServletContext.invokeServlet(Lweblogic.servlet.internal.ServletRequestImpl;Lweblogic.servlet.internal.ServletResponseImpl;)V(WebAppServletContext.java:2569)
+	weblogic.servlet.internal.ServletRequestImpl.execute(Lweblogic.kernel.ExecuteThread;)V(ServletRequestImpl.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xb00 "ExecuteThread: '0' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xb80 "ExecuteThread: '1' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xc00 "ExecuteThread: '2' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xc80 "ExecuteThread: '3' for queue: 'weblogic.kernel.System'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xd00 "ExecuteThread: '4' for queue: 'weblogic.kernel.System'" <Active, priority=5, DAEMON> {
+	COM.jrockit.management.jvm.ThreadSnapshotImpl.getThreadSnapShot0([Ljava.lang.Thread;)I(Native Method)
+	COM.jrockit.management.jvm.ThreadSnapshotImpl.getThreadSnapshot([Ljava.lang.Thread;)Ljava.util.List;(Unknown Source)
+	COM.jrockit.management.jvm.ThreadSystemImpl.getThreadSnapshots()Ljava.util.Collection;(Unknown Source)
+	COM.jrockit.management.jvm.ThreadSystemImpl.getThreadStackDump()Ljava.lang.String;(Unknown Source)
+	weblogic.platform.JRockitVM.threadDump()V(JRockitVM.java:214)
+	weblogic.common.internal.AdminProxy.execute(Lweblogic.t3.srvr.ExecutionContext;Ljava.lang.Object;)Ljava.lang.Object;(AdminProxy.java:699)
+	weblogic.t3.srvr.ClientRequest$1.run()Ljava.lang.Object;(ClientContext.java:353)
+	weblogic.security.acl.internal.AuthenticatedSubject.doAs(Lweblogic.security.subject.AbstractSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(AuthenticatedSubject.java:144)
+	weblogic.security.service.SecurityManager.runAs(Lweblogic.security.acl.internal.AuthenticatedSubject;Lweblogic.security.acl.internal.AuthenticatedSubject;Ljava.security.PrivilegedExceptionAction;)Ljava.lang.Object;(SecurityManager.java:696)
+	weblogic.t3.srvr.ClientRequest.execute(Lweblogic.kernel.ExecuteThread;)V(ClientContext.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xd80 "weblogic.time.TimeEventGenerator" <Waiting, priority=9, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	weblogic.time.common.internal.TimeTable.snooze()V(TimeTable.java:118)
+	weblogic.time.common.internal.TimeEventGenerator.run()V(TimeEventGenerator.java:???)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xe00 "weblogic.security.SpinnerRandomSource" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.security.SpinnerRandomBitsSource.run()V(SpinnerRandomBitsSource.java:???)
+	java.lang.Thread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xe80 "ExecuteThread: '0' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xf00 "ExecuteThread: '1' for queue: 'weblogic.admin.HTTP'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0xf80 "ExecuteThread: '0' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1000 "ExecuteThread: '1' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1080 "ExecuteThread: '2' for queue: 'weblogic.admin.RMI'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1100 "VDE Transaction Processor Thread" <Waiting, priority=2> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	com.octetstring.vde.backend.standard.TransactionProcessor.waitChange()V(TransactionProcessor.java:215)
+	com.octetstring.vde.backend.standard.TransactionProcessor.run()V(TransactionProcessor.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1180 "ExecuteThread: '0' for queue: 'JMS.TimerTreePool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	weblogic.jms.backend.BETimerTree.execute(Lweblogic.kernel.ExecuteThread;)V(BETimerTree.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1200 "Thread-4" <Waiting, priority=5> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.util.TimerThread.mainLoop()V(Timer.java:382)
+	java.util.TimerThread.run()V(Timer.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1280 "[JRockit] GCEventThread" <Waiting, priority=5, DAEMON> {
+	COM.jrockit.management.jvm.GarbageCollectorImpl.waitForEvent()I(Native Method)
+	COM.jrockit.management.jvm.GarbageCollectorImpl.access$000()I(Unknown Source)
+	COM.jrockit.management.jvm.GarbageCollectorImpl$GCEventThread.getNextEvent()Ljava.util.EventObject;(Unknown Source)
+	COM.jrockit.management.jvm.AsyncEventProvider$EventThread.run()V(Unknown Source)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1300 "weblogic.health.CoreHealthMonitor" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.lang.Thread.sleep(J)V(Unknown Source)
+	weblogic.t3.srvr.CoreHealthMonitorThread.run()V(CoreHealthMonitorThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1380 "Thread-6" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(J)V(Native Method)
+	java.lang.Object.wait0(J)V(Unknown Source)
+	java.util.TimerThread.mainLoop()V(Timer.java:382)
+	java.util.TimerThread.run()V(Timer.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1400 "ListenThread.Default" <Active, priority=5> {
+	COM.jrockit.net.SocketNativeIO.accept(ILjava.io.FileDescriptor;IZ)[B(Native Method)
+	COM.jrockit.net.SocketNativeIO.accept(Ljava.io.FileDescriptor;Ljava.io.FileDescriptor;I)LCOM.jrockit.net.InetAddressCache;(Unknown Source)
+	java.net.AbstractSocketImpl.accept(Ljava.net.SocketImpl;)V(Unknown Source)
+	java.net.ServerSocket.implAccept(Ljava.net.Socket;)V(ServerSocket.java:419)
+	java.net.ServerSocket.accept()Ljava.net.Socket;(ServerSocket.java:24)
+	weblogic.socket.WeblogicServerSocket.accept()Ljava.net.Socket;(WeblogicServerSocket.java:715)
+	weblogic.t3.srvr.ListenThread.accept()Ljava.net.Socket;(ListenThread.java:291)
+	weblogic.t3.srvr.ListenThread.run()V(ListenThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1480 "ExecuteThread: '0' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+	weblogic.socket.NTSocketMuxer.getIoCompletionResult(Lweblogic.socket.NTSocketMuxer$IoCompletionData;)Z(Native Method)
+	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1500 "ExecuteThread: '1' for queue: 'weblogic.socket.Muxer'" <Active, priority=5, DAEMON> {
+	weblogic.socket.NTSocketMuxer.getIoCompletionResult(Lweblogic.socket.NTSocketMuxer$IoCompletionData;)Z(Native Method)
+	weblogic.socket.NTSocketMuxer.processSockets()V(NTSocketMuxer.java:32)
+	weblogic.socket.SocketReaderRequest.execute(Lweblogic.kernel.ExecuteThread;)V(SocketReaderRequest.java:197)
+	weblogic.kernel.ExecuteThread.execute(Lweblogic.kernel.ExecuteRequest;)V(ExecuteThread.java:170)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1580 "ExecuteThread: '0' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1600 "ExecuteThread: '1' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1680 "ExecuteThread: '2' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+Thread-0x1700 "ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" <Waiting, priority=5, DAEMON> {
+	java.lang.Thread.doYield(Z)V(Native Method)
+	java.lang.Object.wait0()V(Unknown Source)
+	weblogic.kernel.ExecuteThread.waitForRequest()V(ExecuteThread.java:164)
+	weblogic.kernel.ExecuteThread.run()V(ExecuteThread.java:???)
+	java.lang.Thread.startThreadFromVM(Ljava.lang.Thread;)V(Native Method)
+}
+
+
+======================================
+
+バッチ ジョブを終了しますか (Y/N)? ^C

@@ -32,7 +32,7 @@ class TestThreadFilter   {
     void testThreadFilter() throws IOException {
 
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
-        dumpExtractor.analyze(new File("testcases/Apple/1.4.2_08Apple.dmp"));
+        dumpExtractor.analyze(TestThreadFilter.class.getResourceAsStream("/Apple/1.4.2_08Apple.dmp"));
         ThreadFilter filter = new ThreadFilter();
         filter.setThreadId("0x0050b3d0");
         filter.setMode(Constants.MODE_SEQUENCE);

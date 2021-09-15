@@ -23,6 +23,7 @@ import java.io.IOException;
 import java.io.FileInputStream;
 import java.io.PrintWriter;
 import java.io.FileOutputStream;
+import java.util.Objects;
 import java.util.Properties;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -32,58 +33,59 @@ class TestThreadDump {
 
     @Test
     void testSunThreadDump() throws Exception {
-        dig2(new File("testCases" + File.separator + "Sun"));
+        dig2("Sun");
     }
 
     @Test
     void testBEAThreadDump() throws Exception {
-        dig2(new File("testCases" + File.separator + "BEA"));
+        dig2("BEA");
     }
 
     @Test
     void testAppleThreadDump() throws Exception {
-        dig2(new File("testCases" + File.separator + "Apple"));
+        dig2("Apple");
     }
 
     @Test
     void testHPThreadDump() throws Exception {
-        dig2(new File("testCases" + File.separator + "HP"));
+        dig2("HP");
     }
 
     @Test
     void testIBMThreadDump() throws Exception {
-        dig2(new File("testCases" + File.separator + "IBM"));
+        dig2("IBM");
     }
 
-    public void dig2(File dir) throws IOException {
-        File[] files = dir.listFiles(file -> file.isDirectory() || file.getName().endsWith(".dmp") || file.getName().endsWith(".dump") || file.getName().endsWith(".txt")
-        );
-        assert files != null;
-        for (File file : files) {
-            if (file.isDirectory()) {
-                dig2(file);
-            } else {
-                examine(file);
+    public void dig2(String path) throws IOException {
+        String base = "/" + path;
+        String[] split = new String(Objects.requireNonNull(TestThreadDump.class.getResourceAsStream(base)).readAllBytes()).split("\n");
+        for (String file : split) {
+            if (file.endsWith("/")) {
+                dig2(base + "/" + file);
+            } else if (file.endsWith(".dmp")) {
+                examine(base + "/" + file);
             }
         }
 
     }
 
     /*package*/
-    void examine(File in) throws IOException {
-        File out = new File(in.getAbsolutePath() + ".expected");
-        if (!out.exists()) {
+    void examine(String in) throws IOException {
+
+        String expected = in + ".expected";
+
+        if (TestThreadDump.class.getResourceAsStream(expected) == null) {
             dumpAnalyzed(in);
         }
 
         ThreadStatistic statistic = new ThreadStatistic();
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
-        dumpExtractor.analyze(in);
+        dumpExtractor.analyze(TestThreadDump.class.getResourceAsStream(in));
         Properties props = new Properties();
-        props.load(new FileInputStream(out));
+        props.load(TestThreadDump.class.getResourceAsStream(expected));
 
         for (int i = 0; i < statistic.getFullThreadDumpCount(); i++) {
-            String examining = in.getAbsolutePath() + ":";
+            String examining = in + ":";
             FullThreadDump ftd = statistic.getFullThreadDump(i);
             assertEquals(props.getProperty("ftd." + i + ".deadLockSize"), String.valueOf(ftd.getDeadLockSize()), examining + "ftd" + i + ".deadLockSize");
             assertEquals(props.getProperty("ftd." + i + ".threadCount"), String.valueOf(ftd.getThreadCount()), examining + "ftd" + i + ".threadCount");
@@ -105,20 +107,20 @@ class TestThreadDump {
     }
 
     /*package*/
-    static void dumpAnalyzed(File in) throws IOException {
-        dumpAnalyzed(in, new File(in.getAbsolutePath() + ".expected"));
+    static void dumpAnalyzed(String in) throws IOException {
+        dumpAnalyzed(in, in + ".expected");
     }
 
     /*package*/
-    static void dumpAnalyzed(File in, File out) throws IOException {
-        System.out.println("Analyzing: " + in.getAbsolutePath());
-        if (out.exists()) {
-            System.out.println("Output exists, skipping: " + out.getAbsolutePath());
+    static void dumpAnalyzed(String in, String out) throws IOException {
+        System.out.println("Analyzing: " + in);
+        if (TestThreadDump.class.getResourceAsStream(out) != null) {
+            System.out.println("Output exists, skipping: " + out);
         } else {
             ThreadStatistic statistic = new ThreadStatistic();
             ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
-            dumpExtractor.analyze(in);
-            PrintWriter pw = new PrintWriter(new FileOutputStream(out));
+            dumpExtractor.analyze(TestThreadDump.class.getResourceAsStream(in));
+            PrintWriter pw = new PrintWriter(new FileOutputStream("./" + out));
 
             for (int i = 0; i < statistic.getFullThreadDumpCount(); i++) {
                 FullThreadDump ftd = statistic.getFullThreadDump(i);
@@ -145,7 +147,7 @@ class TestThreadDump {
                 }
             }
             pw.close();
-            System.out.println("Done analyzing: " + out.getAbsolutePath());
+            System.out.println("Done analyzing: " + out);
             System.out.println("Review and edit it if needed.");
         }
     }

@@ -28,7 +28,7 @@ class TestIBMThreadDump {
 //    @Test\nvoid testIBM140idle() throws IOException {
 //      statistic = new ThreadStatistic();
 //        ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
-//        analyzer.analyze(new File("testcases/1.4.0IBMidle.dmp"), false);
+//        analyzer.analyze(TestIBMThreadDump.class.getResourceAsStream("/1.4.0IBMidle.dmp"), false);
 //        assertEquals(1, statistic.getFullThreadDumpCount());
 //        assertEquals(5, statistic.getFullThreadDump(0).getThreadCount());
 //        ThreadDump dump = statistic.getFullThreadDump(0).getThreadDump(1);
@@ -59,7 +59,7 @@ class TestIBMThreadDump {
     /*      @Test\nvoid testIBM140stacked() throws IOException {
       statistic = new ThreadStatistic();
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
-        analyzer.analyze(new File("testcases/1.4.0IBMstacked.dmp"), false);
+        analyzer.analyze(TestIBMThreadDump.class.getResourceAsStream("/1.4.0IBMstacked.dmp"), false);
         assertEquals(1, statistic.getFullThreadDumpCount());
         assertEquals(7, statistic.getFullThreadDump(0).getThreadCount());
         ThreadDump dump = statistic.getFullThreadDump(0).getThreadDump(1);
@@ -86,7 +86,7 @@ class TestIBMThreadDump {
     void testIBM142racing() throws IOException {
         statistic = new ThreadStatistic();
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
-        dumpExtractor.analyze(new File("testcases/IBM/1.4.2IBM/javacore.20060511.172914.516.txt"));
+        dumpExtractor.analyze(TestIBMThreadDump.class.getResourceAsStream("/IBM/1.4.2IBM/javacore.20060511.172914.516.txt"));
         assertEquals(1, statistic.getFullThreadDumpCount());
         assertEquals(47, statistic.getFullThreadDump(0).getThreadCount());
         ThreadDump dump = statistic.getFullThreadDump(0).getThreadDumpById("0x6BB3598");

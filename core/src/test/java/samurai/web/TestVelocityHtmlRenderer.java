@@ -71,7 +71,7 @@ class TestVelocityHtmlRenderer  {
     @Test
     void testSaveTo() throws IOException {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
-        analyzer.analyze(new File("testcases/Sun/1.4.2_03Sunstacked.dmp"));
+        analyzer.analyze(TestVelocityHtmlRenderer.class.getResourceAsStream("/Sun/1.4.2_03Sunstacked.dmp"));
         VelocityHtmlRenderer renderer = new VelocityHtmlRenderer("samurai/web/outcss.vm");
         renderer.saveTo(statistic, new File("savedhtml"), (finished, all) -> assertTrue(finished <= all));
     }
