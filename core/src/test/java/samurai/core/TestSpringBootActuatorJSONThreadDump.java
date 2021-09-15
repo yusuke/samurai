@@ -21,6 +21,7 @@ class TestSpringBootActuatorJSONThreadDump {
         assertTrue(deadkLock1.isBlocked());
         assertTrue(deadkLock1.isBlocking());
         assertFalse(deadkLock1.isIdle());
+        assertTrue(deadkLock1.isDeadLocked());
         List<StackLine> stackLines = deadkLock1.getStackLines();
         System.out.println(stackLines);
         assertEquals("at com.example.actuatordemo.ActuatorDemoApplication.lambda$main$3(ActuatorDemoApplication.java:44)", stackLines.get(0).line);
