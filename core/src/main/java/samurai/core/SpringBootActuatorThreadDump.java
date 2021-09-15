@@ -18,6 +18,11 @@ public class SpringBootActuatorThreadDump extends ThreadDump {
         IS_DAEMON = json.getBoolean("daemon");
         IS_BLOCKING = this.getCondition().equals("TIMED_WAITING");
         id = json.getString("threadId");
+        if (json.has("lockInfo") && !json.isNull("lockInfo")) {
+            JSONObject lockInfo = json.getJSONObject("lockInfo");
+            addStackLine(new StackLine(lockInfoToStackLine(lockInfo)));
+        }
+
         JSONArray lockedMonitorsArray = json.getJSONArray("lockedMonitors");
         List<List<String>> lockedMonitors = new ArrayList<>(lockedMonitorsArray.length());
         for (int i = 0; i < lockedMonitorsArray.length(); i++) {
@@ -32,10 +37,6 @@ public class SpringBootActuatorThreadDump extends ThreadDump {
                 addStackLine(new StackLine(strings.get(0)));
                 addStackLine(new StackLine(strings.get(1)));
             }, () -> addStackLine(new StackLine(stackLine)));
-        }
-        if (json.has("lockInfo") && !json.isNull("lockInfo")) {
-            JSONObject lockInfo = json.getJSONObject("lockInfo");
-            addStackLine(new StackLine(lockInfoToStackLine(lockInfo)));
         }
     }
 

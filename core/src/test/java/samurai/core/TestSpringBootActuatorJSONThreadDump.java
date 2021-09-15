@@ -30,11 +30,11 @@ class TestSpringBootActuatorJSONThreadDump {
         assertTrue(deadkLock1.isDeadLocked());
         List<StackLine> stackLines = deadkLock1.getStackLines();
         System.out.println(stackLines);
-        assertEquals("at com.example.actuatordemo.ActuatorDemoApplication.lambda$main$3(ActuatorDemoApplication.java:44)", stackLines.get(0).line);
-        assertEquals("- locked <325888395> (a java.lang.Object)", stackLines.get(1).line);
-        assertEquals("at com.example.actuatordemo.ActuatorDemoApplication$$Lambda$86/0x0000000800c81220.run(Unknown Source)", stackLines.get(2).line);
-        assertEquals("at java.lang.Thread.run(java.base@17-panama/Thread.java:831)", stackLines.get(3).line);
-        assertEquals("- waiting to lock <1598621278> (a java.lang.Object)", stackLines.get(4).line);
+        assertEquals("- waiting to lock <1598621278> (a java.lang.Object)", stackLines.get(0).line);
+        assertEquals("at com.example.actuatordemo.ActuatorDemoApplication.lambda$main$3(ActuatorDemoApplication.java:44)", stackLines.get(1).line);
+        assertEquals("- locked <325888395> (a java.lang.Object)", stackLines.get(2).line);
+        assertEquals("at com.example.actuatordemo.ActuatorDemoApplication$$Lambda$86/0x0000000800c81220.run(Unknown Source)", stackLines.get(3).line);
+        assertEquals("at java.lang.Thread.run(java.base@17-panama/Thread.java:831)", stackLines.get(4).line);
     }
 
     @Test
