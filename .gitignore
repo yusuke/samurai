@@ -13,3 +13,6 @@ target/*
 core/target/*
 gui/target/*
 savedhtml
+build
+.gradle
+*.dmg

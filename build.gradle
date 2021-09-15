@@ -1,0 +1,9 @@
+group 'one.cafebabe'
+version '2021.3'
+
+if (hasProperty('buildScan')) {
+    buildScan {
+        termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+        termsOfServiceAgree = 'yes'
+    }
+}

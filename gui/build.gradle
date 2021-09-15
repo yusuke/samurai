@@ -1,0 +1,137 @@
+plugins {
+    id 'java'
+    id 'signing'
+    id 'maven-publish'
+}
+
+group 'one.cafebabe'
+version '2021.3'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+compileJava {
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+    options.compilerArgs += ['--add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED',
+                             '--add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED']
+}
+
+compileTestJava {
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+    options.compilerArgs += ['--add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED',
+                             '--add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED']
+}
+
+dependencies {
+    implementation project(':core')
+
+//    implementation 'org.slf4j:slf4j-api:1.7.30'
+//    implementation 'com.intellij:annotations:12.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'samurai'
+            from components.java
+            pom {
+                name = 'samurai'
+                description = 'samurai'
+                url = 'https://github.com/yusuke/samurai'
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'yusuke'
+                        name = 'Yusuke Yamamoto'
+                        email = 'yusuke@mac.com'
+                    }
+                }
+                scm {
+                    url = 'https://github.com/yusuke/samurai'
+                    connection = 'scm:git:git://github.com/yusuke/samurai.git'
+                    developerConnection = 'scm:git:git@github.com:yusuke/samurai.git'
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2"
+            def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots"
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            credentials {
+                username = project.properties['SONATYPE_USERNAME'] ?: "none"
+                password = project.properties['SONATYPE_PASSWORD'] ?: "none"
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+}
+
+def mainClassName = "samurai.swing.Samurai"
+
+jar {
+    zip64 = true
+    duplicatesStrategy(DuplicatesStrategy.INCLUDE)
+    manifest {
+        attributes "Main-Class": "$mainClassName"
+    }
+
+    from(configurations.runtimeClasspath.collect { entry -> zipTree(entry) }) {
+        exclude 'META-INF/*.SF'
+        exclude 'META-INF/*.DSA'
+        exclude 'META-INF/*.RSA'
+    }
+}
+
+task packageMacApp(type: Exec) {
+    workingDir './'
+
+    commandLine ('jpackage',
+            '--verbose',
+            '--java-options',
+            """-Xmx128m -Xms128m -XX:+UseSerialGC
+                                    --add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED
+                                    --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
+                                    -XX:ErrorFile=\$USER_HOME/java_error_in_idea_%p.log
+                                    -XX:HeapDumpPath=\$USER_HOME/java_error_in_idea.hprof""",
+            '--copyright', 'Yusuke Yamamoto',
+            '--vendor', 'Yusuke Yamamoto',
+            '--icon', 'package/samurai.icns',
+            '--input', "${buildDir}/",
+            '--main-class', 'samurai.swing.Samurai',
+            '--main-jar', "${buildDir}/libs/${project.name}-${project.version}.jar",
+            '--dest', './',
+            '--app-version', "${project.version}",
+            '--mac-package-identifier', 'samurai.swing.Samurai',
+            '--mac-signing-key-user-name', 'Yusuke Yamamoto (TX2Q55XRF7)',
+            '--mac-sign',
+            '--mac-entitlements', "${workingDir}/package/entitlement.plist",
+            '--name', 'Samurai',
+            '--add-modules', 'java.base,java.desktop,java.naming,jdk.internal.jvmstat,jdk.attach',
+            '--jlink-options', '--strip-native-commands')
+}
+
+tasks.packageMacApp.dependsOn([':gui:jar'])
