@@ -112,9 +112,9 @@ public class LocalProcesses {
             this.vm = vm;
             addActionListener(e -> {
                 try {
+                    Path path = Paths.get(System.getProperty("user.home"),
+                            String.format("%s-%d-%s.txt", vm.getFqcn(), vm.getPid(), LocalDateTime.now().format(dateTimeFormatter)));
                     for (int i = 0; i < 3; i++) {
-                        Path path = Paths.get(System.getProperty("user.home"),
-                                String.format("%s-%d-%s.txt", vm.getFqcn(), vm.getPid(), LocalDateTime.now().format(dateTimeFormatter)));
                         Files.write(path, ThreadDumpUtil.getThreadDump(vm.getPid()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
                         fileHistory.open(path.toFile());
                         Thread.sleep(1000);
