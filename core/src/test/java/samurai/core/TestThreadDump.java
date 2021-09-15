@@ -56,12 +56,17 @@ class TestThreadDump {
         dig2("IBM");
     }
 
+    @Test
+    void testOpenJDKThreadDump() throws Exception {
+        dig2("OpenJDK");
+    }
+
     public void dig2(String path) throws IOException {
         String base = "/" + path;
         String[] split = new String(Objects.requireNonNull(TestThreadDump.class.getResourceAsStream(base)).readAllBytes()).split("\n");
         for (String file : split) {
-            if (file.endsWith("/")) {
-                dig2(base + "/" + file);
+            if (!file.matches("^.*\\.(dmp|expected)")) {
+                dig2(path + "/" + file);
             } else if (file.endsWith(".dmp")) {
                 examine(base + "/" + file);
             }
@@ -120,7 +125,13 @@ class TestThreadDump {
             ThreadStatistic statistic = new ThreadStatistic();
             ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
             dumpExtractor.analyze(TestThreadDump.class.getResourceAsStream(in));
-            PrintWriter pw = new PrintWriter(new FileOutputStream("./" + out));
+            String workingDirectory = new File("").getAbsolutePath();
+            String outDirectory = workingDirectory;
+            if (!workingDirectory.endsWith("core")) {
+                outDirectory+="/core";
+            }
+            outDirectory+="/src/test/resources"+out;
+            PrintWriter pw = new PrintWriter(new FileOutputStream(outDirectory));
 
             for (int i = 0; i < statistic.getFullThreadDumpCount(); i++) {
                 FullThreadDump ftd = statistic.getFullThreadDump(i);

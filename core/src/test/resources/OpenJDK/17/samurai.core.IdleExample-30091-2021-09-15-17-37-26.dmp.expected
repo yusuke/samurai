@@ -1,0 +1,936 @@
+ftd.0.deadLockSize=0
+ftd.0.threadCount=20
+#"main" #1 prio=5 os_prio=31 cpu=115.46ms elapsed=7.05s tid=0x00007fb62700a600 nid=0x1803 waiting on condition  [0x000070000b01e000]
+#   java.lang.Thread.State: TIMED_WAITING (sleeping)
+#	at java.lang.Thread.sleep(java.base@17/Native Method)
+#	at samurai.core.IdleExample.main(IdleExample.java:20)
+td.0.0.blockedObjectId=null
+td.0.0.blockerId=null
+td.0.0.condition=#1 prio=5 os_prio=31 cpu=115.46ms elapsed=7.05s tid=0x00007fb62700a600 nid=0x1803 waiting on condition  [0x000070000b01e000]
+td.0.0.header="main" #1 prio=5 os_prio=31 cpu=115.46ms elapsed=7.05s tid=0x00007fb62700a600 nid=0x1803 waiting on condition  [0x000070000b01e000]
+td.0.0.id=0x00007fb62700a600
+td.0.0.name=main
+td.0.0.isBlocked=false
+td.0.0.isBlocking=false
+td.0.0.isDaemon=false
+td.0.0.isDeadLocked=false
+td.0.0.isIdle=true
+
+#"Reference Handler" #2 daemon prio=10 os_prio=31 cpu=0.13ms elapsed=7.04s tid=0x00007fb627039600 nid=0x4203 waiting on condition  [0x000070000b733000]
+#   java.lang.Thread.State: RUNNABLE
+#	at java.lang.ref.Reference.waitForReferencePendingList(java.base@17/Native Method)
+#	at java.lang.ref.Reference.processPendingReferences(java.base@17/Reference.java:253)
+#	at java.lang.ref.Reference$ReferenceHandler.run(java.base@17/Reference.java:215)
+td.0.1.blockedObjectId=null
+td.0.1.blockerId=null
+td.0.1.condition=#2 daemon prio=10 os_prio=31 cpu=0.13ms elapsed=7.04s tid=0x00007fb627039600 nid=0x4203 waiting on condition  [0x000070000b733000]
+td.0.1.header="Reference Handler" #2 daemon prio=10 os_prio=31 cpu=0.13ms elapsed=7.04s tid=0x00007fb627039600 nid=0x4203 waiting on condition  [0x000070000b733000]
+td.0.1.id=0x00007fb627039600
+td.0.1.name=Reference Handler
+td.0.1.isBlocked=false
+td.0.1.isBlocking=false
+td.0.1.isDaemon=true
+td.0.1.isDeadLocked=false
+td.0.1.isIdle=false
+
+#"Finalizer" #3 daemon prio=8 os_prio=31 cpu=0.22ms elapsed=7.04s tid=0x00007fb62703be00 nid=0x4103 in Object.wait()  [0x000070000b836000]
+#   java.lang.Thread.State: WAITING (on object monitor)
+#	at java.lang.Object.wait(java.base@17/Native Method)
+#	- waiting on <0x000000061fc02f30> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(java.base@17/ReferenceQueue.java:155)
+#	- locked <0x000000061fc02f30> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(java.base@17/ReferenceQueue.java:176)
+#	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@17/Finalizer.java:172)
+td.0.2.blockedObjectId=null
+td.0.2.blockerId=null
+td.0.2.condition=#3 daemon prio=8 os_prio=31 cpu=0.22ms elapsed=7.04s tid=0x00007fb62703be00 nid=0x4103 in Object.wait()  [0x000070000b836000]
+td.0.2.header="Finalizer" #3 daemon prio=8 os_prio=31 cpu=0.22ms elapsed=7.04s tid=0x00007fb62703be00 nid=0x4103 in Object.wait()  [0x000070000b836000]
+td.0.2.id=0x00007fb62703be00
+td.0.2.name=Finalizer
+td.0.2.isBlocked=false
+td.0.2.isBlocking=false
+td.0.2.isDaemon=true
+td.0.2.isDeadLocked=false
+td.0.2.isIdle=true
+
+#"Signal Dispatcher" #4 daemon prio=9 os_prio=31 cpu=0.34ms elapsed=7.03s tid=0x00007fb62800a200 nid=0xa603 waiting on condition  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.0.3.blockedObjectId=null
+td.0.3.blockerId=null
+td.0.3.condition=#4 daemon prio=9 os_prio=31 cpu=0.34ms elapsed=7.03s tid=0x00007fb62800a200 nid=0xa603 waiting on condition  [0x0000000000000000]
+td.0.3.header="Signal Dispatcher" #4 daemon prio=9 os_prio=31 cpu=0.34ms elapsed=7.03s tid=0x00007fb62800a200 nid=0xa603 waiting on condition  [0x0000000000000000]
+td.0.3.id=0x00007fb62800a200
+td.0.3.name=Signal Dispatcher
+td.0.3.isBlocked=false
+td.0.3.isBlocking=false
+td.0.3.isDaemon=true
+td.0.3.isDeadLocked=false
+td.0.3.isIdle=false
+
+#"Service Thread" #5 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=7.03s tid=0x00007fb628008800 nid=0x5a03 runnable  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.0.4.blockedObjectId=null
+td.0.4.blockerId=null
+td.0.4.condition=#5 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=7.03s tid=0x00007fb628008800 nid=0x5a03 runnable  [0x0000000000000000]
+td.0.4.header="Service Thread" #5 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=7.03s tid=0x00007fb628008800 nid=0x5a03 runnable  [0x0000000000000000]
+td.0.4.id=0x00007fb628008800
+td.0.4.name=Service Thread
+td.0.4.isBlocked=false
+td.0.4.isBlocking=false
+td.0.4.isDaemon=true
+td.0.4.isDeadLocked=false
+td.0.4.isIdle=false
+
+#"Monitor Deflation Thread" #6 daemon prio=9 os_prio=31 cpu=0.22ms elapsed=7.03s tid=0x00007fb626812c00 nid=0xa403 runnable  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.0.5.blockedObjectId=null
+td.0.5.blockerId=null
+td.0.5.condition=#6 daemon prio=9 os_prio=31 cpu=0.22ms elapsed=7.03s tid=0x00007fb626812c00 nid=0xa403 runnable  [0x0000000000000000]
+td.0.5.header="Monitor Deflation Thread" #6 daemon prio=9 os_prio=31 cpu=0.22ms elapsed=7.03s tid=0x00007fb626812c00 nid=0xa403 runnable  [0x0000000000000000]
+td.0.5.id=0x00007fb626812c00
+td.0.5.name=Monitor Deflation Thread
+td.0.5.isBlocked=false
+td.0.5.isBlocking=false
+td.0.5.isDaemon=true
+td.0.5.isDeadLocked=false
+td.0.5.isIdle=false
+
+#"C2 CompilerThread0" #7 daemon prio=9 os_prio=31 cpu=40.74ms elapsed=7.03s tid=0x00007fb62703a600 nid=0x5d03 waiting on condition  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+#   No compile task
+td.0.6.blockedObjectId=null
+td.0.6.blockerId=null
+td.0.6.condition=#7 daemon prio=9 os_prio=31 cpu=40.74ms elapsed=7.03s tid=0x00007fb62703a600 nid=0x5d03 waiting on condition  [0x0000000000000000]
+td.0.6.header="C2 CompilerThread0" #7 daemon prio=9 os_prio=31 cpu=40.74ms elapsed=7.03s tid=0x00007fb62703a600 nid=0x5d03 waiting on condition  [0x0000000000000000]
+td.0.6.id=0x00007fb62703a600
+td.0.6.name=C2 CompilerThread0
+td.0.6.isBlocked=false
+td.0.6.isBlocking=false
+td.0.6.isDaemon=true
+td.0.6.isDeadLocked=false
+td.0.6.isIdle=false
+
+#"C1 CompilerThread0" #10 daemon prio=9 os_prio=31 cpu=61.10ms elapsed=7.03s tid=0x00007fb626810a00 nid=0xa203 waiting on condition  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+#   No compile task
+td.0.7.blockedObjectId=null
+td.0.7.blockerId=null
+td.0.7.condition=#10 daemon prio=9 os_prio=31 cpu=61.10ms elapsed=7.03s tid=0x00007fb626810a00 nid=0xa203 waiting on condition  [0x0000000000000000]
+td.0.7.header="C1 CompilerThread0" #10 daemon prio=9 os_prio=31 cpu=61.10ms elapsed=7.03s tid=0x00007fb626810a00 nid=0xa203 waiting on condition  [0x0000000000000000]
+td.0.7.id=0x00007fb626810a00
+td.0.7.name=C1 CompilerThread0
+td.0.7.isBlocked=false
+td.0.7.isBlocking=false
+td.0.7.isDaemon=true
+td.0.7.isDeadLocked=false
+td.0.7.isIdle=false
+
+#"Sweeper thread" #11 daemon prio=9 os_prio=31 cpu=0.05ms elapsed=7.03s tid=0x00007fb626820e00 nid=0x5f03 runnable  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.0.8.blockedObjectId=null
+td.0.8.blockerId=null
+td.0.8.condition=#11 daemon prio=9 os_prio=31 cpu=0.05ms elapsed=7.03s tid=0x00007fb626820e00 nid=0x5f03 runnable  [0x0000000000000000]
+td.0.8.header="Sweeper thread" #11 daemon prio=9 os_prio=31 cpu=0.05ms elapsed=7.03s tid=0x00007fb626820e00 nid=0x5f03 runnable  [0x0000000000000000]
+td.0.8.id=0x00007fb626820e00
+td.0.8.name=Sweeper thread
+td.0.8.isBlocked=false
+td.0.8.isBlocking=false
+td.0.8.isDaemon=true
+td.0.8.isDeadLocked=false
+td.0.8.isIdle=false
+
+#"Common-Cleaner" #12 daemon prio=8 os_prio=31 cpu=0.14ms elapsed=7.01s tid=0x00007fb626821400 nid=0x6003 in Object.wait()  [0x000070000c051000]
+#   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+#	at java.lang.Object.wait(java.base@17/Native Method)
+#	- waiting on <0x000000061fc459e8> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(java.base@17/ReferenceQueue.java:155)
+#	- locked <0x000000061fc459e8> (a java.lang.ref.ReferenceQueue$Lock)
+#	at jdk.internal.ref.CleanerImpl.run(java.base@17/CleanerImpl.java:140)
+#	at java.lang.Thread.run(java.base@17/Thread.java:833)
+#	at jdk.internal.misc.InnocuousThread.run(java.base@17/InnocuousThread.java:162)
+td.0.9.blockedObjectId=null
+td.0.9.blockerId=null
+td.0.9.condition=#12 daemon prio=8 os_prio=31 cpu=0.14ms elapsed=7.01s tid=0x00007fb626821400 nid=0x6003 in Object.wait()  [0x000070000c051000]
+td.0.9.header="Common-Cleaner" #12 daemon prio=8 os_prio=31 cpu=0.14ms elapsed=7.01s tid=0x00007fb626821400 nid=0x6003 in Object.wait()  [0x000070000c051000]
+td.0.9.id=0x00007fb626821400
+td.0.9.name=Common-Cleaner
+td.0.9.isBlocked=false
+td.0.9.isBlocking=false
+td.0.9.isDaemon=true
+td.0.9.isDeadLocked=false
+td.0.9.isIdle=true
+
+#"Monitor Ctrl-Break" #13 daemon prio=5 os_prio=31 cpu=25.36ms elapsed=6.94s tid=0x00007fb62703ac00 nid=0x6103 runnable  [0x000070000c154000]
+#   java.lang.Thread.State: RUNNABLE
+#	at sun.nio.ch.SocketDispatcher.read0(java.base@17/Native Method)
+#	at sun.nio.ch.SocketDispatcher.read(java.base@17/SocketDispatcher.java:47)
+#	at sun.nio.ch.NioSocketImpl.tryRead(java.base@17/NioSocketImpl.java:261)
+#	at sun.nio.ch.NioSocketImpl.implRead(java.base@17/NioSocketImpl.java:312)
+#	at sun.nio.ch.NioSocketImpl.read(java.base@17/NioSocketImpl.java:350)
+#	at sun.nio.ch.NioSocketImpl$1.read(java.base@17/NioSocketImpl.java:803)
+#	at java.net.Socket$SocketInputStream.read(java.base@17/Socket.java:966)
+#	at sun.nio.cs.StreamDecoder.readBytes(java.base@17/StreamDecoder.java:270)
+#	at sun.nio.cs.StreamDecoder.implRead(java.base@17/StreamDecoder.java:313)
+#	at sun.nio.cs.StreamDecoder.read(java.base@17/StreamDecoder.java:188)
+#	- locked <0x000000061fe7f6f0> (a java.io.InputStreamReader)
+#	at java.io.InputStreamReader.read(java.base@17/InputStreamReader.java:177)
+#	at java.io.BufferedReader.fill(java.base@17/BufferedReader.java:162)
+#	at java.io.BufferedReader.readLine(java.base@17/BufferedReader.java:329)
+#	- locked <0x000000061fe7f6f0> (a java.io.InputStreamReader)
+#	at java.io.BufferedReader.readLine(java.base@17/BufferedReader.java:396)
+#	at com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:49)
+td.0.10.blockedObjectId=null
+td.0.10.blockerId=null
+td.0.10.condition=#13 daemon prio=5 os_prio=31 cpu=25.36ms elapsed=6.94s tid=0x00007fb62703ac00 nid=0x6103 runnable  [0x000070000c154000]
+td.0.10.header="Monitor Ctrl-Break" #13 daemon prio=5 os_prio=31 cpu=25.36ms elapsed=6.94s tid=0x00007fb62703ac00 nid=0x6103 runnable  [0x000070000c154000]
+td.0.10.id=0x00007fb62703ac00
+td.0.10.name=Monitor Ctrl-Break
+td.0.10.isBlocked=false
+td.0.10.isBlocking=false
+td.0.10.isDaemon=true
+td.0.10.isDeadLocked=false
+td.0.10.isIdle=false
+
+#"Notification Thread" #14 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=6.94s tid=0x00007fb6060b9000 nid=0x9e03 runnable  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.0.11.blockedObjectId=null
+td.0.11.blockerId=null
+td.0.11.condition=#14 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=6.94s tid=0x00007fb6060b9000 nid=0x9e03 runnable  [0x0000000000000000]
+td.0.11.header="Notification Thread" #14 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=6.94s tid=0x00007fb6060b9000 nid=0x9e03 runnable  [0x0000000000000000]
+td.0.11.id=0x00007fb6060b9000
+td.0.11.name=Notification Thread
+td.0.11.isBlocked=false
+td.0.11.isBlocking=false
+td.0.11.isDaemon=true
+td.0.11.isDeadLocked=false
+td.0.11.isIdle=false
+
+#"Attach Listener" #15 daemon prio=9 os_prio=31 cpu=32.72ms elapsed=5.96s tid=0x00007fb5d6008200 nid=0x9c03 waiting on condition  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.0.12.blockedObjectId=null
+td.0.12.blockerId=null
+td.0.12.condition=#15 daemon prio=9 os_prio=31 cpu=32.72ms elapsed=5.96s tid=0x00007fb5d6008200 nid=0x9c03 waiting on condition  [0x0000000000000000]
+td.0.12.header="Attach Listener" #15 daemon prio=9 os_prio=31 cpu=32.72ms elapsed=5.96s tid=0x00007fb5d6008200 nid=0x9c03 waiting on condition  [0x0000000000000000]
+td.0.12.id=0x00007fb5d6008200
+td.0.12.name=Attach Listener
+td.0.12.isBlocked=false
+td.0.12.isBlocking=false
+td.0.12.isDaemon=true
+td.0.12.isDeadLocked=false
+td.0.12.isIdle=false
+
+#"VM Thread" os_prio=31 cpu=0.76ms elapsed=7.04s tid=0x00007fb625c0cb50 nid=0x4303 runnable
+td.0.13.blockedObjectId=null
+td.0.13.blockerId=null
+td.0.13.condition=os_prio=31 cpu=0.76ms elapsed=7.04s tid=0x00007fb625c0cb50 nid=0x4303 runnable
+td.0.13.header="VM Thread" os_prio=31 cpu=0.76ms elapsed=7.04s tid=0x00007fb625c0cb50 nid=0x4303 runnable
+td.0.13.id=0x00007fb625c0cb50
+td.0.13.name=VM Thread
+td.0.13.isBlocked=false
+td.0.13.isBlocking=false
+td.0.13.isDaemon=false
+td.0.13.isDeadLocked=false
+td.0.13.isIdle=false
+
+#"GC Thread#0" os_prio=31 cpu=0.14ms elapsed=7.05s tid=0x00007fb625c07c40 nid=0x4e03 runnable
+td.0.14.blockedObjectId=null
+td.0.14.blockerId=null
+td.0.14.condition=os_prio=31 cpu=0.14ms elapsed=7.05s tid=0x00007fb625c07c40 nid=0x4e03 runnable
+td.0.14.header="GC Thread#0" os_prio=31 cpu=0.14ms elapsed=7.05s tid=0x00007fb625c07c40 nid=0x4e03 runnable
+td.0.14.id=0x00007fb625c07c40
+td.0.14.name=GC Thread#0
+td.0.14.isBlocked=false
+td.0.14.isBlocking=false
+td.0.14.isDaemon=false
+td.0.14.isDeadLocked=false
+td.0.14.isIdle=false
+
+#"G1 Main Marker" os_prio=31 cpu=0.05ms elapsed=7.05s tid=0x00007fb625f061f0 nid=0x3103 runnable
+td.0.15.blockedObjectId=null
+td.0.15.blockerId=null
+td.0.15.condition=os_prio=31 cpu=0.05ms elapsed=7.05s tid=0x00007fb625f061f0 nid=0x3103 runnable
+td.0.15.header="G1 Main Marker" os_prio=31 cpu=0.05ms elapsed=7.05s tid=0x00007fb625f061f0 nid=0x3103 runnable
+td.0.15.id=0x00007fb625f061f0
+td.0.15.name=G1 Main Marker
+td.0.15.isBlocked=false
+td.0.15.isBlocking=false
+td.0.15.isDaemon=false
+td.0.15.isDeadLocked=false
+td.0.15.isIdle=false
+
+#"G1 Conc#0" os_prio=31 cpu=0.03ms elapsed=7.05s tid=0x00007fb625f06e50 nid=0x4903 runnable
+td.0.16.blockedObjectId=null
+td.0.16.blockerId=null
+td.0.16.condition=os_prio=31 cpu=0.03ms elapsed=7.05s tid=0x00007fb625f06e50 nid=0x4903 runnable
+td.0.16.header="G1 Conc#0" os_prio=31 cpu=0.03ms elapsed=7.05s tid=0x00007fb625f06e50 nid=0x4903 runnable
+td.0.16.id=0x00007fb625f06e50
+td.0.16.name=G1 Conc#0
+td.0.16.isBlocked=false
+td.0.16.isBlocking=false
+td.0.16.isDaemon=false
+td.0.16.isDeadLocked=false
+td.0.16.isIdle=false
+
+#"G1 Refine#0" os_prio=31 cpu=0.07ms elapsed=7.05s tid=0x00007fb625f21680 nid=0x4803 runnable
+td.0.17.blockedObjectId=null
+td.0.17.blockerId=null
+td.0.17.condition=os_prio=31 cpu=0.07ms elapsed=7.05s tid=0x00007fb625f21680 nid=0x4803 runnable
+td.0.17.header="G1 Refine#0" os_prio=31 cpu=0.07ms elapsed=7.05s tid=0x00007fb625f21680 nid=0x4803 runnable
+td.0.17.id=0x00007fb625f21680
+td.0.17.name=G1 Refine#0
+td.0.17.isBlocked=false
+td.0.17.isBlocking=false
+td.0.17.isDaemon=false
+td.0.17.isDeadLocked=false
+td.0.17.isIdle=false
+
+#"G1 Service" os_prio=31 cpu=1.12ms elapsed=7.05s tid=0x00007fb625e1e560 nid=0x4703 runnable
+td.0.18.blockedObjectId=null
+td.0.18.blockerId=null
+td.0.18.condition=os_prio=31 cpu=1.12ms elapsed=7.05s tid=0x00007fb625e1e560 nid=0x4703 runnable
+td.0.18.header="G1 Service" os_prio=31 cpu=1.12ms elapsed=7.05s tid=0x00007fb625e1e560 nid=0x4703 runnable
+td.0.18.id=0x00007fb625e1e560
+td.0.18.name=G1 Service
+td.0.18.isBlocked=false
+td.0.18.isBlocking=false
+td.0.18.isDaemon=false
+td.0.18.isDeadLocked=false
+td.0.18.isIdle=false
+
+#"VM Periodic Task Thread" os_prio=31 cpu=5.14ms elapsed=6.94s tid=0x00007fb625d282e0 nid=0x6203 waiting on condition
+td.0.19.blockedObjectId=null
+td.0.19.blockerId=null
+td.0.19.condition=os_prio=31 cpu=5.14ms elapsed=6.94s tid=0x00007fb625d282e0 nid=0x6203 waiting on condition
+td.0.19.header="VM Periodic Task Thread" os_prio=31 cpu=5.14ms elapsed=6.94s tid=0x00007fb625d282e0 nid=0x6203 waiting on condition
+td.0.19.id=0x00007fb625d282e0
+td.0.19.name=VM Periodic Task Thread
+td.0.19.isBlocked=false
+td.0.19.isBlocking=false
+td.0.19.isDaemon=false
+td.0.19.isDeadLocked=false
+td.0.19.isIdle=false
+
+ftd.1.deadLockSize=0
+ftd.1.threadCount=20
+#"main" #1 prio=5 os_prio=31 cpu=115.46ms elapsed=8.11s tid=0x00007fb62700a600 nid=0x1803 waiting on condition  [0x000070000b01e000]
+#   java.lang.Thread.State: TIMED_WAITING (sleeping)
+#	at java.lang.Thread.sleep(java.base@17/Native Method)
+#	at samurai.core.IdleExample.main(IdleExample.java:20)
+td.1.0.blockedObjectId=null
+td.1.0.blockerId=null
+td.1.0.condition=#1 prio=5 os_prio=31 cpu=115.46ms elapsed=8.11s tid=0x00007fb62700a600 nid=0x1803 waiting on condition  [0x000070000b01e000]
+td.1.0.header="main" #1 prio=5 os_prio=31 cpu=115.46ms elapsed=8.11s tid=0x00007fb62700a600 nid=0x1803 waiting on condition  [0x000070000b01e000]
+td.1.0.id=0x00007fb62700a600
+td.1.0.name=main
+td.1.0.isBlocked=false
+td.1.0.isBlocking=false
+td.1.0.isDaemon=false
+td.1.0.isDeadLocked=false
+td.1.0.isIdle=true
+
+#"Reference Handler" #2 daemon prio=10 os_prio=31 cpu=0.13ms elapsed=8.10s tid=0x00007fb627039600 nid=0x4203 waiting on condition  [0x000070000b733000]
+#   java.lang.Thread.State: RUNNABLE
+#	at java.lang.ref.Reference.waitForReferencePendingList(java.base@17/Native Method)
+#	at java.lang.ref.Reference.processPendingReferences(java.base@17/Reference.java:253)
+#	at java.lang.ref.Reference$ReferenceHandler.run(java.base@17/Reference.java:215)
+td.1.1.blockedObjectId=null
+td.1.1.blockerId=null
+td.1.1.condition=#2 daemon prio=10 os_prio=31 cpu=0.13ms elapsed=8.10s tid=0x00007fb627039600 nid=0x4203 waiting on condition  [0x000070000b733000]
+td.1.1.header="Reference Handler" #2 daemon prio=10 os_prio=31 cpu=0.13ms elapsed=8.10s tid=0x00007fb627039600 nid=0x4203 waiting on condition  [0x000070000b733000]
+td.1.1.id=0x00007fb627039600
+td.1.1.name=Reference Handler
+td.1.1.isBlocked=false
+td.1.1.isBlocking=false
+td.1.1.isDaemon=true
+td.1.1.isDeadLocked=false
+td.1.1.isIdle=false
+
+#"Finalizer" #3 daemon prio=8 os_prio=31 cpu=0.22ms elapsed=8.10s tid=0x00007fb62703be00 nid=0x4103 in Object.wait()  [0x000070000b836000]
+#   java.lang.Thread.State: WAITING (on object monitor)
+#	at java.lang.Object.wait(java.base@17/Native Method)
+#	- waiting on <0x000000061fc02f30> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(java.base@17/ReferenceQueue.java:155)
+#	- locked <0x000000061fc02f30> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(java.base@17/ReferenceQueue.java:176)
+#	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@17/Finalizer.java:172)
+td.1.2.blockedObjectId=null
+td.1.2.blockerId=null
+td.1.2.condition=#3 daemon prio=8 os_prio=31 cpu=0.22ms elapsed=8.10s tid=0x00007fb62703be00 nid=0x4103 in Object.wait()  [0x000070000b836000]
+td.1.2.header="Finalizer" #3 daemon prio=8 os_prio=31 cpu=0.22ms elapsed=8.10s tid=0x00007fb62703be00 nid=0x4103 in Object.wait()  [0x000070000b836000]
+td.1.2.id=0x00007fb62703be00
+td.1.2.name=Finalizer
+td.1.2.isBlocked=false
+td.1.2.isBlocking=false
+td.1.2.isDaemon=true
+td.1.2.isDeadLocked=false
+td.1.2.isIdle=true
+
+#"Signal Dispatcher" #4 daemon prio=9 os_prio=31 cpu=0.34ms elapsed=8.09s tid=0x00007fb62800a200 nid=0xa603 waiting on condition  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.1.3.blockedObjectId=null
+td.1.3.blockerId=null
+td.1.3.condition=#4 daemon prio=9 os_prio=31 cpu=0.34ms elapsed=8.09s tid=0x00007fb62800a200 nid=0xa603 waiting on condition  [0x0000000000000000]
+td.1.3.header="Signal Dispatcher" #4 daemon prio=9 os_prio=31 cpu=0.34ms elapsed=8.09s tid=0x00007fb62800a200 nid=0xa603 waiting on condition  [0x0000000000000000]
+td.1.3.id=0x00007fb62800a200
+td.1.3.name=Signal Dispatcher
+td.1.3.isBlocked=false
+td.1.3.isBlocking=false
+td.1.3.isDaemon=true
+td.1.3.isDeadLocked=false
+td.1.3.isIdle=false
+
+#"Service Thread" #5 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=8.08s tid=0x00007fb628008800 nid=0x5a03 runnable  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.1.4.blockedObjectId=null
+td.1.4.blockerId=null
+td.1.4.condition=#5 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=8.08s tid=0x00007fb628008800 nid=0x5a03 runnable  [0x0000000000000000]
+td.1.4.header="Service Thread" #5 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=8.08s tid=0x00007fb628008800 nid=0x5a03 runnable  [0x0000000000000000]
+td.1.4.id=0x00007fb628008800
+td.1.4.name=Service Thread
+td.1.4.isBlocked=false
+td.1.4.isBlocking=false
+td.1.4.isDaemon=true
+td.1.4.isDeadLocked=false
+td.1.4.isIdle=false
+
+#"Monitor Deflation Thread" #6 daemon prio=9 os_prio=31 cpu=0.24ms elapsed=8.08s tid=0x00007fb626812c00 nid=0xa403 runnable  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.1.5.blockedObjectId=null
+td.1.5.blockerId=null
+td.1.5.condition=#6 daemon prio=9 os_prio=31 cpu=0.24ms elapsed=8.08s tid=0x00007fb626812c00 nid=0xa403 runnable  [0x0000000000000000]
+td.1.5.header="Monitor Deflation Thread" #6 daemon prio=9 os_prio=31 cpu=0.24ms elapsed=8.08s tid=0x00007fb626812c00 nid=0xa403 runnable  [0x0000000000000000]
+td.1.5.id=0x00007fb626812c00
+td.1.5.name=Monitor Deflation Thread
+td.1.5.isBlocked=false
+td.1.5.isBlocking=false
+td.1.5.isDaemon=true
+td.1.5.isDeadLocked=false
+td.1.5.isIdle=false
+
+#"C2 CompilerThread0" #7 daemon prio=9 os_prio=31 cpu=40.74ms elapsed=8.08s tid=0x00007fb62703a600 nid=0x5d03 waiting on condition  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+#   No compile task
+td.1.6.blockedObjectId=null
+td.1.6.blockerId=null
+td.1.6.condition=#7 daemon prio=9 os_prio=31 cpu=40.74ms elapsed=8.08s tid=0x00007fb62703a600 nid=0x5d03 waiting on condition  [0x0000000000000000]
+td.1.6.header="C2 CompilerThread0" #7 daemon prio=9 os_prio=31 cpu=40.74ms elapsed=8.08s tid=0x00007fb62703a600 nid=0x5d03 waiting on condition  [0x0000000000000000]
+td.1.6.id=0x00007fb62703a600
+td.1.6.name=C2 CompilerThread0
+td.1.6.isBlocked=false
+td.1.6.isBlocking=false
+td.1.6.isDaemon=true
+td.1.6.isDeadLocked=false
+td.1.6.isIdle=false
+
+#"C1 CompilerThread0" #10 daemon prio=9 os_prio=31 cpu=61.10ms elapsed=8.08s tid=0x00007fb626810a00 nid=0xa203 waiting on condition  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+#   No compile task
+td.1.7.blockedObjectId=null
+td.1.7.blockerId=null
+td.1.7.condition=#10 daemon prio=9 os_prio=31 cpu=61.10ms elapsed=8.08s tid=0x00007fb626810a00 nid=0xa203 waiting on condition  [0x0000000000000000]
+td.1.7.header="C1 CompilerThread0" #10 daemon prio=9 os_prio=31 cpu=61.10ms elapsed=8.08s tid=0x00007fb626810a00 nid=0xa203 waiting on condition  [0x0000000000000000]
+td.1.7.id=0x00007fb626810a00
+td.1.7.name=C1 CompilerThread0
+td.1.7.isBlocked=false
+td.1.7.isBlocking=false
+td.1.7.isDaemon=true
+td.1.7.isDeadLocked=false
+td.1.7.isIdle=false
+
+#"Sweeper thread" #11 daemon prio=9 os_prio=31 cpu=0.05ms elapsed=8.08s tid=0x00007fb626820e00 nid=0x5f03 runnable  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.1.8.blockedObjectId=null
+td.1.8.blockerId=null
+td.1.8.condition=#11 daemon prio=9 os_prio=31 cpu=0.05ms elapsed=8.08s tid=0x00007fb626820e00 nid=0x5f03 runnable  [0x0000000000000000]
+td.1.8.header="Sweeper thread" #11 daemon prio=9 os_prio=31 cpu=0.05ms elapsed=8.08s tid=0x00007fb626820e00 nid=0x5f03 runnable  [0x0000000000000000]
+td.1.8.id=0x00007fb626820e00
+td.1.8.name=Sweeper thread
+td.1.8.isBlocked=false
+td.1.8.isBlocking=false
+td.1.8.isDaemon=true
+td.1.8.isDeadLocked=false
+td.1.8.isIdle=false
+
+#"Common-Cleaner" #12 daemon prio=8 os_prio=31 cpu=0.14ms elapsed=8.06s tid=0x00007fb626821400 nid=0x6003 in Object.wait()  [0x000070000c051000]
+#   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+#	at java.lang.Object.wait(java.base@17/Native Method)
+#	- waiting on <0x000000061fc459e8> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(java.base@17/ReferenceQueue.java:155)
+#	- locked <0x000000061fc459e8> (a java.lang.ref.ReferenceQueue$Lock)
+#	at jdk.internal.ref.CleanerImpl.run(java.base@17/CleanerImpl.java:140)
+#	at java.lang.Thread.run(java.base@17/Thread.java:833)
+#	at jdk.internal.misc.InnocuousThread.run(java.base@17/InnocuousThread.java:162)
+td.1.9.blockedObjectId=null
+td.1.9.blockerId=null
+td.1.9.condition=#12 daemon prio=8 os_prio=31 cpu=0.14ms elapsed=8.06s tid=0x00007fb626821400 nid=0x6003 in Object.wait()  [0x000070000c051000]
+td.1.9.header="Common-Cleaner" #12 daemon prio=8 os_prio=31 cpu=0.14ms elapsed=8.06s tid=0x00007fb626821400 nid=0x6003 in Object.wait()  [0x000070000c051000]
+td.1.9.id=0x00007fb626821400
+td.1.9.name=Common-Cleaner
+td.1.9.isBlocked=false
+td.1.9.isBlocking=false
+td.1.9.isDaemon=true
+td.1.9.isDeadLocked=false
+td.1.9.isIdle=true
+
+#"Monitor Ctrl-Break" #13 daemon prio=5 os_prio=31 cpu=25.36ms elapsed=8.00s tid=0x00007fb62703ac00 nid=0x6103 runnable  [0x000070000c154000]
+#   java.lang.Thread.State: RUNNABLE
+#	at sun.nio.ch.SocketDispatcher.read0(java.base@17/Native Method)
+#	at sun.nio.ch.SocketDispatcher.read(java.base@17/SocketDispatcher.java:47)
+#	at sun.nio.ch.NioSocketImpl.tryRead(java.base@17/NioSocketImpl.java:261)
+#	at sun.nio.ch.NioSocketImpl.implRead(java.base@17/NioSocketImpl.java:312)
+#	at sun.nio.ch.NioSocketImpl.read(java.base@17/NioSocketImpl.java:350)
+#	at sun.nio.ch.NioSocketImpl$1.read(java.base@17/NioSocketImpl.java:803)
+#	at java.net.Socket$SocketInputStream.read(java.base@17/Socket.java:966)
+#	at sun.nio.cs.StreamDecoder.readBytes(java.base@17/StreamDecoder.java:270)
+#	at sun.nio.cs.StreamDecoder.implRead(java.base@17/StreamDecoder.java:313)
+#	at sun.nio.cs.StreamDecoder.read(java.base@17/StreamDecoder.java:188)
+#	- locked <0x000000061fe7f6f0> (a java.io.InputStreamReader)
+#	at java.io.InputStreamReader.read(java.base@17/InputStreamReader.java:177)
+#	at java.io.BufferedReader.fill(java.base@17/BufferedReader.java:162)
+#	at java.io.BufferedReader.readLine(java.base@17/BufferedReader.java:329)
+#	- locked <0x000000061fe7f6f0> (a java.io.InputStreamReader)
+#	at java.io.BufferedReader.readLine(java.base@17/BufferedReader.java:396)
+#	at com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:49)
+td.1.10.blockedObjectId=null
+td.1.10.blockerId=null
+td.1.10.condition=#13 daemon prio=5 os_prio=31 cpu=25.36ms elapsed=8.00s tid=0x00007fb62703ac00 nid=0x6103 runnable  [0x000070000c154000]
+td.1.10.header="Monitor Ctrl-Break" #13 daemon prio=5 os_prio=31 cpu=25.36ms elapsed=8.00s tid=0x00007fb62703ac00 nid=0x6103 runnable  [0x000070000c154000]
+td.1.10.id=0x00007fb62703ac00
+td.1.10.name=Monitor Ctrl-Break
+td.1.10.isBlocked=false
+td.1.10.isBlocking=false
+td.1.10.isDaemon=true
+td.1.10.isDeadLocked=false
+td.1.10.isIdle=false
+
+#"Notification Thread" #14 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=8.00s tid=0x00007fb6060b9000 nid=0x9e03 runnable  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.1.11.blockedObjectId=null
+td.1.11.blockerId=null
+td.1.11.condition=#14 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=8.00s tid=0x00007fb6060b9000 nid=0x9e03 runnable  [0x0000000000000000]
+td.1.11.header="Notification Thread" #14 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=8.00s tid=0x00007fb6060b9000 nid=0x9e03 runnable  [0x0000000000000000]
+td.1.11.id=0x00007fb6060b9000
+td.1.11.name=Notification Thread
+td.1.11.isBlocked=false
+td.1.11.isBlocking=false
+td.1.11.isDaemon=true
+td.1.11.isDeadLocked=false
+td.1.11.isIdle=false
+
+#"Attach Listener" #15 daemon prio=9 os_prio=31 cpu=33.00ms elapsed=7.02s tid=0x00007fb5d6008200 nid=0x9c03 waiting on condition  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.1.12.blockedObjectId=null
+td.1.12.blockerId=null
+td.1.12.condition=#15 daemon prio=9 os_prio=31 cpu=33.00ms elapsed=7.02s tid=0x00007fb5d6008200 nid=0x9c03 waiting on condition  [0x0000000000000000]
+td.1.12.header="Attach Listener" #15 daemon prio=9 os_prio=31 cpu=33.00ms elapsed=7.02s tid=0x00007fb5d6008200 nid=0x9c03 waiting on condition  [0x0000000000000000]
+td.1.12.id=0x00007fb5d6008200
+td.1.12.name=Attach Listener
+td.1.12.isBlocked=false
+td.1.12.isBlocking=false
+td.1.12.isDaemon=true
+td.1.12.isDeadLocked=false
+td.1.12.isIdle=false
+
+#"VM Thread" os_prio=31 cpu=1.06ms elapsed=8.10s tid=0x00007fb625c0cb50 nid=0x4303 runnable
+td.1.13.blockedObjectId=null
+td.1.13.blockerId=null
+td.1.13.condition=os_prio=31 cpu=1.06ms elapsed=8.10s tid=0x00007fb625c0cb50 nid=0x4303 runnable
+td.1.13.header="VM Thread" os_prio=31 cpu=1.06ms elapsed=8.10s tid=0x00007fb625c0cb50 nid=0x4303 runnable
+td.1.13.id=0x00007fb625c0cb50
+td.1.13.name=VM Thread
+td.1.13.isBlocked=false
+td.1.13.isBlocking=false
+td.1.13.isDaemon=false
+td.1.13.isDeadLocked=false
+td.1.13.isIdle=false
+
+#"GC Thread#0" os_prio=31 cpu=0.15ms elapsed=8.11s tid=0x00007fb625c07c40 nid=0x4e03 runnable
+td.1.14.blockedObjectId=null
+td.1.14.blockerId=null
+td.1.14.condition=os_prio=31 cpu=0.15ms elapsed=8.11s tid=0x00007fb625c07c40 nid=0x4e03 runnable
+td.1.14.header="GC Thread#0" os_prio=31 cpu=0.15ms elapsed=8.11s tid=0x00007fb625c07c40 nid=0x4e03 runnable
+td.1.14.id=0x00007fb625c07c40
+td.1.14.name=GC Thread#0
+td.1.14.isBlocked=false
+td.1.14.isBlocking=false
+td.1.14.isDaemon=false
+td.1.14.isDeadLocked=false
+td.1.14.isIdle=false
+
+#"G1 Main Marker" os_prio=31 cpu=0.05ms elapsed=8.11s tid=0x00007fb625f061f0 nid=0x3103 runnable
+td.1.15.blockedObjectId=null
+td.1.15.blockerId=null
+td.1.15.condition=os_prio=31 cpu=0.05ms elapsed=8.11s tid=0x00007fb625f061f0 nid=0x3103 runnable
+td.1.15.header="G1 Main Marker" os_prio=31 cpu=0.05ms elapsed=8.11s tid=0x00007fb625f061f0 nid=0x3103 runnable
+td.1.15.id=0x00007fb625f061f0
+td.1.15.name=G1 Main Marker
+td.1.15.isBlocked=false
+td.1.15.isBlocking=false
+td.1.15.isDaemon=false
+td.1.15.isDeadLocked=false
+td.1.15.isIdle=false
+
+#"G1 Conc#0" os_prio=31 cpu=0.03ms elapsed=8.11s tid=0x00007fb625f06e50 nid=0x4903 runnable
+td.1.16.blockedObjectId=null
+td.1.16.blockerId=null
+td.1.16.condition=os_prio=31 cpu=0.03ms elapsed=8.11s tid=0x00007fb625f06e50 nid=0x4903 runnable
+td.1.16.header="G1 Conc#0" os_prio=31 cpu=0.03ms elapsed=8.11s tid=0x00007fb625f06e50 nid=0x4903 runnable
+td.1.16.id=0x00007fb625f06e50
+td.1.16.name=G1 Conc#0
+td.1.16.isBlocked=false
+td.1.16.isBlocking=false
+td.1.16.isDaemon=false
+td.1.16.isDeadLocked=false
+td.1.16.isIdle=false
+
+#"G1 Refine#0" os_prio=31 cpu=0.07ms elapsed=8.11s tid=0x00007fb625f21680 nid=0x4803 runnable
+td.1.17.blockedObjectId=null
+td.1.17.blockerId=null
+td.1.17.condition=os_prio=31 cpu=0.07ms elapsed=8.11s tid=0x00007fb625f21680 nid=0x4803 runnable
+td.1.17.header="G1 Refine#0" os_prio=31 cpu=0.07ms elapsed=8.11s tid=0x00007fb625f21680 nid=0x4803 runnable
+td.1.17.id=0x00007fb625f21680
+td.1.17.name=G1 Refine#0
+td.1.17.isBlocked=false
+td.1.17.isBlocking=false
+td.1.17.isDaemon=false
+td.1.17.isDeadLocked=false
+td.1.17.isIdle=false
+
+#"G1 Service" os_prio=31 cpu=1.23ms elapsed=8.11s tid=0x00007fb625e1e560 nid=0x4703 runnable
+td.1.18.blockedObjectId=null
+td.1.18.blockerId=null
+td.1.18.condition=os_prio=31 cpu=1.23ms elapsed=8.11s tid=0x00007fb625e1e560 nid=0x4703 runnable
+td.1.18.header="G1 Service" os_prio=31 cpu=1.23ms elapsed=8.11s tid=0x00007fb625e1e560 nid=0x4703 runnable
+td.1.18.id=0x00007fb625e1e560
+td.1.18.name=G1 Service
+td.1.18.isBlocked=false
+td.1.18.isBlocking=false
+td.1.18.isDaemon=false
+td.1.18.isDeadLocked=false
+td.1.18.isIdle=false
+
+#"VM Periodic Task Thread" os_prio=31 cpu=5.59ms elapsed=8.00s tid=0x00007fb625d282e0 nid=0x6203 waiting on condition
+td.1.19.blockedObjectId=null
+td.1.19.blockerId=null
+td.1.19.condition=os_prio=31 cpu=5.59ms elapsed=8.00s tid=0x00007fb625d282e0 nid=0x6203 waiting on condition
+td.1.19.header="VM Periodic Task Thread" os_prio=31 cpu=5.59ms elapsed=8.00s tid=0x00007fb625d282e0 nid=0x6203 waiting on condition
+td.1.19.id=0x00007fb625d282e0
+td.1.19.name=VM Periodic Task Thread
+td.1.19.isBlocked=false
+td.1.19.isBlocking=false
+td.1.19.isDaemon=false
+td.1.19.isDeadLocked=false
+td.1.19.isIdle=false
+
+ftd.2.deadLockSize=0
+ftd.2.threadCount=20
+#"main" #1 prio=5 os_prio=31 cpu=115.46ms elapsed=9.13s tid=0x00007fb62700a600 nid=0x1803 waiting on condition  [0x000070000b01e000]
+#   java.lang.Thread.State: TIMED_WAITING (sleeping)
+#	at java.lang.Thread.sleep(java.base@17/Native Method)
+#	at samurai.core.IdleExample.main(IdleExample.java:20)
+td.2.0.blockedObjectId=null
+td.2.0.blockerId=null
+td.2.0.condition=#1 prio=5 os_prio=31 cpu=115.46ms elapsed=9.13s tid=0x00007fb62700a600 nid=0x1803 waiting on condition  [0x000070000b01e000]
+td.2.0.header="main" #1 prio=5 os_prio=31 cpu=115.46ms elapsed=9.13s tid=0x00007fb62700a600 nid=0x1803 waiting on condition  [0x000070000b01e000]
+td.2.0.id=0x00007fb62700a600
+td.2.0.name=main
+td.2.0.isBlocked=false
+td.2.0.isBlocking=false
+td.2.0.isDaemon=false
+td.2.0.isDeadLocked=false
+td.2.0.isIdle=true
+
+#"Reference Handler" #2 daemon prio=10 os_prio=31 cpu=0.13ms elapsed=9.11s tid=0x00007fb627039600 nid=0x4203 waiting on condition  [0x000070000b733000]
+#   java.lang.Thread.State: RUNNABLE
+#	at java.lang.ref.Reference.waitForReferencePendingList(java.base@17/Native Method)
+#	at java.lang.ref.Reference.processPendingReferences(java.base@17/Reference.java:253)
+#	at java.lang.ref.Reference$ReferenceHandler.run(java.base@17/Reference.java:215)
+td.2.1.blockedObjectId=null
+td.2.1.blockerId=null
+td.2.1.condition=#2 daemon prio=10 os_prio=31 cpu=0.13ms elapsed=9.11s tid=0x00007fb627039600 nid=0x4203 waiting on condition  [0x000070000b733000]
+td.2.1.header="Reference Handler" #2 daemon prio=10 os_prio=31 cpu=0.13ms elapsed=9.11s tid=0x00007fb627039600 nid=0x4203 waiting on condition  [0x000070000b733000]
+td.2.1.id=0x00007fb627039600
+td.2.1.name=Reference Handler
+td.2.1.isBlocked=false
+td.2.1.isBlocking=false
+td.2.1.isDaemon=true
+td.2.1.isDeadLocked=false
+td.2.1.isIdle=false
+
+#"Finalizer" #3 daemon prio=8 os_prio=31 cpu=0.22ms elapsed=9.11s tid=0x00007fb62703be00 nid=0x4103 in Object.wait()  [0x000070000b836000]
+#   java.lang.Thread.State: WAITING (on object monitor)
+#	at java.lang.Object.wait(java.base@17/Native Method)
+#	- waiting on <0x000000061fc02f30> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(java.base@17/ReferenceQueue.java:155)
+#	- locked <0x000000061fc02f30> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(java.base@17/ReferenceQueue.java:176)
+#	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@17/Finalizer.java:172)
+td.2.2.blockedObjectId=null
+td.2.2.blockerId=null
+td.2.2.condition=#3 daemon prio=8 os_prio=31 cpu=0.22ms elapsed=9.11s tid=0x00007fb62703be00 nid=0x4103 in Object.wait()  [0x000070000b836000]
+td.2.2.header="Finalizer" #3 daemon prio=8 os_prio=31 cpu=0.22ms elapsed=9.11s tid=0x00007fb62703be00 nid=0x4103 in Object.wait()  [0x000070000b836000]
+td.2.2.id=0x00007fb62703be00
+td.2.2.name=Finalizer
+td.2.2.isBlocked=false
+td.2.2.isBlocking=false
+td.2.2.isDaemon=true
+td.2.2.isDeadLocked=false
+td.2.2.isIdle=true
+
+#"Signal Dispatcher" #4 daemon prio=9 os_prio=31 cpu=0.34ms elapsed=9.10s tid=0x00007fb62800a200 nid=0xa603 waiting on condition  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.2.3.blockedObjectId=null
+td.2.3.blockerId=null
+td.2.3.condition=#4 daemon prio=9 os_prio=31 cpu=0.34ms elapsed=9.10s tid=0x00007fb62800a200 nid=0xa603 waiting on condition  [0x0000000000000000]
+td.2.3.header="Signal Dispatcher" #4 daemon prio=9 os_prio=31 cpu=0.34ms elapsed=9.10s tid=0x00007fb62800a200 nid=0xa603 waiting on condition  [0x0000000000000000]
+td.2.3.id=0x00007fb62800a200
+td.2.3.name=Signal Dispatcher
+td.2.3.isBlocked=false
+td.2.3.isBlocking=false
+td.2.3.isDaemon=true
+td.2.3.isDeadLocked=false
+td.2.3.isIdle=false
+
+#"Service Thread" #5 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=9.10s tid=0x00007fb628008800 nid=0x5a03 runnable  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.2.4.blockedObjectId=null
+td.2.4.blockerId=null
+td.2.4.condition=#5 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=9.10s tid=0x00007fb628008800 nid=0x5a03 runnable  [0x0000000000000000]
+td.2.4.header="Service Thread" #5 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=9.10s tid=0x00007fb628008800 nid=0x5a03 runnable  [0x0000000000000000]
+td.2.4.id=0x00007fb628008800
+td.2.4.name=Service Thread
+td.2.4.isBlocked=false
+td.2.4.isBlocking=false
+td.2.4.isDaemon=true
+td.2.4.isDeadLocked=false
+td.2.4.isIdle=false
+
+#"Monitor Deflation Thread" #6 daemon prio=9 os_prio=31 cpu=0.25ms elapsed=9.10s tid=0x00007fb626812c00 nid=0xa403 runnable  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.2.5.blockedObjectId=null
+td.2.5.blockerId=null
+td.2.5.condition=#6 daemon prio=9 os_prio=31 cpu=0.25ms elapsed=9.10s tid=0x00007fb626812c00 nid=0xa403 runnable  [0x0000000000000000]
+td.2.5.header="Monitor Deflation Thread" #6 daemon prio=9 os_prio=31 cpu=0.25ms elapsed=9.10s tid=0x00007fb626812c00 nid=0xa403 runnable  [0x0000000000000000]
+td.2.5.id=0x00007fb626812c00
+td.2.5.name=Monitor Deflation Thread
+td.2.5.isBlocked=false
+td.2.5.isBlocking=false
+td.2.5.isDaemon=true
+td.2.5.isDeadLocked=false
+td.2.5.isIdle=false
+
+#"C2 CompilerThread0" #7 daemon prio=9 os_prio=31 cpu=40.74ms elapsed=9.10s tid=0x00007fb62703a600 nid=0x5d03 waiting on condition  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+#   No compile task
+td.2.6.blockedObjectId=null
+td.2.6.blockerId=null
+td.2.6.condition=#7 daemon prio=9 os_prio=31 cpu=40.74ms elapsed=9.10s tid=0x00007fb62703a600 nid=0x5d03 waiting on condition  [0x0000000000000000]
+td.2.6.header="C2 CompilerThread0" #7 daemon prio=9 os_prio=31 cpu=40.74ms elapsed=9.10s tid=0x00007fb62703a600 nid=0x5d03 waiting on condition  [0x0000000000000000]
+td.2.6.id=0x00007fb62703a600
+td.2.6.name=C2 CompilerThread0
+td.2.6.isBlocked=false
+td.2.6.isBlocking=false
+td.2.6.isDaemon=true
+td.2.6.isDeadLocked=false
+td.2.6.isIdle=false
+
+#"C1 CompilerThread0" #10 daemon prio=9 os_prio=31 cpu=61.10ms elapsed=9.10s tid=0x00007fb626810a00 nid=0xa203 waiting on condition  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+#   No compile task
+td.2.7.blockedObjectId=null
+td.2.7.blockerId=null
+td.2.7.condition=#10 daemon prio=9 os_prio=31 cpu=61.10ms elapsed=9.10s tid=0x00007fb626810a00 nid=0xa203 waiting on condition  [0x0000000000000000]
+td.2.7.header="C1 CompilerThread0" #10 daemon prio=9 os_prio=31 cpu=61.10ms elapsed=9.10s tid=0x00007fb626810a00 nid=0xa203 waiting on condition  [0x0000000000000000]
+td.2.7.id=0x00007fb626810a00
+td.2.7.name=C1 CompilerThread0
+td.2.7.isBlocked=false
+td.2.7.isBlocking=false
+td.2.7.isDaemon=true
+td.2.7.isDeadLocked=false
+td.2.7.isIdle=false
+
+#"Sweeper thread" #11 daemon prio=9 os_prio=31 cpu=0.05ms elapsed=9.10s tid=0x00007fb626820e00 nid=0x5f03 runnable  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.2.8.blockedObjectId=null
+td.2.8.blockerId=null
+td.2.8.condition=#11 daemon prio=9 os_prio=31 cpu=0.05ms elapsed=9.10s tid=0x00007fb626820e00 nid=0x5f03 runnable  [0x0000000000000000]
+td.2.8.header="Sweeper thread" #11 daemon prio=9 os_prio=31 cpu=0.05ms elapsed=9.10s tid=0x00007fb626820e00 nid=0x5f03 runnable  [0x0000000000000000]
+td.2.8.id=0x00007fb626820e00
+td.2.8.name=Sweeper thread
+td.2.8.isBlocked=false
+td.2.8.isBlocking=false
+td.2.8.isDaemon=true
+td.2.8.isDeadLocked=false
+td.2.8.isIdle=false
+
+#"Common-Cleaner" #12 daemon prio=8 os_prio=31 cpu=0.14ms elapsed=9.08s tid=0x00007fb626821400 nid=0x6003 in Object.wait()  [0x000070000c051000]
+#   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+#	at java.lang.Object.wait(java.base@17/Native Method)
+#	- waiting on <0x000000061fc459e8> (a java.lang.ref.ReferenceQueue$Lock)
+#	at java.lang.ref.ReferenceQueue.remove(java.base@17/ReferenceQueue.java:155)
+#	- locked <0x000000061fc459e8> (a java.lang.ref.ReferenceQueue$Lock)
+#	at jdk.internal.ref.CleanerImpl.run(java.base@17/CleanerImpl.java:140)
+#	at java.lang.Thread.run(java.base@17/Thread.java:833)
+#	at jdk.internal.misc.InnocuousThread.run(java.base@17/InnocuousThread.java:162)
+td.2.9.blockedObjectId=null
+td.2.9.blockerId=null
+td.2.9.condition=#12 daemon prio=8 os_prio=31 cpu=0.14ms elapsed=9.08s tid=0x00007fb626821400 nid=0x6003 in Object.wait()  [0x000070000c051000]
+td.2.9.header="Common-Cleaner" #12 daemon prio=8 os_prio=31 cpu=0.14ms elapsed=9.08s tid=0x00007fb626821400 nid=0x6003 in Object.wait()  [0x000070000c051000]
+td.2.9.id=0x00007fb626821400
+td.2.9.name=Common-Cleaner
+td.2.9.isBlocked=false
+td.2.9.isBlocking=false
+td.2.9.isDaemon=true
+td.2.9.isDeadLocked=false
+td.2.9.isIdle=true
+
+#"Monitor Ctrl-Break" #13 daemon prio=5 os_prio=31 cpu=25.36ms elapsed=9.01s tid=0x00007fb62703ac00 nid=0x6103 runnable  [0x000070000c154000]
+#   java.lang.Thread.State: RUNNABLE
+#	at sun.nio.ch.SocketDispatcher.read0(java.base@17/Native Method)
+#	at sun.nio.ch.SocketDispatcher.read(java.base@17/SocketDispatcher.java:47)
+#	at sun.nio.ch.NioSocketImpl.tryRead(java.base@17/NioSocketImpl.java:261)
+#	at sun.nio.ch.NioSocketImpl.implRead(java.base@17/NioSocketImpl.java:312)
+#	at sun.nio.ch.NioSocketImpl.read(java.base@17/NioSocketImpl.java:350)
+#	at sun.nio.ch.NioSocketImpl$1.read(java.base@17/NioSocketImpl.java:803)
+#	at java.net.Socket$SocketInputStream.read(java.base@17/Socket.java:966)
+#	at sun.nio.cs.StreamDecoder.readBytes(java.base@17/StreamDecoder.java:270)
+#	at sun.nio.cs.StreamDecoder.implRead(java.base@17/StreamDecoder.java:313)
+#	at sun.nio.cs.StreamDecoder.read(java.base@17/StreamDecoder.java:188)
+#	- locked <0x000000061fe7f6f0> (a java.io.InputStreamReader)
+#	at java.io.InputStreamReader.read(java.base@17/InputStreamReader.java:177)
+#	at java.io.BufferedReader.fill(java.base@17/BufferedReader.java:162)
+#	at java.io.BufferedReader.readLine(java.base@17/BufferedReader.java:329)
+#	- locked <0x000000061fe7f6f0> (a java.io.InputStreamReader)
+#	at java.io.BufferedReader.readLine(java.base@17/BufferedReader.java:396)
+#	at com.intellij.rt.execution.application.AppMainV2$1.run(AppMainV2.java:49)
+td.2.10.blockedObjectId=null
+td.2.10.blockerId=null
+td.2.10.condition=#13 daemon prio=5 os_prio=31 cpu=25.36ms elapsed=9.01s tid=0x00007fb62703ac00 nid=0x6103 runnable  [0x000070000c154000]
+td.2.10.header="Monitor Ctrl-Break" #13 daemon prio=5 os_prio=31 cpu=25.36ms elapsed=9.01s tid=0x00007fb62703ac00 nid=0x6103 runnable  [0x000070000c154000]
+td.2.10.id=0x00007fb62703ac00
+td.2.10.name=Monitor Ctrl-Break
+td.2.10.isBlocked=false
+td.2.10.isBlocking=false
+td.2.10.isDaemon=true
+td.2.10.isDeadLocked=false
+td.2.10.isIdle=false
+
+#"Notification Thread" #14 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=9.01s tid=0x00007fb6060b9000 nid=0x9e03 runnable  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.2.11.blockedObjectId=null
+td.2.11.blockerId=null
+td.2.11.condition=#14 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=9.01s tid=0x00007fb6060b9000 nid=0x9e03 runnable  [0x0000000000000000]
+td.2.11.header="Notification Thread" #14 daemon prio=9 os_prio=31 cpu=0.06ms elapsed=9.01s tid=0x00007fb6060b9000 nid=0x9e03 runnable  [0x0000000000000000]
+td.2.11.id=0x00007fb6060b9000
+td.2.11.name=Notification Thread
+td.2.11.isBlocked=false
+td.2.11.isBlocking=false
+td.2.11.isDaemon=true
+td.2.11.isDeadLocked=false
+td.2.11.isIdle=false
+
+#"Attach Listener" #15 daemon prio=9 os_prio=31 cpu=33.26ms elapsed=8.04s tid=0x00007fb5d6008200 nid=0x9c03 waiting on condition  [0x0000000000000000]
+#   java.lang.Thread.State: RUNNABLE
+td.2.12.blockedObjectId=null
+td.2.12.blockerId=null
+td.2.12.condition=#15 daemon prio=9 os_prio=31 cpu=33.26ms elapsed=8.04s tid=0x00007fb5d6008200 nid=0x9c03 waiting on condition  [0x0000000000000000]
+td.2.12.header="Attach Listener" #15 daemon prio=9 os_prio=31 cpu=33.26ms elapsed=8.04s tid=0x00007fb5d6008200 nid=0x9c03 waiting on condition  [0x0000000000000000]
+td.2.12.id=0x00007fb5d6008200
+td.2.12.name=Attach Listener
+td.2.12.isBlocked=false
+td.2.12.isBlocking=false
+td.2.12.isDaemon=true
+td.2.12.isDeadLocked=false
+td.2.12.isIdle=false
+
+#"VM Thread" os_prio=31 cpu=1.41ms elapsed=9.12s tid=0x00007fb625c0cb50 nid=0x4303 runnable
+td.2.13.blockedObjectId=null
+td.2.13.blockerId=null
+td.2.13.condition=os_prio=31 cpu=1.41ms elapsed=9.12s tid=0x00007fb625c0cb50 nid=0x4303 runnable
+td.2.13.header="VM Thread" os_prio=31 cpu=1.41ms elapsed=9.12s tid=0x00007fb625c0cb50 nid=0x4303 runnable
+td.2.13.id=0x00007fb625c0cb50
+td.2.13.name=VM Thread
+td.2.13.isBlocked=false
+td.2.13.isBlocking=false
+td.2.13.isDaemon=false
+td.2.13.isDeadLocked=false
+td.2.13.isIdle=false
+
+#"GC Thread#0" os_prio=31 cpu=0.16ms elapsed=9.13s tid=0x00007fb625c07c40 nid=0x4e03 runnable
+td.2.14.blockedObjectId=null
+td.2.14.blockerId=null
+td.2.14.condition=os_prio=31 cpu=0.16ms elapsed=9.13s tid=0x00007fb625c07c40 nid=0x4e03 runnable
+td.2.14.header="GC Thread#0" os_prio=31 cpu=0.16ms elapsed=9.13s tid=0x00007fb625c07c40 nid=0x4e03 runnable
+td.2.14.id=0x00007fb625c07c40
+td.2.14.name=GC Thread#0
+td.2.14.isBlocked=false
+td.2.14.isBlocking=false
+td.2.14.isDaemon=false
+td.2.14.isDeadLocked=false
+td.2.14.isIdle=false
+
+#"G1 Main Marker" os_prio=31 cpu=0.05ms elapsed=9.13s tid=0x00007fb625f061f0 nid=0x3103 runnable
+td.2.15.blockedObjectId=null
+td.2.15.blockerId=null
+td.2.15.condition=os_prio=31 cpu=0.05ms elapsed=9.13s tid=0x00007fb625f061f0 nid=0x3103 runnable
+td.2.15.header="G1 Main Marker" os_prio=31 cpu=0.05ms elapsed=9.13s tid=0x00007fb625f061f0 nid=0x3103 runnable
+td.2.15.id=0x00007fb625f061f0
+td.2.15.name=G1 Main Marker
+td.2.15.isBlocked=false
+td.2.15.isBlocking=false
+td.2.15.isDaemon=false
+td.2.15.isDeadLocked=false
+td.2.15.isIdle=false
+
+#"G1 Conc#0" os_prio=31 cpu=0.03ms elapsed=9.13s tid=0x00007fb625f06e50 nid=0x4903 runnable
+td.2.16.blockedObjectId=null
+td.2.16.blockerId=null
+td.2.16.condition=os_prio=31 cpu=0.03ms elapsed=9.13s tid=0x00007fb625f06e50 nid=0x4903 runnable
+td.2.16.header="G1 Conc#0" os_prio=31 cpu=0.03ms elapsed=9.13s tid=0x00007fb625f06e50 nid=0x4903 runnable
+td.2.16.id=0x00007fb625f06e50
+td.2.16.name=G1 Conc#0
+td.2.16.isBlocked=false
+td.2.16.isBlocking=false
+td.2.16.isDaemon=false
+td.2.16.isDeadLocked=false
+td.2.16.isIdle=false
+
+#"G1 Refine#0" os_prio=31 cpu=0.07ms elapsed=9.12s tid=0x00007fb625f21680 nid=0x4803 runnable
+td.2.17.blockedObjectId=null
+td.2.17.blockerId=null
+td.2.17.condition=os_prio=31 cpu=0.07ms elapsed=9.12s tid=0x00007fb625f21680 nid=0x4803 runnable
+td.2.17.header="G1 Refine#0" os_prio=31 cpu=0.07ms elapsed=9.12s tid=0x00007fb625f21680 nid=0x4803 runnable
+td.2.17.id=0x00007fb625f21680
+td.2.17.name=G1 Refine#0
+td.2.17.isBlocked=false
+td.2.17.isBlocking=false
+td.2.17.isDaemon=false
+td.2.17.isDeadLocked=false
+td.2.17.isIdle=false
+
+#"G1 Service" os_prio=31 cpu=1.45ms elapsed=9.12s tid=0x00007fb625e1e560 nid=0x4703 runnable
+td.2.18.blockedObjectId=null
+td.2.18.blockerId=null
+td.2.18.condition=os_prio=31 cpu=1.45ms elapsed=9.12s tid=0x00007fb625e1e560 nid=0x4703 runnable
+td.2.18.header="G1 Service" os_prio=31 cpu=1.45ms elapsed=9.12s tid=0x00007fb625e1e560 nid=0x4703 runnable
+td.2.18.id=0x00007fb625e1e560
+td.2.18.name=G1 Service
+td.2.18.isBlocked=false
+td.2.18.isBlocking=false
+td.2.18.isDaemon=false
+td.2.18.isDeadLocked=false
+td.2.18.isIdle=false
+
+#"VM Periodic Task Thread" os_prio=31 cpu=6.13ms elapsed=9.01s tid=0x00007fb625d282e0 nid=0x6203 waiting on condition
+td.2.19.blockedObjectId=null
+td.2.19.blockerId=null
+td.2.19.condition=os_prio=31 cpu=6.13ms elapsed=9.01s tid=0x00007fb625d282e0 nid=0x6203 waiting on condition
+td.2.19.header="VM Periodic Task Thread" os_prio=31 cpu=6.13ms elapsed=9.01s tid=0x00007fb625d282e0 nid=0x6203 waiting on condition
+td.2.19.id=0x00007fb625d282e0
+td.2.19.name=VM Periodic Task Thread
+td.2.19.isBlocked=false
+td.2.19.isBlocking=false
+td.2.19.isDaemon=false
+td.2.19.isDeadLocked=false
+td.2.19.isIdle=false
+
