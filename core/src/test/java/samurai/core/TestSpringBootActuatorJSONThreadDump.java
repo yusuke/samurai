@@ -5,6 +5,7 @@ import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,6 +17,11 @@ class TestSpringBootActuatorJSONThreadDump {
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
         dumpExtractor.analyze(TestSpringBootActuatorJSONThreadDump.class.getResourceAsStream("/SpringBoot/spring-boot-2.5.4-java8.dmp"));
         FullThreadDump fullThreadDump = statistic.getFullThreadDumps().get(0);
+        ThreadDumpSequence[] stackTracesAsArray = statistic.getStackTracesAsArray();
+        ThreadDump[] threadDumps = stackTracesAsArray[10].asArray();
+        ThreadDump threadDumpInSequence = threadDumps[0];
+        assertTrue(threadDumpInSequence.isDeadLocked());
+        assertEquals("(originally JSON formatted)", fullThreadDump.getHeader());
         assertTrue(fullThreadDump.isDeadLocked());
         ThreadDump deadkLock1 = fullThreadDump.getThreadDumpById("20");
         assertTrue(deadkLock1.isBlocked());

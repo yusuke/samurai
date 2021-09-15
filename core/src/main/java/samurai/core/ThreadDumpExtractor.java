@@ -173,11 +173,10 @@ public class ThreadDumpExtractor {
             case SPRING_ACTUATOR_JSON:
                 
                 fullThreadDump = new SpringBootActuatorFullThreadDump(header);
-                var springBootActuatorFullThreadDump = new SpringBootActuatorFullThreadDump(header);
-                List<ThreadDump> dumps = springBootActuatorFullThreadDump.getThreadDumps();
+                List<ThreadDump> dumps = fullThreadDump.getThreadDumps();
                 for (ThreadDump dump : dumps) {
                     aThreadDump = dump;
-                    aThreadDumpEnded();
+                    renderer.onThreadDump(dump);
                 }
                 fullThreadDumpEnded();
                 break;

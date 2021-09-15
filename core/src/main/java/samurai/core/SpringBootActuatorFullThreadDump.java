@@ -23,7 +23,7 @@ import java.util.List;
 
 public class SpringBootActuatorFullThreadDump extends FullThreadDump {
     public SpringBootActuatorFullThreadDump(String header) {
-        super(header);
+        super("(originally JSON formatted)");
         try {
             JSONObject jsonObject = new JSONObject(header);
             JSONArray threads = jsonObject.getJSONArray("threads");
