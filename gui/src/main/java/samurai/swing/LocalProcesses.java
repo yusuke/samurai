@@ -28,6 +28,8 @@ import javax.swing.event.MenuListener;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class LocalProcesses {
@@ -100,6 +102,8 @@ public class LocalProcesses {
         }
     }
 
+    private static final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss");
+
     class LocalProcessMenuItem extends JMenuItem {
         final VM vm;
 
@@ -109,7 +113,8 @@ public class LocalProcesses {
             addActionListener(e -> {
                 try {
                     for (int i = 0; i < 3; i++) {
-                        Path path = Paths.get(vm.getFqcn() + "-" + vm.getPid() + ".txt");
+                        Path path = Paths.get(System.getProperty("user.home"),
+                                String.format("%s-%d-%s.txt", vm.getFqcn(), vm.getPid(), LocalDateTime.now().format(dateTimeFormatter)));
                         Files.write(path, ThreadDumpUtil.getThreadDump(vm.getPid()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
                         fileHistory.open(path.toFile());
                         Thread.sleep(1000);
