@@ -18,6 +18,7 @@ package samurai.core;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ThreadStatistic implements ThreadDumpRenderer, Serializable {
     private final List<FullThreadDump> fullThreadDumps = new ArrayList<>();
@@ -116,5 +117,24 @@ public class ThreadStatistic implements ThreadDumpRenderer, Serializable {
         throw new AssertionError("no thread dump with id:" + id + " found");
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ThreadStatistic that = (ThreadStatistic) o;
+        return Objects.equals(fullThreadDumps, that.fullThreadDumps) && Objects.equals(threadDumpsList, that.threadDumpsList);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(fullThreadDumps, threadDumpsList);
+    }
+
+    @Override
+    public String toString() {
+        return "ThreadStatistic{" +
+                "fullThreadDumps=" + fullThreadDumps +
+                ", threadDumpsList=" + threadDumpsList +
+                '}';
+    }
 }

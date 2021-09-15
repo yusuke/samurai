@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>samurai</groupId>
     <artifactId>samurai</artifactId>
-    <version>2021.1</version>
+    <version>2021.2</version>
     <packaging>pom</packaging>
     <name>Samurai</name>
     <description>A thread dump analyzer</description>

@@ -16,10 +16,7 @@
 package samurai.core;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public abstract class FullThreadDump implements Serializable {
     private final List<ThreadDump> threadDumps;
@@ -43,6 +40,10 @@ public abstract class FullThreadDump implements Serializable {
         return threadDumps.size();
     }
 
+    public List<ThreadDump> getThreadDumps(){
+        return threadDumps;
+    }
+    
     public String toString() {
         StringBuilder toStringed = new StringBuilder(256);
         toStringed.append(this.header);
@@ -173,4 +174,20 @@ public abstract class FullThreadDump implements Serializable {
             }
         }
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FullThreadDump that = (FullThreadDump) o;
+        return deadLocked == that.deadLocked && Objects.equals(threadDumps, that.threadDumps) && Objects.equals(header, that.header) && Arrays.equals(objectLocks, that.objectLocks) && Objects.equals(deadLockChains, that.deadLockChains);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(threadDumps, header, deadLockChains, deadLocked);
+        result = 31 * result + Arrays.hashCode(objectLocks);
+        return result;
+    }
+
 }

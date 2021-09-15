@@ -5,7 +5,7 @@
     <groupId>samurai</groupId>
     <artifactId>gui</artifactId>
     <packaging>jar</packaging>
-    <version>2021.1</version>
+    <version>2021.2</version>
     <name>Samurai</name>
     <url>http://samuraism.jp/samurai/</url>
     <properties>
@@ -39,7 +39,7 @@
         <dependency>
             <groupId>samurai</groupId>
             <artifactId>core</artifactId>
-            <version>2021.1</version>
+            <version>2021.2</version>
         </dependency>
     </dependencies>
     <build>

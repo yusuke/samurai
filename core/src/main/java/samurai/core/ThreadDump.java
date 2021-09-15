@@ -47,6 +47,11 @@ public abstract class ThreadDump implements Serializable {
         m.find();
         this.CONDITION = m.group().trim();
     }
+    protected ThreadDump(String header, String name, String condition){
+        this.HEADER = header;
+        this.NAME = name;
+        this.CONDITION = condition;
+    }
 
     public final String getHeader() {
         return this.HEADER;

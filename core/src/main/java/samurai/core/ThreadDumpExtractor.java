@@ -21,6 +21,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.List;
 import java.util.StringTokenizer;
 
 
@@ -46,13 +47,14 @@ public class ThreadDumpExtractor {
 
     /**
      * Extracts thread dumps from InputStream and closes it.
+     *
      * @param is - the underlying input stream
      * @throws IOException - If an I/O error occurs
      */
     public void analyze(InputStream is) throws IOException {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(is))) {
             String line;
-            while (null != (line = reader.readLine())) {
+        while (null != (line = reader.readLine())) {
                 analyzeLine(line);
             }
         }
@@ -61,6 +63,7 @@ public class ThreadDumpExtractor {
 
     /**
      * Extracts thread dumps from the specified file
+     *
      * @param file - the file to be examined
      * @throws IOException - If an I/O error occurs
      */
@@ -109,6 +112,7 @@ public class ThreadDumpExtractor {
     private final int SUN = 0;
     private final int BEA = 1;
     private final int IBM = 2;
+    private final int SPRING_ACTUATOR_JSON = 3;
 
     private final String[] FULL_THREAD_DUMP_HEADER = {
             //SUN
@@ -116,7 +120,9 @@ public class ThreadDumpExtractor {
             //BEA
             , "===== FULL THREAD DUMP ==============="
             //IBM
-            , "2XMFULLTHDDUMP"};
+            , "2XMFULLTHDDUMP"
+            // Spring Boot Actuator
+            , "{\"threads\":[{\"threadName\":"};
 
 
     private int currentJVM = SUN;
@@ -137,7 +143,6 @@ public class ThreadDumpExtractor {
                 fullThreadDumpStarted(line);
                 break;
             }
-
         }
 
     }
@@ -155,15 +160,28 @@ public class ThreadDumpExtractor {
         switch (this.currentJVM) {
             case SUN:
                 fullThreadDump = new SunFullThreadDump(header);
+                whileFullThreadDump = true;
                 break;
             case BEA:
                 fullThreadDump = new BEAFullThreadDump(header);
+                whileFullThreadDump = true;
                 break;
             case IBM:
                 fullThreadDump = new IBMFullThreadDump(header);
+                whileFullThreadDump = true;
+                break;
+            case SPRING_ACTUATOR_JSON:
+                
+                fullThreadDump = new SpringBootActuatorFullThreadDump(header);
+                var springBootActuatorFullThreadDump = new SpringBootActuatorFullThreadDump(header);
+                List<ThreadDump> dumps = springBootActuatorFullThreadDump.getThreadDumps();
+                for (ThreadDump dump : dumps) {
+                    aThreadDump = dump;
+                    aThreadDumpEnded();
+                }
+                fullThreadDumpEnded();
                 break;
         }
-        whileFullThreadDump = true;
     }
 
     private void fullThreadDumpEnded() {
@@ -184,6 +202,8 @@ public class ThreadDumpExtractor {
                 break;
             case IBM:
                 aThreadDump = new IBMThreadDump(header, ibmLockInfo);
+                break;
+            case SPRING_ACTUATOR_JSON:
                 break;
             default:
                 throw new AssertionError("Illegal JVM Vendor code");

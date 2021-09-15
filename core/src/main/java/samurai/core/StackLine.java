@@ -26,7 +26,7 @@ import java.io.Serializable;
  * @author Yusuke Yamamoto
  * @version 2.0.5
  */
-public abstract class StackLine implements Serializable {
+public class StackLine implements Serializable {
     protected final String line;
     private static final long serialVersionUID = -4322785746927805891L;
     private final boolean IS_LINE;
