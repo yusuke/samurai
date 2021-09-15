@@ -39,7 +39,7 @@ package samurai.core;
         String state;
         if (getHeader().endsWith("]")) {
             int endIndex = getHeader().lastIndexOf("[") - 1;
-            state = getHeader().substring(stateBeginIndex, endIndex);
+            state = getHeader().substring(stateBeginIndex, endIndex).trim();
         } else {
             state = getHeader().substring(stateBeginIndex).trim();
         }
