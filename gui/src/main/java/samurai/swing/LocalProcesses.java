@@ -35,6 +35,8 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import static samurai.swing.MainFrame.preservedFontToWorkaroundJPackageBug;
+
 public class LocalProcesses {
     private final FileHistory fileHistory;
     private final JMenu localProcessesMenu;
@@ -97,6 +99,7 @@ public class LocalProcesses {
                     JMenuItem localProcess = new LocalProcessMenuItem(vm);
                     localProcess.setToolTipText(vm.getFullCommandLine());
                     localProcessesMenu.add(localProcess);
+                    localProcess.setFont(preservedFontToWorkaroundJPackageBug);
                 }
             }
         } catch (URISyntaxException | MonitorException e) {

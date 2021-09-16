@@ -91,9 +91,11 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     final BorderLayout borderLayout2 = new BorderLayout();
     final SearchPanel searcher;
     private boolean searchPanelAdded = false;
+    public static Font preservedFontToWorkaroundJPackageBug;
 
     //Construct the frame
     public MainFrame() {
+        preservedFontToWorkaroundJPackageBug = menuFile.getFont();
         enableEvents(AWTEvent.WINDOW_EVENT_MASK);
         context = new Context(statusBar, this.tab);
         searcher = context.getSearchPanel();
@@ -257,6 +259,9 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                 tabDropTargetListener
         );
         setDragNotAccepting();
+        menuFileOpen.setFont(preservedFontToWorkaroundJPackageBug);
+        menuFileRecent.setFont(preservedFontToWorkaroundJPackageBug);
+        menuFileLocalProcesses.setFont(preservedFontToWorkaroundJPackageBug);
     }
 
     private void removeSearchPanel() {
@@ -562,6 +567,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             Component component = menuViewEncoding.getItem(i);
             if (component instanceof EncodingMenuItem) {
                 EncodingMenuItem encodingMenuItem = (EncodingMenuItem) component;
+                encodingMenuItem.setFont(preservedFontToWorkaroundJPackageBug);
                 if (encoding.equals(encodingMenuItem.getEncoding())) {
                     encodingMenuItem.setSelected(true);
                     selectedEncoding = encodingMenuItem;
@@ -617,7 +623,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
 //dropped file(s)
                 var filelist = (List<File>) transfer.getTransferData(DataFlavor.
                         javaFileListFlavor);
-                File[] files = (File[]) filelist.toArray(new File[0]);
+                File[] files = filelist.toArray(new File[0]);
                 for (File file : files) {
                     if (file.isDirectory()) {
                         //

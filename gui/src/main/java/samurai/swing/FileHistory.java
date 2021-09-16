@@ -27,6 +27,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import static samurai.swing.MainFrame.preservedFontToWorkaroundJPackageBug;
+
 public final class FileHistory {
     private final List<File> files = new ArrayList<>();
     private final int numberToRemember = 10;
@@ -89,8 +91,8 @@ public final class FileHistory {
     }
 
     public void addHistory(File[] files) {
-        for (int i = 0; i < files.length; i++) {
-            addHistory(files[i]);
+        for (File file : files) {
+            addHistory(file);
         }
     }
 
@@ -118,6 +120,7 @@ public final class FileHistory {
     private void delete(File file) {
         for (int i = 0; i < files.size(); i++) {
             if (files.get(i).equals(file)) {
+                //noinspection SuspiciousListRemoveInLoop
                 files.remove(i);
             }
         }
@@ -127,7 +130,7 @@ public final class FileHistory {
 
     private void save() {
         cleanOrphans();
-        StringBuffer buf = new StringBuffer();
+        StringBuilder buf = new StringBuilder();
         for (int i = 0; i < files.size(); i++) {
             buf.append(files.get(i).getAbsolutePath());
             if (i < (files.size() - 1)) {
@@ -140,8 +143,8 @@ public final class FileHistory {
 
     private void load() {
         String[] fileArray = config_RecentlyUsedFiles.split(":");
-        for (int i = 0; i < fileArray.length; i++) {
-            files.add(new File(fileArray[i]));
+        for (String s : fileArray) {
+            files.add(new File(s));
         }
     }
 
@@ -159,6 +162,7 @@ public final class FileHistory {
         if (cleanOrphans) {
             for (int i = 0; i < files.size(); i++) {
                 if (!files.get(i).exists() || !files.get(i).isFile()) {
+                    //noinspection SuspiciousListRemoveInLoop
                     files.remove(i);
                 }
             }
@@ -168,8 +172,9 @@ public final class FileHistory {
     private void updateChildMenuItems() {
         cleanOrphans();
         openRecentMenu.removeAll();
-        for (int i = 0; i < files.size(); i++) {
-            JMenuItem aHistory = new HistoryMenu(files.get(i));
+        for (File file : files) {
+            JMenuItem aHistory = new HistoryMenu(file);
+            aHistory.setFont(preservedFontToWorkaroundJPackageBug);
             openRecentMenu.add(aHistory);
         }
         openRecentMenu.setEnabled(files.size() != 0);
