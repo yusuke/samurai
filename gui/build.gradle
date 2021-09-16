@@ -105,7 +105,7 @@ jar {
         exclude 'META-INF/*.RSA'
     }
 }
-
+def appName = "Samurai"
 task packageMacApp(type: Exec) {
     workingDir './'
 
@@ -121,7 +121,7 @@ task packageMacApp(type: Exec) {
                --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
                -XX:ErrorFile=\$USER_HOME/java_error_in_idea_%p.log
                -XX:HeapDumpPath=\$USER_HOME/java_error_in_idea.hprof""",
-            '--name', 'Samurai',
+            '--name', appName,
             '--app-version', "${project.version}",
             '--copyright', 'Yusuke Yamamoto',
             '--vendor', 'Yusuke Yamamoto',
@@ -136,3 +136,25 @@ task packageMacApp(type: Exec) {
 }
 
 tasks.packageMacApp.dependsOn([':gui:jar'])
+
+task notarizeMacApp(type: Exec) {
+    workingDir './'
+
+    commandLine('xcrun',
+            'altool', '--notarize-app', '--primary-bundle-id'
+            , 'one.cafebabe.Samurai', '-u', project.properties['APPLE_DEVELOPER_USER'] ?: "none", '-p', project.properties['APPLE_DEVELOPER_APP_PASSWORD'] ?: "none", '-f', "${appName}-${project.version}.dmg"
+    )
+}
+
+task checkMacAppNotarized(type: Exec) {
+    workingDir './'
+    commandLine('spctl', '--assess', '-vvvv', '--ignore-cache', '--no-cache', "/Applications/${appName}.app")
+}
+
+task stapleMacApp(type: Exec) {
+    workingDir './'
+
+    commandLine('xcrun',
+            'stapler', 'staple', "${appName}-${project.version}.dmg"
+    )
+}
