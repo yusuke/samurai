@@ -15,9 +15,8 @@ public class SpringBootActuatorJSONThreadDump extends ThreadDump {
     public SpringBootActuatorJSONThreadDump(JSONObject json) throws JSONException {
         super(json.getString("threadName"), json.getString("threadName"), json.getString("threadState"));
         IS_BLOCKED = this.getCondition().equals("BLOCKED");
-        IS_IDLE = this.getCondition().equals("WAITING");
+        IS_IDLE = this.getCondition().matches("(WAITING|TIMED_WAITING)");
         IS_DAEMON = json.getBoolean("daemon");
-        IS_BLOCKING = this.getCondition().equals("TIMED_WAITING");
         id = json.getString("threadId");
         if (json.has("lockInfo") && !json.isNull("lockInfo")) {
             JSONObject lockInfo = json.getJSONObject("lockInfo");
@@ -25,6 +24,7 @@ public class SpringBootActuatorJSONThreadDump extends ThreadDump {
         }
 
         JSONArray lockedMonitorsArray = json.getJSONArray("lockedMonitors");
+        IS_BLOCKING = 0 < lockedMonitorsArray.length();
         List<List<String>> lockedMonitors = new ArrayList<>(lockedMonitorsArray.length());
         for (int i = 0; i < lockedMonitorsArray.length(); i++) {
             lockedMonitors.add(lockedMonitorsToStackLine(lockedMonitorsArray.getJSONObject(i)));

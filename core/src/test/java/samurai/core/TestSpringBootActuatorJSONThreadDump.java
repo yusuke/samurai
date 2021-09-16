@@ -16,6 +16,13 @@ class TestSpringBootActuatorJSONThreadDump {
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
         dumpExtractor.analyze(TestSpringBootActuatorJSONThreadDump.class.getResourceAsStream("/SpringBoot/spring-boot-2.5.4-java8.dmp"));
         FullThreadDump fullThreadDump = statistic.getFullThreadDumps().get(0);
+
+        ThreadDump sleepingThread = fullThreadDump.getThreadDumpById("19");
+        assertEquals("sleepingThread", sleepingThread.getName());
+        assertFalse(sleepingThread.isBlocked());
+        assertFalse(sleepingThread.isBlocking());
+        assertTrue(sleepingThread.isIdle());
+
         ThreadDumpSequence[] stackTracesAsArray = statistic.getStackTracesAsArray();
         ThreadDump[] threadDumps = stackTracesAsArray[10].asArray();
         ThreadDump threadDumpInSequence = threadDumps[0];
