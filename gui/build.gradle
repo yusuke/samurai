@@ -159,9 +159,12 @@ task stapleMacApp(type: Exec) {
     )
 }
 
+clean {
+    delete += 'Samurai'
+}
+
 task packageWinApp(type: Exec) {
     workingDir './'
-
     commandLine('jpackage',
             '--verbose',
             '--add-modules', 'java.base,java.desktop,java.naming,jdk.internal.jvmstat,jdk.attach',
