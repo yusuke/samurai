@@ -54,7 +54,7 @@ public class ThreadDumpExtractor {
     public void analyze(InputStream is) throws IOException {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(is))) {
             String line;
-        while (null != (line = reader.readLine())) {
+            while (null != (line = reader.readLine())) {
                 analyzeLine(line);
             }
         }
@@ -171,8 +171,8 @@ public class ThreadDumpExtractor {
                 whileFullThreadDump = true;
                 break;
             case SPRING_ACTUATOR_JSON:
-                
-                fullThreadDump = new SpringBootActuatorFullThreadDump(header);
+
+                fullThreadDump = new SpringBootActuatorJSONFullThreadDump(header);
                 List<ThreadDump> dumps = fullThreadDump.getThreadDumps();
                 for (ThreadDump dump : dumps) {
                     aThreadDump = dump;
@@ -194,7 +194,8 @@ public class ThreadDumpExtractor {
     private void aThreadDumpStarted(String header) {
         switch (currentJVM) {
             case SUN:
-                aThreadDump = new SunThreadDump(header);
+                aThreadDump = ((SunFullThreadDump) fullThreadDump).isSpringBootActuator ?
+                        new SpringBootActuatorThreadDump(header) : new SunThreadDump(header);
                 break;
             case BEA:
                 aThreadDump = new BEAThreadDump(header);

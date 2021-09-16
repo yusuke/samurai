@@ -9,31 +9,45 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TestSpringBootActuatorJSONThreadDump {
+class TestSpringBootActuatorTextThreadDump {
     @Test
     void stacklines() throws IOException {
         ThreadStatistic statistic = new ThreadStatistic();
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
-        dumpExtractor.analyze(TestSpringBootActuatorJSONThreadDump.class.getResourceAsStream("/SpringBoot/spring-boot-2.5.4-java8.dmp"));
+        dumpExtractor.analyze(TestSpringBootActuatorTextThreadDump.class.getResourceAsStream("/SpringBoot/spring-boot-2.5.4-java8-text.dmp"));
         FullThreadDump fullThreadDump = statistic.getFullThreadDumps().get(0);
-        ThreadDumpSequence[] stackTracesAsArray = statistic.getStackTracesAsArray();
-        ThreadDump[] threadDumps = stackTracesAsArray[10].asArray();
-        ThreadDump threadDumpInSequence = threadDumps[0];
-        assertTrue(threadDumpInSequence.isDeadLocked());
-        assertEquals("(originally JSON formatted)", fullThreadDump.getHeader());
         assertTrue(fullThreadDump.isDeadLocked());
-        ThreadDump deadkLock1 = fullThreadDump.getThreadDumpById("20");
+        assertEquals(24, fullThreadDump.getThreadDumps().size());
+
+        assertEquals("Full thread dump OpenJDK 64-Bit Server VM (17+35-2724 mixed mode, emulated-client, sharing):", fullThreadDump.getHeader());
+        ThreadDump lockingThread = fullThreadDump.getThreadDumpById("t@17");
+        assertFalse(lockingThread.isBlocked());
+        assertTrue(lockingThread.isBlocking());
+        assertTrue(lockingThread.isIdle());
+
+        ThreadDump deadkLock1 = fullThreadDump.getThreadDumpById("t@20");
         assertTrue(deadkLock1.isBlocked());
         assertTrue(deadkLock1.isBlocking());
         assertFalse(deadkLock1.isIdle());
         assertTrue(deadkLock1.isDeadLocked());
         List<StackLine> stackLines = deadkLock1.getStackLines();
         System.out.println(stackLines);
-        assertEquals("- waiting to lock <1598621278> (a java.lang.Object)", stackLines.get(0).line);
-        assertEquals("at com.example.actuatordemo.ActuatorDemoApplication.lambda$main$3(ActuatorDemoApplication.java:44)", stackLines.get(1).line);
-        assertEquals("- locked <325888395> (a java.lang.Object)", stackLines.get(2).line);
-        assertEquals("at com.example.actuatordemo.ActuatorDemoApplication$$Lambda$86/0x0000000800c81220.run(Unknown Source)", stackLines.get(3).line);
-        assertEquals("at java.lang.Thread.run(java.base@17-panama/Thread.java:831)", stackLines.get(4).line);
+        assertEquals("   java.lang.Thread.State: BLOCKED", stackLines.get(0).line);
+        assertEquals("\tat app//com.example.actuatordemo.ActuatorDemoApplication.lambda$main$3(ActuatorDemoApplication.java:44)", stackLines.get(1).line);
+        assertEquals("\t- waiting to lock <b5379e1> (a java.lang.Object) owned by \"deadLock2\" t@21", stackLines.get(2).line);
+        assertEquals("\t- locked <41d2f8a> (a java.lang.Object)", stackLines.get(3).line);
+        assertEquals("\tat app//com.example.actuatordemo.ActuatorDemoApplication$$Lambda$95/0x0000000800cc1670.run(Unknown Source)", stackLines.get(4).line);
+        assertEquals("\tat java.base@17/java.lang.Thread.run(Thread.java:833)", stackLines.get(5).line);
+        assertEquals("", stackLines.get(6).line);
+        assertEquals("   Locked ownable synchronizers:", stackLines.get(7).line);
+        assertEquals("\t- None", stackLines.get(8).line);
+
+        ThreadDumpSequence[] stackTracesAsArray = statistic.getStackTracesAsArray();
+        ThreadDump[] threadDumps = stackTracesAsArray[10].asArray();
+        ThreadDump threadDumpInSequence = threadDumps[0];
+        assertEquals("deadLock2", threadDumpInSequence.getName());
+        assertTrue(threadDumpInSequence.isDeadLocked());
+
     }
 
     @Test

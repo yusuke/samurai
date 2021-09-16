@@ -63,7 +63,8 @@ class TestThreadDump {
 
     public void dig2(String path) throws IOException {
         String base = "/" + path;
-        String[] split = new String(Objects.requireNonNull(TestThreadDump.class.getResourceAsStream(base)).readAllBytes()).split("\n");
+        @SuppressWarnings("ConstantConditions")
+        String[] split = new String(TestThreadDump.class.getResourceAsStream(base).readAllBytes()).split("\n");
         for (String file : split) {
             if (!file.matches("^.*\\.(dmp|expected)")) {
                 dig2(path + "/" + file);

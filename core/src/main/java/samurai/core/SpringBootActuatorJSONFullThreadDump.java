@@ -19,14 +19,16 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class SpringBootActuatorFullThreadDump extends FullThreadDump {
-    public SpringBootActuatorFullThreadDump(String header) {
+public class SpringBootActuatorJSONFullThreadDump extends FullThreadDump {
+    private static final long serialVersionUID = -2290629637262545569L;
+
+    public SpringBootActuatorJSONFullThreadDump(String header) {
         super("(originally JSON formatted)");
         try {
             JSONObject jsonObject = new JSONObject(header);
             JSONArray threads = jsonObject.getJSONArray("threads");
             for (int i = 0; i < threads.length(); i++) {
-                addThreadDump(new SpringBootActuatorThreadDump(threads.getJSONObject(i)));
+                addThreadDump(new SpringBootActuatorJSONThreadDump(threads.getJSONObject(i)));
             }
         } catch (JSONException e) {
             e.printStackTrace();

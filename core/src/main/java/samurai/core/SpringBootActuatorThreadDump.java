@@ -1,99 +1,83 @@
+/*
+ * Copyright 2003-2012 Yusuke Yamamoto
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package samurai.core;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class SpringBootActuatorThreadDump extends ThreadDump {
+/*package*/ class SpringBootActuatorThreadDump extends ThreadDump {
+
+    private static final long serialVersionUID = -3467430527681750601L;
     private final String id;
 
-    public SpringBootActuatorThreadDump(JSONObject json) throws JSONException {
-        super(json.getString("threadName"), json.getString("threadName"), json.getString("threadState"));
-        IS_BLOCKED = this.getCondition().equals("BLOCKED");
-        IS_IDLE = this.getCondition().equals("WAITING");
-        IS_DAEMON = json.getBoolean("daemon");
-        IS_BLOCKING = this.getCondition().equals("TIMED_WAITING");
-        id = json.getString("threadId");
-        if (json.has("lockInfo") && !json.isNull("lockInfo")) {
-            JSONObject lockInfo = json.getJSONObject("lockInfo");
-            addStackLine(new StackLine(lockInfoToStackLine(lockInfo)));
-        }
+    private static final Pattern springActuatorThreadIdPattern = Pattern.compile("^.* - Thread (t@[0-9]+)$");
 
-        JSONArray lockedMonitorsArray = json.getJSONArray("lockedMonitors");
-        List<List<String>> lockedMonitors = new ArrayList<>(lockedMonitorsArray.length());
-        for (int i = 0; i < lockedMonitorsArray.length(); i++) {
-            lockedMonitors.add(lockedMonitorsToStackLine(lockedMonitorsArray.getJSONObject(i)));
-        }
-        JSONArray stackTraceArray = json.getJSONArray("stackTrace");
-        for (int i = 0; i < stackTraceArray.length(); i++) {
-            String stackLine = toStackLine(stackTraceArray.getJSONObject(i));
-            Optional<List<String>> first = lockedMonitors.stream().filter(e -> e.get(0).equals(stackLine)).findFirst();
-            first.ifPresentOrElse(strings -> {
-                lockedMonitors.remove(strings);
-                addStackLine(new StackLine(strings.get(0)));
-                addStackLine(new StackLine(strings.get(1)));
-            }, () -> addStackLine(new StackLine(stackLine)));
-        }
+    /*package*/ SpringBootActuatorThreadDump(String header) {
+        super(header);
+        Matcher matcher = springActuatorThreadIdPattern.matcher(header);
+        //noinspection ResultOfMethodCallIgnored
+        matcher.find();
+        this.id = matcher.group(1);
     }
 
-    @Override
-    void addStackLine(String line) {
-        // do nothing
+
+    /*package*/ void addStackLine(String line) {
+        addStackLine(new SunStackLine(line));
     }
 
-    @Override
     public String getId() {
         return this.id;
     }
 
-    static String toStackLine(JSONObject stackeTrace) throws JSONException {
-        String classMethod = String.format("at %s.%s", stackeTrace.getString("className")
-                , stackeTrace.getString("methodName"));
-        String lineNumber;
-        int lineNumberInt = stackeTrace.getInt("lineNumber");
-        switch (lineNumberInt) {
-            case -2:
-                lineNumber = String.format("(%sNative Method)", getModuleName(stackeTrace));
-                break;
-            case -1:
-                lineNumber = "(Unknown Source)";
-                break;
-            default:
-                lineNumber = String.format("(%s%s:%s)", getModuleName(stackeTrace),
-                        stackeTrace.getString("fileName")
-                        , lineNumberInt);
+    public String toString() {
+        StringBuilder toStringed = new StringBuilder(128);
+        toStringed.append(getHeader());
+        for (int i = 0; i < getStackLines().size(); i++) {
+            toStringed.append('\n').append(getStackLines().get(i));
         }
-        return classMethod + lineNumber;
+        return toStringed.toString();
     }
 
-    static String getModuleName(JSONObject stackeTrace) throws JSONException {
-        String moduleName = stackeTrace.getString("moduleName");
-        String moduleVersion = stackeTrace.getString("moduleVersion");
-        if (moduleName != null && moduleVersion != null && !moduleName.equals("null")
-                && !moduleVersion.equals("null")) {
-            return String.format("%s@%s/", moduleName, moduleVersion);
-        } else {
-            return "";
+
+    boolean stateAnalyzed = false;
+
+    void ensureAnalyzed() {
+        if (!stateAnalyzed) {
+            if (size() > 0) {
+                String line = getLine(0).getLine().trim();
+                IS_BLOCKED = line.equals("java.lang.Thread.State: BLOCKED");
+                IS_IDLE = line.equals("java.lang.Thread.State: TIMED_WAITING");
+            }
+            stateAnalyzed = true;
         }
     }
 
-    static List<String> lockedMonitorsToStackLine(JSONObject lockedMonitor) throws JSONException {
-        List<String> lines = new ArrayList<>();
-        lines.add(toStackLine(lockedMonitor.getJSONObject("lockedStackFrame")));
-        lines.add(String.format("- locked <%s> (a %s)",
-                lockedMonitor.getString("identityHashCode"),
-                lockedMonitor.getString("className")));
-
-        return lines;
+    @Override
+    public boolean isBlocked() {
+        ensureAnalyzed();
+        return IS_BLOCKED;
     }
 
-    static String lockInfoToStackLine(JSONObject lockInfo) throws JSONException {
-        return String.format("- waiting to lock <%s> (a %s)",
-                lockInfo.getString("identityHashCode"),
-                lockInfo.getString("className"));
+
+
+    @Override
+    public boolean isIdle() {
+        ensureAnalyzed();
+        return IS_IDLE;
     }
+
 }

@@ -15,6 +15,8 @@
  */
 package samurai.core;
 
+import java.util.regex.Pattern;
+
 /**
  * <p>Title: Samurai</p>
  * <p/>
@@ -33,13 +35,36 @@ public class SunFullThreadDump extends FullThreadDump {
     /*package*/ SunFullThreadDump(String header) {
         super(header);
     }
+    
+    boolean isSpringBootActuator = false;
+
+    int blankLineCount = 0;
 
     /*package*/ boolean isThreadHeader(String line) {
-        return line.startsWith("\"") && line.contains("prio");
+        boolean startsWithDoubleQuote = line.startsWith("\"");
+        boolean containsPrio = line.contains("prio");
+        boolean springBootActuator = line.contains(" - Thread t@");
+
+        if (startsWithDoubleQuote && (
+                containsPrio // ordinary Sun thread dump 
+                        || springBootActuator // Spring Boot Actuator thread dump
+        )) {
+            blankLineCount = 0;
+            isSpringBootActuator = springBootActuator;
+            return true;
+        }
+        return false;
     }
 
     /*package*/ boolean isThreadFooter(String line) {
-        return "".equals(line);
+        if ("".equals(line)) {
+            blankLineCount++;
+        }
+        if (!isSpringBootActuator) {
+            return blankLineCount == 1;
+        } else {
+            return blankLineCount == 2;
+        }
     }
 
     /*package*/ boolean isThreadDumpContinuing(String line) {
