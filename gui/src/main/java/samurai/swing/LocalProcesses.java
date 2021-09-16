@@ -27,10 +27,13 @@ import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class LocalProcesses {
     private final FileHistory fileHistory;
@@ -56,7 +59,6 @@ public class LocalProcesses {
 
             }
         });
-//        updateChildMenuItems();
     }
 
     public JMenu getLocalProcessesMenu() {
@@ -104,25 +106,34 @@ public class LocalProcesses {
 
     private static final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss");
 
+    ExecutorService executor = Executors.newFixedThreadPool(1);
+
     class LocalProcessMenuItem extends JMenuItem {
+        private static final long serialVersionUID = 2629440395264682598L;
         final VM vm;
 
         public LocalProcessMenuItem(VM vm) {
             super(String.format("%s %s", vm.getPid(), vm.getFqcn()));
             this.vm = vm;
-            addActionListener(e -> {
+            addActionListener(e -> executor.execute(() -> {
                 try {
                     Path path = Paths.get(System.getProperty("user.home"),
                             String.format("%s-%d-%s.txt", vm.getFqcn(), vm.getPid(), LocalDateTime.now().format(dateTimeFormatter)));
+                    Files.writeString(path, LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) + "\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                    Files.writeString(path, "pid: " + vm.getPid() + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                    Files.writeString(path, "FQCN: " + vm.getFqcn() + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                    Files.writeString(path, String.format("Command line:\n%s\n\n", vm.getFullCommandLine()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+
+                    SwingUtilities.invokeLater(() -> fileHistory.open(path.toFile()));
+
                     for (int i = 0; i < 3; i++) {
                         Files.write(path, ThreadDumpUtil.getThreadDump(vm.getPid()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                        fileHistory.open(path.toFile());
                         Thread.sleep(1000);
                     }
                 } catch (InterruptedException | AttachNotSupportedException | IOException e1) {
                     e1.printStackTrace();
                 }
-            });
+            }));
         }
 
         public VM getVm() {
