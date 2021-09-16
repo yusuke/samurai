@@ -134,7 +134,7 @@ public final class FileHistory {
         for (int i = 0; i < files.size(); i++) {
             buf.append(files.get(i).getAbsolutePath());
             if (i < (files.size() - 1)) {
-                buf.append(":");
+                buf.append(File.pathSeparator);
             }
         }
         config_RecentlyUsedFiles = buf.toString();
@@ -142,9 +142,12 @@ public final class FileHistory {
     }
 
     private void load() {
-        String[] fileArray = config_RecentlyUsedFiles.split(":");
+        String[] fileArray = config_RecentlyUsedFiles.split(File.pathSeparator);
         for (String s : fileArray) {
-            files.add(new File(s));
+            File file = new File(s);
+            if (file.exists()) {
+                files.add(file);
+            }
         }
     }
 
