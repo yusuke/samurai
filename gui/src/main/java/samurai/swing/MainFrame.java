@@ -52,9 +52,9 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     private final JMenuBar menuBar = new JMenuBar();
     private final JMenu menuFile = new JMenu("menu.file");
     private final JMenuItem menuFileNewTab = new JMenuItem("menu.file.newTab");
-    private final JMenuItem menuFileOpen;
-    private final JMenu menuFileRecent;
-    private JMenu menuFileLocalProcesses;
+    private final JMenuItem menuFileOpen = new JMenuItem("menu.file.open");
+    private final JMenu menuFileRecent = new JMenu("menu.file.openRecent");
+    private JMenu menuFileLocalProcesses = new JMenu("menu.file.processes");
     private final JMenuItem menuFileClose = new JMenuItem("menu.file.close");
 
     private final JMenuItem menuFileExit = new JMenuItem("menu.file.exit");
@@ -95,7 +95,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     //Construct the frame
     public MainFrame() {
         enableEvents(AWTEvent.WINDOW_EVENT_MASK);
-        context = new Context(statusBar, this.tab);
+        context = new Context(statusBar, this.tab,menuFileRecent, this.menuFileLocalProcesses);
         searcher = context.getSearchPanel();
         configDialog = new ConfigDialog(context);
         contentPane = (JPanel) this.getContentPane();
@@ -106,15 +106,10 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         menuFileNewTab
                 .addActionListener(e -> openNewTab());
 
-        menuFileOpen = context.getFileHistory().getOpenMenu(this);
-        menuFileOpen.setText("menu.file.open");
+        context.getFileHistory().setOpenMenuAction(this, menuFileOpen);
         context.getFileHistory().setFileHistoryListener(this);
-        menuFileRecent = context.getFileHistory().getOpenRecentMenu();
-        menuFileRecent.setText("menu.file.openRecent");
         LocalProcesses localProcesses = context.getLocalProcesses();
         if (localProcesses != null) {
-            menuFileLocalProcesses = localProcesses.getLocalProcessesMenu();
-            menuFileLocalProcesses.setText("menu.file.processes");
             menuFileLocalProcesses.setEnabled(true);
         }
 

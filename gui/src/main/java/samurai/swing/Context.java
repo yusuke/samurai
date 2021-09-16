@@ -21,15 +21,13 @@ import samurai.util.ExecuteThread;
 import samurai.util.GUIResourceBundle;
 import samurai.util.Task;
 
-import javax.swing.ImageIcon;
-import javax.swing.JComponent;
-import javax.swing.JLabel;
+import javax.swing.*;
 import java.awt.Component;
 
 public class Context {
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private final Configuration config = new Configuration("samurai");
-    private final FileHistory fileHistory = new FileHistory(config);
+    private final FileHistory fileHistory;
 
     private LocalProcesses localProcesses = null;
     private final CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
@@ -38,14 +36,16 @@ public class Context {
     private final TileTabPanel<SamuraiPanel> tab;
     private final SearchPanel searchPanel;
 
-    public Context(JLabel statusBar, TileTabPanel<SamuraiPanel> tab) {
+    public Context(JLabel statusBar, TileTabPanel<SamuraiPanel> tab, JMenu fileHistory,
+                   JMenu localProcessesMenu) {
         this.statusBar = statusBar;
         this.tab = tab;
         this.searchPanel = new SearchPanel(this);
+        this.fileHistory = new FileHistory(config, fileHistory);
         resources.inject(searchPanel);
         this.config.apply(searchPanel);
         try {
-            this.localProcesses = new LocalProcesses(config, fileHistory);
+            this.localProcesses = new LocalProcesses(config, this.fileHistory, localProcessesMenu);
         } catch (java.lang.NoClassDefFoundError ignored) {
         }
 

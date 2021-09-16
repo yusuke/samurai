@@ -34,38 +34,30 @@ public final class FileHistory {
     private final Configuration config;
     private FileHistoryListener listener = null;
     private final JMenu openRecentMenu;
-    private JMenuItem openMenu = null;
     private final JFileChooser fileChooser = new JFileChooser();
 
-    public FileHistory(Configuration config, FileHistoryListener listener) {
-        this(config);
+    public FileHistory(Configuration config, FileHistoryListener listener, JMenu menu) {
+        this(config, menu);
         setFileHistoryListener(listener);
     }
 
-    public FileHistory(Configuration config) {
+    public FileHistory(Configuration config, JMenu menu) {
         this.config = config;
         config.apply(this);
         load();
-        openRecentMenu = new JMenu();
+        openRecentMenu = menu;
         updateChildMenuItems();
     }
 
-    public JMenu getOpenRecentMenu() {
-        return this.openRecentMenu;
-    }
 
-    public synchronized JMenuItem getOpenMenu(final Component component) {
-        if (null == openMenu) {
-            openMenu = new JMenuItem();
-            openMenu.addActionListener(e -> {
-                if (JFileChooser.APPROVE_OPTION == fileChooser
-                        .showOpenDialog(component)) {
-                    File file = fileChooser.getSelectedFile();
-                    open(file);
-                }
-            });
-        }
-        return this.openMenu;
+    public synchronized void setOpenMenuAction(final Component component, JMenuItem openMenu) {
+        openMenu.addActionListener(e -> {
+            if (JFileChooser.APPROVE_OPTION == fileChooser
+                    .showOpenDialog(component)) {
+                File file = fileChooser.getSelectedFile();
+                open(file);
+            }
+        });
     }
 
 

@@ -39,10 +39,10 @@ public class LocalProcesses {
     private final FileHistory fileHistory;
     private final JMenu localProcessesMenu;
 
-    public LocalProcesses(Configuration config, FileHistory fileHistory) {
+    public LocalProcesses(Configuration config, FileHistory fileHistory, JMenu localProcessesMenu) {
         config.apply(this);
         this.fileHistory = fileHistory;
-        localProcessesMenu = new JMenu();
+        this.localProcessesMenu = localProcessesMenu;
         localProcessesMenu.addMenuListener(new MenuListener() {
             @Override
             public void menuSelected(MenuEvent e) {
