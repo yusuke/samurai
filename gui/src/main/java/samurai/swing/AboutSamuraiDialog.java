@@ -32,9 +32,11 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.util.Objects;
 
 public class AboutSamuraiDialog extends JDialog implements ActionListener {
 
+    private static final long serialVersionUID = -5834151733419398758L;
     public final JButton button1 = new JButton();
     final JLabel imageLabel = new JLabel();
     public final JLabel versionLabel = new JLabel();
@@ -56,7 +58,7 @@ public class AboutSamuraiDialog extends JDialog implements ActionListener {
 
     //Component initialization
     private void jbInit() {
-        image1 = ImageLoader.get("/samurai/swing/images/samurai64.gif");
+        image1 = new ImageIcon(Objects.requireNonNull(MainFrame.class.getResource("images/samurai64.gif")));
         imageLabel.setMaximumSize(new Dimension(64, 64));
         imageLabel.setMinimumSize(new Dimension(64, 64));
         imageLabel.setPreferredSize(new Dimension(64, 64));
