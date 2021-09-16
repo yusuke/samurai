@@ -244,7 +244,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
             openButtonIcon = ImageLoader.get( "/samurai/swing/images/folder_mac.gif");
         }
         if (OSDetector.isWindows()) {
-            openButtonIcon = ImageLoader.get("i/samurai/swing/mages/folder_win.gif");
+            openButtonIcon = ImageLoader.get("/samurai/swing/images/folder_win.gif");
         }
 
         openButton.setBorderPainted(false);
