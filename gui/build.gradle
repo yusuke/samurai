@@ -158,3 +158,29 @@ task stapleMacApp(type: Exec) {
             'stapler', 'staple', "${appName}-${project.version}.dmg"
     )
 }
+
+task packageWinApp(type: Exec) {
+    workingDir './'
+
+    commandLine('jpackage',
+            '--verbose',
+            '--add-modules', 'java.base,java.desktop,java.naming,jdk.internal.jvmstat,jdk.attach',
+            '--main-class', 'samurai.swing.Samurai',
+            '--main-jar', "${buildDir}/libs/${project.name}-${project.version}.jar",
+            '--jlink-options', '--strip-native-commands',
+            '--java-options',
+            """-Xmx128m -Xms128m -XX:+UseSerialGC
+               --add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED
+               --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
+               -XX:ErrorFile=\$USER_HOME/java_error_in_idea_%p.log
+               -XX:HeapDumpPath=\$USER_HOME/java_error_in_idea.hprof""",
+            '--name', appName,
+            '--app-version', "${project.version}",
+            '--copyright', 'Yusuke Yamamoto',
+            '--vendor', 'Yusuke Yamamoto',
+            '--type', 'app-image',
+            '--icon', 'package/samurai.ico',
+            '--input', "${buildDir}/",
+            '--dest', './',
+    )
+}
