@@ -18,11 +18,7 @@ package samurai.core;
 
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.FileInputStream;
-import java.io.PrintWriter;
-import java.io.FileOutputStream;
+import java.io.*;
 import java.util.Objects;
 import java.util.Properties;
 
@@ -63,12 +59,16 @@ class TestThreadDump {
 
     public void dig2(String path) throws IOException {
         String base = "/" + path;
-        @SuppressWarnings("ConstantConditions")
-        String[] split = new String(TestThreadDump.class.getResourceAsStream(base).readAllBytes()).split("\n");
+        InputStream resourceAsStream = TestThreadDump.class.getResourceAsStream(base);
+        if (resourceAsStream == null) {
+            System.out.println(path + " is not a directory.");
+            return;
+        }
+        String[] split = new String(resourceAsStream.readAllBytes()).split("\n");
         for (String file : split) {
-            if (!file.matches("^.*\\.(dmp|expected)")) {
+            if (!file.matches("^.*\\.(txt|dmp|expected)")) {
                 dig2(path + "/" + file);
-            } else if (file.endsWith(".dmp")) {
+            } else if (file.matches("^.*\\.(txt|dmp)")) {
                 examine(base + "/" + file);
             }
         }
@@ -129,9 +129,9 @@ class TestThreadDump {
             String workingDirectory = new File("").getAbsolutePath();
             String outDirectory = workingDirectory;
             if (!workingDirectory.endsWith("core")) {
-                outDirectory+="/core";
+                outDirectory += "/core";
             }
-            outDirectory+="/src/test/resources"+out;
+            outDirectory += "/src/test/resources" + out;
             PrintWriter pw = new PrintWriter(new FileOutputStream(outDirectory));
 
             for (int i = 0; i < statistic.getFullThreadDumpCount(); i++) {
