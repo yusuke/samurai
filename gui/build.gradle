@@ -116,7 +116,7 @@ task packageMacApp(type: Exec) {
             '--main-jar', "${buildDir}/libs/${project.name}-${project.version}.jar",
             '--jlink-options', '--strip-native-commands',
             '--java-options',
-            """-Xmx128m -Xms128m -XX:+UseSerialGC
+            """-Xmx128m -Xms128m -XX:+UseSerialGC -Dsun.java2d.metal=true
                --add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED
                --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
                -XX:ErrorFile=\$USER_HOME/java_error_in_idea_%p.log
