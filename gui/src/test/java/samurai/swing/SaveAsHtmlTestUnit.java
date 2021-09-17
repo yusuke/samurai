@@ -32,7 +32,7 @@ class SaveAsHtmlTestUnit  {
         File target = ThreadDumpPanel.getTargetDirectory(file);
         assertEquals("index", target.getName());
 
-        file = new File("src");
+        file = new File(new File("").getAbsolutePath().endsWith("gui") ? "src" : "gui/src");
         target = ThreadDumpPanel.getTargetDirectory(file);
         assertEquals("src.1", target.getName());
 
