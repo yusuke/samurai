@@ -37,13 +37,14 @@ public class ProcessUtil {
                 int pid = pidInteger;
                 // exclude local process from the list
                 if (pid != localPid) {
-                    MonitoredVm mv = mh.getMonitoredVm(new VmIdentifier("//" + pid + "?mode=r"), 0);
-                    StringMonitor sm = (StringMonitor) mv.findByName("sun.rt.javaCommand");
+                    MonitoredVm vm = mh.getMonitoredVm(new VmIdentifier("//" + pid + "?mode=r"), 0);
+                    StringMonitor sm = (StringMonitor) vm.findByName("sun.rt.javaCommand");
                     String fullCommandLine = "";
                     if (sm != null) {
                         fullCommandLine = sm.stringValue();
                     }
                     vms.add(new VM(pid, fullCommandLine));
+                    vm.detach();
                 }
             } catch (MonitorException me) {
                 // target process is no longer available
