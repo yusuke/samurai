@@ -18,13 +18,7 @@ package samurai.swing;
 import samurai.util.GUIResourceBundle;
 import samurai.util.OSDetector;
 
-import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
@@ -96,6 +90,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     //Construct the frame
     public MainFrame() {
         preservedFontToWorkaroundJPackageBug = menuFile.getFont();
+//        preservedFontToWorkaroundJPackageBug = new Font(Font.MONOSPACED,Font.BOLD,30);
         enableEvents(AWTEvent.WINDOW_EVENT_MASK);
         context = new Context(statusBar, this.tab);
         searcher = context.getSearchPanel();

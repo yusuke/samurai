@@ -78,6 +78,7 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
 //    }
 ////    logWatcher.setDebug(true);
 //    logWatcher.start();
+        tab.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
     }
 
     private void addKeyListenerToComponents(KeyListener listener, Component component) {

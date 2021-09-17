@@ -174,6 +174,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         borderLayout1 = new BorderLayout();
         setLayout(borderLayout1);
         tab.addMouseListener(this);
+        tab.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
         tab.addMouseMotionListener(this);
         tilePanel.addMouseListnerToTitles(this);
         tilePanel.addMouseMotionListnerToTitles(this);

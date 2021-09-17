@@ -1,5 +1,5 @@
 group 'one.cafebabe'
-version '2021.3'
+version '2021.4'
 
 if (hasProperty('buildScan')) {
     buildScan {

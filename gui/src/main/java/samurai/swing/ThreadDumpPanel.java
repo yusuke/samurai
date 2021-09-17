@@ -25,30 +25,10 @@ import samurai.web.Constants;
 import samurai.web.ThreadFilter;
 import samurai.web.VelocityHtmlRenderer;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JEditorPane;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.JScrollPane;
-import javax.swing.JSplitPane;
-import javax.swing.JToggleButton;
-import javax.swing.ListCellRenderer;
-import javax.swing.ListSelectionModel;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 import javax.swing.event.HyperlinkEvent;
 import javax.swing.event.HyperlinkListener;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -339,6 +319,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         }
         jScrollPane3.getViewport().add(threadDumpPanel, null);
         jSplitPane1.setDividerLocation(200);
+        showThreadList.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
 
     }
 
@@ -646,6 +627,16 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     final JScrollPane jScrollPane2 = new JScrollPane();
     final JScrollPane jScrollPane3 = new JScrollPane();
     final JList showThreadList = new JList();
+
+    static class FontFixCellRenderer extends DefaultListCellRenderer {
+        @Override
+        public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+            JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+            label.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+            return label;
+        }
+    }
+
     final JLabel threadDumpStatus = new JLabel();
     File currentFile;
 
@@ -681,6 +672,8 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         threadDumpPanel.setText(resources.getMessage(
                 "ThreadDumpPanel.threadDumpHere"));
         changeBunttonFeel();
+
+        showThreadList.setCellRenderer(new FontFixCellRenderer());
     }
 
     void showThreadList_actionPerformed(ActionEvent e) {
