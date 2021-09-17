@@ -26,22 +26,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TestConfiguration {
-    private Configuration configuration = null;
 
-
-    @BeforeEach
-    void setUp() {
-        /*@todo verify the constructors*/
-        configuration = new Configuration("samuraitest");
-    }
-
-    @AfterEach
-    void tearDown() {
-        configuration = null;
-    }
 
     @Test
     void testGetInt() throws IOException {
+        Configuration configuration = new Configuration("samuraitest");
         int expectedReturn = 10;
         int actualReturn = configuration.getInt("intvalue");
         assertEquals(expectedReturn, actualReturn, "return value");
@@ -51,6 +40,7 @@ class TestConfiguration {
 
     @Test
     void testGetRectangle() throws IOException {
+        Configuration configuration = new Configuration("samuraitest");
         Rectangle expectedReturn = new Rectangle(1, 2, 3, 4);
         Rectangle actualReturn = configuration.getRectangle("rectangle");
         assertEquals(expectedReturn, actualReturn, "return value");
@@ -58,19 +48,23 @@ class TestConfiguration {
 
     }
 
-    public final boolean config_ignoreCase = false;
-    public final int config_intvalue = 0;
-    public final String config_string = null;
-    public final JCheckBox config_checkbox = new JCheckBox();
+    static class ObjectTobeConfigured {
+        public boolean config_ignoreCase = false;
+        public int config_intvalue = 0;
+        public String config_string = null;
+        public JCheckBox config_checkbox = new JCheckBox();
+    }
 
     @Test
     void testApply() {
-        config_checkbox.setSelected(false);
-        configuration.apply(this);
-        assertTrue(config_ignoreCase, "return value");
-        assertEquals(10, config_intvalue, "return value");
-        assertEquals("string", config_string, "return value");
-        assertTrue(config_checkbox.isSelected(), "return value");
+        ObjectTobeConfigured objectTobeConfigured = new ObjectTobeConfigured();
+        Configuration configuration = new Configuration("samuraitest");
+        objectTobeConfigured.config_checkbox.setSelected(false);
+        configuration.apply(objectTobeConfigured);
+        assertTrue(objectTobeConfigured.config_ignoreCase, "return value");
+        assertEquals(10, objectTobeConfigured.config_intvalue, "return value");
+        assertEquals("string", objectTobeConfigured.config_string, "return value");
+        assertTrue(objectTobeConfigured.config_checkbox.isSelected(), "return value");
     }
 
 }
