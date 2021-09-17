@@ -19,33 +19,26 @@ package samurai.util;
 import org.junit.jupiter.api.*;
 
 import javax.swing.KeyStroke;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 
+import static java.awt.event.InputEvent.CTRL_DOWN_MASK;
+import static java.awt.event.InputEvent.META_DOWN_MASK;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TestCutomizableKeyStroke {
-    private CustomizableKeyStroke cutomizableKeyStroke = null;
-
-    @BeforeEach
-    void setUp() {
-        cutomizableKeyStroke = new CustomizableKeyStroke(GUIResourceBundle.getInstance());
-    }
-
-    @AfterEach
-    void tearDown() {
-        cutomizableKeyStroke = null;
-    }
-
     @Test
     void testGetKeyStroke() {
+        CustomizableKeyStroke cutomizableKeyStroke = new CustomizableKeyStroke(GUIResourceBundle.getInstance());
         String key = "menu.edit.copy";
         KeyStroke expectedReturn = null;
         if (samurai.util.OSDetector.isWindows()) {
-            expectedReturn = KeyStroke.getKeyStroke(KeyEvent.VK_C, KeyEvent.CTRL_MASK);
+            expectedReturn = KeyStroke.getKeyStroke(KeyEvent.VK_C, CTRL_DOWN_MASK);
         }
         if (samurai.util.OSDetector.isMac()) {
-            expectedReturn = KeyStroke.getKeyStroke(KeyEvent.VK_C, KeyEvent.META_MASK);
+            expectedReturn = KeyStroke.getKeyStroke(KeyEvent.VK_C, META_DOWN_MASK);
         }
+        
         KeyStroke actualReturn = cutomizableKeyStroke.getKeyStroke(key);
         assertEquals(expectedReturn, actualReturn, "return value");
     }
