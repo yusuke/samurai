@@ -628,15 +628,6 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     final JScrollPane jScrollPane3 = new JScrollPane();
     final JList showThreadList = new JList();
 
-    static class FontFixCellRenderer extends DefaultListCellRenderer {
-        @Override
-        public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-            JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-            label.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
-            return label;
-        }
-    }
-
     final JLabel threadDumpStatus = new JLabel();
     File currentFile;
 
@@ -673,7 +664,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                 "ThreadDumpPanel.threadDumpHere"));
         changeBunttonFeel();
 
-        showThreadList.setCellRenderer(new FontFixCellRenderer());
+//        showThreadList.setCellRenderer(new FontFixCellRenderer());
     }
 
     void showThreadList_actionPerformed(ActionEvent e) {
@@ -719,6 +710,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
             setText(value.toString());
             setBackground(isSelected ? fgColor : Color.white);
             setForeground(isSelected ? Color.white : fgColor);
+            setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
             return this;
         }
     }

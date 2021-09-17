@@ -46,7 +46,7 @@ public class ConfigDialog extends javax.swing.JDialog {
     //  public JPanel searchConfigPanel = new JPanel();
 //  public JCheckBox config_useRegexp = new JCheckBox();
     //  public JCheckBox config_ignoreCase = new JCheckBox();
-    public final javax.swing.JLabel jLabel1 = new javax.swing.JLabel();
+    public final javax.swing.JLabel labelDumpPanelFontFamily = new javax.swing.JLabel();
     java.awt.GridBagLayout gridBagLayout2 = new java.awt.GridBagLayout();
     //  JPanel jPanel1 = new JPanel();
     java.awt.GridBagLayout gridBagLayout3 = new java.awt.GridBagLayout();
@@ -77,7 +77,7 @@ public class ConfigDialog extends javax.swing.JDialog {
         //panel root
         this.getContentPane().setLayout(gridBagLayout1);
         config_wrapLog.setText("*ConfigDialog.wrapLine*");
-        jLabel1.setText("*ConfigDialog.fontFamily*");
+        labelDumpPanelFontFamily.setText("*ConfigDialog.fontFamily*");
         jTabbedPane1.setForeground(Color.black);
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.TOP);
 //    jPanel1.setLayout(gridBagLayout3);
@@ -138,7 +138,7 @@ public class ConfigDialog extends javax.swing.JDialog {
                 ConfigDialog_config_dumpFontFamily_itemAdapter(this));
         dumpConfigPanel.add(config_dumpFontFamily, new java.awt.GridBagConstraints(1, 1, 1, 1, 0.0, 0.0
                 , java.awt.GridBagConstraints.WEST, java.awt.GridBagConstraints.NONE, new java.awt.Insets(0, 0, 5, 0), 0, 0));
-        dumpConfigPanel.add(jLabel1, new java.awt.GridBagConstraints(0, 1, 1, 1, 0.0, 0.0
+        dumpConfigPanel.add(labelDumpPanelFontFamily, new java.awt.GridBagConstraints(0, 1, 1, 1, 0.0, 0.0
                 , java.awt.GridBagConstraints.EAST, java.awt.GridBagConstraints.NONE, new java.awt.Insets(0, 0, 0, 0), 0, 0));
         dumpConfigPanel.add(dumpFontSize, new java.awt.GridBagConstraints(0, 2, 1, 1, 0.0, 0.0
                 , java.awt.GridBagConstraints.EAST, java.awt.GridBagConstraints.NONE, new java.awt.Insets(0, 0, 5, 0), 0, 0));
@@ -232,6 +232,16 @@ public class ConfigDialog extends javax.swing.JDialog {
                 javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0),
                 ESC_ACTION_KEY
         );
+        jTabbedPane1.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+        labelFontFamily.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+        labelDumpPanelFontFamily.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+        dumpFontSize.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+        okButton.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+        cancelButton.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+        labelFontSize.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+        config_shrinkIdleThreads.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+        config_wrapDump.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+        config_wrapLog.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
     }
 
     static final String ESC_ACTION_KEY = "ESC_ACTION_KEY";

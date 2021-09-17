@@ -15,9 +15,9 @@
  */
 package samurai.util;
 
-import javax.swing.JCheckBox;
-import javax.swing.JComboBox;
-import javax.swing.JTextField;
+import samurai.swing.MainFrame;
+
+import javax.swing.*;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Point;
@@ -227,9 +227,21 @@ public final class Configuration implements Runnable {
                     } else if (type.equals(JComboBox.class)) {
                         JComboBox comboBox = (JComboBox) field.get(obj);
                         comboBox.setSelectedItem(getString(property));
+                        comboBox.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+                        comboBox.setRenderer(new FontFixCellRenderer());
                     } else if (type.equals(JTextField.class)) {
                         JTextField textField = (JTextField) field.get(obj);
                         textField.setText(getString(property));
+                        textField.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+                    }else if(type.equals(JScrollBar.class)){
+                        JScrollBar scrollBar = (JScrollBar) field.get(obj);
+                        scrollBar.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+                    }else if(type.equals(JLabel.class)){
+                        JLabel scrollBar = (JLabel) field.get(obj);
+                        scrollBar.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+                    }else if(type.equals(JTabbedPane.class)){
+                        JTabbedPane scrollBar = (JTabbedPane) field.get(obj);
+                        scrollBar.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
                     }
                 } catch (IllegalAccessException iae) {
                     throw new AssertionError(iae.getMessage());
@@ -240,6 +252,15 @@ public final class Configuration implements Runnable {
             ((ConfigurationListener) obj).onConfigurationChanged(this);
         }
 
+    }
+
+    static class FontFixCellRenderer extends DefaultListCellRenderer {
+        @Override
+        public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+            JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+            label.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+            return label;
+        }
     }
 
     public void store(Object obj) {

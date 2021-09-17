@@ -16,3 +16,5 @@ savedhtml
 build
 .gradle
 *.dmg
+out
+gui/Samurai

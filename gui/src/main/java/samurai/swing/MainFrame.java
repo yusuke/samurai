@@ -42,7 +42,7 @@ import java.util.List;
 public class MainFrame extends JFrame implements KeyListener, FileHistoryListener, CloseListener {
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private final JMenuItem menuEditPreferences = new JMenuItem("menu.edit.preferences");
-    public final ConfigDialog configDialog;
+
     private final JMenuBar menuBar = new JMenuBar();
     private final JMenu menuFile = new JMenu("menu.file");
     private final JMenuItem menuFileNewTab = new JMenuItem("menu.file.newTab");
@@ -74,27 +74,27 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             setSelectedEncoding(getSelectedComponent().getEncoding());
         }
     };
-    private final Context context;
+    final JLabel statusBar = new JLabel();
+    private final Context context = new Context(statusBar, this.tab);
+    public final ConfigDialog configDialog = new ConfigDialog(context);
+
 
     private EncodingMenuItem selectedEncoding;
 
     final JPanel contentPane;
     final JPanel southPane = new JPanel();
-    final JLabel statusBar = new JLabel();
     final BorderLayout borderLayout1 = new BorderLayout();
     final BorderLayout borderLayout2 = new BorderLayout();
     final SearchPanel searcher;
     private boolean searchPanelAdded = false;
-    public static Font preservedFontToWorkaroundJPackageBug;
+    public static Font preservedFontToWorkaroundJPackageBug
+            = new JLabel().getFont();
+//            = new Font(Font.MONOSPACED, Font.BOLD, 30);
 
     //Construct the frame
     public MainFrame() {
-        preservedFontToWorkaroundJPackageBug = menuFile.getFont();
-//        preservedFontToWorkaroundJPackageBug = new Font(Font.MONOSPACED,Font.BOLD,30);
         enableEvents(AWTEvent.WINDOW_EVENT_MASK);
-        context = new Context(statusBar, this.tab);
         searcher = context.getSearchPanel();
-        configDialog = new ConfigDialog(context);
         contentPane = (JPanel) this.getContentPane();
         contentPane.setLayout(borderLayout1);
         this.setSize(new Dimension(400, 450));
