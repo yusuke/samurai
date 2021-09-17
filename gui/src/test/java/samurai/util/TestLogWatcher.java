@@ -90,6 +90,7 @@ class TestLogWatcher implements LogMonitor {
     void testSingleFile() throws IOException, InterruptedException {
         resetFlags();
         File file = new File("hogehogehoge.txt");
+        file.deleteOnExit();
         //noinspection ResultOfMethodCallIgnored
         file.delete();
         logWatcher = new LogWatcher();
