@@ -18,6 +18,7 @@ package samurai.swing;
 
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.awt.Color;
@@ -61,6 +62,7 @@ class TestPlotData implements GraphCanvas {
         plotData.drawGraph(this, 0, 0, 100, 100, 200);
     }
 
+    @Disabled
     @Test
     void testDrawGraph1() {
         plotData.setLabels(new String[]{"red"});
