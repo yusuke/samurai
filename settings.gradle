@@ -1,5 +1,6 @@
 rootProject.name = 'samurai'
 
 include 'samurai-core'
+include 'samurai-remotedump'
 include 'samurai-web'
 include 'samurai-swing'
