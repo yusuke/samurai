@@ -1,4 +1,6 @@
 rootProject.name = 'samurai'
 
+def mainClassName = "one.cafebabe.samurai.swing.Samurai"
+
 include 'core'
 include 'gui'
