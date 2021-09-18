@@ -16,6 +16,9 @@
 package samurai.swing;
 
 
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -25,7 +28,8 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
-public class SplitTabPanelTest extends JFrame {
+@Execution(ExecutionMode.CONCURRENT)
+class SplitTabPanelTest extends JFrame {
     final GridBagLayout gbl = new GridBagLayout();
     final BorderLayout borderLayout1 = new BorderLayout();
     final TilePanel splitTabPanel = new TilePanel(true);

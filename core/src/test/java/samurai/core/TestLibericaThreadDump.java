@@ -17,13 +17,15 @@ package samurai.core;
 
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 
 import java.io.IOException;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
+@Execution(ExecutionMode.CONCURRENT)
 class TestLibericaThreadDump {
 
     @Test

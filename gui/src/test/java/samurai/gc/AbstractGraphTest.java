@@ -16,13 +16,17 @@
 package samurai.gc;
 
 
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
+
 import java.awt.Color;
 import java.util.List;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public abstract class AbstractGraphTest implements LineGraph, LineGraphRenderer {
+@Execution(ExecutionMode.CONCURRENT)
+abstract class AbstractGraphTest implements LineGraph, LineGraphRenderer {
     protected int count = 0;
 
     final List<double[]> expected = new ArrayList<>();

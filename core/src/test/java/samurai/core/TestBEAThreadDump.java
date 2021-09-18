@@ -16,6 +16,8 @@
 package samurai.core;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 import samurai.web.VelocityHtmlRenderer;
 
 import java.io.File;
@@ -23,6 +25,7 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Execution(ExecutionMode.CONCURRENT)
 class TestBEAThreadDump  {
     final samurai.core.ThreadStatistic statistic = new ThreadStatistic();
 

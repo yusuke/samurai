@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package samurai.core;
+package samurai.core.example;
 
 public class IdleExample {
     public static void main(String[] args) throws Exception {

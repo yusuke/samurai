@@ -17,6 +17,8 @@ package samurai.util;
 
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 
 import javax.swing.KeyStroke;
 import java.awt.*;
@@ -26,6 +28,7 @@ import static java.awt.event.InputEvent.CTRL_DOWN_MASK;
 import static java.awt.event.InputEvent.META_DOWN_MASK;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Execution(ExecutionMode.CONCURRENT)
 class TestCutomizableKeyStroke {
     @Test
     void testGetKeyStroke() {

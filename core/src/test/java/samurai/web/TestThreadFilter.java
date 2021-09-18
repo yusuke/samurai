@@ -16,15 +16,17 @@
 package samurai.web;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 import samurai.core.ThreadDumpExtractor;
 import samurai.core.ThreadDumpSequence;
 import samurai.core.ThreadStatistic;
 
-import java.io.File;
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Execution(ExecutionMode.CONCURRENT)
 class TestThreadFilter   {
     final ThreadStatistic statistic = new ThreadStatistic();
 

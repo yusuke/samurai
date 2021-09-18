@@ -17,6 +17,8 @@ package samurai.util;
 
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 
 import javax.swing.JCheckBox;
 import java.awt.Rectangle;
@@ -25,6 +27,7 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@Execution(ExecutionMode.CONCURRENT)
 class TestConfiguration {
 
 

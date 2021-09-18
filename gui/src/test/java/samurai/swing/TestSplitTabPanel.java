@@ -18,10 +18,13 @@ package samurai.swing;
 
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 
 import javax.swing.JTextArea;
 import java.awt.Dimension;
 
+@Execution(ExecutionMode.CONCURRENT)
 class TestSplitTabPanel {
 
     @Test

@@ -17,6 +17,8 @@ package samurai.util;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 import samurai.tail.LogMonitor;
 import samurai.tail.LogWatcher;
 
@@ -24,6 +26,7 @@ import java.io.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Execution(ExecutionMode.CONCURRENT)
 class TestLogWatcher implements LogMonitor {
     LogWatcher logWatcher;
     final boolean DEBUG = false;

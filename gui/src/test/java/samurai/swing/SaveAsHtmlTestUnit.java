@@ -16,12 +16,15 @@
 package samurai.swing;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 import samurai.core.ThreadStatistic;
 
 import java.io.File;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Execution(ExecutionMode.CONCURRENT)
 class SaveAsHtmlTestUnit  {
     ThreadStatistic statistic = new ThreadStatistic();
 

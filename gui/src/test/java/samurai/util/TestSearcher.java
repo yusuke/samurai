@@ -16,7 +16,10 @@
 package samurai.util;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 
+@Execution(ExecutionMode.CONCURRENT)
 class TestSearcher  {
  
     String target = "a b c a";

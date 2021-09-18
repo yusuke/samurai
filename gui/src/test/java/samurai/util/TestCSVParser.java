@@ -17,6 +17,8 @@ package samurai.util;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 import samurai.gc.LineGraphRenderer;
 import samurai.gc.LineGraph;
 
@@ -24,6 +26,7 @@ import java.awt.Color;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Execution(ExecutionMode.CONCURRENT)
 class TestCSVParser implements LineGraph, LineGraphRenderer {
 
 
