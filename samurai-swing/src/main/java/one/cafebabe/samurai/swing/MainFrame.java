@@ -510,7 +510,8 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                     searcher.config_searchText.grabFocus();
             }
         } else if (null != textCom) {
-            if (e.getKeyChar() != KeyEvent.CHAR_UNDEFINED && ((e.getModifiers() & InputEvent.SHIFT_MASK) == e.getModifiers())) {
+            if (e.getKeyChar() != KeyEvent.CHAR_UNDEFINED
+                    && ((e.getModifiersEx() & InputEvent.SHIFT_DOWN_MASK) == e.getModifiersEx())) {
                 switch (e.getKeyChar()) {
                     case KeyEvent.VK_BACK_SPACE:
                         //delete one character from the search text
@@ -598,7 +599,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         setAvailability();
     }
 
-    JFrame THIS = this;
     final Border border = new LineBorder(SystemColor.textHighlight, 2, true);
     final Border emptyBorder = new EmptyBorder(2, 2, 2, 2);
 
