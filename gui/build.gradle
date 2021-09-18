@@ -90,7 +90,7 @@ signing {
     sign publishing.publications.mavenJava
 }
 
-def mainClassName = "samurai.swing.Samurai"
+def mainClassName = "one.cafebabe.samurai.swing.Samurai"
 
 jar {
     zip64 = true
@@ -112,7 +112,7 @@ task packageMacApp(type: Exec) {
     commandLine('jpackage',
             '--verbose',
             '--add-modules', 'java.base,java.desktop,java.naming,jdk.internal.jvmstat,jdk.attach',
-            '--main-class', 'samurai.swing.Samurai',
+            '--main-class', "$mainClassName",
             '--main-jar', "${buildDir}/libs/${project.name}-${project.version}.jar",
             '--jlink-options', '--strip-native-commands',
             '--java-options',
@@ -168,7 +168,7 @@ task packageWinApp(type: Exec) {
     commandLine('jpackage',
             '--verbose',
             '--add-modules', 'java.base,java.desktop,java.naming,jdk.internal.jvmstat,jdk.attach',
-            '--main-class', 'samurai.swing.Samurai',
+            '--main-class', "$mainClassName",
             '--main-jar', "${buildDir}/libs/${project.name}-${project.version}.jar",
             '--jlink-options', '--strip-native-commands',
             '--java-options',
