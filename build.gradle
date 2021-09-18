@@ -21,7 +21,7 @@ task packageMacApp(type: Exec) {
             '--verbose',
             '--add-modules', 'java.base,java.desktop,java.naming,jdk.internal.jvmstat,jdk.attach',
             '--main-class', "$mainClassName",
-            '--main-jar', "${projectDir}/gui/build/libs/gui-${project.version}.jar",
+            '--main-jar', "${projectDir}/samurai-swing/build/libs/samurai-swing-${project.version}.jar",
             '--jlink-options', '--strip-native-commands',
             '--java-options',
             """-Xmx128m -Xms128m -XX:+UseSerialGC -Dsun.java2d.metal=true
@@ -34,7 +34,7 @@ task packageMacApp(type: Exec) {
             '--copyright', 'Yusuke Yamamoto',
             '--vendor', 'Yusuke Yamamoto',
             '--icon', 'package/samurai.icns',
-            '--input', "${projectDir}/gui/build/",
+            '--input', "${projectDir}/samurai-swing/build/",
             '--dest', './build/',
             '--type', 'dmg',
             '--mac-package-identifier', 'samurai.swing.Samurai',
@@ -44,7 +44,7 @@ task packageMacApp(type: Exec) {
     )
 }
 
-tasks.packageMacApp.dependsOn([':gui:jar'])
+tasks.packageMacApp.dependsOn([':samurai-swing:jar'])
 
 task notarizeMacApp(type: Exec) {
     workingDir './'
@@ -75,7 +75,7 @@ task packageWinApp(type: Exec) {
             '--verbose',
             '--add-modules', 'java.base,java.desktop,java.naming,jdk.internal.jvmstat,jdk.attach',
             '--main-class', "$mainClassName",
-            '--main-jar', "${projectDir}/gui/build/libs/gui-${project.version}.jar",
+            '--main-jar', "${projectDir}/samurai-swing/build/libs/samurai-swing-${project.version}.jar",
             '--jlink-options', '--strip-native-commands',
             '--java-options',
             """-Xmx128m -Xms128m -XX:+UseSerialGC
@@ -89,7 +89,7 @@ task packageWinApp(type: Exec) {
             '--vendor', 'Yusuke Yamamoto',
             '--type', 'app-image',
             '--icon', 'package/samurai.ico',
-            '--input', "${projectDir}/gui/build/",
+            '--input', "${projectDir}/samurai-swing/build/",
             '--dest', './build/',
     )
 }
