@@ -89,13 +89,12 @@ signing {
     sign publishing.publications.mavenJava
 }
 
-def mainClassName = "one.cafebabe.samurai.swing.Samurai"
 
 jar {
     zip64 = true
     duplicatesStrategy(DuplicatesStrategy.INCLUDE)
     manifest {
-        attributes "Main-Class": "$mainClassName"
+        attributes "Main-Class": project.properties['mainClassName']
     }
 
     from(configurations.runtimeClasspath.collect { entry -> zipTree(entry) }) {
