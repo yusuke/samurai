@@ -35,7 +35,7 @@ class SaveAsHtmlTestUnit  {
         File target = ThreadDumpPanel.getTargetDirectory(file);
         assertEquals("index", target.getName());
 
-        file = new File(new File("").getAbsolutePath().endsWith("gui") ? "src" : "gui/src");
+        file = new File(new File("").getAbsolutePath().endsWith("samurai-swing") ? "src" : "samurai-swing/src");
         target = ThreadDumpPanel.getTargetDirectory(file);
         assertEquals("src.1", target.getName());
 

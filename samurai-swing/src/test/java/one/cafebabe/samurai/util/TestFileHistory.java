@@ -71,7 +71,7 @@ class TestFileHistory {
         FileHistory history = new FileHistory(configuration);
         history.clearHistory();
         history.enableCleaningOrphans();
-        String base = new File("").getAbsolutePath().endsWith("gui") ? "" : "gui/";
+        String base = new File("").getAbsolutePath().endsWith("samurai-swing") ? "" : "samurai-swing/";
         File file1 = new File(base + "src/main/resources/one/cafebabe/samurai/swing/images/close_hover.gif");
         File file2 = new File(base + "src/main/resources/one/cafebabe/samurai/swing/images/close_push.gif");
         File file3 = new File(base + "src/main/resources/one/cafebabe/samurai/swing/images/close.gif");

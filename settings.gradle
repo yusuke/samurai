@@ -1,4 +1,5 @@
 rootProject.name = 'samurai'
 
 include 'samurai-core'
+include 'samurai-web'
 include 'samurai-swing'

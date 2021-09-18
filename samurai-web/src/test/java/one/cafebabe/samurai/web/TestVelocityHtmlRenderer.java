@@ -23,6 +23,10 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Comparator;
+import java.util.ResourceBundle;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -77,6 +81,12 @@ class TestVelocityHtmlRenderer  {
         analyzer.analyze(TestVelocityHtmlRenderer.class.getResourceAsStream("/Sun/1.4.2_03Sunstacked.dmp"));
         VelocityHtmlRenderer renderer = new VelocityHtmlRenderer("one/cafebabe/samurai/web/outcss.vm");
         renderer.saveTo(statistic, new File("savedhtml"), (finished, all) -> assertTrue(finished <= all));
+        File savedhtml = new File("savedhtml");
+        //noinspection ResultOfMethodCallIgnored
+        Files.walk(savedhtml.toPath())
+                .sorted(Comparator.reverseOrder())
+                .map(Path::toFile)
+                .forEach(File::delete);
     }
 
 }

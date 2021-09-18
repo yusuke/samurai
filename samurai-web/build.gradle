@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'signing'
+    id 'maven-publish'
+}
+
+group 'one.cafebabe'
+version '2021.4'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+compileJava {
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+    options.compilerArgs += ['--add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED',
+                             '--add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED']
+}
+
+compileTestJava {
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
+    options.compilerArgs += ['--add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED',
+                             '--add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED']
+}
+
+dependencies {
+    implementation project(':samurai-core')
+    implementation 'org.apache.velocity:velocity:1.7'
+    implementation 'com.intellij:annotations:12.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+}
+
+test {
+    useJUnitPlatform()
+}
