@@ -36,7 +36,7 @@ class TestThreadFilter   {
         dumpExtractor.analyze(TestThreadFilter.class.getResourceAsStream("/Apple/1.4.2_08Apple.dmp"));
         ThreadFilter filter = new ThreadFilter();
         filter.setThreadId("0x0050b3d0");
-        filter.setMode(Constants.MODE_SEQUENCE);
+        filter.setMode(ThreadFilter.View.Sequence);
         ThreadDumpSequence dumps = filter.doFilter(statistic);
         Assertions.assertEquals(3, dumps.size());
         Assertions.assertEquals("0x0050b3d0", dumps.get(0).getId());
@@ -52,7 +52,7 @@ class TestThreadFilter   {
         Assertions.assertFalse(dumps.get(2).isIdle());
         Assertions.assertTrue(dumps.get(2).isBlocked());
 
-        filter.setMode(Constants.MODE_FULL);
+        filter.setMode(ThreadFilter.View.ThreadDump);
         filter.setFullThreadIndex(0);
         dumps = filter.doFilter(statistic);
         Assertions.assertEquals(10, dumps.size());

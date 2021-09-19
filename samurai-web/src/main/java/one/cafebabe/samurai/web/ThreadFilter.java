@@ -24,7 +24,7 @@ import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 
 public class ThreadFilter implements Serializable {
-    private String mode;
+    private View mode;
     private int fullThreadIndex;
     private String threadId;
     public boolean config_shrinkIdleThreads = false;
@@ -34,32 +34,38 @@ public class ThreadFilter implements Serializable {
         reset();
     }
 
+    public enum View {
+        Table,
+        Sequence,
+        ThreadDump
+    }
+
     public void reset() {
-        mode = Constants.MODE_TABLE;
+        mode = View.Table;
         fullThreadIndex = 0;
         threadId = "";
         config_shrinkIdleThreads = true;
     }
 
-    public String getMode() {
+    public View getMode() {
         return this.mode;
     }
 
     public boolean isTableView() {
-        return mode.equals(Constants.MODE_TABLE);
+        return mode == View.Table;
     }
 
     public boolean isSequenceView() {
-        return mode.equals(Constants.MODE_SEQUENCE);
+        return mode == View.Sequence;
     }
 
     public boolean isThreadDumpView() {
-        return mode.equals(Constants.MODE_FULL);
+        return mode == View.ThreadDump;
     }
 
     public ThreadDumpSequence doFilter(ThreadStatistic statistic) {
         ThreadDumpSequence sequence = null;
-        if (this.mode.equals(Constants.MODE_FULL)) {
+        if (this.mode == View.ThreadDump) {
             FullThreadDump fullThreadDump = statistic.getFullThreadDump(this.
                     fullThreadIndex);
 //      threadDumps = new StackTrace[fullThreadDump.getThreadCount()];
@@ -92,21 +98,21 @@ public class ThreadFilter implements Serializable {
         this.threadId = threadId;
     }
 
-    public void setMode(String mode) {
+    public void setMode(View mode) {
         this.mode = mode;
     }
 
     public void setQuery(String query) {
         if (query.contains(Constants.MODE_TABLE)) {
-            mode = Constants.MODE_TABLE;
+            mode = View.Table;
         }
         if (query.contains(Constants.MODE_FULL)) {
-            mode = Constants.MODE_FULL;
+            mode = View.ThreadDump;
         }
         if (query.contains(Constants.MODE_SEQUENCE)) {
-            mode = Constants.MODE_SEQUENCE;
+            mode = View.Sequence;
         }
-        if (getMode().equals(Constants.MODE_FULL)) {
+        if (getMode() == View.ThreadDump) {
             String fullThreadIndex = getParameter(query, Constants.FULL_THREAD_INDEX);
             try {
                 if (null != fullThreadIndex) {

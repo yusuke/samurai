@@ -15,94 +15,91 @@
  */
 package one.cafebabe.samurai.web;
 
+import one.cafebabe.samurai.core.StackLine;
+import one.cafebabe.samurai.core.ThreadDump;
 import one.cafebabe.samurai.core.ThreadDumpSequence;
 import one.cafebabe.samurai.core.ThreadStatistic;
-import org.apache.velocity.Template;
-import org.apache.velocity.VelocityContext;
-import org.apache.velocity.app.Velocity;
-import one.cafebabe.samurai.core.StackLine;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.context.Context;
+import org.thymeleaf.templatemode.TemplateMode;
+import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.StringWriter;
-import java.io.Writer;
+import java.io.*;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-public class VelocityHtmlRenderer implements Constants {
+public class ThymeleafHtmlRenderer implements Constants {
     private final ResourceBundle resource = ResourceBundle.getBundle("one.cafebabe.samurai.web.messages");
     public String config_wrapDump = "true";
-    public final String style;
-    private Template tableView;
-    private Template threaddumpView;
-    private Template sequenceView;
     private String baseurl;
     private final Util util = new Util();
 
-    public VelocityHtmlRenderer(String style) {
-        this(style, null);
+    ClassLoaderTemplateResolver resolver = getResolver();
+
+    public ThymeleafHtmlRenderer() {
+        this(null);
     }
 
-    public VelocityHtmlRenderer(String style, @Nullable String baseurl) {
-        this.style = style;
+    public ThymeleafHtmlRenderer(@Nullable String baseurl) {
         this.baseurl = baseurl;
         if (baseurl == null) {
             try {
                 //noinspection ConstantConditions
-                this.baseurl = this.getClass().getResource("/one/cafebabe/samurai/web/images/").toURI().toString();
+                this.baseurl = this.getClass().getResource("/one/cafebabe/samurai/web/table.html").toURI().toString();
             } catch (URISyntaxException e) {
                 e.printStackTrace();
             }
         }
-
         if (this.baseurl.endsWith(".jar")) {
             this.baseurl = "jar:" + this.baseurl + "!/";
         }
-
-        Velocity.setProperty("input.encoding", "UTF-8");
-        Velocity.setProperty("resource.loader", "class");
-        Velocity.setProperty("class.resource.loader.class",
-                "org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader");
-        Velocity.setProperty("runtime.log.logsystem.class", "one.cafebabe.samurai.web.NullVelocityLogger");
-        try {
-            Velocity.init();
-            tableView = Velocity.getTemplate("one/cafebabe/samurai/web/table.vm");
-            threaddumpView = Velocity.getTemplate("one/cafebabe/samurai/web/threaddump.vm");
-            sequenceView = Velocity.getTemplate("one/cafebabe/samurai/web/sequence.vm");
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
     }
 
-    public String render(ThreadFilter filter, ThreadStatistic statistic, Map myContext) {
+    public String process(@NotNull String template, Context context) {
+        TemplateEngine engine = new TemplateEngine();
+        engine.setTemplateResolver(resolver);
+        return engine.process(template, context);
+    }
 
-        VelocityContext context = new VelocityContext(new VelocityContext(myContext));
-        Writer writer = new StringWriter(20480);
-        context.put("resource", resource);
-        context.put("style", style);
-        context.put("wrap", config_wrapDump);
-        context.put("stats", statistic);
-        context.put("filter", filter);
-        context.put("util", util);
-        context.put("baseurl", baseurl);
+
+    @NotNull
+    public static ClassLoaderTemplateResolver getResolver() {
+        ClassLoaderTemplateResolver resolver = new ClassLoaderTemplateResolver();
+        resolver.setTemplateMode(TemplateMode.HTML);
+        resolver.setPrefix("one/cafebabe/samurai/web/");
+        resolver.setSuffix(".html");
+        resolver.setCacheable(true);
+        resolver.setCacheTTLMs(60000L);
+        resolver.setCharacterEncoding("UTF-8");
+        return resolver;
+    }
+
+    public String render(ThreadFilter filter, ThreadStatistic statistic, Map<String, Object> map) {
+        Context context = new Context();
+        context.setVariables(map);
+        context.setVariable("resource", resource);
+        context.setVariable("wrap", config_wrapDump);
+        context.setVariable("stats", statistic);
+        context.setVariable("filter", filter);
+        context.setVariable("util", util);
+        context.setVariable("baseurl", baseurl);
 
         try {
-            if (filter.isTableView()) {
-                tableView.merge(context, writer);
-            } else if (filter.isThreadDumpView()) {
-                threaddumpView.merge(context, writer);
-            } else if (filter.isSequenceView()) {
-                sequenceView.merge(context, writer);
+            switch (filter.getMode()) {
+                case Table:
+                    return process("table", context);
+                case ThreadDump:
+                    return process("threaddump", context);
+                case Sequence:
+                    return process("sequence", context);
+                default:
+                    return "";
             }
-            writer.close();
-            return writer.toString();
         } catch (Exception ex) {
             ex.printStackTrace();
             throw new AssertionError("should never happen");
@@ -112,6 +109,7 @@ public class VelocityHtmlRenderer implements Constants {
     public int length(Object[] array) {
         return array.length;
     }
+
 
     /**
      * Saves threadstatistic as html files.<br>
@@ -139,20 +137,22 @@ public class VelocityHtmlRenderer implements Constants {
         //save index page
         saveAs(directory, "index.html", "<html><head><meta http-equiv=\"Refresh\" content=\"0;URL=./table/index.html\"/></head><body></body></html>");
         listener.notifyProgress(progress++, count);
-        filter.setMode(Constants.MODE_TABLE);
+        filter.setMode(ThreadFilter.View.Table);
         filter.setThreadId(stats.getFirstThreadId());
         filter.setFullThreadIndex(0);
-        Map velocityContext = new HashMap(2);
+        Map<String, Object> webContext = new HashMap<>();
+        webContext.put("fontFamily", "Helvetica Neue");
+        webContext.put("fontSize", "12");
         //save table view
-        saveAs(directory, Constants.MODE_TABLE + "/index.html", stats, filter, velocityContext);
+        saveAs(directory, Constants.MODE_TABLE + "/index.html", stats, filter, webContext);
         listener.notifyProgress(progress++, count);
         //save full thread dump view
         filter.setShrinkIdle(false);
-        filter.setMode(Constants.MODE_FULL);
+        filter.setMode(ThreadFilter.View.ThreadDump);
         do {
             for (int i = 0; i < stats.getFullThreadDumpCount(); i++) {
                 filter.setFullThreadIndex(i);
-                saveAs(directory, Constants.MODE_FULL + "/index-" + i + "_shrink-" + filter.getShrinkIdle() + ".html", stats, filter, velocityContext);
+                saveAs(directory, Constants.MODE_FULL + "/index-" + i + "_shrink-" + filter.getShrinkIdle() + ".html", stats, filter, webContext);
                 listener.notifyProgress(progress++, count);
             }
             filter.setShrinkIdle(!filter.getShrinkIdle());
@@ -160,19 +160,19 @@ public class VelocityHtmlRenderer implements Constants {
 
         //save sequence thread dump view
         filter.setShrinkIdle(false);
-        filter.setMode(Constants.MODE_SEQUENCE);
+        filter.setMode(ThreadFilter.View.Sequence);
         do {
             for (ThreadDumpSequence aSt : st) {
                 filter.setThreadId(aSt.getId());
-                saveAs(directory, Constants.MODE_SEQUENCE + "/threadId-" + filter.getThreadId() + "_shrink-" + filter.getShrinkIdle() + ".html", stats, filter, velocityContext);
+                saveAs(directory, Constants.MODE_SEQUENCE + "/threadId-" + filter.getThreadId() + "_shrink-" + filter.getShrinkIdle() + ".html", stats, filter, webContext);
                 listener.notifyProgress(progress++, count);
             }
             filter.setShrinkIdle(!filter.getShrinkIdle());
         } while (filter.getShrinkIdle());
     }
 
-    public void saveAs(File dir, String fileName, ThreadStatistic stats, ThreadFilter filter, Map velocityContext) throws IOException {
-        saveAs(dir, fileName, render(filter, stats, velocityContext));
+    public void saveAs(File dir, String fileName, ThreadStatistic stats, ThreadFilter filter, Map<String, Object> webContext) throws IOException {
+        saveAs(dir, fileName, render(filter, stats, webContext));
     }
 
     public void saveAs(File dir, String fileName, String utf8Content) throws IOException {
@@ -200,7 +200,7 @@ public class VelocityHtmlRenderer implements Constants {
             if (line.isHoldingLock()) {
                 String objId = line.getLockedObjectId();
                 int objIdBegin = line.getLine().indexOf(objId);
-                StringBuffer html = new StringBuffer();
+                StringBuilder html = new StringBuilder();
                 html.append(escape(line.getLine().substring(0, objIdBegin)));
                 if (-1 != index) {
                     html.append("<a name=\"").append(objId).append("_").append(index).append("\"></a>");
@@ -213,7 +213,7 @@ public class VelocityHtmlRenderer implements Constants {
             } else if (line.isTryingToGetLock() && null != line.getLockedObjectId()) {
                 String objId = line.getLockedObjectId();
                 int objIdBegin = line.getLine().indexOf(objId);
-                StringBuffer html = new StringBuffer();
+                StringBuilder html = new StringBuilder();
                 html.append(escape(line.getLine().substring(0, objIdBegin)));
                 if (-1 != index) {
                     html.append("<a href=\"../sequence/threadId-").append(line.getBlockerId()).append("_shrink-").append(shrink).append(".html#").append(objId).append("_").append(index).append("\">");
@@ -233,13 +233,85 @@ public class VelocityHtmlRenderer implements Constants {
             return asHTML(line, -1, false);
         }
 
+        public String threadDumpToClass(ThreadDump threadDump) {
+            if (threadDump == null) {
+                return "notexist";
+            }
+            if (threadDump.isBlocked()) {
+                return "blocked";
+            }
+            if (threadDump.isBlocking()) {
+                return "blocking";
+            }
+            if (threadDump.isIdle()) {
+                return "idle";
+            }
+            return "normal";
+        }
+
+        public String threadDumpToImageSrc(ThreadDump threadDump, int count, ThreadDumpSequence sequence) {
+        /*
+         #if($threadDump.isDeadLocked()) src="|${baseurl}deadlocked.gif"
+                 #elseif($stackTraces.sameAsBefore($velocityCount))
+                 src="|${baseurl}same-h.gif|" #else src="|${baseurl}space.gif|" #end
+         */
+            if (threadDump == null) {
+                return "space.gif";
+            }
+            if (threadDump.isDeadLocked()) {
+                return "deadlocked.gif";
+            }
+            if (sequence.sameAsBefore(count)) {
+                return "same-h.gif";
+            }
+            return "space.gif";
+        }
+
+        public String threadDumpToClassName(ThreadDump threadDump) {
+            if (threadDump == null) {
+                return "back-notexist";
+            }
+            if (threadDump.isBlocked()) {
+                return "back-blocked";
+            }
+
+            if (threadDump.isBlocking()) {
+                return "back-blocking";
+            }
+
+            if (threadDump.isIdle()) {
+                return "back-idle";
+            }
+
+            return "back-normal";
+        }
+
+        public String threadDumpToClassNameSequence(ThreadDump threadDump) {
+            if (threadDump == null) {
+                return "notexist";
+            }
+            if (threadDump.isBlocked()) {
+                return "blocked";
+            }
+
+            if (threadDump.isBlocking()) {
+                return "blocking";
+            }
+
+            if (threadDump.isIdle()) {
+                return "idle";
+            }
+
+            return "normal";
+        }
+
         public String escape(String from) {
             int lessThanIndex = from.indexOf("<");
             int greaterThanIndex = from.indexOf(">");
             if (-1 == lessThanIndex && -1 == greaterThanIndex) {
                 return from;
             }
-            StringBuffer to = new StringBuffer(from);
+            StringBuilder to = new StringBuilder(from);
             while (-1 != lessThanIndex) {
                 to.replace(lessThanIndex, lessThanIndex + 1, "&lt;");
                 lessThanIndex = to.indexOf("<", lessThanIndex + 4);

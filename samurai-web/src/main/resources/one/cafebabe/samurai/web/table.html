@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${resource.getString('web.table') + resource.getString('web.view')}"></title>
+    <base th:href="${baseurl}">
+    <link rel="stylesheet" href="./css/style.css"/>
+    <style>
+        body {
+            font-size: [[${fontSize}]]pt;
+            font-family: [[${fontFamily}]];
+        }
+    </style>
+</head>
+<body>
+<span th:text="${resource.getString('web.view')}"></span>:
+ <img border="0" src="./images/tableButton.gif"><span th:text='${resource.getString("web.table")}'></span>
+ <a th:href="|./full/index-0_shrink-${filter.getShrinkIdle()}.html|"><img border="0" src="./images/fullButton.gif"><span th:text='${resource.getString("web.threadDump")}'></span></a>
+ <a th:href="|./sequence/threadId-${stats.getFirstThreadId()}_shrink-${filter.getShrinkIdle()}.html|"><img border="0" src="./images/sequenceButton.gif"><span th:text='${resource.getString("web.sequence")}'></span></a><br><br>
+
+<table border="1">
+    <tr>
+        <td></td>
+        <td th:each="fullThreadDump, eachStat: ${stats.getFullThreadDumps}" align="center">
+            <a th:href="|./full/index-${eachStat.index}_shrink-${filter.getShrinkIdle()}.html|"><span th:text="${eachStat.count}"><div th:if="${fullThreadDump.isDeadLocked()}"><br><img border="0" src="./images/deadlocked.gif"/></div></span></a>
+        </td>
+    </tr>
+    <tr th:each="stackTraces: ${stats.getStackTracesAsArray()}">
+        <td nowrap align="right"><a
+                th:href="|./sequence/threadId-${stackTraces.getId()}_shrink-${filter.getShrinkIdle()}.html|"><span th:text="${stackTraces.toString()}"></span></a>
+        </td>
+        <td th:each="threadDump, threadDumpStat : ${stackTraces.asArray()}" th:class="${util.threadDumpToClassName(threadDump)}">
+            <a th:href="${'./sequence/threadId-'+stackTraces.getId()+'_shrink-'+filter.getShrinkIdle()+'.html#'+threadDumpStat.count}">
+            <img border="0" width="16" height="16"  th:src="${'./images/' + util.threadDumpToImageSrc(threadDump, threadDumpStat.count, stackTraces)}">
+        </a>
+        </td>
+    </tr>
+</table>
+<br><br><span th:text='${resource.getString("web.legend")+":"}'></span>
+<table border="1">
+    <tr>
+        <td nowrap><span th:text='${resource.getString("web.running")}'></span></td>
+        <td class="back-normal">&nbsp;</td>
+        <td nowrap><span th:text='${resource.getString("web.blocked")}'></span></td>
+        <td class="back-blocked">&nbsp;</td>
+        <td nowrap><span th:text='${resource.getString("web.blocking")}'></span></td>
+        <td class="back-blocking">&nbsp;</td>
+        <td nowrap><span th:text='${resource.getString("web.idle")}'></span></td>
+        <td class="back-idle">&nbsp;</td>
+        <td nowrap title="hoge"><span th:text='${resource.getString("web.absent")}'></span></td>
+        <td class="back-notexist">&nbsp;</td>
+    </tr>
+    <tr>
+        <td nowrap colspan="3"><span th:text='${resource.getString("web.same")}'></span></td>
+        <td class="back-normal"><img border="0" src="./images/same-h.gif"></td>
+        <td nowrap colspan="3"><span th:text='${resource.getString("web.deadlocked")}'></span></td>
+        <td class="back-blocked"><img border="0" src="./images/deadlocked.gif"></td>
+        <td colspan="2"></td>
+    </tr>
+</table>
+</body>
+</html>

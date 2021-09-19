@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${resource.getString('web.threadDump') + resource.getString('web.view')}"></title>
+    <base th:href="${baseurl}">
+    <link rel="stylesheet" href="./css/style.css"/>
+    <style>
+        body {
+            font-size: [[${fontSize}]]pt;
+            font-family: [[${fontFamily}]];
+        }
+    </style>
+</head>
+<body>
+<span th:text="${resource.getString('web.view')}"></span>:
+<a href="./table/index.html"><img border="0" src="./images/tableButton.gif"><span
+        th:text='${resource.getString("web.table")}'></span></a>
+<img border="0" src="./images/fullButton.gif"><span th:text='${resource.getString("web.threadDump")}'></span>
+<a th:href="|./sequence/threadId-${stats.getFirstThreadId()}_shrink-${filter.getShrinkIdle()}.html|">
+    <img border="0" src="./images/sequenceButton.gif"><span th:text='${resource.getString("web.sequence")}'></span></a><br><br>
+
+<span th:if="${filter.getFullThreadIndex() > 0}">
+<a th:href="|./full/index-${filter.getFullThreadIndex() - 1}_shrink-${filter.getShrinkIdle()}.html|">
+    <span th:text="${resource.getString('web.previous')}"></span></a>
+</span>
+<span th:if="${filter.getFullThreadIndex() == 0}">
+    <span th:text="${resource.getString('web.previous')}"></span>
+</span>
+
+<span th:if="${filter.getFullThreadIndex()  < (stats.getFullThreadDumpCount() - 1)}">
+    <a th:href="|./full/index-${filter.getFullThreadIndex() + 1}_shrink-${filter.getShrinkIdle()}.html|">
+        <span th:text="${resource.getString('web.next')}"></span></a>
+</span>
+<span th:if="${filter.getFullThreadIndex()  == (stats.getFullThreadDumpCount() - 1)}">
+    <span th:text="${resource.getString('web.next')}"></span>
+</span>
+
+<span th:text="${(filter.getFullThreadIndex() + 1)+'/'+stats.getFullThreadDumpCount()}"></span><br><br>
+
+<span th:text="${stats.getFullThreadDump(filter.getFullThreadIndex()).getHeader()}"></span><br><br>
+
+<div th:each="threadDump, threadDumpStat : ${filter.doFilter(stats).asArray()}">
+    <font th:class="${util.threadDumpToClassNameSequence(threadDump)}">
+        "<a name="$threadDump.getId()" th:href="${'./sequence/threadId-' + threadDump.getId() + '_shrink-' + filter.getShrinkIdle() + '.html#' + threadDumpStat.count}"><span th:text="${threadDump.getName()}"></span></a>"
+
+        <img th:if="${threadDump.isDeadLocked()}" border="0" src="./images/deadlocked.gif"/>
+        <span th:text="${threadDump.getCondition()}"></span><br>
+
+        <div th:switch="${filter.getShrinkIdle() && threadDump.isIdle() and threadDump.size() != 0}">
+            <div th:case="true">
+                <span th:each="line , lineStat : ${threadDump.getStackLines()}">
+                    <span th:if="${lineStat.count < 4 or threadDump.size() == 4}">
+                        &nbsp;&nbsp;&nbsp;<span th:text="${util.asHTML(line)}"></span><br>
+                    </span>
+                    <span th:if="${lineStat.count == 4}">
+                        &nbsp;&nbsp;<a th:href="${'./full/index-' + filter.getFullThreadIndex() + '_shrink-false.html#'+threadDump.getId()}"><img border="0" src="./images/expandable_win.gif"></a>[[${util.asHTML(line)}]]<br>
+                    </span>
+                </span>
+
+            </div>
+            <div th:case="false">
+                <span th:each="line , lineStat : ${threadDump.getStackLines()}">
+                    <span th:switch="${threadDump.isIdle() and lineStat.count == 4 and threadDump.size() != 4}">
+                        <span th:case="${true}">
+                            &nbsp;&nbsp;<a th:href="${'./full/index-' + filter.getFullThreadIndex() + '_shrink-true.html#' + threadDump.getId()}"><img border="0" src="./images/shrinkable_win.gif"></a>[[${util.asHTML(line)}]]<br>
+                        </span>
+                        <span th:case="${false}">
+                            &nbsp;&nbsp;&nbsp;[[${util.asHTML(line)}]]<br>
+                        </span>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </font>
+    <br>
+</div>
+</body>
+</html>

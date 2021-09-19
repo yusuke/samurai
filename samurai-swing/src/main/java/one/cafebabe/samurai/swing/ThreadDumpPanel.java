@@ -21,9 +21,8 @@ import one.cafebabe.samurai.core.ThreadStatistic;
 import one.cafebabe.samurai.util.*;
 import one.cafebabe.samurai.core.FullThreadDump;
 import one.cafebabe.samurai.core.ThreadDump;
-import one.cafebabe.samurai.web.Constants;
 import one.cafebabe.samurai.web.ThreadFilter;
-import one.cafebabe.samurai.web.VelocityHtmlRenderer;
+import one.cafebabe.samurai.web.ThymeleafHtmlRenderer;
 
 import javax.swing.*;
 import javax.swing.event.HyperlinkEvent;
@@ -37,13 +36,14 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Properties;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         ConfigurationListener, ClipBoardOperationListener {
     public String config_dumpFontFamily = "Monospace";
     public String config_dumpFontSize = "12";
-    private final Properties velocityContext = new Properties();
+    private final Map<String, Object> webContext = new HashMap<>();
 
     private final JProgressBar progressBar = new JProgressBar();
 
@@ -76,7 +76,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     };
     final JPanel settingPanel = new JPanel();
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    private final VelocityHtmlRenderer renderer = new VelocityHtmlRenderer("one/cafebabe/samurai/swing/css.vm");
+    private final ThymeleafHtmlRenderer renderer = new ThymeleafHtmlRenderer();
 
     public boolean config_wrapDump = false;
 
@@ -117,13 +117,13 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         buttonPrevious.addMouseListener(new RolloverBorder(buttonPrevious));
         buttonPrevious.setIcon(backwardIcon);
         buttonPrevious.addActionListener(e -> {
-            if (Constants.MODE_FULL.equals(filter.getMode())) {
+            if (filter.getMode() == ThreadFilter.View.ThreadDump) {
                 int selected = filter.getFullThreadIndex();
                 if (selected > 0) {
                     selected--;
                     filter.setFullThreadIndex(selected);
                 }
-            } else if (Constants.MODE_SEQUENCE.equals(filter.getMode())) {
+            } else if (filter.getMode() == ThreadFilter.View.Sequence) {
                 ThreadDumpSequence[] sequences = statistic.getStackTracesAsArray();
                 for (int i = 0; i < sequences.length; i++) {
                     if (sequences[i].getId().equals(filter.getThreadId())) {
@@ -149,13 +149,13 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         buttonNext.addMouseListener(new RolloverBorder(buttonNext));
 
         buttonNext.addActionListener(e -> {
-            if (Constants.MODE_FULL.equals(filter.getMode())) {
+            if (filter.getMode() == ThreadFilter.View.ThreadDump) {
                 int selected = filter.getFullThreadIndex();
                 if (selected < statistic.getFullThreadDumpCount() - 1) {
                     selected++;
                     filter.setFullThreadIndex(selected);
                 }
-            } else if (Constants.MODE_SEQUENCE.equals(filter.getMode())) {
+            } else if (filter.getMode() == ThreadFilter.View.Sequence) {
                 ThreadDumpSequence[] sequences = statistic.getStackTracesAsArray();
                 for (int i = 0; i < sequences.length; i++) {
                     if (sequences[i].getId().equals(filter.getThreadId())) {
@@ -187,21 +187,21 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
 //        ( (StackTraces) showThreadList.getSelectedValue()).getId().equals(filter.getThreadId())
 //        showThreadList.getSelectedIndex()
             if (-1 != showThreadList.getSelectedIndex()) {
-                if (Constants.MODE_FULL.equals(filter.getMode())) {
+                if (filter.getMode() == ThreadFilter.View.ThreadDump) {
                     //ensure that selected thread comes to the top of the pane
 //            JScrollBar scrollBar = jScrollPane3.getVerticalScrollBar();
 //            scrollBar.setValue(scrollBar.getMaximum());
                     threadDumpPanel.scrollToReference(((ThreadDumpSequence) showThreadList.getSelectedValue()).getId());
 //            context.getSearchPanel().searchNext(threadDumpPanel, ( (StackTraces) showThreadList.getSelectedValue()).getId(), 0);
 //            threadDumpPanel.grabFocus();
-                } else if (Constants.MODE_SEQUENCE.equals(filter.getMode())) {
+                } else if (filter.getMode() == ThreadFilter.View.Sequence) {
                     if (!((ThreadDumpSequence) showThreadList.getSelectedValue()).getId().equals(
                             filter.getThreadId())) {
                         filter.setThreadId(((ThreadDumpSequence) showThreadList.getSelectedValue()).getId());
                         updateHtml();
                     }
-                } else if (Constants.MODE_TABLE.equals(filter.getMode())) {
-                    filter.setMode(Constants.MODE_SEQUENCE);
+                } else if (filter.getMode() == ThreadFilter.View.Table) {
+                    filter.setMode(ThreadFilter.View.Sequence);
                     filter.setThreadId(((ThreadDumpSequence) showThreadList.getSelectedValue()).getId());
                     updateHtml();
                 }
@@ -378,32 +378,39 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                             progressBar.setString("");
                             progressBar.setVisible(true);
                             context.invokeLater(() -> {
-                                VelocityHtmlRenderer renderer = new VelocityHtmlRenderer("one/cafebabe/samurai/web/outcss.vm", "../images/");
+                                ThymeleafHtmlRenderer renderer = new ThymeleafHtmlRenderer("../");
                                 try {
                                     synchronized (statistic) {
                                         savedLocation = getTargetDirectory(currentFile);
-                                        renderer.saveTo(statistic, savedLocation, (finished, all) -> SwingUtilities.invokeLater(new ProgressTask(finished, all + 9)));
-                                        File imageDir = new File(savedLocation.getAbsolutePath() + "/images/");
-                                        imageDir.mkdir();
+                                        renderer.saveTo(statistic, savedLocation, (finished, all) -> SwingUtilities.invokeLater(new ProgressTask(finished, all + 10)));
 
-                                        saveStreamAsFile(imageDir, "space.gif");
+                                        File cssDir = new File(savedLocation.getAbsolutePath() + "/css/");
+                                        //noinspection ResultOfMethodCallIgnored
+                                        cssDir.mkdir();
+                                        saveStreamAsFile(savedLocation, "css/style.css");
+
+
+                                        File imageDir = new File(savedLocation.getAbsolutePath() + "/images/");
+                                        //noinspection ResultOfMethodCallIgnored
+                                        imageDir.mkdir();
+                                        saveStreamAsFile(savedLocation, "images/space.gif");
                                         SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 8, progressBar.getMaximum()));
-                                        saveStreamAsFile(imageDir, "same-v.gif");
+                                        saveStreamAsFile(savedLocation, "images/same-v.gif");
                                         SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 7, progressBar.getMaximum()));
-                                        saveStreamAsFile(imageDir, "same-h.gif");
+                                        saveStreamAsFile(savedLocation, "images/same-h.gif");
                                         SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 6, progressBar.getMaximum()));
-                                        saveStreamAsFile(imageDir, "deadlocked.gif");
+                                        saveStreamAsFile(savedLocation, "images/deadlocked.gif");
                                         SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 5, progressBar.getMaximum()));
-                                        saveStreamAsFile(imageDir, "expandable_win.gif");
+                                        saveStreamAsFile(savedLocation, "images/expandable_win.gif");
                                         SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 4, progressBar.getMaximum()));
-                                        saveStreamAsFile(imageDir, "shrinkable_win.gif");
+                                        saveStreamAsFile(savedLocation, "images/shrinkable_win.gif");
                                         SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 3, progressBar.getMaximum()));
 
-                                        saveStreamAsFile(imageDir, "tableButton.gif");
+                                        saveStreamAsFile(savedLocation, "images/tableButton.gif");
                                         SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 2, progressBar.getMaximum()));
-                                        saveStreamAsFile(imageDir, "fullButton.gif");
+                                        saveStreamAsFile(savedLocation, "images/fullButton.gif");
                                         SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 1, progressBar.getMaximum()));
-                                        saveStreamAsFile(imageDir, "sequenceButton.gif");
+                                        saveStreamAsFile(savedLocation, "images/sequenceButton.gif");
                                         SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum(), progressBar.getMaximum()));
 
                                     }
@@ -452,11 +459,11 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                     fullButton.setSelected((fullButton == button) == button.isSelected());
                     sequenceButton.setSelected((sequenceButton == button) == button.isSelected());
                     if (tableButton == button) {
-                        filter.setMode(Constants.MODE_TABLE);
+                        filter.setMode(ThreadFilter.View.Table);
                     } else if (fullButton == button) {
-                        filter.setMode(Constants.MODE_FULL);
+                        filter.setMode(ThreadFilter.View.ThreadDump);
                     } else if (sequenceButton == button) {
-                        filter.setMode(Constants.MODE_SEQUENCE);
+                        filter.setMode(ThreadFilter.View.Sequence);
                     }
                     updateHtml();
                 }
@@ -466,7 +473,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     };
 
     private void saveStreamAsFile(File parentDir, String fileName) throws IOException {
-        try (InputStream is = ThreadDumpPanel.class.getResourceAsStream("/one/cafebabe/samurai/web/images/" + fileName);
+        try (InputStream is = ThreadDumpPanel.class.getResourceAsStream("/one/cafebabe/samurai/web/" + fileName);
              FileOutputStream fos = new FileOutputStream(parentDir.getAbsolutePath() + "/" + fileName)) {
             byte[] buf = new byte[256];
             int count;
@@ -529,17 +536,17 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                 buttonNext.setEnabled(false);
             } else {
                 showThreadList.setEnabled(true);
-                if (filter.getMode().equals(Constants.MODE_FULL)) {
+                if (filter.getMode() == ThreadFilter.View.ThreadDump) {
                     buttonPrevious.setEnabled(!(selected == 0));
                     buttonNext.setEnabled(!(statistic.getFullThreadDumpCount() - 1 == selected));
                 } else {
-                    buttonPrevious.setEnabled(Constants.MODE_SEQUENCE.equals(filter.getMode()));
-                    buttonNext.setEnabled(Constants.MODE_SEQUENCE.equals(filter.getMode()));
+                    buttonPrevious.setEnabled(filter.getMode() == ThreadFilter.View.Sequence);
+                    buttonNext.setEnabled(filter.getMode() == ThreadFilter.View.Sequence);
                 }
             }
             if (null != threadList && threadList.length != 0) {
-                if (filter.getMode().equals(Constants.MODE_FULL)) {
-                } else if (filter.getMode().equals(Constants.MODE_SEQUENCE)) {
+                if (filter.getMode() == ThreadFilter.View.ThreadDump) {
+                } else if (filter.getMode() == ThreadFilter.View.Sequence) {
                     for (int i = 0; i < threadList.length; i++) {
                         if (filter.getThreadId().equals(threadList[i].getId())) {
                             showThreadList.setSelectedIndex(i);
@@ -548,19 +555,19 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                     }
                 }
             }
-            if (Constants.MODE_FULL.equals(filter.getMode())) {
+            if (filter.getMode() == ThreadFilter.View.ThreadDump) {
                 showThreadList.setSelectedIndices(new int[0]);
                 threadDumpStatus.setText(filter.getFullThreadIndex() + 1 + "/" + statistic.getFullThreadDumpCount());
                 tableButton.setSelected(false);
                 fullButton.setSelected(true);
                 sequenceButton.setSelected(false);
-            } else if (Constants.MODE_TABLE.equals(filter.getMode())) {
+            } else if (filter.getMode() == ThreadFilter.View.Table) {
                 showThreadList.setSelectedIndices(new int[0]);
                 threadDumpStatus.setText("");
                 tableButton.setSelected(true);
                 fullButton.setSelected(false);
                 sequenceButton.setSelected(false);
-            } else if (Constants.MODE_SEQUENCE.equals(filter.getMode())) {
+            } else if (filter.getMode() == ThreadFilter.View.Sequence) {
                 threadDumpStatus.setText(statistic.getStackTracesById(filter.getThreadId()).getName());
                 tableButton.setSelected(false);
                 fullButton.setSelected(false);
@@ -578,7 +585,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                     if ("".equals(filter.getThreadId())) {
                         filter.setThreadId(statistic.getStackTracesAsArray()[0].getId());
                     }
-                    threadDumpPanel.setText(renderer.render(filter, statistic, velocityContext));
+                    threadDumpPanel.setText(renderer.render(filter, statistic, webContext));
                     threadDumpPanel.select(0, 0);
                     if (uri.contains("#")) {
                         referer = uri.substring(uri.indexOf("#") + 1);
@@ -656,9 +663,9 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
 
     void showThreadList_actionPerformed(ActionEvent e) {
         if (showThreadList.getSelectedIndex() == 0) {
-            filter.setMode(Constants.MODE_FULL);
+            filter.setMode(ThreadFilter.View.ThreadDump);
         } else {
-            filter.setMode(Constants.MODE_SEQUENCE);
+            filter.setMode(ThreadFilter.View.Sequence);
             filter.setThreadId((String) showThreadList.getSelectedValue());
         }
         updateHtml();
@@ -666,8 +673,8 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
 
     public synchronized void onConfigurationChanged(Configuration config) {
         config.apply(renderer);
-        velocityContext.setProperty("fontFamily", config_dumpFontFamily);
-        velocityContext.setProperty("fontSize", config_dumpFontSize);
+        webContext.put("fontFamily", config_dumpFontFamily);
+        webContext.put("fontSize", config_dumpFontSize);
         updateHtml();
     }
 
@@ -683,7 +690,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
             Color fgColor = Color.BLACK;
             setFont(getFont().deriveFont(0));
             if (null != currentThreadDump) {
-                if (Constants.MODE_FULL.equals(filter.getMode())) {
+                if (filter.getMode() == ThreadFilter.View.ThreadDump) {
                     if (currentThreadDump.isIdle()) {
                         fgColor = Color.GRAY;
                     } else if (currentThreadDump.isBlocked()) {

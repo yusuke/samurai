@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${resource.getString('web.sequence') + resource.getString('web.view')}"></title>
+    <base th:href="${baseurl}">
+    <link rel="stylesheet" href="./css/style.css"/>
+    <style>
+        body {
+            font-size: [[${fontSize}]]pt;
+            font-family: [[${fontFamily}]];
+        }
+    </style>
+</head>
+<body>
+<span th:text="${resource.getString('web.view')}"></span>:
+ <a href="./table/index.html"><img border="0" src="./images/tableButton.gif"><span th:text='${resource.getString("web.table")}'></span></a>
+ <a th:href="|./full/index-0_shrink-${filter.getShrinkIdle()}.html|"><img border="0" src="./images/fullButton.gif"><span th:text='${resource.getString("web.threadDump")}'></span></a>
+ <img border="0" src="./images/sequenceButton.gif"><span th:text='${resource.getString("web.sequence")}'></span><br><br>
+
+<br>
+<span th:switch="${null != stats.getPreviousThreadDumps(filter.getThreadId())}">
+    <a th:case="${true}"
+       th:href="|./sequence/threadId-${stats.getPreviousThreadDumps(filter.getThreadId()).getId()}_shrink-${filter.getShrinkIdle()}.html|">
+        <span th:text="${resource.getString('web.previous')}"></span></a>
+    <span th:case="${false}" th:text="${resource.getString('web.previous')}"></span>
+</span>
+
+<span th:switch="${null != stats.getNextThreadDumps(filter.getThreadId())}">
+    <a th:case="${true}"
+       th:href="|./sequence/threadId-${stats.getNextThreadDumps(filter.getThreadId()).getId()}_shrink-${filter.getShrinkIdle()}.html|">
+        <span th:text="${resource.getString('web.next')}"></span></a>
+    <span th:case="${false}" th:text="${resource.getString('web.next')}"></span>
+</span>
+<div th:with="sequence = ${filter.doFilter(stats)}">
+
+    <span th:text="${sequence.getName()}"></span><br><br>
+    <div th:each="threadDump, threadDumpStat : ${sequence.asArray()}">
+        <a th:name="${threadDumpStat.count}"
+           th:href="${'./full/index-' + threadDumpStat.index + '_shrink-' + filter.getShrinkIdle() + '.html#' + filter.getThreadId()}">
+            <span th:text="|Thread dump ${threadDumpStat.count}/${sequence.size()}|"></span><br>
+        </a>
+        <font th:class="${util.threadDumpToClassNameSequence(threadDump)}">
+        <span th:switch="${null != threadDump}">
+
+        <div th:case="${true}">
+            "<span th:text="${threadDump.getName()}"></span>"
+            <img th:if="${threadDump.isDeadLocked()}" border="0" src="./images/deadlocked.gif">
+            <img border="0" th:if="${sequence.sameAsBefore(threadDumpStat.count)}" src="./images/same-v.gif">           
+            <span th:text="${threadDump.getCondition()}"> </span><br>
+            <div th:case="${filter.getShrinkIdle() and util.threadDumpToClass(threadDump).equals('idle') and threadDump.size() != 0}">
+              <div th:case="${true}">
+                  <div th:each="line : ${threadDump.getStackLines()}">
+                      <div th:switch="${threadDumpStat.count < 4  or threadDump.size() == 4}">
+                          <div th:case="true">
+                              <span th:text="${util.asHTML(line,threadDumpStat.count,filter.getShrinkIdle())}"> </span>
+                          </div>
+                          <div th:case="false">
+                              <div th:if="${threadDumpStat.count == 4}">
+                                  <a th:href="${'./sequence/threadId-'+filter.getThreadId()+'_shrink-false.html#'+filter.getThreadId()}">
+                                      <img border="0" src="./images/expandable_win.gif"></a>
+                                  <span th:text="${line}"></span><br>
+                              </div>
+                          </div>
+                      </div>
+
+                  </div>
+             </div>
+            </div>
+              <div th:case="${false}">
+                  <div th:each="line : ${threadDump.getStackLines()}">
+                      <div th:switch="${util.threadDumpToClass(threadDump).equals('idle') and threadDumpStat.count == 4  and threadDump.size() != 4}">
+                          <div th:case="true">
+                              <a th:href="${'./sequence/threadId-'+filter.getThreadId() + '_shrink-true.html#'+filter.getThreadId()}">
+                                  <img border="0" src="./images/shrinkable_win.gif"></a>
+                              <span th:text="${util.asHTML(line,threadDumpStat.count,filter.getShrinkIdle())}"></span><br>
+                          </div>
+                          <div th:case="false">
+                              <span th:text="${util.asHTML(line,threadDumpStat.count,filter.getShrinkIdle())}"></span><br>
+                          </div>
+                      </div>
+              </div>
+        </div>
+
+        <div th:case="${false}">
+            <span th:text="${sequence.getName()}"> </span>
+            <span th:text="${resource.getString('web.absent')}"></span><br>
+        </div>
+    <br>
+    </div>
+        </span>
+        </font>
+    </div>
+</div>
+</body>
+</html>

@@ -26,13 +26,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Comparator;
-import java.util.ResourceBundle;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Execution(ExecutionMode.CONCURRENT)
-class TestVelocityHtmlRenderer  {
+class TestThymeleafHtmlRenderer {
     final ThreadStatistic statistic = new ThreadStatistic();
 
 
@@ -47,7 +46,7 @@ class TestVelocityHtmlRenderer  {
         ThreadStatistic stats = new ThreadStatistic();
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(stats);
         analyzer.analyze(new File(fileName));
-        VelocityHtmlRenderer renderer = new VelocityHtmlRenderer("one/cafebabe/samurai/web/outcss.vm");
+        ThymeleafHtmlRenderer renderer = new ThymeleafHtmlRenderer();
         //warm up
         System.out.println("Warming up " + vendor + "...");
         for (int i = 0; i < 100; i++) {
@@ -68,7 +67,7 @@ class TestVelocityHtmlRenderer  {
 
     @Test
     void testEscape() {
-        VelocityHtmlRenderer.Util util = new VelocityHtmlRenderer.Util();
+        ThymeleafHtmlRenderer.Util util = new ThymeleafHtmlRenderer.Util();
         assertEquals("foo&lt;bar",util.escape("foo<bar"));
         assertEquals("foo&gt;bar",util.escape("foo>bar"));
         assertEquals("foo&lt;&gt;bar",util.escape("foo<>bar"));
@@ -78,8 +77,8 @@ class TestVelocityHtmlRenderer  {
     @Test
     void testSaveTo() throws IOException {
         ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
-        analyzer.analyze(TestVelocityHtmlRenderer.class.getResourceAsStream("/Sun/1.4.2_03Sunstacked.dmp"));
-        VelocityHtmlRenderer renderer = new VelocityHtmlRenderer("one/cafebabe/samurai/web/outcss.vm");
+        analyzer.analyze(TestThymeleafHtmlRenderer.class.getResourceAsStream("/Sun/1.4.2_03Sunstacked.dmp"));
+        ThymeleafHtmlRenderer renderer = new ThymeleafHtmlRenderer();
         renderer.saveTo(statistic, new File("savedhtml"), (finished, all) -> assertTrue(finished <= all));
         File savedhtml = new File("savedhtml");
         //noinspection ResultOfMethodCallIgnored
