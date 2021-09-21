@@ -7,34 +7,36 @@
 <body>
 <div th:fragment="stackTraces(index)">
     <!--/*@thymesVar id="threadDump" type="one.cafebabe.samurai.core.ThreadDump"*/-->
-                <span th:each="line , lineStat : ${threadDump.getStackLines()}">
-                    &nbsp;&nbsp;<span th:if="${lineStat.count == 4 and threadDump.isIdle()}">
-                        <a th:if="${filter.mode.name().equals('full')}" th:href="${'./full/index-' + filter.getFullThreadIndex()
-                         + '_shrink-' +(not filter.shrinkIdle) +'.html#'+threadDump.getId()}"><img border="0" th:src="${'./images/'
-                          + (filter.shrinkIdle ? 'expandable_win' :'shrinkable_win') + '.gif'}"></a>
-                        <a th:if="${filter.mode.name().equals('sequence')}" th:href="${'./sequence/index-' + filter.getThreadId() 
-                        + '_shrink-' + (not filter.shrinkIdle) +'.html#'+filter.getThreadId()}"><img border="0" th:src="${'./images/'
-                          + (filter.shrinkIdle ? 'expandable_win' :'shrinkable_win') + '.gif'}"></a>
-                    </span>
-                    <span th:unless="${lineStat.count == 4 and threadDump.isIdle()}">&nbsp;</span>
-                    <span th:if="${lineStat.count <= 4 or not threadDump.isIdle() or (threadDump.isIdle() and not filter.getShrinkIdle())}">
-                        <span th:if="${line.isHoldingLock()}">
-                            [[${line.beforeObjectId()}]]<a th:if="${index == -1}" th:name="${line.getLockedObjectId()}"></a><a th:if="${index != -1}" th:name="${line.getLockedObjectId()+'_'+index}"></a>[[${line.getLockedObjectId + line.afterObjectId()}]]
-                        </span>
-                        <span th:if="${not line.isHoldingLock() && line.isTryingToGetLock() && null != line.getLockedObjectId()}">
-                            [[${line.beforeObjectId()}]]<a th:if="${index == -1}" 
-                                                           th:href="${'#'+line.getLockedObjectId()}"
-                        th:text="${line.getLockedObjectId()}"></a><a 
-                                th:if="${index != -1}" 
-                                th:href="${'./sequence/threadId-'+line.getBlockerThreadId()+'_shrink-'+filter.getShrinkIdle()+'.html#'+line.getLockedObjectId()+'_'+index}"
-                                th:text="${line.getLockedObjectId()}"></a>[[${line.afterObjectId()}]]
-                        </span>
-                        <span th:if="${not line.isHoldingLock() and not (not line.isHoldingLock() && line.isTryingToGetLock() && null != line.getLockedObjectId())}"
-                        th:text="${line.getLine()}"></span><br>
-                    </span>
-                </span>
+    <span th:each="line , lineStat : ${threadDump.getStackLines()}">
+        <span th:if="${lineStat.count == 4 and threadDump.isIdle()}">
+            <a th:if="${filter.mode.name().equals('full')}"
+               th:href="${'./full/index-' + filter.getFullThreadIndex() + '_shrink-' +(not filter.shrinkIdle) +'.html#'+threadDump.getId()}"
+            ><img border="0" th:src="${'./images/' + (filter.shrinkIdle ? 'expandable_win' :'shrinkable_win') + '.gif'}"></a>
+            <a th:if="${filter.mode.name().equals('sequence')}" th:href="${'./sequence/index-' + filter.getThreadId() + '_shrink-' + (not filter.shrinkIdle) +'.html#'+filter.getThreadId()}"
+            ><img border="0" th:src="${'./images/' + (filter.shrinkIdle ? 'expandable_win' :'shrinkable_win') + '.gif'}"></a>         
+        </span>
+        <span th:unless="${lineStat.count == 4 and threadDump.isIdle()}">&nbsp;</span>
+        <span th:if="${lineStat.count <= 4 or not threadDump.isIdle() or (threadDump.isIdle() and not filter.getShrinkIdle())}">
+            <span th:if="${line.isHoldingLock()}">[[${line.beforeObjectId()}]]<a
+                    th:if="${index == -1}"
+                    th:id="${line.getLockedObjectId()}"></a><a
+                    th:if="${index != -1}"
+                    th:id="${line.getLockedObjectId()+'_'+index}"></a>[[${line.getLockedObjectId + line.afterObjectId()}]]
+            </span>
+            <span th:if="${not line.isHoldingLock() && line.isTryingToGetLock() && null != line.getLockedObjectId()}"
+            >[[${line.beforeObjectId()}]]<a 
+                    th:if="${index == -1}"
+                    th:href="${'./full/index-'+filter.getFullThreadIndex()+'_shrink-'+filter.getShrinkIdle()+'.html#'+line.getLockedObjectId()}"
+                    th:text="${line.getLockedObjectId()}"></a><a
+                    th:if="${index != -1}"
+                    th:href="${'./sequence/threadId-'+line.getBlockerThreadId()+'_shrink-'+filter.getShrinkIdle()+'.html#'+line.getLockedObjectId()+'_'+index}"
+                    th:text="${line.getLockedObjectId()}"></a>[[${line.afterObjectId()}]]
+            </span>
+            <span th:if="${not line.isHoldingLock() and not (not line.isHoldingLock() && line.isTryingToGetLock() && null != line.getLockedObjectId())}"
+                  th:text="${line.getLine()}"></span><br>
+        </span>
+    </span>
     <br>
-
 </div>
 </body>
 </html>
