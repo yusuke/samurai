@@ -167,9 +167,6 @@ public class ThymeleafHtmlRenderer implements Constants {
 
     public static class Util {
         public String asHTML(StackLine line, int index, boolean shrink) {
-            if (line == null) {
-                return "null!";
-            }
             if (line.isHoldingLock()) {
                 String objId = line.getLockedObjectId();
                 int objIdBegin = line.getLine().indexOf(objId);
@@ -223,11 +220,6 @@ public class ThymeleafHtmlRenderer implements Constants {
         }
 
         public String threadDumpToImageSrc(ThreadDump threadDump, int count, ThreadDumpSequence sequence) {
-        /*
-         #if($threadDump.isDeadLocked()) src="|${baseurl}deadlocked.gif"
-                 #elseif($stackTraces.sameAsBefore($velocityCount))
-                 src="|${baseurl}same-h.gif|" #else src="|${baseurl}space.gif|" #end
-         */
             if (threadDump == null) {
                 return "space.gif";
             }
@@ -255,10 +247,8 @@ public class ThymeleafHtmlRenderer implements Constants {
             if (threadDump.isIdle()) {
                 return "back-idle";
             }
-
             return "back-normal";
         }
-
 
         public String escape(String from) {
             int lessThanIndex = from.indexOf("<");

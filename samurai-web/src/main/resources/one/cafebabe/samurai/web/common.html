@@ -21,20 +21,6 @@
                     </span>
 
                 </span>
-
-    <!--        <div th:case="false">-->
-    <!--                <span th:each="line , lineStat : ${threadDump.getStackLines()}">-->
-    <!--                    <span th:switch="${threadDump.isIdle() and lineStat.count == 4 and threadDump.size() != 4}">-->
-    <!--                        <span th:case="${true}">-->
-    <!--                            &nbsp;&nbsp;<a th:if="${filter.mode.equals('full')}" th:href="${'./full/index-' + filter.getFullThreadIndex() + '_shrink-true.html#' + threadDump.getId()}"><img border="0" src="./images/shrinkable_win.gif"></a>[[${util.asHTML(line)}]]<br>-->
-    <!--                            &nbsp;&nbsp;<a th:if="${filter.mode.equals('sequence')}" th:href="${'./sequence/index-' + filter.getThreadId() + '_shrink-true.html#' + filter.getThreadId()}"><img border="0" src="./images/shrinkable_win.gif"></a>[[${util.asHTML(line)}]]<br>-->
-    <!--                        </span>-->
-    <!--                        <span th:case="${false}">-->
-    <!--                            &nbsp;&nbsp;&nbsp;[[${util.asHTML(line)}]]<br>-->
-    <!--                        </span>-->
-    <!--                    </span>-->
-    <!--                </span>-->
-    <!--        </div>-->
     <br>
 
 </div>
