@@ -166,42 +166,6 @@ public class ThymeleafHtmlRenderer implements Constants {
     }
 
     public static class Util {
-        public String asHTML(StackLine line, int index, boolean shrink) {
-            if (line.isHoldingLock()) {
-                String objId = line.getLockedObjectId();
-                int objIdBegin = line.getLine().indexOf(objId);
-                StringBuilder html = new StringBuilder();
-                html.append(escape(line.getLine().substring(0, objIdBegin)));
-                if (-1 != index) {
-                    html.append("<a name=\"").append(objId).append("_").append(index).append("\"></a>");
-                } else {
-                    html.append("<a name=\"").append(objId).append("\"></a>");
-                }
-                html.append(objId);
-                html.append(escape(line.getLine().substring(objIdBegin + objId.length())));
-                return html.toString();
-            } else if (line.isTryingToGetLock() && null != line.getLockedObjectId()) {
-                String objId = line.getLockedObjectId();
-                int objIdBegin = line.getLine().indexOf(objId);
-                StringBuilder html = new StringBuilder();
-                html.append(escape(line.getLine().substring(0, objIdBegin)));
-                if (-1 != index) {
-                    html.append("<a href=\"../sequence/threadId-").append(line.getBlockerId()).append("_shrink-").append(shrink).append(".html#").append(objId).append("_").append(index).append("\">");
-                } else {
-                    html.append("<a href=\"#").append(objId).append("\">");
-                }
-                html.append(objId);
-                html.append("</a>");
-                html.append(escape(line.getLine().substring(objIdBegin + objId.length())));
-                return html.toString();
-            } else {
-                return escape(line.getLine());
-            }
-        }
-
-        public String asHTML(StackLine line) {
-            return asHTML(line, -1, false);
-        }
 
         public String threadDumpToClass(ThreadDump threadDump) {
             if (threadDump == null) {

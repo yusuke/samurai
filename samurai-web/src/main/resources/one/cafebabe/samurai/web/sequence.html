@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title th:text="${resource.getString('web.sequence') + resource.getString('web.view')}"></title>
+    <meta charset="UTF-8">
     <base th:href="${baseurl}">
     <link rel="stylesheet" href="./css/style.css"/>
     <style>
@@ -48,7 +49,7 @@
             <span th:text="${threadDump.getCondition()}"> </span><br>
             <span th:switch="${null != threadDump}">
                 <div th:case="${true}">
-                    <div th:replace="common::stackTraces"></div>
+                    <div th:replace="common::stackTraces(index = ${threadDumpStat.count})"></div>
                 </div>
                 <div th:case="${false}">
                     <span th:text="${sequence.getName()}"> </span>

@@ -175,4 +175,10 @@ public class StackLine implements Serializable {
     public String getLockedClassName() {
         return LOCKED_CLASS_NAME;
     }
+    public String beforeObjectId(){
+        return line.substring(0, line.indexOf(getLockedObjectId()));
+    }
+    public String afterObjectId(){
+        return line.substring(line.indexOf(getLockedObjectId()) + getLockedObjectId().length());
+    }
 }
