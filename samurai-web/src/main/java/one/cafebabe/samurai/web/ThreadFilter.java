@@ -47,24 +47,11 @@ public class ThreadFilter implements Serializable {
         config_shrinkIdleThreads = true;
     }
 
-    public boolean isTableView() {
-        return mode == View.table;
-    }
-
-    public boolean isSequenceView() {
-        return mode == View.sequence;
-    }
-
-    public boolean isThreadDumpView() {
-        return mode == View.full;
-    }
-
     public ThreadDumpSequence doFilter(ThreadStatistic statistic) {
         ThreadDumpSequence sequence = null;
         if (this.mode == View.full) {
             FullThreadDump fullThreadDump = statistic.getFullThreadDump(this.
                     fullThreadIndex);
-//      threadDumps = new StackTrace[fullThreadDump.getThreadCount()];
             for (int i = 0; i < fullThreadDump.getThreadCount(); i++) {
                 if (i == 0) {
                     sequence = new ThreadDumpSequence(fullThreadDump.getThreadDump(i), 1);
