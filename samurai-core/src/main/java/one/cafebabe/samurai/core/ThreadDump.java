@@ -89,13 +89,13 @@ public abstract class ThreadDump implements Serializable {
 
     public String getBlockerId() {
         if (null != blockedLine) {
-            return this.blockedLine.getBlockerId();
+            return this.blockedLine.getBlockerThreadId();
         }
         return null;
     }
 
     /*package*/ void setBlockerId(String id) {
-        this.blockedLine.setBlockerId(id);
+        this.blockedLine.setBlockerThreadId(id);
     }
 
     public List<StackLine> getLockedLines() {

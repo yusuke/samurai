@@ -158,14 +158,14 @@ public class StackLine implements Serializable {
         return IS_HOLDING_LOCK;
     }
 
-    private String blockerId = null;
+    private String blockerThreadId = null;
 
-    /*package*/ void setBlockerId(String id) {
-        this.blockerId = id;
+    /*package*/ void setBlockerThreadId(String id) {
+        this.blockerThreadId = id;
     }
 
-    public String getBlockerId() {
-        return this.blockerId;
+    public String getBlockerThreadId() {
+        return this.blockerThreadId;
     }
 
     public String getLockedObjectId() {

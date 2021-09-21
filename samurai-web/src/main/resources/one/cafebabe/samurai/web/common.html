@@ -26,7 +26,7 @@
                                                            th:href="${'#'+line.getLockedObjectId()}"
                         th:text="${line.getLockedObjectId()}"></a><a 
                                 th:if="${index != -1}" 
-                                th:href="${'./sequence/threadId-'+line.getBlockerId()+'_shrink-'+filter.getShrinkIdle()+'.html#'+line.getLockedObjectId()+'_'+index}"
+                                th:href="${'./sequence/threadId-'+line.getBlockerThreadId()+'_shrink-'+filter.getShrinkIdle()+'.html#'+line.getLockedObjectId()+'_'+index}"
                                 th:text="${line.getLockedObjectId()}"></a>[[${line.afterObjectId()}]]
                         </span>
                         <span th:if="${not line.isHoldingLock() and not (not line.isHoldingLock() && line.isTryingToGetLock() && null != line.getLockedObjectId())}"
