@@ -117,13 +117,13 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         buttonPrevious.addMouseListener(new RolloverBorder(buttonPrevious));
         buttonPrevious.setIcon(backwardIcon);
         buttonPrevious.addActionListener(e -> {
-            if (filter.getMode() == ThreadFilter.View.ThreadDump) {
+            if (filter.mode == ThreadFilter.View.full) {
                 int selected = filter.getFullThreadIndex();
                 if (selected > 0) {
                     selected--;
                     filter.setFullThreadIndex(selected);
                 }
-            } else if (filter.getMode() == ThreadFilter.View.Sequence) {
+            } else if (filter.mode == ThreadFilter.View.sequence) {
                 ThreadDumpSequence[] sequences = statistic.getStackTracesAsArray();
                 for (int i = 0; i < sequences.length; i++) {
                     if (sequences[i].getId().equals(filter.getThreadId())) {
@@ -149,13 +149,13 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         buttonNext.addMouseListener(new RolloverBorder(buttonNext));
 
         buttonNext.addActionListener(e -> {
-            if (filter.getMode() == ThreadFilter.View.ThreadDump) {
+            if (filter.mode == ThreadFilter.View.full) {
                 int selected = filter.getFullThreadIndex();
                 if (selected < statistic.getFullThreadDumpCount() - 1) {
                     selected++;
                     filter.setFullThreadIndex(selected);
                 }
-            } else if (filter.getMode() == ThreadFilter.View.Sequence) {
+            } else if (filter.mode == ThreadFilter.View.sequence) {
                 ThreadDumpSequence[] sequences = statistic.getStackTracesAsArray();
                 for (int i = 0; i < sequences.length; i++) {
                     if (sequences[i].getId().equals(filter.getThreadId())) {
@@ -187,21 +187,21 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
 //        ( (StackTraces) showThreadList.getSelectedValue()).getId().equals(filter.getThreadId())
 //        showThreadList.getSelectedIndex()
             if (-1 != showThreadList.getSelectedIndex()) {
-                if (filter.getMode() == ThreadFilter.View.ThreadDump) {
+                if (filter.mode == ThreadFilter.View.full) {
                     //ensure that selected thread comes to the top of the pane
 //            JScrollBar scrollBar = jScrollPane3.getVerticalScrollBar();
 //            scrollBar.setValue(scrollBar.getMaximum());
                     threadDumpPanel.scrollToReference(((ThreadDumpSequence) showThreadList.getSelectedValue()).getId());
 //            context.getSearchPanel().searchNext(threadDumpPanel, ( (StackTraces) showThreadList.getSelectedValue()).getId(), 0);
 //            threadDumpPanel.grabFocus();
-                } else if (filter.getMode() == ThreadFilter.View.Sequence) {
+                } else if (filter.mode == ThreadFilter.View.sequence) {
                     if (!((ThreadDumpSequence) showThreadList.getSelectedValue()).getId().equals(
                             filter.getThreadId())) {
                         filter.setThreadId(((ThreadDumpSequence) showThreadList.getSelectedValue()).getId());
                         updateHtml();
                     }
-                } else if (filter.getMode() == ThreadFilter.View.Table) {
-                    filter.setMode(ThreadFilter.View.Sequence);
+                } else if (filter.mode == ThreadFilter.View.table) {
+                    filter.mode = ThreadFilter.View.sequence;
                     filter.setThreadId(((ThreadDumpSequence) showThreadList.getSelectedValue()).getId());
                     updateHtml();
                 }
@@ -459,11 +459,11 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                     fullButton.setSelected((fullButton == button) == button.isSelected());
                     sequenceButton.setSelected((sequenceButton == button) == button.isSelected());
                     if (tableButton == button) {
-                        filter.setMode(ThreadFilter.View.Table);
+                        filter.mode = ThreadFilter.View.table;
                     } else if (fullButton == button) {
-                        filter.setMode(ThreadFilter.View.ThreadDump);
+                        filter.mode = ThreadFilter.View.full;
                     } else if (sequenceButton == button) {
-                        filter.setMode(ThreadFilter.View.Sequence);
+                        filter.mode = ThreadFilter.View.sequence;
                     }
                     updateHtml();
                 }
@@ -536,17 +536,17 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                 buttonNext.setEnabled(false);
             } else {
                 showThreadList.setEnabled(true);
-                if (filter.getMode() == ThreadFilter.View.ThreadDump) {
+                if (filter.mode == ThreadFilter.View.full) {
                     buttonPrevious.setEnabled(!(selected == 0));
                     buttonNext.setEnabled(!(statistic.getFullThreadDumpCount() - 1 == selected));
                 } else {
-                    buttonPrevious.setEnabled(filter.getMode() == ThreadFilter.View.Sequence);
-                    buttonNext.setEnabled(filter.getMode() == ThreadFilter.View.Sequence);
+                    buttonPrevious.setEnabled(filter.mode == ThreadFilter.View.sequence);
+                    buttonNext.setEnabled(filter.mode == ThreadFilter.View.sequence);
                 }
             }
             if (null != threadList && threadList.length != 0) {
-                if (filter.getMode() == ThreadFilter.View.ThreadDump) {
-                } else if (filter.getMode() == ThreadFilter.View.Sequence) {
+                if (filter.mode == ThreadFilter.View.full) {
+                } else if (filter.mode == ThreadFilter.View.sequence) {
                     for (int i = 0; i < threadList.length; i++) {
                         if (filter.getThreadId().equals(threadList[i].getId())) {
                             showThreadList.setSelectedIndex(i);
@@ -555,19 +555,19 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                     }
                 }
             }
-            if (filter.getMode() == ThreadFilter.View.ThreadDump) {
+            if (filter.mode == ThreadFilter.View.full) {
                 showThreadList.setSelectedIndices(new int[0]);
                 threadDumpStatus.setText(filter.getFullThreadIndex() + 1 + "/" + statistic.getFullThreadDumpCount());
                 tableButton.setSelected(false);
                 fullButton.setSelected(true);
                 sequenceButton.setSelected(false);
-            } else if (filter.getMode() == ThreadFilter.View.Table) {
+            } else if (filter.mode == ThreadFilter.View.table) {
                 showThreadList.setSelectedIndices(new int[0]);
                 threadDumpStatus.setText("");
                 tableButton.setSelected(true);
                 fullButton.setSelected(false);
                 sequenceButton.setSelected(false);
-            } else if (filter.getMode() == ThreadFilter.View.Sequence) {
+            } else if (filter.mode == ThreadFilter.View.sequence) {
                 threadDumpStatus.setText(statistic.getStackTracesById(filter.getThreadId()).getName());
                 tableButton.setSelected(false);
                 fullButton.setSelected(false);
@@ -663,9 +663,9 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
 
     void showThreadList_actionPerformed(ActionEvent e) {
         if (showThreadList.getSelectedIndex() == 0) {
-            filter.setMode(ThreadFilter.View.ThreadDump);
+            filter.mode = ThreadFilter.View.full;
         } else {
-            filter.setMode(ThreadFilter.View.Sequence);
+            filter.mode = ThreadFilter.View.sequence;
             filter.setThreadId((String) showThreadList.getSelectedValue());
         }
         updateHtml();
@@ -690,7 +690,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
             Color fgColor = Color.BLACK;
             setFont(getFont().deriveFont(0));
             if (null != currentThreadDump) {
-                if (filter.getMode() == ThreadFilter.View.ThreadDump) {
+                if (filter.mode == ThreadFilter.View.full) {
                     if (currentThreadDump.isIdle()) {
                         fgColor = Color.GRAY;
                     } else if (currentThreadDump.isBlocked()) {

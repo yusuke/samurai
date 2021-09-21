@@ -40,38 +40,14 @@
 <span th:text="${stats.getFullThreadDump(filter.getFullThreadIndex()).getHeader()}"></span><br><br>
 
 <div th:each="threadDump, threadDumpStat : ${filter.doFilter(stats).asArray()}">
-    <font th:class="${util.threadDumpToClassNameSequence(threadDump)}">
+    <div th:class="${util.threadDumpToClass(threadDump)}">
         "<a name="$threadDump.getId()" th:href="${'./sequence/threadId-' + threadDump.getId() + '_shrink-' + filter.getShrinkIdle() + '.html#' + threadDumpStat.count}"><span th:text="${threadDump.getName()}"></span></a>"
 
         <img th:if="${threadDump.isDeadLocked()}" border="0" src="./images/deadlocked.gif"/>
         <span th:text="${threadDump.getCondition()}"></span><br>
 
-        <div th:switch="${filter.getShrinkIdle() && threadDump.isIdle() and threadDump.size() != 0}">
-            <div th:case="true">
-                <span th:each="line , lineStat : ${threadDump.getStackLines()}">
-                    <span th:if="${lineStat.count < 4 or threadDump.size() == 4}">
-                        &nbsp;&nbsp;&nbsp;<span th:text="${util.asHTML(line)}"></span><br>
-                    </span>
-                    <span th:if="${lineStat.count == 4}">
-                        &nbsp;&nbsp;<a th:href="${'./full/index-' + filter.getFullThreadIndex() + '_shrink-false.html#'+threadDump.getId()}"><img border="0" src="./images/expandable_win.gif"></a>[[${util.asHTML(line)}]]<br>
-                    </span>
-                </span>
-
-            </div>
-            <div th:case="false">
-                <span th:each="line , lineStat : ${threadDump.getStackLines()}">
-                    <span th:switch="${threadDump.isIdle() and lineStat.count == 4 and threadDump.size() != 4}">
-                        <span th:case="${true}">
-                            &nbsp;&nbsp;<a th:href="${'./full/index-' + filter.getFullThreadIndex() + '_shrink-true.html#' + threadDump.getId()}"><img border="0" src="./images/shrinkable_win.gif"></a>[[${util.asHTML(line)}]]<br>
-                        </span>
-                        <span th:case="${false}">
-                            &nbsp;&nbsp;&nbsp;[[${util.asHTML(line)}]]<br>
-                        </span>
-                    </span>
-                </span>
-            </div>
-        </div>
-    </font>
+        <div th:replace="common::stackTraces"></div>
+    </div>
     <br>
 </div>
 </body>

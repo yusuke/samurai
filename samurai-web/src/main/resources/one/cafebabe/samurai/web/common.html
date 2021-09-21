@@ -1,0 +1,42 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>common</title>
+</head>
+<body>
+<div th:fragment="stackTraces">
+                <span th:each="line , lineStat : ${threadDump.getStackLines()}">
+                    &nbsp;&nbsp;<span th:if="${lineStat.count == 4 and threadDump.isIdle()}">
+                        <a th:if="${filter.mode.name().equals('full')}" th:href="${'./full/index-' + filter.getFullThreadIndex()
+                         + '_shrink-' +(not filter.shrinkIdle) +'.html#'+threadDump.getId()}"><img border="0" th:src="${'./images/'
+                          + (filter.shrinkIdle ? 'expandable_win' :'shrinkable_win') + '.gif'}"></a>
+                        <a th:if="${filter.mode.name().equals('sequence')}" th:href="${'./sequence/index-' + filter.getThreadId() 
+                        + '_shrink-' + (not filter.shrinkIdle) +'.html#'+filter.getThreadId()}"><img border="0" th:src="${'./images/'
+                          + (filter.shrinkIdle ? 'expandable_win' :'shrinkable_win') + '.gif'}"></a>
+                    </span>
+                    <span th:unless="${lineStat.count == 4 and threadDump.isIdle()}">&nbsp;</span>
+                    <span th:if="${lineStat.count <= 4 or not threadDump.isIdle() or (threadDump.isIdle() and not filter.getShrinkIdle())}">
+                        [[${util.asHTML(line)}]]<br>
+                    </span>
+
+                </span>
+
+    <!--        <div th:case="false">-->
+    <!--                <span th:each="line , lineStat : ${threadDump.getStackLines()}">-->
+    <!--                    <span th:switch="${threadDump.isIdle() and lineStat.count == 4 and threadDump.size() != 4}">-->
+    <!--                        <span th:case="${true}">-->
+    <!--                            &nbsp;&nbsp;<a th:if="${filter.mode.equals('full')}" th:href="${'./full/index-' + filter.getFullThreadIndex() + '_shrink-true.html#' + threadDump.getId()}"><img border="0" src="./images/shrinkable_win.gif"></a>[[${util.asHTML(line)}]]<br>-->
+    <!--                            &nbsp;&nbsp;<a th:if="${filter.mode.equals('sequence')}" th:href="${'./sequence/index-' + filter.getThreadId() + '_shrink-true.html#' + filter.getThreadId()}"><img border="0" src="./images/shrinkable_win.gif"></a>[[${util.asHTML(line)}]]<br>-->
+    <!--                        </span>-->
+    <!--                        <span th:case="${false}">-->
+    <!--                            &nbsp;&nbsp;&nbsp;[[${util.asHTML(line)}]]<br>-->
+    <!--                        </span>-->
+    <!--                    </span>-->
+    <!--                </span>-->
+    <!--        </div>-->
+    <br>
+
+</div>
+</body>
+</html>

@@ -28,7 +28,8 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import java.io.*;
 import java.net.URISyntaxException;
-import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.StandardOpenOption;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -89,21 +90,7 @@ public class ThymeleafHtmlRenderer implements Constants {
         context.setVariable("util", util);
         context.setVariable("baseurl", baseurl);
 
-        try {
-            switch (filter.getMode()) {
-                case Table:
-                    return process("table", context);
-                case ThreadDump:
-                    return process("threaddump", context);
-                case Sequence:
-                    return process("sequence", context);
-                default:
-                    return "";
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            throw new AssertionError("should never happen");
-        }
+        return process(filter.mode.name(), context);
     }
 
     public int length(Object[] array) {
@@ -116,19 +103,18 @@ public class ThymeleafHtmlRenderer implements Constants {
      *
      * @param stats     statistics to be saved.
      * @param directory Directory to save the html files.
-     * @param listener
-     * @throws IOException
+     * @param listener  listener to receive progress events
+     * @throws IOException when save action fails
      */
-    public void saveTo(ThreadStatistic stats, File directory, ProgressListener listener) throws IOException {
-        if (null != directory) {
-            File tableDir = new File(directory.getAbsolutePath() + File.separator + Constants.MODE_TABLE);
-            File fullDir = new File(directory.getAbsolutePath() + File.separator + Constants.MODE_FULL);
-            File sequenceDir = new File(directory.getAbsolutePath() + File.separator + Constants.MODE_SEQUENCE);
-            directory.mkdirs();
-            tableDir.mkdirs();
-            fullDir.mkdirs();
-            sequenceDir.mkdirs();
-        }
+    @SuppressWarnings("ResultOfMethodCallIgnored")
+    public void saveTo(@NotNull ThreadStatistic stats, @NotNull File directory, @NotNull ProgressListener listener) throws IOException {
+        File tableDir = new File(directory.getAbsolutePath() + File.separator + Constants.MODE_TABLE);
+        File fullDir = new File(directory.getAbsolutePath() + File.separator + Constants.MODE_FULL);
+        File sequenceDir = new File(directory.getAbsolutePath() + File.separator + Constants.MODE_SEQUENCE);
+        directory.mkdirs();
+        tableDir.mkdirs();
+        fullDir.mkdirs();
+        sequenceDir.mkdirs();
         ThreadFilter filter = new ThreadFilter();
         ThreadDumpSequence[] st = stats.getStackTracesAsArray();
         int count = stats.getFullThreadDumpCount() * 2 + st.length * 2 + 2;
@@ -137,7 +123,7 @@ public class ThymeleafHtmlRenderer implements Constants {
         //save index page
         saveAs(directory, "index.html", "<html><head><meta http-equiv=\"Refresh\" content=\"0;URL=./table/index.html\"/></head><body></body></html>");
         listener.notifyProgress(progress++, count);
-        filter.setMode(ThreadFilter.View.Table);
+        filter.mode = ThreadFilter.View.table;
         filter.setThreadId(stats.getFirstThreadId());
         filter.setFullThreadIndex(0);
         Map<String, Object> webContext = new HashMap<>();
@@ -148,7 +134,7 @@ public class ThymeleafHtmlRenderer implements Constants {
         listener.notifyProgress(progress++, count);
         //save full thread dump view
         filter.setShrinkIdle(false);
-        filter.setMode(ThreadFilter.View.ThreadDump);
+        filter.mode = ThreadFilter.View.full;
         do {
             for (int i = 0; i < stats.getFullThreadDumpCount(); i++) {
                 filter.setFullThreadIndex(i);
@@ -160,7 +146,7 @@ public class ThymeleafHtmlRenderer implements Constants {
 
         //save sequence thread dump view
         filter.setShrinkIdle(false);
-        filter.setMode(ThreadFilter.View.Sequence);
+        filter.mode = ThreadFilter.View.sequence;
         do {
             for (ThreadDumpSequence aSt : st) {
                 filter.setThreadId(aSt.getId());
@@ -176,27 +162,14 @@ public class ThymeleafHtmlRenderer implements Constants {
     }
 
     public void saveAs(File dir, String fileName, String utf8Content) throws IOException {
-        if (null != dir) {
-            FileOutputStream fos = null;
-            BufferedWriter writer = null;
-            try {
-                fos = new FileOutputStream(dir + File.separator + fileName);
-                writer = new BufferedWriter(new OutputStreamWriter(fos, StandardCharsets.UTF_8));
-                writer.write(utf8Content);
-                writer.close();
-            } finally {
-                if (null != writer) {
-                    writer.close();
-                }
-                if (null != fos) {
-                    fos.close();
-                }
-            }
-        }
+        Files.writeString(dir.toPath().resolve(fileName), utf8Content, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
     }
 
     public static class Util {
         public String asHTML(StackLine line, int index, boolean shrink) {
+            if (line == null) {
+                return "null!";
+            }
             if (line.isHoldingLock()) {
                 String objId = line.getLockedObjectId();
                 int objIdBegin = line.getLine().indexOf(objId);
@@ -286,24 +259,6 @@ public class ThymeleafHtmlRenderer implements Constants {
             return "back-normal";
         }
 
-        public String threadDumpToClassNameSequence(ThreadDump threadDump) {
-            if (threadDump == null) {
-                return "notexist";
-            }
-            if (threadDump.isBlocked()) {
-                return "blocked";
-            }
-
-            if (threadDump.isBlocking()) {
-                return "blocking";
-            }
-
-            if (threadDump.isIdle()) {
-                return "idle";
-            }
-
-            return "normal";
-        }
 
         public String escape(String from) {
             int lessThanIndex = from.indexOf("<");
