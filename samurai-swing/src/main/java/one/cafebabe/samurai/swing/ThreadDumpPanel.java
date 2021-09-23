@@ -20,7 +20,6 @@ import one.cafebabe.samurai.core.ThreadDumpSequence;
 import one.cafebabe.samurai.core.ThreadStatistic;
 import one.cafebabe.samurai.util.*;
 import one.cafebabe.samurai.core.FullThreadDump;
-import one.cafebabe.samurai.core.ThreadDump;
 import one.cafebabe.samurai.web.ThreadFilter;
 import one.cafebabe.samurai.web.ThymeleafHtmlRenderer;
 
@@ -77,8 +76,6 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     final JPanel settingPanel = new JPanel();
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private final ThymeleafHtmlRenderer renderer = new ThymeleafHtmlRenderer();
-
-    public boolean config_wrapDump = false;
 
     private final Context context;
 
@@ -173,42 +170,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         });
 
 
-        jSplitPane1.setOrientation(JSplitPane.HORIZONTAL_SPLIT);
-        jSplitPane1.setOneTouchExpandable(true);
-        jSplitPane1.setMinimumSize(new Dimension(50, 50));
-        jSplitPane1.setPreferredSize(new Dimension(50, 50));
-        jSplitPane1.setContinuousLayout(true);
-        jSplitPane1.setBorder(null);
         progressBar.setStringPainted(true);
-        showThreadList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-//    showThreadList.addMouseListener(new
-//      FullThreadDumpPanel_showThreadList_mouseAdapter(this));
-        showThreadList.addListSelectionListener(event -> {
-//        ( (StackTraces) showThreadList.getSelectedValue()).getId().equals(filter.getThreadId())
-//        showThreadList.getSelectedIndex()
-            if (-1 != showThreadList.getSelectedIndex()) {
-                if (filter.mode == ThreadFilter.View.full) {
-                    //ensure that selected thread comes to the top of the pane
-//            JScrollBar scrollBar = jScrollPane3.getVerticalScrollBar();
-//            scrollBar.setValue(scrollBar.getMaximum());
-                    threadDumpPanel.scrollToReference(((ThreadDumpSequence) showThreadList.getSelectedValue()).getId());
-//            context.getSearchPanel().searchNext(threadDumpPanel, ( (StackTraces) showThreadList.getSelectedValue()).getId(), 0);
-//            threadDumpPanel.grabFocus();
-                } else if (filter.mode == ThreadFilter.View.sequence) {
-                    if (!((ThreadDumpSequence) showThreadList.getSelectedValue()).getId().equals(
-                            filter.getThreadId())) {
-                        filter.setThreadId(((ThreadDumpSequence) showThreadList.getSelectedValue()).getId());
-                        updateHtml();
-                    }
-                } else if (filter.mode == ThreadFilter.View.table) {
-                    filter.mode = ThreadFilter.View.sequence;
-                    filter.setThreadId(((ThreadDumpSequence) showThreadList.getSelectedValue()).getId());
-                    updateHtml();
-                }
-            }
-        });
-        showThreadList.setCellRenderer(new ThreadCellRenderer());
-
 
         saveButton.setBorderPainted(false);
         saveButton.setMaximumSize(new Dimension(20, 20));
@@ -282,10 +244,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         progressBar.setPreferredSize(new Dimension(80, 20));
         progressBar.setMinimumSize(new Dimension(80, 20));
         progressBar.setVisible(false);
-        this.add(jSplitPane1, BorderLayout.CENTER);
-        jSplitPane1.add(jScrollPane2, JSplitPane.TOP);
-        jScrollPane2.getViewport().add(showThreadList, null);
-        jSplitPane1.add(settingPanel, JSplitPane.RIGHT);
+        this.add(settingPanel, BorderLayout.CENTER);
         settingPanel.add(jScrollPane3, new GridBagConstraints(0, 0, 10, 1, 1.0, 1.0
                 , GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 
@@ -318,12 +277,9 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                     , GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
         }
         jScrollPane3.getViewport().add(threadDumpPanel, null);
-        jSplitPane1.setDividerLocation(200);
-        showThreadList.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
-
     }
 
-    class RolloverBorder extends MouseAdapter {
+    static class RolloverBorder extends MouseAdapter {
         private final JButton button;
 
         RolloverBorder(JButton button) {
@@ -477,8 +433,10 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
              FileOutputStream fos = new FileOutputStream(parentDir.getAbsolutePath() + "/" + fileName)) {
             byte[] buf = new byte[256];
             int count;
-            while (-1 != (count = is.read(buf))) {
-                fos.write(buf, 0, count);
+            if (is != null) {
+                while (-1 != (count = is.read(buf))) {
+                    fos.write(buf, 0, count);
+                }
             }
         }
     }
@@ -527,54 +485,49 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
 
     private ThreadDumpSequence[] threadList = null;
 
-    public void changeBunttonFeel() {
+    public void changeButtonFeel() {
         invokeLater(() -> {
-            int selected = filter.getFullThreadIndex();
-            if (0 == statistic.getFullThreadDumpCount()) {
-                showThreadList.setEnabled(false);
-                buttonPrevious.setEnabled(false);
-                buttonNext.setEnabled(false);
-            } else {
-                showThreadList.setEnabled(true);
-                if (filter.mode == ThreadFilter.View.full) {
-                    buttonPrevious.setEnabled(!(selected == 0));
-                    buttonNext.setEnabled(!(statistic.getFullThreadDumpCount() - 1 == selected));
-                } else {
-                    buttonPrevious.setEnabled(filter.mode == ThreadFilter.View.sequence);
-                    buttonNext.setEnabled(filter.mode == ThreadFilter.View.sequence);
-                }
-            }
-            if (null != threadList && threadList.length != 0) {
-                if (filter.mode == ThreadFilter.View.full) {
-                } else if (filter.mode == ThreadFilter.View.sequence) {
-                    for (int i = 0; i < threadList.length; i++) {
-                        if (filter.getThreadId().equals(threadList[i].getId())) {
-                            showThreadList.setSelectedIndex(i);
-                            break;
+                    int selected = filter.getFullThreadIndex();
+                    if (0 == statistic.getFullThreadDumpCount()) {
+                        buttonPrevious.setEnabled(false);
+                        buttonNext.setEnabled(false);
+                    } else {
+                        if (filter.mode == ThreadFilter.View.full) {
+                            buttonPrevious.setEnabled(!(selected == 0));
+                            buttonNext.setEnabled(!(statistic.getFullThreadDumpCount() - 1 == selected));
+                        } else {
+                            buttonPrevious.setEnabled(filter.mode == ThreadFilter.View.sequence);
+                            buttonNext.setEnabled(filter.mode == ThreadFilter.View.sequence);
                         }
                     }
+                    if (null != threadList && threadList.length != 0) {
+                        if (filter.mode != ThreadFilter.View.full) {
+                            if (filter.mode == ThreadFilter.View.sequence) {
+                                for (ThreadDumpSequence sequence : threadList) {
+                                    if (filter.getThreadId().equals(sequence.getId())) {
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if (filter.mode == ThreadFilter.View.full) {
+                        threadDumpStatus.setText(filter.getFullThreadIndex() + 1 + "/" + statistic.getFullThreadDumpCount());
+                        tableButton.setSelected(false);
+                        fullButton.setSelected(true);
+                        sequenceButton.setSelected(false);
+                    } else if (filter.mode == ThreadFilter.View.table) {
+                        threadDumpStatus.setText("");
+                        tableButton.setSelected(true);
+                        fullButton.setSelected(false);
+                        sequenceButton.setSelected(false);
+                    } else if (filter.mode == ThreadFilter.View.sequence) {
+                        threadDumpStatus.setText(statistic.getStackTracesById(filter.getThreadId()).getName());
+                        tableButton.setSelected(false);
+                        fullButton.setSelected(false);
+                        sequenceButton.setSelected(true);
+                    }
                 }
-            }
-            if (filter.mode == ThreadFilter.View.full) {
-                showThreadList.setSelectedIndices(new int[0]);
-                threadDumpStatus.setText(filter.getFullThreadIndex() + 1 + "/" + statistic.getFullThreadDumpCount());
-                tableButton.setSelected(false);
-                fullButton.setSelected(true);
-                sequenceButton.setSelected(false);
-            } else if (filter.mode == ThreadFilter.View.table) {
-                showThreadList.setSelectedIndices(new int[0]);
-                threadDumpStatus.setText("");
-                tableButton.setSelected(true);
-                fullButton.setSelected(false);
-                sequenceButton.setSelected(false);
-            } else if (filter.mode == ThreadFilter.View.sequence) {
-                threadDumpStatus.setText(statistic.getStackTracesById(filter.getThreadId()).getName());
-                tableButton.setSelected(false);
-                fullButton.setSelected(false);
-                sequenceButton.setSelected(true);
-            }
-            showThreadList.repaint();
-        }
         );
     }
 
@@ -590,12 +543,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                     if (uri.contains("#")) {
                         referer = uri.substring(uri.indexOf("#") + 1);
                     }
-                    changeBunttonFeel();
-                    for (int i = 0; i < threadList.length; i++) {
-                        if ((threadList[i]).getName().equals(filter.getThreadId())) {
-                            showThreadList.setSelectedIndex(i);
-                        }
-                    }
+                    changeButtonFeel();
 
                 }
             }
@@ -610,17 +558,12 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
             invokeLater(() -> {
                 showMe(resources.getMessage("ThreadDumpPanel.threadDump"));
                 threadList = statistic.getStackTracesAsArray();
-                showThreadList.setListData(threadList);
-                showThreadList.clearSelection();
             });
             updateHtml();
         }
     };
     private ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
-    final JSplitPane jSplitPane1 = new JSplitPane();
-    final JScrollPane jScrollPane2 = new JScrollPane();
     final JScrollPane jScrollPane3 = new JScrollPane();
-    final JList showThreadList = new JList();
 
     final JLabel threadDumpStatus = new JLabel();
     File currentFile;
@@ -656,57 +599,16 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         filter.reset();
         threadDumpPanel.setText(resources.getMessage(
                 "ThreadDumpPanel.threadDumpHere"));
-        changeBunttonFeel();
+        changeButtonFeel();
 
-//        showThreadList.setCellRenderer(new FontFixCellRenderer());
     }
 
-    void showThreadList_actionPerformed(ActionEvent e) {
-        if (showThreadList.getSelectedIndex() == 0) {
-            filter.mode = ThreadFilter.View.full;
-        } else {
-            filter.mode = ThreadFilter.View.sequence;
-            filter.setThreadId((String) showThreadList.getSelectedValue());
-        }
-        updateHtml();
-    }
 
     public synchronized void onConfigurationChanged(Configuration config) {
         config.apply(renderer);
         webContext.put("fontFamily", config_dumpFontFamily);
         webContext.put("fontSize", config_dumpFontSize);
         updateHtml();
-    }
-
-    class ThreadCellRenderer extends JLabel implements ListCellRenderer {
-        public ThreadCellRenderer() {
-            setOpaque(true);
-        }
-
-        public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-            ThreadDumpSequence threadDumps = ((ThreadDumpSequence) value);
-            ThreadDump currentThreadDump = threadDumps.get(filter.getFullThreadIndex());
-
-            Color fgColor = Color.BLACK;
-            setFont(getFont().deriveFont(0));
-            if (null != currentThreadDump) {
-                if (filter.mode == ThreadFilter.View.full) {
-                    if (currentThreadDump.isIdle()) {
-                        fgColor = Color.GRAY;
-                    } else if (currentThreadDump.isBlocked()) {
-                        fgColor = Color.RED;
-                    }
-                }
-            } else {
-                //no thread in this fullthreaddump
-//        fgColor = Color.GRAY;
-            }
-            setText(value.toString());
-            setBackground(isSelected ? fgColor : Color.white);
-            setForeground(isSelected ? Color.white : fgColor);
-            setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
-            return this;
-        }
     }
 
     public void cut() {

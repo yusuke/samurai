@@ -18,29 +18,31 @@ package one.cafebabe.samurai.swing;
 import one.cafebabe.samurai.util.GUIResourceBundle;
 import one.cafebabe.samurai.util.OSDetector;
 
+import javax.swing.*;
+
 
 public class Samurai {
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
 
     public static void main(String[] args) {
         if (OSDetector.isMac()) {
-            System.setProperty("apple.awt.application.name",resources.getMessage("Samurai") );
+            System.setProperty("apple.awt.application.name", resources.getMessage("Samurai"));
             System.setProperty("apple.laf.useScreenMenuBar", "true");
-//    System.setProperty("apple.awt.brushMetalLook", "true");
             System.setProperty("com.apple.macos.useSmallTabs", "true");
             System.setProperty("apple.awt.textantialiasing", "true");
             System.setProperty("com.apple.mrj.application.live-resize", "false");
             System.setProperty("com.apple.mrj.application.apple.menu.about.name",
                     resources.getMessage("Samurai"));
         }
-        try {
-            javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
-            javax.swing.JFrame frame = new MainFrame();
-            frame.validate();
-            frame.setVisible(true);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        SwingUtilities.invokeLater(() -> {
+            try {
+                javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
+                javax.swing.JFrame frame = new MainFrame();
+                frame.validate();
+                frame.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
     }
 }

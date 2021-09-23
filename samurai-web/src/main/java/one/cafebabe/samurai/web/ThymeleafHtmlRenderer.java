@@ -15,7 +15,6 @@
  */
 package one.cafebabe.samurai.web;
 
-import one.cafebabe.samurai.core.StackLine;
 import one.cafebabe.samurai.core.ThreadDump;
 import one.cafebabe.samurai.core.ThreadDumpSequence;
 import one.cafebabe.samurai.core.ThreadStatistic;
@@ -36,7 +35,6 @@ import java.util.ResourceBundle;
 
 public class ThymeleafHtmlRenderer implements Constants {
     private final ResourceBundle resource = ResourceBundle.getBundle("one.cafebabe.samurai.web.messages");
-    public String config_wrapDump = "true";
     private String baseurl;
     private final Util util = new Util();
 
@@ -84,7 +82,6 @@ public class ThymeleafHtmlRenderer implements Constants {
         Context context = new Context();
         context.setVariables(map);
         context.setVariable("resource", resource);
-        context.setVariable("wrap", config_wrapDump);
         context.setVariable("stats", statistic);
         context.setVariable("filter", filter);
         context.setVariable("util", util);
