@@ -60,6 +60,7 @@ class TestThreadDump {
     }
 
     public void dig2(String path) throws IOException {
+        System.out.println("digging:"+path);
         String base = "/" + path;
         InputStream resourceAsStream = TestThreadDump.class.getResourceAsStream(base);
         if (resourceAsStream == null) {
