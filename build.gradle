@@ -50,7 +50,7 @@ task notarizeMacApp(type: Exec) {
 
     commandLine('xcrun',
             'altool', '--notarize-app', '--primary-bundle-id'
-            , 'one.cafebabe.Samurai', '-u', project.properties['APPLE_DEVELOPER_USER'] ?: "none", '-p', project.properties['APPLE_DEVELOPER_APP_PASSWORD'] ?: "none", '-f', "${appName}-${project.version}.dmg"
+            , 'one.cafebabe.Samurai', '-u', project.properties['APPLE_DEVELOPER_USER'] ?: "none", '-p', project.properties['APPLE_DEVELOPER_APP_PASSWORD'] ?: "none", '-f', "build/${appName}-${project.version}.dmg"
     )
 }
 
@@ -63,7 +63,7 @@ task stapleMacApp(type: Exec) {
     workingDir './'
 
     commandLine('xcrun',
-            'stapler', 'staple', "${appName}-${project.version}.dmg"
+            'stapler', 'staple', "build/${appName}-${project.version}.dmg"
     )
 }
 
