@@ -68,7 +68,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
 
     private final JMenu menuHelp = new JMenu("menu.help");
     private final JMenuItem menuHelpAbout = new JMenuItem("menu.help.about");
-    public final AboutSamuraiDialog dialog = new AboutSamuraiDialog(this);
+    public final AboutSamuraiDialog aboutSamuraiDialog = new AboutSamuraiDialog(this);
     private final TileTabPanel<SamuraiPanel> tab = new TileTabPanel<>(true) {
         protected void selectedIndexChanged(int index) {
             setSelectedEncoding(getSelectedComponent().getEncoding());
@@ -384,15 +384,14 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     }
 
     /*package*/ void handleAbout() {
-        Dimension dlgSize = dialog.getPreferredSize();
-        Dimension frmSize = getSize();
+        Dimension dlgSize = aboutSamuraiDialog.getPreferredSize();
+            Dimension frmSize = getSize();
         Point loc = getLocation();
-        dialog.setLocation((frmSize.width - dlgSize.width) / 2 + loc.x,
+        aboutSamuraiDialog.setLocation((frmSize.width - dlgSize.width) / 2 + loc.x,
                 (frmSize.height - dlgSize.height) / 2 + loc.y);
-        dialog.setModal(true);
-        dialog.pack();
-        dialog.setVisible(true);
-
+        aboutSamuraiDialog.setModal(true);
+        aboutSamuraiDialog.pack();
+        aboutSamuraiDialog.setVisible(true);
     }
 
 
@@ -840,7 +839,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         }
     }
 
-    //    static GUIResourceBundle resource = GUIResourceBundle.getInstance("encoding-display-names");
     class EncodingMenuItem extends JCheckBoxMenuItem {
         final String encoding;
 

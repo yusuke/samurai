@@ -106,7 +106,7 @@ public class LocalProcesses {
         }
     }
 
-    private static final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd-HH-mm-ss");
+    private static final DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     ExecutorService executor = Executors.newFixedThreadPool(1);
 

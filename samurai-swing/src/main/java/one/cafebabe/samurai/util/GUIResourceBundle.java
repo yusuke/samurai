@@ -15,15 +15,7 @@
  */
 package one.cafebabe.samurai.util;
 
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JComponent;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTabbedPane;
-import javax.swing.JTextArea;
+import javax.swing.*;
 import java.awt.Component;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -268,6 +260,12 @@ public class GUIResourceBundle extends ResourceBundle {
                     } else if (type.equals(JTextArea.class)) {
                         JTextArea textArea = (JTextArea) theObject;
                         textArea.setText(getLocalizedMessage(textArea.getText()));
+                    } else if (type.equals(JEditorPane.class)) {
+                        JEditorPane editorPane = (JEditorPane) theObject;
+                        editorPane.setText(getLocalizedMessage(editorPane.getText()));
+                    } else if (type.equals(JTextPane.class)) {
+                        JTextPane textPane = (JTextPane) theObject;
+                        textPane.setText(getLocalizedMessage(textPane.getText()));
                     } else if (type.equals(JTabbedPane.class)) {
                         JTabbedPane tabbedPane = (JTabbedPane) theObject;
                         for (int j = 0; j < tabbedPane.getTabCount(); j++) {
@@ -283,9 +281,10 @@ public class GUIResourceBundle extends ResourceBundle {
         }
     }
 
-    private String getLocalizedMessage(String key) {
-        if (null != key && key.length() > 2 && key.startsWith("*") && key.endsWith("*")) {
-            return getMessage(key.substring(1, key.length() - 1));
+    String getLocalizedMessage(String key) {
+        String[] split = key.split("\\*");
+        if (split.length == 2 || split.length == 3) {
+            return getMessage(split[1]);
         } else {
             return key;
         }

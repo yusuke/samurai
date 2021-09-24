@@ -233,6 +233,10 @@ public final class Configuration implements Runnable {
                         JTextField textField = (JTextField) field.get(obj);
                         textField.setText(getString(property));
                         textField.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+                    } else if (type.equals(JEditorPane.class)) {
+                        JEditorPane jEditorPane = (JEditorPane) field.get(obj);
+                        jEditorPane.setText(getString(property));
+                        jEditorPane.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
                     }else if(type.equals(JScrollBar.class)){
                         JScrollBar scrollBar = (JScrollBar) field.get(obj);
                         scrollBar.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);

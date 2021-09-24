@@ -15,21 +15,16 @@
  */
 package one.cafebabe.samurai.swing;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import java.awt.AWTEvent;
-import java.awt.Dimension;
-import java.awt.Frame;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
+import one.cafebabe.samurai.util.GUIResourceBundle;
+
+import javax.swing.*;
+import javax.swing.event.HyperlinkEvent;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.Objects;
 
 public class AboutSamuraiDialog extends JDialog implements ActionListener {
@@ -39,24 +34,15 @@ public class AboutSamuraiDialog extends JDialog implements ActionListener {
     final JLabel imageLabel = new JLabel();
     public final JLabel versionLabel = new JLabel();
     public final JLabel copyrightLabel = new JLabel();
-    ImageIcon image1 = new ImageIcon();
+    ImageIcon image1 = new ImageIcon(Objects.requireNonNull(MainFrame.class.getResource("images/samurai64.gif")));
     final GridBagLayout gridBagLayout1 = new GridBagLayout();
     final JScrollPane jScrollPane1 = new JScrollPane();
-    public final JTextArea releaseNote = new JTextArea();
+    public final JTextPane releaseNote = new JTextPane();
 
     public AboutSamuraiDialog(Frame parent) {
         super(parent);
+        setPreferredSize(new Dimension(600,400));
         enableEvents(AWTEvent.WINDOW_EVENT_MASK);
-        try {
-            jbInit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    //Component initialization
-    private void jbInit() {
-        image1 = new ImageIcon(Objects.requireNonNull(MainFrame.class.getResource("images/samurai64.gif")));
         imageLabel.setMaximumSize(new Dimension(64, 64));
         imageLabel.setMinimumSize(new Dimension(64, 64));
         imageLabel.setPreferredSize(new Dimension(64, 64));
@@ -70,12 +56,22 @@ public class AboutSamuraiDialog extends JDialog implements ActionListener {
         button1.setSelected(true);
         button1.setText("OK");
         button1.addActionListener(this);
+        releaseNote.setContentType("text/html; charset=charset=UTF-8");
         releaseNote.setEditable(false);
         releaseNote.setText("*AboutSamuraiDialog.releaseNote*");
         releaseNote.select(0, 0);
-        releaseNote.setLineWrap(true);
-        jScrollPane1.setMinimumSize(new Dimension(400, 500));
-        jScrollPane1.setPreferredSize(new Dimension(390, 200));
+        releaseNote.addHyperlinkListener(e -> {
+            try {
+                if (e.getEventType() == HyperlinkEvent.EventType.ACTIVATED) {
+                    Desktop.getDesktop().browse(e.getURL().toURI());
+                    } 
+            } catch (IOException | URISyntaxException ex) {
+                ex.printStackTrace();
+            }
+        });
+//        releaseNote.setLineWrap(true);
+        jScrollPane1.setMinimumSize(new Dimension(590, 260));
+        jScrollPane1.setPreferredSize(new Dimension(590, 260));
         this.getContentPane().add(imageLabel,
                 new GridBagConstraints(0, 0, 1, 3, 0.0, 0.0
                         , GridBagConstraints.NORTHWEST, GridBagConstraints.NONE,
