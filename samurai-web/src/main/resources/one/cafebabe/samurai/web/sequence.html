@@ -13,27 +13,30 @@
     </style>
 </head>
 <body>
-<span th:text="${resource.getString('web.view')}"></span>:
-<a href="./table/index.html"><img border="0" src="./images/tableButton.gif"><span
-        th:text='${resource.getString("web.table")}'></span></a>
-<a th:href="|./full/index-0_shrink-${filter.getShrinkIdle()}.html|"><img border="0" src="./images/fullButton.gif"><span
-        th:text='${resource.getString("web.threadDump")}'></span></a>
-<img border="0" src="./images/sequenceButton.gif"><span th:text='${resource.getString("web.sequence")}'></span><br><br>
+<div class="container">
+    <a href="./table/index.html"><img border="0" src="./images/tableButton.gif"><span
+            th:text='${resource.getString("web.table")}'></span></a>
+    <a th:href="|./full/index-0_shrink-${filter.getShrinkIdle()}.html|"><img border="0"
+                                                                             src="./images/fullButton.gif"><span
+            th:text='${resource.getString("web.threadDump")}'></span></a>
+    <img border="0" src="./images/sequenceButton.gif"><span
+        th:text='${resource.getString("web.sequence")}'></span><br><br>
 
-<span th:switch="${null != stats.getPreviousThreadDumps(filter.getThreadId())}">
+    <span th:switch="${null != stats.getPreviousThreadDumps(filter.getThreadId())}">
     <a th:case="${true}"
        th:href="|./sequence/threadId-${stats.getPreviousThreadDumps(filter.getThreadId()).getId()}_shrink-${filter.getShrinkIdle()}.html|">
         <span th:text="${resource.getString('web.previous')}"></span></a>
     <span th:case="${false}" th:text="${resource.getString('web.previous')}"></span>
 </span>
 
-<span th:switch="${null != stats.getNextThreadDumps(filter.getThreadId())}">
+    <span th:switch="${null != stats.getNextThreadDumps(filter.getThreadId())}">
     <a th:case="${true}"
        th:href="|./sequence/threadId-${stats.getNextThreadDumps(filter.getThreadId()).getId()}_shrink-${filter.getShrinkIdle()}.html|">
         <span th:text="${resource.getString('web.next')}"></span></a>
     <span th:case="${false}" th:text="${resource.getString('web.next')}"></span>
 </span>
-
+</div>
+<br>
 <span th:with="sequence = ${filter.doFilter(stats)}">
 
     "<span th:text="${sequence.getName()}"></span>"<br><br>

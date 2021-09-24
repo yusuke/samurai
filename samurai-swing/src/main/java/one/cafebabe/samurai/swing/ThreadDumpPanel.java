@@ -245,7 +245,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         progressBar.setMinimumSize(new Dimension(80, 20));
         progressBar.setVisible(false);
         this.add(settingPanel, BorderLayout.CENTER);
-        settingPanel.add(jScrollPane3, new GridBagConstraints(0, 0, 10, 1, 1.0, 1.0
+        settingPanel.add(threadDumpPanelScrollPane, new GridBagConstraints(0, 0, 10, 1, 1.0, 1.0
                 , GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 
         settingPanel.add(buttonPrevious,
@@ -276,7 +276,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
             settingPanel.add(openButton, new GridBagConstraints(9, 1, 1, 1, 0.0, 0.0
                     , GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
         }
-        jScrollPane3.getViewport().add(threadDumpPanel, null);
+        threadDumpPanelScrollPane.getViewport().add(threadDumpPanel, null);
     }
 
     static class RolloverBorder extends MouseAdapter {
@@ -544,7 +544,6 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                         referer = uri.substring(uri.indexOf("#") + 1);
                     }
                     changeButtonFeel();
-
                 }
             }
         });
@@ -563,7 +562,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         }
     };
     private ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
-    final JScrollPane jScrollPane3 = new JScrollPane();
+    final JScrollPane threadDumpPanelScrollPane = new JScrollPane();
 
     final JLabel threadDumpStatus = new JLabel();
     File currentFile;

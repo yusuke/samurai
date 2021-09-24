@@ -2,12 +2,34 @@ a.visited {
     color: blue;
 }
 
-a {
-    color: blue; /* text-decoration:none;*/
-    text-decoration: underline;
+body{
+    padding: 10px;
+}
+table {
+    margin:auto;
+}
+img{
+    border-width: 0;
+    border: #FF0000;
+    border: none;
+}
+.container{
+    text-align: center;
 }
 
-a.hover {
+td, th {
+    white-space: nowrap;
+    text-wrap: none;
+    background-color: #fff;
+}
+
+a {
+    border-width: 0;
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
     color: blue;
     text-decoration: underline;
 }
