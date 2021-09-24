@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/style.css"/>
     <style>
         body {
-            font-size: [[${fontSize}]]pt;
+            font-size: [[${fontSize}]] pt;
             font-family: [[${fontFamily}]];
         }
     </style>
@@ -24,29 +24,48 @@
             src="./images/sequenceButton.gif"><span
             th:text='${resource.getString("web.sequence")}'></span></a><br><br>
 
-    <table>
-        <tr>
-            <td style="text-align: right"><span th:text='${"&nbsp;" + resource.getString("web.running")}'></span></td>
-            <td class="back-normal">&nbsp;</td>
-            <td style="text-align: right" colspan="3"><span
-                    th:text='${"&nbsp;" + resource.getString("web.same")}'></span></td>
-            <td class="back-normal"><img border="0" src="./images/same-h.gif"></td>
-            <td style="text-align: right"><span th:text='${"&nbsp;" + resource.getString("web.blocking")}'></span></td>
-            <td class="back-blocking">&nbsp;</td>
-            <td style="text-align: right"><span th:text='${"&nbsp;" + resource.getString("web.idle")}'></span></td>
-            <td class="back-idle">&nbsp;</td>
-        </tr>
-        <tr>
-            <td style="text-align: right"><span th:text='${"&nbsp;" + resource.getString("web.blocked")}'></span></td>
-            <td class="back-blocked">&nbsp;</td>
-            <td style="text-align: right" colspan="3"><span
-                    th:text='${"&nbsp;"+ resource.getString("web.deadlocked")}'></span></td>
-            <td class="back-blocked"><img border="0" src="./images/deadlocked.gif"></td>
-            <td colspan="2"></td>
-            <td style="text-align: right"><span th:text='${"&nbsp;" + resource.getString("web.absent")}'></span></td>
-            <td class="back-notexist">&nbsp;</td>
-        </tr>
-    </table>
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <div style="background-color: black">
+                        <table border="0" cellpadding="2" cellspacing="1">
+                            <tr>
+                                <td style="text-align: right"><span
+                                        th:text='${"&nbsp;" + resource.getString("web.running")}'></span>
+                                </td>
+                                <td class="back-normal">&nbsp;</td>
+                                <td style="text-align: right" colspan="3"><span
+                                        th:text='${"&nbsp;" + resource.getString("web.same")}'></span></td>
+                                <td class="back-normal"><img border="0" src="./images/same-h.gif"></td>
+                                <td style="text-align: right"><span
+                                        th:text='${"&nbsp;" + resource.getString("web.blocking")}'></span>
+                                </td>
+                                <td class="back-blocking">&nbsp;</td>
+                                <td style="text-align: right"><span
+                                        th:text='${"&nbsp;" + resource.getString("web.idle")}'></span></td>
+                                <td class="back-idle">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: right"><span
+                                        th:text='${"&nbsp;" + resource.getString("web.blocked")}'></span>
+                                </td>
+                                <td class="back-blocked">&nbsp;</td>
+                                <td style="text-align: right" colspan="3"><span
+                                        th:text='${"&nbsp;"+ resource.getString("web.deadlocked")}'></span></td>
+                                <td class="back-blocked"><img border="0" src="./images/deadlocked.gif"></td>
+                                <td colspan="2"></td>
+                                <td style="text-align: right"><span
+                                        th:text='${"&nbsp;" + resource.getString("web.absent")}'></span>
+                                </td>
+                                <td class="back-notexist">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div>
         <table>
             <tr>
