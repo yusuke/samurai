@@ -27,10 +27,6 @@ public class BEAGCParser implements LineGraphDataSourceParser {
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private LineGraph lineGraph = null;
     private double memoryMax = 0;
-    private double currentMemoryMax = 0;
-    private double time = 0;
-    private double memoryBefore = 0;
-    private double memoryAfter = 0;
 
     int timeStart;
 
@@ -55,23 +51,23 @@ public class BEAGCParser implements LineGraphDataSourceParser {
 //[memory ] 1437.757-1445.118: GC 125428K->43203K (141312K), 7.361 s (6388.739 ms)
 
 //[memory ] 72.250-72.390: GC 97781K->37613K (98304K), 58.556 ms
-                if (-1 != line.indexOf(" s ")) {
+                if (line.contains(" s ")) {
                     timeStart = line.lastIndexOf("(") + 1;
                 } else {
                     timeStart = line.indexOf(", ") + 2;
                 }
                 try {
-                    currentMemoryMax = Double.parseDouble(line.substring(line.indexOf("K (") + 3,
+                    double currentMemoryMax = Double.parseDouble(line.substring(line.indexOf("K (") + 3,
                             line.indexOf("K)")));
                     if (memoryMax < currentMemoryMax) {
                         memoryMax = currentMemoryMax;
                         lineGraph.setYMax(1, memoryMax);
                         lineGraph.setYMax(2, memoryMax);
                     }
-                    time = Double.parseDouble(line.substring(timeStart, line.lastIndexOf(" ms")));
-                    memoryBefore = Double.parseDouble(line.substring(line.indexOf("GC ") + 3,
+                    double time = Double.parseDouble(line.substring(timeStart, line.lastIndexOf(" ms")));
+                    double memoryBefore = Double.parseDouble(line.substring(line.indexOf("GC ") + 3,
                             line.indexOf("K->")));
-                    memoryAfter = Double.parseDouble(line.substring(line.indexOf("->") + 2,
+                    double memoryAfter = Double.parseDouble(line.substring(line.indexOf("->") + 2,
                             line.indexOf("K (")));
                     lineGraph.addValues(new double[]{time, memoryBefore, memoryAfter});
                     return true;
