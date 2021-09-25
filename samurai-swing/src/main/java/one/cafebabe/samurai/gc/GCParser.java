@@ -19,7 +19,7 @@ import one.cafebabe.samurai.util.LineGraphDataSourceParser;
 
 public class GCParser implements LineGraphDataSourceParser {
     private final LineGraphDataSourceParser[] gcParsers = new LineGraphDataSourceParser[]{new BEAGCParser(), 
-            new SunGCParser(), new IBMGCParser(), new OpenJDKGCParser()};
+            new SunGCParser(), new IBMGCParser(), new OpenJDKGCParser(), new OpenJDKZGCParser()};
     private LineGraphDataSourceParser finalParser = null;
 
     public GCParser() {

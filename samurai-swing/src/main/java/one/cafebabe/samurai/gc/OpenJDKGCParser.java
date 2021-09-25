@@ -43,6 +43,9 @@ public class OpenJDKGCParser implements LineGraphDataSourceParser {
         if (line.contains("[gc] GC(")) {
             try {
                 int pauseIndex = line.indexOf(") Pause ");
+                if (pauseIndex == -1) {
+                    return false;
+                }
                 int beforeEnd = line.indexOf("M->");
                 if (beforeEnd == -1) {
                     return false;
@@ -55,7 +58,7 @@ public class OpenJDKGCParser implements LineGraphDataSourceParser {
                         break;
                     }
                 }
-                if (beforeStart == 1) {
+                if (beforeStart == -1) {
                     return false;
                 }
                 int afterStart = beforeEnd + 3;
