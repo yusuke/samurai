@@ -39,7 +39,7 @@ class TestOpenJDKGCParser extends AbstractGraphTest {
                                 getResourceAsStream("/one/cafebabe/samurai/gc/jdk11-verbosegc-UseParallelGC.log")))) {
             parser.parse(br.readLine(), this);
             parser.parse(br.readLine(), this);
-//[2.226s][info][gc] GC(0) Pause Young (Metadata GC Threshold) 22M->4M(123M) 5.476ms
+    //[2.226s][info][gc] GC(0) Pause Young (Metadata GC Threshold) 22M->4M(123M) 5.476ms
             expected.add(new double[]{
                     5.476d, 22d, 4d
             });

@@ -19,6 +19,8 @@ import one.cafebabe.samurai.util.GUIResourceBundle;
 import one.cafebabe.samurai.util.LineGraphDataSourceParser;
 
 import java.awt.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * supports OpenJDK G1GC log, parallel gc log
@@ -31,6 +33,8 @@ public class OpenJDKGCParser implements LineGraphDataSourceParser {
     private LineGraph lineGraph = null;
     private double memoryMax = 0;
 
+    //[2.226s][info][gc] GC(0) Pause Young (Metadata GC Threshold) 22M->4M(123M) 5.476ms
+    private final static Pattern pattern = Pattern.compile("([0-9]+)M->([0-9]+)M\\(([0-9]+)M\\) ([0-9.]+)ms");
 
     /**
      * parse
@@ -41,67 +45,31 @@ public class OpenJDKGCParser implements LineGraphDataSourceParser {
     public boolean parse(String line, LineGraphRenderer renderer) {
 //[2.226s][info][gc] GC(0) Pause Young (Metadata GC Threshold) 22M->4M(123M) 5.476ms
         if (line.contains("[gc] GC(")) {
+            Matcher matcher = pattern.matcher(line);
+            if (!matcher.find() || matcher.groupCount() != 4) {
+                return false;
+            }
+            int memoryBefore = Integer.parseInt(matcher.group(1));
+            int memoryAfter = Integer.parseInt(matcher.group(2));
+            double currentMemoryMax = Double.parseDouble(matcher.group(3));
+            double time = Double.parseDouble(matcher.group(4));
+            if (null == lineGraph) {
+                lineGraph = renderer.addLineGraph(resources.getMessage("GraphPanel.memory"), new String[]{resources.getMessage("GraphPanel.time") + "(ms)",
+                        resources.getMessage("GraphPanel.memoryBeforeGC"),
+                        resources.getMessage("GraphPanel.memoryAfterGC")});
+                lineGraph.setColorAt(0, Color.GRAY);
+                lineGraph.setColorAt(1, Color.RED);
+                lineGraph.setColorAt(2, Color.YELLOW);
+            }
             try {
-                int pauseIndex = line.indexOf(") Pause ");
-                if (pauseIndex == -1) {
-                    return false;
+                if (memoryMax < currentMemoryMax) {
+                    memoryMax = currentMemoryMax;
+                    lineGraph.setYMax(1, memoryMax);
+                    lineGraph.setYMax(2, memoryMax);
                 }
-                int beforeEnd = line.indexOf("M->");
-                if (beforeEnd == -1) {
-                    return false;
-                }
-
-                int beforeStart = -1;
-                for (int i = beforeEnd; i >pauseIndex; i--) {
-                    if (line.charAt(i) == ' ') {
-                        beforeStart = i+1; 
-                        break;
-                    }
-                }
-                if (beforeStart == -1) {
-                    return false;
-                }
-                int afterStart = beforeEnd + 3;
-                int afterEnd = line.indexOf("M(", afterStart);
-                if (afterEnd == -1) {
-                    return false;
-                }
-                int memoryMaxEnd = line.lastIndexOf("M)");
-                int memoryMaxStart = afterEnd + 2;
-                if (memoryMaxEnd == -1) {
-                    return false;
-                }
-                int milliSecondsStart = memoryMaxEnd + 3;
-                int milliSecondsEnd = line.indexOf("ms", milliSecondsStart);
-                if (milliSecondsEnd == -1) {
-                    return false;
-                }
-                int memoryBefore = Integer.parseInt(line.substring(beforeStart, beforeEnd));
-                int memoryAfter = Integer.parseInt(line.substring(afterStart, afterEnd));
-                double time = Double.parseDouble(line.substring(milliSecondsStart, milliSecondsEnd));
-                double currentMemoryMax = Double.parseDouble(line.substring(memoryMaxStart, memoryMaxEnd));
-                if (null == lineGraph) {
-                    lineGraph = renderer.addLineGraph(resources.getMessage("GraphPanel.memory"), new String[]{resources.getMessage("GraphPanel.time") + "(ms)",
-                            resources.getMessage("GraphPanel.memoryBeforeGC"),
-                            resources.getMessage("GraphPanel.memoryAfterGC")});
-                    lineGraph.setColorAt(0, Color.GRAY);
-                    lineGraph.setColorAt(1, Color.RED);
-                    lineGraph.setColorAt(2, Color.YELLOW);
-                }
-                try {
-                    if (memoryMax < currentMemoryMax) {
-                        memoryMax = currentMemoryMax;
-                        lineGraph.setYMax(1, memoryMax);
-                        lineGraph.setYMax(2, memoryMax);
-                    }
-                    lineGraph.addValues(new double[]{time, memoryBefore, memoryAfter});
-                    return true;
-                } catch (NumberFormatException wasNotGC) {
-//         wasNotGC.printStackTrace();
-                    //does nothing
-                }
-            } catch (StringIndexOutOfBoundsException sioobe) {
-//        System.err.println("unexpected format:" + line);
+                lineGraph.addValues(new double[]{time, memoryBefore, memoryAfter});
+                return true;
+            } catch (NumberFormatException ignored) {
             }
         }
         return false;
