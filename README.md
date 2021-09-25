@@ -1,7 +1,7 @@
 # Samurai
 Samurai is an analysis tool for Java thread dumps / GC logs.
 
-[&#35;samuraiApp](https://twitter.com/search?q=%23samuraiAppJ&src=typed_query&f=live)
+[&#35;samuraiApp](https://twitter.com/search?q=%23samuraiApp&src=typed_query&f=live)
 
 
 ## What does it offer?
@@ -14,6 +14,7 @@ Just drag and drop files you want to tail.
 - Take thread dumps of local processes
 
 From File > Local Processes
+
 ![Samurai](images/localThreadDump.png)
 
 - Visualize thread dumps
