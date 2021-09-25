@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'one.cafebabe'
-version '2021.5'
+version '2021.6'
 
 if (hasProperty('buildScan')) {
     buildScan {
@@ -86,6 +86,7 @@ task packageWinApp(type: Exec) {
                --add-opens=java.desktop/javax.swing=ALL-UNNAMED
                --add-opens=java.desktop/javax.swing.border=ALL-UNNAMED
                --add-opens=java.desktop/com.sun.java.swing.plaf.windows=ALL-UNNAMED
+               --add-opens=java.desktop/javax.swing.colorchooser=ALL-UNNAMED
                -XX:ErrorFile=\$USER_HOME/java_error_in_idea_%p.log
                -XX:HeapDumpPath=\$USER_HOME/java_error_in_idea.hprof""",
             '--name', appName,
