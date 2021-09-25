@@ -52,7 +52,7 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
     //  private LogWatcher logWatcher = new LogWatcher();
     private MultipleLogWatcher logWatcher;// = new MultipleLogWatcher();
 
-    private Context context;
+    private final Context context;
 
     public SamuraiPanel(Context context, KeyListener listener, String encoding) {
         this.context = context;
@@ -72,13 +72,6 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
         }
         setDragNotAccepting();
 
-//    logWatcher.addLogMonitor(this);
-//    for (LogRenderer renderer : logRenderers) {
-//      logWatcher.addLogMonitor(renderer);
-//    }
-////    logWatcher.setDebug(true);
-//    logWatcher.start();
-        tab.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
     }
 
     private void addKeyListenerToComponents(KeyListener listener, Component component) {

@@ -232,16 +232,6 @@ public class ConfigDialog extends javax.swing.JDialog {
                 javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0),
                 ESC_ACTION_KEY
         );
-        jTabbedPane1.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
-        labelFontFamily.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
-        labelDumpPanelFontFamily.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
-        dumpFontSize.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
-        okButton.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
-        cancelButton.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
-        labelFontSize.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
-        config_shrinkIdleThreads.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
-        config_wrapDump.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
-        config_wrapLog.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
     }
 
     static final String ESC_ACTION_KEY = "ESC_ACTION_KEY";

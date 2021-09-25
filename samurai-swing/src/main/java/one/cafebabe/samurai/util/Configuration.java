@@ -15,24 +15,17 @@
  */
 package one.cafebabe.samurai.util;
 
-import one.cafebabe.samurai.swing.MainFrame;
+import one.cafebabe.samurai.swing.FontSizeFixer;
 
 import javax.swing.*;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.awt.Toolkit;
+import java.awt.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
-import java.util.Properties;
 
 public final class Configuration implements Runnable {
     private final Properties props;
@@ -89,11 +82,7 @@ public final class Configuration implements Runnable {
     public String getString(String key) {
         String theValue = props.getProperty(key);
         String returnValue;
-        if (null == theValue) {
-            returnValue = "";
-        } else {
-            returnValue = theValue;
-        }
+        returnValue = Objects.requireNonNullElse(theValue, "");
         return returnValue;
     }
 
@@ -213,7 +202,7 @@ public final class Configuration implements Runnable {
             String fieldName = field.getName();
             if (fieldName.startsWith("config_")) {
                 String property = fieldName.substring(7);
-                Class type = field.getType();
+                Class<?> type = field.getType();
                 try {
                     if (type.equals(boolean.class)) {
                         field.setBoolean(obj, getBoolean(property));
@@ -227,25 +216,19 @@ public final class Configuration implements Runnable {
                     } else if (type.equals(JComboBox.class)) {
                         JComboBox comboBox = (JComboBox) field.get(obj);
                         comboBox.setSelectedItem(getString(property));
-                        comboBox.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
                         comboBox.setRenderer(new FontFixCellRenderer());
                     } else if (type.equals(JTextField.class)) {
                         JTextField textField = (JTextField) field.get(obj);
                         textField.setText(getString(property));
-                        textField.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
                     } else if (type.equals(JEditorPane.class)) {
                         JEditorPane jEditorPane = (JEditorPane) field.get(obj);
                         jEditorPane.setText(getString(property));
-                        jEditorPane.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
                     }else if(type.equals(JScrollBar.class)){
                         JScrollBar scrollBar = (JScrollBar) field.get(obj);
-                        scrollBar.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
                     }else if(type.equals(JLabel.class)){
                         JLabel scrollBar = (JLabel) field.get(obj);
-                        scrollBar.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
                     }else if(type.equals(JTabbedPane.class)){
                         JTabbedPane scrollBar = (JTabbedPane) field.get(obj);
-                        scrollBar.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
                     }
                 } catch (IllegalAccessException iae) {
                     throw new AssertionError(iae.getMessage());
@@ -262,7 +245,7 @@ public final class Configuration implements Runnable {
         @Override
         public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
             JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-            label.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
+            FontSizeFixer.setFont(label);
             return label;
         }
     }

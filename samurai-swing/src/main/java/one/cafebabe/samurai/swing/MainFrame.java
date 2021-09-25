@@ -87,9 +87,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     final BorderLayout borderLayout2 = new BorderLayout();
     final SearchPanel searcher;
     private boolean searchPanelAdded = false;
-    public static Font preservedFontToWorkaroundJPackageBug
-            = new JLabel().getFont();
-//            = new Font(Font.MONOSPACED, Font.BOLD, 30);
 
     //Construct the frame
     public MainFrame() {
@@ -238,7 +235,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         context.getConfig().applyLocation("ConfigDialog.location", configDialog);
         context.getKeyStroke().apply(this);
         context.getKeyStroke().apply(tab.popupMenu);
-        resources.inject(this);
         if (OSDetector.isMac()) {
             Desktop desktop = Desktop.getDesktop();
             desktop.setAboutHandler(e -> this.handleAbout());
@@ -254,9 +250,11 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                 tabDropTargetListener
         );
         setDragNotAccepting();
-        menuFileOpen.setFont(preservedFontToWorkaroundJPackageBug);
-        menuFileRecent.setFont(preservedFontToWorkaroundJPackageBug);
-        menuFileLocalProcesses.setFont(preservedFontToWorkaroundJPackageBug);
+        resources.inject(this);
+
+        if (OSDetector.isWindows()) {
+            FontSizeFixer.fixFontSizes(this);
+        }
     }
 
     private void removeSearchPanel() {
@@ -385,7 +383,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
 
     /*package*/ void handleAbout() {
         Dimension dlgSize = aboutSamuraiDialog.getPreferredSize();
-            Dimension frmSize = getSize();
+        Dimension frmSize = getSize();
         Point loc = getLocation();
         aboutSamuraiDialog.setLocation((frmSize.width - dlgSize.width) / 2 + loc.x,
                 (frmSize.height - dlgSize.height) / 2 + loc.y);
@@ -562,7 +560,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             Component component = menuViewEncoding.getItem(i);
             if (component instanceof EncodingMenuItem) {
                 EncodingMenuItem encodingMenuItem = (EncodingMenuItem) component;
-                encodingMenuItem.setFont(preservedFontToWorkaroundJPackageBug);
                 if (encoding.equals(encodingMenuItem.getEncoding())) {
                     encodingMenuItem.setSelected(true);
                     selectedEncoding = encodingMenuItem;

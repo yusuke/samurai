@@ -175,7 +175,6 @@ public final class FileHistory {
         openRecentMenu.removeAll();
         for (File file : files) {
             JMenuItem aHistory = new HistoryMenu(file);
-            aHistory.setFont(MainFrame.preservedFontToWorkaroundJPackageBug);
             openRecentMenu.add(aHistory);
         }
         openRecentMenu.setEnabled(files.size() != 0);

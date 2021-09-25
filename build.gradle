@@ -26,6 +26,9 @@ task packageMacApp(type: Exec) {
             """-Xmx128m -Xms128m -XX:+UseSerialGC -Dsun.java2d.metal=true
                --add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED
                --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
+               --add-opens=java.desktop/javax.swing=ALL-UNNAMED
+               --add-opens=java.desktop/javax.swing.border=ALL-UNNAMED 
+               --add-opens=java.desktop/com.apple.laf=ALL-UNNAMED
                -XX:ErrorFile=\$USER_HOME/java_error_in_idea_%p.log
                -XX:HeapDumpPath=\$USER_HOME/java_error_in_idea.hprof""",
             '--name', appName,
@@ -80,6 +83,9 @@ task packageWinApp(type: Exec) {
             """-Xmx128m -Xms128m -XX:+UseSerialGC
                --add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED
                --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
+               --add-opens=java.desktop/javax.swing=ALL-UNNAMED
+               --add-opens=java.desktop/javax.swing.border=ALL-UNNAMED
+               --add-opens=java.desktop/com.sun.java.swing.plaf.windows=ALL-UNNAMED
                -XX:ErrorFile=\$USER_HOME/java_error_in_idea_%p.log
                -XX:HeapDumpPath=\$USER_HOME/java_error_in_idea.hprof""",
             '--name', appName,

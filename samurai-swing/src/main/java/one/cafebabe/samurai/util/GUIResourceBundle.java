@@ -15,8 +15,11 @@
  */
 package one.cafebabe.samurai.util;
 
+import one.cafebabe.samurai.swing.MainFrame;
+
 import javax.swing.*;
-import java.awt.Component;
+import java.awt.*;
+import java.awt.List;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -27,12 +30,7 @@ import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.text.FieldPosition;
 import java.text.MessageFormat;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.MissingResourceException;
-import java.util.Properties;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class GUIResourceBundle extends ResourceBundle {
     private static final Map<String, Map<String, GUIResourceBundle>> resourceses = new HashMap<>();
@@ -217,12 +215,17 @@ public class GUIResourceBundle extends ResourceBundle {
        import javax.swing.JComponent;
     */
 
+    ArrayList configured = new ArrayList();
     /**
      * Inject localized message resources.<br>
      *
      * @param obj Object to be injected.
      */
     public void inject(Object obj) {
+        if (configured.contains(obj)) {
+            return;
+        }
+        configured.add(obj);
         if (obj instanceof javax.swing.JDialog) {
             JDialog dialog = (JDialog) obj;
             dialog.setTitle(getLocalizedMessage(dialog.getTitle()));
@@ -235,6 +238,7 @@ public class GUIResourceBundle extends ResourceBundle {
         for (Field field : fields) {
             Class<?> type = field.getType();
             try {
+                field.setAccessible(true);
                 Object theObject = field.get(obj);
                 if (theObject instanceof JFrame) {
                     inject(theObject);
@@ -276,7 +280,7 @@ public class GUIResourceBundle extends ResourceBundle {
                     }
                 }
             } catch (IllegalAccessException ignore) {
-//        throw new AssertionError(iae.getMessage());
+                ignore.printStackTrace();
             }
         }
     }
