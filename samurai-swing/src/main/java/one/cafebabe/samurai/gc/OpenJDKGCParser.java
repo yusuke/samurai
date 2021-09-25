@@ -20,8 +20,11 @@ import one.cafebabe.samurai.util.LineGraphDataSourceParser;
 
 import java.awt.*;
 
-public class OpenJDKParallelGCParser implements LineGraphDataSourceParser {
-    public OpenJDKParallelGCParser() {
+/**
+ * supports OpenJDK G1GC log, parallel gc log
+ */
+public class OpenJDKGCParser implements LineGraphDataSourceParser {
+    public OpenJDKGCParser() {
     }
 
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
@@ -40,12 +43,19 @@ public class OpenJDKParallelGCParser implements LineGraphDataSourceParser {
         if (line.contains("[gc] GC(")) {
             try {
                 int pauseIndex = line.indexOf(") Pause ");
-                int beforeStart = line.indexOf(") ", pauseIndex + 8) + 2;
-                if (beforeStart == 1) {
-                    return false;
-                }
                 int beforeEnd = line.indexOf("M->");
                 if (beforeEnd == -1) {
+                    return false;
+                }
+
+                int beforeStart = -1;
+                for (int i = beforeEnd; i >pauseIndex; i--) {
+                    if (line.charAt(i) == ' ') {
+                        beforeStart = i+1; 
+                        break;
+                    }
+                }
+                if (beforeStart == 1) {
                     return false;
                 }
                 int afterStart = beforeEnd + 3;
@@ -53,8 +63,8 @@ public class OpenJDKParallelGCParser implements LineGraphDataSourceParser {
                 if (afterEnd == -1) {
                     return false;
                 }
+                int memoryMaxEnd = line.lastIndexOf("M)");
                 int memoryMaxStart = afterEnd + 2;
-                int memoryMaxEnd = line.indexOf("M)", memoryMaxStart);
                 if (memoryMaxEnd == -1) {
                     return false;
                 }

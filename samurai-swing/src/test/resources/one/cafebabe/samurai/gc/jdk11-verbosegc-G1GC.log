@@ -1,0 +1,17 @@
+[0.041s][info][gc] Using G1
+WARNING: package com.sun.java.swing.plaf.windows not in java.desktop
+[3.591s][info][gc] GC(0) Pause Young (Concurrent Start) (Metadata GC Threshold) 20M->4M(2048M) 11.037ms
+[3.591s][info][gc] GC(1) Concurrent Cycle
+[3.598s][info][gc] GC(1) Pause Remark 5M->5M(2048M) 3.302ms
+[3.598s][info][gc] GC(1) Pause Cleanup 5M->5M(2048M) 0.207ms
+[3.611s][info][gc] GC(1) Concurrent Cycle 20.795ms
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[13.590s][info][gc] GC(2) Pause Young (Normal) (G1 Evacuation Pause) 582M->322M(2048M) 11.131ms
+[15.341s][info][gc] GC(3) Pause Young (Normal) (G1 Evacuation Pause) 831M->255M(2048M) 8.553ms
+[17.294s][info][gc] GC(4) Pause Young (Normal) (G1 Evacuation Pause) 811M->292M(2048M) 9.692ms
+[19.759s][info][gc] GC(5) Pause Young (Normal) (G1 Evacuation Pause) 893M->327M(2048M) 9.634ms
+[21.340s][info][gc] GC(6) Pause Young (Normal) (G1 Evacuation Pause) 878M->269M(2048M) 8.796ms
+[25.279s][info][gc] GC(7) Pause Young (Normal) (G1 Evacuation Pause) 885M->323M(2048M) 10.338ms
+Saving configuration.[/Users/yusuke/.samurai.properties]

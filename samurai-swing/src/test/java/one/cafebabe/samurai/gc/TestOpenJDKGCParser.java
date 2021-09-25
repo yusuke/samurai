@@ -27,15 +27,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SuppressWarnings("ConstantConditions")
 @Execution(ExecutionMode.CONCURRENT)
-class TestOpenJDKParallelGCParser extends AbstractGraphTest {
+class TestOpenJDKGCParser extends AbstractGraphTest {
 
     @Test
     void parallelGC() throws IOException {
-        OpenJDKParallelGCParser parser = new OpenJDKParallelGCParser();
+        OpenJDKGCParser parser = new OpenJDKGCParser();
 
         try (var br = new BufferedReader(
                 new InputStreamReader(
-                        TestOpenJDKParallelGCParser.class.
+                        TestOpenJDKGCParser.class.
                                 getResourceAsStream("/one/cafebabe/samurai/gc/jdk11-verbosegc-UseParallelGC.log")))) {
             parser.parse(br.readLine(), this);
             parser.parse(br.readLine(), this);
@@ -58,4 +58,32 @@ class TestOpenJDKParallelGCParser extends AbstractGraphTest {
         }
     }
 
+    @Test
+    void g1gc() throws IOException {
+        OpenJDKGCParser parser = new OpenJDKGCParser();
+
+        try (var br = new BufferedReader(
+                new InputStreamReader(
+                        TestOpenJDKGCParser.class.
+                                getResourceAsStream("/one/cafebabe/samurai/gc/jdk11-verbosegc-G1GC.log")))) {
+            parser.parse(br.readLine(), this);
+            parser.parse(br.readLine(), this);
+//[3.591s][info][gc] GC(0) Pause Young (Concurrent Start) (Metadata GC Threshold) 20M->4M(2048M) 11.037ms
+            expected.add(new double[]{
+                    11.037d, 20d, 4d
+            });
+            expectedMax.add(2048d);
+            expectedMax.add(2048d);
+            parser.parse(br.readLine(), this);
+
+//[3.598s][info][gc] GC(1) Pause Remark 5M->5M(2048M) 3.302ms
+            expected.add(new double[]{
+                    3.302d, 5d, 5d
+            });
+            parser.parse(br.readLine(), this);
+            parser.parse(br.readLine(), this);
+
+            assertEquals(2, count);
+        }
+    }
 }
