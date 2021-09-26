@@ -213,19 +213,19 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         progressBar.setMinimumSize(new Dimension(80, 20));
         progressBar.setVisible(false);
         this.add(settingPanel, BorderLayout.CENTER);
-        settingPanel.add(threadDumpPanelScrollPane, new GridBagConstraints(0, 0, 10, 1, 1.0, 1.0
+        settingPanel.add(threadDumpPanelScrollPane, new GridBagConstraints(0, 1, 10, 1, 1.0, 1.0
                 , GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 
-        settingPanel.add(new JLabel(), new GridBagConstraints(6, 1, 1, 1, 1.0, 0.0
+        settingPanel.add(new JLabel(), new GridBagConstraints(6, 0, 1, 1, 1.0, 0.0
                 , GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL, new Insets(0, 5, 0, 0), 0, 0));
-        settingPanel.add(trashButton, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0
+        settingPanel.add(trashButton, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
                 , GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
-        settingPanel.add(progressBar, new GridBagConstraints(7, 1, 1, 1, 0.0, 0.0
+        settingPanel.add(progressBar, new GridBagConstraints(7, 0, 1, 1, 0.0, 0.0
                 , GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
-        settingPanel.add(saveButton, new GridBagConstraints(8, 1, 1, 1, 0.0, 0.0
+        settingPanel.add(saveButton, new GridBagConstraints(8, 0, 1, 1, 0.0, 0.0
                 , GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
         if (OSDetector.isMac() || OSDetector.isWindows()) {
-            settingPanel.add(openButton, new GridBagConstraints(9, 1, 1, 1, 0.0, 0.0
+            settingPanel.add(openButton, new GridBagConstraints(9, 0, 1, 1, 0.0, 0.0
                     , GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
         }
         threadDumpPanelScrollPane.getViewport().add(threadDumpPanel, null);
