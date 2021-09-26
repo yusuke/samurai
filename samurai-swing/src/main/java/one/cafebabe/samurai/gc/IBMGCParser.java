@@ -18,17 +18,13 @@ package one.cafebabe.samurai.gc;
 import one.cafebabe.samurai.util.GUIResourceBundle;
 import one.cafebabe.samurai.util.LineGraphDataSourceParser;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class IBMGCParser implements LineGraphDataSourceParser {
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private boolean labelSet = false;
     private LineGraph lineGraph;
     private double memoryMax = 0;
-    private double currentMemoryMax = 0;
-    private double memoryFreed = 0;
-    private double memoryAfter = 0;
-    private double time = 0;
 
     public IBMGCParser() {
     }
@@ -48,15 +44,15 @@ public class IBMGCParser implements LineGraphDataSourceParser {
                     lineGraph.setColorAt(2, Color.YELLOW);
                 }
                 try {
-                    currentMemoryMax = Double.parseDouble(line.substring(line.lastIndexOf("/") + 1, line.lastIndexOf(")")));
+                    double currentMemoryMax = Double.parseDouble(line.substring(line.lastIndexOf("/") + 1, line.lastIndexOf(")")));
                     if (memoryMax < currentMemoryMax) {
                         memoryMax = currentMemoryMax;
                         lineGraph.setYMax(1, memoryMax);
                         lineGraph.setYMax(2, memoryMax);
                     }
-                    memoryFreed = Double.parseDouble(line.substring(freedIndex + 9, line.indexOf(" byte")));
-                    memoryAfter = Double.parseDouble(line.substring(line.lastIndexOf("(") + 1, line.lastIndexOf("/")));
-                    time = Double.parseDouble(line.substring(line.lastIndexOf("in ") + 3, line.lastIndexOf(" ms")));
+                    double memoryFreed = Double.parseDouble(line.substring(freedIndex + 9, line.indexOf(" byte")));
+                    double memoryAfter = Double.parseDouble(line.substring(line.lastIndexOf("(") + 1, line.lastIndexOf("/")));
+                    double time = Double.parseDouble(line.substring(line.lastIndexOf("in ") + 3, line.lastIndexOf(" ms")));
                     lineGraph.addValues(new double[]{time, memoryFreed, memoryAfter});
                     return true;
                 } catch (NumberFormatException wasNotGC) {
