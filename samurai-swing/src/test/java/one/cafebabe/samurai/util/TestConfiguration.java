@@ -30,10 +30,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @Execution(ExecutionMode.CONCURRENT)
 class TestConfiguration {
 
-    static {
-        System.setProperty("java.awt.headless", "true");
-    }
-
     @Test
     void testGetInt() throws IOException {
         Configuration configuration = new Configuration("samuraitest");

@@ -23,6 +23,10 @@ compileJava {
                              '--add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED']
 }
 
+test{
+    systemProperty "java.awt.headless", "true"
+}
+
 compileTestJava {
     sourceCompatibility = '11'
     targetCompatibility = '11'

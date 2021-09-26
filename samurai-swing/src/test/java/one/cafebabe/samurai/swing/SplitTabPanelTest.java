@@ -31,10 +31,6 @@ import java.awt.GridBagLayout;
 @Execution(ExecutionMode.CONCURRENT)
 class SplitTabPanelTest extends JFrame {
 
-    static {
-        System.setProperty("java.awt.headless", "true");
-    }
-
     final GridBagLayout gbl = new GridBagLayout();
     final BorderLayout borderLayout1 = new BorderLayout();
     final TilePanel splitTabPanel = new TilePanel(true);

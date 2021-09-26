@@ -30,10 +30,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Execution(ExecutionMode.CONCURRENT)
 class TestCutomizableKeyStroke {
 
-    static{
-        System.setProperty("java.awt.headless", "true");
-    }
-
     @Test
     void testGetKeyStroke() {
         CustomizableKeyStroke cutomizableKeyStroke = new CustomizableKeyStroke(GUIResourceBundle.getInstance());
