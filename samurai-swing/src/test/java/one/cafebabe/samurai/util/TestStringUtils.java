@@ -27,6 +27,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Execution(ExecutionMode.CONCURRENT)
 class TestStringUtils {
 
+    static {
+        System.setProperty("java.awt.headless", "true");
+    }
+
     @Test
     void testIndexOfIgnoreCase() {
         assertEquals(2, "abcdef".indexOf("cde"));
