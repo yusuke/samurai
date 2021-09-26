@@ -11,17 +11,17 @@ PATH=C:\bea81sp1\WEBLOG~1\server\bin;C:\bea81sp1\JROCKI~1\jre\bin;C:\bea81sp1\JR
 *  server administration, use the WebLogic Server *
 *  console at http:\\[hostname]:[port]\console    *
 ***************************************************
-<2006/05/04 22Žž19•ª31•b JST> <Info> <WebLogicServer> <BEA-000377> <WebLogic Server ‚ð BEA Systems, Inc. ‚©‚ç BEA WebLogic JRockit(R) Virtual Machine ƒo[ƒWƒ‡ƒ“ 8.1sp1-1.4.1_03-viking-Load7-win32-sthqa28-20030619-1312 ‚Å‹N“®‚µ‚Ä‚¢‚Ü‚·B> 
-<2006/05/04 22Žž19•ª31•b JST> <Info> <Configuration Management> <BEA-150016> <‚±‚ÌƒT[ƒo‚ÍŠÇ—ƒT[ƒo‚Æ‚µ‚Ä‹N“®‚³‚ê‚Ä‚¢‚Ü‚·B> 
-<2006/05/04 22Žž19•ª31•b JST> <Info> <Management> <BEA-141107> <ƒo[ƒWƒ‡ƒ“: WebLogic Server 8.1 SP1  Fri Jun 20 23:06:40 PDT 2003 271009
+<2006/05/04 22ï¿½ï¿½19ï¿½ï¿½31ï¿½b JST> <Info> <WebLogicServer> <BEA-000377> <WebLogic Server ï¿½ï¿½ BEA Systems, Inc. ï¿½ï¿½ï¿½ï¿½ BEA WebLogic JRockit(R) Virtual Machine ï¿½oï¿½[ï¿½Wï¿½ï¿½ï¿½ï¿½ 8.1sp1-1.4.1_03-viking-Load7-win32-sthqa28-20030619-1312 ï¿½Å‹Nï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B> 
+<2006/05/04 22ï¿½ï¿½19ï¿½ï¿½31ï¿½b JST> <Info> <Configuration Management> <BEA-150016> <ï¿½ï¿½ï¿½ÌƒTï¿½[ï¿½oï¿½ÍŠÇ—ï¿½ï¿½Tï¿½[ï¿½oï¿½Æ‚ï¿½ï¿½Ä‹Nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B> 
+<2006/05/04 22ï¿½ï¿½19ï¿½ï¿½31ï¿½b JST> <Info> <Management> <BEA-141107> <ï¿½oï¿½[ï¿½Wï¿½ï¿½ï¿½ï¿½: WebLogic Server 8.1 SP1  Fri Jun 20 23:06:40 PDT 2003 271009
 WebLogic XMLX Module 8.1 SP1  Fri Jun 20 23:06:40 PDT 2003 271009> 
-<2006/05/04 22Žž19•ª32•b JST> <Notice> <Management> <BEA-140005> <C:\bea81sp1\user_projects\domains\tt\.\config.xml ‚ÌƒRƒ“ƒtƒBƒOƒŒ[ƒVƒ‡ƒ“ ƒŠƒ|ƒWƒgƒŠ‚©‚çƒhƒƒCƒ“ ƒRƒ“ƒtƒBƒOƒŒ[ƒVƒ‡ƒ“‚ðƒ[ƒh‚µ‚Ä‚¢‚Ü‚·B> 
-<2006/05/04 22Žž19•ª33•b JST> <Notice> <Log Management> <BEA-170019> <ƒT[ƒo ƒƒO ƒtƒ@ƒCƒ‹ C:\bea81sp1\user_projects\domains\tt\myserver\myserver.log ‚ðŠJ‚«‚Ü‚µ‚½B‚·‚×‚Ä‚ÌƒT[ƒoƒTƒCƒh ƒƒO ƒCƒxƒ“ƒg‚Í‚±‚Ìƒtƒ@ƒCƒ‹‚É‘‚«ž‚Ü‚ê‚Ü‚·B> 
-<2006/05/04 22Žž19•ª36•b JST> <Notice> <Security> <BEA-090082> <ƒZƒLƒ…ƒŠƒeƒB‚ÍƒZƒLƒ…ƒŠƒeƒB ƒŒƒ‹ƒ€ myrealm ‚ðŽg—p‚µ‚Ä‰Šú‰»‚µ‚Ä‚¢‚Ü‚·B> 
-<2006/05/04 22Žž19•ª36•b JST> <Notice> <WebLogicServer> <BEA-000327> <ƒhƒƒCƒ“ "tt" ‚Å WebLogic ŠÇ—ƒT[ƒo "myserver" ‚ð‹N“®‚µ‚Ä‚¢‚Ü‚·B> 
-<2006/05/04 22Žž19•ª47•b JST> <Notice> <WebLogicServer> <BEA-000331> <ƒhƒƒCƒ“ "tt" ‚Å WebLogic ŠÇ—ƒT[ƒo "myserver" ‚ðŠJ”­ƒ‚[ƒh‚Å‹N“®‚µ‚Ü‚µ‚½B> 
-<2006/05/04 22Žž19•ª47•b JST> <Notice> <WebLogicServer> <BEA-000360> <ƒT[ƒo‚ª RUNNING ƒ‚[ƒh‚Å‹N“®‚µ‚Ü‚µ‚½B> 
-<2006/05/04 22Žž19•ª47•b JST> <Notice> <WebLogicServer> <BEA-000355> <ƒXƒŒƒbƒh "ListenThread.Default" ‚Í IP ƒAƒhƒŒƒX *.* ‚Ìƒ|[ƒg 7001 ‚ðƒŠƒXƒ“‚µ‚Ä‚¢‚Ü‚·B> 
+<2006/05/04 22ï¿½ï¿½19ï¿½ï¿½32ï¿½b JST> <Notice> <Management> <BEA-140005> <C:\bea81sp1\user_projects\domains\tt\.\config.xml ï¿½ÌƒRï¿½ï¿½ï¿½tï¿½Bï¿½Oï¿½ï¿½ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½|ï¿½Wï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Cï¿½ï¿½ ï¿½Rï¿½ï¿½ï¿½tï¿½Bï¿½Oï¿½ï¿½ï¿½[ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B> 
+<2006/05/04 22ï¿½ï¿½19ï¿½ï¿½33ï¿½b JST> <Notice> <Log Management> <BEA-170019> <ï¿½Tï¿½[ï¿½o ï¿½ï¿½ï¿½O ï¿½tï¿½@ï¿½Cï¿½ï¿½ C:\bea81sp1\user_projects\domains\tt\myserver\myserver.log ï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½Bï¿½ï¿½ï¿½×‚Ä‚ÌƒTï¿½[ï¿½oï¿½Tï¿½Cï¿½h ï¿½ï¿½ï¿½O ï¿½Cï¿½xï¿½ï¿½ï¿½gï¿½Í‚ï¿½ï¿½Ìƒtï¿½@ï¿½Cï¿½ï¿½ï¿½Éï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½Ü‚ï¿½ï¿½B> 
+<2006/05/04 22ï¿½ï¿½19ï¿½ï¿½36ï¿½b JST> <Notice> <Security> <BEA-090082> <ï¿½Zï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½eï¿½Bï¿½ÍƒZï¿½Lï¿½ï¿½ï¿½ï¿½ï¿½eï¿½B ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ myrealm ï¿½ï¿½ï¿½gï¿½pï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B> 
+<2006/05/04 22ï¿½ï¿½19ï¿½ï¿½36ï¿½b JST> <Notice> <WebLogicServer> <BEA-000327> <ï¿½hï¿½ï¿½ï¿½Cï¿½ï¿½ "tt" ï¿½ï¿½ WebLogic ï¿½Ç—ï¿½ï¿½Tï¿½[ï¿½o "myserver" ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B> 
+<2006/05/04 22ï¿½ï¿½19ï¿½ï¿½47ï¿½b JST> <Notice> <WebLogicServer> <BEA-000331> <ï¿½hï¿½ï¿½ï¿½Cï¿½ï¿½ "tt" ï¿½ï¿½ WebLogic ï¿½Ç—ï¿½ï¿½Tï¿½[ï¿½o "myserver" ï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½ï¿½ï¿½[ï¿½hï¿½Å‹Nï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B> 
+<2006/05/04 22ï¿½ï¿½19ï¿½ï¿½47ï¿½b JST> <Notice> <WebLogicServer> <BEA-000360> <ï¿½Tï¿½[ï¿½oï¿½ï¿½ RUNNING ï¿½ï¿½ï¿½[ï¿½hï¿½Å‹Nï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ï¿½B> 
+<2006/05/04 22ï¿½ï¿½19ï¿½ï¿½47ï¿½b JST> <Notice> <WebLogicServer> <BEA-000355> <ï¿½Xï¿½ï¿½ï¿½bï¿½h "ListenThread.Default" ï¿½ï¿½ IP ï¿½Aï¿½hï¿½ï¿½ï¿½X *.* ï¿½Ìƒ|ï¿½[ï¿½g 7001 ï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½Ü‚ï¿½ï¿½B> 
 ===== FULL THREAD DUMP ===============
 Thu May 04 22:20:10 JST 2006
 
@@ -2026,4 +2026,4 @@ Thread-0x1700 "ExecuteThread: '3' for queue: 'JMS.TimerClientPool'" <Waiting, pr
 
 ======================================
 
-ƒoƒbƒ` ƒWƒ‡ƒu‚ðI—¹‚µ‚Ü‚·‚© (Y/N)? ^C
+ï¿½oï¿½bï¿½` ï¿½Wï¿½ï¿½ï¿½uï¿½ï¿½ï¿½Iï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½ (Y/N)? ^C

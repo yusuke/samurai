@@ -1,1 +1,192 @@
-===== FULL THREAD DUMP ===============Wed Aug 17 12:05:14 2005BEA JRockit(R) R25.2.0-28 dra-45238-20050523-2021-win-ia32"Thread-2" id=12 idx=0x2 tid=5428 prio=5 alive, in native, daemon"(Signal Handler)" id=2 idx=0x4 tid=4980 prio=5 alive, in native, daemon"(Code Generation Thread 1)" id=3 idx=0x6 tid=4924 prio=5 alive, in native, native_waiting, daemon"(Code Optimization Thread 1)" id=4 idx=0x8 tid=5612 prio=5 alive, in native, native_waiting, daemon"(GC Main Thread)" id=5 idx=0xa tid=1964 prio=5 alive, in native, daemon"(GC Worker Thread 1)" id=6 idx=0xc tid=5432 prio=5 alive, in native, native_waiting, daemon"(Hotspot Detector)" id=7 idx=0xe tid=1720 prio=10 alive, in native, daemon"Finalizer" id=8 idx=0x10 tid=4128 prio=8 alive, in native, native_waiting, daemon    at jrockit/memory/Finalizer.getPendingFinalizee(Z)Ljava/lang/Object;(Native Method)    at jrockit/memory/Finalizer.access$100(Z)Ljava/lang/Object;(Unknown Source)    at jrockit/memory/Finalizer$4.run()V(Unknown Source)    at java/lang/Thread.run()V(Unknown Source)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"Reference Handler" id=9 idx=0x12 tid=1012 prio=10 alive, in native, native_waiting, daemon    at java/lang/ref/Reference.getPending()Ljava/lang/ref/Reference;(Native Method)    at java/lang/ref/Reference.access$000()Ljava/lang/ref/Reference;(Unknown Source)    at java/lang/ref/Reference$ReferenceHandler.run()V(Unknown Source)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"Thread-0" id=10 idx=0x14 tid=5628 prio=5 alive, in native, blocked    -- Blocked trying to get lock: java/lang/Object@0x0095C8D0[thin lock]    at jrockit/vm/Threads.shortNap(I)V(Native Method)    at jrockit/vm/Locks.waitForThinRelease(Ljava/lang/Object;I)I(Unknown Source)    at jrockit/vm/Locks.monitorEnterSecondStage(Ljava/lang/Object;I)Ljava/lang/Object;(Unknown Source)    at jrockit/vm/Locks.monitorEnter(Ljava/lang/Object;)Ljava/lang/Object;(Unknown Source)    at net/homeip/yusuke/samurai/test/AThread.run()V(StackSample.java:25)    ^-- Holding lock: java/lang/Object@0x0095C8C8[thin lock]    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"Thread-1" id=11 idx=0x16 tid=3264 prio=5 alive, in native, blocked    -- Blocked trying to get lock: java/lang/Object@0x0095C8C8[thin lock]    at jrockit/vm/Threads.shortNap(I)V(Native Method)    at jrockit/vm/Locks.waitForThinRelease(Ljava/lang/Object;I)I(Unknown Source)    at jrockit/vm/Locks.monitorEnterSecondStage(Ljava/lang/Object;I)Ljava/lang/Object;(Unknown Source)    at jrockit/vm/Locks.monitorEnter(Ljava/lang/Object;)Ljava/lang/Object;(Unknown Source)    at net/homeip/yusuke/samurai/test/AThread.run()V(StackSample.java:25)    ^-- Holding lock: java/lang/Object@0x0095C8D0[thin lock]    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of traceCircular (deadlocked) lock chains=================================Chain 2:"Thread-0" id=10 idx=0x14 tid=5628 waiting for java/lang/Object@0x0095C8D0 held by:"Thread-1" id=11 idx=0x16 tid=3264 waiting for java/lang/Object@0x0095C8C8 held by:"Thread-0" id=10 idx=0x14 tid=5628===== END OF THREAD DUMP ==================== FULL THREAD DUMP ===============Wed Aug 17 12:05:15 2005BEA JRockit(R) R25.2.0-28 dra-45238-20050523-2021-win-ia32"Thread-2" id=12 idx=0x2 tid=5428 prio=5 alive, in native, daemon"(Signal Handler)" id=2 idx=0x4 tid=4980 prio=5 alive, in native, daemon"(Code Generation Thread 1)" id=3 idx=0x6 tid=4924 prio=5 alive, in native, native_waiting, daemon"(Code Optimization Thread 1)" id=4 idx=0x8 tid=5612 prio=5 alive, in native, native_waiting, daemon"(GC Main Thread)" id=5 idx=0xa tid=1964 prio=5 alive, in native, daemon"(GC Worker Thread 1)" id=6 idx=0xc tid=5432 prio=5 alive, in native, native_waiting, daemon"(Hotspot Detector)" id=7 idx=0xe tid=1720 prio=10 alive, in native, daemon"Finalizer" id=8 idx=0x10 tid=4128 prio=8 alive, in native, native_waiting, daemon    at jrockit/memory/Finalizer.getPendingFinalizee(Z)Ljava/lang/Object;(Native Method)    at jrockit/memory/Finalizer.access$100(Z)Ljava/lang/Object;(Unknown Source)    at jrockit/memory/Finalizer$4.run()V(Unknown Source)    at java/lang/Thread.run()V(Unknown Source)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"Reference Handler" id=9 idx=0x12 tid=1012 prio=10 alive, in native, native_waiting, daemon    at java/lang/ref/Reference.getPending()Ljava/lang/ref/Reference;(Native Method)    at java/lang/ref/Reference.access$000()Ljava/lang/ref/Reference;(Unknown Source)    at java/lang/ref/Reference$ReferenceHandler.run()V(Unknown Source)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"Thread-0" id=10 idx=0x14 tid=5628 prio=5 alive, in native, blocked    -- Blocked trying to get lock: java/lang/Object@0x0095C8D0[thin lock]    at jrockit/vm/Threads.shortNap(I)V(Native Method)    at jrockit/vm/Locks.waitForThinRelease(Ljava/lang/Object;I)I(Unknown Source)    at jrockit/vm/Locks.monitorEnterSecondStage(Ljava/lang/Object;I)Ljava/lang/Object;(Unknown Source)    at jrockit/vm/Locks.monitorEnter(Ljava/lang/Object;)Ljava/lang/Object;(Unknown Source)    at net/homeip/yusuke/samurai/test/AThread.run()V(StackSample.java:25)    ^-- Holding lock: java/lang/Object@0x0095C8C8[thin lock]    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"Thread-1" id=11 idx=0x16 tid=3264 prio=5 alive, in native, blocked    -- Blocked trying to get lock: java/lang/Object@0x0095C8C8[thin lock]    at jrockit/vm/Threads.shortNap(I)V(Native Method)    at jrockit/vm/Locks.waitForThinRelease(Ljava/lang/Object;I)I(Unknown Source)    at jrockit/vm/Locks.monitorEnterSecondStage(Ljava/lang/Object;I)Ljava/lang/Object;(Unknown Source)    at jrockit/vm/Locks.monitorEnter(Ljava/lang/Object;)Ljava/lang/Object;(Unknown Source)    at net/homeip/yusuke/samurai/test/AThread.run()V(StackSample.java:25)    ^-- Holding lock: java/lang/Object@0x0095C8D0[thin lock]    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of traceCircular (deadlocked) lock chains=================================Chain 2:"Thread-0" id=10 idx=0x14 tid=5628 waiting for java/lang/Object@0x0095C8D0 held by:"Thread-1" id=11 idx=0x16 tid=3264 waiting for java/lang/Object@0x0095C8C8 held by:"Thread-0" id=10 idx=0x14 tid=5628===== END OF THREAD DUMP ==================== FULL THREAD DUMP ===============Wed Aug 17 12:05:17 2005BEA JRockit(R) R25.2.0-28 dra-45238-20050523-2021-win-ia32"Thread-2" id=12 idx=0x2 tid=5428 prio=5 alive, in native, daemon"(Signal Handler)" id=2 idx=0x4 tid=4980 prio=5 alive, in native, daemon"(Code Generation Thread 1)" id=3 idx=0x6 tid=4924 prio=5 alive, in native, native_waiting, daemon"(Code Optimization Thread 1)" id=4 idx=0x8 tid=5612 prio=5 alive, in native, native_waiting, daemon"(GC Main Thread)" id=5 idx=0xa tid=1964 prio=5 alive, in native, daemon"(GC Worker Thread 1)" id=6 idx=0xc tid=5432 prio=5 alive, in native, native_waiting, daemon"(Hotspot Detector)" id=7 idx=0xe tid=1720 prio=10 alive, in native, daemon"Finalizer" id=8 idx=0x10 tid=4128 prio=8 alive, in native, native_waiting, daemon    at jrockit/memory/Finalizer.getPendingFinalizee(Z)Ljava/lang/Object;(Native Method)    at jrockit/memory/Finalizer.access$100(Z)Ljava/lang/Object;(Unknown Source)    at jrockit/memory/Finalizer$4.run()V(Unknown Source)    at java/lang/Thread.run()V(Unknown Source)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"Reference Handler" id=9 idx=0x12 tid=1012 prio=10 alive, in native, native_waiting, daemon    at java/lang/ref/Reference.getPending()Ljava/lang/ref/Reference;(Native Method)    at java/lang/ref/Reference.access$000()Ljava/lang/ref/Reference;(Unknown Source)    at java/lang/ref/Reference$ReferenceHandler.run()V(Unknown Source)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"Thread-0" id=10 idx=0x14 tid=5628 prio=5 alive, in native, blocked    -- Blocked trying to get lock: java/lang/Object@0x0095C8D0[thin lock]    at jrockit/vm/Threads.shortNap(I)V(Native Method)    at jrockit/vm/Locks.waitForThinRelease(Ljava/lang/Object;I)I(Unknown Source)    at jrockit/vm/Locks.monitorEnterSecondStage(Ljava/lang/Object;I)Ljava/lang/Object;(Unknown Source)    at jrockit/vm/Locks.monitorEnter(Ljava/lang/Object;)Ljava/lang/Object;(Unknown Source)    at net/homeip/yusuke/samurai/test/AThread.run()V(StackSample.java:25)    ^-- Holding lock: java/lang/Object@0x0095C8C8[thin lock]    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"Thread-1" id=11 idx=0x16 tid=3264 prio=5 alive, in native, blocked    -- Blocked trying to get lock: java/lang/Object@0x0095C8C8[thin lock]    at jrockit/vm/Threads.shortNap(I)V(Native Method)    at jrockit/vm/Locks.waitForThinRelease(Ljava/lang/Object;I)I(Unknown Source)    at jrockit/vm/Locks.monitorEnterSecondStage(Ljava/lang/Object;I)Ljava/lang/Object;(Unknown Source)    at jrockit/vm/Locks.monitorEnter(Ljava/lang/Object;)Ljava/lang/Object;(Unknown Source)    at net/homeip/yusuke/samurai/test/AThread.run()V(StackSample.java:25)    ^-- Holding lock: java/lang/Object@0x0095C8D0[thin lock]    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of traceCircular (deadlocked) lock chains=================================Chain 2:"Thread-0" id=10 idx=0x14 tid=5628 waiting for java/lang/Object@0x0095C8D0 held by:"Thread-1" id=11 idx=0x16 tid=3264 waiting for java/lang/Object@0x0095C8C8 held by:"Thread-0" id=10 idx=0x14 tid=5628===== END OF THREAD DUMP ===============
+
+===== FULL THREAD DUMP ===============
+Wed Aug 17 12:05:14 2005
+BEA JRockit(R) R25.2.0-28 dra-45238-20050523-2021-win-ia32
+
+"Thread-2" id=12 idx=0x2 tid=5428 prio=5 alive, in native, daemon
+
+"(Signal Handler)" id=2 idx=0x4 tid=4980 prio=5 alive, in native, daemon
+
+"(Code Generation Thread 1)" id=3 idx=0x6 tid=4924 prio=5 alive, in native, native_waiting, daemon
+
+"(Code Optimization Thread 1)" id=4 idx=0x8 tid=5612 prio=5 alive, in native, native_waiting, daemon
+
+"(GC Main Thread)" id=5 idx=0xa tid=1964 prio=5 alive, in native, daemon
+
+"(GC Worker Thread 1)" id=6 idx=0xc tid=5432 prio=5 alive, in native, native_waiting, daemon
+
+"(Hotspot Detector)" id=7 idx=0xe tid=1720 prio=10 alive, in native, daemon
+
+"Finalizer" id=8 idx=0x10 tid=4128 prio=8 alive, in native, native_waiting, daemon
+    at jrockit/memory/Finalizer.getPendingFinalizee(Z)Ljava/lang/Object;(Native Method)
+    at jrockit/memory/Finalizer.access$100(Z)Ljava/lang/Object;(Unknown Source)
+    at jrockit/memory/Finalizer$4.run()V(Unknown Source)
+    at java/lang/Thread.run()V(Unknown Source)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"Reference Handler" id=9 idx=0x12 tid=1012 prio=10 alive, in native, native_waiting, daemon
+    at java/lang/ref/Reference.getPending()Ljava/lang/ref/Reference;(Native Method)
+    at java/lang/ref/Reference.access$000()Ljava/lang/ref/Reference;(Unknown Source)
+    at java/lang/ref/Reference$ReferenceHandler.run()V(Unknown Source)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"Thread-0" id=10 idx=0x14 tid=5628 prio=5 alive, in native, blocked
+    -- Blocked trying to get lock: java/lang/Object@0x0095C8D0[thin lock]
+    at jrockit/vm/Threads.shortNap(I)V(Native Method)
+    at jrockit/vm/Locks.waitForThinRelease(Ljava/lang/Object;I)I(Unknown Source)
+    at jrockit/vm/Locks.monitorEnterSecondStage(Ljava/lang/Object;I)Ljava/lang/Object;(Unknown Source)
+    at jrockit/vm/Locks.monitorEnter(Ljava/lang/Object;)Ljava/lang/Object;(Unknown Source)
+    at net/homeip/yusuke/samurai/test/AThread.run()V(StackSample.java:25)
+    ^-- Holding lock: java/lang/Object@0x0095C8C8[thin lock]
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"Thread-1" id=11 idx=0x16 tid=3264 prio=5 alive, in native, blocked
+    -- Blocked trying to get lock: java/lang/Object@0x0095C8C8[thin lock]
+    at jrockit/vm/Threads.shortNap(I)V(Native Method)
+    at jrockit/vm/Locks.waitForThinRelease(Ljava/lang/Object;I)I(Unknown Source)
+    at jrockit/vm/Locks.monitorEnterSecondStage(Ljava/lang/Object;I)Ljava/lang/Object;(Unknown Source)
+    at jrockit/vm/Locks.monitorEnter(Ljava/lang/Object;)Ljava/lang/Object;(Unknown Source)
+    at net/homeip/yusuke/samurai/test/AThread.run()V(StackSample.java:25)
+    ^-- Holding lock: java/lang/Object@0x0095C8D0[thin lock]
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+Circular (deadlocked) lock chains
+=================================
+Chain 2:
+"Thread-0" id=10 idx=0x14 tid=5628 waiting for java/lang/Object@0x0095C8D0 held by:
+"Thread-1" id=11 idx=0x16 tid=3264 waiting for java/lang/Object@0x0095C8C8 held by:
+"Thread-0" id=10 idx=0x14 tid=5628
+
+===== END OF THREAD DUMP ===============
+
+===== FULL THREAD DUMP ===============
+Wed Aug 17 12:05:15 2005
+BEA JRockit(R) R25.2.0-28 dra-45238-20050523-2021-win-ia32
+
+"Thread-2" id=12 idx=0x2 tid=5428 prio=5 alive, in native, daemon
+
+"(Signal Handler)" id=2 idx=0x4 tid=4980 prio=5 alive, in native, daemon
+
+"(Code Generation Thread 1)" id=3 idx=0x6 tid=4924 prio=5 alive, in native, native_waiting, daemon
+
+"(Code Optimization Thread 1)" id=4 idx=0x8 tid=5612 prio=5 alive, in native, native_waiting, daemon
+
+"(GC Main Thread)" id=5 idx=0xa tid=1964 prio=5 alive, in native, daemon
+
+"(GC Worker Thread 1)" id=6 idx=0xc tid=5432 prio=5 alive, in native, native_waiting, daemon
+
+"(Hotspot Detector)" id=7 idx=0xe tid=1720 prio=10 alive, in native, daemon
+
+"Finalizer" id=8 idx=0x10 tid=4128 prio=8 alive, in native, native_waiting, daemon
+    at jrockit/memory/Finalizer.getPendingFinalizee(Z)Ljava/lang/Object;(Native Method)
+    at jrockit/memory/Finalizer.access$100(Z)Ljava/lang/Object;(Unknown Source)
+    at jrockit/memory/Finalizer$4.run()V(Unknown Source)
+    at java/lang/Thread.run()V(Unknown Source)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"Reference Handler" id=9 idx=0x12 tid=1012 prio=10 alive, in native, native_waiting, daemon
+    at java/lang/ref/Reference.getPending()Ljava/lang/ref/Reference;(Native Method)
+    at java/lang/ref/Reference.access$000()Ljava/lang/ref/Reference;(Unknown Source)
+    at java/lang/ref/Reference$ReferenceHandler.run()V(Unknown Source)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"Thread-0" id=10 idx=0x14 tid=5628 prio=5 alive, in native, blocked
+    -- Blocked trying to get lock: java/lang/Object@0x0095C8D0[thin lock]
+    at jrockit/vm/Threads.shortNap(I)V(Native Method)
+    at jrockit/vm/Locks.waitForThinRelease(Ljava/lang/Object;I)I(Unknown Source)
+    at jrockit/vm/Locks.monitorEnterSecondStage(Ljava/lang/Object;I)Ljava/lang/Object;(Unknown Source)
+    at jrockit/vm/Locks.monitorEnter(Ljava/lang/Object;)Ljava/lang/Object;(Unknown Source)
+    at net/homeip/yusuke/samurai/test/AThread.run()V(StackSample.java:25)
+    ^-- Holding lock: java/lang/Object@0x0095C8C8[thin lock]
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"Thread-1" id=11 idx=0x16 tid=3264 prio=5 alive, in native, blocked
+    -- Blocked trying to get lock: java/lang/Object@0x0095C8C8[thin lock]
+    at jrockit/vm/Threads.shortNap(I)V(Native Method)
+    at jrockit/vm/Locks.waitForThinRelease(Ljava/lang/Object;I)I(Unknown Source)
+    at jrockit/vm/Locks.monitorEnterSecondStage(Ljava/lang/Object;I)Ljava/lang/Object;(Unknown Source)
+    at jrockit/vm/Locks.monitorEnter(Ljava/lang/Object;)Ljava/lang/Object;(Unknown Source)
+    at net/homeip/yusuke/samurai/test/AThread.run()V(StackSample.java:25)
+    ^-- Holding lock: java/lang/Object@0x0095C8D0[thin lock]
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+Circular (deadlocked) lock chains
+=================================
+Chain 2:
+"Thread-0" id=10 idx=0x14 tid=5628 waiting for java/lang/Object@0x0095C8D0 held by:
+"Thread-1" id=11 idx=0x16 tid=3264 waiting for java/lang/Object@0x0095C8C8 held by:
+"Thread-0" id=10 idx=0x14 tid=5628
+
+===== END OF THREAD DUMP ===============
+
+===== FULL THREAD DUMP ===============
+Wed Aug 17 12:05:17 2005
+BEA JRockit(R) R25.2.0-28 dra-45238-20050523-2021-win-ia32
+
+"Thread-2" id=12 idx=0x2 tid=5428 prio=5 alive, in native, daemon
+
+"(Signal Handler)" id=2 idx=0x4 tid=4980 prio=5 alive, in native, daemon
+
+"(Code Generation Thread 1)" id=3 idx=0x6 tid=4924 prio=5 alive, in native, native_waiting, daemon
+
+"(Code Optimization Thread 1)" id=4 idx=0x8 tid=5612 prio=5 alive, in native, native_waiting, daemon
+
+"(GC Main Thread)" id=5 idx=0xa tid=1964 prio=5 alive, in native, daemon
+
+"(GC Worker Thread 1)" id=6 idx=0xc tid=5432 prio=5 alive, in native, native_waiting, daemon
+
+"(Hotspot Detector)" id=7 idx=0xe tid=1720 prio=10 alive, in native, daemon
+
+"Finalizer" id=8 idx=0x10 tid=4128 prio=8 alive, in native, native_waiting, daemon
+    at jrockit/memory/Finalizer.getPendingFinalizee(Z)Ljava/lang/Object;(Native Method)
+    at jrockit/memory/Finalizer.access$100(Z)Ljava/lang/Object;(Unknown Source)
+    at jrockit/memory/Finalizer$4.run()V(Unknown Source)
+    at java/lang/Thread.run()V(Unknown Source)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"Reference Handler" id=9 idx=0x12 tid=1012 prio=10 alive, in native, native_waiting, daemon
+    at java/lang/ref/Reference.getPending()Ljava/lang/ref/Reference;(Native Method)
+    at java/lang/ref/Reference.access$000()Ljava/lang/ref/Reference;(Unknown Source)
+    at java/lang/ref/Reference$ReferenceHandler.run()V(Unknown Source)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"Thread-0" id=10 idx=0x14 tid=5628 prio=5 alive, in native, blocked
+    -- Blocked trying to get lock: java/lang/Object@0x0095C8D0[thin lock]
+    at jrockit/vm/Threads.shortNap(I)V(Native Method)
+    at jrockit/vm/Locks.waitForThinRelease(Ljava/lang/Object;I)I(Unknown Source)
+    at jrockit/vm/Locks.monitorEnterSecondStage(Ljava/lang/Object;I)Ljava/lang/Object;(Unknown Source)
+    at jrockit/vm/Locks.monitorEnter(Ljava/lang/Object;)Ljava/lang/Object;(Unknown Source)
+    at net/homeip/yusuke/samurai/test/AThread.run()V(StackSample.java:25)
+    ^-- Holding lock: java/lang/Object@0x0095C8C8[thin lock]
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"Thread-1" id=11 idx=0x16 tid=3264 prio=5 alive, in native, blocked
+    -- Blocked trying to get lock: java/lang/Object@0x0095C8C8[thin lock]
+    at jrockit/vm/Threads.shortNap(I)V(Native Method)
+    at jrockit/vm/Locks.waitForThinRelease(Ljava/lang/Object;I)I(Unknown Source)
+    at jrockit/vm/Locks.monitorEnterSecondStage(Ljava/lang/Object;I)Ljava/lang/Object;(Unknown Source)
+    at jrockit/vm/Locks.monitorEnter(Ljava/lang/Object;)Ljava/lang/Object;(Unknown Source)
+    at net/homeip/yusuke/samurai/test/AThread.run()V(StackSample.java:25)
+    ^-- Holding lock: java/lang/Object@0x0095C8D0[thin lock]
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+Circular (deadlocked) lock chains
+=================================
+Chain 2:
+"Thread-0" id=10 idx=0x14 tid=5628 waiting for java/lang/Object@0x0095C8D0 held by:
+"Thread-1" id=11 idx=0x16 tid=3264 waiting for java/lang/Object@0x0095C8C8 held by:
+"Thread-0" id=10 idx=0x14 tid=5628
+
+===== END OF THREAD DUMP ===============

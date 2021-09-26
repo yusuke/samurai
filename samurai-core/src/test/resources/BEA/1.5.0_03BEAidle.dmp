@@ -1,1 +1,129 @@
-===== FULL THREAD DUMP ===============Wed Aug 17 12:08:52 2005BEA JRockit(R) R25.2.0-28 dra-45238-20050523-2021-win-ia32"Main Thread" id=1 idx=0x2 tid=5772 prio=5 alive, in native, sleeping    -- Waiting for notification on: java/lang/Object@0x0095B708[fat lock]    at jrockit/vm/Threads.waitForSignalWithTimeout(J)V(Native Method)    at jrockit/vm/Locks.wait(Ljava/lang/Object;J)V(Unknown Source)    at java/lang/Thread.sleep(J)V(Unknown Source)    ^-- Lock released while waiting: java/lang/Object@0x0095B708[fat lock]    at net/homeip/yusuke/samurai/test/IdleSample.main([Ljava/lang/String;)V(IdleSample.java:5)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"(Signal Handler)" id=2 idx=0x4 tid=5908 prio=5 alive, in native, daemon"(Code Generation Thread 1)" id=3 idx=0x6 tid=5800 prio=5 alive, in native, native_waiting, daemon"(Code Optimization Thread 1)" id=4 idx=0x8 tid=5556 prio=5 alive, in native, native_waiting, daemon"(GC Main Thread)" id=5 idx=0xa tid=5376 prio=5 alive, in native, daemon"(GC Worker Thread 1)" id=6 idx=0xc tid=3964 prio=5 alive, in native, native_waiting, daemon"(Hotspot Detector)" id=7 idx=0xe tid=4504 prio=10 alive, in native, daemon"Finalizer" id=8 idx=0x10 tid=4876 prio=8 alive, in native, native_waiting, daemon    at jrockit/memory/Finalizer.getPendingFinalizee(Z)Ljava/lang/Object;(Native Method)    at jrockit/memory/Finalizer.access$100(Z)Ljava/lang/Object;(Unknown Source)    at jrockit/memory/Finalizer$4.run()V(Unknown Source)    at java/lang/Thread.run()V(Unknown Source)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"Reference Handler" id=9 idx=0x12 tid=1192 prio=10 alive, in native, native_waiting, daemon    at java/lang/ref/Reference.getPending()Ljava/lang/ref/Reference;(Native Method)    at java/lang/ref/Reference.access$000()Ljava/lang/ref/Reference;(Unknown Source)    at java/lang/ref/Reference$ReferenceHandler.run()V(Unknown Source)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace===== END OF THREAD DUMP ==================== FULL THREAD DUMP ===============Wed Aug 17 12:08:53 2005BEA JRockit(R) R25.2.0-28 dra-45238-20050523-2021-win-ia32"Main Thread" id=1 idx=0x2 tid=5772 prio=5 alive, in native, sleeping    -- Waiting for notification on: java/lang/Object@0x0095B708[fat lock]    at jrockit/vm/Threads.waitForSignalWithTimeout(J)V(Native Method)    at jrockit/vm/Locks.wait(Ljava/lang/Object;J)V(Unknown Source)    at java/lang/Thread.sleep(J)V(Unknown Source)    ^-- Lock released while waiting: java/lang/Object@0x0095B708[fat lock]    at net/homeip/yusuke/samurai/test/IdleSample.main([Ljava/lang/String;)V(IdleSample.java:5)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"(Signal Handler)" id=2 idx=0x4 tid=5908 prio=5 alive, in native, daemon"(Code Generation Thread 1)" id=3 idx=0x6 tid=5800 prio=5 alive, in native, native_waiting, daemon"(Code Optimization Thread 1)" id=4 idx=0x8 tid=5556 prio=5 alive, in native, native_waiting, daemon"(GC Main Thread)" id=5 idx=0xa tid=5376 prio=5 alive, in native, daemon"(GC Worker Thread 1)" id=6 idx=0xc tid=3964 prio=5 alive, in native, native_waiting, daemon"(Hotspot Detector)" id=7 idx=0xe tid=4504 prio=10 alive, in native, daemon"Finalizer" id=8 idx=0x10 tid=4876 prio=8 alive, in native, native_waiting, daemon    at jrockit/memory/Finalizer.getPendingFinalizee(Z)Ljava/lang/Object;(Native Method)    at jrockit/memory/Finalizer.access$100(Z)Ljava/lang/Object;(Unknown Source)    at jrockit/memory/Finalizer$4.run()V(Unknown Source)    at java/lang/Thread.run()V(Unknown Source)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"Reference Handler" id=9 idx=0x12 tid=1192 prio=10 alive, in native, native_waiting, daemon    at java/lang/ref/Reference.getPending()Ljava/lang/ref/Reference;(Native Method)    at java/lang/ref/Reference.access$000()Ljava/lang/ref/Reference;(Unknown Source)    at java/lang/ref/Reference$ReferenceHandler.run()V(Unknown Source)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace===== END OF THREAD DUMP ==================== FULL THREAD DUMP ===============Wed Aug 17 12:08:54 2005BEA JRockit(R) R25.2.0-28 dra-45238-20050523-2021-win-ia32"Main Thread" id=1 idx=0x2 tid=5772 prio=5 alive, in native, sleeping    -- Waiting for notification on: java/lang/Object@0x0095B708[fat lock]    at jrockit/vm/Threads.waitForSignalWithTimeout(J)V(Native Method)    at jrockit/vm/Locks.wait(Ljava/lang/Object;J)V(Unknown Source)    at java/lang/Thread.sleep(J)V(Unknown Source)    ^-- Lock released while waiting: java/lang/Object@0x0095B708[fat lock]    at net/homeip/yusuke/samurai/test/IdleSample.main([Ljava/lang/String;)V(IdleSample.java:5)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"(Signal Handler)" id=2 idx=0x4 tid=5908 prio=5 alive, in native, daemon"(Code Generation Thread 1)" id=3 idx=0x6 tid=5800 prio=5 alive, in native, native_waiting, daemon"(Code Optimization Thread 1)" id=4 idx=0x8 tid=5556 prio=5 alive, in native, native_waiting, daemon"(GC Main Thread)" id=5 idx=0xa tid=5376 prio=5 alive, in native, daemon"(GC Worker Thread 1)" id=6 idx=0xc tid=3964 prio=5 alive, in native, native_waiting, daemon"(Hotspot Detector)" id=7 idx=0xe tid=4504 prio=10 alive, in native, daemon"Finalizer" id=8 idx=0x10 tid=4876 prio=8 alive, in native, native_waiting, daemon    at jrockit/memory/Finalizer.getPendingFinalizee(Z)Ljava/lang/Object;(Native Method)    at jrockit/memory/Finalizer.access$100(Z)Ljava/lang/Object;(Unknown Source)    at jrockit/memory/Finalizer$4.run()V(Unknown Source)    at java/lang/Thread.run()V(Unknown Source)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace"Reference Handler" id=9 idx=0x12 tid=1192 prio=10 alive, in native, native_waiting, daemon    at java/lang/ref/Reference.getPending()Ljava/lang/ref/Reference;(Native Method)    at java/lang/ref/Reference.access$000()Ljava/lang/ref/Reference;(Unknown Source)    at java/lang/ref/Reference$ReferenceHandler.run()V(Unknown Source)    at jrockit/vm/RNI.c2java()V(Native Method)    -- end of trace===== END OF THREAD DUMP ===============
+
+===== FULL THREAD DUMP ===============
+Wed Aug 17 12:08:52 2005
+BEA JRockit(R) R25.2.0-28 dra-45238-20050523-2021-win-ia32
+
+"Main Thread" id=1 idx=0x2 tid=5772 prio=5 alive, in native, sleeping
+    -- Waiting for notification on: java/lang/Object@0x0095B708[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(J)V(Native Method)
+    at jrockit/vm/Locks.wait(Ljava/lang/Object;J)V(Unknown Source)
+    at java/lang/Thread.sleep(J)V(Unknown Source)
+    ^-- Lock released while waiting: java/lang/Object@0x0095B708[fat lock]
+    at net/homeip/yusuke/samurai/test/IdleSample.main([Ljava/lang/String;)V(IdleSample.java:5)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"(Signal Handler)" id=2 idx=0x4 tid=5908 prio=5 alive, in native, daemon
+
+"(Code Generation Thread 1)" id=3 idx=0x6 tid=5800 prio=5 alive, in native, native_waiting, daemon
+
+"(Code Optimization Thread 1)" id=4 idx=0x8 tid=5556 prio=5 alive, in native, native_waiting, daemon
+
+"(GC Main Thread)" id=5 idx=0xa tid=5376 prio=5 alive, in native, daemon
+
+"(GC Worker Thread 1)" id=6 idx=0xc tid=3964 prio=5 alive, in native, native_waiting, daemon
+
+"(Hotspot Detector)" id=7 idx=0xe tid=4504 prio=10 alive, in native, daemon
+
+"Finalizer" id=8 idx=0x10 tid=4876 prio=8 alive, in native, native_waiting, daemon
+    at jrockit/memory/Finalizer.getPendingFinalizee(Z)Ljava/lang/Object;(Native Method)
+    at jrockit/memory/Finalizer.access$100(Z)Ljava/lang/Object;(Unknown Source)
+    at jrockit/memory/Finalizer$4.run()V(Unknown Source)
+    at java/lang/Thread.run()V(Unknown Source)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"Reference Handler" id=9 idx=0x12 tid=1192 prio=10 alive, in native, native_waiting, daemon
+    at java/lang/ref/Reference.getPending()Ljava/lang/ref/Reference;(Native Method)
+    at java/lang/ref/Reference.access$000()Ljava/lang/ref/Reference;(Unknown Source)
+    at java/lang/ref/Reference$ReferenceHandler.run()V(Unknown Source)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+===== END OF THREAD DUMP ===============
+
+===== FULL THREAD DUMP ===============
+Wed Aug 17 12:08:53 2005
+BEA JRockit(R) R25.2.0-28 dra-45238-20050523-2021-win-ia32
+
+"Main Thread" id=1 idx=0x2 tid=5772 prio=5 alive, in native, sleeping
+    -- Waiting for notification on: java/lang/Object@0x0095B708[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(J)V(Native Method)
+    at jrockit/vm/Locks.wait(Ljava/lang/Object;J)V(Unknown Source)
+    at java/lang/Thread.sleep(J)V(Unknown Source)
+    ^-- Lock released while waiting: java/lang/Object@0x0095B708[fat lock]
+    at net/homeip/yusuke/samurai/test/IdleSample.main([Ljava/lang/String;)V(IdleSample.java:5)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"(Signal Handler)" id=2 idx=0x4 tid=5908 prio=5 alive, in native, daemon
+
+"(Code Generation Thread 1)" id=3 idx=0x6 tid=5800 prio=5 alive, in native, native_waiting, daemon
+
+"(Code Optimization Thread 1)" id=4 idx=0x8 tid=5556 prio=5 alive, in native, native_waiting, daemon
+
+"(GC Main Thread)" id=5 idx=0xa tid=5376 prio=5 alive, in native, daemon
+
+"(GC Worker Thread 1)" id=6 idx=0xc tid=3964 prio=5 alive, in native, native_waiting, daemon
+
+"(Hotspot Detector)" id=7 idx=0xe tid=4504 prio=10 alive, in native, daemon
+
+"Finalizer" id=8 idx=0x10 tid=4876 prio=8 alive, in native, native_waiting, daemon
+    at jrockit/memory/Finalizer.getPendingFinalizee(Z)Ljava/lang/Object;(Native Method)
+    at jrockit/memory/Finalizer.access$100(Z)Ljava/lang/Object;(Unknown Source)
+    at jrockit/memory/Finalizer$4.run()V(Unknown Source)
+    at java/lang/Thread.run()V(Unknown Source)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"Reference Handler" id=9 idx=0x12 tid=1192 prio=10 alive, in native, native_waiting, daemon
+    at java/lang/ref/Reference.getPending()Ljava/lang/ref/Reference;(Native Method)
+    at java/lang/ref/Reference.access$000()Ljava/lang/ref/Reference;(Unknown Source)
+    at java/lang/ref/Reference$ReferenceHandler.run()V(Unknown Source)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+===== END OF THREAD DUMP ===============
+
+===== FULL THREAD DUMP ===============
+Wed Aug 17 12:08:54 2005
+BEA JRockit(R) R25.2.0-28 dra-45238-20050523-2021-win-ia32
+
+"Main Thread" id=1 idx=0x2 tid=5772 prio=5 alive, in native, sleeping
+    -- Waiting for notification on: java/lang/Object@0x0095B708[fat lock]
+    at jrockit/vm/Threads.waitForSignalWithTimeout(J)V(Native Method)
+    at jrockit/vm/Locks.wait(Ljava/lang/Object;J)V(Unknown Source)
+    at java/lang/Thread.sleep(J)V(Unknown Source)
+    ^-- Lock released while waiting: java/lang/Object@0x0095B708[fat lock]
+    at net/homeip/yusuke/samurai/test/IdleSample.main([Ljava/lang/String;)V(IdleSample.java:5)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"(Signal Handler)" id=2 idx=0x4 tid=5908 prio=5 alive, in native, daemon
+
+"(Code Generation Thread 1)" id=3 idx=0x6 tid=5800 prio=5 alive, in native, native_waiting, daemon
+
+"(Code Optimization Thread 1)" id=4 idx=0x8 tid=5556 prio=5 alive, in native, native_waiting, daemon
+
+"(GC Main Thread)" id=5 idx=0xa tid=5376 prio=5 alive, in native, daemon
+
+"(GC Worker Thread 1)" id=6 idx=0xc tid=3964 prio=5 alive, in native, native_waiting, daemon
+
+"(Hotspot Detector)" id=7 idx=0xe tid=4504 prio=10 alive, in native, daemon
+
+"Finalizer" id=8 idx=0x10 tid=4876 prio=8 alive, in native, native_waiting, daemon
+    at jrockit/memory/Finalizer.getPendingFinalizee(Z)Ljava/lang/Object;(Native Method)
+    at jrockit/memory/Finalizer.access$100(Z)Ljava/lang/Object;(Unknown Source)
+    at jrockit/memory/Finalizer$4.run()V(Unknown Source)
+    at java/lang/Thread.run()V(Unknown Source)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+"Reference Handler" id=9 idx=0x12 tid=1192 prio=10 alive, in native, native_waiting, daemon
+    at java/lang/ref/Reference.getPending()Ljava/lang/ref/Reference;(Native Method)
+    at java/lang/ref/Reference.access$000()Ljava/lang/ref/Reference;(Unknown Source)
+    at java/lang/ref/Reference$ReferenceHandler.run()V(Unknown Source)
+    at jrockit/vm/RNI.c2java()V(Native Method)
+    -- end of trace
+
+===== END OF THREAD DUMP ===============

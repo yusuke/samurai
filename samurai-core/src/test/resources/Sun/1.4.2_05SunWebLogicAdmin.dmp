@@ -9,17 +9,17 @@ PATH=C:\bea81sp4\WEBLOG~1\server\bin;C:\bea81sp4\JDK142~1\jre\bin;C:\bea81sp4\JD
 *  server administration, use the WebLogic Server *
 *  console at http:\\[hostname]:[port]\console    *
 ***************************************************
-<2005/08/18 23Žž54•ª19•b JST> <Info> <WebLogicServer> <BEA-000377> <Starting WebLogic Server with Java HotSpot(TM) Client VM Version 1.4.2_05-b04 from Sun Microsystems Inc.> 
-<2005/08/18 23Žž54•ª22•b JST> <Info> <Configuration Management> <BEA-150016> <This server is being started as the administration server.> 
-<2005/08/18 23Žž54•ª23•b JST> <Info> <Management> <BEA-141107> <Version: WebLogic Server 8.1 SP4  Mon Nov 29 16:21:29 PST 2004 471647 
+<2005/08/18 23ï¿½ï¿½54ï¿½ï¿½19ï¿½b JST> <Info> <WebLogicServer> <BEA-000377> <Starting WebLogic Server with Java HotSpot(TM) Client VM Version 1.4.2_05-b04 from Sun Microsystems Inc.> 
+<2005/08/18 23ï¿½ï¿½54ï¿½ï¿½22ï¿½b JST> <Info> <Configuration Management> <BEA-150016> <This server is being started as the administration server.> 
+<2005/08/18 23ï¿½ï¿½54ï¿½ï¿½23ï¿½b JST> <Info> <Management> <BEA-141107> <Version: WebLogic Server 8.1 SP4  Mon Nov 29 16:21:29 PST 2004 471647 
 WebLogic XMLX Module 8.1 SP4  Mon Nov 29 16:21:29 PST 2004 471647 > 
-<2005/08/18 23Žž54•ª25•b JST> <Notice> <Management> <BEA-140005> <Loading domain configuration from configuration repository at C:\bea81sp4\user_projects\domains\mydomain\.\config.xml.> 
-<2005/08/18 23Žž55•ª26•b JST> <Notice> <Log Management> <BEA-170019> <The server log file C:\bea81sp4\user_projects\domains\mydomain\myserver\myserver.log is opened. All server side log events will be written to this file.> 
-<2005/08/18 23Žž55•ª39•b JST> <Notice> <Security> <BEA-090082> <Security initializing using security realm myrealm.> 
-<2005/08/18 23Žž55•ª41•b JST> <Notice> <WebLogicServer> <BEA-000327> <Starting WebLogic Admin Server "myserver" for domain "mydomain"> 
-<2005/08/19 0Žž01•ª36•b JST> <Notice> <WebLogicServer> <BEA-000331> <Started WebLogic Admin Server "myserver" for domain "mydomain" running in Development Mode> 
-<2005/08/19 0Žž01•ª36•b JST> <Notice> <WebLogicServer> <BEA-000360> <Server started in RUNNING mode> 
-<2005/08/19 0Žž01•ª39•b JST> <Notice> <WebLogicServer> <BEA-000355> <Thread "ListenThread.Default" listening on port 7001, ip address *.*> 
+<2005/08/18 23ï¿½ï¿½54ï¿½ï¿½25ï¿½b JST> <Notice> <Management> <BEA-140005> <Loading domain configuration from configuration repository at C:\bea81sp4\user_projects\domains\mydomain\.\config.xml.> 
+<2005/08/18 23ï¿½ï¿½55ï¿½ï¿½26ï¿½b JST> <Notice> <Log Management> <BEA-170019> <The server log file C:\bea81sp4\user_projects\domains\mydomain\myserver\myserver.log is opened. All server side log events will be written to this file.> 
+<2005/08/18 23ï¿½ï¿½55ï¿½ï¿½39ï¿½b JST> <Notice> <Security> <BEA-090082> <Security initializing using security realm myrealm.> 
+<2005/08/18 23ï¿½ï¿½55ï¿½ï¿½41ï¿½b JST> <Notice> <WebLogicServer> <BEA-000327> <Starting WebLogic Admin Server "myserver" for domain "mydomain"> 
+<2005/08/19 0ï¿½ï¿½01ï¿½ï¿½36ï¿½b JST> <Notice> <WebLogicServer> <BEA-000331> <Started WebLogic Admin Server "myserver" for domain "mydomain" running in Development Mode> 
+<2005/08/19 0ï¿½ï¿½01ï¿½ï¿½36ï¿½b JST> <Notice> <WebLogicServer> <BEA-000360> <Server started in RUNNING mode> 
+<2005/08/19 0ï¿½ï¿½01ï¿½ï¿½39ï¿½b JST> <Notice> <WebLogicServer> <BEA-000355> <Thread "ListenThread.Default" listening on port 7001, ip address *.*> 
 THREAD DUMP from JVM taken at 'Fri Aug 19 00:02:33 2005'
 
 
@@ -1093,12 +1093,12 @@ Full thread dump Java HotSpot(TM) Client VM (1.4.2_05-b04 mixed mode):
 
 "VM Periodic Task Thread" prio=10 tid=0x00a3f760 nid=0x348 waiting on condition 
 "Suspend Checker Thread" prio=10 tid=0x00a01578 nid=0x5f4 runnable 
-<2005/08/19 0Žž05•ª27•b JST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to SUSPENDING> 
-<2005/08/19 0Žž05•ª28•b JST> <Notice> <HTTP> <BEA-101278> <There are no active sessions. The Web service is ready to suspend.> 
-<2005/08/19 0Žž05•ª32•b JST> <Alert> <WebLogicServer> <BEA-000228> <The disabling of server logins has been requested by <WLS Kernel>> 
-<2005/08/19 0Žž05•ª32•b JST> <Alert> <WebLogicServer> <BEA-000229> <Server logins have been disabled.> 
-<2005/08/19 0Žž05•ª32•b JST> <Notice> <WebLogicServer> <BEA-000352> <Thread "ListenThread.Default" stopped listening on port 7001> 
-<2005/08/19 0Žž05•ª32•b JST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to STANDBY> 
-<2005/08/19 0Žž05•ª33•b JST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to SHUTTING_DOWN> 
-<2005/08/19 0Žž05•ª33•b JST> <Alert> <WebLogicServer> <BEA-000218> <Server shutdown has been requested by <WLS Kernel>> 
-<2005/08/19 0Žž05•ª33•b JST> <Alert> <WebLogicServer> <BEA-000219> <The shutdown sequence has been initiated.> 
+<2005/08/19 0ï¿½ï¿½05ï¿½ï¿½27ï¿½b JST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to SUSPENDING> 
+<2005/08/19 0ï¿½ï¿½05ï¿½ï¿½28ï¿½b JST> <Notice> <HTTP> <BEA-101278> <There are no active sessions. The Web service is ready to suspend.> 
+<2005/08/19 0ï¿½ï¿½05ï¿½ï¿½32ï¿½b JST> <Alert> <WebLogicServer> <BEA-000228> <The disabling of server logins has been requested by <WLS Kernel>> 
+<2005/08/19 0ï¿½ï¿½05ï¿½ï¿½32ï¿½b JST> <Alert> <WebLogicServer> <BEA-000229> <Server logins have been disabled.> 
+<2005/08/19 0ï¿½ï¿½05ï¿½ï¿½32ï¿½b JST> <Notice> <WebLogicServer> <BEA-000352> <Thread "ListenThread.Default" stopped listening on port 7001> 
+<2005/08/19 0ï¿½ï¿½05ï¿½ï¿½32ï¿½b JST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to STANDBY> 
+<2005/08/19 0ï¿½ï¿½05ï¿½ï¿½33ï¿½b JST> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to SHUTTING_DOWN> 
+<2005/08/19 0ï¿½ï¿½05ï¿½ï¿½33ï¿½b JST> <Alert> <WebLogicServer> <BEA-000218> <Server shutdown has been requested by <WLS Kernel>> 
+<2005/08/19 0ï¿½ï¿½05ï¿½ï¿½33ï¿½b JST> <Alert> <WebLogicServer> <BEA-000219> <The shutdown sequence has been initiated.> 

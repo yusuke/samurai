@@ -20,24 +20,24 @@ Java(TM) 2 Runtime Environment, Standard Edition (build 1.5.0_04-b05)
 Java HotSpot(TM) Client VM (build 1.5.0_04-b05, mixed mode)
 Starting WLS with line:
 C:\bea91j\JDK150~1\bin\java -client   -Xms256m -Xmx512m -XX:CompileThreshold=8000 -XX:PermSize=48m  -XX:MaxPermSize=128m  -Xverify:none  -da -Dplatform.home=C:\bea91j\WEBLOG~1 -Dwls.home=C:\bea91j\WEBLOG~1\server -Dwli.home=C:\bea91j\WEBLOG~1\integration  -Dweblogic.management.discover=true -Dweblogic.ProductionModeEnabled=  -Dwlw.iterativeDev= -Dwlw.testConsole= -Dwlw.logErrorsToConsole= -Dweblogic.ext.dirs=C:\bea91j\patch_weblogic910\profiles\default\sysext_manifest_classpath -Dweblogic.Name=AdminServer -Djava.security.policy=C:\bea91j\WEBLOG~1\server\lib\weblogic.policy   weblogic.Server
-<2006/05/04 22éû35ï™38ïb JST> <Info> <WebLogicServer> <BEA-000377> <WebLogic Server Ç Sun Microsystems Inc. Ç©ÇÁ Java HotSpot(TM) Client VM ÉoÅ[ÉWÉáÉì 1.5.0_04-b05 Ç≈ãNìÆÇµÇƒÇ¢Ç‹Ç∑ÅB> 
-<2006/05/04 22éû35ï™38ïb JST> <Info> <Management> <BEA-141107> <ÉoÅ[ÉWÉáÉì: AquaLogic Service Bus 2.1 Patch for CR259218
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ38ÔøΩb JST> <Info> <WebLogicServer> <BEA-000377> <WebLogic Server ÔøΩÔøΩ Sun Microsystems Inc. ÔøΩÔøΩÔøΩÔøΩ Java HotSpot(TM) Client VM ÔøΩoÔøΩ[ÔøΩWÔøΩÔøΩÔøΩÔøΩ 1.5.0_04-b05 ÔøΩ≈ãNÔøΩÔøΩÔøΩÔøΩÔøΩƒÇÔøΩÔøΩ‹ÇÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ38ÔøΩb JST> <Info> <Management> <BEA-141107> <ÔøΩoÔøΩ[ÔøΩWÔøΩÔøΩÔøΩÔøΩ: AquaLogic Service Bus 2.1 Patch for CR259218
 WebLogic Server 9.1  Tue Dec 27 00:48:40 EST 2005 694350 > 
-<2006/05/04 22éû35ï™41ïb JST> <Info> <WebLogicServer> <BEA-000215> <ÉçÅ[ÉhÇ≥ÇÍÇΩÉâÉCÉZÉìÉX : C:\bea91j\license.bea> 
-<2006/05/04 22éû35ï™41ïb JST> <Notice> <WebLogicServer> <BEA-000365> <ÉTÅ[ÉoèÛë‘Ç™ STARTING Ç…ïœâªÇµÇ‹ÇµÇΩÅB> 
-<2006/05/04 22éû35ï™41ïb JST> <Info> <WorkManager> <BEA-002900> <é©ìÆÉ`ÉÖÅ[ÉjÉìÉO ÉXÉåÉbÉh ÉvÅ[ÉãÇèâä˙âªÇµÇƒÇ¢Ç‹Ç∑ÅB> 
-<2006/05/04 22éû35ï™41ïb JST> <Notice> <Log Management> <BEA-170019> <ÉTÅ[Éo ÉçÉO ÉtÉ@ÉCÉã C:\bea91j\user_projects\domains\tts\servers\AdminServer\logs\AdminServer.log ÇäJÇ´Ç‹ÇµÇΩÅBÇ∑Ç◊ÇƒÇÃÉTÅ[ÉoÉTÉCÉh ÉçÉO ÉCÉxÉìÉgÇÕÇ±ÇÃÉtÉ@ÉCÉãÇ…èëÇ´çûÇ‹ÇÍÇ‹Ç∑ÅB> 
-<2006/05/04 22éû35ï™42ïb JST> <Notice> <Security> <BEA-090082> <ÉZÉLÉÖÉäÉeÉBÇÕÉZÉLÉÖÉäÉeÉB ÉåÉãÉÄ myrealm ÇégópÇµÇƒèâä˙âªÇµÇƒÇ¢Ç‹Ç∑ÅB> 
-<2006/05/04 22éû35ï™44ïb JST> <Notice> <WebLogicServer> <BEA-000365> <ÉTÅ[ÉoèÛë‘Ç™ STANDBY Ç…ïœâªÇµÇ‹ÇµÇΩÅB> 
-<2006/05/04 22éû35ï™44ïb JST> <Notice> <WebLogicServer> <BEA-000365> <ÉTÅ[ÉoèÛë‘Ç™ STARTING Ç…ïœâªÇµÇ‹ÇµÇΩÅB> 
-<2006/05/04 22éû35ï™46ïb JST> <Notice> <Log Management> <BEA-170027> <ÉTÅ[ÉoÇÕÉhÉÅÉCÉì ÉçÉO ÉuÉçÅ[ÉhÉLÉÉÉXÉ^Çê≥èÌÇ…èâä˙âªÇµÇ‹ÇµÇΩÅBÉçÉO ÉÅÉbÉZÅ[ÉWÇ™ÉhÉÅÉCÉì ÉçÉOÇ…ÉuÉçÅ[ÉhÉLÉÉÉXÉgÇ≥ÇÍÇ‹Ç∑ÅB> 
-<2006/05/04 22éû35ï™47ïb JST> <Notice> <WebLogicServer> <BEA-000365> <ÉTÅ[ÉoèÛë‘Ç™ ADMIN Ç…ïœâªÇµÇ‹ÇµÇΩÅB> 
-<2006/05/04 22éû35ï™47ïb JST> <Notice> <WebLogicServer> <BEA-000365> <ÉTÅ[ÉoèÛë‘Ç™ RESUMING Ç…ïœâªÇµÇ‹ÇµÇΩÅB> 
-<2006/05/04 22éû35ï™47ïb JST> <Notice> <Server> <BEA-002613> <É`ÉÉÉlÉã "Default" ÇÕÅAåªç› 192.168.1.3:7001 Ç≈ÉvÉçÉgÉRÉã iiop, t3, ldap, http ÇÉäÉXÉìÇµÇƒÇ¢Ç‹Ç∑ÅB> 
-<2006/05/04 22éû35ï™47ïb JST> <Notice> <Server> <BEA-002613> <É`ÉÉÉlÉã "Default[1]" ÇÕÅAåªç› 127.0.0.1:7001 Ç≈ÉvÉçÉgÉRÉã iiop, t3, ldap, http ÇÉäÉXÉìÇµÇƒÇ¢Ç‹Ç∑ÅB> 
-<2006/05/04 22éû35ï™47ïb JST> <Notice> <WebLogicServer> <BEA-000331> <ÉhÉÅÉCÉì "tts" Ç≈ WebLogic ä«óùÉTÅ[Éo "AdminServer" ÇäJî≠ÉÇÅ[ÉhÇ≈ãNìÆÇµÇ‹ÇµÇΩÅB> 
-<2006/05/04 22éû35ï™47ïb JST> <Notice> <WebLogicServer> <BEA-000365> <ÉTÅ[ÉoèÛë‘Ç™ RUNNING Ç…ïœâªÇµÇ‹ÇµÇΩÅB> 
-<2006/05/04 22éû35ï™47ïb JST> <Notice> <WebLogicServer> <BEA-000360> <ÉTÅ[ÉoÇ™ RUNNING ÉÇÅ[ÉhÇ≈ãNìÆÇµÇ‹ÇµÇΩÅB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ41ÔøΩb JST> <Info> <WebLogicServer> <BEA-000215> <ÔøΩÔøΩÔøΩ[ÔøΩhÔøΩÔøΩÔøΩÍÇΩÔøΩÔøΩÔøΩCÔøΩZÔøΩÔøΩÔøΩX : C:\bea91j\license.bea> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ41ÔøΩb JST> <Notice> <WebLogicServer> <BEA-000365> <ÔøΩTÔøΩ[ÔøΩoÔøΩÔøΩ‘ÇÔøΩ STARTING ÔøΩ…ïœâÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ41ÔøΩb JST> <Info> <WorkManager> <BEA-002900> <ÔøΩÔøΩÔøΩÔøΩÔøΩ`ÔøΩÔøΩÔøΩ[ÔøΩjÔøΩÔøΩÔøΩO ÔøΩXÔøΩÔøΩÔøΩbÔøΩh ÔøΩvÔøΩ[ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩƒÇÔøΩÔøΩ‹ÇÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ41ÔøΩb JST> <Notice> <Log Management> <BEA-170019> <ÔøΩTÔøΩ[ÔøΩo ÔøΩÔøΩÔøΩO ÔøΩtÔøΩ@ÔøΩCÔøΩÔøΩ C:\bea91j\user_projects\domains\tts\servers\AdminServer\logs\AdminServer.log ÔøΩÔøΩÔøΩJÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩBÔøΩÔøΩÔøΩ◊ÇƒÇÃÉTÔøΩ[ÔøΩoÔøΩTÔøΩCÔøΩh ÔøΩÔøΩÔøΩO ÔøΩCÔøΩxÔøΩÔøΩÔøΩgÔøΩÕÇÔøΩÔøΩÃÉtÔøΩ@ÔøΩCÔøΩÔøΩÔøΩ…èÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩ‹ÇÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ42ÔøΩb JST> <Notice> <Security> <BEA-090082> <ÔøΩZÔøΩLÔøΩÔøΩÔøΩÔøΩÔøΩeÔøΩBÔøΩÕÉZÔøΩLÔøΩÔøΩÔøΩÔøΩÔøΩeÔøΩB ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ myrealm ÔøΩÔøΩÔøΩgÔøΩpÔøΩÔøΩÔøΩƒèÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩƒÇÔøΩÔøΩ‹ÇÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ44ÔøΩb JST> <Notice> <WebLogicServer> <BEA-000365> <ÔøΩTÔøΩ[ÔøΩoÔøΩÔøΩ‘ÇÔøΩ STANDBY ÔøΩ…ïœâÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ44ÔøΩb JST> <Notice> <WebLogicServer> <BEA-000365> <ÔøΩTÔøΩ[ÔøΩoÔøΩÔøΩ‘ÇÔøΩ STARTING ÔøΩ…ïœâÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ46ÔøΩb JST> <Notice> <Log Management> <BEA-170027> <ÔøΩTÔøΩ[ÔøΩoÔøΩÕÉhÔøΩÔøΩÔøΩCÔøΩÔøΩ ÔøΩÔøΩÔøΩO ÔøΩuÔøΩÔøΩÔøΩ[ÔøΩhÔøΩLÔøΩÔøΩÔøΩXÔøΩ^ÔøΩê≥èÔøΩ…èÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩBÔøΩÔøΩÔøΩO ÔøΩÔøΩÔøΩbÔøΩZÔøΩ[ÔøΩWÔøΩÔøΩÔøΩhÔøΩÔøΩÔøΩCÔøΩÔøΩ ÔøΩÔøΩÔøΩOÔøΩ…ÉuÔøΩÔøΩÔøΩ[ÔøΩhÔøΩLÔøΩÔøΩÔøΩXÔøΩgÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ47ÔøΩb JST> <Notice> <WebLogicServer> <BEA-000365> <ÔøΩTÔøΩ[ÔøΩoÔøΩÔøΩ‘ÇÔøΩ ADMIN ÔøΩ…ïœâÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ47ÔøΩb JST> <Notice> <WebLogicServer> <BEA-000365> <ÔøΩTÔøΩ[ÔøΩoÔøΩÔøΩ‘ÇÔøΩ RESUMING ÔøΩ…ïœâÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ47ÔøΩb JST> <Notice> <Server> <BEA-002613> <ÔøΩ`ÔøΩÔøΩÔøΩlÔøΩÔøΩ "Default" ÔøΩÕÅAÔøΩÔøΩÔøΩÔøΩ 192.168.1.3:7001 ÔøΩ≈ÉvÔøΩÔøΩÔøΩgÔøΩRÔøΩÔøΩ iiop, t3, ldap, http ÔøΩÔøΩÔøΩÔøΩÔøΩXÔøΩÔøΩÔøΩÔøΩÔøΩƒÇÔøΩÔøΩ‹ÇÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ47ÔøΩb JST> <Notice> <Server> <BEA-002613> <ÔøΩ`ÔøΩÔøΩÔøΩlÔøΩÔøΩ "Default[1]" ÔøΩÕÅAÔøΩÔøΩÔøΩÔøΩ 127.0.0.1:7001 ÔøΩ≈ÉvÔøΩÔøΩÔøΩgÔøΩRÔøΩÔøΩ iiop, t3, ldap, http ÔøΩÔøΩÔøΩÔøΩÔøΩXÔøΩÔøΩÔøΩÔøΩÔøΩƒÇÔøΩÔøΩ‹ÇÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ47ÔøΩb JST> <Notice> <WebLogicServer> <BEA-000331> <ÔøΩhÔøΩÔøΩÔøΩCÔøΩÔøΩ "tts" ÔøΩÔøΩ WebLogic ÔøΩ«óÔøΩÔøΩTÔøΩ[ÔøΩo "AdminServer" ÔøΩÔøΩÔøΩJÔøΩÔøΩÔøΩÔøΩÔøΩ[ÔøΩhÔøΩ≈ãNÔøΩÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ47ÔøΩb JST> <Notice> <WebLogicServer> <BEA-000365> <ÔøΩTÔøΩ[ÔøΩoÔøΩÔøΩ‘ÇÔøΩ RUNNING ÔøΩ…ïœâÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ35ÔøΩÔøΩ47ÔøΩb JST> <Notice> <WebLogicServer> <BEA-000360> <ÔøΩTÔøΩ[ÔøΩoÔøΩÔøΩ RUNNING ÔøΩÔøΩÔøΩ[ÔøΩhÔøΩ≈ãNÔøΩÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩB> 
 THREAD DUMP from JVM taken at 'Thu May 04 22:36:29 2006'
 
 
@@ -1309,9 +1309,9 @@ Full thread dump Java HotSpot(TM) Client VM (1.5.0_04-b05 mixed mode):
 
 "VM Periodic Task Thread" prio=10 tid=0x00abac20 nid=0x1010 waiting on condition 
 
-<2006/05/04 22éû36ï™47ïb JST> <Critical> <WebLogicServer> <BEA-000394> <
+<2006/05/04 22ÔøΩÔøΩ36ÔøΩÔøΩ47ÔøΩb JST> <Critical> <WebLogicServer> <BEA-000394> <
 
-ÉfÉbÉhÉçÉbÉNÇ™åüèoÇ≥ÇÍÇ‹ÇµÇΩ :
+ÔøΩfÔøΩbÔøΩhÔøΩÔøΩÔøΩbÔøΩNÔøΩÔøΩÔøΩÔøΩÔøΩoÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩ :
 ==================
 
 [deadlocked thread] [ACTIVE] ExecuteThread: '3' for queue: 'weblogic.kernel.Default (self-tuning)':
@@ -1357,11 +1357,11 @@ Stack trace:
 	weblogic.work.ExecuteThread.run(ExecuteThread.java:179)
 
 > 
-<2006/05/04 22éû36ï™47ïb JST> <Critical> <Health> <BEA-310006> <èdóvÇ»ÉTÉuÉVÉXÉeÉÄ core Ç≈è·äQÇ™î≠ê∂ÇµÇ‹ÇµÇΩÅBÉTÅ[ÉoÇÃèÛë‘Ç FAILED Ç…ê›íËÇµÇƒÇ¢Ç‹Ç∑ÅB
-óùóR : Thread deadlock detected> 
-<2006/05/04 22éû36ï™47ïb JST> <Critical> <WebLogicServer> <BEA-000385> <ÉTÅ[Éo ÉwÉãÉXÇ™è·äQèÛë‘Ç≈Ç∑ÅBóùóR : health of critical service 'core' failed> 
-<2006/05/04 22éû36ï™47ïb JST> <Notice> <WebLogicServer> <BEA-000365> <ÉTÅ[ÉoèÛë‘Ç™ FAILED Ç…ïœâªÇµÇ‹ÇµÇΩÅB> 
-<2006/05/04 22éû36ï™47ïb JST> <Error> <com.bea.weblogic.kernel> <000000> <THREAD DUMP from JVM taken at 'Thu May 04 22:36:47 2006'
+<2006/05/04 22ÔøΩÔøΩ36ÔøΩÔøΩ47ÔøΩb JST> <Critical> <Health> <BEA-310006> <ÔøΩdÔøΩvÔøΩ»ÉTÔøΩuÔøΩVÔøΩXÔøΩeÔøΩÔøΩ core ÔøΩ≈èÔøΩQÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩBÔøΩTÔøΩ[ÔøΩoÔøΩÃèÔøΩ‘ÇÔøΩ FAILED ÔøΩ…ê›íËÇµÔøΩƒÇÔøΩÔøΩ‹ÇÔøΩÔøΩB
+ÔøΩÔøΩÔøΩR : Thread deadlock detected> 
+<2006/05/04 22ÔøΩÔøΩ36ÔøΩÔøΩ47ÔøΩb JST> <Critical> <WebLogicServer> <BEA-000385> <ÔøΩTÔøΩ[ÔøΩo ÔøΩwÔøΩÔøΩÔøΩXÔøΩÔøΩÔøΩÔøΩQÔøΩÔøΩ‘Ç≈ÇÔøΩÔøΩBÔøΩÔøΩÔøΩR : health of critical service 'core' failed> 
+<2006/05/04 22ÔøΩÔøΩ36ÔøΩÔøΩ47ÔøΩb JST> <Notice> <WebLogicServer> <BEA-000365> <ÔøΩTÔøΩ[ÔøΩoÔøΩÔøΩ‘ÇÔøΩ FAILED ÔøΩ…ïœâÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ36ÔøΩÔøΩ47ÔøΩb JST> <Error> <com.bea.weblogic.kernel> <000000> <THREAD DUMP from JVM taken at 'Thu May 04 22:36:47 2006'
 
 
 Full thread dump Java HotSpot(TM) Client VM (1.5.0_04-b05 mixed mode):
@@ -1621,9 +1621,9 @@ Full thread dump Java HotSpot(TM) Client VM (1.5.0_04-b05 mixed mode):
 "VM Periodic Task Thread" prio=10 tid=0x00abac20 nid=0x1010 waiting on condition 
 
 > 
-<2006/05/04 22éû36ï™47ïb JST> <Notice> <WebLogicServer> <BEA-000388> <JVM Ç…ÇÊÇË WLS ÇÃí‚é~ÉtÉbÉNÇ™åƒÇ—èoÇ≥ÇÍÇ‹ÇµÇΩÅBÉTÅ[ÉoÇÕã≠êßí‚é~Ç≥ÇÍÇ‹Ç∑ÅB> 
-<2006/05/04 22éû36ï™47ïb JST> <Alert> <WebLogicServer> <BEA-000396> <<WLS Kernel> Ç©ÇÁÉTÅ[ÉoÇ shutdown Ç∑ÇÈÇÊÇ§óvãÅÇ≥ÇÍÇ‹ÇµÇΩÅB> 
-<2006/05/04 22éû36ï™47ïb JST> <Notice> <WebLogicServer> <BEA-000365> <ÉTÅ[ÉoèÛë‘Ç™ FORCE_SHUTTING_DOWN Ç…ïœâªÇµÇ‹ÇµÇΩÅB> 
-<2006/05/04 22éû36ï™47ïb JST> <Notice> <Server> <BEA-002607> <192.168.1.3:7001 Ç≈ÉäÉXÉìíÜÇÃÉ`ÉÉÉlÉã "Default" Ç™í‚é~Ç≥ÇÍÇ‹ÇµÇΩÅB> 
-<2006/05/04 22éû36ï™47ïb JST> <Notice> <Server> <BEA-002607> <127.0.0.1:7001 Ç≈ÉäÉXÉìíÜÇÃÉ`ÉÉÉlÉã "Default[1]" Ç™í‚é~Ç≥ÇÍÇ‹ÇµÇΩÅB> 
-ÉoÉbÉ` ÉWÉáÉuÇèIóπÇµÇ‹Ç∑Ç© (Y/N)? ^C
+<2006/05/04 22ÔøΩÔøΩ36ÔøΩÔøΩ47ÔøΩb JST> <Notice> <WebLogicServer> <BEA-000388> <JVM ÔøΩ…ÇÔøΩÔøΩ WLS ÔøΩÃíÔøΩ~ÔøΩtÔøΩbÔøΩNÔøΩÔøΩÔøΩƒÇ—èoÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩBÔøΩTÔøΩ[ÔøΩoÔøΩÕãÔøΩÔøΩÔøΩÔøΩÔøΩ~ÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ36ÔøΩÔøΩ47ÔøΩb JST> <Alert> <WebLogicServer> <BEA-000396> <<WLS Kernel> ÔøΩÔøΩÔøΩÔøΩTÔøΩ[ÔøΩoÔøΩÔøΩ shutdown ÔøΩÔøΩÔøΩÔøΩÊÇ§ÔøΩvÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ36ÔøΩÔøΩ47ÔøΩb JST> <Notice> <WebLogicServer> <BEA-000365> <ÔøΩTÔøΩ[ÔøΩoÔøΩÔøΩ‘ÇÔøΩ FORCE_SHUTTING_DOWN ÔøΩ…ïœâÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ36ÔøΩÔøΩ47ÔøΩb JST> <Notice> <Server> <BEA-002607> <192.168.1.3:7001 ÔøΩ≈ÉÔøΩÔøΩXÔøΩÔøΩÔøΩÔøΩÔøΩÃÉ`ÔøΩÔøΩÔøΩlÔøΩÔøΩ "Default" ÔøΩÔøΩÔøΩÔøΩ~ÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩB> 
+<2006/05/04 22ÔøΩÔøΩ36ÔøΩÔøΩ47ÔøΩb JST> <Notice> <Server> <BEA-002607> <127.0.0.1:7001 ÔøΩ≈ÉÔøΩÔøΩXÔøΩÔøΩÔøΩÔøΩÔøΩÃÉ`ÔøΩÔøΩÔøΩlÔøΩÔøΩ "Default[1]" ÔøΩÔøΩÔøΩÔøΩ~ÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩÔøΩB> 
+ÔøΩoÔøΩbÔøΩ` ÔøΩWÔøΩÔøΩÔøΩuÔøΩÔøΩÔøΩIÔøΩÔøΩÔøΩÔøΩÔøΩ‹ÇÔøΩÔøΩÔøΩ (Y/N)? ^C
