@@ -32,18 +32,20 @@ class TestCutomizableKeyStroke {
 
     @Test
     void testGetKeyStroke() {
-        CustomizableKeyStroke cutomizableKeyStroke = new CustomizableKeyStroke(GUIResourceBundle.getInstance());
-        String key = "menu.edit.copy";
-        KeyStroke expectedReturn = null;
-        if (OSDetector.isWindows()) {
-            expectedReturn = KeyStroke.getKeyStroke(KeyEvent.VK_C, CTRL_DOWN_MASK);
-        }
-        if (OSDetector.isMac()) {
-            expectedReturn = KeyStroke.getKeyStroke(KeyEvent.VK_C, META_DOWN_MASK);
-        }
+        if (OSDetector.isMac() || OSDetector.isWindows()) {
+            CustomizableKeyStroke cutomizableKeyStroke = new CustomizableKeyStroke(GUIResourceBundle.getInstance());
+            String key = "menu.edit.copy";
+            KeyStroke expectedReturn = null;
+            if (OSDetector.isWindows()) {
+                expectedReturn = KeyStroke.getKeyStroke(KeyEvent.VK_C, CTRL_DOWN_MASK);
+            }
+            if (OSDetector.isMac()) {
+                expectedReturn = KeyStroke.getKeyStroke(KeyEvent.VK_C, META_DOWN_MASK);
+            }
 
-        KeyStroke actualReturn = cutomizableKeyStroke.getKeyStroke(key);
-        assertEquals(expectedReturn, actualReturn, "return value");
+            KeyStroke actualReturn = cutomizableKeyStroke.getKeyStroke(key);
+            assertEquals(expectedReturn, actualReturn, "return value");
+        }
     }
 
 }
