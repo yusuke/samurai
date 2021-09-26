@@ -15,46 +15,43 @@
  */
 package one.cafebabe.samurai.swing;
 
+import one.cafebabe.samurai.util.GUIResourceBundle;
+
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class ConfigDialog extends javax.swing.JDialog {
-    //    private static GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    public final javax.swing.JButton okButton = new javax.swing.JButton();
-    public final javax.swing.JButton cancelButton = new javax.swing.JButton();
-    public final javax.swing.JTabbedPane jTabbedPane1 = new javax.swing.JTabbedPane();
+public class ConfigDialog extends JDialog {
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
+    public final JButton okButton = new JButton(resources.getMessage("ConfigDialog.ok"));
+    public final JButton cancelButton = new JButton(resources.getMessage("ConfigDialog.cancel"));
+    public final JTabbedPane jTabbedPane1 = new JTabbedPane();
 
-    final java.awt.GridBagLayout gridBagLayout1 = new java.awt.GridBagLayout();
+    final GridBagLayout gridBagLayout1 = new GridBagLayout();
 
-    final javax.swing.JPanel logConfigPanel = new javax.swing.JPanel();
-    final java.awt.GridBagLayout logConfigLayout = new java.awt.GridBagLayout();
-    public final javax.swing.JLabel labelFontSize = new javax.swing.JLabel();
-    public final javax.swing.JLabel dumpFontSize = new javax.swing.JLabel();
-    public final javax.swing.JLabel logFontSample = new javax.swing.JLabel();
-    public final javax.swing.JLabel encoding = new javax.swing.JLabel();
-    public final javax.swing.JCheckBox config_wrapLog = new javax.swing.JCheckBox();
-    public final javax.swing.JComboBox<String> config_logFontFamily = new javax.swing.JComboBox<>();
-    public final javax.swing.JComboBox<String> config_logFontSize = new javax.swing.JComboBox<>();
-    public final javax.swing.JComboBox<String> config_encoding = new javax.swing.JComboBox<>();
+    final JPanel logConfigPanel = new JPanel();
+    final GridBagLayout logConfigLayout = new GridBagLayout();
+    public final JLabel labelFontSize = new JLabel(resources.getMessage("ConfigDialog.fontSize"));
+    public final JLabel dumpFontSize = new JLabel(resources.getMessage("ConfigDialog.fontSize"));
+    public final JLabel logFontSample = new JLabel(resources.getMessage("ConfigDialog.fontSample"));
+    public final JLabel encoding = new JLabel(resources.getMessage("ConfigDialog.encoding"));
+    public final JCheckBox config_wrapLog = new JCheckBox(resources.getMessage("ConfigDialog.wrapLine"));
+    public final JComboBox<String> config_logFontFamily = new JComboBox<>();
+    public final JComboBox<String> config_logFontSize = new JComboBox<>();
+    public final JComboBox<String> config_encoding = new JComboBox<>();
 
-    final javax.swing.JPanel dumpConfigPanel = new javax.swing.JPanel();
-    public final javax.swing.JLabel dumpFontSample = new javax.swing.JLabel();
-    final java.awt.GridBagLayout dumpConfigLayout = new java.awt.GridBagLayout();
-    public final javax.swing.JCheckBox config_wrapDump = new javax.swing.JCheckBox();
-    public final javax.swing.JComboBox<String> config_dumpFontFamily = new javax.swing.JComboBox<>();
-    public final javax.swing.JComboBox<String> config_dumpFontSize = new javax.swing.JComboBox<>();
+    final JPanel dumpConfigPanel = new JPanel();
+    public final JLabel dumpFontSample = new JLabel(resources.getMessage("ConfigDialog.fontSample"));
+    final GridBagLayout dumpConfigLayout = new GridBagLayout();
+    public final JCheckBox config_wrapDump = new JCheckBox(resources.getMessage("ConfigDialog.wrapLine"));
+    public final JComboBox<String> config_dumpFontFamily = new JComboBox<>();
+    public final JComboBox<String> config_dumpFontSize = new JComboBox<>();
 
-    //  public JPanel searchConfigPanel = new JPanel();
-//  public JCheckBox config_useRegexp = new JCheckBox();
-    //  public JCheckBox config_ignoreCase = new JCheckBox();
-    public final javax.swing.JLabel labelDumpPanelFontFamily = new javax.swing.JLabel();
-    java.awt.GridBagLayout gridBagLayout2 = new java.awt.GridBagLayout();
-    //  JPanel jPanel1 = new JPanel();
-    java.awt.GridBagLayout gridBagLayout3 = new java.awt.GridBagLayout();
-    public final javax.swing.JCheckBox config_shrinkIdleThreads = new javax.swing.JCheckBox();
-    public final javax.swing.JLabel labelFontFamily = new javax.swing.JLabel();
-    javax.swing.ButtonGroup buttonGroup1 = new javax.swing.ButtonGroup();
-
-    public ConfigDialog(java.awt.Frame frame, String title, boolean modal, Context context) {
+    public final JLabel labelDumpPanelFontFamily = new JLabel(resources.getMessage("ConfigDialog.fontFamily"));
+    public final JCheckBox config_shrinkIdleThreads = new JCheckBox(resources.getMessage("ConfigDialog.shrinkIdleThreads"));
+    public final JLabel labelFontFamily = new JLabel(resources.getMessage("ConfigDialog.fontFamily"));
+    
+    public ConfigDialog(Frame frame, String title, boolean modal, Context context) {
         super(frame, title, modal);
         try {
             jbInit();
@@ -68,7 +65,7 @@ public class ConfigDialog extends javax.swing.JDialog {
     private final Context context;
 
     public ConfigDialog(Context context) {
-        this(null, "*ConfigDialog.title*", false, context);
+        this(null, resources.getMessage("ConfigDialog.title"), false, context);
     }
 
     final ConfigDialog THIS = this;
@@ -76,34 +73,26 @@ public class ConfigDialog extends javax.swing.JDialog {
     private void jbInit() {
         //panel root
         this.getContentPane().setLayout(gridBagLayout1);
-        config_wrapLog.setText("*ConfigDialog.wrapLine*");
-        labelDumpPanelFontFamily.setText("*ConfigDialog.fontFamily*");
         jTabbedPane1.setForeground(Color.black);
-        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.TOP);
-//    jPanel1.setLayout(gridBagLayout3);
-        config_shrinkIdleThreads.setText("*ConfigDialog.shrinkIdleThreads*");
-//        labelFontFamily.setText("*ConfigDialog.fontFamily*");
+        jTabbedPane1.setTabPlacement(JTabbedPane.TOP);
         labelFontFamily.setRequestFocusEnabled(true);
-        labelFontFamily.setText("*ConfigDialog.fontFamily*");
-        this.getContentPane().add(okButton, new java.awt.GridBagConstraints(1, 1, 1, 1, 1.0,
+        this.getContentPane().add(okButton, new GridBagConstraints(1, 1, 1, 1, 1.0,
                 0.0
-                , java.awt.GridBagConstraints.EAST, java.awt.GridBagConstraints.NONE, new java.awt.Insets(5, 0, 5, 5),
+                , GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(5, 0, 5, 5),
                 0, 0));
-        this.getContentPane().add(cancelButton, new java.awt.GridBagConstraints(0, 1, 1, 1,
+        this.getContentPane().add(cancelButton, new GridBagConstraints(0, 1, 1, 1,
                 20.0, 0.0
-                , java.awt.GridBagConstraints.EAST, java.awt.GridBagConstraints.NONE, new java.awt.Insets(5, 5, 5, 0),
+                , GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(5, 5, 5, 0),
                 0, 0));
-        this.getContentPane().add(jTabbedPane1, new java.awt.GridBagConstraints(0, 0, 2, 1,
+        this.getContentPane().add(jTabbedPane1, new GridBagConstraints(0, 0, 2, 1,
                 0.0, 0.0
-                , java.awt.GridBagConstraints.CENTER, java.awt.GridBagConstraints.BOTH, new java.awt.Insets(5, 5, 5,
+                , GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(5, 5, 5,
                 5), 0, 0));
-//    config_useRegexp.setText("*ConfigDialog.useRegexp*");
         this.setModal(true);
         this.setResizable(false);
         this.addWindowListener(new ConfigDialog_this_windowAdapter(this));
         okButton.setDefaultCapable(false);
         okButton.setActionCommand("okButton");
-        okButton.setText("*ConfigDialog.ok*");
         okButton.addActionListener(e -> {
             context.getConfig().store(THIS);
             context.getConfig().notifyChange();
@@ -111,42 +100,35 @@ public class ConfigDialog extends javax.swing.JDialog {
         });
 
         cancelButton.setActionCommand("cancelButton");
-//    cancelButton.setSelected(true);
-        cancelButton.setText("*ConfigDialog.cancel*");
         cancelButton.addActionListener(e -> setVisible(false));
-        jTabbedPane1.setMinimumSize(new java.awt.Dimension(400, 200));
+        jTabbedPane1.setMinimumSize(new Dimension(400, 200));
         jTabbedPane1.setOpaque(false);
-        jTabbedPane1.setPreferredSize(new java.awt.Dimension(400, 200));
-//    config_ignoreCase.setText("*ConfigDialog.ignoreCase*");
+        jTabbedPane1.setPreferredSize(new Dimension(400, 200));
 
         //dump panel
-        config_wrapDump.setActionCommand("*ConfigDialog.wrapLine*");
         config_wrapDump.setSelected(false);
-        config_wrapDump.setText("*ConfigDialog.wrapLine*");
         dumpConfigPanel.setLayout(dumpConfigLayout);
-        dumpFontSize.setText("*ConfigDialog.fontSize*");
-        dumpFontSample.setText("*ConfigDialog.fontSample*");
 
         config_dumpFontSize.setSelectedIndex(-1);
         config_dumpFontSize.addItemListener(new
                 ConfigDialog_config_dumpFontSize_itemAdapter(this));
-        dumpConfigPanel.setMinimumSize(new java.awt.Dimension(400, 100));
+        dumpConfigPanel.setMinimumSize(new Dimension(400, 100));
         dumpConfigPanel.setOpaque(true);
-        dumpConfigPanel.setPreferredSize(new java.awt.Dimension(400, 100));
+        dumpConfigPanel.setPreferredSize(new Dimension(400, 100));
         dumpConfigPanel.setRequestFocusEnabled(true);
         config_dumpFontFamily.addItemListener(new
                 ConfigDialog_config_dumpFontFamily_itemAdapter(this));
-        dumpConfigPanel.add(config_dumpFontFamily, new java.awt.GridBagConstraints(1, 1, 1, 1, 0.0, 0.0
-                , java.awt.GridBagConstraints.WEST, java.awt.GridBagConstraints.NONE, new java.awt.Insets(0, 0, 5, 0), 0, 0));
-        dumpConfigPanel.add(labelDumpPanelFontFamily, new java.awt.GridBagConstraints(0, 1, 1, 1, 0.0, 0.0
-                , java.awt.GridBagConstraints.EAST, java.awt.GridBagConstraints.NONE, new java.awt.Insets(0, 0, 0, 0), 0, 0));
-        dumpConfigPanel.add(dumpFontSize, new java.awt.GridBagConstraints(0, 2, 1, 1, 0.0, 0.0
-                , java.awt.GridBagConstraints.EAST, java.awt.GridBagConstraints.NONE, new java.awt.Insets(0, 0, 5, 0), 0, 0));
-        dumpConfigPanel.add(config_dumpFontSize, new java.awt.GridBagConstraints(1, 2, 1, 1, 0.0, 0.0
-                , java.awt.GridBagConstraints.WEST, java.awt.GridBagConstraints.NONE, new java.awt.Insets(0, 0, 5, 0), 0, 0));
-        dumpConfigPanel.add(dumpFontSample, new java.awt.GridBagConstraints(0, 3, 2, 1, 0.0, 0.0
-                , java.awt.GridBagConstraints.CENTER, java.awt.GridBagConstraints.NONE, new java.awt.Insets(0, 0, 5, 0), 0, 0));
-        String[] fonts = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
+        dumpConfigPanel.add(config_dumpFontFamily, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0
+                , GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 0, 5, 0), 0, 0));
+        dumpConfigPanel.add(labelDumpPanelFontFamily, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0
+                , GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
+        dumpConfigPanel.add(dumpFontSize, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0
+                , GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 5, 0), 0, 0));
+        dumpConfigPanel.add(config_dumpFontSize, new GridBagConstraints(1, 2, 1, 1, 0.0, 0.0
+                , GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 0, 5, 0), 0, 0));
+        dumpConfigPanel.add(dumpFontSample, new GridBagConstraints(0, 3, 2, 1, 0.0, 0.0
+                , GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 5, 0), 0, 0));
+        String[] fonts = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
         for (String font1 : fonts) {
             config_dumpFontFamily.addItem(font1);
         }
@@ -158,44 +140,40 @@ public class ConfigDialog extends javax.swing.JDialog {
 
         logConfigPanel.setLayout(logConfigLayout);
 
-        labelFontSize.setText("*ConfigDialog.fontSize*");
 
-        logFontSample.setText("*ConfigDialog.fontSample*");
         config_logFontSize.setSelectedIndex(-1);
         config_logFontSize.addItemListener(new
                 ConfigDialog_config_logFontSize_itemAdapter(this));
 
-        encoding.setText("*ConfigDialog.encoding*");
         config_encoding.setSelectedIndex(-1);
 
-        logConfigPanel.setMinimumSize(new java.awt.Dimension(400, 100));
+        logConfigPanel.setMinimumSize(new Dimension(400, 100));
         logConfigPanel.setOpaque(true);
-        logConfigPanel.setPreferredSize(new java.awt.Dimension(400, 100));
+        logConfigPanel.setPreferredSize(new Dimension(400, 100));
         logConfigPanel.setRequestFocusEnabled(true);
         config_logFontFamily.addItemListener(new
                 ConfigDialog_config_logFontSize_itemAdapter(this));
-        logConfigPanel.add(config_wrapLog, new java.awt.GridBagConstraints(1, 0, 1, 1, 0.0,
+        logConfigPanel.add(config_wrapLog, new GridBagConstraints(1, 0, 1, 1, 0.0,
                 0.0
-                , java.awt.GridBagConstraints.WEST, java.awt.GridBagConstraints.NONE, new java.awt.Insets(0, 0, 0, 0),
+                , GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0),
                 0, 0));
 
-        logConfigPanel.add(config_logFontFamily, new java.awt.GridBagConstraints(1, 1, 1, 1,
+        logConfigPanel.add(config_logFontFamily, new GridBagConstraints(1, 1, 1, 1,
                 0.0, 0.0
-                , java.awt.GridBagConstraints.WEST, java.awt.GridBagConstraints.NONE, new java.awt.Insets(0, 0, 5, 0),
+                , GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 0, 5, 0),
                 0, 0));
-        logConfigPanel.add(labelFontSize, new java.awt.GridBagConstraints(0, 2, 1, 1, 0.0, 0.0
-                , java.awt.GridBagConstraints.EAST, java.awt.GridBagConstraints.NONE, new java.awt.Insets(0, 0, 5, 0),
+        logConfigPanel.add(labelFontSize, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0
+                , GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 5, 0),
                 0, 0));
-        logConfigPanel.add(config_logFontSize, new java.awt.GridBagConstraints(1, 2, 1, 1,
+        logConfigPanel.add(config_logFontSize, new GridBagConstraints(1, 2, 1, 1,
                 0.0, 0.0
-                , java.awt.GridBagConstraints.WEST, java.awt.GridBagConstraints.NONE, new java.awt.Insets(0, 0, 5, 0),
+                , GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 0, 5, 0),
                 0, 0));
-        logConfigPanel.add(logFontSample, new java.awt.GridBagConstraints(0, 3, 2, 1, 0.0, 0.0
-                , java.awt.GridBagConstraints.CENTER, java.awt.GridBagConstraints.NONE, new java.awt.Insets(0, 0, 5,
+        logConfigPanel.add(logFontSample, new GridBagConstraints(0, 3, 2, 1, 0.0, 0.0
+                , GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 5,
                 0), 0, 0));
-        logConfigPanel.add(labelFontFamily, new java.awt.GridBagConstraints(0, 1, 1, 1, 0.0, 0.0
-                , java.awt.GridBagConstraints.EAST, java.awt.GridBagConstraints.NONE, new java.awt.Insets(0, 0, 0, 0), 0, 0));
-//        String[] fonts = getToolkit().getFontList();
+        logConfigPanel.add(labelFontFamily, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0
+                , GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
         for (String font1 : fonts) {
             config_logFontFamily.addItem(font1);
         }
@@ -203,33 +181,25 @@ public class ConfigDialog extends javax.swing.JDialog {
             config_logFontSize.addItem(fontSize);
         }
 
-//    searchConfigPanel.add(jPanel1, new GridBagConstraints(0, 0, 1, 1, 1.0, 1.0
-//      , GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
-//    jPanel1.add(config_useRegexp, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0
-//      , GridBagConstraints.SOUTHWEST, GridBagConstraints.NONE, new Insets(0, 0, 5, 0), 0, 0));
-//    jPanel1.add(config_ignoreCase, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0
-//      , GridBagConstraints.NORTHWEST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
-//    searchConfigPanel.setLayout(gridBagLayout2);
-        jTabbedPane1.add("*ConfigDialog.log*", logConfigPanel);
-//    jTabbedPane1.add("*ConfigDialog.search*", searchConfigPanel);
-        jTabbedPane1.add("*ConfigDialog.threadDump*", dumpConfigPanel);
+        jTabbedPane1.add(resources.getMessage("ConfigDialog.log"), logConfigPanel);
+        jTabbedPane1.add(resources.getMessage("ConfigDialog.threadDump"), dumpConfigPanel);
         dumpConfigPanel.add(config_shrinkIdleThreads,
-                new java.awt.GridBagConstraints(1, 0, 2, 1, 0.0, 0.0
-                        , java.awt.GridBagConstraints.WEST,
-                        java.awt.GridBagConstraints.NONE,
-                        new java.awt.Insets(0, 0, 0, 0), 0, 0));
+                new GridBagConstraints(1, 0, 2, 1, 0.0, 0.0
+                        , GridBagConstraints.WEST,
+                        GridBagConstraints.NONE,
+                        new Insets(0, 0, 0, 0), 0, 0));
         getRootPane().setDefaultButton(this.okButton);
         getRootPane().getActionMap().put(
                 ESC_ACTION_KEY,
-                new javax.swing.AbstractAction() {
-                    public void actionPerformed(java.awt.event.ActionEvent e) {
+                new AbstractAction() {
+                    public void actionPerformed(ActionEvent e) {
                         setVisible(false);
                     }
                 });
 
         getRootPane().getInputMap(
-                javax.swing.JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(
-                javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_ESCAPE, 0),
+                JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(
+                KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0),
                 ESC_ACTION_KEY
         );
     }
@@ -237,23 +207,23 @@ public class ConfigDialog extends javax.swing.JDialog {
     static final String ESC_ACTION_KEY = "ESC_ACTION_KEY";
 
 
-    void this_windowActivated(java.awt.event.WindowEvent e) {
+    void this_windowActivated(WindowEvent e) {
 //    this.cancelButton.grabFocus();
 
     }
 
-    void config_logFontSize_itemStateChanged(java.awt.event.ItemEvent e) {
+    void config_logFontSize_itemStateChanged(ItemEvent e) {
         setLogSampleFont();
     }
 
-    void config_dumpFontSize_itemStateChanged(java.awt.event.ItemEvent e) {
+    void config_dumpFontSize_itemStateChanged(ItemEvent e) {
         setDumpSampleFont();
     }
 
     private void setLogSampleFont() {
         if (-1 != config_logFontSize.getSelectedIndex() &&
                 -1 != config_logFontFamily.getSelectedIndex()) {
-            logFontSample.setFont(new java.awt.Font((String) config_logFontFamily.
+            logFontSample.setFont(new Font((String) config_logFontFamily.
                     getSelectedItem(), Font.PLAIN,
                     Integer.parseInt((String) config_logFontSize.getSelectedItem())));
         }
@@ -262,27 +232,27 @@ public class ConfigDialog extends javax.swing.JDialog {
     private void setDumpSampleFont() {
         if (-1 != config_dumpFontSize.getSelectedIndex() &&
                 -1 != config_dumpFontFamily.getSelectedIndex()) {
-            dumpFontSample.setFont(new java.awt.Font((String) config_dumpFontFamily.
+            dumpFontSample.setFont(new Font((String) config_dumpFontFamily.
                     getSelectedItem(), 0,
                     Integer.parseInt((String) config_dumpFontSize.getSelectedItem())));
         }
     }
 
-    void config_logFontFamily_itemStateChanged(java.awt.event.ItemEvent e) {
+    void config_logFontFamily_itemStateChanged(ItemEvent e) {
         setLogSampleFont();
 
     }
 
 }
 
-class ConfigDialog_this_windowAdapter extends java.awt.event.WindowAdapter {
+class ConfigDialog_this_windowAdapter extends WindowAdapter {
     final ConfigDialog adaptee;
 
     ConfigDialog_this_windowAdapter(ConfigDialog adaptee) {
         this.adaptee = adaptee;
     }
 
-    public void windowActivated(java.awt.event.WindowEvent e) {
+    public void windowActivated(WindowEvent e) {
         adaptee.this_windowActivated(e);
     }
 }

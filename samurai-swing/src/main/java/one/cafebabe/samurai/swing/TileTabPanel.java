@@ -41,14 +41,14 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
 
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     final JPopupMenu popupMenu = new JPopupMenu();
-    private final JMenuItem menuCloseTab = new JMenuItem("TileTabPanel.closeTab");
-    private final JMenuItem menuTab = new JMenuItem("TileTabPanel.tab");
-    private final JMenuItem menuHorizontal = new JMenuItem("TileTabPanel.splitHorizontal");
-    private final JMenuItem menuVertical = new JMenuItem("TileTabPanel.splitVertical");
+    private final JMenuItem menuCloseTab = new JMenuItem(resources.getMessage("TileTabPanel.closeTab"));
+    private final JMenuItem menuTab = new JMenuItem(resources.getMessage("TileTabPanel.tab"));
+    private final JMenuItem menuHorizontal = new JMenuItem(resources.getMessage("TileTabPanel.splitHorizontal"));
+    private final JMenuItem menuVertical = new JMenuItem(resources.getMessage("TileTabPanel.splitVertical"));
 
-    final JMenuItem jMenuViewTab = new JMenuItem("TileTabPanel.tab");
-    final JMenuItem jMenuViewSplitHorizontal = new JMenuItem("TileTabPanel.splitHorizontal");
-    final JMenuItem jMenuViewSplitVertical = new JMenuItem("TileTabPanel.splitVertical");
+    final JMenuItem jMenuViewTab = new JMenuItem(resources.getMessage("TileTabPanel.tab"));
+    final JMenuItem jMenuViewSplitHorizontal = new JMenuItem(resources.getMessage("TileTabPanel.splitHorizontal"));
+    final JMenuItem jMenuViewSplitVertical = new JMenuItem(resources.getMessage("TileTabPanel.splitVertical"));
 
     private static final ImageIcon closeIcon;
     private static final ImageIcon closePushedIcon;

@@ -20,6 +20,7 @@ import one.cafebabe.samurai.remotedump.ProcessUtil;
 import one.cafebabe.samurai.remotedump.VM;
 import one.cafebabe.samurai.remotedump.ThreadDumpUtil;
 import one.cafebabe.samurai.util.Configuration;
+import one.cafebabe.samurai.util.GUIResourceBundle;
 import sun.jvmstat.monitor.MonitorException;
 
 import javax.swing.*;
@@ -36,13 +37,14 @@ import java.util.concurrent.Executors;
 
 
 public class LocalProcesses {
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
+
     private final FileHistory fileHistory;
-    private final JMenu localProcessesMenu;
+    private final JMenu localProcessesMenu = new JMenu(resources.getMessage("menu.file.processes"));
 
     public LocalProcesses(Configuration config, FileHistory fileHistory) {
         config.apply(this);
         this.fileHistory = fileHistory;
-        localProcessesMenu = new JMenu();
         localProcessesMenu.addMenuListener(new MenuListener() {
             @Override
             public void menuSelected(MenuEvent e) {

@@ -16,6 +16,7 @@
 package one.cafebabe.samurai.swing;
 
 import one.cafebabe.samurai.util.Configuration;
+import one.cafebabe.samurai.util.GUIResourceBundle;
 
 import javax.swing.JFileChooser;
 import javax.swing.JMenu;
@@ -28,13 +29,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class FileHistory {
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private final List<File> files = new ArrayList<>();
     private final int numberToRemember = 10;
     public String config_RecentlyUsedFiles = "";
     private final Configuration config;
     private FileHistoryListener listener = null;
-    private final JMenu openRecentMenu;
-    private JMenuItem openMenu = null;
+    private final JMenu openRecentMenu = new JMenu(resources.getMessage("menu.file.openRecent"));
     private final JFileChooser fileChooser = new JFileChooser();
 
     public FileHistory(Configuration config, FileHistoryListener listener) {
@@ -46,7 +47,6 @@ public final class FileHistory {
         this.config = config;
         config.apply(this);
         load();
-        openRecentMenu = new JMenu();
         updateChildMenuItems();
     }
 
@@ -55,8 +55,7 @@ public final class FileHistory {
     }
 
     public synchronized JMenuItem getOpenMenu(final Component component) {
-        if (null == openMenu) {
-            openMenu = new JMenuItem();
+        JMenuItem openMenu = new JMenuItem(resources.getMessage("menu.file.open"));
             openMenu.addActionListener(e -> {
                 if (JFileChooser.APPROVE_OPTION == fileChooser
                         .showOpenDialog(component)) {
@@ -64,8 +63,7 @@ public final class FileHistory {
                     open(file);
                 }
             });
-        }
-        return this.openMenu;
+        return openMenu;
     }
 
 

@@ -48,7 +48,6 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
         lineGraphPanel.setLabels(labels);
         context.getConfig().applyLocation("PlotSettingDialog.location", lineGraphPanel.plotSetting);
         context.getConfig().apply(lineGraphPanel.plotSetting);
-        resources.inject(lineGraphPanel.plotSetting);
         tileTabPanel.addComponent(title, lineGraphPanel);
         if (isCSV) {
             showMe(resources.getMessage("GraphPanel.csv"));

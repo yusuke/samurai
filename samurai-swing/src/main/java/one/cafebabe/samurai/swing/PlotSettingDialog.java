@@ -15,6 +15,8 @@
  */
 package one.cafebabe.samurai.swing;
 
+import one.cafebabe.samurai.util.GUIResourceBundle;
+
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -37,16 +39,17 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
 public class PlotSettingDialog extends JDialog {
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     final JPanel panel1 = new JPanel();
     final GridBagLayout gridBagLayout1 = new GridBagLayout();
-    public final JButton okButton = new JButton();
-    public final JButton cancelButton = new JButton();
+    public final JButton okButton = new JButton(resources.getMessage("ConfigDialog.ok"));
+    public final JButton cancelButton = new JButton(resources.getMessage("ConfigDialog.cancel"));
     public final JTextField label = new JTextField();
-    public final JLabel jLabel1 = new JLabel();
+    public final JLabel jLabel1 = new JLabel(resources.getMessage("PlotSettingDialog.label"));
     final JColorChooser colorChooser = new JColorChooser();
-    public final JLabel jLabel2 = new JLabel();
+    public final JLabel jLabel2 = new JLabel(resources.getMessage("PlotSettingDialog.max"));
     final JTextField max = new JTextField();
-    public final JCheckBox plotVisible = new JCheckBox();
+    public final JCheckBox plotVisible = new JCheckBox(resources.getMessage("PlotSettingDialog.visible"));
 
     private boolean okPressed = false;
     private boolean cancelPressed = false;
@@ -62,7 +65,7 @@ public class PlotSettingDialog extends JDialog {
     }
 
     public PlotSettingDialog() {
-        this(null, "*PlotSettingDialog.title*", false);
+        this(null, resources.getMessage("PlotSettingDialog.title"), false);
     }
 
     private void jbInit() {
@@ -84,11 +87,7 @@ public class PlotSettingDialog extends JDialog {
 //    cancelButton.setSelected(true);
         panel1.setLayout(gridBagLayout1);
         okButton.setSelected(true);
-        okButton.setText("*ConfigDialog.ok*");
-        jLabel1.setText("*PlotSettingDialog.label*");
-        jLabel2.setText("*PlotSettingDialog.max*");
         max.setText("");
-        plotVisible.setText("*PlotSettingDialog.visible*");
         panel1.add(colorChooser, new GridBagConstraints(0, 0, 3, 1, 0.0, 0.0
                 , GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(5, 5, 0, 5), 0, 0));
         panel1.add(label, new GridBagConstraints(1, 1, 2, 1, 0.0, 0.0
@@ -105,8 +104,7 @@ public class PlotSettingDialog extends JDialog {
                 , GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 5), 0, 0));
         panel1.add(plotVisible, new GridBagConstraints(1, 4, 1, 1, 0.0, 0.0
                 , GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
-        cancelButton.setActionCommand("*ConfigDialog.cancel*");
-        cancelButton.setText("*ConfigDialog.cancel*");
+        cancelButton.setActionCommand(resources.getMessage("ConfigDialog.cancel"));
         label.setMinimumSize(new Dimension(200, 21));
         label.setPreferredSize(new Dimension(200, 21));
         label.setText("");

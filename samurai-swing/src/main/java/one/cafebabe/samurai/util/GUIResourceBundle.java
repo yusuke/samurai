@@ -15,11 +15,6 @@
  */
 package one.cafebabe.samurai.util;
 
-import one.cafebabe.samurai.swing.MainFrame;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.List;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -163,10 +158,6 @@ public class GUIResourceBundle extends ResourceBundle {
                 int index;
                 if (reverse) {
                     if (line.contains("(\"*")) {
-//          line = line.replaceAll("(\\\"*","resources.getMessage(\\\"");
-//            line = line.replaceFirst("\"\\*", "resources.getMessage(\"");
-//            line = line.replaceFirst("\"\\)", "\"))");
-//
                         line = line.replaceFirst("\"\\*", "resources.getMessage(\"");
                         line = line.replaceFirst("\\*\"", "\")");
                     }
@@ -175,19 +166,13 @@ public class GUIResourceBundle extends ResourceBundle {
                         int commaIndex = line.indexOf(",", index);
                         int parenthesIndex = line.indexOf(")", index);
                         if (-1 == commaIndex) {
-//             line = line.replaceFirst("resources.getMessage\\(\"","\"*");
-//              line = line.replaceFirst("\"\\)","\"");
 
                             line = line.replaceFirst("resources.getMessage\\(\"", "\"*");
                             line = line.replaceFirst("\"\\)", "*\"");
 
-//              line = line.replaceAll("resources.getMessage(\"\"", "(\"*");
                         } else if (commaIndex > parenthesIndex && -1 != parenthesIndex) {
-//              line = line.replaceFirst("resources.getMessage\\(\"","\"*");
-//              line = line.replaceFirst("\"\\)","\"");
                             line = line.replaceFirst("resources.getMessage\\(\"", "\"*");
                             line = line.replaceFirst("\"\\)", "*\"");
-
                         }
                     }
                 }
@@ -207,83 +192,6 @@ public class GUIResourceBundle extends ResourceBundle {
 
     }
 
-    /*
-       import javax.swing.JTextArea;
-       import javax.swing.JLabel;
-       import javax.swing.JButton;
-       import javax.swing.JCheckBox;
-       import javax.swing.JComponent;
-    */
-
-    ArrayList configured = new ArrayList();
-    /**
-     * Inject localized message resources.<br>
-     *
-     * @param obj Object to be injected.
-     */
-    public void inject(Object obj) {
-        if (configured.contains(obj)) {
-            return;
-        }
-        configured.add(obj);
-        if (obj instanceof javax.swing.JDialog) {
-            JDialog dialog = (JDialog) obj;
-            dialog.setTitle(getLocalizedMessage(dialog.getTitle()));
-        } else if (obj instanceof javax.swing.JFrame) {
-            JFrame frame = (JFrame) obj;
-            frame.setTitle(getLocalizedMessage(frame.getTitle()));
-        }
-
-        Field[] fields = obj.getClass().getDeclaredFields();
-        for (Field field : fields) {
-            Class<?> type = field.getType();
-            try {
-                field.setAccessible(true);
-                Object theObject = field.get(obj);
-                if (theObject instanceof JFrame) {
-                    inject(theObject);
-                } else if (theObject instanceof JDialog) {
-                    inject(theObject);
-                } else if (theObject instanceof JComponent) {
-                    JComponent component = (JComponent) theObject;
-                    for (Component innerComponent : component.getComponents()) {
-                        inject(innerComponent);
-                    }
-                    if (null != component.getToolTipText() && !"".equals(component.getToolTipText())) {
-                        component.setToolTipText(getLocalizedMessage(component.getToolTipText()));
-                    }
-                    if (type.equals(JLabel.class)) {
-                        JLabel label = (JLabel) theObject;
-                        label.setText(getLocalizedMessage(label.getText()));
-                    } else if (type.equals(JButton.class)) {
-                        JButton button = (JButton) theObject;
-                        button.setText(getLocalizedMessage(button.getText()));
-                    } else if (type.equals(JCheckBox.class)) {
-                        JCheckBox checkBox = (JCheckBox) theObject;
-                        checkBox.setText(getLocalizedMessage(checkBox.getText()));
-                    } else if (type.equals(JTextArea.class)) {
-                        JTextArea textArea = (JTextArea) theObject;
-                        textArea.setText(getLocalizedMessage(textArea.getText()));
-                    } else if (type.equals(JEditorPane.class)) {
-                        JEditorPane editorPane = (JEditorPane) theObject;
-                        editorPane.setText(getLocalizedMessage(editorPane.getText()));
-                    } else if (type.equals(JTextPane.class)) {
-                        JTextPane textPane = (JTextPane) theObject;
-                        textPane.setText(getLocalizedMessage(textPane.getText()));
-                    } else if (type.equals(JTabbedPane.class)) {
-                        JTabbedPane tabbedPane = (JTabbedPane) theObject;
-                        for (int j = 0; j < tabbedPane.getTabCount(); j++) {
-                            tabbedPane.setTitleAt(j, getLocalizedMessage(tabbedPane.getTitleAt(j)));
-                        }
-                    } else if (theObject instanceof JPanel) {
-                        inject(theObject);
-                    }
-                }
-            } catch (IllegalAccessException ignore) {
-                ignore.printStackTrace();
-            }
-        }
-    }
 
     String getLocalizedMessage(String key) {
         String[] split = key.split("\\*");

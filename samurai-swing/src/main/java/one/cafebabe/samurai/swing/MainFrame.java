@@ -41,33 +41,33 @@ import java.util.List;
 
 public class MainFrame extends JFrame implements KeyListener, FileHistoryListener, CloseListener {
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    private final JMenuItem menuEditPreferences = new JMenuItem("menu.edit.preferences");
+    private final JMenuItem menuEditPreferences = new JMenuItem(resources.getMessage("menu.edit.preferences"));
 
     private final JMenuBar menuBar = new JMenuBar();
-    private final JMenu menuFile = new JMenu("menu.file");
-    private final JMenuItem menuFileNewTab = new JMenuItem("menu.file.newTab");
+    private final JMenu menuFile = new JMenu(resources.getMessage("menu.file"));
+    private final JMenuItem menuFileNewTab = new JMenuItem(resources.getMessage("menu.file.newTab"));
     private final JMenuItem menuFileOpen;
     private final JMenu menuFileRecent;
     private JMenu menuFileLocalProcesses;
-    private final JMenuItem menuFileClose = new JMenuItem("menu.file.close");
+    private final JMenuItem menuFileClose = new JMenuItem(resources.getMessage("menu.file.close"));
 
-    private final JMenuItem menuFileExit = new JMenuItem("menu.file.exit");
-    private final JMenu menuEdit = new JMenu("menu.edit");
-    private final JMenuItem menuEditCopy = new JMenuItem("menu.edit.copy");
-    private final JMenuItem menuEditFind = new JMenuItem("menu.edit.find");
-    private final JMenuItem menuEditFindPrevious = new JMenuItem("menu.edit.findPrevious");
-    private final JMenuItem menuEditFindNext = new JMenuItem("menu.edit.findNext");
+    private final JMenuItem menuFileExit = new JMenuItem(resources.getMessage("menu.file.exit"));
+    private final JMenu menuEdit = new JMenu(resources.getMessage("menu.edit"));
+    private final JMenuItem menuEditCopy = new JMenuItem(resources.getMessage("menu.edit.copy"));
+    private final JMenuItem menuEditFind = new JMenuItem(resources.getMessage("menu.edit.find"));
+    private final JMenuItem menuEditFindPrevious = new JMenuItem(resources.getMessage("menu.edit.findPrevious"));
+    private final JMenuItem menuEditFindNext = new JMenuItem(resources.getMessage("menu.edit.findNext"));
 
-    private final JMenu menuView = new JMenu("menu.view");
-    private final JMenuItem menuViewReload = new JMenuItem("menu.view.reload");
-    private final JMenuItem menuViewNext = new JMenuItem("menu.view.next");
-    private final JMenuItem menuViewPrevious = new JMenuItem("menu.view.previous");
+    private final JMenu menuView = new JMenu(resources.getMessage("menu.view"));
+    private final JMenuItem menuViewReload = new JMenuItem(resources.getMessage("menu.view.reload"));
+    private final JMenuItem menuViewNext = new JMenuItem(resources.getMessage("menu.view.next"));
+    private final JMenuItem menuViewPrevious = new JMenuItem(resources.getMessage("menu.view.previous"));
     private final JMenuItem menuViewStatusBar = new JCheckBoxMenuItem("menu.view.statusBar");
-    private final JMenu menuViewEncoding = new JMenu("menu.view.encoding");
-    private final JMenuItem menuViewClearBuffer = new JMenuItem("menu.view.clearBuffer");
+    private final JMenu menuViewEncoding = new JMenu(resources.getMessage("menu.view.encoding"));
+    private final JMenuItem menuViewClearBuffer = new JMenuItem(resources.getMessage("menu.view.clearBuffer"));
 
-    private final JMenu menuHelp = new JMenu("menu.help");
-    private final JMenuItem menuHelpAbout = new JMenuItem("menu.help.about");
+    private final JMenu menuHelp = new JMenu(resources.getMessage("menu.help"));
+    private final JMenuItem menuHelpAbout = new JMenuItem(resources.getMessage("menu.help.about"));
     public final AboutSamuraiDialog aboutSamuraiDialog = new AboutSamuraiDialog(this);
     private final TileTabPanel<SamuraiPanel> tab = new TileTabPanel<>(true) {
         protected void selectedIndexChanged(int index) {
@@ -90,25 +90,22 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
 
     //Construct the frame
     public MainFrame() {
+        super(resources.getMessage("MainFrame.title"));
         enableEvents(AWTEvent.WINDOW_EVENT_MASK);
         searcher = context.getSearchPanel();
         contentPane = (JPanel) this.getContentPane();
         contentPane.setLayout(borderLayout1);
         this.setSize(new Dimension(400, 450));
-        this.setTitle("*MainFrame.title*");
         statusBar.setPreferredSize(new Dimension(3, 14));
         menuFileNewTab
                 .addActionListener(e -> openNewTab());
 
         menuFileOpen = context.getFileHistory().getOpenMenu(this);
-        menuFileOpen.setText("menu.file.open");
         context.getFileHistory().setFileHistoryListener(this);
         menuFileRecent = context.getFileHistory().getOpenRecentMenu();
-        menuFileRecent.setText("menu.file.openRecent");
         LocalProcesses localProcesses = context.getLocalProcesses();
         if (localProcesses != null) {
             menuFileLocalProcesses = localProcesses.getLocalProcessesMenu();
-            menuFileLocalProcesses.setText("menu.file.processes");
             menuFileLocalProcesses.setEnabled(true);
         }
 
@@ -118,7 +115,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             menuFileExit.addActionListener(e -> handleQuit());
         }
         if (!OSDetector.isMac()) {
-            menuEditPreferences.setActionCommand("menu.edit.preferences");
+            menuEditPreferences.setActionCommand(resources.getMessage("menu.edit.preferences"));
             menuEditPreferences.addActionListener(e -> handlePreferences());
         }
 
@@ -250,7 +247,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                 tabDropTargetListener
         );
         setDragNotAccepting();
-        resources.inject(this);
+//        resources.inject(this);
 
         if (OSDetector.isWindows()) {
             FontSizeFixer.fixFontSizes(this);

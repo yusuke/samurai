@@ -38,6 +38,7 @@ import java.util.Map;
 
 public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         ConfigurationListener, ClipBoardOperationListener {
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     public String config_dumpFontFamily = "Monospace";
     public String config_dumpFontSize = "12";
     private final Map<String, Object> webContext = new HashMap<>();
@@ -64,7 +65,6 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         }
     };
     final JPanel settingPanel = new JPanel();
-    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private final ThymeleafHtmlRenderer renderer = new ThymeleafHtmlRenderer();
 
     public ThreadDumpPanel(SamuraiPanel samuraiPanel, Context context) {
@@ -90,7 +90,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         saveButton.setMaximumSize(new Dimension(20, 20));
         saveButton.setMinimumSize(new Dimension(20, 20));
         saveButton.setPreferredSize(new Dimension(20, 20));
-        saveButton.setToolTipText("*ThreadDumpPanel.saveAsHtml*");
+        saveButton.setToolTipText(resources.getMessage("ThreadDumpPanel.saveAsHtml"));
         saveButton.setFocusPainted(false);
         saveButton.setIcon(saveButtonIcon);
         saveButton.addActionListener(event -> {
@@ -168,7 +168,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         openButton.setMaximumSize(new Dimension(20, 20));
         openButton.setMinimumSize(new Dimension(20, 20));
         openButton.setPreferredSize(new Dimension(20, 20));
-        openButton.setToolTipText("*ThreadDumpPanel.openFolder*");
+        openButton.setToolTipText(resources.getMessage("ThreadDumpPanel.openFolder"));
         openButton.setFocusPainted(false);
         openButton.setIcon(openButtonIcon);
         openButton.addActionListener(event -> {
@@ -192,7 +192,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         trashButton.setMaximumSize(new Dimension(20, 20));
         trashButton.setMinimumSize(new Dimension(20, 20));
         trashButton.setPreferredSize(new Dimension(20, 20));
-        trashButton.setToolTipText("*ThreadDumpPanel.clear*");
+        trashButton.setToolTipText(resources.getMessage("ThreadDumpPanel.clear"));
         trashButton.setFocusPainted(false);
         trashButton.setIcon(trashButtonIcon);
         trashButton.addActionListener(event -> {
@@ -229,7 +229,6 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                     , GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
         }
         threadDumpPanelScrollPane.getViewport().add(threadDumpPanel, null);
-        resources.inject(this);
     }
 
     static class RolloverBorder extends MouseAdapter {

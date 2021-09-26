@@ -42,7 +42,6 @@ public class Context {
         this.statusBar = statusBar;
         this.tab = tab;
         this.searchPanel = new SearchPanel(this);
-        resources.inject(searchPanel);
         this.config.apply(searchPanel);
         try {
             this.localProcesses = new LocalProcesses(config, fileHistory);

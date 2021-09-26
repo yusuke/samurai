@@ -28,19 +28,20 @@ import java.net.URISyntaxException;
 import java.util.Objects;
 
 public class AboutSamuraiDialog extends JDialog implements ActionListener {
+    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
 
     private static final long serialVersionUID = -5834151733419398758L;
     public final JButton button1 = new JButton();
     final JLabel imageLabel = new JLabel();
-    public final JLabel versionLabel = new JLabel();
-    public final JLabel copyrightLabel = new JLabel();
+    public final JLabel versionLabel = new JLabel(resources.getMessage("AboutSamuraiDialog.version"));
+    public final JLabel copyrightLabel = new JLabel(resources.getMessage("AboutSamuraiDialog.copyright"));
     ImageIcon image1 = new ImageIcon(Objects.requireNonNull(MainFrame.class.getResource("images/samurai64.gif")));
     final GridBagLayout gridBagLayout1 = new GridBagLayout();
     final JScrollPane jScrollPane1 = new JScrollPane();
     public final JTextPane releaseNote = new JTextPane();
 
     public AboutSamuraiDialog(Frame parent) {
-        super(parent);
+        super(parent,resources.getMessage("AboutSamuraiDialog.title"));
         setPreferredSize(new Dimension(600,400));
         enableEvents(AWTEvent.WINDOW_EVENT_MASK);
         imageLabel.setMaximumSize(new Dimension(64, 64));
@@ -48,17 +49,14 @@ public class AboutSamuraiDialog extends JDialog implements ActionListener {
         imageLabel.setPreferredSize(new Dimension(64, 64));
         imageLabel.setIcon(image1);
         this.setModal(true);
-        this.setTitle("*AboutSamuraiDialog.title*");
         this.getContentPane().setLayout(gridBagLayout1);
         versionLabel.setRequestFocusEnabled(true);
-        versionLabel.setText("*AboutSamuraiDialog.version*");
-        copyrightLabel.setText("*AboutSamuraiDialog.copyright*");
         button1.setSelected(true);
         button1.setText("OK");
         button1.addActionListener(this);
         releaseNote.setContentType("text/html; charset=charset=UTF-8");
         releaseNote.setEditable(false);
-        releaseNote.setText("*AboutSamuraiDialog.releaseNote*");
+        releaseNote.setText(resources.getMessage("AboutSamuraiDialog.releaseNote"));
         releaseNote.select(0, 0);
         releaseNote.addHyperlinkListener(e -> {
             try {
