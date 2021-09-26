@@ -27,6 +27,9 @@ import java.awt.Dimension;
 @Execution(ExecutionMode.CONCURRENT)
 class TestSplitTabPanel {
 
+    static {
+        System.setProperty("java.awt.headless", "true");
+    }
     @Test
     void testIt() {
         SplitTabPanelTest test = new SplitTabPanelTest();

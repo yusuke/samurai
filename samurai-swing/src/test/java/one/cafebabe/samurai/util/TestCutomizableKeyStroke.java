@@ -29,6 +29,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Execution(ExecutionMode.CONCURRENT)
 class TestCutomizableKeyStroke {
+
+    static{
+        System.setProperty("java.awt.headless", "true");
+    }
+
     @Test
     void testGetKeyStroke() {
         CustomizableKeyStroke cutomizableKeyStroke = new CustomizableKeyStroke(GUIResourceBundle.getInstance());
@@ -40,7 +45,7 @@ class TestCutomizableKeyStroke {
         if (OSDetector.isMac()) {
             expectedReturn = KeyStroke.getKeyStroke(KeyEvent.VK_C, META_DOWN_MASK);
         }
-        
+
         KeyStroke actualReturn = cutomizableKeyStroke.getKeyStroke(key);
         assertEquals(expectedReturn, actualReturn, "return value");
     }
