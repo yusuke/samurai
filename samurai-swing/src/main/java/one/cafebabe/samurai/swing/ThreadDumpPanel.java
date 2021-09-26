@@ -27,8 +27,6 @@ import javax.swing.*;
 import javax.swing.event.HyperlinkEvent;
 import javax.swing.event.HyperlinkListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
@@ -46,20 +44,12 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
 
     private final JProgressBar progressBar = new JProgressBar();
 
-    final ImageIcon forwardIcon = ImageLoader.get("/one/cafebabe/samurai/swing/images/forward.gif");
-    final ImageIcon backwardIcon = ImageLoader.get("/one/cafebabe/samurai/swing/images/backward.gif");
     final public JButton saveButton = new JButton();
     public final JButton openButton = new JButton();
     public final JButton trashButton = new JButton();
-    public final JToggleButton tableButton = new JToggleButton();
-    public final JToggleButton fullButton = new JToggleButton();
-    public final JToggleButton sequenceButton = new JToggleButton();
     final ImageIcon saveButtonIcon = ImageLoader.get("/one/cafebabe/samurai/swing/images/save.gif");
     ImageIcon openButtonIcon;
     final ImageIcon trashButtonIcon = ImageLoader.get("/one/cafebabe/samurai/swing/images/trash.gif");
-    final ImageIcon tableIcon = ImageLoader.get("/one/cafebabe/samurai/swing/images/tableButton.gif");
-    final ImageIcon fullButtonIcon = ImageLoader.get("/one/cafebabe/samurai/swing/images/fullButton.gif");
-    final ImageIcon sequenceButtonIcon = ImageLoader.get("/one/cafebabe/samurai/swing/images/sequenceButton.gif");
     final BorderLayout borderLayout1 = new BorderLayout();
     private String referer = null;
     final JEditorPane threadDumpPanel = new JEditorPane() {
@@ -77,21 +67,8 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private final ThymeleafHtmlRenderer renderer = new ThymeleafHtmlRenderer();
 
-    private final Context context;
-
     public ThreadDumpPanel(SamuraiPanel samuraiPanel, Context context) {
         super(true, samuraiPanel);
-        this.context = context;
-        try {
-            jbInit();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-
-        resources.inject(this);
-    }
-
-    void jbInit() {
         this.setLayout(borderLayout1);
         this.setMaximumSize(new Dimension(2147483647, 2147483647));
         this.setMinimumSize(new Dimension(0, 0));
@@ -107,69 +84,6 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         settingPanel.setPreferredSize(new Dimension(10, 40));
         settingPanel.setLayout(gridBagLayout1);
 
-        buttonPrevious.setBorderPainted(false);
-        buttonPrevious.setMaximumSize(new Dimension(20, 20));
-        buttonPrevious.setMinimumSize(new Dimension(20, 20));
-        buttonPrevious.setPreferredSize(new Dimension(20, 20));
-        buttonPrevious.addMouseListener(new RolloverBorder(buttonPrevious));
-        buttonPrevious.setIcon(backwardIcon);
-        buttonPrevious.addActionListener(e -> {
-            if (filter.mode == ThreadFilter.View.full) {
-                int selected = filter.getFullThreadIndex();
-                if (selected > 0) {
-                    selected--;
-                    filter.setFullThreadIndex(selected);
-                }
-            } else if (filter.mode == ThreadFilter.View.sequence) {
-                ThreadDumpSequence[] sequences = statistic.getStackTracesAsArray();
-                for (int i = 0; i < sequences.length; i++) {
-                    if (sequences[i].getId().equals(filter.getThreadId())) {
-                        if (i != 0) {
-                            filter.setThreadId(sequences[i - 1].getId());
-                        } else {
-                            //looping
-                            filter.setThreadId(sequences[sequences.length - 1].getId());
-                        }
-                        break;
-                    }
-                }
-            }
-            updateHtml();
-        });
-
-
-        buttonNext.setBorderPainted(false);
-        buttonNext.setMaximumSize(new Dimension(20, 20));
-        buttonNext.setMinimumSize(new Dimension(20, 20));
-        buttonNext.setPreferredSize(new Dimension(20, 20));
-        buttonNext.setIcon(forwardIcon);
-        buttonNext.addMouseListener(new RolloverBorder(buttonNext));
-
-        buttonNext.addActionListener(e -> {
-            if (filter.mode == ThreadFilter.View.full) {
-                int selected = filter.getFullThreadIndex();
-                if (selected < statistic.getFullThreadDumpCount() - 1) {
-                    selected++;
-                    filter.setFullThreadIndex(selected);
-                }
-            } else if (filter.mode == ThreadFilter.View.sequence) {
-                ThreadDumpSequence[] sequences = statistic.getStackTracesAsArray();
-                for (int i = 0; i < sequences.length; i++) {
-                    if (sequences[i].getId().equals(filter.getThreadId())) {
-                        if (i != (sequences.length - 1)) {
-                            filter.setThreadId(sequences[i + 1].getId());
-                        } else {
-                            //looping
-                            filter.setThreadId(sequences[0].getId());
-                        }
-                        break;
-                    }
-                }
-            }
-            updateHtml();
-        });
-
-
         progressBar.setStringPainted(true);
 
         saveButton.setBorderPainted(false);
@@ -179,7 +93,68 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         saveButton.setToolTipText("*ThreadDumpPanel.saveAsHtml*");
         saveButton.setFocusPainted(false);
         saveButton.setIcon(saveButtonIcon);
-        saveButton.addActionListener(buttonListener);
+        saveButton.addActionListener(event -> {
+            if (saveButton.isEnabled()) {
+                synchronized (saveButton) {
+                    if (saveButton.isEnabled()) {
+                        saveButton.setEnabled(false);
+                        progressBar.setString("");
+                        progressBar.setVisible(true);
+                        context.invokeLater(() -> {
+                            ThymeleafHtmlRenderer renderer = new ThymeleafHtmlRenderer("../");
+                            try {
+                                synchronized (statistic) {
+                                    savedLocation = getTargetDirectory(currentFile);
+                                    renderer.saveTo(statistic, savedLocation, (finished, all) -> SwingUtilities.invokeLater(new ProgressTask(finished, all + 10)));
+
+                                    File cssDir = new File(savedLocation.getAbsolutePath() + "/css/");
+                                    //noinspection ResultOfMethodCallIgnored
+                                    cssDir.mkdir();
+                                    saveStreamAsFile(savedLocation, "css/style.css");
+
+
+                                    File imageDir = new File(savedLocation.getAbsolutePath() + "/images/");
+                                    //noinspection ResultOfMethodCallIgnored
+                                    imageDir.mkdir();
+                                    saveStreamAsFile(savedLocation, "images/space.gif");
+                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 8, progressBar.getMaximum()));
+                                    saveStreamAsFile(savedLocation, "images/same-v.gif");
+                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 7, progressBar.getMaximum()));
+                                    saveStreamAsFile(savedLocation, "images/same-h.gif");
+                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 6, progressBar.getMaximum()));
+                                    saveStreamAsFile(savedLocation, "images/deadlocked.gif");
+                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 5, progressBar.getMaximum()));
+                                    saveStreamAsFile(savedLocation, "images/expandable_win.gif");
+                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 4, progressBar.getMaximum()));
+                                    saveStreamAsFile(savedLocation, "images/shrinkable_win.gif");
+                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 3, progressBar.getMaximum()));
+
+                                    saveStreamAsFile(savedLocation, "images/tableButton.gif");
+                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 2, progressBar.getMaximum()));
+                                    saveStreamAsFile(savedLocation, "images/fullButton.gif");
+                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 1, progressBar.getMaximum()));
+                                    saveStreamAsFile(savedLocation, "images/sequenceButton.gif");
+                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum(), progressBar.getMaximum()));
+
+                                }
+                                context.setTemporaryStatus(resources.getMessage("ThreadDumpPanel.saved", savedLocation.getAbsolutePath()));
+                            } catch (Exception ioe) {
+                                ioe.printStackTrace();
+                                SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum(), progressBar.getMaximum()));
+                                context.setTemporaryStatus(ioe.getMessage());
+                            } finally {
+                                context.invokeLater(() -> {
+                                    progressBar.setVisible(false);
+                                    progressBar.setValue(0);
+                                    saveButton.setEnabled(true);
+                                }, 2);
+                            }
+                        });
+                    }
+                }
+            }
+
+        });
         saveButton.addMouseListener(new RolloverBorder(saveButton));
 
         if (OSDetector.isMac()) {
@@ -196,7 +171,19 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         openButton.setToolTipText("*ThreadDumpPanel.openFolder*");
         openButton.setFocusPainted(false);
         openButton.setIcon(openButtonIcon);
-        openButton.addActionListener(buttonListener);
+        openButton.addActionListener(event -> {
+            String[] command = null;
+            if (OSDetector.isMac()) {
+                command = new String[]{"open", savedLocation.getAbsolutePath()};
+            } else if (OSDetector.isWindows()) {
+                command = new String[]{"cmd.exe", "/C", "start", savedLocation.getAbsolutePath()};
+            }
+            try {
+                Runtime.getRuntime().exec(command);
+            } catch (IOException ioe) {
+                context.setTemporaryStatus(ioe.getMessage());
+            }
+        });
         openButton.setEnabled(false);
         openButton.addMouseListener(new RolloverBorder(openButton));
 
@@ -208,38 +195,19 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         trashButton.setToolTipText("*ThreadDumpPanel.clear*");
         trashButton.setFocusPainted(false);
         trashButton.setIcon(trashButtonIcon);
-        trashButton.addActionListener(buttonListener);
+        trashButton.addActionListener(event -> {
+            if (JOptionPane.YES_OPTION ==
+                    JOptionPane.showConfirmDialog(THIS, resources.getMessage("ThreadDumpPanel.confirmClear")
+                            , resources.getMessage("ThreadDumpPanel.clear"), JOptionPane.YES_NO_OPTION)) {
+                synchronized (statistic) {
+                    init();
+                }
+            }
+        });
         trashButton.setEnabled(true);
         trashButton.addMouseListener(new RolloverBorder(trashButton));
 
-
-        tableButton.setMaximumSize(new Dimension(20, 20));
-        tableButton.setMinimumSize(new Dimension(20, 20));
-        tableButton.setPreferredSize(new Dimension(20, 20));
-        tableButton.setToolTipText("*ThreadDumpPanel.tableView*");
-        tableButton.setFocusPainted(false);
-        tableButton.setIcon(tableIcon);
-        tableButton.addActionListener(buttonListener);
-        tableButton.setSelected(true);
-
-        sequenceButton.setMaximumSize(new Dimension(20, 20));
-        sequenceButton.setMinimumSize(new Dimension(20, 20));
-        sequenceButton.setPreferredSize(new Dimension(20, 20));
-        sequenceButton.setToolTipText("*ThreadDumpPanel.sequenceView*");
-        sequenceButton.setFocusPainted(false);
-        sequenceButton.setIcon(sequenceButtonIcon);
-        sequenceButton.addActionListener(buttonListener);
-
-        fullButton.setMaximumSize(new Dimension(20, 20));
-        fullButton.setMinimumSize(new Dimension(20, 20));
-        fullButton.setPreferredSize(new Dimension(20, 20));
-        fullButton.setToolTipText("*ThreadDumpPanel.threadDumpView*");
-        fullButton.setFocusPainted(false);
-        fullButton.setIcon(fullButtonIcon);
-        fullButton.addActionListener(buttonListener);
-
         threadDumpPanel.addHyperlinkListener(this);
-        threadDumpStatus.setText("");
         progressBar.setMaximumSize(new Dimension(80, 20));
         progressBar.setPreferredSize(new Dimension(80, 20));
         progressBar.setMinimumSize(new Dimension(80, 20));
@@ -248,26 +216,10 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
         settingPanel.add(threadDumpPanelScrollPane, new GridBagConstraints(0, 0, 10, 1, 1.0, 1.0
                 , GridBagConstraints.NORTH, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 
-        settingPanel.add(buttonPrevious,
-                new GridBagConstraints(4, 1, 1, 1, 0.0, 0.0
-                        , GridBagConstraints.CENTER, GridBagConstraints.NONE,
-                        new Insets(0, 5, 0, 0), 0, 0));
-        settingPanel.add(buttonNext,
-                new GridBagConstraints(5, 1, 1, 1, 0.0, 0.0
-                        , GridBagConstraints.CENTER, GridBagConstraints.NONE,
-                        new Insets(0, 0, 0, 0), 0, 0));
-
-
-        settingPanel.add(threadDumpStatus, new GridBagConstraints(6, 1, 1, 1, 1.0, 0.0
+        settingPanel.add(new JLabel(), new GridBagConstraints(6, 1, 1, 1, 1.0, 0.0
                 , GridBagConstraints.WEST, GridBagConstraints.HORIZONTAL, new Insets(0, 5, 0, 0), 0, 0));
         settingPanel.add(trashButton, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0
                 , GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
-        settingPanel.add(tableButton, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0
-                , GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 20, 0, 0), 0, 0));
-        settingPanel.add(fullButton, new GridBagConstraints(2, 1, 1, 1, 0.0, 0.0
-                , GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
-        settingPanel.add(sequenceButton, new GridBagConstraints(3, 1, 1, 1, 0.0, 0.0
-                , GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(0, 0, 0, 20), 0, 0));
         settingPanel.add(progressBar, new GridBagConstraints(7, 1, 1, 1, 0.0, 0.0
                 , GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
         settingPanel.add(saveButton, new GridBagConstraints(8, 1, 1, 1, 0.0, 0.0
@@ -277,6 +229,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                     , GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
         }
         threadDumpPanelScrollPane.getViewport().add(threadDumpPanel, null);
+        resources.inject(this);
     }
 
     static class RolloverBorder extends MouseAdapter {
@@ -323,110 +276,6 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     File savedLocation = null;
     final JPanel THIS = this;
 
-    final ActionListener buttonListener = new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-            Component source = (Component) e.getSource();
-            if (source == saveButton) {
-                if (saveButton.isEnabled()) {
-                    synchronized (saveButton) {
-                        if (saveButton.isEnabled()) {
-                            saveButton.setEnabled(false);
-                            progressBar.setString("");
-                            progressBar.setVisible(true);
-                            context.invokeLater(() -> {
-                                ThymeleafHtmlRenderer renderer = new ThymeleafHtmlRenderer("../");
-                                try {
-                                    synchronized (statistic) {
-                                        savedLocation = getTargetDirectory(currentFile);
-                                        renderer.saveTo(statistic, savedLocation, (finished, all) -> SwingUtilities.invokeLater(new ProgressTask(finished, all + 10)));
-
-                                        File cssDir = new File(savedLocation.getAbsolutePath() + "/css/");
-                                        //noinspection ResultOfMethodCallIgnored
-                                        cssDir.mkdir();
-                                        saveStreamAsFile(savedLocation, "css/style.css");
-
-
-                                        File imageDir = new File(savedLocation.getAbsolutePath() + "/images/");
-                                        //noinspection ResultOfMethodCallIgnored
-                                        imageDir.mkdir();
-                                        saveStreamAsFile(savedLocation, "images/space.gif");
-                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 8, progressBar.getMaximum()));
-                                        saveStreamAsFile(savedLocation, "images/same-v.gif");
-                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 7, progressBar.getMaximum()));
-                                        saveStreamAsFile(savedLocation, "images/same-h.gif");
-                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 6, progressBar.getMaximum()));
-                                        saveStreamAsFile(savedLocation, "images/deadlocked.gif");
-                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 5, progressBar.getMaximum()));
-                                        saveStreamAsFile(savedLocation, "images/expandable_win.gif");
-                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 4, progressBar.getMaximum()));
-                                        saveStreamAsFile(savedLocation, "images/shrinkable_win.gif");
-                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 3, progressBar.getMaximum()));
-
-                                        saveStreamAsFile(savedLocation, "images/tableButton.gif");
-                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 2, progressBar.getMaximum()));
-                                        saveStreamAsFile(savedLocation, "images/fullButton.gif");
-                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 1, progressBar.getMaximum()));
-                                        saveStreamAsFile(savedLocation, "images/sequenceButton.gif");
-                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum(), progressBar.getMaximum()));
-
-                                    }
-                                    context.setTemporaryStatus(resources.getMessage("ThreadDumpPanel.saved", savedLocation.getAbsolutePath()));
-                                } catch (Exception ioe) {
-                                    ioe.printStackTrace();
-                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum(), progressBar.getMaximum()));
-                                    context.setTemporaryStatus(ioe.getMessage());
-                                } finally {
-                                    context.invokeLater(() -> {
-                                        progressBar.setVisible(false);
-                                        progressBar.setValue(0);
-                                        saveButton.setEnabled(true);
-                                    }, 2);
-                                }
-                            });
-                        }
-                    }
-                }
-            } else if (source == trashButton) {
-                if (JOptionPane.YES_OPTION ==
-                        JOptionPane.showConfirmDialog(THIS, resources.getMessage("ThreadDumpPanel.confirmClear")
-                                , resources.getMessage("ThreadDumpPanel.clear"), JOptionPane.YES_NO_OPTION)) {
-                    synchronized (statistic) {
-                        init();
-                    }
-                }
-            } else if (source == openButton) {
-                String[] command = null;
-                if (OSDetector.isMac()) {
-                    command = new String[]{"open", savedLocation.getAbsolutePath()};
-                } else if (OSDetector.isWindows()) {
-                    command = new String[]{"cmd.exe", "/C", "start", savedLocation.getAbsolutePath()};
-                }
-                try {
-                    Runtime.getRuntime().exec(command);
-                } catch (IOException ioe) {
-                    context.setTemporaryStatus(ioe.getMessage());
-                }
-            } else {
-                JToggleButton button = (JToggleButton) e.getSource();
-                if (!button.isSelected()) {
-                    button.setSelected(true);
-                } else {
-                    tableButton.setSelected((tableButton == button) == button.isSelected());
-                    fullButton.setSelected((fullButton == button) == button.isSelected());
-                    sequenceButton.setSelected((sequenceButton == button) == button.isSelected());
-                    if (tableButton == button) {
-                        filter.mode = ThreadFilter.View.table;
-                    } else if (fullButton == button) {
-                        filter.mode = ThreadFilter.View.full;
-                    } else if (sequenceButton == button) {
-                        filter.mode = ThreadFilter.View.sequence;
-                    }
-                    updateHtml();
-                }
-            }
-        }
-
-    };
 
     private void saveStreamAsFile(File parentDir, String fileName) throws IOException {
         try (InputStream is = ThreadDumpPanel.class.getResourceAsStream("/one/cafebabe/samurai/web/" + fileName);
@@ -478,28 +327,12 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     }
 
     final GridBagLayout gridBagLayout1 = new GridBagLayout();
-    final JButton buttonPrevious = new JButton();
-    final JButton buttonNext = new JButton();
-
     private final ThreadFilter filter = new ThreadFilter();
 
     private ThreadDumpSequence[] threadList = null;
 
     public void changeButtonFeel() {
         invokeLater(() -> {
-                    int selected = filter.getFullThreadIndex();
-                    if (0 == statistic.getFullThreadDumpCount()) {
-                        buttonPrevious.setEnabled(false);
-                        buttonNext.setEnabled(false);
-                    } else {
-                        if (filter.mode == ThreadFilter.View.full) {
-                            buttonPrevious.setEnabled(!(selected == 0));
-                            buttonNext.setEnabled(!(statistic.getFullThreadDumpCount() - 1 == selected));
-                        } else {
-                            buttonPrevious.setEnabled(filter.mode == ThreadFilter.View.sequence);
-                            buttonNext.setEnabled(filter.mode == ThreadFilter.View.sequence);
-                        }
-                    }
                     if (null != threadList && threadList.length != 0) {
                         if (filter.mode != ThreadFilter.View.full) {
                             if (filter.mode == ThreadFilter.View.sequence) {
@@ -510,22 +343,6 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                                 }
                             }
                         }
-                    }
-                    if (filter.mode == ThreadFilter.View.full) {
-                        threadDumpStatus.setText(filter.getFullThreadIndex() + 1 + "/" + statistic.getFullThreadDumpCount());
-                        tableButton.setSelected(false);
-                        fullButton.setSelected(true);
-                        sequenceButton.setSelected(false);
-                    } else if (filter.mode == ThreadFilter.View.table) {
-                        threadDumpStatus.setText("");
-                        tableButton.setSelected(true);
-                        fullButton.setSelected(false);
-                        sequenceButton.setSelected(false);
-                    } else if (filter.mode == ThreadFilter.View.sequence) {
-                        threadDumpStatus.setText(statistic.getStackTracesById(filter.getThreadId()).getName());
-                        tableButton.setSelected(false);
-                        fullButton.setSelected(false);
-                        sequenceButton.setSelected(true);
                     }
                 }
         );
@@ -564,7 +381,6 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     private ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
     final JScrollPane threadDumpPanelScrollPane = new JScrollPane();
 
-    final JLabel threadDumpStatus = new JLabel();
     File currentFile;
 
     public void onLine(File file, String line, long filePointer) {
