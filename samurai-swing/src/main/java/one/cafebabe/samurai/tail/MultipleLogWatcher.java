@@ -18,6 +18,7 @@ package one.cafebabe.samurai.tail;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MultipleLogWatcher implements LogMonitor {
@@ -28,18 +29,14 @@ public class MultipleLogWatcher implements LogMonitor {
 
     public MultipleLogWatcher(File[] files, String encoding) {
         this.files = new ArrayList<>(files.length);
-        for (int i = 0; i < files.length; i++) {
-            this.files.add(files[i]);
-        }
+        Collections.addAll(this.files, files);
         this.encoding = encoding;
     }
 
     boolean ticket = true;
 
     public synchronized void addFiles(File[] files) {
-        for (int i = 0; i < files.length; i++) {
-            this.files.add(files[i]);
-        }
+        Collections.addAll(this.files, files);
         synchronized (currentLogWatcher) {
             if (currentLogWatcher.isCheckingUpdate()) {
                 nextLogWatcher();
@@ -54,7 +51,6 @@ public class MultipleLogWatcher implements LogMonitor {
             }
             currentLogWatcher = new SingleLogWatcher(this.files.remove(0), encoding);
             currentLogWatcher.addLogMonitor(this);
-            currentLogWatcher.setDebug(debug);
             currentLogWatcher.start();
             return true;
         }
@@ -102,15 +98,6 @@ public class MultipleLogWatcher implements LogMonitor {
     public void logEnded(File file, long filePointer) {
         for (int i = logMonitors.size() - 1; i >= 0; i--) {
             logMonitors.get(i).logEnded(file, filePointer);
-        }
-    }
-
-    boolean debug = false;
-
-    public void setDebug(boolean debug) {
-        this.debug = debug;
-        if (null != currentLogWatcher) {
-            currentLogWatcher.setDebug(debug);
         }
     }
 

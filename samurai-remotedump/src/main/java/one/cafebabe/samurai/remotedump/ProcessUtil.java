@@ -17,6 +17,8 @@
  */
 package one.cafebabe.samurai.remotedump;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import sun.jvmstat.monitor.*;
 
 import java.net.URISyntaxException;
@@ -26,6 +28,8 @@ import java.util.List;
 import java.util.Set;
 
 public class ProcessUtil {
+    private static final Logger logger = LogManager.getLogger();
+
     public static List<VM> getVMs(String host) throws URISyntaxException, MonitorException {
         int localPid = (int)ProcessHandle.current().pid();
         List<VM> vms = new ArrayList<>();
@@ -55,7 +59,7 @@ public class ProcessUtil {
 
     public static void main(String... args) throws URISyntaxException, MonitorException {
         List<VM> vms = getVMs("localhost");
-        vms.forEach(e -> System.out.printf("%s %s%n", e.getPid(), e.getFqcn()));
+        vms.forEach(e -> logger.info("{} {}", e.getPid(), e.getFqcn()));
     }
 
 }

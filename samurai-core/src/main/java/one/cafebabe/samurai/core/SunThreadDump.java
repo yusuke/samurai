@@ -19,8 +19,6 @@ package one.cafebabe.samurai.core;
 /*package*/ class SunThreadDump extends ThreadDump {
     private final String STATE;
 
-    private final boolean debug = false;
-
     public static final String RUNNABLE = "runnable";
     public static final String WAITING_ON_MONITOR = "waiting on monitor";
     public static final String WAITING_FOR_MONITOR_ENTRY =
@@ -90,17 +88,9 @@ package one.cafebabe.samurai.core;
     public String toString() {
         StringBuilder toStringed = new StringBuilder(128);
         toStringed.append(getHeader());
-        if (debug)
-            System.out.println("sizetostring1:" + getStackLines().size());
-        if (debug)
-            System.out.println("header:[" + getHeader() + "]");
         for (int i = 0; i < getStackLines().size(); i++) {
-            if (debug)
-                System.out.println("sizetostring2:" + getStackLines().size());
             toStringed.append('\n').append(getStackLines().get(i));
         }
-        if (debug)
-            System.out.println("sizetostring3:" + toStringed);
         return toStringed.toString();
     }
 

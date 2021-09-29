@@ -16,6 +16,8 @@
 package one.cafebabe.samurai.util;
 
 import one.cafebabe.samurai.swing.FontSizeFixer;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,10 +26,11 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Field;
-import java.util.*;
 import java.util.List;
+import java.util.*;
 
 public final class Configuration implements Runnable {
+    private static final Logger logger = LogManager.getLogger();
     private final Properties props;
     private final String fileName;
     private final String name;
@@ -192,7 +195,7 @@ public final class Configuration implements Runnable {
     }
 
     public void save() throws IOException {
-        System.out.println("Saving configuration.[" + this.fileName + "]");
+        logger.info("Saving configuration.[{}]", this.fileName);
         props.store(new FileOutputStream(this.fileName), this.name);
     }
 

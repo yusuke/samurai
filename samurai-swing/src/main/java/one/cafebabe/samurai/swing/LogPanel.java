@@ -20,13 +20,8 @@ import one.cafebabe.samurai.util.ConfigurationListener;
 import one.cafebabe.samurai.util.GUIResourceBundle;
 import one.cafebabe.samurai.util.OSDetector;
 
-import javax.swing.JScrollBar;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.SwingUtilities;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Font;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
 import java.io.File;
@@ -75,14 +70,8 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
     public void close() {
         super.close();
         textArea.setToolTipText(null);
-//    textArea.setText("");
         SwingUtilities.invokeLater(clearTask);
         SwingUtilities.invokeLater(clearTask2);
-//    textArea.append(resources.getMessage("LogPanel.dropFileHere")+"\n");
-//    System.out.println(textArea.getDocument().getLength()+textArea.getText());
-        //    content.setCurrentFilePointer(0);
-//        textArea.setCurrentFilePointer(0);
-//    buffer.delete(0, buffer.length());
         initBuffer();
     }
 
@@ -157,20 +146,8 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
     }
 
     private void flushBuffer() {
-//    if (0 != count) {
-//      count = 0;
-////      System.out.println("appending:"+buffer.toString());
-//      textArea.append(buffer.toString());
-////      content.setCurrentFilePointer(filePointer);
-//    textArea.append("");
         this.invokeLater(new FlushTask(buffer, filepointers, count));
         initBuffer();
-
-////      System.out.println("appended:"+textArea.getText());
-//      buffer.delete(0, buffer.length());
-
-//    }
-//    textArea.finish();
     }
 
     //  private boolean fitlast = true;
@@ -180,21 +157,9 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
 
     public void adjustmentValueChanged(AdjustmentEvent event) {
         int max = verticalScrollBar.getMaximum();
-        //    int value = verticalScrollBar.getValue();
-        //    System.out.println(fitlast+":"+max+":"+value+":"+lastValue+":"+verticalScrollBar.getBlockIncrement()+":"+verticalScrollBar.getVisibleAmount());
         if (lastMax != max) {
-            //      //scrollbar expanded
-            //      if (fitlast) {
             verticalScrollBar.setValue(max);
         }
-        //
-        //    }else{
-        //      if (lastValue != value) {
-        //        fitlast = max <= (value + verticalScrollBar.getVisibleAmount()*1.2);
-        //      }
-        //    }
-        //    System.out.println(fitlast);
-        //    lastValue = value;
         lastMax = max;
     }
 
@@ -226,5 +191,4 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
 
     public void paste() {
     }
-
 }

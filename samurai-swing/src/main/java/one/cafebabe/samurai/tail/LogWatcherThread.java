@@ -15,17 +15,19 @@
  */
 package one.cafebabe.samurai.tail;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class LogWatcherThread extends Thread {
+    private static final Logger logger = LogManager.getLogger();
+
     private final List<LogMonitor> logMonitors = new ArrayList<>(0);
     private boolean killed = false;
-    private boolean debug = false;
     private List<File> pendingFiles;
     private String encoding = System.getProperty("file.encoding");
 
@@ -35,15 +37,11 @@ public class LogWatcherThread extends Thread {
 
     public void setFiles(File[] files) {
         pendingFiles = new ArrayList<>(files.length);
-        for (int i = 0; i < files.length; i++) {
-            pendingFiles.add(files[i]);
-        }
+        pendingFiles.addAll(Arrays.asList(files));
     }
 
     public void appendFiles(File[] files) {
-        for (int i = 0; i < files.length; i++) {
-            pendingFiles.add(files[i]);
-        }
+        pendingFiles.addAll(Arrays.asList(files));
     }
 
     public void setFile(File file) {
@@ -59,10 +57,6 @@ public class LogWatcherThread extends Thread {
         this.setDaemon(true);
         this.setPriority(Thread.MIN_PRIORITY);
         encoding = System.getProperty("file.encoding");
-    }
-
-    public void setDebug(boolean debug) {
-        this.debug = debug;
     }
 
     public void addLogMonitor(LogMonitor logMonitor) {
@@ -92,15 +86,13 @@ public class LogWatcherThread extends Thread {
             checkUpdate();
             if (this.isCheckingUpdate()) {
                 try {
+                    //noinspection BusyWait
                     Thread.sleep(50);
-                } catch (InterruptedException ie) {
+                } catch (InterruptedException ignored) {
                 }
 
             }
         }
-        if (debug)
-            System.out.println("dying");
-
     }
 
     private final int NOT_OPENED = 0;
@@ -126,12 +118,10 @@ public class LogWatcherThread extends Thread {
     }
 
     public void checkUpdate() {
-        state = state;
         switch (state) {
             case NOT_OPENED:
                 if (pendingFiles.size() != 0) {
-                    if (debug)
-                        log("found pending file");
+                    logger.debug("found pending file");
                     file = pendingFiles.remove(0);
                     filePointer = 0;
                     line.reset();
@@ -153,9 +143,7 @@ public class LogWatcherThread extends Thread {
                     if (file.length() == filePointer) {
                         if (hasStarted && !hasEnded) {
                             if (1000 < (System.currentTimeMillis() - bedtime)) {
-                                if (debug) {
-                                    log("no new line detected for 1 second");
-                                }
+                                logger.debug("no new line detected for 1 second");
                                 logEnded();
                                 bedtime = 0;
                             }
@@ -234,15 +222,12 @@ public class LogWatcherThread extends Thread {
     }
 
     private synchronized void onLine(byte[] line) {
-        if (debug)
-            log("onLine(" + line + ")");
+        logger.debug("onLine({})",  line);
         for (LogMonitor monitor : logMonitors) {
             try {
                 monitor.onLine(this.file, new String(line, encoding), this.filePointer);
-            } catch (java.io.UnsupportedEncodingException uee) {
+            } catch (UnsupportedEncodingException | RuntimeException uee) {
                 uee.printStackTrace();
-            } catch (RuntimeException re) {
-                re.printStackTrace();
             }
         }
     }
@@ -250,8 +235,7 @@ public class LogWatcherThread extends Thread {
     private synchronized void logStarted() {
         hasStarted = true;
         hasEnded = false;
-        if (debug)
-            log("logStarted()");
+        logger.debug("logStarted()");
         for (LogMonitor monitor : logMonitors) {
             try {
                 monitor.logStarted(this.file, this.filePointer);
@@ -263,8 +247,7 @@ public class LogWatcherThread extends Thread {
 
     private synchronized void logEnded() {
         hasEnded = true;
-        if (debug)
-            log("logEnded()");
+        logger.debug("logEnded()");
         for (LogMonitor monitor : logMonitors) {
             try {
                 monitor.logEnded(this.file, this.filePointer);
@@ -276,8 +259,7 @@ public class LogWatcherThread extends Thread {
 
     private synchronized void logContinued() {
         hasEnded = false;
-        if (debug)
-            log("logContinued()");
+        logger.debug("logContinued()");
         for (LogMonitor monitor : logMonitors) {
             try {
                 monitor.logContinued(this.file, this.filePointer);
@@ -288,8 +270,7 @@ public class LogWatcherThread extends Thread {
     }
 
     private synchronized void onException(IOException ioe) {
-        if (debug)
-            log("onException()");
+        logger.debug("onException()");
         for (LogMonitor monitor : logMonitors) {
             try {
                 monitor.onException(this.file, ioe);
@@ -309,9 +290,5 @@ public class LogWatcherThread extends Thread {
                 }
             }
         }
-    }
-
-    private void log(String msg) {
-        System.out.println("logWatcher:" + msg);
     }
 }

@@ -15,7 +15,11 @@
  */
 package one.cafebabe.samurai.core;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class BEAStackLine extends StackLine {
+    private static final Logger logger = LogManager.getLogger();
     private static final long serialVersionUID = -8477301890129249380L;
     private final boolean IS_TRYING_TO_GET_LOCK;
     private final boolean IS_HOLDING_LOCK;
@@ -35,7 +39,8 @@ public class BEAStackLine extends StackLine {
                 String lockedObjectID = null;
                 try {
                     lockedObjectID = line.substring(line.indexOf("@") + 1, line.indexOf("["));
-                } catch (StringIndexOutOfBoundsException ignore) {
+                } catch (StringIndexOutOfBoundsException e) {
+                    logger.warn("lockedObjectID", e);
                 }
                 LOCKED_OBJECT_ID = lockedObjectID;
                 LOCKED_CLASS_NAME = line.substring(line.indexOf(" lock: ") + 7, line.indexOf("@"));

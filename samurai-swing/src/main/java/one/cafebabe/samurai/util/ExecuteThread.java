@@ -62,50 +62,6 @@ public class ExecuteThread extends Thread {
                     }
                 }
             }
-//      try {
-//        synchronized (this) {
-////          if(null != laterTask){
-////            wait(100);
-////          }else{
-////            wait(100000);
-////          }
-//          wait();
-//        }
-//      } catch (InterruptedException ioe) {
-//        ioe.printStackTrace(System.out);
-//      }
-//      if (0 < tasks.size()) {
-//        while (tasks.size() != 0) {
-//          Schedule task = null;
-//          synchronized (tasks) {
-//            task = tasks.get(0);
-//            if (task.getTimeToExecute() > System.currentTimeMillis()) {
-//              tasks.remove(0);
-//            } else {
-//              task = null;
-//            }
-//          }
-//          if (null != task) {
-//            try {
-//              task.getTask().execute();
-//            } catch (Throwable th) {
-//              th.printStackTrace();
-//            }
-//          }
-//        }
-//      }
-////      if(null != laterTask && System.currentTimeMillis() > invokeTime){
-////        Task task;
-////        synchronized(this){
-////          task = laterTask;
-////          laterTask = null;
-////        }
-////          try {
-////            task.execute();
-////          } catch (Throwable th) {
-////            th.printStackTrace();
-////          }
-////      }
         }
     }
 
@@ -117,11 +73,7 @@ public class ExecuteThread extends Thread {
 
     public synchronized void addTask(Task task) {
         invokeLater(task, 0);
-//    new Throwable().printStackTrace();
-//    tasks.add(new Schedule(task,System.currentTimeMillis()));
-//    this.notify();
     }
-//  private Task laterTask = null;
 
     //  private long invokeTime;
     public synchronized void invokeLater(Task task, int seconds) {

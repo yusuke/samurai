@@ -17,19 +17,25 @@ package one.cafebabe.samurai.util;
 
 import one.cafebabe.samurai.tail.LogMonitor;
 import one.cafebabe.samurai.tail.LogWatcher;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @Execution(ExecutionMode.CONCURRENT)
 class TestLogWatcher implements LogMonitor {
+    private static final Logger logger = LogManager.getLogger();
+
     LogWatcher logWatcher;
-    final boolean DEBUG = false;
 
     StringBuffer buf;
     int logStartedCount = 0;
@@ -43,32 +49,31 @@ class TestLogWatcher implements LogMonitor {
         logWatcher = new LogWatcher();
         logWatcher.setFiles(new File[]{new File("testcases/1.txt"), new File("testcases/2.txt"), new File("testcases/3.txt")});
         buf = new StringBuffer();
-        logWatcher.setDebug(DEBUG);
         logStartedCount = 0;
         logEndedCount = 0;
         logContinuedCount = 0;
         logWillEndCount = 0;
         logWatcher.addLogMonitor(new LogMonitor() {
-            public void onLine(File file, String line, long filepointer) {
+            public void onLine(File file, String line, long filePointer) {
                 buf.append(line);
             }
 
             public void onException(File file, IOException ioe) {
             }
 
-            public void logStarted(File file, long filepointer) {
+            public void logStarted(File file, long filePointer) {
                 logStartedCount++;
             }
 
-            public void logEnded(File file, long filepointer) {
+            public void logEnded(File file, long filePointer) {
                 logEndedCount++;
             }
 
-            public void logContinued(File file, long filepointer) {
+            public void logContinued(File file, long filePointer) {
                 logContinuedCount++;
             }
 
-            public void logWillEnd(File file, long filepointer) {
+            public void logWillEnd(File file, long filePointer) {
                 logWillEndCount++;
             }
         });
@@ -82,13 +87,6 @@ class TestLogWatcher implements LogMonitor {
         logWatcher.kill();
     }
 
-    public void debug(String message) {
-        if (DEBUG) {
-            System.out.println(message);
-        }
-
-    }
-
     @Test
     void testSingleFile() throws IOException, InterruptedException {
         resetFlags();
@@ -100,30 +98,29 @@ class TestLogWatcher implements LogMonitor {
         logWatcher.setFile(file);
         logWatcher.addLogMonitor(this);
 //    logWatcher.setFile(file);
-        debug("testLogWatcher start");
-        logWatcher.setDebug(DEBUG);
+        logger.debug("testLogWatcher start");
 
         FileOutputStream fos = new FileOutputStream(file);
         PrintWriter writer = new PrintWriter(fos);
-        debug("testLogWatcher test1");
+        logger.debug("testLogWatcher test1");
         assertFalse(logStartedCalled);
         assertFalse(logEndedCalled);
         assertFalse(logContinuedCalled);
-        debug("testLogWatcher write");
+        logger.debug("testLogWatcher write");
         writer.println("log:1");
         writer.flush();
 //    fail("hoge");
-        debug("testLogWatcher start");
+        logger.debug("testLogWatcher start");
         logWatcher.start();
         Thread.sleep(200);
-        debug("testLogWatcher test2");
+        logger.debug("testLogWatcher test2");
         assertEquals("log:1", onLine);
         assertTrue(logStartedCalled);
         assertFalse(logEndedCalled);
         Thread.sleep(3000);
         assertTrue(logEndedCalled);
         resetFlags();
-        debug("testLogWatcher write2");
+        logger.debug("testLogWatcher write2");
         writer.println("log:2");
         writer.println("log:2");
         writer.println("log:2");
@@ -132,7 +129,7 @@ class TestLogWatcher implements LogMonitor {
         fos.close();
         Thread.sleep(3000);
 
-        debug("testLogWatcher test3");
+        logger.debug("testLogWatcher test3");
         assertEquals("log:2", onLine);
         assertTrue(logContinuedCalled);
 //    assertTrue(logStartedCalled);
@@ -176,7 +173,7 @@ class TestLogWatcher implements LogMonitor {
 
     public void onLine(File file, String line, long filePointer) {
         onLine = line;
-        debug("testLogWatcher online:" + onLine);
+        logger.debug("testLogWatcher online:" + onLine);
     }
 
     public void onException(File file, IOException ioe) {
@@ -197,8 +194,6 @@ class TestLogWatcher implements LogMonitor {
     }
 
     public void logWillEnd(File file, long filePointer) {
-        //does noting
-//    logWatcher.destroy();
     }
 }
 

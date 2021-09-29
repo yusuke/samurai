@@ -16,6 +16,9 @@
 package one.cafebabe.samurai.tail;
 
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
@@ -24,10 +27,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SingleLogWatcher {
+    private static final Logger logger = LogManager.getLogger();
+
     private final List<LogMonitor> logMonitors = new ArrayList<>(0);
     private boolean killed = false;
-    private boolean debug = false;
-    private String encoding = System.getProperty("file.encoding");
+    private String encoding;
 
     public SingleLogWatcher(File file, String encoding) {
         this.file = file;
@@ -43,10 +47,6 @@ public class SingleLogWatcher {
 
     public synchronized void setEncoding(String encoding) {
         this.encoding = encoding;
-    }
-
-    public void setDebug(boolean debug) {
-        this.debug = debug;
     }
 
     public synchronized void addLogMonitor(LogMonitor logMonitor) {
@@ -126,9 +126,7 @@ public class SingleLogWatcher {
                 if (file.length() == filePointer) {
                     if (hasStarted && !hasEnded) {
                         if (1000 < (System.currentTimeMillis() - bedtime)) {
-                            if (debug) {
-                                log("no new line detected for 1 second");
-                            }
+                            logger.debug("no new line detected for 1 second");
                             logEnded();
                             bedtime = 0;
                         }
@@ -158,12 +156,10 @@ public class SingleLogWatcher {
         }
     }
 
-    private int c = -1;
-
     public final boolean readLine(RandomAccessFile raf, ByteArrayOutputStream line) throws IOException {
         boolean eol = false;
         while (!eol) {
-            c = raf.read();
+            int c = raf.read();
             switch (c) {
                 case -1:
                     return false;
@@ -185,8 +181,7 @@ public class SingleLogWatcher {
     }
 
     private void onLine(byte[] line) {
-        if (debug)
-            log("onLine(" + new String(line) + ")");
+        logger.debug("onLine(" + new String(line) + ")");
         for (LogMonitor monitor : logMonitors) {
             try {
                 monitor.onLine(this.file, new String(line, encoding), this.filePointer);
@@ -201,8 +196,7 @@ public class SingleLogWatcher {
     private void logStarted() {
         hasStarted = true;
         hasEnded = false;
-        if (debug)
-            log("logStarted()");
+        logger.debug("logStarted()");
         for (LogMonitor monitor : logMonitors) {
             try {
                 monitor.logStarted(this.file, this.filePointer);
@@ -214,8 +208,7 @@ public class SingleLogWatcher {
 
     private void logEnded() {
         hasEnded = true;
-        if (debug)
-            log("logEnded()");
+        logger.debug("logEnded()");
         for (LogMonitor monitor : logMonitors) {
             try {
                 monitor.logEnded(this.file, this.filePointer);
@@ -227,8 +220,7 @@ public class SingleLogWatcher {
 
     private void logContinued() {
         hasEnded = false;
-        if (debug)
-            log("logContinued()");
+        logger.debug("logContinued()");
         for (LogMonitor monitor : logMonitors) {
             try {
                 monitor.logContinued(this.file, this.filePointer);
@@ -239,8 +231,7 @@ public class SingleLogWatcher {
     }
 
     private void onException(IOException ioe) {
-        if (debug)
-            log("onException()");
+        logger.debug("onException()");
         for (LogMonitor monitor : logMonitors) {
             try {
                 monitor.onException(this.file, ioe);
@@ -252,8 +243,7 @@ public class SingleLogWatcher {
 
     private void sleeping() {
         if (!hasEnded && hasStarted) {
-            if (debug)
-                log("logWillEnd()");
+            logger.debug("logWillEnd()");
             for (LogMonitor monitor : logMonitors) {
                 try {
                     monitor.logWillEnd(this.file, this.filePointer);
@@ -262,9 +252,5 @@ public class SingleLogWatcher {
                 }
             }
         }
-    }
-
-    private void log(String msg) {
-        System.out.println("logWatcher:" + msg);
     }
 }

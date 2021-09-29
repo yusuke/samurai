@@ -15,19 +15,16 @@
  */
 package one.cafebabe.samurai.util;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStream;
-import java.lang.reflect.Field;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.io.*;
 import java.text.FieldPosition;
 import java.text.MessageFormat;
 import java.util.*;
 
 public class GUIResourceBundle extends ResourceBundle {
+    private static final Logger logger = LogManager.getLogger();
     private static final Map<String, Map<String, GUIResourceBundle>> resourceses = new HashMap<>();
     private static final String DEFAULT_RESOURCE_NAME = "messages";
 
@@ -127,7 +124,7 @@ public class GUIResourceBundle extends ResourceBundle {
 
     public static void main(String[] args) throws IOException {
         if (args.length < 1) {
-            System.out.println("specify directory.");
+            logger.warn("specify directory.");
             System.exit(-1);
         }
 
@@ -141,13 +138,13 @@ public class GUIResourceBundle extends ResourceBundle {
             specifiedDir = new File(args[0]);
         }
         if (!specifiedDir.exists()) {
-            System.out.println("dir doesn't exist");
+            logger.warn("dir doesn't exist");
             System.exit(-1);
         }
         File[] javaFiles = specifiedDir.listFiles(file -> file.getName().endsWith(".java")
         );
         for (File javaFile : javaFiles) {
-            System.out.println("processing:" + javaFile);
+            logger.info("processing:{}", javaFile);
             BufferedReader br;
             BufferedWriter bw;
             File modified = new File(javaFile + ".modified");

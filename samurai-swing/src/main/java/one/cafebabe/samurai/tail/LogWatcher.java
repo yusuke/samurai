@@ -20,21 +20,19 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class LogWatcher extends Thread {
     private final List<LogMonitor> logMonitors = new ArrayList<>(3);
     private boolean killed = false;
-    private boolean debug = false;
     private List<File> pendingFiles = new ArrayList<>(0);
     private List<File> newPendingFiles = null;
     private final String encoding;
 
     public void setFiles(File[] files) {
         newPendingFiles = new ArrayList<>();
-        for (int i = 0; i < files.length; i++) {
-            newPendingFiles.add(files[i]);
-        }
+        Collections.addAll(newPendingFiles, files);
     }
 
     public void setFile(File file) {
@@ -50,10 +48,6 @@ public class LogWatcher extends Thread {
         this.setDaemon(true);
         this.setPriority(Thread.MIN_PRIORITY);
         this.encoding = encoding;
-    }
-
-    public void setDebug(boolean debug) {
-        this.debug = debug;
     }
 
     public void addLogMonitor(LogMonitor logMonitor) {
@@ -88,12 +82,9 @@ public class LogWatcher extends Thread {
 
 
     public void run() {
-        log("analyze(" + file + ")");
-
         while (!killed) {
             checkUpdate();
         }
-        log("dying");
         synchronized (this) {
             this.notify();
         }
@@ -101,8 +92,6 @@ public class LogWatcher extends Thread {
     }
 
     public void checkUpdate() {
-        if (debug)
-            log("loop");
         if (null != newPendingFiles) {
             synchronized (this) {
                 if (hasStarted && !hasEnded) {
@@ -135,8 +124,6 @@ public class LogWatcher extends Thread {
             do {
                 //read pending file if exists
                 if (pendingFiles.size() != 0) {
-                    if (debug)
-                        log("found pending file");
                     file = pendingFiles.remove(0);
                     filePointer = 0;
                     line = new ByteArrayOutputStream(128);
@@ -149,21 +136,15 @@ public class LogWatcher extends Thread {
                     }
                     //skip sleep when pending file exists
                     try {
-//                if (debug)
-//                  log("sleep");
+                        //noinspection BusyWait
                         Thread.sleep(50);
-                    } catch (InterruptedException ie) {
+                    } catch (InterruptedException ignored) {
                     }
                 }
                 if (null != file && file.exists()) {
                     if (file.length() == filePointer) {
                         if (hasStarted && !hasEnded) {
-                            if (debug)
-                                log("waitcount:" + waitCount);
                             if (40 == waitCount++) {
-                                if (debug) {
-                                    log("no new line detected for 1 second");
-                                }
                                 logEnded();
                                 waitCount = 0;
                             }
@@ -197,11 +178,9 @@ public class LogWatcher extends Thread {
     }
 
     public final boolean readLine(RandomAccessFile raf, ByteArrayOutputStream line) throws IOException {
-        int c = -1;
+        int c;
         boolean eol = false;
-//    long lastFilePointer;
         while (!eol) {
-//      lastFilePointer = raf.getFilePointer();
             c = raf.read();
             switch (c) {
                 case -1:
@@ -211,7 +190,6 @@ public class LogWatcher extends Thread {
                     break;
                 case '\r':
                     eol = true;
-//          lastFilePointer = raf.getFilePointer();
                     if ((raf.read()) != '\n') {
                         raf.seek(raf.getFilePointer() - 1);
                     }
@@ -227,8 +205,6 @@ public class LogWatcher extends Thread {
     //  private int i;
     private synchronized void onLine(byte[] line) {
         if (null == newPendingFiles) {
-            if (debug)
-                log("onLine(" + line + ")");
             for (LogMonitor monitor : logMonitors) {
                 try {
                     monitor.onLine(this.file, new String(line, encoding), this.filePointer);
@@ -245,8 +221,6 @@ public class LogWatcher extends Thread {
         if (null == newPendingFiles) {
             hasStarted = true;
             hasEnded = false;
-            if (debug)
-                log("logStarted()");
             for (LogMonitor monitor : logMonitors) {
                 try {
                     monitor.logStarted(this.file, this.filePointer);
@@ -260,8 +234,6 @@ public class LogWatcher extends Thread {
     private synchronized void logEnded() {
         if (null == newPendingFiles) {
             hasEnded = true;
-            if (debug)
-                log("logEnded()");
             for (LogMonitor monitor : logMonitors) {
                 try {
                     monitor.logEnded(this.file, this.filePointer);
@@ -275,8 +247,6 @@ public class LogWatcher extends Thread {
     private synchronized void logContinued() {
         if (null == newPendingFiles) {
             hasEnded = false;
-            if (debug)
-                log("logContinued()");
             for (LogMonitor monitor : logMonitors) {
                 try {
                     monitor.logContinued(this.file, this.filePointer);
@@ -289,8 +259,6 @@ public class LogWatcher extends Thread {
 
     private synchronized void onException(IOException ioe) {
         if (null == newPendingFiles) {
-            if (debug)
-                log("onException()");
             for (LogMonitor monitor : logMonitors) {
                 try {
                     monitor.onException(this.file, ioe);
@@ -313,11 +281,4 @@ public class LogWatcher extends Thread {
             }
         }
     }
-
-    private void log(String msg) {
-        if (debug) {
-            System.out.println("logWatcher:" + msg);
-        }
-    }
-
 }

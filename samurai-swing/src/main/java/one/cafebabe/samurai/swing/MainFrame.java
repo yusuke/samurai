@@ -27,13 +27,7 @@ import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.Transferable;
 import java.awt.datatransfer.UnsupportedFlavorException;
-import java.awt.dnd.DnDConstants;
-import java.awt.dnd.DropTarget;
-import java.awt.dnd.DropTargetDragEvent;
-import java.awt.dnd.DropTargetDropEvent;
-import java.awt.dnd.DropTargetEvent;
-import java.awt.dnd.DropTargetListener;
-import java.awt.dnd.InvalidDnDOperationException;
+import java.awt.dnd.*;
 import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
@@ -673,7 +667,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         }
 
         public void dropActionChanged(DropTargetDragEvent event) {
-            System.out.println("changed");
         }
 
         public void dragExit(DropTargetEvent event) {

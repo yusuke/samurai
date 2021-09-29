@@ -57,7 +57,6 @@ public class Tailer extends Thread {
                 }
             }
             if (50 < (System.currentTimeMillis() - lastCheck)) {
-//        System.out.println("check inactive watcher"+inactiveWatchers.size()+" "+activeWatchers.size());
                 for (int i = 0; i < inactiveWatchers.size(); i++) {
                     SingleLogWatcher watcher = inactiveWatchers.get(i);
                     watcher.checkUpdate();
