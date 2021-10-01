@@ -37,18 +37,18 @@ public class CSVParser implements LineGraphDataSourceParser {
             }
         } else {
             String[] splitted = line.split(",");
-            double[] datas = new double[labels.length];
+            double[] dataArray = new double[labels.length];
             for (int i = 0; i < labels.length; i++) {
                 try {
-                    datas[i] = Double.parseDouble(splitted[i]);
+                    dataArray[i] = Double.parseDouble(splitted[i]);
                 } catch (NumberFormatException nfe) {
-                    datas[i] = splitted[i].hashCode();
+                    dataArray[i] = splitted[i].hashCode();
                 } catch (ArrayIndexOutOfBoundsException aioobe) {
-                    datas[i] = 0d;
+                    dataArray[i] = 0d;
                 }
             }
             for (int i = 0; i < labels.length; i++) {
-                lineGraphs.get(i).addValues(new double[]{datas[i]});
+                lineGraphs.get(i).addValues(new double[]{dataArray[i]});
             }
         }
         return true;
