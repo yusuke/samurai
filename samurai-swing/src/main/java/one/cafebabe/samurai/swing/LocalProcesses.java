@@ -17,10 +17,12 @@ package one.cafebabe.samurai.swing;
 
 import com.sun.tools.attach.AttachNotSupportedException;
 import one.cafebabe.samurai.remotedump.ProcessUtil;
-import one.cafebabe.samurai.remotedump.VM;
 import one.cafebabe.samurai.remotedump.ThreadDumpUtil;
+import one.cafebabe.samurai.remotedump.VM;
 import one.cafebabe.samurai.util.Configuration;
 import one.cafebabe.samurai.util.GUIResourceBundle;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import sun.jvmstat.monitor.MonitorException;
 
 import javax.swing.*;
@@ -28,7 +30,10 @@ import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -37,6 +42,8 @@ import java.util.concurrent.Executors;
 
 
 public class LocalProcesses {
+    private static final Logger logger = LogManager.getLogger();
+
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
 
     private final FileHistory fileHistory;
@@ -102,6 +109,7 @@ public class LocalProcesses {
                 }
             }
         } catch (URISyntaxException | MonitorException e) {
+            logger.warn("unable to monitor", e);
             e.printStackTrace();
         }
     }

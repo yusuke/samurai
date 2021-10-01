@@ -17,11 +17,14 @@ package one.cafebabe.samurai.swing;
 
 import one.cafebabe.samurai.util.GUIResourceBundle;
 import one.cafebabe.samurai.util.OSDetector;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
 
 
 public class Samurai {
+    private static final Logger logger = LogManager.getLogger();
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
 
     public static void main(String[] args) {
@@ -36,13 +39,13 @@ public class Samurai {
         }
         SwingUtilities.invokeLater(() -> {
             try {
-                javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
-                javax.swing.JFrame frame = new MainFrame();
-                frame.validate();
-                frame.setVisible(true);
-            } catch (Exception e) {
-                e.printStackTrace();
+                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
+                logger.warn("failed to setLookAndFeel", e);
             }
+            javax.swing.JFrame frame = new MainFrame();
+            frame.validate();
+            frame.setVisible(true);
         });
     }
 }
