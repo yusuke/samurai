@@ -23,11 +23,10 @@ import java.text.DecimalFormat;
 
 
 /*package*/ class PlotData {
-    private List<double[/*double ydata[]*//*double x */]>[] datas;
+    private List<double[/*double ydata[]*//*double x */]>[] dataList;
     private String[] labels;
     private int size;
     private double[] maxY;
-    private double[] maxX;
     private double[] minY;
     private boolean[] visible;
     private Color[] colors;
@@ -45,7 +44,7 @@ import java.text.DecimalFormat;
     /*package*/ void setLabels(String[] labels) {
         this.labels = labels;
         this.initialized = true;
-        this.datas = new List[labels.length + 1];
+        this.dataList = new List[labels.length + 1];
         this.xDataIndex = labels.length;
         this.size = 0;
         this.maxY = new double[labels.length];
@@ -57,9 +56,9 @@ import java.text.DecimalFormat;
             this.maxY[i] = 0;
             this.minY[i] = 0;
             this.colors[i] = DEFAULT_COLORS[i % DEFAULT_COLORS.length];
-            this.datas[i] = new ArrayList<>(1);
+            this.dataList[i] = new ArrayList<>(1);
         }
-        this.datas[xDataIndex] = new ArrayList<>(1);
+        this.dataList[xDataIndex] = new ArrayList<>(1);
     }
 
     /*package*/ double getMaxAt(int index) {
@@ -108,7 +107,7 @@ import java.text.DecimalFormat;
         if (!initialized) {
             throw new IllegalStateException("not yet initialized");
         }
-        return datas[index].get(count / DATA_CHUNK_SIZE)[count % DATA_CHUNK_SIZE];
+        return dataList[index].get(count / DATA_CHUNK_SIZE)[count % DATA_CHUNK_SIZE];
     }
 
     /*package*/ void setMaxAt(int index, double max) {
@@ -139,7 +138,7 @@ import java.text.DecimalFormat;
         this.labels[index] = label;
     }
 
-    /*package*/ void addValues(double x, double[] newDatas) {
+    /*package*/ void addValues(double x, double[] newDataArray) {
         if (!initialized) {
             throw new IllegalStateException("not yet initialized");
         }
@@ -147,25 +146,25 @@ import java.text.DecimalFormat;
         int leftover = size % DATA_CHUNK_SIZE;
         if ((leftover) == 0) {
             for (int i = 0; i < this.labels.length; i++) {
-                this.datas[i].add(new double[DATA_CHUNK_SIZE]);
+                this.dataList[i].add(new double[DATA_CHUNK_SIZE]);
             }
-            this.datas[xDataIndex].add(new double[DATA_CHUNK_SIZE]);
+            this.dataList[xDataIndex].add(new double[DATA_CHUNK_SIZE]);
         }
         for (int i = 0; i < this.labels.length; i++) {
-            if (maxY[i] < newDatas[i]) {
-                maxY[i] = newDatas[i];
+            if (maxY[i] < newDataArray[i]) {
+                maxY[i] = newDataArray[i];
             }
-            if (minY[i] > newDatas[i]) {
-                minY[i] = newDatas[i];
+            if (minY[i] > newDataArray[i]) {
+                minY[i] = newDataArray[i];
             }
-            this.datas[i].get(chunkIndex)[leftover] = newDatas[i];
+            this.dataList[i].get(chunkIndex)[leftover] = newDataArray[i];
         }
-        this.datas[xDataIndex].get(chunkIndex)[leftover] = x;
+        this.dataList[xDataIndex].get(chunkIndex)[leftover] = x;
         size++;
     }
 
-    /*package*/ void addValues(double[] newDatas) {
-        addValues(size, newDatas);
+    /*package*/ void addValues(double[] newDataArray) {
+        addValues(size, newDataArray);
     }
 
     private final Color[] DEFAULT_COLORS = new Color[]{
@@ -226,7 +225,6 @@ import java.text.DecimalFormat;
                         int drawX = width - drawWidth;
                         int lastY = maxY - (int) ((double) height / getMaxAt(i) * getValueAt(i, index - drawWidth + 1));
                         for (int j = index - drawWidth + 2; j < index; j++) {
-//                        for (int j = --index; j >= 0; j--) {
                             int drawY = maxY - (int) ((double) height / getMaxAt(i) * getValueAt(i, j));
                             c.drawLine(drawX, lastY, drawX + 1, drawY);
                             lastY = drawY;
@@ -255,8 +253,7 @@ import java.text.DecimalFormat;
                     int currentValueY = maxY -
                             (int) ((double) height / getMaxAt(i) *
                                     getValueAt(i, size() - 1));
-                    currentValueY = fontHeight > currentValueY ? fontHeight :
-                            currentValueY;
+                    currentValueY = Math.max(fontHeight, currentValueY);
                     c.drawString(currentValue,
                             width - c.getStringWidth(currentValue) - 5,
                             currentValueY);
