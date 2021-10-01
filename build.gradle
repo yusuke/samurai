@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'one.cafebabe'
-version '2021.6'
+version '2021.7'
 
 if (hasProperty('buildScan')) {
     buildScan {
@@ -39,8 +39,8 @@ task packageMacApp(type: Exec) {
             '--icon', 'package/samurai.icns',
             '--input', "${projectDir}/samurai-swing/build/",
             '--dest', './build/',
-            '--type', 'pkg',
-            '--mac-app-store',
+            '--type', 'dmg',
+//            '--mac-app-store',
             '--mac-package-identifier', 'one.cafebabe.Samurai',
             '--mac-signing-key-user-name', 'Yusuke Yamamoto (TX2Q55XRF7)',
             '--mac-sign',
