@@ -18,10 +18,8 @@ package one.cafebabe.samurai.swing;
 import one.cafebabe.samurai.util.Configuration;
 import one.cafebabe.samurai.util.GUIResourceBundle;
 
-import javax.swing.JFileChooser;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import java.awt.Component;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -57,11 +55,10 @@ public final class FileHistory {
     public synchronized JMenuItem getOpenMenu(final Component component) {
         JMenuItem openMenu = new JMenuItem(resources.getMessage("menu.file.open"));
             openMenu.addActionListener(e -> {
-                if (JFileChooser.APPROVE_OPTION == fileChooser
-                        .showOpenDialog(component)) {
-                    File file = fileChooser.getSelectedFile();
-                    open(file);
-                }
+                FileDialog fileDialog = new FileDialog((Frame) null);
+                fileDialog.setVisible(true);
+                File[] file = fileDialog.getFiles();
+                open(file);
             });
         return openMenu;
     }
