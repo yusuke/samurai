@@ -72,6 +72,18 @@ task stapleMacApp(type: Exec) {
     )
 }
 
+task validateMacApp(type: Exec) {
+    workingDir './'
+
+    commandLine('xcrun',
+            'altool', '--validate-app', '-u', project.properties['APPLE_DEVELOPER_USER'] ?: "none",
+            '-p', project.properties['APPLE_DEVELOPER_APP_PASSWORD'] ?: "none",
+            '-t', 'osx',
+            '-f', "/Applications/${appName}.app"
+    )
+}
+
+//xcrun altool --validate-app -f file -t platform -u username [-p password]
 
 task packageWinApp(type: Exec) {
     workingDir './'
