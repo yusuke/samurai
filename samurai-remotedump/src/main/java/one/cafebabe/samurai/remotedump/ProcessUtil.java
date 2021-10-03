@@ -21,10 +21,7 @@ import org.apache.logging.log4j.Logger;
 import sun.jvmstat.monitor.*;
 
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class ProcessUtil {
     private static final Logger logger = LogManager.getLogger();
@@ -38,12 +35,16 @@ public class ProcessUtil {
             try {
                 int pid = pidInteger;
                 MonitoredVm vm = mh.getMonitoredVm(new VmIdentifier("//" + pid + "?mode=r"), 0);
-                StringMonitor sm = (StringMonitor) vm.findByName("sun.rt.javaCommand");
-                String fullCommandLine = "";
-                if (sm != null) {
-                    fullCommandLine = sm.stringValue();
+                List<Monitor> byPattern = vm.findByPattern(".*");
+                Map<String, String> props = new HashMap<>();
+                for (Monitor monitor : byPattern) {
+                    if(monitor instanceof StringMonitor){
+                        props.put(monitor.getName(),((StringMonitor)monitor).stringValue());
+                    }else if(monitor instanceof IntegerMonitor){
+                        props.put(monitor.getName(),String.valueOf(((IntegerMonitor)monitor).intValue()));
+                    }
                 }
-                vms.add(new VM(pid, fullCommandLine));
+                vms.add(new VM(pid, props));
                 vm.detach();
             } catch (MonitorException me) {
                 logger.warn("target process[{}] is no longer available", pidInteger, me);

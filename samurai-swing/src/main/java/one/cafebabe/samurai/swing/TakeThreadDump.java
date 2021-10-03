@@ -123,7 +123,7 @@ public class TakeThreadDump {
         final VM vm;
 
         public LocalProcessMenuItem(VM vm) {
-            super(String.format("%s %s", vm.getPid(), vm.getFqcn()));
+            super(String.format("%s (Java %s / pid %s)", vm.getFqcn(), vm.version, vm.getPid()));
             this.vm = vm;
             addActionListener(e -> executor.execute(() -> {
                 try {

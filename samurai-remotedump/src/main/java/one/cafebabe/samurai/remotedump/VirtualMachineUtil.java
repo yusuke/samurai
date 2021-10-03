@@ -31,8 +31,26 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class VirtualMachineUtil {
-    public static @Nullable
-    String getGCLogPath(long pid) throws AttachNotSupportedException, IOException {
+
+    @NotNull
+    public static String getVmVersion(long pid) throws IOException, AttachNotSupportedException {
+        HotSpotVirtualMachine virtualMachine = null;
+        try {
+            virtualMachine = (HotSpotVirtualMachine) VirtualMachine.attach(String.valueOf(pid));
+            return virtualMachine.getSystemProperties().getProperty("java.version");
+        } finally {
+            if (virtualMachine != null) {
+                try {
+                    virtualMachine.detach();
+                } catch (IOException ignore) {
+                }
+            }
+        }
+
+    }
+
+    @Nullable
+    public static String getGCLogPath(long pid) throws AttachNotSupportedException, IOException {
         return extractGClogFileName(new String(invoke(pid, "VM.log list")));
     }
 
@@ -75,8 +93,8 @@ public class VirtualMachineUtil {
         return new String(getThreadDump(pid), StandardCharsets.UTF_8);
     }
 
-    public static @Nullable
-    String extractGClogFileName(String out) {
+    @Nullable
+    public static String extractGClogFileName(String out) {
         String fallback = null;
         for (String line : out.split("\n")) {
             if (line.contains("gc=")) {
@@ -91,9 +109,8 @@ public class VirtualMachineUtil {
         }
         return fallback;
     }
-
-    private static @Nullable
-    String extractFileName(String line) {
+    @Nullable
+    private static String extractFileName(String line) {
         Pattern filePattern = Pattern.compile("file=([^ ]+) ");
         Matcher matcher = filePattern.matcher(line);
         if (matcher.find()) {

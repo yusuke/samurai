@@ -40,6 +40,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.stream.Collectors;
 
 public class ViewGcLog {
     private static final Logger logger = LogManager.getLogger();
@@ -76,8 +77,9 @@ public class ViewGcLog {
 
     private void updateChildMenuItems() {
         try {
-            List<VM> currentVms = ProcessUtil.getVMs("localhost");
-
+            // dynamic log configuration is supported by Java 9 or later
+            List<VM> currentVms = ProcessUtil.getVMs("localhost").stream()
+                    .filter(e -> e.isVersionGraterThan(8)).collect(Collectors.toList());
             for (int i = 0; i < viewGcLogMenu.getItemCount(); i++) {
                 LocalProcessMenuItem item = (LocalProcessMenuItem) viewGcLogMenu.getItem(i);
                 boolean found = false;
@@ -123,7 +125,7 @@ public class ViewGcLog {
         final VM vm;
 
         public LocalProcessMenuItem(VM vm) {
-            super(String.format("%s %s", vm.getPid(), vm.getFqcn()));
+            super(String.format("%s (Java %s / pid %s)", vm.getFqcn(), vm.version, vm.getPid()));
             this.vm = vm;
             addActionListener(e -> executor.execute(() -> {
                 try {
@@ -140,7 +142,7 @@ public class ViewGcLog {
                     }
                     fileHistory.open(new File(gcLogPath));
                 } catch (AttachNotSupportedException | IOException e1) {
-                    logger.warn("failed to attach pid[{}]",vm.getPid(), e1);
+                    logger.warn("failed to attach pid[{}]", vm.getPid(), e1);
                 }
             }));
         }

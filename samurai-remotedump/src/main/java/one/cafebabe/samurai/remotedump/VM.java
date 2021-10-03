@@ -16,10 +16,13 @@
  */
 package one.cafebabe.samurai.remotedump;
 
+import java.util.Map;
+
 public class VM {
     private final int pid;
-    private String fqcn = "";
-    private String fullCommandLine = "";
+    public final String version;
+    private final String fqcn;
+    private final String fullCommandLine;
 
     public int getPid() {
         return pid;
@@ -33,12 +36,33 @@ public class VM {
         return fullCommandLine;
     }
 
-    public VM(int pid, String fullCommandLine) {
+    public VM(int pid, Map<String, String> map) {
         this.pid = pid;
-        if (fullCommandLine != null) {
-            this.fullCommandLine = fullCommandLine;
-            fullCommandLine = fullCommandLine.replaceFirst("^com\\.intellij\\.rt\\.execution\\.application\\.AppMain ", "");
-            this.fqcn = fullCommandLine.replaceFirst(" .*$", "");
+        this.version = map.get("java.property.java.version");
+        String fullCommandLine = map.get("sun.rt.javaCommand");
+        this.fullCommandLine = fullCommandLine.replaceFirst("^com\\.intellij\\.rt\\.execution\\.application\\.AppMain ", "");
+        this.fqcn = fullCommandLine.replaceFirst(" .*$", "");
+    }
+
+    static String toFQCN(String javaCommand) {
+        return javaCommand.replaceFirst(" .*$", "");
+    }
+
+    public boolean isVersionGraterThan(int version) {
+        return version < toIntVersion(this.version);
+    }
+
+    static int toIntVersion(String stringVersion) {
+        String[] split = stringVersion.split("\\.");
+        try {
+            int firstNumber = Integer.parseInt(split[0]);
+            if (firstNumber != 1) {
+                return firstNumber;
+            }
+            return Integer.parseInt(split[1]);
+
+        } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
+            return -1;
         }
     }
 }
