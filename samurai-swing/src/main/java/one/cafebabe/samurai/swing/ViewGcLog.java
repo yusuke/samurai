@@ -31,10 +31,8 @@ import javax.swing.event.MenuListener;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -133,10 +131,6 @@ public class ViewGcLog {
                     if (gcLogPath == null) {
                         Path path = Paths.get(System.getProperty("user.home"),
                                 String.format("%s-%d-%s.gc.txt", vm.fqcn, vm.pid, LocalDateTime.now().format(dateTimeFormatter)));
-                        Files.writeString(path, LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) + "\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                        Files.writeString(path, "pid: " + vm.pid + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                        Files.writeString(path, "FQCN: " + vm.fqcn + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                        Files.writeString(path, String.format("Command line:\n%s\n\n", vm.fullCommandLine), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
                         gcLogPath = path.toFile().getAbsolutePath();
                         VirtualMachineUtil.setGCLogPath(vm.pid, gcLogPath);
                     }
