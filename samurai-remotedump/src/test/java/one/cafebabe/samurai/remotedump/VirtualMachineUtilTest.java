@@ -25,10 +25,10 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
-import static one.cafebabe.samurai.remotedump.ThreadDumpUtil.getGCLogPath;
+import static one.cafebabe.samurai.remotedump.VirtualMachineUtil.getGCLogPath;
 import static org.junit.jupiter.api.Assertions.*;
 
-class ThreadDumpUtilTest {
+class VirtualMachineUtilTest {
     // https://docs.oracle.com/javase/jp/10/jrockit-hotspot/logging.htm
 //    -Xlog:gc:file=
     //  -Xlog:gc:
@@ -101,7 +101,7 @@ class ThreadDumpUtilTest {
             assertEquals(0, tempFile.length());
             process = launchThreadDumpUtilTestMainInASeparateProcess(null);
             assertNull(getGCLogPath(process.pid()));
-            ThreadDumpUtil.setGCLogPath(process.pid(), tempFile.getAbsolutePath());
+            VirtualMachineUtil.setGCLogPath(process.pid(), tempFile.getAbsolutePath());
             assertEquals(tempFile.getAbsolutePath(), getGCLogPath(process.pid()));
             Thread.sleep(1000);
             process.destroy();
@@ -136,7 +136,7 @@ class ThreadDumpUtilTest {
                     " #1: stderr all=off uptime,level,tags\n" +
                     " #2: file=/tmp/gc.log all=off,gc=info uptime,level,tags filecount=5,filesize=20480K (reconfigured)\n" +
                     " #3: file=/tmp/class.log all=off,class=info uptime,level,tags filecount=5,filesize=20480K (reconfigured)";
-            assertEquals("/tmp/gc.log", ThreadDumpUtil.extractGClogFileName(out));
+            assertEquals("/tmp/gc.log", VirtualMachineUtil.extractGClogFileName(out));
         }
         {
             String out = "86433:\n" +
@@ -149,7 +149,7 @@ class ThreadDumpUtilTest {
                     " #0: stdout all=warning uptime,level,tags\n" +
                     " #1: stderr all=off uptime,level,tags\n" +
                     " #2: file=/tmp/all.log all=info uptime,level,tags filecount=5,filesize=20480K (reconfigured)\n";
-            assertEquals("/tmp/all.log", ThreadDumpUtil.extractGClogFileName(out));
+            assertEquals("/tmp/all.log", VirtualMachineUtil.extractGClogFileName(out));
         }
 
     }

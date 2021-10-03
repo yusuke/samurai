@@ -31,7 +31,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ThreadDumpUtil {
+public class VirtualMachineUtil {
     public static @Nullable
     String getGCLogPath(long pid) throws AttachNotSupportedException, IOException {
         return extractGClogFileName(new String(invoke(pid, "VM.log list")));

@@ -17,8 +17,8 @@ package one.cafebabe.samurai.swing;
 
 import com.sun.tools.attach.AttachNotSupportedException;
 import one.cafebabe.samurai.remotedump.ProcessUtil;
-import one.cafebabe.samurai.remotedump.ThreadDumpUtil;
 import one.cafebabe.samurai.remotedump.VM;
+import one.cafebabe.samurai.remotedump.VirtualMachineUtil;
 import one.cafebabe.samurai.util.Configuration;
 import one.cafebabe.samurai.util.GUIResourceBundle;
 import org.apache.logging.log4j.LogManager;
@@ -137,7 +137,7 @@ public class LocalProcesses {
                     SwingUtilities.invokeLater(() -> fileHistory.open(path.toFile()));
 
                     for (int i = 0; i < 3; i++) {
-                        Files.write(path, ThreadDumpUtil.getThreadDump(vm.getPid()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                        Files.write(path, VirtualMachineUtil.getThreadDump(vm.getPid()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
                         Thread.sleep(1000);
                     }
                 } catch (InterruptedException | AttachNotSupportedException | IOException e1) {
