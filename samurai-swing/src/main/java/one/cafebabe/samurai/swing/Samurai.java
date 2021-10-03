@@ -37,6 +37,7 @@ public class Samurai {
             System.setProperty("com.apple.mrj.application.apple.menu.about.name",
                     resources.getMessage("Samurai"));
         }
+        System.setProperty("jdk.attach.allowAttachSelf", "true");
         SwingUtilities.invokeLater(() -> {
             try {
                 UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());

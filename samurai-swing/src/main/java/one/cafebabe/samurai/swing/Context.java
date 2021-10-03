@@ -26,6 +26,7 @@ public class Context {
     private final FileHistory fileHistory = new FileHistory(config);
 
     private TakeThreadDump takeThreadDump = null;
+    private ViewGcLog viewGcLog = null;
     private final CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
     final ExecuteThread executeThread = new ExecuteThread();
     private final JLabel statusBar;
@@ -41,6 +42,10 @@ public class Context {
             this.takeThreadDump = new TakeThreadDump(config, fileHistory);
         } catch (java.lang.NoClassDefFoundError ignored) {
         }
+        try {
+            this.viewGcLog = new ViewGcLog(config, fileHistory);
+        } catch (java.lang.NoClassDefFoundError ignored) {
+        }
 
         executeThread.start();
     }
@@ -53,8 +58,11 @@ public class Context {
         return this.config;
     }
 
-    public TakeThreadDump getLocalProcesses() {
+    public TakeThreadDump getTakeThreadDump() {
         return this.takeThreadDump;
+    }
+    public ViewGcLog getViewGcLog() {
+        return this.viewGcLog;
     }
 
     public FileHistory getFileHistory() {

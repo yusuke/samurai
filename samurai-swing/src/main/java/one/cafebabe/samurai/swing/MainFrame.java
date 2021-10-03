@@ -42,7 +42,8 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     private final JMenuItem menuFileNewTab = new JMenuItem(resources.getMessage("menu.file.newTab"));
     private final JMenuItem menuFileOpen;
     private final JMenu menuFileRecent;
-    private JMenu menuFileLocalProcesses;
+    private JMenu menuFileTakeThreadDumps;
+    private JMenu menuFileViewGcLog;
     private final JMenuItem menuFileClose = new JMenuItem(resources.getMessage("menu.file.close"));
 
     private final JMenuItem menuFileExit = new JMenuItem(resources.getMessage("menu.file.exit"));
@@ -97,10 +98,15 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         menuFileOpen = context.getFileHistory().getOpenMenu(this);
         context.getFileHistory().setFileHistoryListener(this);
         menuFileRecent = context.getFileHistory().getOpenRecentMenu();
-        TakeThreadDump takeThreadDump = context.getLocalProcesses();
+        TakeThreadDump takeThreadDump = context.getTakeThreadDump();
         if (takeThreadDump != null) {
-            menuFileLocalProcesses = takeThreadDump.getTakeThreadDumpMenu();
-            menuFileLocalProcesses.setEnabled(true);
+            menuFileTakeThreadDumps = takeThreadDump.getTakeThreadDumpMenu();
+            menuFileTakeThreadDumps.setEnabled(true);
+        }
+        ViewGcLog viewGcLog = context.getViewGcLog();
+        if (viewGcLog != null) {
+            menuFileViewGcLog = viewGcLog.getViewGcLogMenu();
+            menuFileViewGcLog.setEnabled(true);
         }
 
         menuFileClose
@@ -163,7 +169,10 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         menuFile.add(menuFileOpen);
         menuFile.add(menuFileRecent);
         if (takeThreadDump != null) {
-            menuFile.add(menuFileLocalProcesses);
+            menuFile.add(menuFileTakeThreadDumps);
+        }
+        if (viewGcLog != null) {
+            menuFile.add(menuFileViewGcLog);
         }
         menuFile.addSeparator();
         menuFile.add(menuFileClose);

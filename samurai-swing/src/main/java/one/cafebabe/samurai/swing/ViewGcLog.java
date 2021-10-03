@@ -28,6 +28,7 @@ import sun.jvmstat.monitor.MonitorException;
 import javax.swing.*;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
+import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
@@ -40,19 +41,18 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-
-public class TakeThreadDump {
+public class ViewGcLog {
     private static final Logger logger = LogManager.getLogger();
 
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
 
     private final FileHistory fileHistory;
-    private final JMenu takeThreadDumpMenu = new JMenu(resources.getMessage("menu.file.takeThreadDumpFrom"));
+    private final JMenu viewGcLogMenu = new JMenu(resources.getMessage("menu.file.viewGcLogFrom"));
 
-    public TakeThreadDump(Configuration config, FileHistory fileHistory) {
+    public ViewGcLog(Configuration config, FileHistory fileHistory) {
         config.apply(this);
         this.fileHistory = fileHistory;
-        takeThreadDumpMenu.addMenuListener(new MenuListener() {
+        viewGcLogMenu.addMenuListener(new MenuListener() {
             @Override
             public void menuSelected(MenuEvent e) {
                 updateChildMenuItems();
@@ -70,16 +70,16 @@ public class TakeThreadDump {
         });
     }
 
-    public JMenu getTakeThreadDumpMenu() {
-        return this.takeThreadDumpMenu;
+    public JMenu getViewGcLogMenu() {
+        return this.viewGcLogMenu;
     }
 
     private void updateChildMenuItems() {
         try {
             List<VM> currentVms = ProcessUtil.getVMs("localhost");
 
-            for (int i = 0; i < takeThreadDumpMenu.getItemCount(); i++) {
-                LocalProcessMenuItem item = (LocalProcessMenuItem) takeThreadDumpMenu.getItem(i);
+            for (int i = 0; i < viewGcLogMenu.getItemCount(); i++) {
+                LocalProcessMenuItem item = (LocalProcessMenuItem) viewGcLogMenu.getItem(i);
                 boolean found = false;
                 for (VM vm : currentVms) {
                     if (item.getVm().getPid() == vm.getPid()) {
@@ -88,15 +88,15 @@ public class TakeThreadDump {
                     }
                 }
                 if (!found) {
-                    takeThreadDumpMenu.remove(item);
+                    viewGcLogMenu.remove(item);
                 }
 
             }
 
             for (VM vm : currentVms) {
                 boolean found = false;
-                for (int i = 0; i < takeThreadDumpMenu.getItemCount(); i++) {
-                    LocalProcessMenuItem item = (LocalProcessMenuItem) takeThreadDumpMenu.getItem(i);
+                for (int i = 0; i < viewGcLogMenu.getItemCount(); i++) {
+                    LocalProcessMenuItem item = (LocalProcessMenuItem) viewGcLogMenu.getItem(i);
                     if (item.getVm().getPid() == vm.getPid()) {
                         found = true;
                         break;
@@ -105,7 +105,7 @@ public class TakeThreadDump {
                 if (!found) {
                     JMenuItem localProcess = new LocalProcessMenuItem(vm);
                     localProcess.setToolTipText(vm.getFullCommandLine());
-                    takeThreadDumpMenu.add(localProcess);
+                    viewGcLogMenu.add(localProcess);
                 }
             }
         } catch (URISyntaxException | MonitorException e) {
@@ -127,20 +127,19 @@ public class TakeThreadDump {
             this.vm = vm;
             addActionListener(e -> executor.execute(() -> {
                 try {
-                    Path path = Paths.get(System.getProperty("user.home"),
-                            String.format("%s-%d-%s.txt", vm.getFqcn(), vm.getPid(), LocalDateTime.now().format(dateTimeFormatter)));
-                    Files.writeString(path, LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) + "\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                    Files.writeString(path, "pid: " + vm.getPid() + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                    Files.writeString(path, "FQCN: " + vm.getFqcn() + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                    Files.writeString(path, String.format("Command line:\n%s\n\n", vm.getFullCommandLine()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-
-                    fileHistory.open(path.toFile());
-
-                    for (int i = 0; i < 3; i++) {
-                        Files.write(path, VirtualMachineUtil.getThreadDump(vm.getPid()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                        Thread.sleep(1000);
+                    String gcLogPath = VirtualMachineUtil.getGCLogPath(vm.getPid());
+                    if (gcLogPath == null) {
+                        Path path = Paths.get(System.getProperty("user.home"),
+                                String.format("%s-%d-%s.gc.txt", vm.getFqcn(), vm.getPid(), LocalDateTime.now().format(dateTimeFormatter)));
+                        Files.writeString(path, LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) + "\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                        Files.writeString(path, "pid: " + vm.getPid() + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                        Files.writeString(path, "FQCN: " + vm.getFqcn() + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                        Files.writeString(path, String.format("Command line:\n%s\n\n", vm.getFullCommandLine()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                        gcLogPath = path.toFile().getAbsolutePath();
+                        VirtualMachineUtil.setGCLogPath(vm.getPid(), gcLogPath);
                     }
-                } catch (InterruptedException | AttachNotSupportedException | IOException e1) {
+                    fileHistory.open(new File(gcLogPath));
+                } catch (AttachNotSupportedException | IOException e1) {
                     logger.warn("failed to attach pid[{}]",vm.getPid(), e1);
                 }
             }));
