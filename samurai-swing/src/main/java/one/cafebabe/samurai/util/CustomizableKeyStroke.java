@@ -16,13 +16,8 @@
 package one.cafebabe.samurai.util;
 
 
-import javax.swing.JFrame;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JPopupMenu;
-import javax.swing.KeyStroke;
-import java.awt.Component;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.io.InputStream;
@@ -48,6 +43,13 @@ public class CustomizableKeyStroke {
         if (null != is) {
             try {
                 props.load(is);
+                props.keySet().forEach(e-> {
+                    String message = resources.getMessage((String) e);
+                    if (message != null) {
+                        props.setProperty(message,
+                                props.getProperty((String) e));
+                    }
+                });
             } catch (IOException ioe) {
                 //don't care if it exists
                 //throw new AssertionError("The keystroke resource must be exist:" + location);
