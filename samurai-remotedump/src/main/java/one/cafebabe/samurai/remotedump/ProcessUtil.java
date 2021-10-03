@@ -30,7 +30,6 @@ public class ProcessUtil {
     private static final Logger logger = LogManager.getLogger();
 
     public static List<VM> getVMs(String host) throws URISyntaxException, MonitorException {
-        int localPid = (int)ProcessHandle.current().pid();
         List<VM> vms = new ArrayList<>();
         HostIdentifier hi = new HostIdentifier(host);
         MonitoredHost mh = MonitoredHost.getMonitoredHost(hi);
@@ -38,17 +37,14 @@ public class ProcessUtil {
         for (Integer pidInteger : jvms) {
             try {
                 int pid = pidInteger;
-                // exclude local process from the list
-                if (pid != localPid) {
-                    MonitoredVm vm = mh.getMonitoredVm(new VmIdentifier("//" + pid + "?mode=r"), 0);
-                    StringMonitor sm = (StringMonitor) vm.findByName("sun.rt.javaCommand");
-                    String fullCommandLine = "";
-                    if (sm != null) {
-                        fullCommandLine = sm.stringValue();
-                    }
-                    vms.add(new VM(pid, fullCommandLine));
-                    vm.detach();
+                MonitoredVm vm = mh.getMonitoredVm(new VmIdentifier("//" + pid + "?mode=r"), 0);
+                StringMonitor sm = (StringMonitor) vm.findByName("sun.rt.javaCommand");
+                String fullCommandLine = "";
+                if (sm != null) {
+                    fullCommandLine = sm.stringValue();
                 }
+                vms.add(new VM(pid, fullCommandLine));
+                vm.detach();
             } catch (MonitorException me) {
                 logger.warn("target process[{}] is no longer available", pidInteger, me);
             }

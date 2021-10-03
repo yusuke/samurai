@@ -24,6 +24,7 @@ task packageMacApp(type: Exec) {
             '--jlink-options', '--strip-native-commands',
             '--java-options',
             """-Xmx128m -Xms128m -XX:+UseSerialGC -Dsun.java2d.metal=true
+               -Djdk.attach.allowAttachSelf=true
                --add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED
                --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
                --add-opens=java.desktop/javax.swing=ALL-UNNAMED
@@ -95,6 +96,7 @@ task packageWinApp(type: Exec) {
             '--jlink-options', '--strip-native-commands',
             '--java-options',
             """-Xmx128m -Xms128m -XX:+UseSerialGC
+               -Djdk.attach.allowAttachSelf=true
                --add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED
                --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
                --add-opens=java.desktop/javax.swing=ALL-UNNAMED
