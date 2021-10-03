@@ -229,7 +229,9 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         contentPane.add(southPane, BorderLayout.SOUTH);
         southPane.setLayout(borderLayout2);
         southPane.add(statusBar, BorderLayout.SOUTH);
-        setIconImage(Toolkit.getDefaultToolkit().createImage(MainFrame.class.getResource("images/samurai64.gif")));
+        if (OSDetector.isWindows()) {
+            setIconImage(Toolkit.getDefaultToolkit().createImage(MainFrame.class.getResource("images/samurai.png")));
+        }
 
         context.getConfig().applyRectangle("MainFrame.bounds", this);
         context.getConfig().applyLocation("ConfigDialog.location", configDialog);
