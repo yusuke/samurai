@@ -24,10 +24,14 @@ public class ImageLoader {
     private static final Map<String, ImageIcon> iconCache = new HashMap<>();
 
     public static ImageIcon get(String resourcePath) {
+        return get(resourcePath, 16, 16);
+    }
+
+    public static ImageIcon get(String resourcePath, int width, int height) {
         //noinspection ConstantConditions
         return iconCache.computeIfAbsent(resourcePath, e -> new ImageIcon(new ImageIcon(
                 ImageLoader.class.getResource(e))
                 .getImage()
-                .getScaledInstance(16, 16, Image.SCALE_SMOOTH)));
+                .getScaledInstance(width, height, Image.SCALE_SMOOTH)));
     }
 }

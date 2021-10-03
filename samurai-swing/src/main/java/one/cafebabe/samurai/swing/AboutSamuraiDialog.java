@@ -16,6 +16,7 @@
 package one.cafebabe.samurai.swing;
 
 import one.cafebabe.samurai.util.GUIResourceBundle;
+import one.cafebabe.samurai.util.ImageLoader;
 
 import javax.swing.*;
 import javax.swing.event.HyperlinkEvent;
@@ -25,7 +26,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.util.Objects;
 
 public class AboutSamuraiDialog extends JDialog implements ActionListener {
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
@@ -35,7 +35,7 @@ public class AboutSamuraiDialog extends JDialog implements ActionListener {
     final JLabel imageLabel = new JLabel();
     public final JLabel versionLabel = new JLabel(resources.getMessage("AboutSamuraiDialog.version"));
     public final JLabel copyrightLabel = new JLabel(resources.getMessage("AboutSamuraiDialog.copyright"));
-    ImageIcon image1 = new ImageIcon(Objects.requireNonNull(MainFrame.class.getResource("images/samurai64.gif")));
+    ImageIcon image1 = ImageLoader.get("/one/cafebabe/samurai/swing/images/samurai.png", 64, 64);
     final GridBagLayout gridBagLayout1 = new GridBagLayout();
     final JScrollPane jScrollPane1 = new JScrollPane();
     public final JTextPane releaseNote = new JTextPane();
