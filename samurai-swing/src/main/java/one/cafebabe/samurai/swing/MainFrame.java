@@ -250,11 +250,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                 tabDropTargetListener
         );
         setDragNotAccepting();
-//        resources.inject(this);
-
-        if (OSDetector.isWindows()) {
-            FontSizeFixer.fixFontSizes(this);
-        }
     }
 
     private void removeSearchPanel() {

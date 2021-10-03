@@ -15,7 +15,6 @@
  */
 package one.cafebabe.samurai.util;
 
-import one.cafebabe.samurai.swing.FontSizeFixer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -248,7 +247,6 @@ public final class Configuration implements Runnable {
         @Override
         public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
             JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-            FontSizeFixer.setFont(label);
             return label;
         }
     }
