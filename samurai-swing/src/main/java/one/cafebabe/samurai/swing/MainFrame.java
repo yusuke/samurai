@@ -97,9 +97,9 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         menuFileOpen = context.getFileHistory().getOpenMenu(this);
         context.getFileHistory().setFileHistoryListener(this);
         menuFileRecent = context.getFileHistory().getOpenRecentMenu();
-        LocalProcesses localProcesses = context.getLocalProcesses();
-        if (localProcesses != null) {
-            menuFileLocalProcesses = localProcesses.getLocalProcessesMenu();
+        TakeThreadDump takeThreadDump = context.getLocalProcesses();
+        if (takeThreadDump != null) {
+            menuFileLocalProcesses = takeThreadDump.getTakeThreadDumpMenu();
             menuFileLocalProcesses.setEnabled(true);
         }
 
@@ -162,7 +162,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         menuFile.add(menuFileNewTab);
         menuFile.add(menuFileOpen);
         menuFile.add(menuFileRecent);
-        if (localProcesses != null) {
+        if (takeThreadDump != null) {
             menuFile.add(menuFileLocalProcesses);
         }
         menuFile.addSeparator();

@@ -41,18 +41,18 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 
-public class LocalProcesses {
+public class TakeThreadDump {
     private static final Logger logger = LogManager.getLogger();
 
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
 
     private final FileHistory fileHistory;
-    private final JMenu localProcessesMenu = new JMenu(resources.getMessage("menu.file.processes"));
+    private final JMenu takeThreadDumpMenu = new JMenu(resources.getMessage("menu.file.takeThreadDumpFrom"));
 
-    public LocalProcesses(Configuration config, FileHistory fileHistory) {
+    public TakeThreadDump(Configuration config, FileHistory fileHistory) {
         config.apply(this);
         this.fileHistory = fileHistory;
-        localProcessesMenu.addMenuListener(new MenuListener() {
+        takeThreadDumpMenu.addMenuListener(new MenuListener() {
             @Override
             public void menuSelected(MenuEvent e) {
                 updateChildMenuItems();
@@ -70,16 +70,16 @@ public class LocalProcesses {
         });
     }
 
-    public JMenu getLocalProcessesMenu() {
-        return this.localProcessesMenu;
+    public JMenu getTakeThreadDumpMenu() {
+        return this.takeThreadDumpMenu;
     }
 
     private void updateChildMenuItems() {
         try {
             List<VM> currentVms = ProcessUtil.getVMs("localhost");
 
-            for (int i = 0; i < localProcessesMenu.getItemCount(); i++) {
-                LocalProcessMenuItem item = (LocalProcessMenuItem) localProcessesMenu.getItem(i);
+            for (int i = 0; i < takeThreadDumpMenu.getItemCount(); i++) {
+                LocalProcessMenuItem item = (LocalProcessMenuItem) takeThreadDumpMenu.getItem(i);
                 boolean found = false;
                 for (VM vm : currentVms) {
                     if (item.getVm().getPid() == vm.getPid()) {
@@ -88,15 +88,15 @@ public class LocalProcesses {
                     }
                 }
                 if (!found) {
-                    localProcessesMenu.remove(item);
+                    takeThreadDumpMenu.remove(item);
                 }
 
             }
 
             for (VM vm : currentVms) {
                 boolean found = false;
-                for (int i = 0; i < localProcessesMenu.getItemCount(); i++) {
-                    LocalProcessMenuItem item = (LocalProcessMenuItem) localProcessesMenu.getItem(i);
+                for (int i = 0; i < takeThreadDumpMenu.getItemCount(); i++) {
+                    LocalProcessMenuItem item = (LocalProcessMenuItem) takeThreadDumpMenu.getItem(i);
                     if (item.getVm().getPid() == vm.getPid()) {
                         found = true;
                         break;
@@ -105,7 +105,7 @@ public class LocalProcesses {
                 if (!found) {
                     JMenuItem localProcess = new LocalProcessMenuItem(vm);
                     localProcess.setToolTipText(vm.getFullCommandLine());
-                    localProcessesMenu.add(localProcess);
+                    takeThreadDumpMenu.add(localProcess);
                 }
             }
         } catch (URISyntaxException | MonitorException e) {

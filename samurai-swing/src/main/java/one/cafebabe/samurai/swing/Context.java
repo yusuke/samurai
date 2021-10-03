@@ -15,23 +15,17 @@
  */
 package one.cafebabe.samurai.swing;
 
-import one.cafebabe.samurai.util.Configuration;
-import one.cafebabe.samurai.util.CustomizableKeyStroke;
-import one.cafebabe.samurai.util.ExecuteThread;
-import one.cafebabe.samurai.util.GUIResourceBundle;
-import one.cafebabe.samurai.util.Task;
+import one.cafebabe.samurai.util.*;
 
-import javax.swing.ImageIcon;
-import javax.swing.JComponent;
-import javax.swing.JLabel;
-import java.awt.Component;
+import javax.swing.*;
+import java.awt.*;
 
 public class Context {
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private final Configuration config = new Configuration("samurai");
     private final FileHistory fileHistory = new FileHistory(config);
 
-    private LocalProcesses localProcesses = null;
+    private TakeThreadDump takeThreadDump = null;
     private final CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
     final ExecuteThread executeThread = new ExecuteThread();
     private final JLabel statusBar;
@@ -44,7 +38,7 @@ public class Context {
         this.searchPanel = new SearchPanel(this);
         this.config.apply(searchPanel);
         try {
-            this.localProcesses = new LocalProcesses(config, fileHistory);
+            this.takeThreadDump = new TakeThreadDump(config, fileHistory);
         } catch (java.lang.NoClassDefFoundError ignored) {
         }
 
@@ -59,8 +53,8 @@ public class Context {
         return this.config;
     }
 
-    public LocalProcesses getLocalProcesses() {
-        return this.localProcesses;
+    public TakeThreadDump getLocalProcesses() {
+        return this.takeThreadDump;
     }
 
     public FileHistory getFileHistory() {
