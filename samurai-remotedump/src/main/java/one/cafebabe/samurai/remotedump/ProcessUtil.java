@@ -34,10 +34,12 @@ public class ProcessUtil {
         for (Integer pidInteger : jvms) {
             try {
                 int pid = pidInteger;
+                logger.debug("pig:[{}]", pid);
                 MonitoredVm vm = mh.getMonitoredVm(new VmIdentifier("//" + pid + "?mode=r"), 0);
                 List<Monitor> byPattern = vm.findByPattern(".*");
                 Map<String, String> props = new HashMap<>();
                 for (Monitor monitor : byPattern) {
+                    logger.debug("{} : {}", monitor.getName(), monitor.getValue());
                     if(monitor instanceof StringMonitor){
                         props.put(monitor.getName(),((StringMonitor)monitor).stringValue());
                     }else if(monitor instanceof IntegerMonitor){
@@ -55,7 +57,7 @@ public class ProcessUtil {
 
     public static void main(String... args) throws URISyntaxException, MonitorException {
         List<VM> vms = getVMs("localhost");
-        vms.forEach(e -> logger.info("{} {}", e.getPid(), e.getFqcn()));
+        vms.forEach(e -> logger.info("{} {}", e.pid, e.fqcn));
     }
 
 }

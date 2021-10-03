@@ -82,7 +82,7 @@ public class TakeThreadDump {
                 LocalProcessMenuItem item = (LocalProcessMenuItem) takeThreadDumpMenu.getItem(i);
                 boolean found = false;
                 for (VM vm : currentVms) {
-                    if (item.getVm().getPid() == vm.getPid()) {
+                    if (item.getVm().pid == vm.pid) {
                         found = true;
                         break;
                     }
@@ -97,14 +97,14 @@ public class TakeThreadDump {
                 boolean found = false;
                 for (int i = 0; i < takeThreadDumpMenu.getItemCount(); i++) {
                     LocalProcessMenuItem item = (LocalProcessMenuItem) takeThreadDumpMenu.getItem(i);
-                    if (item.getVm().getPid() == vm.getPid()) {
+                    if (item.getVm().pid == vm.pid) {
                         found = true;
                         break;
                     }
                 }
                 if (!found) {
                     JMenuItem localProcess = new LocalProcessMenuItem(vm);
-                    localProcess.setToolTipText(vm.getFullCommandLine());
+                    localProcess.setToolTipText(vm.fullCommandLine);
                     takeThreadDumpMenu.add(localProcess);
                 }
             }
@@ -123,25 +123,25 @@ public class TakeThreadDump {
         final VM vm;
 
         public LocalProcessMenuItem(VM vm) {
-            super(String.format("%s (Java %s / pid %s)", vm.getFqcn(), vm.version, vm.getPid()));
+            super(vm.toLabel());
             this.vm = vm;
             addActionListener(e -> executor.execute(() -> {
                 try {
                     Path path = Paths.get(System.getProperty("user.home"),
-                            String.format("%s-%d-%s.txt", vm.getFqcn(), vm.getPid(), LocalDateTime.now().format(dateTimeFormatter)));
+                            String.format("%s-%d-%s.txt", vm.fqcn, vm.pid, LocalDateTime.now().format(dateTimeFormatter)));
                     Files.writeString(path, LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) + "\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                    Files.writeString(path, "pid: " + vm.getPid() + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                    Files.writeString(path, "FQCN: " + vm.getFqcn() + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                    Files.writeString(path, String.format("Command line:\n%s\n\n", vm.getFullCommandLine()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                    Files.writeString(path, "pid: " + vm.pid + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                    Files.writeString(path, "FQCN: " + vm.fqcn + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                    Files.writeString(path, String.format("Command line:\n%s\n\n", vm.fullCommandLine), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
 
                     fileHistory.open(path.toFile());
 
                     for (int i = 0; i < 3; i++) {
-                        Files.write(path, VirtualMachineUtil.getThreadDump(vm.getPid()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                        Files.write(path, VirtualMachineUtil.getThreadDump(vm.pid), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
                         Thread.sleep(1000);
                     }
                 } catch (InterruptedException | AttachNotSupportedException | IOException e1) {
-                    logger.warn("failed to attach pid[{}]",vm.getPid(), e1);
+                    logger.warn("failed to attach pid[{}]",vm.pid, e1);
                 }
             }));
         }

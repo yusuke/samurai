@@ -84,7 +84,7 @@ public class ViewGcLog {
                 LocalProcessMenuItem item = (LocalProcessMenuItem) viewGcLogMenu.getItem(i);
                 boolean found = false;
                 for (VM vm : currentVms) {
-                    if (item.getVm().getPid() == vm.getPid()) {
+                    if (item.getVm().pid == vm.pid) {
                         found = true;
                         break;
                     }
@@ -99,14 +99,14 @@ public class ViewGcLog {
                 boolean found = false;
                 for (int i = 0; i < viewGcLogMenu.getItemCount(); i++) {
                     LocalProcessMenuItem item = (LocalProcessMenuItem) viewGcLogMenu.getItem(i);
-                    if (item.getVm().getPid() == vm.getPid()) {
+                    if (item.getVm().pid == vm.pid) {
                         found = true;
                         break;
                     }
                 }
                 if (!found) {
                     JMenuItem localProcess = new LocalProcessMenuItem(vm);
-                    localProcess.setToolTipText(vm.getFullCommandLine());
+                    localProcess.setToolTipText(vm.fullCommandLine);
                     viewGcLogMenu.add(localProcess);
                 }
             }
@@ -125,24 +125,24 @@ public class ViewGcLog {
         final VM vm;
 
         public LocalProcessMenuItem(VM vm) {
-            super(String.format("%s (Java %s / pid %s)", vm.getFqcn(), vm.version, vm.getPid()));
+            super(vm.toLabel());
             this.vm = vm;
             addActionListener(e -> executor.execute(() -> {
                 try {
-                    String gcLogPath = VirtualMachineUtil.getGCLogPath(vm.getPid());
+                    String gcLogPath = VirtualMachineUtil.getGCLogPath(vm.pid);
                     if (gcLogPath == null) {
                         Path path = Paths.get(System.getProperty("user.home"),
-                                String.format("%s-%d-%s.gc.txt", vm.getFqcn(), vm.getPid(), LocalDateTime.now().format(dateTimeFormatter)));
+                                String.format("%s-%d-%s.gc.txt", vm.fqcn, vm.pid, LocalDateTime.now().format(dateTimeFormatter)));
                         Files.writeString(path, LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) + "\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                        Files.writeString(path, "pid: " + vm.getPid() + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                        Files.writeString(path, "FQCN: " + vm.getFqcn() + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                        Files.writeString(path, String.format("Command line:\n%s\n\n", vm.getFullCommandLine()), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                        Files.writeString(path, "pid: " + vm.pid + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                        Files.writeString(path, "FQCN: " + vm.fqcn + "\n\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+                        Files.writeString(path, String.format("Command line:\n%s\n\n", vm.fullCommandLine), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
                         gcLogPath = path.toFile().getAbsolutePath();
-                        VirtualMachineUtil.setGCLogPath(vm.getPid(), gcLogPath);
+                        VirtualMachineUtil.setGCLogPath(vm.pid, gcLogPath);
                     }
                     fileHistory.open(new File(gcLogPath));
                 } catch (AttachNotSupportedException | IOException e1) {
-                    logger.warn("failed to attach pid[{}]", vm.getPid(), e1);
+                    logger.warn("failed to attach pid[{}]", vm.pid, e1);
                 }
             }));
         }

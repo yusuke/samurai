@@ -20,6 +20,8 @@ package one.cafebabe.samurai.remotedump;
 import com.sun.tools.attach.AttachNotSupportedException;
 import org.jetbrains.annotations.Nullable;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,6 +30,7 @@ import java.nio.file.Files;
 import static one.cafebabe.samurai.remotedump.VirtualMachineUtil.getGCLogPath;
 import static org.junit.jupiter.api.Assertions.*;
 
+@Execution(ExecutionMode.CONCURRENT)
 class VirtualMachineUtilTest {
     // https://docs.oracle.com/javase/jp/10/jrockit-hotspot/logging.htm
 //    -Xlog:gc:file=
@@ -91,7 +94,6 @@ class VirtualMachineUtilTest {
 
         }
     }
-
     @Test
     void configureDynamically() throws IOException, InterruptedException, AttachNotSupportedException {
         Process process = null;

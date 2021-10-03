@@ -17,35 +17,43 @@
 package one.cafebabe.samurai.remotedump;
 
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class VM {
-    private final int pid;
+    public final int pid;
     public final String version;
-    private final String fqcn;
-    private final String fullCommandLine;
+    public final String fqcn;
+    public final String fullCommandLine;
+    private final Map<String, String> map;
 
-    public int getPid() {
-        return pid;
+    public String toLabel() {
+        return String.format("%s (%s %s / pid %s)", getHumanFriendlyFqcn(), map.get("java.property.java.vm.vendor"),map.get("java.property.java.vm.version"), pid);
     }
 
-    public String getFqcn() {
-        return fqcn;
+    public String getHumanFriendlyFqcn() {
+        if (fqcn.length() != 0) {
+            return fqcn;
+        }
+        return getAppName(map.get("java.property.java.class.path"));
     }
 
-    public String getFullCommandLine() {
-        return fullCommandLine;
+    private String getAppName(String line) {
+        Pattern appPattern = Pattern.compile("/([a-zA-Z. 0-9]+\\.app)/");
+        Matcher matcher = appPattern.matcher(line);
+        if (matcher.find()) {
+            return matcher.group(1);
+        }
+        return "";
     }
 
     public VM(int pid, Map<String, String> map) {
         this.pid = pid;
+        this.map = map;
         this.version = map.get("java.property.java.version");
         String fullCommandLine = map.get("sun.rt.javaCommand");
         this.fullCommandLine = fullCommandLine.replaceFirst("^com\\.intellij\\.rt\\.execution\\.application\\.AppMain ", "");
         this.fqcn = fullCommandLine.replaceFirst(" .*$", "");
-    }
-
-    static String toFQCN(String javaCommand) {
-        return javaCommand.replaceFirst(" .*$", "");
     }
 
     public boolean isVersionGraterThan(int version) {
