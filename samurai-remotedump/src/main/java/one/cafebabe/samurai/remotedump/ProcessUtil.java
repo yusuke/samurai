@@ -51,7 +51,7 @@ public class ProcessUtil {
                     vm.detach();
                 }
             } catch (MonitorException me) {
-                // target process is no longer available
+                logger.warn("target process[{}] is no longer available", pidInteger, me);
             }
         }
         return Collections.unmodifiableList(vms);
