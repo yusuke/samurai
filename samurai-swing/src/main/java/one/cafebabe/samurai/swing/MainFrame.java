@@ -38,22 +38,19 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private static final CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
 
-    public final AboutSamuraiDialog aboutSamuraiDialog = new AboutSamuraiDialog(this);
-    final JLabel statusBar = new JLabel();
+    private final AboutSamuraiDialog aboutSamuraiDialog = new AboutSamuraiDialog(this);
+    private final JLabel statusBar = new JLabel();
     private final Context context = new Context(statusBar);
-    public final ConfigDialog configDialog = new ConfigDialog(context);
+    private final ConfigDialog configDialog = new ConfigDialog(context);
 
-    private EncodingMenuItem selectedEncoding;
-
-    final JPanel contentPane;
-    final JPanel southPane = new JPanel();
-    final BorderLayout borderLayout1 = new BorderLayout();
-    final BorderLayout borderLayout2 = new BorderLayout();
-    final SearchPanel searcher = new SearchPanel(context);
-    final FileHistory fileHistory = new FileHistory(context.getConfig());
+    private final JPanel southPane = new JPanel();
+    private final SearchPanel searcher = new SearchPanel(context);
+    private final FileHistory fileHistory = new FileHistory(context.getConfig());
 
     private boolean searchPanelAdded = false;
-    final MenuBar menuBar  = MenuBar.newBuilder()
+    private EncodingMenuItem selectedEncoding;
+
+    private final MenuBar menuBar = MenuBar.newBuilder()
             .addMenu("menu.file",
                     fileMenu -> fileMenu.addMenuItem("menu.file.newTab", e -> openNewTab())
                             .addMenuItem("menu.file.open", fileHistory::menuOpen)
@@ -116,20 +113,23 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             .addMenuIfWin("menu.help",
                     helpMenu -> helpMenu.addMenuItem("menu.help.about", e -> handleAbout()));
 
-    //Construct the frame
     public MainFrame() {
         super(resources.getMessage("MainFrame.title"));
-        enableEvents(AWTEvent.WINDOW_EVENT_MASK);
-        contentPane = (JPanel) this.getContentPane();
-        contentPane.setLayout(borderLayout1);
+        this.enableEvents(AWTEvent.WINDOW_EVENT_MASK);
+        this.getContentPane().setLayout(new BorderLayout());
         this.setSize(new Dimension(400, 450));
-        statusBar.setPreferredSize(new Dimension(3, 14));
-
-        fileHistory.setFileHistoryListener(this);
-
-        menuBar.getCheckBoxMenuItem("menu.view.statusBar").setSelected(true);
 
         setJMenuBar(this.menuBar.menuBar());
+        menuBar.getCheckBoxMenuItem("menu.view.statusBar").setSelected(true);
+        if (OSDetector.isMac()) {
+            Desktop desktop = Desktop.getDesktop();
+            desktop.setAboutHandler(e -> this.handleAbout());
+            desktop.setPreferencesHandler(e -> this.handlePreferences());
+            desktop.setQuitHandler((e1, e2) -> this.handleQuit());
+        }
+
+        statusBar.setPreferredSize(new Dimension(3, 14));
+        fileHistory.setFileHistoryListener(this);
 
         context.tab = new TileTabPanel<>(true, MainFrame.this.menuBar.getMenuItem("TileTabPanel.tab"),
                 MainFrame.this.menuBar.getMenuItem("TileTabPanel.splitHorizontal"),
@@ -154,12 +154,10 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             }
         });
 
-
-
-        contentPane.add(context.tab, BorderLayout.CENTER);
+        getContentPane().add(context.tab, BorderLayout.CENTER);
         openNewTab();
-        contentPane.add(southPane, BorderLayout.SOUTH);
-        southPane.setLayout(borderLayout2);
+        getContentPane().add(southPane, BorderLayout.SOUTH);
+        southPane.setLayout(new BorderLayout());
         southPane.add(statusBar, BorderLayout.SOUTH);
         if (OSDetector.isWindows()) {
             setIconImage(Toolkit.getDefaultToolkit().createImage(MainFrame.class.getResource("images/samurai.png")));
@@ -169,12 +167,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         context.getConfig().applyLocation("ConfigDialog.location", configDialog);
         keyStroke.apply(this);
         keyStroke.apply(context.tab.popupMenu);
-        if (OSDetector.isMac()) {
-            Desktop desktop = Desktop.getDesktop();
-            desktop.setAboutHandler(e -> this.handleAbout());
-            desktop.setPreferencesHandler(e -> this.handlePreferences());
-            desktop.setQuitHandler((e1, e2) -> this.handleQuit());
-        }
         DropTarget target = new DropTarget(this,
                 DnDConstants.ACTION_REFERENCE,
                 mainFrameDropTargetListener
@@ -529,12 +521,12 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     final Border emptyBorder = new EmptyBorder(2, 2, 2, 2);
 
     private void setDragAccepting() {
-        contentPane.setBorder(border);
+        ((JPanel) getContentPane()).setBorder(border);
 
     }
 
     private void setDragNotAccepting() {
-        contentPane.setBorder(emptyBorder);
+        ((JPanel) getContentPane()).setBorder(emptyBorder);
     }
 
     private File[] checkAcceptable(Transferable transfer) {
