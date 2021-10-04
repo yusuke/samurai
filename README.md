@@ -17,16 +17,14 @@ Just drag and drop files you want to tail.
 
 ![Samurai](images/tailLogs.png)
 
-- Take thread dumps of local processes
+- Take thread dumps of local processes and visualize them
 
-From File > Local Processes
+From [File] > [Take Thread Dumps from], or drag and drop thread dump log files to the window.
 
-![Samurai](images/localThreadDump.png)
-
-- Visualize thread dumps
-
-![Samurai](images/threadDumpAnalysis.png)
+https://user-images.githubusercontent.com/74894/135795760-c5a4886a-717e-4d56-a1b8-f71f919734b0.mp4
 
 - Visualize GC logs
 
-![Samurai](images/gclogs.png)
+From [File] > [View GC Log from], or drag and drop GC log files to the window.
+
+https://user-images.githubusercontent.com/74894/135795881-ad5e0fd0-2342-41ed-89b7-d8e16311209d.mp4
