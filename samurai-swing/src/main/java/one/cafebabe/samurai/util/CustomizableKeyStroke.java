@@ -85,11 +85,6 @@ public class CustomizableKeyStroke {
                 "/");
     }
 
-//  public static boolean isOther() {
-//    //maybe Solaris, HP-UX, FreeBSD...
-//    return!isWin() && !isLinux() && !isMac();
-//  }
-
     public char getMnemonic(String key) {
         return getProperty(key).charAt(0);
     }
@@ -104,12 +99,12 @@ public class CustomizableKeyStroke {
 
     public static KeyStroke toKeyStroke(String keyStrokeText) {
         if (null != keyStrokeText) {
-            keyStrokeText = keyStrokeText.replaceAll("command", "meta");
-            keyStrokeText = keyStrokeText.replaceAll("cmd", "meta");
-            keyStrokeText = keyStrokeText.replaceAll("option", "alt");
-            keyStrokeText = keyStrokeText.replaceAll("ctl", "control");
-            keyStrokeText = keyStrokeText.replaceAll("ctrl", "control");
-            keyStrokeText = keyStrokeText.replaceAll("opt", "alt");
+            keyStrokeText = keyStrokeText.replaceAll("command", "meta")
+                    .replaceAll("cmd", "meta")
+                    .replaceAll("option", "alt")
+                    .replaceAll("ctl", "control")
+                    .replaceAll("ctrl", "control")
+                    .replaceAll("opt", "alt");
         }
         return KeyStroke.getKeyStroke(keyStrokeText);
     }

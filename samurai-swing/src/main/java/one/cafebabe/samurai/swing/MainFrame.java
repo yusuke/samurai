@@ -15,6 +15,7 @@
  */
 package one.cafebabe.samurai.swing;
 
+import one.cafebabe.samurai.util.CustomizableKeyStroke;
 import one.cafebabe.samurai.util.GUIResourceBundle;
 import one.cafebabe.samurai.util.OSDetector;
 
@@ -35,6 +36,7 @@ import java.util.List;
 
 public class MainFrame extends JFrame implements KeyListener, FileHistoryListener, CloseListener {
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
+    private static final CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
 
     public final AboutSamuraiDialog aboutSamuraiDialog = new AboutSamuraiDialog(this);
     final JLabel statusBar = new JLabel();
@@ -49,7 +51,68 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     final BorderLayout borderLayout2 = new BorderLayout();
     final SearchPanel searcher;
     private boolean searchPanelAdded = false;
-    final MenuBar menuBar;
+    final MenuBar menuBar  = MenuBar.newBuilder()
+            .addMenu("menu.file",
+                    fileMenu -> fileMenu.addMenuItem("menu.file.newTab", e -> openNewTab())
+                            .addMenuItem("menu.file.open", context.getFileHistory()::menuOpen)
+                            .addMenu("menu.file.openRecent", e -> {
+                                context.getFileHistory().openRecentMenu = e;
+                                context.getFileHistory().updateChildMenuItems();
+                            })
+                            .addMenu("menu.file.takeThreadDumpFrom", e -> new TakeThreadDump(context.getConfig(), context.getFileHistory(), e))
+                            .addMenu("menu.file.viewGcLogFrom", e -> new ViewGcLog(context.getConfig(), context.getFileHistory(), e))
+                            .addSeparator()
+                            .addMenuItem("menu.file.close", e -> closeSamuraiPanel(context.tab.getSelectedIndex()))
+                            .addMenuItemIfWin("menu.file.exit", e -> handleQuit()))
+            .addMenu("menu.edit",
+                    editMenu -> editMenu.addMenuItemIfWin("menu.edit.preferences", e -> handlePreferences())
+                            .addMenuItem("menu.edit.copy", e -> {
+                                Component component = context.tab.getSelectedComponent().getSelectedComponent();
+                                if (component instanceof ClipBoardOperationListener) {
+                                    ((ClipBoardOperationListener) component).copy();
+                                }
+                            })
+                            .addSeparator()
+                            .addMenuItem("menu.edit.find", e -> addSearchPanel())
+                            .addMenuItem("menu.edit.findNext", e -> searchNext())
+                            .addMenuItem("menu.edit.findPrevious", e -> searchPrevious()))
+            .addMenu("menu.view",
+                    viewMenu -> viewMenu.addMenuItem("menu.view.reload", e -> context.tab.getSelectedComponent().reload())
+                            .addMenuItem("menu.view.previous", e -> previousTab())
+                            .addMenuItem("menu.view.next", e -> nextTab())
+                            .addSeparator()
+                            .addMenuItem("TileTabPanel.tab", e -> {
+                            })
+                            .addMenuItem("TileTabPanel.splitHorizontal", e -> {
+                            })
+                            .addMenuItem("TileTabPanel.splitVertical", e -> {
+                            })
+                            .addSeparator()
+                            .addCheckBoxMenuItem("menu.view.statusBar", e -> {
+                                if (((JCheckBoxMenuItem) e.getSource()).isSelected()) {
+                                    southPane.add(statusBar, BorderLayout.SOUTH);
+                                } else {
+                                    southPane.remove(statusBar);
+                                }
+                                validate();
+                            })
+                            .addSeparator()
+                            .addMenu("menu.view.encoding", encodingMenu ->
+                            {
+                                String[] encodings = context.getConfig().getString("encodings").split(",");
+                                for (String encoding : encodings) {
+                                    if ("-".equals(encoding)) {
+                                        encodingMenu.addSeparator();
+                                    } else {
+                                        EncodingMenuItem item = new EncodingMenuItem(encoding);
+                                        encodingMenu.add(item);
+                                        item.addActionListener(new EncodingMenuItemActionListener());
+                                    }
+                                }
+                            })
+                            .addMenuItem("menu.view.clearBuffer", e -> clearBuffer()))
+            .addMenuIfWin("menu.help",
+                    helpMenu -> helpMenu.addMenuItem("menu.help.about", e -> handleAbout()));
 
     //Construct the frame
     public MainFrame() {
@@ -63,72 +126,9 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
 
         context.getFileHistory().setFileHistoryListener(this);
 
-        menuBar = MenuBar.newBuilder().addMenu("menu.file",
-                        fileMenu -> fileMenu.addMenuItem("menu.file.newTab", e -> openNewTab())
-                                .addMenuItem("menu.file.open", context.getFileHistory()::menuOpen)
-                                .addMenu("menu.file.openRecent", e -> {
-                                    context.getFileHistory().openRecentMenu = e;
-                                    context.getFileHistory().updateChildMenuItems();
-                                })
-                                .addMenu("menu.file.takeThreadDumpFrom", e -> new TakeThreadDump(context.getConfig(), context.getFileHistory(), e))
-                                .addMenu("menu.file.viewGcLogFrom", e -> new ViewGcLog(context.getConfig(), context.getFileHistory(), e))
-                                .addSeparator()
-                                .addMenuItem("menu.file.close", e -> closeSamuraiPanel(context.tab.getSelectedIndex()))
-                                .addMenuItemIfWin("menu.file.exit", e -> handleQuit())).addMenu("menu.edit",
-                        editMenu -> editMenu.addMenuItemIfWin("menu.edit.preferences", e -> handlePreferences())
-                                .addMenuItem("menu.edit.copy", e -> {
-                                    Component component = context.tab.getSelectedComponent().getSelectedComponent();
-                                    if (component instanceof ClipBoardOperationListener) {
-                                        ((ClipBoardOperationListener) component).copy();
-                                    }
-                                })
-                                .addSeparator()
-                                .addMenuItem("menu.edit.find", e -> addSearchPanel())
-                                .addMenuItem("menu.edit.findNext", e -> searchNext())
-                                .addMenuItem("menu.edit.findPrevious", e -> searchPrevious()))
-                .addMenu("menu.view",
-                        viewMenu -> viewMenu.addMenuItem("menu.view.reload", e -> context.tab.getSelectedComponent().reload())
-                                .addMenuItem("menu.view.previous", e -> previousTab())
-                                .addMenuItem("menu.view.next", e -> nextTab())
-                                .addSeparator()
-                                .addMenuItem("TileTabPanel.tab", e -> {
-                                })
-                                .addMenuItem("TileTabPanel.splitHorizontal", e -> {
-                                })
-                                .addMenuItem("TileTabPanel.splitVertical", e -> {
-                                })
-                                .addSeparator()
-                                .addCheckBoxMenuItem("menu.view.statusBar", e -> {
-                                    if (((JCheckBoxMenuItem) e.getSource()).isSelected()) {
-                                        southPane.add(statusBar, BorderLayout.SOUTH);
-                                    } else {
-                                        southPane.remove(statusBar);
-                                    }
-                                    validate();
-                                })
-                                .addSeparator()
-                                .addMenu("menu.view.encoding", encodingMenu ->
-                                {
-                                    String[] encodings = context.getConfig().getString("encodings").split(",");
-                                    for (String encoding : encodings) {
-                                        if ("-".equals(encoding)) {
-                                            encodingMenu.addSeparator();
-                                        } else {
-                                            EncodingMenuItem item = new EncodingMenuItem(encoding);
-                                            encodingMenu.add(item);
-                                            item.addActionListener(new EncodingMenuItemActionListener());
-                                        }
-                                    }
-
-
-                                })
-                                .addMenuItem("menu.view.clearBuffer", e -> clearBuffer()))
-                .addMenuIfWin("menu.help",
-                        helpMenu -> helpMenu.addMenuItem("menu.help.about", e -> handleAbout()));
-
         menuBar.getCheckBoxMenuItem("menu.view.statusBar").setSelected(true);
 
-        JMenuBar menuBar = this.menuBar.menuBar();
+        setJMenuBar(this.menuBar.menuBar());
 
         context.tab = new TileTabPanel<>(true, MainFrame.this.menuBar.getMenuItem("TileTabPanel.tab"),
                 MainFrame.this.menuBar.getMenuItem("TileTabPanel.splitHorizontal"),
@@ -145,9 +145,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         searcher.btnNext.addActionListener(e -> searchNext());
         searcher.btnPrevious.addActionListener(e -> searchPrevious());
         searcher.config_searchText.addKeyListener(new KeyAdapter() {
-            public void keyReleased(KeyEvent e) {
-            }
-
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
                     removeSearchPanel();
@@ -157,7 +154,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         });
 
 
-        setJMenuBar(menuBar);
 
         contentPane.add(context.tab, BorderLayout.CENTER);
         openNewTab();
@@ -170,8 +166,8 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
 
         context.getConfig().applyRectangle("MainFrame.bounds", this);
         context.getConfig().applyLocation("ConfigDialog.location", configDialog);
-        context.getKeyStroke().apply(this);
-        context.getKeyStroke().apply(context.tab.popupMenu);
+        keyStroke.apply(this);
+        keyStroke.apply(context.tab.popupMenu);
         if (OSDetector.isMac()) {
             Desktop desktop = Desktop.getDesktop();
             desktop.setAboutHandler(e -> this.handleAbout());
@@ -359,7 +355,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     public void keyPressed(KeyEvent e) {
         //@todo reloadAlt / searchNextalt / searchPreviousAlt actions have to be handled globally
         //handle reload request
-        if (context.getKeyStroke().isPressed("logPanel.reloadAlt", e)) {
+        if (keyStroke.isPressed("logPanel.reloadAlt", e)) {
             e.consume();
             SamuraiPanel samuraiPanel = context.tab.getSelectedComponent();
             if (!samuraiPanel.isEmpty()) {
@@ -367,24 +363,24 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             }
             return;
         }
-        if (context.getKeyStroke().isPressed("menu.edit.searchNextAlt", e)) {
+        if (keyStroke.isPressed("menu.edit.searchNextAlt", e)) {
             //search next
             searchNext();
             e.consume();
             return;
         }
-        if (context.getKeyStroke().isPressed("menu.edit.searchPreviousAlt", e)) {
+        if (keyStroke.isPressed("menu.edit.searchPreviousAlt", e)) {
             //search previous
             searchPrevious();
             e.consume();
             return;
         }
-        if (context.getKeyStroke().isPressed("menu.view.previous", e)) {
+        if (keyStroke.isPressed("menu.view.previous", e)) {
             previousTab();
             e.consume();
             return;
         }
-        if (context.getKeyStroke().isPressed("menu.view.next", e)) {
+        if (keyStroke.isPressed("menu.view.next", e)) {
             nextTab();
             e.consume();
             return;

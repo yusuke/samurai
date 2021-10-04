@@ -15,17 +15,17 @@
  */
 package one.cafebabe.samurai.swing;
 
-import one.cafebabe.samurai.util.*;
+import one.cafebabe.samurai.util.Configuration;
+import one.cafebabe.samurai.util.ExecuteThread;
+import one.cafebabe.samurai.util.Task;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class Context {
-    private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private final Configuration config = new Configuration("samurai");
     private final FileHistory fileHistory = new FileHistory(config);
 
-    private final CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
     final ExecuteThread executeThread = new ExecuteThread();
     private final JLabel statusBar;
     TileTabPanel<SamuraiPanel> tab;
@@ -94,7 +94,4 @@ public class Context {
         executeThread.invokeLater(task, delaySecs);
     }
 
-    public CustomizableKeyStroke getKeyStroke() {
-        return this.keyStroke;
-    }
 }
