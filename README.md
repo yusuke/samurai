@@ -23,8 +23,6 @@ From [File] > [Take Thread Dumps from], or drag and drop thread dump log files t
 
 https://user-images.githubusercontent.com/74894/135795760-c5a4886a-717e-4d56-a1b8-f71f919734b0.mp4
 
-![Samurai](images/localThreadDump.png)
-
 - Visualize GC logs
 
 From [File] > [View GC Log from], or drag and drop GC log files to the window.
