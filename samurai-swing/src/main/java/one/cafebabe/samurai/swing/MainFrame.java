@@ -45,7 +45,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
 
     private final JPanel southPane = new JPanel();
     private final SearchPanel searcher = new SearchPanel(context);
-    private final FileHistory fileHistory = new FileHistory(context.getConfig());
+    private final FileHistory fileHistory = new FileHistory(context.getConfig(),this);
 
     private boolean searchPanelAdded = false;
     private EncodingMenuItem selectedEncoding;
@@ -129,7 +129,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         }
 
         statusBar.setPreferredSize(new Dimension(3, 14));
-        fileHistory.setFileHistoryListener(this);
 
         context.tab = new TileTabPanel<>(true, MainFrame.this.menuBar.getMenuItem("TileTabPanel.tab"),
                 MainFrame.this.menuBar.getMenuItem("TileTabPanel.splitHorizontal"),

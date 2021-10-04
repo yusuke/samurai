@@ -36,12 +36,8 @@ public final class FileHistory {
     JMenu openRecentMenu;
 
     public FileHistory(Configuration config, FileHistoryListener listener) {
-        this(config);
-        setFileHistoryListener(listener);
-    }
-
-    public FileHistory(Configuration config) {
         this.config = config;
+        this.listener = listener;
         config.apply(this);
         load();
         updateChildMenuItems();
@@ -54,10 +50,6 @@ public final class FileHistory {
         open(file);
     }
 
-
-    public void setFileHistoryListener(FileHistoryListener listener) {
-        this.listener = listener;
-    }
 
     public List<File> getList() {
         return files;
