@@ -49,18 +49,20 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     final JPanel southPane = new JPanel();
     final BorderLayout borderLayout1 = new BorderLayout();
     final BorderLayout borderLayout2 = new BorderLayout();
-    final SearchPanel searcher;
+    final SearchPanel searcher = new SearchPanel(context);
+    final FileHistory fileHistory = new FileHistory(context.getConfig());
+
     private boolean searchPanelAdded = false;
     final MenuBar menuBar  = MenuBar.newBuilder()
             .addMenu("menu.file",
                     fileMenu -> fileMenu.addMenuItem("menu.file.newTab", e -> openNewTab())
-                            .addMenuItem("menu.file.open", context.getFileHistory()::menuOpen)
+                            .addMenuItem("menu.file.open", fileHistory::menuOpen)
                             .addMenu("menu.file.openRecent", e -> {
-                                context.getFileHistory().openRecentMenu = e;
-                                context.getFileHistory().updateChildMenuItems();
+                                fileHistory.openRecentMenu = e;
+                                fileHistory.updateChildMenuItems();
                             })
-                            .addMenu("menu.file.takeThreadDumpFrom", e -> new TakeThreadDump(context.getConfig(), context.getFileHistory(), e))
-                            .addMenu("menu.file.viewGcLogFrom", e -> new ViewGcLog(context.getConfig(), context.getFileHistory(), e))
+                            .addMenu("menu.file.takeThreadDumpFrom", e -> new TakeThreadDump(context.getConfig(), fileHistory, e))
+                            .addMenu("menu.file.viewGcLogFrom", e -> new ViewGcLog(context.getConfig(), fileHistory, e))
                             .addSeparator()
                             .addMenuItem("menu.file.close", e -> closeSamuraiPanel(context.tab.getSelectedIndex()))
                             .addMenuItemIfWin("menu.file.exit", e -> handleQuit()))
@@ -118,13 +120,12 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     public MainFrame() {
         super(resources.getMessage("MainFrame.title"));
         enableEvents(AWTEvent.WINDOW_EVENT_MASK);
-        searcher = context.getSearchPanel();
         contentPane = (JPanel) this.getContentPane();
         contentPane.setLayout(borderLayout1);
         this.setSize(new Dimension(400, 450));
         statusBar.setPreferredSize(new Dimension(3, 14));
 
-        context.getFileHistory().setFileHistoryListener(this);
+        fileHistory.setFileHistoryListener(this);
 
         menuBar.getCheckBoxMenuItem("menu.view.statusBar").setSelected(true);
 
@@ -623,12 +624,12 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                     int index;
                     if (-1 != (index = context.tab.indexAtLocation(drop.getLocation().x, drop.getLocation().y))) {
                         if (!(1 == files.length && checkOpened(files[0]))) {
-                            context.getFileHistory().addHistory(files);
+                            fileHistory.addHistory(files);
                             context.tab.setSelectedIndex(index);
                             context.tab.getSelectedComponent().openFiles(files);
                         }
                     } else {
-                        context.getFileHistory().open(files);
+                        fileHistory.open(files);
                     }
                     setAvailability();
                     drop.getDropTargetContext().dropComplete(true);
@@ -662,7 +663,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                 Transferable transfer = drop.getTransferable();
                 File[] files;
                 if (null != (files = checkAcceptable(transfer))) {
-                    context.getFileHistory().open(files);
+                    fileHistory.open(files);
                     drop.getDropTargetContext().dropComplete(true);
                 }
             } catch (InvalidDnDOperationException ex) {
@@ -752,7 +753,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                 File[] files = checkAcceptable(transfer);
                 if (null != files) {
                     if (!(1 == files.length && checkOpened(files[0]))) {
-                        context.getFileHistory().addHistory(files);
+                        fileHistory.addHistory(files);
                         samuraiPanel.openFiles(files);
                         setAvailability();
                     }

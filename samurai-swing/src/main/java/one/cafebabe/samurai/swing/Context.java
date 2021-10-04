@@ -24,30 +24,18 @@ import java.awt.*;
 
 public class Context {
     private final Configuration config = new Configuration("samurai");
-    private final FileHistory fileHistory = new FileHistory(config);
 
     final ExecuteThread executeThread = new ExecuteThread();
     private final JLabel statusBar;
     TileTabPanel<SamuraiPanel> tab;
-    private final SearchPanel searchPanel;
 
     public Context(JLabel statusBar) {
         this.statusBar = statusBar;
-        this.searchPanel = new SearchPanel(this);
-        this.config.apply(searchPanel);
         executeThread.start();
-    }
-
-    public SearchPanel getSearchPanel() {
-        return searchPanel;
     }
 
     public Configuration getConfig() {
         return this.config;
-    }
-
-    public FileHistory getFileHistory() {
-        return this.fileHistory;
     }
 
     public void setIcon(ImageIcon icon, JComponent component) {
