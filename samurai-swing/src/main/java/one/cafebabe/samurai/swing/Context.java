@@ -25,28 +25,16 @@ public class Context {
     private final Configuration config = new Configuration("samurai");
     private final FileHistory fileHistory = new FileHistory(config);
 
-    private TakeThreadDump takeThreadDump = null;
-    private ViewGcLog viewGcLog = null;
     private final CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
     final ExecuteThread executeThread = new ExecuteThread();
     private final JLabel statusBar;
-    private final TileTabPanel<SamuraiPanel> tab;
+    TileTabPanel<SamuraiPanel> tab;
     private final SearchPanel searchPanel;
 
-    public Context(JLabel statusBar, TileTabPanel<SamuraiPanel> tab) {
+    public Context(JLabel statusBar) {
         this.statusBar = statusBar;
-        this.tab = tab;
         this.searchPanel = new SearchPanel(this);
         this.config.apply(searchPanel);
-        try {
-            this.takeThreadDump = new TakeThreadDump(config, fileHistory);
-        } catch (java.lang.NoClassDefFoundError ignored) {
-        }
-        try {
-            this.viewGcLog = new ViewGcLog(config, fileHistory);
-        } catch (java.lang.NoClassDefFoundError ignored) {
-        }
-
         executeThread.start();
     }
 
@@ -56,13 +44,6 @@ public class Context {
 
     public Configuration getConfig() {
         return this.config;
-    }
-
-    public TakeThreadDump getTakeThreadDump() {
-        return this.takeThreadDump;
-    }
-    public ViewGcLog getViewGcLog() {
-        return this.viewGcLog;
     }
 
     public FileHistory getFileHistory() {

@@ -47,10 +47,11 @@ public class TakeThreadDump {
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
 
     private final FileHistory fileHistory;
-    private final JMenu takeThreadDumpMenu = new JMenu(resources.getMessage("menu.file.takeThreadDumpFrom"));
+    JMenu takeThreadDumpMenu;
 
-    public TakeThreadDump(Configuration config, FileHistory fileHistory) {
+    public TakeThreadDump(Configuration config, FileHistory fileHistory, JMenu takeThreadDumpMenu) {
         config.apply(this);
+        this.takeThreadDumpMenu = takeThreadDumpMenu;
         this.fileHistory = fileHistory;
         takeThreadDumpMenu.addMenuListener(new MenuListener() {
             @Override

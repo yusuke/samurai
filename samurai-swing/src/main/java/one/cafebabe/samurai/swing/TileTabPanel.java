@@ -19,19 +19,9 @@ import one.cafebabe.samurai.util.GUIResourceBundle;
 import one.cafebabe.samurai.util.ImageLoader;
 import one.cafebabe.samurai.util.OSDetector;
 
-import javax.swing.ImageIcon;
-import javax.swing.JComponent;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
-import javax.swing.JSeparator;
-import javax.swing.JTabbedPane;
+import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -46,9 +36,9 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     private final JMenuItem menuHorizontal = new JMenuItem(resources.getMessage("TileTabPanel.splitHorizontal"));
     private final JMenuItem menuVertical = new JMenuItem(resources.getMessage("TileTabPanel.splitVertical"));
 
-    final JMenuItem jMenuViewTab = new JMenuItem(resources.getMessage("TileTabPanel.tab"));
-    final JMenuItem jMenuViewSplitHorizontal = new JMenuItem(resources.getMessage("TileTabPanel.splitHorizontal"));
-    final JMenuItem jMenuViewSplitVertical = new JMenuItem(resources.getMessage("TileTabPanel.splitVertical"));
+    final JMenuItem jMenuViewTab;
+    final JMenuItem jMenuViewSplitHorizontal;
+    final JMenuItem jMenuViewSplitVertical;
 
     private static final ImageIcon closeIcon;
     private static final ImageIcon closePushedIcon;
@@ -111,8 +101,20 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     public TileTabPanel() {
         this(false);
     }
-
     public TileTabPanel(boolean supportsFocusable) {
+        this(supportsFocusable, new JMenuItem(resources.getMessage("TileTabPanel.tab"))
+                , new JMenuItem(resources.getMessage("TileTabPanel.splitHorizontal"))
+                , new JMenuItem(resources.getMessage("TileTabPanel.splitVertical")));
+    }
+
+    public TileTabPanel(boolean supportsFocusable, JMenuItem jMenuViewTab, JMenuItem jMenuViewSplitHorizontal, JMenuItem jMenuViewSplitVertical) {
+        this.jMenuViewTab = jMenuViewTab;
+        jMenuViewTab.addActionListener(e->setOrientation(TileTabPanel.TAB));
+        this.jMenuViewSplitHorizontal = jMenuViewSplitHorizontal;
+        jMenuViewSplitHorizontal.addActionListener(e->setOrientation(TileTabPanel.TILE_HORIZONTAL));
+        this.jMenuViewSplitVertical = jMenuViewSplitVertical;
+        jMenuViewSplitVertical.addActionListener(e->setOrientation(TileTabPanel.TILE_VERTICAL));
+
         tilePanel = new TilePanel(supportsFocusable);
         tab.setForeground(Color.black);
 

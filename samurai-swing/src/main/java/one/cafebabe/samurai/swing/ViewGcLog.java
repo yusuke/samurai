@@ -46,10 +46,11 @@ public class ViewGcLog {
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
 
     private final FileHistory fileHistory;
-    private final JMenu viewGcLogMenu = new JMenu(resources.getMessage("menu.file.viewGcLogFrom"));
+    private final JMenu viewGcLogMenu;
 
-    public ViewGcLog(Configuration config, FileHistory fileHistory) {
+    public ViewGcLog(Configuration config, FileHistory fileHistory,JMenu viewGcLogMenu) {
         config.apply(this);
+        this.viewGcLogMenu = viewGcLogMenu;
         this.fileHistory = fileHistory;
         viewGcLogMenu.addMenuListener(new MenuListener() {
             @Override
@@ -67,10 +68,6 @@ public class ViewGcLog {
 
             }
         });
-    }
-
-    public JMenu getViewGcLogMenu() {
-        return this.viewGcLogMenu;
     }
 
     private void updateChildMenuItems() {

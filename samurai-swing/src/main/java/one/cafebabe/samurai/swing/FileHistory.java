@@ -33,8 +33,7 @@ public final class FileHistory {
     public String config_RecentlyUsedFiles = "";
     private final Configuration config;
     private FileHistoryListener listener = null;
-    private final JMenu openRecentMenu = new JMenu(resources.getMessage("menu.file.openRecent"));
-    private final JFileChooser fileChooser = new JFileChooser();
+    JMenu openRecentMenu;
 
     public FileHistory(Configuration config, FileHistoryListener listener) {
         this(config);
@@ -48,19 +47,11 @@ public final class FileHistory {
         updateChildMenuItems();
     }
 
-    public JMenu getOpenRecentMenu() {
-        return this.openRecentMenu;
-    }
-
-    public synchronized JMenuItem getOpenMenu(final Component component) {
-        JMenuItem openMenu = new JMenuItem(resources.getMessage("menu.file.open"));
-            openMenu.addActionListener(e -> {
-                FileDialog fileDialog = new FileDialog((Frame) null);
-                fileDialog.setVisible(true);
-                File[] file = fileDialog.getFiles();
-                open(file);
-            });
-        return openMenu;
+    public synchronized void menuOpen(ActionEvent e) {
+        FileDialog fileDialog = new FileDialog((Frame) null);
+        fileDialog.setVisible(true);
+        File[] file = fileDialog.getFiles();
+        open(file);
     }
 
 
@@ -164,15 +155,16 @@ public final class FileHistory {
             }
         }
     }
-
-    private void updateChildMenuItems() {
+    void updateChildMenuItems() {
         cleanOrphans();
-        openRecentMenu.removeAll();
-        for (File file : files) {
-            JMenuItem aHistory = new HistoryMenu(file);
-            openRecentMenu.add(aHistory);
+        if (openRecentMenu != null) {
+            openRecentMenu.removeAll();
+            for (File file : files) {
+                JMenuItem aHistory = new HistoryMenu(file);
+                openRecentMenu.add(aHistory);
+            }
+            openRecentMenu.setEnabled(files.size() != 0);
         }
-        openRecentMenu.setEnabled(files.size() != 0);
     }
 
     class HistoryMenu extends JMenuItem implements ActionListener {
