@@ -5,6 +5,12 @@
 # Samurai
 Samurai is an analysis tool for Java thread dumps / GC logs.
 
+![samurai in action](./images/samurai-in-action.png)
+
+[![@samurai_java](https://img.shields.io/twitter/url/https/twitter.com/samurai_java.svg?style=social&label=Follow%20%40samurai_java)](https://twitter.com/samurai_java)
+
+## hashtag
+
 [&#35;samuraiApp](https://twitter.com/search?q=%23samuraiApp&src=typed_query&f=live)
 
 # Download
