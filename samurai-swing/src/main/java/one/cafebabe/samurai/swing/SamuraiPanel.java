@@ -17,20 +17,15 @@ package one.cafebabe.samurai.swing;
 
 import one.cafebabe.samurai.tail.LogMonitor;
 import one.cafebabe.samurai.tail.MultipleLogWatcher;
+import one.cafebabe.samurai.util.Configuration;
 import one.cafebabe.samurai.util.GUIResourceBundle;
 import one.cafebabe.samurai.util.ImageLoader;
 
-import javax.swing.ImageIcon;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Container;
-import java.awt.SystemColor;
+import java.awt.*;
 import java.awt.dnd.DnDConstants;
 import java.awt.dnd.DropTarget;
 import java.awt.dnd.DropTargetListener;
@@ -54,13 +49,13 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
 
     private final Context context;
 
-    public SamuraiPanel(Context context, KeyListener listener, String encoding) {
+    public SamuraiPanel(Context context, Configuration config, KeyListener listener, String encoding) {
         this.context = context;
         setEncoding(encoding);
         this.setLayout(borderLayout1);
         tab.setShowTitleWithSingleComponent(false);
         logRenderers.add(new ThreadDumpPanel(this, context));
-        logRenderers.add(new GraphPanel(this, context));
+        logRenderers.add(new GraphPanel(this, config));
         logRenderers.add(new LogPanel(this));
         this.add(tab, BorderLayout.CENTER);
         context.setIcon(stoppedIcon, this);
@@ -68,7 +63,7 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
         tab.addKeyListener(listener);
         for (LogRenderer renderer : logRenderers) {
             addKeyListenerToComponents(listener, renderer);
-            context.getConfig().addTarget(renderer);
+            config.addTarget(renderer);
         }
         setDragNotAccepting();
 
@@ -196,39 +191,29 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
 
     private void openFiles(List<File> files) {
         this.close();
-//    logWatcher = new LogWatcher((File[])files.toArray(new File[]{}));
-//    logWatcher.addLogMonitor(this);
-//    for (LogRenderer renderer : logRenderers) {
-//      logWatcher.addLogMonitor(renderer);
-//    }
-//    logWatcher.setDebug(true);
-//    logWatcher.start();
         currentFile = files;
         if (null != currentFile) {
             context.setText(files.get(0).getName(), this);
             context.setTemporaryStatus(resources.getMessage("LogPanel.monitoring", files.get(0).getName()));
             empty = false;
+            logWatcher = new MultipleLogWatcher(files.toArray(new File[]{}), actualEncoding);
+            logWatcher.addLogMonitor(this);
+            for (LogRenderer renderer : logRenderers) {
+                logWatcher.addLogMonitor(renderer);
+            }
+            logWatcher.start();
         } else {
             context.setText(resources.getMessage("MainFrame.untitled"), this);
             empty = true;
         }
 
-        logWatcher = new MultipleLogWatcher(files.toArray(new File[]{}), actualEncoding);
-        logWatcher.addLogMonitor(this);
-        for (LogRenderer renderer : logRenderers) {
-            logWatcher.addLogMonitor(renderer);
-        }
-//    logWatcher.setDebug(true);
-        logWatcher.start();
-
-//    logWatcher.setFiles((File[])files.toArray(new File[]{}));
     }
 
     public void reload() {
         openFiles(currentFile);
     }
 
-    /*package*/ void setIcon(ImageIcon icon, JComponent component) {
+    void setIcon(ImageIcon icon, JComponent component) {
         for (int i = 0; i < tab.getComponentSize(); i++) {
             Component theComponent = tab.getComponentAt(i);
             if (component == theComponent) {
@@ -271,12 +256,12 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
     final Border lineBorder = new LineBorder(SystemColor.textHighlight, 2, true);
     final Border emptyBorder = new EmptyBorder(2, 2, 2, 2);
 
-    /*package*/void setDragAccepting() {
+    void setDragAccepting() {
         setBorder(lineBorder);
 
     }
 
-    /*package*/ void setDragNotAccepting() {
+    void setDragNotAccepting() {
         setBorder(emptyBorder);
     }
 

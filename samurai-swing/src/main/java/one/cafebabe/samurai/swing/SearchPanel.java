@@ -15,22 +15,12 @@
  */
 package one.cafebabe.samurai.swing;
 
-import one.cafebabe.samurai.util.GUIResourceBundle;
-import one.cafebabe.samurai.util.ImageLoader;
-import one.cafebabe.samurai.util.OSDetector;
-import one.cafebabe.samurai.util.StringUtil;
+import one.cafebabe.samurai.util.*;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JRootPane;
-import javax.swing.JTextField;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.JTextComponent;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 
@@ -52,7 +42,7 @@ public class SearchPanel extends JPanel {
     }
 
     private void storeConfig() {
-        context.getConfig().store(this);
+        config.store(this);
     }
 
     FlowLayout layout = new FlowLayout(FlowLayout.LEFT);
@@ -94,13 +84,15 @@ public class SearchPanel extends JPanel {
         this.add(config_matchCase);
     }
 
+    private Configuration config;
     private Context context;
 
-    public SearchPanel(Context context) {
+    public SearchPanel(Context context, Configuration config) {
         this();
         this.context = context;
-        this.context.getConfig().apply(this);
-        context.getConfig().addTarget(this);
+        this.config = config;
+        config.apply(this);
+        config.addTarget(this);
     }
 
     public boolean searchNext(JTextComponent com) {

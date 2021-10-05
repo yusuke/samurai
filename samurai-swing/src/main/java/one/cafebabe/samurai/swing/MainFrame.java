@@ -15,6 +15,7 @@
  */
 package one.cafebabe.samurai.swing;
 
+import one.cafebabe.samurai.util.Configuration;
 import one.cafebabe.samurai.util.CustomizableKeyStroke;
 import one.cafebabe.samurai.util.GUIResourceBundle;
 import one.cafebabe.samurai.util.OSDetector;
@@ -35,17 +36,19 @@ import java.io.IOException;
 import java.util.List;
 
 public class MainFrame extends JFrame implements KeyListener, FileHistoryListener, CloseListener {
+    private final Configuration config = new Configuration("samurai");
+
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private static final CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
 
     private final AboutSamuraiDialog aboutSamuraiDialog = new AboutSamuraiDialog(this);
     private final JLabel statusBar = new JLabel();
     private final Context context = new Context(statusBar);
-    private final ConfigDialog configDialog = new ConfigDialog(context);
+    private final ConfigDialog configDialog = new ConfigDialog(config);
 
     private final JPanel southPane = new JPanel();
-    private final SearchPanel searcher = new SearchPanel(context);
-    private final FileHistory fileHistory = new FileHistory(context.getConfig(),this);
+    private final SearchPanel searcher = new SearchPanel(context, config);
+    private final FileHistory fileHistory = new FileHistory(config,this);
 
     private boolean searchPanelAdded = false;
     private EncodingMenuItem selectedEncoding;
@@ -58,8 +61,8 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                                 fileHistory.openRecentMenu = e;
                                 fileHistory.updateChildMenuItems();
                             })
-                            .addMenu("menu.file.takeThreadDumpFrom", e -> new TakeThreadDump(context.getConfig(), fileHistory, e))
-                            .addMenu("menu.file.viewGcLogFrom", e -> new ViewGcLog(context.getConfig(), fileHistory, e))
+                            .addMenu("menu.file.takeThreadDumpFrom", e -> new TakeThreadDump(config, fileHistory, e))
+                            .addMenu("menu.file.viewGcLogFrom", e -> new ViewGcLog(config, fileHistory, e))
                             .addSeparator()
                             .addMenuItem("menu.file.close", e -> closeSamuraiPanel(context.tab.getSelectedIndex()))
                             .addMenuItemIfWin("menu.file.exit", e -> handleQuit()))
@@ -98,7 +101,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                             .addSeparator()
                             .addMenu("menu.view.encoding", encodingMenu ->
                             {
-                                String[] encodings = context.getConfig().getString("encodings").split(",");
+                                String[] encodings = config.getString("encodings").split(",");
                                 for (String encoding : encodings) {
                                     if ("-".equals(encoding)) {
                                         encodingMenu.addSeparator();
@@ -162,8 +165,8 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             setIconImage(Toolkit.getDefaultToolkit().createImage(MainFrame.class.getResource("images/samurai.png")));
         }
 
-        context.getConfig().applyRectangle("MainFrame.bounds", this);
-        context.getConfig().applyLocation("ConfigDialog.location", configDialog);
+        config.applyRectangle("MainFrame.bounds", this);
+        config.applyLocation("ConfigDialog.location", configDialog);
         keyStroke.apply(this);
         keyStroke.apply(context.tab.popupMenu);
         DropTarget target = new DropTarget(this,
@@ -245,7 +248,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             } else {
                 activeComponent.setSelectionEnd(activeComponent.getSelectionStart());
             }
-            context.getConfig().store(searcher);
+            config.store(searcher);
         }
     }
 
@@ -257,7 +260,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             } else {
                 searcher.config_searchText.grabFocus();
             }
-            context.getConfig().store(searcher);
+            config.store(searcher);
         }
     }
 
@@ -281,13 +284,13 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     }
 
     /*package*/ void handlePreferences() {
-        context.getConfig().apply(configDialog);
+        config.apply(configDialog);
         configDialog.setVisible(true);
     }
 
     /*package*/ void handleQuit() {
-        context.getConfig().storeRectangle("MainFrame.bounds", this);
-        context.getConfig().storeLocation("ConfigDialog.location", configDialog);
+        config.storeRectangle("MainFrame.bounds", this);
+        config.storeLocation("ConfigDialog.location", configDialog);
         System.exit(0);
     }
 
@@ -491,9 +494,9 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     }
 
     public void openNewTab() {
-        String defaultEncoding = context.getConfig().getString("defaultEncoding");
+        String defaultEncoding = config.getString("defaultEncoding");
 
-        SamuraiPanel samuraiPanel = new SamuraiPanel(context, this, defaultEncoding);
+        SamuraiPanel samuraiPanel = new SamuraiPanel(context, config, this, defaultEncoding);
         samuraiPanel.setDroptargetListener(new SamuraiDropTargetListener(samuraiPanel));
         context.tab.addComponent(resources.getMessage("MainFrame.untitled"), samuraiPanel,
                 SamuraiPanel.stoppedIcon);

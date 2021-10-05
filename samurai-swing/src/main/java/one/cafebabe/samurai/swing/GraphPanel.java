@@ -19,9 +19,10 @@ import one.cafebabe.samurai.gc.GCParser;
 import one.cafebabe.samurai.gc.LineGraph;
 import one.cafebabe.samurai.gc.LineGraphRenderer;
 import one.cafebabe.samurai.util.CSVParser;
+import one.cafebabe.samurai.util.Configuration;
 import one.cafebabe.samurai.util.GUIResourceBundle;
 
-import java.awt.BorderLayout;
+import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,13 +31,13 @@ import java.util.List;
 public class GraphPanel extends LogRenderer implements ClipBoardOperationListener, LineGraphRenderer {
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     final List<LineGraphPanel> graphs = new ArrayList<>(1);
-    private final Context context;
+    private final Configuration config;
 
     private final TileTabPanel<LineGraphPanel> tileTabPanel = new TileTabPanel<>(true);
 
-    public GraphPanel(SamuraiPanel samuraiPanel, Context context) {
+    public GraphPanel(SamuraiPanel samuraiPanel, Configuration config) {
         super(true, samuraiPanel);
-        this.context = context;
+        this.config = config;
         this.setLayout(new BorderLayout());
         tileTabPanel.setOrientation(TileTabPanel.TILE_VERTICAL);
         tileTabPanel.setDividerSize(0);
@@ -46,8 +47,8 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
     public LineGraph addLineGraph(String title, String[] labels) {
         LineGraphPanel lineGraphPanel = new LineGraphPanel();
         lineGraphPanel.setLabels(labels);
-        context.getConfig().applyLocation("PlotSettingDialog.location", lineGraphPanel.plotSetting);
-        context.getConfig().apply(lineGraphPanel.plotSetting);
+        config.applyLocation("PlotSettingDialog.location", lineGraphPanel.plotSetting);
+        config.apply(lineGraphPanel.plotSetting);
         tileTabPanel.addComponent(title, lineGraphPanel);
         if (isCSV) {
             showMe(resources.getMessage("GraphPanel.csv"));

@@ -15,6 +15,7 @@
  */
 package one.cafebabe.samurai.swing;
 
+import one.cafebabe.samurai.util.Configuration;
 import one.cafebabe.samurai.util.GUIResourceBundle;
 
 import javax.swing.*;
@@ -51,7 +52,7 @@ public class ConfigDialog extends JDialog {
     public final JCheckBox config_shrinkIdleThreads = new JCheckBox(resources.getMessage("ConfigDialog.shrinkIdleThreads"));
     public final JLabel labelFontFamily = new JLabel(resources.getMessage("ConfigDialog.fontFamily"));
     
-    public ConfigDialog(Frame frame, String title, boolean modal, Context context) {
+    public ConfigDialog(Frame frame, String title, boolean modal, Configuration config) {
         super(frame, title, modal);
         try {
             jbInit();
@@ -59,13 +60,13 @@ public class ConfigDialog extends JDialog {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        this.context = context;
+        this.config = config;
     }
 
-    private final Context context;
+    private final Configuration config;
 
-    public ConfigDialog(Context context) {
-        this(null, resources.getMessage("ConfigDialog.title"), false, context);
+    public ConfigDialog(Configuration config) {
+        this(null, resources.getMessage("ConfigDialog.title"), false, config);
     }
 
     final ConfigDialog THIS = this;
@@ -94,8 +95,8 @@ public class ConfigDialog extends JDialog {
         okButton.setDefaultCapable(false);
         okButton.setActionCommand("okButton");
         okButton.addActionListener(e -> {
-            context.getConfig().store(THIS);
-            context.getConfig().notifyChange();
+            config.store(THIS);
+            config.notifyChange();
             setVisible(false);
         });
 

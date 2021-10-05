@@ -16,11 +16,12 @@
 
 package one.cafebabe.samurai.util;
 
+import one.cafebabe.samurai.swing.FileHistory;
+import one.cafebabe.samurai.swing.FileHistoryListener;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
-import one.cafebabe.samurai.swing.FileHistory;
 
 import java.io.File;
 
@@ -43,7 +44,17 @@ class TestFileHistory {
         String name = "samuraitest";
         Configuration configuration = new Configuration(name);
         configuration.setInt("RecentlyUsedNumber", 4);
-        FileHistory history = new FileHistory(configuration);
+        FileHistory history = new FileHistory(configuration, new FileHistoryListener() {
+            @Override
+            public void fileOpened(File file) {
+                
+            }
+
+            @Override
+            public void filesOpened(File[] files) {
+
+            }
+        });
         history.clearHistory();
 //        history.enableCleaningOrphans();
         File file1 = new File("src/main/resources/samurai/swing/close_hover.gif");
@@ -68,7 +79,17 @@ class TestFileHistory {
     void testValidation() {
         Configuration configuration = new Configuration("samuraitest");
         configuration.setInt("RecentlyUsedNumber", 4);
-        FileHistory history = new FileHistory(configuration);
+        FileHistory history = new FileHistory(configuration, new FileHistoryListener() {
+            @Override
+            public void fileOpened(File file) {
+                
+            }
+
+            @Override
+            public void filesOpened(File[] files) {
+
+            }
+        });
         history.clearHistory();
         history.enableCleaningOrphans();
         String base = new File("").getAbsolutePath().endsWith("samurai-swing") ? "" : "samurai-swing/";

@@ -15,7 +15,6 @@
  */
 package one.cafebabe.samurai.swing;
 
-import one.cafebabe.samurai.util.Configuration;
 import one.cafebabe.samurai.util.ExecuteThread;
 import one.cafebabe.samurai.util.Task;
 
@@ -23,8 +22,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Context {
-    private final Configuration config = new Configuration("samurai");
-
     final ExecuteThread executeThread = new ExecuteThread();
     private final JLabel statusBar;
     TileTabPanel<SamuraiPanel> tab;
@@ -32,10 +29,6 @@ public class Context {
     public Context(JLabel statusBar) {
         this.statusBar = statusBar;
         executeThread.start();
-    }
-
-    public Configuration getConfig() {
-        return this.config;
     }
 
     public void setIcon(ImageIcon icon, JComponent component) {
