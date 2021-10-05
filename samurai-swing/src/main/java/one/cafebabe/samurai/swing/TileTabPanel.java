@@ -36,9 +36,6 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     private final JMenuItem menuHorizontal = new JMenuItem(resources.getMessage("TileTabPanel.splitHorizontal"));
     private final JMenuItem menuVertical = new JMenuItem(resources.getMessage("TileTabPanel.splitVertical"));
 
-    final JMenuItem jMenuViewTab;
-    final JMenuItem jMenuViewSplitHorizontal;
-    final JMenuItem jMenuViewSplitVertical;
 
     private static final ImageIcon closeIcon;
     private static final ImageIcon closePushedIcon;
@@ -101,28 +98,29 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     public TileTabPanel() {
         this(false);
     }
-    public TileTabPanel(boolean supportsFocusable) {
-        this(supportsFocusable, new JMenuItem(resources.getMessage("TileTabPanel.tab"))
-                , new JMenuItem(resources.getMessage("TileTabPanel.splitHorizontal"))
-                , new JMenuItem(resources.getMessage("TileTabPanel.splitVertical")));
-    }
 
-    public TileTabPanel(boolean supportsFocusable, JMenuItem jMenuViewTab, JMenuItem jMenuViewSplitHorizontal, JMenuItem jMenuViewSplitVertical) {
-        this.jMenuViewTab = jMenuViewTab;
-        jMenuViewTab.addActionListener(e->setOrientation(TileTabPanel.TAB));
-        this.jMenuViewSplitHorizontal = jMenuViewSplitHorizontal;
-        jMenuViewSplitHorizontal.addActionListener(e->setOrientation(TileTabPanel.TILE_HORIZONTAL));
-        this.jMenuViewSplitVertical = jMenuViewSplitVertical;
-        jMenuViewSplitVertical.addActionListener(e->setOrientation(TileTabPanel.TILE_VERTICAL));
+    public TileTabPanel(boolean supportsFocusable) {
 
         tilePanel = new TilePanel(supportsFocusable);
         tab.setForeground(Color.black);
 
-        try {
-            jbInit();
-        } catch (Exception exception) {
-            exception.printStackTrace();
-        }
+        setDoubleBuffered(true);
+        borderLayout1 = new BorderLayout();
+        setLayout(borderLayout1);
+        tab.addMouseListener(this);
+        tab.addMouseMotionListener(this);
+        tilePanel.addMouseListnerToTitles(this);
+        tilePanel.addMouseMotionListnerToTitles(this);
+        menuCloseTab.addActionListener(closeAction);
+        menuTab.setEnabled(false);
+        menuTab.addActionListener(e -> setOrientation(TAB));
+        menuHorizontal.addActionListener(e -> setOrientation(TILE_HORIZONTAL));
+        menuVertical.addActionListener(e -> setOrientation(TILE_VERTICAL));
+
+        popupMenu.add(menuTab);
+        popupMenu.add(menuHorizontal);
+        popupMenu.add(menuVertical);
+
     }
 
     public void setForegroundAt(int index, Color color) {
@@ -157,43 +155,6 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         public void actionPerformed(ActionEvent e) {
             closeListener.closePushed(index);
         }
-    }
-
-    class OrientationChangeAction implements ActionListener {
-        private final int orientation;
-
-        OrientationChangeAction(int orientation) {
-            this.orientation = orientation;
-        }
-
-        public void actionPerformed(ActionEvent e) {
-            setOrientation(orientation);
-        }
-    }
-
-    private void jbInit() {
-        setDoubleBuffered(true);
-        borderLayout1 = new BorderLayout();
-        setLayout(borderLayout1);
-        tab.addMouseListener(this);
-        tab.addMouseMotionListener(this);
-        tilePanel.addMouseListnerToTitles(this);
-        tilePanel.addMouseMotionListnerToTitles(this);
-        menuCloseTab.addActionListener(closeAction);
-        menuTab.setEnabled(false);
-        menuTab.addActionListener(new OrientationChangeAction(TAB));
-        menuHorizontal.addActionListener(new OrientationChangeAction(TILE_HORIZONTAL));
-        menuVertical.addActionListener(new OrientationChangeAction(TILE_VERTICAL));
-
-        popupMenu.add(menuTab);
-        popupMenu.add(menuHorizontal);
-        popupMenu.add(menuVertical);
-
-        jMenuViewTab.addActionListener(new OrientationChangeAction(TAB));
-        jMenuViewTab.setEnabled(false);
-        jMenuViewSplitHorizontal.addActionListener(new OrientationChangeAction(TILE_HORIZONTAL));
-        jMenuViewSplitVertical.addActionListener(new OrientationChangeAction(TILE_VERTICAL));
-//        keyStroke.apply(popupMenu);
     }
 
     public int getComponentSize() {
@@ -454,11 +415,8 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     }
 
     private void setMenuAvailability() {
-        jMenuViewTab.setEnabled(layout != TAB);
         menuTab.setEnabled(layout != TAB);
-        jMenuViewSplitVertical.setEnabled(layout != TILE_VERTICAL);
         menuVertical.setEnabled(layout != TILE_VERTICAL);
-        jMenuViewSplitHorizontal.setEnabled(layout != TILE_HORIZONTAL);
         menuHorizontal.setEnabled(layout != TILE_HORIZONTAL);
     }
 

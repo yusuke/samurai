@@ -20,6 +20,7 @@ import one.cafebabe.samurai.tail.MultipleLogWatcher;
 import one.cafebabe.samurai.util.Configuration;
 import one.cafebabe.samurai.util.GUIResourceBundle;
 import one.cafebabe.samurai.util.ImageLoader;
+import org.apache.logging.log4j.util.BiConsumer;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -42,23 +43,26 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
     private final List<LogRenderer> logRenderers = new ArrayList<>(3);
 
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
-    final BorderLayout borderLayout1 = new BorderLayout();
     public final TileTabPanel<JPanel> tab = new TileTabPanel<>(true);
     //  private LogWatcher logWatcher = new LogWatcher();
     private MultipleLogWatcher logWatcher;// = new MultipleLogWatcher();
-
+    private final BiConsumer<ImageIcon, JComponent> setIcon;
+    private final BiConsumer<String, JComponent> setText;
     private final Context context;
 
-    public SamuraiPanel(Context context, Configuration config, KeyListener listener, String encoding) {
+
+    public SamuraiPanel(BiConsumer<ImageIcon, JComponent> setIcon,BiConsumer<String , JComponent > setText,Context context,  Configuration config, KeyListener listener, String encoding) {
+        this.setIcon = setIcon;
+        this.setText = setText;
         this.context = context;
         setEncoding(encoding);
-        this.setLayout(borderLayout1);
+        this.setLayout(new BorderLayout());
         tab.setShowTitleWithSingleComponent(false);
         logRenderers.add(new ThreadDumpPanel(this, context));
         logRenderers.add(new GraphPanel(this, config));
         logRenderers.add(new LogPanel(this));
         this.add(tab, BorderLayout.CENTER);
-        context.setIcon(stoppedIcon, this);
+        setIcon.accept(stoppedIcon, this);
         addKeyListener(listener);
         tab.addKeyListener(listener);
         for (LogRenderer renderer : logRenderers) {
@@ -123,11 +127,11 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
             logWatcher = null;
         }
 //    logWatcher.setFiles(new File[0]);
-        context.setText(resources.getMessage("MainFrame.untitled"), this);
+        setText.accept(resources.getMessage("MainFrame.untitled"), this);
         for (LogRenderer renderer : logRenderers) {
             renderer.close();
         }
-        context.setIcon(stoppedIcon, this);
+        setIcon.accept(stoppedIcon, this);
         empty = true;
         this.currentFile = null;
     }
@@ -193,7 +197,7 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
         this.close();
         currentFile = files;
         if (null != currentFile) {
-            context.setText(files.get(0).getName(), this);
+            setText.accept(files.get(0).getName(), this);
             context.setTemporaryStatus(resources.getMessage("LogPanel.monitoring", files.get(0).getName()));
             empty = false;
             logWatcher = new MultipleLogWatcher(files.toArray(new File[]{}), actualEncoding);
@@ -203,7 +207,7 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
             }
             logWatcher.start();
         } else {
-            context.setText(resources.getMessage("MainFrame.untitled"), this);
+            setText.accept(resources.getMessage("MainFrame.untitled"), this);
             empty = true;
         }
 
@@ -227,19 +231,19 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
     }
 
     public void logStarted(File file, long filepointer) {
-        context.setIcon(readingIcon, this);
+        setIcon.accept(readingIcon, this);
     }
 
     public void logEnded(File file, long filepointer) {
-        context.setIcon(stoppedIcon, this);
+        setIcon.accept(stoppedIcon, this);
     }
 
     public void logWillEnd(File file, long filepointer) {
-        context.setIcon(monitoringIcon, this);
+        setIcon.accept(monitoringIcon, this);
     }
 
     public void logContinued(File file, long filepointer) {
-        context.setIcon(readingIcon, this);
+        setIcon.accept(readingIcon, this);
     }
 
     public void onException(File file, IOException ioe) {

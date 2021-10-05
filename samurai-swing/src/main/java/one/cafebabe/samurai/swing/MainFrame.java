@@ -35,6 +35,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import static one.cafebabe.samurai.swing.TileTabPanel.*;
+
 public class MainFrame extends JFrame implements KeyListener, FileHistoryListener, CloseListener {
     private final Configuration config = new Configuration("samurai");
 
@@ -48,8 +50,13 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
 
     private final JPanel southPane = new JPanel();
     private final SearchPanel searcher = new SearchPanel(context, config);
-    private final FileHistory fileHistory = new FileHistory(config,this);
-
+    private final FileHistory fileHistory = new FileHistory(config, this);
+    TileTabPanel<SamuraiPanel> tab = new TileTabPanel<>(true) {
+        protected void selectedIndexChanged(int index) {
+            setSelectedEncoding(getSelectedComponent().getEncoding());
+        }
+    };
+    
     private boolean searchPanelAdded = false;
     private EncodingMenuItem selectedEncoding;
 
@@ -64,12 +71,12 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                             .addMenu("menu.file.takeThreadDumpFrom", e -> new TakeThreadDump(config, fileHistory, e))
                             .addMenu("menu.file.viewGcLogFrom", e -> new ViewGcLog(config, fileHistory, e))
                             .addSeparator()
-                            .addMenuItem("menu.file.close", e -> closeSamuraiPanel(context.tab.getSelectedIndex()))
+                            .addMenuItem("menu.file.close", e -> closeSamuraiPanel(tab.getSelectedIndex()))
                             .addMenuItemIfWin("menu.file.exit", e -> handleQuit()))
             .addMenu("menu.edit",
                     editMenu -> editMenu.addMenuItemIfWin("menu.edit.preferences", e -> handlePreferences())
                             .addMenuItem("menu.edit.copy", e -> {
-                                Component component = context.tab.getSelectedComponent().getSelectedComponent();
+                                Component component = tab.getSelectedComponent().getSelectedComponent();
                                 if (component instanceof ClipBoardOperationListener) {
                                     ((ClipBoardOperationListener) component).copy();
                                 }
@@ -79,16 +86,13 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                             .addMenuItem("menu.edit.findNext", e -> searchNext())
                             .addMenuItem("menu.edit.findPrevious", e -> searchPrevious()))
             .addMenu("menu.view",
-                    viewMenu -> viewMenu.addMenuItem("menu.view.reload", e -> context.tab.getSelectedComponent().reload())
+                    viewMenu -> viewMenu.addMenuItem("menu.view.reload", e -> tab.getSelectedComponent().reload())
                             .addMenuItem("menu.view.previous", e -> previousTab())
                             .addMenuItem("menu.view.next", e -> nextTab())
                             .addSeparator()
-                            .addMenuItem("TileTabPanel.tab", e -> {
-                            })
-                            .addMenuItem("TileTabPanel.splitHorizontal", e -> {
-                            })
-                            .addMenuItem("TileTabPanel.splitVertical", e -> {
-                            })
+                            .addMenuItem("TileTabPanel.tab", e -> setOrientation(TAB))
+                            .addMenuItem("TileTabPanel.splitHorizontal", e -> setOrientation(TileTabPanel.TILE_HORIZONTAL))
+                            .addMenuItem("TileTabPanel.splitVertical", e -> setOrientation(TileTabPanel.TILE_VERTICAL))
                             .addSeparator()
                             .addCheckBoxMenuItem("menu.view.statusBar", e -> {
                                 if (((JCheckBoxMenuItem) e.getSource()).isSelected()) {
@@ -116,6 +120,14 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             .addMenuIfWin("menu.help",
                     helpMenu -> helpMenu.addMenuItem("menu.help.about", e -> handleAbout()));
 
+
+    private void setOrientation(int orientation) {
+        tab.setOrientation(orientation);
+        menuBar.getMenuItem("TileTabPanel.tab").setEnabled(orientation != TAB);
+        menuBar.getMenuItem("TileTabPanel.splitHorizontal").setEnabled(orientation != TILE_HORIZONTAL);
+        menuBar.getMenuItem("TileTabPanel.splitVertical").setEnabled(orientation != TILE_VERTICAL);
+    }
+
     public MainFrame() {
         super(resources.getMessage("MainFrame.title"));
         this.enableEvents(AWTEvent.WINDOW_EVENT_MASK);
@@ -133,13 +145,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
 
         statusBar.setPreferredSize(new Dimension(3, 14));
 
-        context.tab = new TileTabPanel<>(true, MainFrame.this.menuBar.getMenuItem("TileTabPanel.tab"),
-                MainFrame.this.menuBar.getMenuItem("TileTabPanel.splitHorizontal"),
-                MainFrame.this.menuBar.getMenuItem("TileTabPanel.splitVertical")) {
-            protected void selectedIndexChanged(int index) {
-                setSelectedEncoding(getSelectedComponent().getEncoding());
-            }
-        };
 
         searcher.btnHide.addActionListener(e -> {
             removeSearchPanel();
@@ -156,7 +161,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             }
         });
 
-        getContentPane().add(context.tab, BorderLayout.CENTER);
+        getContentPane().add(tab, BorderLayout.CENTER);
         openNewTab();
         getContentPane().add(southPane, BorderLayout.SOUTH);
         southPane.setLayout(new BorderLayout());
@@ -168,12 +173,12 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         config.applyRectangle("MainFrame.bounds", this);
         config.applyLocation("ConfigDialog.location", configDialog);
         keyStroke.apply(this);
-        keyStroke.apply(context.tab.popupMenu);
+        keyStroke.apply(tab.popupMenu);
         DropTarget target = new DropTarget(this,
                 DnDConstants.ACTION_REFERENCE,
                 mainFrameDropTargetListener
         );
-        DropTarget target2 = new DropTarget(context.tab,
+        DropTarget target2 = new DropTarget(tab,
                 DnDConstants.ACTION_REFERENCE,
                 tabDropTargetListener
         );
@@ -203,7 +208,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     }
 
     private JTextComponent getActiveComponent() {
-        Component activeComponent = context.tab.getSelectedComponent().tab.getSelectedComponent();
+        Component activeComponent = tab.getSelectedComponent().tab.getSelectedComponent();
         JTextComponent com = null;
         if (activeComponent instanceof ThreadDumpPanel) {
             com = ((ThreadDumpPanel) activeComponent).threadDumpPanel;
@@ -265,22 +270,22 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     }
 
     private void closeSamuraiPanel(int index) {
-        context.tab.getComponentAt(index).close();
-        if (context.tab.getComponentSize() > 1) {
-            context.tab.removeComponentAt(index);
+        tab.getComponentAt(index).close();
+        if (tab.getComponentSize() > 1) {
+            tab.removeComponentAt(index);
         }
         setAvailability();
     }
 
     private void setAvailability() {
-        if (context.tab.getComponentSize() == 1 && context.tab.getComponentAt(0).isEmpty()) {
-            context.tab.disableClosable();
+        if (tab.getComponentSize() == 1 && tab.getComponentAt(0).isEmpty()) {
+            tab.disableClosable();
             menuBar.getMenuItem("menu.file.close").setEnabled(false);
         } else {
-            context.tab.enableClosable(this);
+            tab.enableClosable(this);
             menuBar.getMenuItem("menu.file.close").setEnabled(true);
         }
-        menuBar.getMenuItem("menu.view.reload").setEnabled(!context.tab.getSelectedComponent().isEmpty());
+        menuBar.getMenuItem("menu.view.reload").setEnabled(!tab.getSelectedComponent().isEmpty());
     }
 
     /*package*/ void handlePreferences() {
@@ -320,16 +325,16 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     }
 
     private void nextTab() {
-        int selected = context.tab.getSelectedIndex();
+        int selected = tab.getSelectedIndex();
         selected++;
-        if (selected >= context.tab.getComponentSize()) {
+        if (selected >= tab.getComponentSize()) {
             selected = 0;
         }
-        context.tab.setSelectedIndex(selected);
+        tab.setSelectedIndex(selected);
     }
 
     private void clearBuffer() {
-        SamuraiPanel selected = context.tab.getSelectedComponent();
+        SamuraiPanel selected = tab.getSelectedComponent();
         if (!selected.isEmpty()) {
             selected.clearBuffer();
         }
@@ -337,12 +342,12 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     }
 
     private void previousTab() {
-        int selected = context.tab.getSelectedIndex();
+        int selected = tab.getSelectedIndex();
         selected--;
         if (selected < 0) {
-            selected = context.tab.getComponentSize() - 1;
+            selected = tab.getComponentSize() - 1;
         }
-        context.tab.setSelectedIndex(selected);
+        tab.setSelectedIndex(selected);
     }
 
     private long lastPressed = 0;
@@ -352,7 +357,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         //handle reload request
         if (keyStroke.isPressed("logPanel.reloadAlt", e)) {
             e.consume();
-            SamuraiPanel samuraiPanel = context.tab.getSelectedComponent();
+            SamuraiPanel samuraiPanel = tab.getSelectedComponent();
             if (!samuraiPanel.isEmpty()) {
                 samuraiPanel.reload();
             }
@@ -477,7 +482,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         if (null != selectedEncoding) {
             selectedEncoding.setSelected(false);
         }
-        context.tab.getSelectedComponent().setEncoding(encoding);
+        tab.getSelectedComponent().setEncoding(encoding);
 
         JMenu menuViewEncoding = menuBar.getMenu("menu.view.encoding");
         for (int i = menuViewEncoding.getItemCount() - 1; i >= 0; i--) {
@@ -496,25 +501,25 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     public void openNewTab() {
         String defaultEncoding = config.getString("defaultEncoding");
 
-        SamuraiPanel samuraiPanel = new SamuraiPanel(context, config, this, defaultEncoding);
+        SamuraiPanel samuraiPanel = new SamuraiPanel(this::setIcon, this::setText, context, config, this, defaultEncoding);
         samuraiPanel.setDroptargetListener(new SamuraiDropTargetListener(samuraiPanel));
-        context.tab.addComponent(resources.getMessage("MainFrame.untitled"), samuraiPanel,
+        tab.addComponent(resources.getMessage("MainFrame.untitled"), samuraiPanel,
                 SamuraiPanel.stoppedIcon);
-        context.tab.setSelectedIndex(context.tab.getComponentSize() - 1);
+        tab.setSelectedIndex(tab.getComponentSize() - 1);
         setSelectedEncoding(defaultEncoding);
         setAvailability();
     }
 
     public void filesOpened(File[] files) {
         findEmptyTabOrCreateNew();
-        this.context.tab.getSelectedComponent().openFiles(files);
+        this.tab.getSelectedComponent().openFiles(files);
         setAvailability();
     }
 
     public void fileOpened(File file) {
         if (!checkOpened(file)) {
             findEmptyTabOrCreateNew();
-            this.context.tab.getSelectedComponent().openFiles(new File[]{file});
+            this.tab.getSelectedComponent().openFiles(new File[]{file});
         }
         setAvailability();
     }
@@ -559,17 +564,17 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     private void setSamuraiPanelDragAccepting(int index) {
         if (lastDragging != index) {
             setSamuraiPanelNotDragAccepting();
-            context.tab.getComponentAt(index).setDragAccepting();
-            defaultBackgroundColor = context.tab.getForegroundAt(index);
-            context.tab.setForegroundAt(index, SystemColor.textHighlight);
+            tab.getComponentAt(index).setDragAccepting();
+            defaultBackgroundColor = tab.getForegroundAt(index);
+            tab.setForegroundAt(index, SystemColor.textHighlight);
             lastDragging = index;
         }
     }
 
     private void setSamuraiPanelNotDragAccepting() {
         if (-1 != lastDragging) {
-            context.tab.getComponentAt(lastDragging).setDragNotAccepting();
-            context.tab.setForegroundAt(lastDragging, defaultBackgroundColor);
+            tab.getComponentAt(lastDragging).setDragNotAccepting();
+            tab.setForegroundAt(lastDragging, defaultBackgroundColor);
             lastDragging = -1;
         }
     }
@@ -577,8 +582,8 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     private final DropTargetListener tabDropTargetListener = new DropTargetListener() {
         public void dragEnter(DropTargetDragEvent event) {
             int index;
-            if (-1 != (index = context.tab.indexAtLocation(event.getLocation().x, event.getLocation().y))) {
-                context.tab.setSelectedIndex(index);
+            if (-1 != (index = tab.indexAtLocation(event.getLocation().x, event.getLocation().y))) {
+                tab.setSelectedIndex(index);
                 setDragNotAccepting();
                 setSamuraiPanelDragAccepting(index);
             } else {
@@ -589,8 +594,8 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
 
         public void dragOver(DropTargetDragEvent event) {
             int index;
-            if (-1 != (index = context.tab.indexAtLocation(event.getLocation().x, event.getLocation().y))) {
-                context.tab.setSelectedIndex(index);
+            if (-1 != (index = tab.indexAtLocation(event.getLocation().x, event.getLocation().y))) {
+                tab.setSelectedIndex(index);
                 setDragNotAccepting();
                 setSamuraiPanelDragAccepting(index);
             } else {
@@ -616,11 +621,11 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                 File[] files = checkAcceptable(transfer);
                 if (null != files) {
                     int index;
-                    if (-1 != (index = context.tab.indexAtLocation(drop.getLocation().x, drop.getLocation().y))) {
+                    if (-1 != (index = tab.indexAtLocation(drop.getLocation().x, drop.getLocation().y))) {
                         if (!(1 == files.length && checkOpened(files[0]))) {
                             fileHistory.addHistory(files);
-                            context.tab.setSelectedIndex(index);
-                            context.tab.getSelectedComponent().openFiles(files);
+                            tab.setSelectedIndex(index);
+                            tab.getSelectedComponent().openFiles(files);
                         }
                     } else {
                         fileHistory.open(files);
@@ -667,13 +672,13 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     };
 
     private void findEmptyTabOrCreateNew() {
-        if (!this.context.tab.getSelectedComponent().isEmpty()) {
+        if (!this.tab.getSelectedComponent().isEmpty()) {
             //find empty tab
             boolean foundEmptySamuraiPanel = false;
-            for (int i = 0; i < context.tab.getComponentSize(); i++) {
-                if (this.context.tab.getComponentAt(i).isEmpty()) {
+            for (int i = 0; i < tab.getComponentSize(); i++) {
+                if (this.tab.getComponentAt(i).isEmpty()) {
                     //found one empty tab, select it
-                    this.context.tab.setSelectedIndex(i);
+                    this.tab.setSelectedIndex(i);
                     foundEmptySamuraiPanel = true;
                     break;
                 }
@@ -687,11 +692,11 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
 
     private boolean checkOpened(File file) {
         boolean foundOpened = false;
-        for (int i = 0; i < context.tab.getComponentSize(); i++) {
+        for (int i = 0; i < tab.getComponentSize(); i++) {
 
-            List<File> currentFile = context.tab.getComponentAt(i).getCurrentFile();
+            List<File> currentFile = tab.getComponentAt(i).getCurrentFile();
             if (null != currentFile && file.equals(currentFile.get(0))) {
-                this.context.tab.setSelectedIndex(i);
+                this.tab.setSelectedIndex(i);
                 context.setTemporaryStatus(resources.getMessage("MainFrame.fileAlreadyOpened", file.getAbsolutePath()));
                 foundOpened = true;
                 break;
@@ -716,8 +721,8 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         }
 
         private int getSamuraiPanelIndex() {
-            for (int i = (context.tab.getComponentSize() - 1); i >= 0; i--) {
-                if (samuraiPanel == context.tab.getComponentAt(i)) {
+            for (int i = (tab.getComponentSize() - 1); i >= 0; i--) {
+                if (samuraiPanel == tab.getComponentAt(i)) {
                     return i;
                 }
             }
@@ -786,4 +791,25 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
             }
         }
     }
+
+    public void setIcon(ImageIcon icon, JComponent component) {
+        for (int i = 0; i < tab.getComponentSize(); i++) {
+            Component theComponent = tab.getComponentAt(i);
+            if (component == theComponent) {
+                tab.setIconAt(i, icon);
+                break;
+            }
+        }
+    }
+
+    public void setText(String text, JComponent component) {
+        for (int i = 0; i < tab.getComponentSize(); i++) {
+            Component theComponent = tab.getComponentAt(i);
+            if (component == theComponent) {
+                tab.setTitleAt(i, text);
+                break;
+            }
+        }
+    }
+
 }

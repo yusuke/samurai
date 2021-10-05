@@ -19,36 +19,14 @@ import one.cafebabe.samurai.util.ExecuteThread;
 import one.cafebabe.samurai.util.Task;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class Context {
     final ExecuteThread executeThread = new ExecuteThread();
     private final JLabel statusBar;
-    TileTabPanel<SamuraiPanel> tab;
 
     public Context(JLabel statusBar) {
         this.statusBar = statusBar;
         executeThread.start();
-    }
-
-    public void setIcon(ImageIcon icon, JComponent component) {
-        for (int i = 0; i < tab.getComponentSize(); i++) {
-            Component theComponent = tab.getComponentAt(i);
-            if (component == theComponent) {
-                tab.setIconAt(i, icon);
-                break;
-            }
-        }
-    }
-
-    public void setText(String text, JComponent component) {
-        for (int i = 0; i < tab.getComponentSize(); i++) {
-            Component theComponent = tab.getComponentAt(i);
-            if (component == theComponent) {
-                tab.setTitleAt(i, text);
-                break;
-            }
-        }
     }
 
     public void setTemporaryStatus(String temporaryStatus) {
