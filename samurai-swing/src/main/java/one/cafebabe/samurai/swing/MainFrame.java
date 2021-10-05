@@ -72,9 +72,9 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                             .addMenu("menu.file.viewGcLogFrom", e -> new ViewGcLog(config, fileHistory, e))
                             .addSeparator()
                             .addMenuItem("menu.file.close", e -> closeSamuraiPanel(tab.getSelectedIndex()))
-                            .addMenuItemIfWin("menu.file.exit", e -> handleQuit()))
+                            .addMenuItemIfNotMac("menu.file.exit", e -> handleQuit()))
             .addMenu("menu.edit",
-                    editMenu -> editMenu.addMenuItemIfWin("menu.edit.preferences", e -> handlePreferences())
+                    editMenu -> editMenu.addMenuItemIfNotMac("menu.edit.preferences", e -> handlePreferences())
                             .addMenuItem("menu.edit.copy", e -> {
                                 Component component = tab.getSelectedComponent().getSelectedComponent();
                                 if (component instanceof ClipBoardOperationListener) {
@@ -117,7 +117,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                                 }
                             })
                             .addMenuItem("menu.view.clearBuffer", e -> clearBuffer()))
-            .addMenuIfWin("menu.help",
+            .addMenuIfNotMac("menu.help",
                     helpMenu -> helpMenu.addMenuItem("menu.help.about", e -> handleAbout()));
 
 
@@ -167,7 +167,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         getContentPane().add(southPane, BorderLayout.SOUTH);
         southPane.setLayout(new BorderLayout());
         southPane.add(statusBar, BorderLayout.SOUTH);
-        if (OSDetector.isWindows()) {
+        if (OSDetector.isWindows() ||OSDetector.isLinux() ) {
             setIconImage(Toolkit.getDefaultToolkit().createImage(MainFrame.class.getResource("images/samurai.png")));
         }
 

@@ -47,8 +47,8 @@ public class MenuBar {
         return new MenuBar();
     }
 
-    public MenuBar addMenuIfWin(String label, Consumer<SwingMenu> menu) {
-        if (OSDetector.isWindows()) {
+    public MenuBar addMenuIfNotMac(String label, Consumer<SwingMenu> menu) {
+        if (!OSDetector.isMac()) {
             addMenu(label, menu);
         }
         return this;
@@ -90,8 +90,8 @@ public class MenuBar {
             return this;
         }
 
-        public SwingMenu addMenuItemIfWin(String label, ActionListener listener) {
-            if (OSDetector.isWindows()) {
+        public SwingMenu addMenuItemIfNotMac(String label, ActionListener listener) {
+            if (!OSDetector.isMac()) {
                 return addMenuItem(label, listener);
             }
             return this;
