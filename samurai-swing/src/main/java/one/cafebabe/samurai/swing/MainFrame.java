@@ -38,7 +38,7 @@ import java.util.List;
 import static one.cafebabe.samurai.swing.TileTabLayout.*;
 
 public class MainFrame extends JFrame implements KeyListener, FileHistoryListener, CloseListener {
-    private final Configuration config = new Configuration("samurai");
+    private static final Configuration config = new Configuration("samurai");
 
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     private static final CustomizableKeyStroke keyStroke = new CustomizableKeyStroke(resources);
@@ -51,7 +51,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     private final JPanel southPane = new JPanel();
     private final SearchPanel searcher = new SearchPanel(context, config);
     private final FileHistory fileHistory = new FileHistory(config, this);
-    TileTabPanel<SamuraiPanel> tab = new TileTabPanel<>(true) {
+    private final TileTabPanel<SamuraiPanel> tab = new TileTabPanel<>(true) {
         protected void selectedIndexChanged(int index) {
             setSelectedEncoding(getSelectedComponent().getEncoding());
         }
@@ -163,6 +163,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
 
         getContentPane().add(tab, BorderLayout.CENTER);
         openNewTab();
+        setOrientation(TAB);
         getContentPane().add(southPane, BorderLayout.SOUTH);
         southPane.setLayout(new BorderLayout());
         southPane.add(statusBar, BorderLayout.SOUTH);
