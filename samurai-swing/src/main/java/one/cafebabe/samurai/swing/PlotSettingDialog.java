@@ -17,24 +17,8 @@ package one.cafebabe.samurai.swing;
 
 import one.cafebabe.samurai.util.GUIResourceBundle;
 
-import javax.swing.AbstractAction;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JColorChooser;
-import javax.swing.JComponent;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.KeyStroke;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Frame;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
-import java.awt.SystemColor;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
@@ -56,19 +40,6 @@ public class PlotSettingDialog extends JDialog {
 
     public PlotSettingDialog(Frame frame, String title, boolean modal) {
         super(frame, title, modal);
-        try {
-            jbInit();
-            pack();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-    }
-
-    public PlotSettingDialog() {
-        this(null, resources.getMessage("PlotSettingDialog.title"), false);
-    }
-
-    private void jbInit() {
         okButton.addActionListener(e -> {
             okPressed = true;
             setVisible(false);
@@ -124,6 +95,11 @@ public class PlotSettingDialog extends JDialog {
                 ESC_ACTION_KEY
         );
 
+        pack();
+    }
+
+    public PlotSettingDialog() {
+        this(null, resources.getMessage("PlotSettingDialog.title"), false);
     }
 
     static final String ESC_ACTION_KEY = "ESC_ACTION_KEY";

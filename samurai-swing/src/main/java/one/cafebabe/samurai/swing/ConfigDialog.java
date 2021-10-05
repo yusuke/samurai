@@ -51,27 +51,9 @@ public class ConfigDialog extends JDialog {
     public final JLabel labelDumpPanelFontFamily = new JLabel(resources.getMessage("ConfigDialog.fontFamily"));
     public final JCheckBox config_shrinkIdleThreads = new JCheckBox(resources.getMessage("ConfigDialog.shrinkIdleThreads"));
     public final JLabel labelFontFamily = new JLabel(resources.getMessage("ConfigDialog.fontFamily"));
-    
+
     public ConfigDialog(Frame frame, String title, boolean modal, Configuration config) {
         super(frame, title, modal);
-        try {
-            jbInit();
-            pack();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        this.config = config;
-    }
-
-    private final Configuration config;
-
-    public ConfigDialog(Configuration config) {
-        this(null, resources.getMessage("ConfigDialog.title"), false, config);
-    }
-
-    final ConfigDialog THIS = this;
-
-    private void jbInit() {
         //panel root
         this.getContentPane().setLayout(gridBagLayout1);
         jTabbedPane1.setForeground(Color.black);
@@ -203,14 +185,19 @@ public class ConfigDialog extends JDialog {
                 KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0),
                 ESC_ACTION_KEY
         );
+        pack();
     }
+
+    public ConfigDialog(Configuration config) {
+        this(null, resources.getMessage("ConfigDialog.title"), false, config);
+    }
+
+    final ConfigDialog THIS = this;
 
     static final String ESC_ACTION_KEY = "ESC_ACTION_KEY";
 
 
     void this_windowActivated(WindowEvent e) {
-//    this.cancelButton.grabFocus();
-
     }
 
     void config_logFontSize_itemStateChanged(ItemEvent e) {

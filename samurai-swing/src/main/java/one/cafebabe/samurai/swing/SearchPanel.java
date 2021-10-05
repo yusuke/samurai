@@ -34,20 +34,6 @@ public class SearchPanel extends JPanel {
     public final JButton btnHide = new JButton();
 
     public SearchPanel() {
-        try {
-            jbInit();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-    }
-
-    private void storeConfig() {
-        config.store(this);
-    }
-
-    FlowLayout layout = new FlowLayout(FlowLayout.LEFT);
-
-    private void jbInit() {
         config_searchText.setPreferredSize(new Dimension(150, 20));
         config_searchText.setMaximumSize(new Dimension(1500, 20));
         config_searchText.addFocusListener(new FocusListener() {
@@ -82,6 +68,10 @@ public class SearchPanel extends JPanel {
         this.add(btnPrevious);
         this.add(btnNext);
         this.add(config_matchCase);
+    }
+
+    private void storeConfig() {
+        config.store(this);
     }
 
     private Configuration config;
