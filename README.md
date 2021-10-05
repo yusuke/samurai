@@ -14,7 +14,7 @@ Samurai is an analysis tool for Java thread dumps / GC logs.
 [&#35;samuraiApp](https://twitter.com/search?q=%23samuraiApp&src=typed_query&f=live)
 
 # Download
-<a href="https://github.com/yusuke/samurai/releases/download/2021.8/Samurai-2021.8-mac.dmg"><img src="images/mac-download.png" alt="mac" style="width:300px;"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/yusuke/samurai/releases/download/2021.8/Samurai-2021.8-win.zip"><img src="images/win-download.png" alt="win" style="width:300px;"/></a>
+<a href="https://github.com/yusuke/samurai/releases/download/2021.8/Samurai-2021.8-mac.dmg"><img src="images/mac-download.png" alt="mac" style="width:300px;"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/yusuke/samurai/releases/download/2021.8/Samurai-2021.8-win.zip"><img src="images/win-download.png" alt="win" style="width:300px;"/></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/yusuke/samurai/releases/download/2021.8/samurai_2021.8-1_amd64.deb"><img src="images/deb-download.png" alt="win" style="width:300px;"/></a>
 
 ## What does it offer?
 - Tail log files
