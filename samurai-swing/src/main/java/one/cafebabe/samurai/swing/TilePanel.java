@@ -15,17 +15,10 @@
  */
 package one.cafebabe.samurai.swing;
 
-import javax.swing.ImageIcon;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.event.AncestorEvent;
 import javax.swing.event.AncestorListener;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Cursor;
-import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -58,18 +51,16 @@ import java.util.List;
         ensureOrientation();
     }
 
-    public final static int HORIZONTAL = 0;
-    public final static int VERTICAL = 1;
 
-    public void setOrientation(int orientation) {
-        if (orientation != HORIZONTAL && orientation != VERTICAL) {
+    public void setOrientation(TileTabLayout orientation) {
+        if (orientation != TileTabLayout.HORIZONTAL && orientation != TileTabLayout.VERTICAL) {
             throw new IllegalArgumentException("Unsupported orientation");
         }
-        if ((horizontal && HORIZONTAL == orientation) ||
-                (!horizontal && VERTICAL == orientation)) {
+        if ((horizontal && TileTabLayout.HORIZONTAL == orientation) ||
+                (!horizontal && TileTabLayout.VERTICAL == orientation)) {
             return;
         }
-        horizontal = HORIZONTAL == orientation;
+        horizontal = TileTabLayout.HORIZONTAL == orientation;
         ensureOrientation();
     }
 

@@ -35,7 +35,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import static one.cafebabe.samurai.swing.TileTabPanel.*;
+import static one.cafebabe.samurai.swing.TileTabLayout.*;
 
 public class MainFrame extends JFrame implements KeyListener, FileHistoryListener, CloseListener {
     private final Configuration config = new Configuration("samurai");
@@ -91,8 +91,8 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                             .addMenuItem("menu.view.next", e -> nextTab())
                             .addSeparator()
                             .addMenuItem("TileTabPanel.tab", e -> setOrientation(TAB))
-                            .addMenuItem("TileTabPanel.splitHorizontal", e -> setOrientation(TileTabPanel.TILE_HORIZONTAL))
-                            .addMenuItem("TileTabPanel.splitVertical", e -> setOrientation(TileTabPanel.TILE_VERTICAL))
+                            .addMenuItem("TileTabPanel.splitHorizontal", e -> setOrientation(HORIZONTAL))
+                            .addMenuItem("TileTabPanel.splitVertical", e -> setOrientation(VERTICAL))
                             .addSeparator()
                             .addCheckBoxMenuItem("menu.view.statusBar", e -> {
                                 if (((JCheckBoxMenuItem) e.getSource()).isSelected()) {
@@ -121,11 +121,11 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                     helpMenu -> helpMenu.addMenuItem("menu.help.about", e -> handleAbout()));
 
 
-    private void setOrientation(int orientation) {
+    private void setOrientation(TileTabLayout orientation) {
         tab.setOrientation(orientation);
         menuBar.getMenuItem("TileTabPanel.tab").setEnabled(orientation != TAB);
-        menuBar.getMenuItem("TileTabPanel.splitHorizontal").setEnabled(orientation != TILE_HORIZONTAL);
-        menuBar.getMenuItem("TileTabPanel.splitVertical").setEnabled(orientation != TILE_VERTICAL);
+        menuBar.getMenuItem("TileTabPanel.splitHorizontal").setEnabled(orientation != HORIZONTAL);
+        menuBar.getMenuItem("TileTabPanel.splitVertical").setEnabled(orientation != VERTICAL);
     }
 
     public MainFrame() {

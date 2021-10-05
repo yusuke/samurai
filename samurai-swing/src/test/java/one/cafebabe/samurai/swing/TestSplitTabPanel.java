@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 
-import javax.swing.JTextArea;
+import javax.swing.*;
 import java.awt.*;
 
 @Execution(ExecutionMode.CONCURRENT)
@@ -34,7 +34,7 @@ class TestSplitTabPanel {
             SplitTabPanelTest test = new SplitTabPanelTest();
             test.setSize(new Dimension(400, 400));
             test.setVisible(true);
-            test.splitTabPanel.setOrientation(TileTabPanel.TILE_HORIZONTAL);
+            test.splitTabPanel.setOrientation(TileTabLayout.HORIZONTAL);
             JTextArea ta0 = new JTextArea("00");
             JTextArea ta1 = new JTextArea("11e");
             JTextArea ta2 = new JTextArea("22");

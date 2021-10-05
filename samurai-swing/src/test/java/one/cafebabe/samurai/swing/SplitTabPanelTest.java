@@ -19,14 +19,8 @@ package one.cafebabe.samurai.swing;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
+import javax.swing.*;
+import java.awt.*;
 
 @Execution(ExecutionMode.CONCURRENT)
 class SplitTabPanelTest extends JFrame {
@@ -109,14 +103,15 @@ class SplitTabPanelTest extends JFrame {
 
         getContentPane().setLayout(borderLayout1);
         this.getContentPane().add(splitTabPanel, java.awt.BorderLayout.CENTER);
-        splitTabPanel.setOrientation(TilePanel.HORIZONTAL);
+        splitTabPanel.setOrientation(TileTabLayout.HORIZONTAL);
         splitTabPanel.addComponent("1", ta1);
         splitTabPanel.addComponent("2", ta2);
         splitTabPanel.addComponent("3", ta3);
         JButton btn = new JButton("switch");
         btn.addActionListener(e -> {
             orientation++;
-            splitTabPanel.setOrientation(orientation %2);
+            splitTabPanel.setOrientation(orientation %2 == 0 ? 
+                    TileTabLayout.HORIZONTAL : TileTabLayout.VERTICAL);
         });
         btn.setActionCommand("okButton");
         splitTabPanel.addComponent("2", btn);

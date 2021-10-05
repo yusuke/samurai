@@ -39,7 +39,7 @@ public class GraphPanel extends LogRenderer implements ClipBoardOperationListene
         super(true, samuraiPanel);
         this.config = config;
         this.setLayout(new BorderLayout());
-        tileTabPanel.setOrientation(TileTabPanel.TILE_VERTICAL);
+        tileTabPanel.setOrientation(TileTabLayout.VERTICAL);
         tileTabPanel.setDividerSize(0);
         this.add(tileTabPanel, BorderLayout.CENTER);
     }

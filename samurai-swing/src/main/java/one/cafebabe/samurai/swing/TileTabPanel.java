@@ -1,5 +1,5 @@
 /*
- * Copyright 2003-2012 Yusuke Yamamoto
+ * Copyright 2003-2021 Yusuke Yamamoto
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -85,10 +85,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     private final TilePanel tilePanel;
     final JTabbedPane tab = new JTabbedPane();
     BorderLayout borderLayout1;
-    private int layout = TAB;
-    public static final int TAB = 0;
-    public static final int TILE_HORIZONTAL = 1;
-    public static final int TILE_VERTICAL = 2;
+    private TileTabLayout layout = TileTabLayout.TAB;
     private boolean showTitleWithSingleComponent = true;
 
     public void setShowTitleWithSingleComponent(boolean show) {
@@ -113,9 +110,9 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         tilePanel.addMouseMotionListnerToTitles(this);
         menuCloseTab.addActionListener(closeAction);
         menuTab.setEnabled(false);
-        menuTab.addActionListener(e -> setOrientation(TAB));
-        menuHorizontal.addActionListener(e -> setOrientation(TILE_HORIZONTAL));
-        menuVertical.addActionListener(e -> setOrientation(TILE_VERTICAL));
+        menuTab.addActionListener(e -> setOrientation(TileTabLayout.TAB));
+        menuHorizontal.addActionListener(e -> setOrientation(TileTabLayout.HORIZONTAL));
+        menuVertical.addActionListener(e -> setOrientation(TileTabLayout.VERTICAL));
 
         popupMenu.add(menuTab);
         popupMenu.add(menuHorizontal);
@@ -124,7 +121,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     }
 
     public void setForegroundAt(int index, Color color) {
-        if (layout == TAB) {
+        if (layout == TileTabLayout.TAB) {
             tab.setForegroundAt(index, color);
         } else {
             tilePanel.setForegroundAt(index, color);
@@ -132,7 +129,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     }
 
     public Color getForegroundAt(int index) {
-        if (layout == TAB) {
+        if (layout == TileTabLayout.TAB) {
             return tab.getForegroundAt(index);
         } else {
             return tilePanel.getForegroundAt(index);
@@ -177,7 +174,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
                     add(this.components.get(0).getComponent(), BorderLayout.CENTER);
                     validate();
                 } else {
-                    if (this.layout == TAB) {
+                    if (this.layout == TileTabLayout.TAB) {
                         add(tab, BorderLayout.CENTER);
                         validate();
                     } else {
@@ -189,7 +186,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
             case 2:
                 if (!this.showTitleWithSingleComponent) {
                     remove(components.get(0).getComponent());
-                    if (this.layout == TAB) {
+                    if (this.layout == TileTabLayout.TAB) {
                         remove(components.get(0).getComponent());
                         add(tab, BorderLayout.CENTER);
                         tab.addTab(components.get(0).getName(), components.get(0).getIcon(),
@@ -208,7 +205,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         }
 
         if (showTitleWithSingleComponent || 1 < components.size()) {
-            if (this.layout == TAB) {
+            if (this.layout == TileTabLayout.TAB) {
                 tab.add(name, component);
                 tab.setIconAt(tab.getTabCount() - 1, componentInfo.getIcon());
                 this.currentSelectedIndex = tab.getSelectedIndex();
@@ -235,7 +232,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
             ((RemoveListener) component).willBeRemoved();
         }
         components.remove(index);
-        if (this.layout == TAB) {
+        if (this.layout == TileTabLayout.TAB) {
             tab.remove(component);
             this.currentSelectedIndex = tab.getSelectedIndex();
         } else {
@@ -243,7 +240,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
             this.currentSelectedIndex = tilePanel.getSelectedIndex();
         }
         if (!this.showTitleWithSingleComponent && components.size() == 1) {
-            if (this.layout == TAB) {
+            if (this.layout == TileTabLayout.TAB) {
                 tab.removeTabAt(0);
                 this.remove(tab);
             } else {
@@ -255,7 +252,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         if (components.size() == 0) {
             if (!this.showTitleWithSingleComponent) {
                 this.remove(component);
-            } else if (layout == TAB) {
+            } else if (layout == TileTabLayout.TAB) {
                 this.remove(tab);
             } else {
                 this.remove(tilePanel);
@@ -268,7 +265,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     public void setIconAt(int index, ImageIcon icon) {
         components.get(index).setIcon(icon);
         if (showTitleWithSingleComponent || 1 < components.size()) {
-            if (this.layout == TAB) {
+            if (this.layout == TileTabLayout.TAB) {
                 this.tab.setIconAt(index, icon);
             } else {
                 this.tilePanel.setLeftIconAt(index, icon);
@@ -279,7 +276,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     public void setTitleAt(int index, String text) {
         components.get(index).setName(text);
         if (showTitleWithSingleComponent || 1 < components.size()) {
-            if (this.layout == TAB) {
+            if (this.layout == TileTabLayout.TAB) {
                 this.tab.setTitleAt(index, text);
             } else {
                 this.tilePanel.setTitleAt(index, text);
@@ -289,7 +286,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
 
     public void setComponentAt(int index, T component) {
         if (showTitleWithSingleComponent || 1 < components.size()) {
-            if (this.layout == TAB) {
+            if (this.layout == TileTabLayout.TAB) {
                 this.tab.setComponentAt(index, component);
             } else {
                 this.tilePanel.setComponentAt(index, component);
@@ -304,7 +301,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     public void setSelectedIndex(int index) {
         this.currentSelectedIndex = index;
         if (showTitleWithSingleComponent || 1 < components.size()) {
-            if (TAB == layout) {
+            if (TileTabLayout.TAB == layout) {
                 tab.setSelectedIndex(index);
             } else {
                 tilePanel.setSelectedIndex(index);
@@ -320,7 +317,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
 
     public int getSelectedIndex() {
         if (showTitleWithSingleComponent || 1 < components.size()) {
-            if (TAB == layout) {
+            if (TileTabLayout.TAB == layout) {
                 return tab.getSelectedIndex();
             } else {
                 return tilePanel.getSelectedIndex();
@@ -332,7 +329,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
 
     public T getSelectedComponent() {
         if (showTitleWithSingleComponent || 1 < components.size()) {
-            if (TAB == layout) {
+            if (TileTabLayout.TAB == layout) {
                 return (T) tab.getSelectedComponent();
             } else {
                 return (T) tilePanel.getSelectedComponent();
@@ -344,7 +341,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
 
     public T getComponentAt(int index) {
         if (showTitleWithSingleComponent || 1 < components.size()) {
-            if (TAB == layout) {
+            if (TileTabLayout.TAB == layout) {
                 return (T) tab.getComponentAt(index);
             } else {
                 return (T) tilePanel.getComponentAt(index);
@@ -361,11 +358,11 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         return components.get(index).getIcon();
     }
 
-    public void setOrientation(int orientation) {
-        if (orientation == TILE_HORIZONTAL) {
-            tilePanel.setOrientation(TilePanel.HORIZONTAL);
+    public void setOrientation(TileTabLayout orientation) {
+        if (orientation == TileTabLayout.HORIZONTAL) {
+            tilePanel.setOrientation(TileTabLayout.HORIZONTAL);
         } else {
-            tilePanel.setOrientation(TilePanel.VERTICAL);
+            tilePanel.setOrientation(TileTabLayout.VERTICAL);
         }
         this.currentSelectedIndex = getSelectedIndex();
         if (this.layout != orientation) {
@@ -377,7 +374,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
                         break;
                     }
                 default:
-                    if (TAB == orientation) {
+                    if (TileTabLayout.TAB == orientation) {
                         remove(tilePanel);
                         add(tab, BorderLayout.CENTER);
                         tab.removeAll();
@@ -389,8 +386,8 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
                         validate();
                     } else {
                         //layout is tile
-                        if (TAB == layout) {
-                            // layout used to be TAB
+                        if (TileTabLayout.TAB == layout) {
+                            // layout used to be TileTabLayout.TAB
                             remove(tab);
                             add(tilePanel, BorderLayout.CENTER);
                             tilePanel.removeAll();
@@ -415,9 +412,9 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     }
 
     private void setMenuAvailability() {
-        menuTab.setEnabled(layout != TAB);
-        menuVertical.setEnabled(layout != TILE_VERTICAL);
-        menuHorizontal.setEnabled(layout != TILE_HORIZONTAL);
+        menuTab.setEnabled(layout != TileTabLayout.TAB);
+        menuVertical.setEnabled(layout != TileTabLayout.VERTICAL);
+        menuHorizontal.setEnabled(layout != TileTabLayout.HORIZONTAL);
     }
 
     public void setDividerSize(int size) {
@@ -425,7 +422,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     }
 
     public int indexAtLocation(int x, int y) {
-        if (layout == TAB) {
+        if (layout == TileTabLayout.TAB) {
             return tab.indexAtLocation(x, y);
         } else {
             return -1;
@@ -433,7 +430,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
     }
 
     private int indexAtLocation(MouseEvent event) {
-        if (layout == TAB) {
+        if (layout == TileTabLayout.TAB) {
             return tab.indexAtLocation(event.getX(), event.getY());
         } else {
             return tilePanel.indexAtLocation(event);
@@ -452,8 +449,10 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         if (event.isPopupTrigger()) {
             event.consume();
             int clickedTabIndex = this.indexAtLocation(event);
-            closeAction.setIndex(clickedTabIndex);
-            menuCloseTab.setText(resources.getMessage("TileTabPanel.closeTab", this.getTitleAt(clickedTabIndex)));
+            if (clickedTabIndex != -1) {
+                closeAction.setIndex(clickedTabIndex);
+                menuCloseTab.setText(resources.getMessage("TileTabPanel.closeTab", this.getTitleAt(clickedTabIndex)));
+            }
             popupMenu.show(event.getComponent(), event.getX(), event.getY());
         }
     }
@@ -477,7 +476,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
                 if (-1 != pressedIndex) {
                     if (pressedOnButton) {
                         event.consume();
-                        if (layout == TAB) {
+                        if (layout == TileTabLayout.TAB) {
                             tab.setIconAt(draggingPaneIndex, isOnButton(draggingPaneIndex, event) ? closePushedIcon : closeIcon);
                         } else {
                             if (OSDetector.isMac()) {
@@ -503,7 +502,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
                 if (0 != (event.getButton() & MouseEvent.BUTTON1)) {
                     if (-1 == indexAtLocation(event)) {
                         restoreIcon();
-                    } else if (layout == TAB) {
+                    } else if (layout == TileTabLayout.TAB) {
                         tab.setIconAt(draggingPaneIndex, pressedOnButton & isOnButton(pressedIndex, event) ? closePushedIcon : closeIcon);
                     } else {
                         if (OSDetector.isMac()) {
@@ -577,7 +576,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         if (-1 == currentIndex || currentIndex != index) {
             return false;
         }
-        if (layout == TAB) {
+        if (layout == TileTabLayout.TAB) {
             delta = event.getX() - (int) tab.getBoundsAt(currentIndex).getX() - 12;
             return 0 <= delta && delta < 18;
         } else {
@@ -593,7 +592,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
             restoreIcon();
         } else {
             if (index >= 0) {
-                if (layout == TAB) {
+                if (layout == TileTabLayout.TAB) {
                     tab.setIconAt(index, isOnButton(index, event) ? closeHoverIcon : closeIcon);
                 } else {
                     if (OSDetector.isMac()) {
@@ -609,7 +608,7 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
 
     private void restoreIcon() {
         if (lastEnteredIndex >= 0 && lastEnteredIndex < components.size()) {
-            if (layout == TAB) {
+            if (layout == TileTabLayout.TAB) {
                 tab.setIconAt(lastEnteredIndex, getIconAt(lastEnteredIndex));
             } else {
                 if (OSDetector.isMac()) {
