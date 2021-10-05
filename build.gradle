@@ -39,7 +39,7 @@ task packageMacApp(type: Exec) {
             '--vendor', 'Yusuke Yamamoto',
             '--icon', 'package/samurai.icns',
             '--input', "${projectDir}/samurai-swing/build/",
-            '--dest', './build/',
+            '--dest', './app/',
             '--type', 'dmg',
 //            '--mac-app-store',
             '--mac-package-identifier', 'one.cafebabe.Samurai',
@@ -112,6 +112,39 @@ task packageWinApp(type: Exec) {
             '--type', 'app-image',
             '--icon', 'package/samurai.ico',
             '--input', "${projectDir}/samurai-swing/build/",
-            '--dest', './build/',
+            '--dest', './app/',
+    )
+}
+
+task packageDeb(type: Exec) {
+    workingDir './'
+    commandLine('jpackage',
+            '--verbose',
+            '--add-modules', 'java.base,java.desktop,java.management,java.naming,jdk.internal.jvmstat,jdk.attach',
+            '--main-class', project.properties['mainClassName'],
+            '--main-jar', "${projectDir}/samurai-swing/build/libs/samurai-swing-${project.version}.jar",
+            '--jlink-options', '--strip-native-commands',
+            '--java-options',
+            """-Xmx128m -Xms128m -XX:+UseSerialGC
+               -Djdk.attach.allowAttachSelf=true
+               --add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED
+               --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
+               --add-opens=java.desktop/javax.swing=ALL-UNNAMED
+               --add-opens=java.desktop/javax.swing.border=ALL-UNNAMED
+               --add-opens=java.desktop/com.sun.java.swing.plaf.windows=ALL-UNNAMED
+               --add-opens=java.desktop/javax.swing.colorchooser=ALL-UNNAMED
+               -XX:ErrorFile=\$USER_HOME/java_error_in_idea_%p.log
+               -XX:HeapDumpPath=\$USER_HOME/java_error_in_idea.hprof""",
+            '--name', appName,
+            '--app-version', "${project.version}",
+            '--copyright', 'Yusuke Yamamoto',
+            '--vendor', 'Yusuke Yamamoto',
+            '--license-file', './LICENSE.txt',
+            '--linux-rpm-license-type', 'ASL 2.0',
+            '--type', 'deb',
+            '--icon', './package/samurai-mac.png',
+            '--linux-shortcut',
+            '--input', "${projectDir}/samurai-swing/build/",
+            '--dest', './app/',
     )
 }
