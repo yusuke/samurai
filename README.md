@@ -13,9 +13,10 @@ Samurai is an analysis tool for Java thread dumps / GC logs.
 ## What does it offer?
 - Tail log files
 
-Just drag and drop files you want to tail.
+Drag and drop any log file to browse.
 
-![Samurai](images/tailLogs.png)
+https://user-images.githubusercontent.com/74894/135963535-f0c5cb7b-cbca-4e9c-b90e-7f7dc4a6a330.mp4
+
 
 - Take thread dumps of local processes and visualize them
 
