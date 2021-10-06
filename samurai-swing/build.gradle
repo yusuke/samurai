@@ -114,5 +114,8 @@ jar {
 }
 
 tasks.jar.dependsOn([':samurai-web:jar'])
+javadoc{
+    enabled = false;
+}
 
 
