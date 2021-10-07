@@ -131,7 +131,6 @@ task packageDeb(type: Exec) {
                --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
                --add-opens=java.desktop/javax.swing=ALL-UNNAMED
                --add-opens=java.desktop/javax.swing.border=ALL-UNNAMED
-               --add-opens=java.desktop/com.sun.java.swing.plaf.windows=ALL-UNNAMED
                --add-opens=java.desktop/javax.swing.colorchooser=ALL-UNNAMED
                -XX:ErrorFile=\$USER_HOME/java_error_in_idea_%p.log
                -XX:HeapDumpPath=\$USER_HOME/java_error_in_idea.hprof""",
@@ -164,7 +163,6 @@ task packageRpm(type: Exec) {
                --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
                --add-opens=java.desktop/javax.swing=ALL-UNNAMED
                --add-opens=java.desktop/javax.swing.border=ALL-UNNAMED
-               --add-opens=java.desktop/com.sun.java.swing.plaf.windows=ALL-UNNAMED
                --add-opens=java.desktop/javax.swing.colorchooser=ALL-UNNAMED
                -XX:ErrorFile=\$USER_HOME/java_error_in_idea_%p.log
                -XX:HeapDumpPath=\$USER_HOME/java_error_in_idea.hprof""",
