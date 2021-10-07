@@ -73,6 +73,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                             .addSeparator()
                             .addMenuItem("menu.file.close", e -> closeSamuraiPanel(tab.getSelectedIndex()))
                             .addMenuItemIfNotMac("menu.file.exit", e -> handleQuit()))
+            .addQuitHandlerIfMac((e1, e2) -> this.handleQuit())
             .addMenu("menu.edit",
                     editMenu -> editMenu.addMenuItemIfNotMac("menu.edit.preferences", e -> handlePreferences())
                             .addMenuItem("menu.edit.copy", e -> {
@@ -85,6 +86,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                             .addMenuItem("menu.edit.find", e -> addSearchPanel())
                             .addMenuItem("menu.edit.findNext", e -> searchNext())
                             .addMenuItem("menu.edit.findPrevious", e -> searchPrevious()))
+            .addPreferencesHandlerIfMac(e -> this.handlePreferences())
             .addMenu("menu.view",
                     viewMenu -> viewMenu.addMenuItem("menu.view.reload", e -> tab.getSelectedComponent().reload())
                             .addMenuItem("menu.view.previous", e -> previousTab())
@@ -118,7 +120,8 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                             })
                             .addMenuItem("menu.view.clearBuffer", e -> clearBuffer()))
             .addMenuIfNotMac("menu.help",
-                    helpMenu -> helpMenu.addMenuItem("menu.help.about", e -> handleAbout()));
+                    helpMenu -> helpMenu.addMenuItem("menu.help.about", e -> handleAbout()))
+            .addAboutHandlerIfMac(e -> this.handleAbout());
 
 
     private void setOrientation(TileTabLayout orientation) {
@@ -136,12 +139,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
 
         setJMenuBar(this.menuBar.menuBar());
         menuBar.getCheckBoxMenuItem("menu.view.statusBar").setSelected(true);
-        if (OSDetector.isMac()) {
-            Desktop desktop = Desktop.getDesktop();
-            desktop.setAboutHandler(e -> this.handleAbout());
-            desktop.setPreferencesHandler(e -> this.handlePreferences());
-            desktop.setQuitHandler((e1, e2) -> this.handleQuit());
-        }
 
         statusBar.setPreferredSize(new Dimension(3, 14));
 
@@ -175,10 +172,100 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         config.applyLocation("ConfigDialog.location", configDialog);
         keyStroke.apply(this);
         keyStroke.apply(tab.popupMenu);
+        DropTargetListener mainFrameDropTargetListener = new DropTargetListener() {
+            public void dragEnter(DropTargetDragEvent event) {
+                setDragAccepting();
+            }
+
+            public void dragOver(DropTargetDragEvent event) {
+                setDragAccepting();
+            }
+
+            public void dropActionChanged(DropTargetDragEvent event) {
+            }
+
+            public void dragExit(DropTargetEvent event) {
+                setDragNotAccepting();
+            }
+
+            public void drop(DropTargetDropEvent drop) {
+                setDragNotAccepting();
+                try {
+                    drop.acceptDrop(DnDConstants.ACTION_REFERENCE);
+                    Transferable transfer = drop.getTransferable();
+                    File[] files;
+                    if (null != (files = checkAcceptable(transfer))) {
+                        fileHistory.open(files);
+                        drop.getDropTargetContext().dropComplete(true);
+                    }
+                } catch (InvalidDnDOperationException ex) {
+                    context.setTemporaryStatus(ex.toString());
+                }
+            }
+        };
         DropTarget target = new DropTarget(this,
                 DnDConstants.ACTION_REFERENCE,
                 mainFrameDropTargetListener
         );
+        DropTargetListener tabDropTargetListener = new DropTargetListener() {
+            public void dragEnter(DropTargetDragEvent event) {
+                int index;
+                if (-1 != (index = tab.indexAtLocation(event.getLocation().x, event.getLocation().y))) {
+                    tab.setSelectedIndex(index);
+                    setDragNotAccepting();
+                    setSamuraiPanelDragAccepting(index);
+                } else {
+                    setSamuraiPanelNotDragAccepting();
+                    setDragAccepting();
+                }
+            }
+
+            public void dragOver(DropTargetDragEvent event) {
+                int index;
+                if (-1 != (index = tab.indexAtLocation(event.getLocation().x, event.getLocation().y))) {
+                    tab.setSelectedIndex(index);
+                    setDragNotAccepting();
+                    setSamuraiPanelDragAccepting(index);
+                } else {
+                    setSamuraiPanelNotDragAccepting();
+                    setDragAccepting();
+                }
+            }
+
+            public void dropActionChanged(DropTargetDragEvent event) {
+            }
+
+            public void dragExit(DropTargetEvent event) {
+                setSamuraiPanelNotDragAccepting();
+                setDragNotAccepting();
+            }
+
+            public void drop(DropTargetDropEvent drop) {
+                setDragNotAccepting();
+                setSamuraiPanelNotDragAccepting();
+                try {
+                    drop.acceptDrop(DnDConstants.ACTION_REFERENCE);
+                    Transferable transfer = drop.getTransferable();
+                    File[] files = checkAcceptable(transfer);
+                    if (null != files) {
+                        int index;
+                        if (-1 != (index = tab.indexAtLocation(drop.getLocation().x, drop.getLocation().y))) {
+                            if (!(1 == files.length && checkOpened(files[0]))) {
+                                fileHistory.addHistory(files);
+                                tab.setSelectedIndex(index);
+                                tab.getSelectedComponent().openFiles(files);
+                            }
+                        } else {
+                            fileHistory.open(files);
+                        }
+                        setAvailability();
+                        drop.getDropTargetContext().dropComplete(true);
+                    }
+                } catch (InvalidDnDOperationException ex) {
+                    context.setTemporaryStatus(ex.toString());
+                }
+            }
+        };
         DropTarget target2 = new DropTarget(tab,
                 DnDConstants.ACTION_REFERENCE,
                 tabDropTargetListener
@@ -580,98 +667,6 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         }
     }
 
-    private final DropTargetListener tabDropTargetListener = new DropTargetListener() {
-        public void dragEnter(DropTargetDragEvent event) {
-            int index;
-            if (-1 != (index = tab.indexAtLocation(event.getLocation().x, event.getLocation().y))) {
-                tab.setSelectedIndex(index);
-                setDragNotAccepting();
-                setSamuraiPanelDragAccepting(index);
-            } else {
-                setSamuraiPanelNotDragAccepting();
-                setDragAccepting();
-            }
-        }
-
-        public void dragOver(DropTargetDragEvent event) {
-            int index;
-            if (-1 != (index = tab.indexAtLocation(event.getLocation().x, event.getLocation().y))) {
-                tab.setSelectedIndex(index);
-                setDragNotAccepting();
-                setSamuraiPanelDragAccepting(index);
-            } else {
-                setSamuraiPanelNotDragAccepting();
-                setDragAccepting();
-            }
-        }
-
-        public void dropActionChanged(DropTargetDragEvent event) {
-        }
-
-        public void dragExit(DropTargetEvent event) {
-            setSamuraiPanelNotDragAccepting();
-            setDragNotAccepting();
-        }
-
-        public void drop(DropTargetDropEvent drop) {
-            setDragNotAccepting();
-            setSamuraiPanelNotDragAccepting();
-            try {
-                drop.acceptDrop(DnDConstants.ACTION_REFERENCE);
-                Transferable transfer = drop.getTransferable();
-                File[] files = checkAcceptable(transfer);
-                if (null != files) {
-                    int index;
-                    if (-1 != (index = tab.indexAtLocation(drop.getLocation().x, drop.getLocation().y))) {
-                        if (!(1 == files.length && checkOpened(files[0]))) {
-                            fileHistory.addHistory(files);
-                            tab.setSelectedIndex(index);
-                            tab.getSelectedComponent().openFiles(files);
-                        }
-                    } else {
-                        fileHistory.open(files);
-                    }
-                    setAvailability();
-                    drop.getDropTargetContext().dropComplete(true);
-                }
-            } catch (InvalidDnDOperationException ex) {
-                context.setTemporaryStatus(ex.toString());
-            }
-        }
-    };
-
-    private final DropTargetListener mainFrameDropTargetListener = new DropTargetListener() {
-        public void dragEnter(DropTargetDragEvent event) {
-            setDragAccepting();
-        }
-
-        public void dragOver(DropTargetDragEvent event) {
-            setDragAccepting();
-        }
-
-        public void dropActionChanged(DropTargetDragEvent event) {
-        }
-
-        public void dragExit(DropTargetEvent event) {
-            setDragNotAccepting();
-        }
-
-        public void drop(DropTargetDropEvent drop) {
-            setDragNotAccepting();
-            try {
-                drop.acceptDrop(DnDConstants.ACTION_REFERENCE);
-                Transferable transfer = drop.getTransferable();
-                File[] files;
-                if (null != (files = checkAcceptable(transfer))) {
-                    fileHistory.open(files);
-                    drop.getDropTargetContext().dropComplete(true);
-                }
-            } catch (InvalidDnDOperationException ex) {
-                context.setTemporaryStatus(ex.toString());
-            }
-        }
-    };
-
     private void findEmptyTabOrCreateNew() {
         if (!this.tab.getSelectedComponent().isEmpty()) {
             //find empty tab
@@ -765,7 +760,7 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
         }
     }
 
-    class EncodingMenuItem extends JCheckBoxMenuItem {
+    static class EncodingMenuItem extends JCheckBoxMenuItem {
         final String encoding;
 
         EncodingMenuItem(String encoding) {

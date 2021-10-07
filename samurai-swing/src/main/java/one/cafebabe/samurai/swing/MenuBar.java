@@ -19,6 +19,10 @@ package one.cafebabe.samurai.swing;
 import one.cafebabe.samurai.util.OSDetector;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.desktop.AboutHandler;
+import java.awt.desktop.PreferencesHandler;
+import java.awt.desktop.QuitHandler;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
@@ -63,6 +67,27 @@ public class MenuBar {
 
     public JMenuBar menuBar() {
         return menuBar;
+    }
+
+    public MenuBar addAboutHandlerIfMac(final AboutHandler aboutHandler) {
+        if (OSDetector.isMac()) {
+            Desktop.getDesktop().setAboutHandler(aboutHandler);
+        }
+        return this;
+    }
+
+    public MenuBar addPreferencesHandlerIfMac(final PreferencesHandler preferencesHandler) {
+        if (OSDetector.isMac()) {
+            Desktop.getDesktop().setPreferencesHandler(preferencesHandler);
+        }
+        return this;
+    }
+
+    public MenuBar addQuitHandlerIfMac(final QuitHandler quitHandler) {
+        if (OSDetector.isMac()) {
+            Desktop.getDesktop().setQuitHandler(quitHandler);
+        }
+        return this;
     }
 
     class SwingMenu {
