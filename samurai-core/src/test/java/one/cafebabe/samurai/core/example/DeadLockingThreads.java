@@ -18,7 +18,7 @@ package one.cafebabe.samurai.core.example;
 @SuppressWarnings({"InfiniteLoopStatement", "BusyWait"})
 public class DeadLockingThreads {
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("💀☠️🏴‍☠️☠This application is going to deck lock.💀☠️🏴‍☠️☠");
+        System.out.println("💀☠️🏴‍☠️☠This application is going to dead lock.💀☠️🏴‍☠️☠");
         Object obj1 = new Object();
         Object obj2 = new Object();
         Thread athread1 = new DeadLockingThread(obj1, obj2);
