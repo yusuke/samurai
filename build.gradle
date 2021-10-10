@@ -13,17 +13,22 @@ if (hasProperty('buildScan')) {
 }
 
 def appName = "Samurai"
-task packageMacApp(type: Exec) {
-    workingDir './'
 
-    commandLine('jpackage',
-            '--verbose',
-            '--add-modules', 'java.base,java.desktop,java.management,java.naming,jdk.internal.jvmstat,jdk.attach',
-            '--main-class', "$mainClassName",
-            '--main-jar', "${projectDir}/samurai-swing/build/libs/samurai-swing-${project.version}.jar",
-            '--jlink-options', '--strip-native-commands',
-            '--java-options',
-            """-Xmx128m -Xms128m -XX:+UseSerialGC -Dsun.java2d.metal=true
+def jpackageCommand = ['jpackage',
+                       '--verbose',
+                       '--add-modules', 'java.base,java.desktop,java.management,java.naming,jdk.internal.jvmstat,jdk.attach',
+                       '--main-class', "$mainClassName",
+                       '--main-jar', "${projectDir}/samurai-swing/build/libs/samurai-swing-${project.version}.jar",
+                       '--jlink-options', '--strip-native-commands',
+                       '--copyright', 'Yusuke Yamamoto',
+                       '--vendor', 'Yusuke Yamamoto',
+                       '--input', "${projectDir}/samurai-swing/build/",
+                       '--dest', './app/',
+                       '--name', appName,
+                       '--app-version', "${project.version}",
+                       '--java-options']
+
+def javaOptions = """-Xmx128m -Xms128m -XX:+UseSerialGC
                -Djdk.attach.allowAttachSelf=true
                --add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED
                --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
@@ -32,20 +37,21 @@ task packageMacApp(type: Exec) {
                --add-opens=java.desktop/com.apple.laf=ALL-UNNAMED
                --add-opens=java.desktop/javax.swing.colorchooser=ALL-UNNAMED
                -XX:ErrorFile=\$USER_HOME/java_error_in_idea_%p.log
-               -XX:HeapDumpPath=\$USER_HOME/java_error_in_idea.hprof""",
-            '--name', appName,
-            '--app-version', "${project.version}",
-            '--copyright', 'Yusuke Yamamoto',
-            '--vendor', 'Yusuke Yamamoto',
-            '--icon', 'package/samurai.icns',
-            '--input', "${projectDir}/samurai-swing/build/",
-            '--dest', './app/',
-            '--type', 'dmg',
+               -XX:HeapDumpPath=\$USER_HOME/java_error_in_idea.hprof"""
+
+task packageMacApp(type: Exec) {
+    workingDir './'
+
+    commandLine(jpackageCommand +
+            [javaOptions +' -Dsun.java2d.metal=true',
+             '--icon', 'package/samurai.icns',
+             '--type', 'dmg',
 //            '--mac-app-store',
-            '--mac-package-identifier', 'one.cafebabe.Samurai',
-            '--mac-signing-key-user-name', 'Yusuke Yamamoto (TX2Q55XRF7)',
-            '--mac-sign',
-            '--mac-entitlements', "${projectDir}/package/entitlement.plist",
+             '--mac-package-identifier', 'one.cafebabe.Samurai',
+             '--mac-signing-key-user-name', 'Yusuke Yamamoto (TX2Q55XRF7)',
+             '--mac-sign',
+             '--mac-entitlements', "${projectDir}/package/entitlement.plist"
+            ]
     )
 }
 
@@ -84,98 +90,38 @@ task validateMacApp(type: Exec) {
     )
 }
 
-//xcrun altool --validate-app -f file -t platform -u username [-p password]
-
 task packageWinApp(type: Exec) {
     workingDir './'
-    commandLine('jpackage',
-            '--verbose',
-            '--add-modules', 'java.base,java.desktop,java.management,java.naming,jdk.internal.jvmstat,jdk.attach',
-            '--main-class', project.properties['mainClassName'],
-            '--main-jar', "${projectDir}/samurai-swing/build/libs/samurai-swing-${project.version}.jar",
-            '--jlink-options', '--strip-native-commands',
-            '--java-options',
-            """-Xmx128m -Xms128m -XX:+UseSerialGC
-               -Djdk.attach.allowAttachSelf=true
-               --add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED
-               --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
-               --add-opens=java.desktop/javax.swing=ALL-UNNAMED
-               --add-opens=java.desktop/javax.swing.border=ALL-UNNAMED
-               --add-opens=java.desktop/com.sun.java.swing.plaf.windows=ALL-UNNAMED
-               --add-opens=java.desktop/javax.swing.colorchooser=ALL-UNNAMED
-               -XX:ErrorFile=\$USER_HOME/java_error_in_idea_%p.log
-               -XX:HeapDumpPath=\$USER_HOME/java_error_in_idea.hprof""",
-            '--name', appName,
-            '--app-version', "${project.version}",
-            '--copyright', 'Yusuke Yamamoto',
-            '--vendor', 'Yusuke Yamamoto',
-            '--type', 'app-image',
-            '--icon', 'package/samurai.ico',
-            '--input', "${projectDir}/samurai-swing/build/",
-            '--dest', './app/',
+    commandLine(jpackageCommand +
+            [javaOptions + ' --add-opens=java.desktop/com.sun.java.swing.plaf.windows=ALL-UNNAMED',
+             '--type', 'app-image',
+             '--icon', 'package/samurai.ico'
+            ]
     )
 }
 
 task packageDeb(type: Exec) {
     workingDir './'
-    commandLine('jpackage',
-            '--verbose',
-            '--add-modules', 'java.base,java.desktop,java.management,java.naming,jdk.internal.jvmstat,jdk.attach',
-            '--main-class', project.properties['mainClassName'],
-            '--main-jar', "${projectDir}/samurai-swing/build/libs/samurai-swing-${project.version}.jar",
-            '--jlink-options', '--strip-native-commands',
-            '--java-options',
-            """-Xmx128m -Xms128m -XX:+UseSerialGC
-               -Djdk.attach.allowAttachSelf=true
-               --add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED
-               --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
-               --add-opens=java.desktop/javax.swing=ALL-UNNAMED
-               --add-opens=java.desktop/javax.swing.border=ALL-UNNAMED
-               --add-opens=java.desktop/javax.swing.colorchooser=ALL-UNNAMED
-               -XX:ErrorFile=\$USER_HOME/java_error_in_idea_%p.log
-               -XX:HeapDumpPath=\$USER_HOME/java_error_in_idea.hprof""",
-            '--name', appName,
-            '--app-version', "${project.version}",
-            '--copyright', 'Yusuke Yamamoto',
-            '--vendor', 'Yusuke Yamamoto',
-            '--license-file', './LICENSE.txt',
-            '--linux-rpm-license-type', 'ASL 2.0',
-            '--type', 'deb',
-            '--icon', './package/samurai-mac.png',
-            '--linux-shortcut',
-            '--input', "${projectDir}/samurai-swing/build/",
-            '--dest', './app/',
+    commandLine(jpackageCommand +
+            [javaOptions,
+             '--license-file', './LICENSE.txt',
+             '--linux-rpm-license-type', 'ASL 2.0',
+             '--type', 'deb',
+             '--icon', './package/samurai-mac.png',
+             '--linux-shortcut',
+            ]
     )
 }
 
 task packageRpm(type: Exec) {
     workingDir './'
-    commandLine('jpackage',
-            '--verbose',
-            '--add-modules', 'java.base,java.desktop,java.management,java.naming,jdk.internal.jvmstat,jdk.attach',
-            '--main-class', project.properties['mainClassName'],
-            '--main-jar', "${projectDir}/samurai-swing/build/libs/samurai-swing-${project.version}.jar",
-            '--jlink-options', '--strip-native-commands',
-            '--java-options',
-            """-Xmx128m -Xms128m -XX:+UseSerialGC
-               -Djdk.attach.allowAttachSelf=true
-               --add-exports=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED
-               --add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED
-               --add-opens=java.desktop/javax.swing=ALL-UNNAMED
-               --add-opens=java.desktop/javax.swing.border=ALL-UNNAMED
-               --add-opens=java.desktop/javax.swing.colorchooser=ALL-UNNAMED
-               -XX:ErrorFile=\$USER_HOME/java_error_in_idea_%p.log
-               -XX:HeapDumpPath=\$USER_HOME/java_error_in_idea.hprof""",
-            '--name', appName,
-            '--app-version', "${project.version}",
-            '--copyright', 'Yusuke Yamamoto',
-            '--vendor', 'Yusuke Yamamoto',
-            '--license-file', './LICENSE.txt',
-            '--linux-rpm-license-type', 'ASL 2.0',
-            '--type', 'rpm',
-            '--icon', './package/samurai-mac.png',
-            '--linux-shortcut',
-            '--input', "${projectDir}/samurai-swing/build/",
-            '--dest', './app/',
+    commandLine(jpackageCommand +
+            [javaOptions,
+             '--license-file', './LICENSE.txt',
+             '--linux-rpm-license-type', 'ASL 2.0',
+             '--type', 'rpm',
+             '--icon', './package/samurai-mac.png',
+             '--linux-shortcut',
+            ]
     )
 }
