@@ -26,10 +26,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @Execution(ExecutionMode.CONCURRENT)
 class TestAppleThreadDump  {
-    final ThreadStatistic statistic = new ThreadStatistic();
 
     @Test
     void testApple142_08() throws IOException {
+        final ThreadStatistic statistic = new ThreadStatistic();
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
         dumpExtractor.analyze(TestAppleThreadDump.class.getResourceAsStream("/Apple/1.4.2_08Apple.dmp"));
         assertEquals(3, statistic.getFullThreadDumpCount());
@@ -73,6 +73,7 @@ class TestAppleThreadDump  {
     }
     @Test
     void testWLS81SP1() throws IOException {
+        final ThreadStatistic statistic = new ThreadStatistic();
         ThreadDumpExtractor dumpExtractor = new ThreadDumpExtractor(statistic);
         dumpExtractor.analyze(TestAppleThreadDump.class.getResourceAsStream("/Apple/wls81sp1-1.4.2-34apple.dmp"));
         assertEquals(3, statistic.getFullThreadDumpCount());
