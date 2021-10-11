@@ -34,7 +34,7 @@ class TestAppleThreadDump  {
         dumpExtractor.analyze(TestAppleThreadDump.class.getResourceAsStream("/Apple/1.4.2_08Apple.dmp"));
         assertEquals(3, statistic.getFullThreadDumpCount());
         assertEquals(10, statistic.getFullThreadDump(0).getThreadCount());
-        assertEquals(10, statistic.getStackTracesAsArray().length);
+        assertEquals(10, statistic.getStackTracesAsArray().size());
 
 //       "DeadLockThread" prio=5 tid=0x0050b3d0 nid=0x1858a00 waiting for monitor entry [f0d0a000..f0d0aac0]
         ThreadDump dump = statistic.getFullThreadDump(0).getThreadDump(0);

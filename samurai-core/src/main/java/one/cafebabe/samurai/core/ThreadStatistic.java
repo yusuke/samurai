@@ -92,8 +92,8 @@ public class ThreadStatistic implements ThreadDumpRenderer, Serializable {
         return nextThreadDumps;
     }
 
-    public ThreadDumpSequence[] getStackTracesAsArray() {
-        return threadDumpsList.toArray(new ThreadDumpSequence[0]);
+    public List<ThreadDumpSequence> getStackTracesAsArray() {
+        return threadDumpsList;
     }
 
     public int getFullThreadDumpCount() {

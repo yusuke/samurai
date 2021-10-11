@@ -45,8 +45,8 @@ class TestSpringBootActuatorTextThreadDump {
         assertEquals("   Locked ownable synchronizers:", stackLines.get(7).line);
         assertEquals("\t- None", stackLines.get(8).line);
 
-        ThreadDumpSequence[] stackTracesAsArray = statistic.getStackTracesAsArray();
-        ThreadDump[] threadDumps = stackTracesAsArray[10].asArray();
+        List<ThreadDumpSequence> stackTracesAsArray = statistic.getStackTracesAsArray();
+        ThreadDump[] threadDumps = stackTracesAsArray.get(10).asArray();
         ThreadDump threadDumpInSequence = threadDumps[0];
         assertEquals("deadLock2", threadDumpInSequence.getName());
         assertTrue(threadDumpInSequence.isDeadLocked());

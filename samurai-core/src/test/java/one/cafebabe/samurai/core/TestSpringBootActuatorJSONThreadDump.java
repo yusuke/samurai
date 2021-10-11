@@ -26,8 +26,8 @@ class TestSpringBootActuatorJSONThreadDump {
         assertFalse(sleepingThread.isBlocking());
         assertTrue(sleepingThread.isIdle());
 
-        ThreadDumpSequence[] stackTracesAsArray = statistic.getStackTracesAsArray();
-        ThreadDump[] threadDumps = stackTracesAsArray[10].asArray();
+        List<ThreadDumpSequence> stackTracesAsArray = statistic.getStackTracesAsArray();
+        ThreadDump[] threadDumps = stackTracesAsArray.get(10).asArray();
         ThreadDump threadDumpInSequence = threadDumps[0];
         assertTrue(threadDumpInSequence.isDeadLocked());
         assertEquals("(originally JSON formatted)", fullThreadDump.getHeader());

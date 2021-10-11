@@ -25,11 +25,13 @@ import org.thymeleaf.context.Context;
 import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.StandardOpenOption;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 
@@ -113,8 +115,8 @@ public class ThymeleafHtmlRenderer implements Constants {
         fullDir.mkdirs();
         sequenceDir.mkdirs();
         ThreadFilter filter = new ThreadFilter();
-        ThreadDumpSequence[] st = stats.getStackTracesAsArray();
-        int count = stats.getFullThreadDumpCount() * 2 + st.length * 2 + 2;
+        List<ThreadDumpSequence> st = stats.getStackTracesAsArray();
+        int count = stats.getFullThreadDumpCount() * 2 + st.size() * 2 + 2;
         int progress = 0;
         listener.notifyProgress(progress++, count);
         //save index page

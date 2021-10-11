@@ -15,11 +15,11 @@
  */
 package one.cafebabe.samurai.swing;
 
+import one.cafebabe.samurai.core.FullThreadDump;
 import one.cafebabe.samurai.core.ThreadDumpExtractor;
 import one.cafebabe.samurai.core.ThreadDumpSequence;
 import one.cafebabe.samurai.core.ThreadStatistic;
 import one.cafebabe.samurai.util.*;
-import one.cafebabe.samurai.core.FullThreadDump;
 import one.cafebabe.samurai.web.ThreadFilter;
 import one.cafebabe.samurai.web.ThymeleafHtmlRenderer;
 
@@ -34,6 +34,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
@@ -328,11 +329,11 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     final GridBagLayout gridBagLayout1 = new GridBagLayout();
     private final ThreadFilter filter = new ThreadFilter();
 
-    private ThreadDumpSequence[] threadList = null;
+    private List<ThreadDumpSequence> threadList = null;
 
     public void changeButtonFeel() {
         invokeLater(() -> {
-                    if (null != threadList && threadList.length != 0) {
+                    if (null != threadList && threadList.size() != 0) {
                         if (filter.mode != ThreadFilter.View.full) {
                             if (filter.mode == ThreadFilter.View.sequence) {
                                 for (ThreadDumpSequence sequence : threadList) {
@@ -352,7 +353,7 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
             synchronized (statistic) {
                 if (statistic.getFullThreadDumpCount() > 0) {
                     if ("".equals(filter.getThreadId())) {
-                        filter.setThreadId(statistic.getStackTracesAsArray()[0].getId());
+                        filter.setThreadId(statistic.getStackTracesAsArray().get(0).getId());
                     }
                     threadDumpPanel.setText(renderer.render(filter, statistic, webContext));
                     threadDumpPanel.select(0, 0);
