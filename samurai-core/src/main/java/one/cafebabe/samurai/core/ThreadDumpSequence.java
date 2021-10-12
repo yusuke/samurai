@@ -1,5 +1,5 @@
 /*
- * Copyright 2003-2012 Yusuke Yamamoto
+ * Copyright 2003-2021 Yusuke Yamamoto
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,10 +15,12 @@
  */
 package one.cafebabe.samurai.core;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.io.Serializable;
 
 
-public final class ThreadDumpSequence implements Serializable{
+public final class ThreadDumpSequence implements Serializable {
     private ThreadDump[] threadDumps;
     private final String toStringName;
     private final String name;
@@ -38,6 +40,49 @@ public final class ThreadDumpSequence implements Serializable{
         threadDumps = new ThreadDump[old.length + 1];
         System.arraycopy(old, 0, threadDumps, 0, old.length);
         threadDumps[threadDumps.length - 1] = threadDump;
+    }
+
+    /**
+     * returns CPU usage of the specified thread.
+     *
+     * @param index index of the thread
+     * @return CPU usage from 0 to 100, null if CPU usage statistics is not available
+     */
+    @Nullable
+    public Integer cpuUsage(int index) {
+        ThreadDump threadDump = threadDumps[index];
+        @Nullable
+        ThreadDump previousThreadDump = 0 < index ? threadDumps[index-1] : null;
+        if (threadDump == null) {
+            return null;
+        }
+        //  cpu=34.57ms elapsed=6.38s
+        String cpuStr = threadDump.getHeaderParameter("cpu");
+        String elapsedStr = threadDump.getHeaderParameter("elapsed");
+        if ("".equals(cpuStr) || "".equals(elapsedStr) || cpuStr == null || elapsedStr == null) {
+            return null;
+        }
+        
+        long cpu = toMillis(cpuStr);
+        long elapsed = toMillis(elapsedStr);
+        // calculate CPU usage since the beginning
+        if (index == 0 || previousThreadDump == null) {
+            return (int) (cpu * 100 / elapsed);
+        }
+
+        // calculate from delta
+        long previousCpu = toMillis(previousThreadDump.getHeaderParameter("cpu"));
+        long previousElapsed = toMillis(previousThreadDump.getHeaderParameter("elapsed"));
+        return (int) ((cpu- previousCpu) * 100 / (elapsed-previousElapsed));
+    }
+
+    static long toMillis(String durationString) {
+        if (durationString.endsWith("ms")) {
+            return (long) (Double.parseDouble(durationString.substring(0, durationString.length() - 2)) + .5);
+        } else if (durationString.endsWith("s")) {
+            return (long) (Double.parseDouble(durationString.substring(0, durationString.length() - 1)) * 1000);
+        }
+        return 0;
     }
 
     /**
