@@ -106,7 +106,11 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                             try {
                                 synchronized (statistic) {
                                     savedLocation = getTargetDirectory(currentFile);
-                                    renderer.saveTo(statistic, savedLocation, (finished, all) -> SwingUtilities.invokeLater(new ProgressTask(finished, all + 10)));
+                                    String[] filesToSave = {"blocked.gif", "blocking.gif", "deadlocked.gif",
+                                            "expandable_win.gif", "fullButton.gif", "running.gif", "same-h.gif",
+                                            "same-v.gif", "sequenceButton.gif", "shrinkable_win.gif", "idle.gif",
+                                            "space.gif", "tableButton.gif"};
+                                    renderer.saveTo(statistic, savedLocation, (finished, all) -> SwingUtilities.invokeLater(new ProgressTask(finished, all + filesToSave.length)));
 
                                     File cssDir = new File(savedLocation.getAbsolutePath() + "/css/");
                                     //noinspection ResultOfMethodCallIgnored
@@ -117,24 +121,11 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
                                     File imageDir = new File(savedLocation.getAbsolutePath() + "/images/");
                                     //noinspection ResultOfMethodCallIgnored
                                     imageDir.mkdir();
-                                    saveStreamAsFile(savedLocation, "images/space.gif");
-                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 8, progressBar.getMaximum()));
-                                    saveStreamAsFile(savedLocation, "images/same-v.gif");
-                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 7, progressBar.getMaximum()));
-                                    saveStreamAsFile(savedLocation, "images/same-h.gif");
-                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 6, progressBar.getMaximum()));
-                                    saveStreamAsFile(savedLocation, "images/deadlocked.gif");
-                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 5, progressBar.getMaximum()));
-                                    saveStreamAsFile(savedLocation, "images/expandable_win.gif");
-                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 4, progressBar.getMaximum()));
-                                    saveStreamAsFile(savedLocation, "images/shrinkable_win.gif");
-                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 3, progressBar.getMaximum()));
-
-                                    saveStreamAsFile(savedLocation, "images/tableButton.gif");
-                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 2, progressBar.getMaximum()));
-                                    saveStreamAsFile(savedLocation, "images/fullButton.gif");
-                                    SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - 1, progressBar.getMaximum()));
-                                    saveStreamAsFile(savedLocation, "images/sequenceButton.gif");
+                                    for (int i = 0; i < filesToSave.length; i++) {
+                                        String file = filesToSave[i];
+                                        saveStreamAsFile(savedLocation, "images/" + file);
+                                        SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum() - filesToSave.length + i, progressBar.getMaximum()));
+                                    }
                                     SwingUtilities.invokeLater(new ProgressTask(progressBar.getMaximum(), progressBar.getMaximum()));
 
                                 }

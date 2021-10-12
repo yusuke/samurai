@@ -144,7 +144,7 @@ public class SamuraiPanel extends JPanel implements LogMonitor, RemoveListener {
         }
     }
 
-    /*package*/ void removePane(final JPanel component) {
+    void removePane(final JPanel component) {
         if (SwingUtilities.isEventDispatchThread()) {
             tab.removeComponent(component);
         } else {

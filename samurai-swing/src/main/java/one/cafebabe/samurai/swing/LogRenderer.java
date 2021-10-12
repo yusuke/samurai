@@ -18,8 +18,7 @@ package one.cafebabe.samurai.swing;
 
 import one.cafebabe.samurai.tail.LogMonitor;
 
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
 
@@ -83,7 +82,7 @@ public abstract class LogRenderer extends JPanel implements LogMonitor {
     }
 
     protected void invokeLater(Runnable runnable) {
-        if (SwingUtilities.isEventDispatchThread() || !this.isDisplayable()) {
+        if (SwingUtilities.isEventDispatchThread()) {
             runnable.run();
         } else {
             SwingUtilities.invokeLater(new VersionAwareTask(runnable, currentVersion));

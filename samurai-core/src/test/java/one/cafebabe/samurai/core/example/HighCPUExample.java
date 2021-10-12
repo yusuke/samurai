@@ -15,34 +15,41 @@
  */
 package one.cafebabe.samurai.core.example;
 
-@SuppressWarnings({"InfiniteLoopStatement", "MismatchedQueryAndUpdateOfStringBuilder", "StringRepeatCanBeUsed", "BusyWait"})
+@SuppressWarnings({"InfiniteLoopStatement", "MismatchedQueryAndUpdateOfStringBuilder", "BusyWait"})
 public class HighCPUExample {
     public static void main(String[] args) {
-        Thread highCPU = new Thread("high-cpu") {
+
+        class Load extends Thread {
+            private final int threshold;
+
+            public Load(String name, int threshold) {
+                super(name);
+                this.threshold = threshold;
+            }
+
             @Override
             public void run() {
+                StringBuilder buf = new StringBuilder();
                 while (true) {
-                    StringBuilder buf = new StringBuilder();
                     for (int i = 0; i < 1000; i++) {
-                        buf.append("hello world");
+                        buf.append(i);
                     }
                     buf.delete(0, buf.length());
-                }
-            }
-        };
-
-        highCPU.start();
-        Thread lowCPU = new Thread("low-cpu") {
-            @Override
-            public void run() {
-                while (true) {
-                    try {
-                        Thread.sleep(Long.MAX_VALUE);
-                    } catch (InterruptedException ignore) {
+                    if (threshold < 1000) {
+                        long sleepDuration = System.currentTimeMillis() % 1000;
+                        if (threshold < sleepDuration) {
+                            try {
+                                Thread.sleep(1000 - sleepDuration);
+                            } catch (InterruptedException ignore) {
+                            }
+                        }
                     }
                 }
             }
-        };
-        lowCPU.start();
+        }
+        for (int i = 1; i <= 10; i+=3) {
+            Load load = new Load("load-" + i * 10 + "%", i * 100);
+            load.start();
+        }
     }
 }

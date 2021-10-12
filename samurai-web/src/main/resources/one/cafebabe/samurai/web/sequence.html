@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/style.css"/>
     <style>
         body {
-            font-size: [[${fontSize}]]pt;
+            font-size: [[${fontSize}]] pt;
             font-family: [[${fontFamily}]];
         }
     </style>
@@ -40,7 +40,8 @@
 <span th:with="sequence = ${filter.doFilter(stats)}">
 
     "<span th:text="${sequence.getName()}"></span>"<br><br>
-    <div th:each="threadDump, threadDumpStat : ${sequence.asArray()}">
+    <span th:each="threadDump, threadDumpStat : ${sequence.asArray()}">
+        <div th:if="${threadDump != null}">
         <a th:name="${threadDumpStat.count}"
            th:href="${'./full/index-' + threadDumpStat.index + '_shrink-' + filter.getShrinkIdle() + '.html#' + filter.getThreadId()}">
             <span th:text="|Thread dump ${threadDumpStat.count}/${sequence.size()}|"></span><br>
@@ -60,7 +61,8 @@
                 </div>
             </span>
         </div>
-    </div>
+        </div>
+    </span>
 </span>
 </body>
 </html>

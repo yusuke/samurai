@@ -307,8 +307,6 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
                 tilePanel.setSelectedIndex(index);
             }
             selectedIndexChanged(index);
-        } else {
-            // do nothing
         }
     }
 
@@ -339,15 +337,17 @@ public class TileTabPanel<T extends JComponent> extends JPanel implements MouseL
         }
     }
 
-    public T getComponentAt(int index) {
-        if (showTitleWithSingleComponent || 1 < components.size()) {
-            if (TileTabLayout.TAB == layout) {
-                return (T) tab.getComponentAt(index);
+    public synchronized T getComponentAt(int index) {
+        synchronized (components) {
+            if (showTitleWithSingleComponent || 1 < components.size()) {
+                if (TileTabLayout.TAB == layout) {
+                    return (T) tab.getComponentAt(index);
+                } else {
+                    return (T) tilePanel.getComponentAt(index);
+                }
             } else {
-                return (T) tilePanel.getComponentAt(index);
+                return components.get(index).getComponent();
             }
-        } else {
-            return components.get(index).getComponent();
         }
     }
 

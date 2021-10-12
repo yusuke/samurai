@@ -18,6 +18,8 @@ package one.cafebabe.samurai.web;
 import one.cafebabe.samurai.core.ThreadDump;
 import one.cafebabe.samurai.core.ThreadDumpSequence;
 import one.cafebabe.samurai.core.ThreadStatistic;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.thymeleaf.TemplateEngine;
@@ -36,6 +38,7 @@ import java.util.Map;
 import java.util.ResourceBundle;
 
 public class ThymeleafHtmlRenderer implements Constants {
+    private static final Logger logger = LogManager.getLogger();
     private final ResourceBundle resource = ResourceBundle.getBundle("one.cafebabe.samurai.web.messages");
     private String baseurl;
     private final Util util = new Util();
@@ -179,38 +182,37 @@ public class ThymeleafHtmlRenderer implements Constants {
             if (threadDump.isIdle()) {
                 return "idle";
             }
-            return "normal";
+            return "";
         }
 
         public String threadDumpToImageSrc(ThreadDump threadDump, int count, ThreadDumpSequence sequence) {
             if (threadDump == null) {
                 return "space.gif";
             }
-            if (threadDump.isDeadLocked()) {
-                return "deadlocked.gif";
-            }
             if (sequence.sameAsBefore(count)) {
                 return "same-h.gif";
             }
-            return "space.gif";
-        }
-
-        public String threadDumpToClassName(ThreadDump threadDump) {
-            if (threadDump == null) {
-                return "back-notexist";
+            if (threadDump.isDeadLocked()) {
+                return "deadlocked.gif";
             }
             if (threadDump.isBlocked()) {
-                return "back-blocked";
+                return "blocked.gif";
             }
-
             if (threadDump.isBlocking()) {
-                return "back-blocking";
+                return "blocking.gif";
             }
-
             if (threadDump.isIdle()) {
-                return "back-idle";
+                return "idle.gif";
             }
-            return "back-normal";
+            return "running.gif";
+        }
+
+        public String threadDumpToCpuUsageColor(ThreadDump threadDump, int index, ThreadDumpSequence sequence) {
+            Integer integer = sequence.cpuUsage(index);
+            if (integer == null) {
+                return "table-cell-notexist";
+            }
+            return "business-"+ (integer / 10);
         }
 
         public String escape(String from) {

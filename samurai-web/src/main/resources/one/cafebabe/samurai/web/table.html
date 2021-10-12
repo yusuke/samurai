@@ -34,31 +34,30 @@
                                 <td style="text-align: right"><span
                                         th:text='${"&nbsp;" + resource.getString("web.running")}'></span>
                                 </td>
-                                <td class="back-normal">&nbsp;</td>
+                                <td><img border="0" src="./images/running.gif"></td>
                                 <td style="text-align: right" colspan="3"><span
                                         th:text='${"&nbsp;" + resource.getString("web.same")}'></span></td>
-                                <td class="back-normal"><img border="0" src="./images/same-h.gif"></td>
+                                <td><img border="0" src="./images/same-h.gif"></td>
                                 <td style="text-align: right"><span
                                         th:text='${"&nbsp;" + resource.getString("web.blocking")}'></span>
                                 </td>
-                                <td class="back-blocking">&nbsp;</td>
+                                <td><img border="0" src="./images/blocking.gif"></td>
                                 <td style="text-align: right"><span
                                         th:text='${"&nbsp;" + resource.getString("web.idle")}'></span></td>
-                                <td class="back-idle">&nbsp;</td>
+                                <td><img border="0" src="./images/idle.gif"></td>
                             </tr>
                             <tr>
                                 <td style="text-align: right"><span
-                                        th:text='${"&nbsp;" + resource.getString("web.blocked")}'></span>
-                                </td>
-                                <td class="back-blocked">&nbsp;</td>
+                                        th:text='${"&nbsp;" + resource.getString("web.blocked")}'></span></td>
+                                <td><img border="0" src="./images/blocked.gif"></td>
                                 <td style="text-align: right" colspan="3"><span
                                         th:text='${"&nbsp;"+ resource.getString("web.deadlocked")}'></span></td>
-                                <td class="back-blocked"><img border="0" src="./images/deadlocked.gif"></td>
+                                <td><img border="0" src="./images/deadlocked.gif"></td>
                                 <td colspan="2"></td>
                                 <td style="text-align: right"><span
                                         th:text='${"&nbsp;" + resource.getString("web.absent")}'></span>
                                 </td>
-                                <td class="back-notexist">&nbsp;</td>
+                                <td class="table-cell-notexist">&nbsp;</td>
                             </tr>
                         </table>
                     </div>
@@ -87,7 +86,7 @@
                                         th:text="${stackTraces.toString()}"></span></a>
                                 </td>
                                 <td th:each="threadDump, threadDumpStat : ${stackTraces.asArray()}"
-                                    th:class="${util.threadDumpToClassName(threadDump)}">
+                                    th:class="${util.threadDumpToCpuUsageColor(threadDump, threadDumpStat.index, stackTraces)}">
                                     <a th:href="${'./sequence/threadId-'+stackTraces.getId()+'_shrink-'+filter.getShrinkIdle()+'.html#'+threadDumpStat.count}">
                                         <img width="16" height="16"
                                              border="0"

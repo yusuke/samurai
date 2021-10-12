@@ -59,7 +59,7 @@ _java_thread_list=0x00007facd510ecf0, length=13, elements={
 	at java.lang.Thread.run(java.base@11.0.12/Thread.java:829)
 	at jdk.internal.misc.InnocuousThread.run(java.base@11.0.12/InnocuousThread.java:134)
 
-    "Monitor Ctrl-Break" #12 daemon prio=5 os_prio=31 cpu=34.57ms elapsed=6.38s tid=0x00007facb3863000 nid=0x9f03 runnable  [0x0000700005bab000]
+"Monitor Ctrl-Break" #12 daemon prio=5 os_prio=31 cpu=34.57ms elapsed=6.38s tid=0x00007facb3863000 nid=0x9f03 runnable  [0x0000700005bab000]
    java.lang.Thread.State: RUNNABLE
 	at java.net.SocketInputStream.socketRead0(java.base@11.0.12/Native Method)
 	at java.net.SocketInputStream.socketRead(java.base@11.0.12/SocketInputStream.java:115)
