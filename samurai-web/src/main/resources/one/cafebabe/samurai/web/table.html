@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/style.css"/>
     <style>
         body {
-            font-size: [[${fontSize}]] pt;
+            font-size: [[${fontSize}]]pt;
             font-family: [[${fontFamily}]];
         }
     </style>
@@ -35,10 +35,10 @@
                                         th:text='${"&nbsp;" + resource.getString("web.running")}'></span>
                                 </td>
                                 <td><img border="0" src="./images/running.gif"></td>
-                                <td style="text-align: right" colspan="3"><span
-                                        th:text='${"&nbsp;" + resource.getString("web.same")}'></span></td>
+                                <td style="text-align: right" colspan="5"><span
+                                        th:text='${resource.getString("web.same")}'></span></td>
                                 <td><img border="0" src="./images/same-h.gif"></td>
-                                <td style="text-align: right"><span
+                                <td style="text-align: right" colspan="3"><span
                                         th:text='${"&nbsp;" + resource.getString("web.blocking")}'></span>
                                 </td>
                                 <td><img border="0" src="./images/blocking.gif"></td>
@@ -50,14 +50,29 @@
                                 <td style="text-align: right"><span
                                         th:text='${"&nbsp;" + resource.getString("web.blocked")}'></span></td>
                                 <td><img border="0" src="./images/blocked.gif"></td>
-                                <td style="text-align: right" colspan="3"><span
+                                <td style="text-align: right" colspan="5"><span
                                         th:text='${"&nbsp;"+ resource.getString("web.deadlocked")}'></span></td>
                                 <td><img border="0" src="./images/deadlocked.gif"></td>
-                                <td colspan="2"></td>
+                                <td colspan="4"></td>
                                 <td style="text-align: right"><span
                                         th:text='${"&nbsp;" + resource.getString("web.absent")}'></span>
                                 </td>
                                 <td class="table-cell-notexist">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td th:text='${resource.getString("web.cpu.low")}'></td>
+                                <td class="business-0"></td>
+                                <td class="business-1"></td>
+                                <td class="business-2"></td>
+                                <td class="business-3"></td>
+                                <td class="business-4"></td>
+                                <td class="business-5"></td>
+                                <td class="business-6"></td>
+                                <td class="business-7"></td>
+                                <td class="business-8"></td>
+                                <td class="business-9"></td>
+                                <td class="business-10"></td>
+                                <td colspan="2" th:text='${resource.getString("web.cpu.high")}'></td>
                             </tr>
                         </table>
                     </div>
@@ -86,11 +101,11 @@
                                         th:text="${stackTraces.toString()}"></span></a>
                                 </td>
                                 <td th:each="threadDump, threadDumpStat : ${stackTraces.asArray()}"
-                                    th:class="${util.threadDumpToCpuUsageColor(threadDump, threadDumpStat.index, stackTraces)}">
+                                    th:class="${util.threadDumpToCpuUsageColor(threadDumpStat.index, stackTraces)}">
                                     <a th:href="${'./sequence/threadId-'+stackTraces.getId()+'_shrink-'+filter.getShrinkIdle()+'.html#'+threadDumpStat.count}">
                                         <img width="16" height="16"
                                              border="0"
-                                             th:src="${'./images/' + util.threadDumpToImageSrc(threadDump, threadDumpStat.count, stackTraces)}">
+                                             th:src="${'./images/' + util.threadDumpToImageSrc(threadDump, threadDumpStat.count, stackTraces)}"><span th:text="${stackTraces.cpuUsageAsString(threadDumpStat.index)}"></span>
                                     </a>
                                 </td>
                             </tr>

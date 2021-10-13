@@ -76,6 +76,11 @@ public final class ThreadDumpSequence implements Serializable {
         return (int) ((cpu- previousCpu) * 100 / (elapsed-previousElapsed));
     }
 
+    public String cpuUsageAsString(int index){
+        Integer integer = cpuUsage(index);
+        return integer == null ? "" : integer + "%";
+    }
+
     static long toMillis(String durationString) {
         if (durationString.endsWith("ms")) {
             return (long) (Double.parseDouble(durationString.substring(0, durationString.length() - 2)) + .5);
@@ -128,7 +133,7 @@ public final class ThreadDumpSequence implements Serializable {
 
     public static String abbreviateWebLogicThreadName(String name) {
         try {
-            if (-1 != name.indexOf("ExecuteThread:") && -1 != name.indexOf("for queue:")) {
+            if (name.contains("ExecuteThread:") && name.contains("for queue:")) {
                 int numberStartIndex = name.indexOf("'") + 1;
                 String number = name.substring(numberStartIndex, name.indexOf("'", numberStartIndex));
                 int queueNameStartIndex = name.indexOf("for queue:") + 12;

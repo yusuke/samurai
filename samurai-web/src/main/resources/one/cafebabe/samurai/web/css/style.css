@@ -4,6 +4,7 @@ a.visited {
 
 body{
     padding: 10px;
+    background: white;
 }
 table {
     margin:auto;
@@ -35,39 +36,39 @@ a:hover {
 }
 
 .business-0{
-    background-color: #ffffff;
+    background-color: #fff;
 }
 .business-1{
-    background-color: #e7e6e6;
+    background-color: #dfd;
 }
 .business-2{
-    background-color: #b0b0b0;
+    background-color: #afa;
 }
 .business-3{
-    background-color: #84ff00;
+    background-color: #8f8;
 }
 .business-4{
-    background-color: #84ff00;
+    background-color: #0f0;
 }
 .business-5{
-    background-color: #ffcc00;
+    background-color: #ff0;
 }
 .business-6{
-    background-color: #ffcc00;
+    background-color: #fc0;
 }
 .business-7{
-    background-color: #ff9c07;
+    background-color: #fa0;
 }
 .business-8{
-    background-color: #ff9c07;
+    background-color: #f70;
 }
 .business-9{
-    background-color: #ff0000;
+    background-color: #f40;
 }
 .business-10{
-    background-color: #ff0000;
+    background-color: #f00;
 }
-.table-cell-notexistz {
-    background-color: #000000;
+.table-cell-notexist {
+    background-color: #000;
     width: 16px;
 }

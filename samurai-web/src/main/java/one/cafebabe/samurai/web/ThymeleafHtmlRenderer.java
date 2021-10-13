@@ -207,10 +207,14 @@ public class ThymeleafHtmlRenderer implements Constants {
             return "running.gif";
         }
 
-        public String threadDumpToCpuUsageColor(ThreadDump threadDump, int index, ThreadDumpSequence sequence) {
+        public String threadDumpToCpuUsageColor(int index, ThreadDumpSequence sequence) {
+            if (sequence.get(index) == null) {
+                return "table-cell-notexist";
+            }
             Integer integer = sequence.cpuUsage(index);
             if (integer == null) {
-                return "table-cell-notexist";
+                // cpu usage information is unavailable
+                return "business-0";
             }
             return "business-"+ (integer / 10);
         }
