@@ -52,14 +52,17 @@ public class Samurai {
                 command.add("--add-exports=jdk.attach/sun.tools.attach=ALL-UNNAMED");
                 command.add("--add-opens=java.desktop/javax.swing=ALL-UNNAMED");
                 command.add("--add-opens=java.desktop/javax.swing.border=ALL-UNNAMED");
-                command.add("--add-opens=java.desktop/com.apple.laf=ALL-UNNAMED");
+                command.add("--add-opens=java.desktop/javax.swing.colorchooser=ALL-UNNAMED");
                 if (OSDetector.isMac()) {
+                    command.add("--add-opens=java.desktop/com.apple.laf=ALL-UNNAMED");
                     command.add("-Dsun.java2d.metal=true");
                 }
                 if (OSDetector.isWindows()) {
                     command.add("--add-opens=java.desktop/com.sun.java.swing.plaf.windows=ALL-UNNAMED");
                 }
-                command.add("--add-opens=java.desktop/javax.swing.colorchooser=ALL-UNNAMED");
+                if (OSDetector.isLinux()) {
+                    command.add("--add-exports=java.desktop/sun.awt.X11=ALL-UNNAMED");
+                }
                 command.add("one.cafebabe.samurai.swing.Samurai");
                 command.add("nested-launch");
 
