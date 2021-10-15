@@ -21,6 +21,7 @@ import one.cafebabe.samurai.util.GUIResourceBundle;
 import one.cafebabe.samurai.util.OSDetector;
 
 import javax.swing.*;
+import javax.swing.text.BadLocationException;
 import java.awt.*;
 import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
@@ -31,6 +32,7 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
     private static final GUIResourceBundle resources = GUIResourceBundle.getInstance();
     final JScrollPane jScrollPane1 = new JScrollPane();
     public final JTextArea textArea = new JTextArea();
+    private int numberOfLines = 0;
     //    public UnlimitedTextArea textArea = new UnlimitedTextArea();
     final JScrollBar verticalScrollBar = jScrollPane1.getVerticalScrollBar();
 
@@ -64,6 +66,7 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
         buffer = new String[30];
         filepointers = new long[30];
         count = 0;
+        numberOfLines = 0;
     }
 
 
@@ -88,9 +91,6 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
         super.onLine(file, line, filePointer);
         buffer[count] = line + "\n";
         filepointers[count] = filePointer;
-//    buffer.append(line).append("\n");
-//    textArea.cheatAppend(line+"\n");
-//    textArea.setCurrentFilePointer(filePointer);
         count++;
         if (count == 30) {
             flushBuffer();
@@ -102,19 +102,8 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
 
     public void logStarted(File file, long filePointer) {
         super.logStarted(file, filePointer);
-//        try {
-//      content.setFile(file);
-//            textArea.setFile(file);
-//        } catch (IOException ioe) {
-//            ioe.printStackTrace();
-//            @todo do something
-//        }
-//    content.setCurrentFilePointer(0);
-//        textArea.setCurrentFilePointer(0);
-//    textArea.setText("");
         SwingUtilities.invokeLater(clearTask);
         textArea.setToolTipText(file.getAbsolutePath());
-//    buffer.delete(0, buffer.length());
     }
 
     public void logEnded(File file, long filePointer) {
@@ -140,7 +129,14 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
         public void run() {
             for (int i = 0; i < counter; i++) {
                 textArea.append(buf[i]);
-//                textArea.setCurrentFilePointer(pointers[i]);
+                numberOfLines++;
+                try {
+                    if (1000 <= numberOfLines) {
+                        textArea.replaceRange("", 0, textArea.getLineEndOffset(0));
+                        numberOfLines = 1000;
+                    }
+                } catch (BadLocationException ignored) {
+                }
             }
         }
     }
@@ -150,8 +146,6 @@ public class LogPanel extends LogRenderer implements AdjustmentListener,
         initBuffer();
     }
 
-    //  private boolean fitlast = true;
-    //  int lastValue = 0;
     int lastMax = 0;
     final BorderLayout borderLayout1 = new BorderLayout();
 

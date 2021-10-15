@@ -360,14 +360,14 @@ public class ThreadDumpPanel extends LogRenderer implements HyperlinkListener,
     final ThreadStatistic statistic = new ThreadStatistic() {
         private static final long serialVersionUID = 198789311977731508L;
 
-        public synchronized void onFullThreadDump(FullThreadDump fullThreadDump) {
-            super.onFullThreadDump(fullThreadDump);
+        public synchronized void onFullThreadDump(FullThreadDump fullThreadDump) {//            super.onFullThreadDump(fullThreadDump);
             invokeLater(() -> {
+                super.onFullThreadDump(fullThreadDump);
                 showMe(resources.getMessage("ThreadDumpPanel.threadDump"));
                 threadList = statistic.getStackTracesAsArray();
+                updateHtml();
             });
-            updateHtml();
-        }
+         }
     };
     private ThreadDumpExtractor analyzer = new ThreadDumpExtractor(statistic);
     final JScrollPane threadDumpPanelScrollPane = new JScrollPane();
