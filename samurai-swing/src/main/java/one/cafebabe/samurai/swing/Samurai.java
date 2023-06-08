@@ -27,7 +27,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Arrays;
 
 public class Samurai {
     private static final Logger logger = LogManager.getLogger();
@@ -65,6 +65,9 @@ public class Samurai {
                 }
                 command.add("one.cafebabe.samurai.swing.Samurai");
                 command.add("nested-launch");
+                for (int i = 0; i < args.length; i++) {
+                    command.add(args[i]);
+                }
 
                 System.out.println("relaunching samurai with the following command:");
                 System.out.println(String.join(" ", command));
@@ -95,7 +98,10 @@ public class Samurai {
             } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
                 logger.warn("failed to setLookAndFeel", e);
             }
-            javax.swing.JFrame frame = new MainFrame();
+            String[] finalArgs = new String[0];
+            if (args.length > 1)
+                finalArgs = Arrays.copyOfRange(args, 1, args.length);
+            javax.swing.JFrame frame = new MainFrame(finalArgs);
             frame.validate();
             frame.setVisible(true);
         });

@@ -132,6 +132,10 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
     }
 
     public MainFrame() {
+        this(null);
+    }
+
+    public MainFrame(String[] args) {
         super(resources.getMessage("MainFrame.title"));
         this.enableEvents(AWTEvent.WINDOW_EVENT_MASK);
         this.getContentPane().setLayout(new BorderLayout());
@@ -270,6 +274,12 @@ public class MainFrame extends JFrame implements KeyListener, FileHistoryListene
                 DnDConstants.ACTION_REFERENCE,
                 tabDropTargetListener
         );
+        for (int i = 0; i < args.length; i++) {
+                String path = args[i];
+                System.out.println("file: "+path);
+                File file = new File(path);
+                fileHistory.open(file);
+        }
         setDragNotAccepting();
     }
 
